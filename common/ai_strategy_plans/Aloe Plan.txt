@@ -1,0 +1,57 @@
+Generic_ALO_historical = {
+	name = "ALO historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = ALO
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = ALO
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ALO_hololive_fifthgen_focus
+		ALO_pop_support_fifthgen_focus
+		ALO_haters_sus_fifthgen_focus
+
+		mano_aloe_alo_focus
+		budapest_spring_alo_focus
+		
+		ALO_unity_and_strength_fifthgen_focus
+		ALO_self_defence_fifthgen_focus
+		ALO_yagoos_dream_fifthgen_focus
+
+
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

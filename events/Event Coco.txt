@@ -1,0 +1,1148 @@
+add_namespace = coco
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = coco.8
+	title = coco.8.t
+	desc = coco.8.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.8.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.8.b	#No 
+		ai_chance = { factor = 20 }
+		COC = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = coco.9
+	title = coco.9.t
+	desc = coco.9.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.9.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.9.b	#No 
+		ai_chance = { factor = 20 }
+		COC = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = coco.10
+	title = coco.10.t
+	desc = coco.10.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.10.a	#Yes
+		ai_chance = { factor = 30 }
+		COC = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = coco.10.b	#No 
+		ai_chance = { factor = 70 }
+		COC = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = coco.11
+	title = coco.11.t
+	desc = coco.11.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.11.a	#Yes
+		ai_chance = { factor = 50 }
+		COC = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = coco.11.b	#No 
+		ai_chance = { factor = 50 }
+		COC = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = coco.12
+	title = coco.12.t
+	desc = coco.12.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.12.a	#Yes
+		ai_chance = { factor = 75 }
+		COC = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.12.b	#No 
+		ai_chance = { factor = 25 }
+		COC = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = coco.13
+	title = coco.13.t
+	desc = coco.13.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.13.a	#Yes
+		ai_chance = { factor = 50 }
+		COC = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = coco.13.b	#No 
+		ai_chance = { factor = 50 }
+		COC = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = coco.14
+	title = coco.14.t
+	desc = coco.14.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.14.a	#Yes
+		ai_chance = { factor = 50 }
+		COC = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = coco.14.b	#No 
+		ai_chance = { factor = 50 }
+		COC = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = coco.15
+	title = coco.15.t
+	desc = coco.15.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.15.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.15.b	#No 
+		ai_chance = { factor = 20 }
+		COC = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = coco.16
+	title = coco.16.t
+	desc = coco.16.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.16.a	#Yes
+		ai_chance = { factor = 20 }
+		COC = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = coco.16.b	#No 
+		ai_chance = { factor = 80 }
+		COC = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = coco.17
+	title = coco.17.t
+	desc = coco.17.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.17.a	#Yes
+		ai_chance = { factor = 50 }
+		COC = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = coco.17.b	#No 
+		ai_chance = { factor = 50 }
+		COC = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = coco.19
+	title = coco.19.t
+	desc = coco.19.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.19.a	#Yes
+		ai_chance = { factor = 40 }
+		COC = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = coco.19.b	#No 
+		ai_chance = { factor = 60 }
+		COC = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = coco.20
+	title = coco.20.t
+	desc = coco.20.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.20.a	#Yes
+		ai_chance = { factor = 90 }
+		COC = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.20.b	#No 
+		ai_chance = { factor = 10 }
+		COC = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = coco.21
+	title = coco.21.t
+	desc = coco.21.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.21.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.21.b	#No 
+		ai_chance = { factor = 20 }
+		COC = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = coco.22
+	title = coco.22.t
+	desc = coco.22.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.22.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = coco.22.b	#No 
+		ai_chance = { factor = 20 }
+		COC = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = coco.23
+	title = coco.23.t
+	desc = coco.23.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.23.a	#Yes
+		ai_chance = { factor = 70 }
+		COC = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = coco.23.b	#No 
+		ai_chance = { factor = 30 }
+		COC = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Join Haato Classroom
+country_event = {
+	id = coco.24
+	title = coco.24.t
+	desc = coco.24.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.24.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = {
+		add_to_faction = COC
+		}
+
+		COC = { country_event = { id = coco.25 }}
+	}
+	option = {
+		name = coco.24.b	#No 
+		ai_chance = { factor = 0 }
+		COC = { country_event = { id = coco.26 }}
+	}
+}
+
+#Yes Haato Classroom
+country_event = {
+	id = coco.25
+	title = coco.25.t
+	desc = coco.25.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.25.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#No Haato Classroom
+country_event = {
+	id = coco.26
+	title = coco.26.t
+	desc = coco.26.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.26.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#Invite to Coco Classroom
+country_event = {
+	id = coco.27
+	title = coco.27.t
+	desc = coco.27.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.27.a	#Yes
+		ai_chance = { factor = 60 }
+		COC = {
+		add_to_faction = ROOT
+		}
+
+		if = {
+		    limit = { tag = HTO }
+		    COC = { country_event = { id = coco.28 }}
+		}
+
+		if = {
+		    limit = { tag = LUN }
+		    COC = { country_event = { id = coco.30 }}
+		}
+
+		if = {
+		    limit = { tag = KAN }
+		    COC = { country_event = { id = coco.32 }}
+		}
+
+		if = {
+		    limit = { tag = WAT }
+		    COC = { country_event = { id = coco.34 }}
+		}
+	}
+	option = {
+		name = coco.27.b	#No 
+		ai_chance = { factor = 40 }
+		
+		if = {
+		    limit = { tag = HTO }
+		    COC = { country_event = { id = coco.29 }}
+		}
+
+		if = {
+		    limit = { tag = LUN }
+		    COC = { country_event = { id = coco.31 }}
+		}
+
+		if = {
+		    limit = { tag = KAN }
+		    COC = { country_event = { id = coco.33 }}
+		}
+
+		if = {
+		    limit = { tag = WAT }
+		    COC = { country_event = { id = coco.35 }}
+		}
+	}
+}
+
+#haato Yes join classroom
+country_event = {
+	id = coco.28
+	title = coco.28.t
+    desc = coco.28.d
+    picture = GFX_report_event_haato_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.28.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#haato No join classroom
+country_event = {
+	id = coco.29
+	title = coco.29.t
+    desc = coco.29.d
+    picture = GFX_report_event_haato_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.29.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#luna Yes join classroom
+country_event = {
+	id = coco.30
+	title = coco.30.t
+    desc = coco.30.d
+    picture = GFX_report_event_luna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.30.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#luna No join classroom
+country_event = {
+	id = coco.31
+	title = coco.31.t
+    desc = coco.31.d
+    picture = GFX_report_event_luna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.31.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#kanata Yes join classroom
+country_event = {
+	id = coco.32
+	title = coco.32.t
+    desc = coco.32.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.32.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#kanata No join classroom
+country_event = {
+	id = coco.33
+	title = coco.33.t
+    desc = coco.33.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.33.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#watame Yes join classroom
+country_event = {
+	id = coco.34
+	title = coco.34.t
+    desc = coco.34.d
+    picture = GFX_report_event_watame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.34.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#watame No join classroom
+country_event = {
+	id = coco.35
+	title = coco.35.t
+    desc = coco.35.d
+    picture = GFX_report_event_watame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.35.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#Assassination of Coco
+country_event = {
+	id = coco.36
+	title = coco.36.t
+	desc = coco.36.d
+	picture = GFX_report_event_coco_ded
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.36.a	#Yes
+		ai_chance = { factor = 100 }
+kill_country_leader = yes
+create_country_leader = {
+	name = "Atlanta Parliament"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		incompetent_gov_trait
+	}
+}
+
+create_country_leader = {
+	name = "Atlanta Parliament"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		incompetent_gov_trait
+	}
+}
+
+		hidden_effect = {
+			news_event = { id = holo_news.28  hours = 12}
+			ROOT = { country_event = { id = coco.37  days = 30 }}
+		}
+	}
+}
+
+#Fate of Atlanta
+country_event = {
+	id = coco.37
+	title = coco.37.t
+	desc = coco.37.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.37.a	#Yes
+		ai_chance = { factor = 50 }
+		add_political_power = -200
+		add_war_support = 0.25
+retire_country_leader = yes
+create_country_leader = {
+	name = "Kiryu Kazuma"
+	picture = "gfx/leaders/COC/kazuma.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		dragon_of_dojima_trait
+	}
+}
+		set_cosmetic_tag = COC_YAKUZA	
+		hidden_effect = {
+			news_event = { id = holo_news.29 }
+		}
+	}
+	option = {
+		name = coco.37.b	#No 
+		ai_chance = { factor = 50 }
+		add_stability = 0.25
+retire_country_leader = yes
+create_country_leader = {
+	name = "Kaichou"
+	picture = "gfx/leaders/COC/coco_neu.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		meme_queen
+		asacoco
+	}
+}
+		hidden_effect = {
+			news_event = { id = holo_news.30 }
+		}
+	}
+}
+
+#Invite to Asacoco
+country_event = {
+	id = coco.38
+	title = coco.38.t
+	desc = coco.38.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = coco.27.a	#Yes
+		ai_chance = { factor = 80 }
+		COC = {
+		add_to_faction = ROOT
+		}
+
+		if = {
+		    limit = { tag = SUI }
+		    COC = { country_event = { id = coco.39 }}
+		}
+
+		if = {
+		    limit = { tag = KAN }
+		    COC = { country_event = { id = coco.41 }}
+		}
+
+		if = {
+		    limit = { tag = MIK }
+		    COC = { country_event = { id = coco.43 }}
+		}
+
+		
+	}
+	option = {
+		name = coco.38.b	#No 
+		ai_chance = { factor = 20 }
+		
+		if = {
+		    limit = { tag = SUI }
+		    COC = { country_event = { id = coco.40 }}
+		}
+
+		if = {
+		    limit = { tag = KAN }
+		    COC = { country_event = { id = coco.42 }}
+		}
+
+		if = {
+		    limit = { tag = MIK }
+		    COC = { country_event = { id = coco.44 }}
+		}
+
+		
+	}
+}
+
+country_event = {
+	id = coco.39
+	title = coco.39.t
+    desc = coco.39.d
+    picture = GFX_report_event_suisei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.39.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#suisei No join asacocopact
+country_event = {
+	id = coco.40
+	title = coco.40.t
+    desc = coco.40.d
+    picture = GFX_report_event_suisei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.40.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#kanata Yes join asacocopact
+country_event = {
+	id = coco.41
+	title = coco.41.t
+    desc = coco.41.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.41.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#kanata No join asacocopact
+country_event = {
+	id = coco.42
+	title = coco.42.t
+    desc = coco.42.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.42.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#miko Yes join asacocopact
+country_event = {
+	id = coco.43
+	title = coco.43.t
+    desc = coco.43.d
+    picture = GFX_report_event_miko_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.43.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#miko No join asacocopact
+country_event = {
+	id = coco.44
+	title = coco.44.t
+    desc = coco.44.d
+    picture = GFX_report_event_miko_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = coco.44.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#COC - Invite to faction
+country_event = {
+	id = coco.45
+	title = coco.45.t
+    desc = coco.45.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.45.a	#Yes
+    ai_chance = { factor = 100 }
+
+    	COC = {
+    		add_to_faction = ROOT
+    	}
+
+    	if = {
+    		limit = {
+    			tag = KAN
+    		}
+    		COC = { country_event = { id = proposed.37 }}
+    	}
+
+    	if = {
+    		limit = {
+    			tag = SUI
+    		}
+    		COC = { country_event = { id = proposed.85 }}
+    	}
+
+    	if = {
+    		limit = {
+    			tag = MEL
+    		}
+    		COC = { country_event = { id = proposed.51 }}
+    	}
+    }
+
+    option = {
+    name = coco.45.b	#Yes
+    ai_chance = { factor = 0 }
+    	if = {
+    		limit = {
+    			tag = KAN
+    		}
+    		COC = { country_event = { id = proposed.38 }}
+    	}
+
+    	if = {
+    		limit = {
+    			tag = SUI
+    		}
+    		COC = { country_event = { id = proposed.86 }}
+    	}
+
+    	if = {
+    		limit = {
+    			tag = MEL
+    		}
+    		COC = { country_event = { id = proposed.52 }}
+    	}
+    }
+}
+
+#COC - Demand puppet
+country_event = {
+	id = coco.46
+	title = coco.46.t
+    desc = coco.46.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.46.a	#Yes
+    ai_chance = { factor = 100 }
+
+    	COC = {
+    		puppet = ROOT
+    	}
+
+    	if = {
+    		limit = {
+    			tag = KAN
+    		}
+    		COC = { country_event = { id = proposed.37 }}
+    	}
+    }
+
+    option = {
+    name = coco.46.b	#Yes
+    ai_chance = { factor = 0 }
+    	if = {
+    		limit = {
+    			tag = KAN
+    		}
+    		COC = { country_event = { id = proposed.38 }}
+    	}
+    }
+}
+
+#COC - Ask to join faction
+country_event = {
+	id = coco.47
+	title = coco.47.t
+    desc = coco.47.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.47.a	#Yes
+    ai_chance = { factor = 100 }
+
+    	ROOT = {
+    		add_to_faction = COC
+    	}
+
+    	if = {
+    		limit = {
+    			tag = PEK
+    		}
+    		COC = { country_event = { id = proposed.67 }}
+    	}
+    }
+
+    option = {
+    name = coco.47.b	#Yes
+    ai_chance = { factor = 0 }
+    	if = {
+    		limit = {
+    			tag = PEK
+    		}
+    		COC = { country_event = { id = proposed.68 }}
+    	}
+    }
+}
+
+#COC - Yakuza Rebellion
+country_event = {
+	id = coco.48
+	title = coco.48.t
+    desc = coco.48.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.48.a	#Yes
+    ai_chance = { factor = 100 }
+    	destroy_ships = {
+    		type = ship_hull_light_1
+    		count = all
+		}
+
+		destroy_ships = {
+    		type = ship_hull_heavy_1
+    		count = all
+		}
+
+		destroy_ships = {
+    		type = ship_hull_submarine_1
+    		count = all
+		}
+    }
+
+    option = {
+    name = coco.48.b	#Yes
+    ai_chance = { factor = 0 }
+    	add_political_power = -120
+    	add_stability = -0.10
+    	add_war_support = -0.10
+    }
+}
+
+#COC - Sunbelt Compromise
+country_event = {
+	id = coco.49
+	title = coco.49.t
+    desc = coco.49.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.49.a	#Yes
+    ai_chance = { factor = 100 }
+    	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = COC
+	    }
+
+    	COC = {
+    		transfer_state = 377
+    		transfer_state = 376
+    	}
+
+    	if = {
+    		limit = {
+    			tag = FLA
+    		}
+    		COC = { country_event = { id = proposed.25 }}
+    	}
+    }
+
+    option = {
+    name = coco.49.b	#Yes
+    ai_chance = { factor = 0 }
+    	if = {
+    		limit = {
+    			tag = FLA
+    		}
+    		COC = { country_event = { id = proposed.26 }}
+    	}
+    }
+}
+
+#COC - Demand the Guianas
+country_event = {
+	id = coco.50
+	title = coco.50.t
+    desc = coco.50.d
+    picture = GFX_report_event_coco_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = coco.50.a	#Yes
+    ai_chance = { factor = 100 }
+
+    	COC = {
+    		transfer_state = 309
+    		transfer_state = 310
+    		transfer_state = 687
+    	}
+
+    	if = {
+    		limit = {
+    			tag = ROS
+    		}
+    		COC = { country_event = { id = proposed.97 }}
+    	}
+    }
+
+    option = {
+    name = coco.50.b	#Yes
+    ai_chance = { factor = 0 }
+    	if = {
+    		limit = {
+    			tag = ROS
+    		}
+    		COC = { country_event = { id = proposed.98 }}
+    	}
+    }
+}
+
+#COC - Mr.White
+country_event = {
+	id = coco.51
+	title = coco.51.t
+    desc = coco.51.d
+    picture = GFX_report_event_coco_walt
+
+    #is_triggered_only = yes
+
+    trigger = {
+    	ROOT = {has_full_control_of_state = 376}
+    	tag = COC
+    }
+
+    mean_time_to_happen = { days = 2 }
+
+    fire_only_once = yes
+
+    option = {
+    name = coco.51.a	#Yes
+    ai_chance = { factor = 100 }
+    	create_corps_commander = {
+			name = "Walter White"
+			portrait_path = "gfx/leaders/COC/white.dds"
+			traits = { career_officer trait_cautious }
+			skill = 5
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 5
+			}
+    }
+}

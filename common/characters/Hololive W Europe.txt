@@ -1,0 +1,233 @@
+
+characters={
+PEK_pekora_usada_general = {
+     name="Pekora"
+     portraits={
+           army={
+                 large="gfx/leaders/PEK/pekora_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero trickster}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+PEK_pekora_usada_admiral = {
+     name="Usada"
+     portraits={
+           army={
+                 large="gfx/leaders/PEK/pekora_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector superior_tactician}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+KIA_kiara_takanashi_general = {
+     name="Kiara"
+     portraits={
+           army={
+                 large="gfx/leaders/KIA/kiara_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={organizer inflexible_strategist}
+           skill = 4
+           attack_skill = 3
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 3
+     }
+
+}
+
+KIA_kiara_takanashi_admiral = {
+     name="Takanashi"
+     portraits={
+           army={
+                 large="gfx/leaders/KIA/kiara_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+SUI_suisei_hoshimachi_general = {
+     name="Suisei"
+     portraits={
+           army={
+                 large="gfx/leaders/SUI/sui_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={armor_officer skilled_staffer}
+           skill = 4
+           attack_skill = 6
+           defense_skill = 4
+           planning_skill = 4
+           logistics_skill = 4
+     }
+
+}
+
+SUI_suisei_hoshimachi_admiral = {
+     name="Hoshimachi"
+     portraits={
+           army={
+                 large="gfx/leaders/SUI/sui_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={war_hero aviation_enthusiast}
+           skill = 4
+           attack_skill = 5
+           defense_skill = 4
+           maneuvering_skill = 4
+           coordination_skill = 4
+     }
+
+}
+}
+
+characters={
+WTS_amelia_watson_general = {
+     name="Amelia"
+     portraits={
+           army={
+                 large="gfx/leaders/WTS/watson_neu.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     field_marshal={
+            traits={ organizer aggressive_assaulter }
+            skill=5
+            attack_skill=4
+            defense_skill=3
+            planning_skill=4
+            logistics_skill=4
+            legacy_id=0
+      }
+
+}
+
+WTS_amelia_watson_admiral = {
+     name="Watson"
+     portraits={
+           army={
+                 large="gfx/leaders/WTS/watson_dem.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ironside spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+CHC_choco_yuzuki_general = {
+     name="Choco"
+     portraits={
+           army={
+                 large="gfx/leaders/CHC/choco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero organizer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+CHC_choco_yuzuki_admiral = {
+     name="Yuzuki"
+     portraits={
+           army={
+                 large="gfx/leaders/CHC/choco_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={spotter blockade_runner}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

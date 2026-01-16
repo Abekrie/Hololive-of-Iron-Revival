@@ -1,0 +1,50 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Black Sea Fleet"		
+		naval_base = 3653
+		task_force = {				
+			name = "Black Sea Force"			
+			location = 3653 
+ship = { name = "Black Sea 1 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = AYA } } }
+ 
+ship = { name = "Black Sea 2 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = AYA } } }
+ 
+ship = { name = "Black Sea 3 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = AYA } } }
+ 
+ship = { name = "Black Sea 4 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = AYA } } }
+ 
+ship = { name = "Black Sea 5 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = AYA } } }
+
+ship = { name = "Georgia 1 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "Georgia 2 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+			
+		}
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

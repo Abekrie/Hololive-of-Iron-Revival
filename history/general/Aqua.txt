@@ -1,0 +1,87 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = AQA
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = AQA_kagura_mea_holo_xgeneral
+    name="Kagura Mea"
+      portraits={
+            army={
+                  large="gfx/leaders/AQA/kagura_mea.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={urban_assault_specialist}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 1
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = AQA_NEKO_holo_xgeneral
+    name="NEKO"
+      portraits={
+            army={
+                  large="gfx/leaders/AQA/neko.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={ old_guard }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = AQA
+        original_tag = SUI
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = AQA_suisei_maid_holo_xgeneral
+    name="Suisei Maid"
+      portraits={
+            army={
+                  large="gfx/leaders/AQA/suisei_maid.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={media_personality bearer_of_artillery}
+            skill = 5
+            attack_skill = 5
+            defense_skill = 5
+            planning_skill = 5
+            logistics_skill = 5
+            visible = { has_country_flag = can_recruit_suisei_maid }
+      }
+  }
+}

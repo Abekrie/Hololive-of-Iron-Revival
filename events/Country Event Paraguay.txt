@@ -1,0 +1,35 @@
+add_namespace = paraguay
+
+#PAR - Paraguay infiltrates our border
+country_event = {
+	id = paraguay.8
+	title = paraguay.8.t
+	desc = paraguay.8.d
+	picture = GFX_report_event_paraguay_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = paraguay.8.a
+		ai_chance = { factor = 100 }
+		every_state = {
+			limit = { has_state_flag = paraguay_infiltrated_state_flag }
+			transfer_state_to = PAR
+			clr_state_flag = paraguay_infiltrated_state_flag
+		}
+		add_war_support = 0.05
+	}
+
+	#No
+	option = {
+		name = paraguay.8.b
+		ai_chance = { factor = 0 }
+		add_political_power = -75
+		add_war_support = -0.05
+		every_state = {
+			limit = { has_state_flag = paraguay_infiltrated_state_flag }
+			clr_state_flag = paraguay_infiltrated_state_flag
+		}
+	}
+}

@@ -1,0 +1,471 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+		token_base = NOE_generic_holo_xgeneral
+	
+		name="Noel"
+		portraits={
+			army={
+				large="gfx/leaders/NOE/dem.dds"
+				small="gfx/interface/ideas/idea_noel_offence.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { organizer skilled_staffer  politically_connected }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+      visible = { has_country_flag = NOE_recruit_general_dec_flag }
+		}
+	}
+
+	generate_character = {
+			token_base = NOE_generic_holo_xadmiral
+
+		name="Shirogane"
+		portraits={
+			army={
+				large="gfx/leaders/NOE/dem2.dds"
+				#small="gfx/interface/ideas/idea_noel_offence.dds"
+			}
+			navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+		}
+
+		navy_leader = {
+		legacy_id=0
+			traits = { battleship_adherent superior_tactician spotter }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+      visible = { has_country_flag = NOE_recruit_admiral_dec_flag }
+		}
+	}
+
+
+generate_character={
+		token_base = MOO_generic_holo_xgeneral
+
+     name="Moona"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/moona_dem.dds"
+                 small="gfx/interface/ideas/idea_moona_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { inflexible_strategist brilliant_strategist }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+  visible = { has_country_flag = MOO_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+		token_base = MOO_generic_holo_xadmiral
+
+     name="Hoshinova"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/moona_com.dds"
+                 #small="gfx/interface/ideas/idea_moona_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { safety_first career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+  visible = { has_country_flag = MOO_recruit_admiral_dec_flag }
+     }
+}
+
+
+generate_character={
+		token_base = GAW_generic_holo_xgeneral
+
+     name="Gura"
+     portraits={
+           army={
+                 large="gfx/leaders/GAW/gawr_dem.dds"
+                 small="gfx/interface/ideas/idea_gura_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { trait_cautious organizer }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+  visible = { has_country_flag = GAW_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+		token_base = GAW_generic_holo_xadmiral
+
+     name="Gawr"
+     portraits={
+           army={
+                 large="gfx/leaders/GAW/gawr_com.dds"
+                 #small="gfx/interface/ideas/idea_gura_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { ironside career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+  visible = { has_country_flag = GAW_recruit_admiral_dec_flag }
+
+     }
+}
+
+
+generate_character={
+		token_base = RIS_generic_holo_xgeneral
+
+     name="Risu"
+     portraits={
+           army={
+                 large="gfx/leaders/RIS/risu_dem.dds"
+                 small="gfx/interface/ideas/idea_risu_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { trait_cautious organizer }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+  visible = { has_country_flag = RIS_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+		token_base = RIS_generic_holo_xadmiral
+
+     name="Ayunda"
+     portraits={
+           army={
+                 large="gfx/leaders/RIS/risu_com.dds"
+                 #small="gfx/interface/ideas/idea_risu_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { ironside career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+  visible = { has_country_flag = RIS_recruit_admiral_dec_flag }
+
+     }
+}
+
+
+generate_character={
+		token_base = HTO_generic_holo_xgeneral
+
+     name="Akai"
+     portraits={
+           army={
+                 large="gfx/leaders/HTO/haato_dem.dds"
+                 small="gfx/interface/ideas/idea_haato_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { inflexible_strategist trait_cautious }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+  visible = { has_country_flag = HTO_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+		token_base = HTO_generic_holo_xadmiral
+
+     name="Haato"
+     portraits={
+           army={
+                 large="gfx/leaders/HTO/haato_com.dds"
+                 #small="gfx/interface/ideas/idea_haato_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { fly_swatter battleship_adherent  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+  visible = { has_country_flag = HTO_recruit_admiral_dec_flag }
+
+     }
+}
+
+
+generate_character={
+		token_base = IOF_generic_holo_xgeneral
+
+     name="Iofifteen"
+     portraits={
+           army={
+                 large="gfx/leaders/IOF/iof_dem.dds"
+                 small="gfx/interface/ideas/idea_iofi_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { politically_connected trait_reckless }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+  visible = { has_country_flag = IOF_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+		token_base = IOF_generic_holo_xadmiral
+
+     name="Airani"
+     portraits={
+           army={
+                 large="gfx/leaders/IOF/iof_com.dds"
+                 #small="gfx/interface/ideas/idea_iofi_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { war_hero bold ironside }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+  visible = { has_country_flag = IOF_recruit_admiral_dec_flag }
+
+     }
+}
+
+generate_character={
+            token_base = RIN_generic_holo_xgeneral
+
+     name="Reine"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/reine_neu.dds"
+                 small="gfx/interface/ideas/idea_reine_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { politically_connected career_officer }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 2
+      logistics_skill = 2
+  visible = { has_country_flag = RIN_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+            token_base = RIN_generic_holo_xadmiral
+
+     name="Pavolia"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/reine_neu.dds"
+                 #small="gfx/interface/ideas/idea_reine_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { blockade_runner gentlemanly }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      maneuvering_skill = 2
+      coordination_skill = 2
+  visible = { has_country_flag = RIN_recruit_admiral_dec_flag }
+
+     }
+}
+
+generate_character={
+            token_base = OLI_generic_holo_xgeneral
+
+     name="Ollie"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/ollie_neu.dds"
+                 small="gfx/interface/ideas/idea_ollie_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { commando trickster }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 2
+      logistics_skill = 2
+  visible = { has_country_flag = OLI_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+            token_base = OLI_generic_holo_xadmiral
+
+     name="Kureiji"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/ollie_neu.dds"
+                 #small="gfx/interface/ideas/idea_ollie_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { caustic_personality ironside }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      maneuvering_skill = 2
+      coordination_skill = 2
+  visible = { has_country_flag = OLI_recruit_admiral_dec_flag }
+
+     }
+}
+
+generate_character={
+            token_base = ANY_generic_holo_xgeneral
+
+     name="Anya"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/anya_neu.dds"
+                 small="gfx/interface/ideas/idea_anya_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { trait_cautious infantry_officer }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 2
+      logistics_skill = 2
+  visible = { has_country_flag = ANY_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+            token_base = ANY_generic_holo_xadmiral
+
+     name="Melfissa"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/anya_neu.dds"
+                 #small="gfx/interface/ideas/idea_anya_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { gunnery_expert naval_lineage }
+      skill = 4
+      attack_skill = 2
+      defense_skill = 2
+      maneuvering_skill = 2
+      coordination_skill = 2
+  visible = { has_country_flag = ANY_recruit_admiral_dec_flag }
+
+     }
+}
+
+}

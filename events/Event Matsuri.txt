@@ -1,0 +1,1538 @@
+add_namespace = matsuri
+
+#Matsuri yes ICC
+country_event = {
+	id = matsuri.1
+	title = matsuri.1.t
+	desc = matsuri.1.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Matsuri no ICC
+country_event = {
+	id = matsuri.2
+	title = matsuri.2.t
+	desc = matsuri.2.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri Accept Invite
+country_event = {
+	id = matsuri.3
+	title = matsuri.3.t
+	desc = matsuri.3.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri NO Invite
+country_event = {
+	id = matsuri.4
+	title = matsuri.4.t
+	desc = matsuri.4.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri yes puppet
+country_event = {
+	id = matsuri.5
+	title = matsuri.5.t
+	desc = matsuri.5.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri no no-cb
+country_event = {
+	id = matsuri.6
+	title = matsuri.6.t
+	desc = matsuri.6.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri yes matsuri ally
+country_event = {
+	id = matsuri.7
+	title = matsuri.7.t
+	desc = matsuri.7.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.7.a
+		ai_chance = { factor = 100 }
+		SUI = { add_to_faction = MAT }
+	}
+}
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = matsuri.8
+	title = matsuri.8.t
+	desc = matsuri.8.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.8.a	#Yes
+		ai_chance = { factor = 80 }
+		MAT = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.8.b	#No 
+		ai_chance = { factor = 20 }
+		MAT = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = matsuri.9
+	title = matsuri.9.t
+	desc = matsuri.9.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.9.a	#Yes
+		ai_chance = { factor = 80 }
+		MAT = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.9.b	#No 
+		ai_chance = { factor = 20 }
+		MAT = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = matsuri.10
+	title = matsuri.10.t
+	desc = matsuri.10.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.10.a	#Yes
+		ai_chance = { factor = 30 }
+		MAT = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = matsuri.10.b	#No 
+		ai_chance = { factor = 70 }
+		MAT = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = matsuri.11
+	title = matsuri.11.t
+	desc = matsuri.11.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.11.a	#Yes
+		ai_chance = { factor = 50 }
+		MAT = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = matsuri.11.b	#No 
+		ai_chance = { factor = 50 }
+		MAT = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = matsuri.12
+	title = matsuri.12.t
+	desc = matsuri.12.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.12.a	#Yes
+		ai_chance = { factor = 75 }
+		MAT = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.12.b	#No 
+		ai_chance = { factor = 25 }
+		MAT = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = matsuri.13
+	title = matsuri.13.t
+	desc = matsuri.13.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.13.a	#Yes
+		ai_chance = { factor = 50 }
+		MAT = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = matsuri.13.b	#No 
+		ai_chance = { factor = 50 }
+		MAT = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = matsuri.14
+	title = matsuri.14.t
+	desc = matsuri.14.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.14.a	#Yes
+		ai_chance = { factor = 50 }
+		MAT = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = matsuri.14.b	#No 
+		ai_chance = { factor = 50 }
+		MAT = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = matsuri.15
+	title = matsuri.15.t
+	desc = matsuri.15.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.15.a	#Yes
+		ai_chance = { factor = 80 }
+		MAT = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.15.b	#No 
+		ai_chance = { factor = 20 }
+		MAT = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = matsuri.16
+	title = matsuri.16.t
+	desc = matsuri.16.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.16.a	#Yes
+		ai_chance = { factor = 20 }
+		MAT = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = matsuri.16.b	#No 
+		ai_chance = { factor = 80 }
+		MAT = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = matsuri.17
+	title = matsuri.17.t
+	desc = matsuri.17.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.17.a	#Yes
+		ai_chance = { factor = 50 }
+		MAT = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = matsuri.17.b	#No 
+		ai_chance = { factor = 50 }
+		MAT = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = matsuri.19
+	title = matsuri.19.t
+	desc = matsuri.19.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.19.a	#Yes
+		ai_chance = { factor = 40 }
+		MAT = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = matsuri.19.b	#No 
+		ai_chance = { factor = 60 }
+		MAT = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = matsuri.20
+	title = matsuri.20.t
+	desc = matsuri.20.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.20.a	#Yes
+		ai_chance = { factor = 90 }
+		MAT = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.20.b	#No 
+		ai_chance = { factor = 10 }
+		MAT = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = matsuri.21
+	title = matsuri.21.t
+	desc = matsuri.21.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.21.a	#Yes
+		ai_chance = { factor = 80 }
+		MAT = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.21.b	#No 
+		ai_chance = { factor = 20 }
+		MAT = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = matsuri.22
+	title = matsuri.22.t
+	desc = matsuri.22.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.22.a	#Yes
+		ai_chance = { factor = 80 }
+		MAT = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = matsuri.22.b	#No 
+		ai_chance = { factor = 20 }
+		MAT = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = matsuri.23
+	title = matsuri.23.t
+	desc = matsuri.23.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.23.a	#Yes
+		ai_chance = { factor = 70 }
+		MAT = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = matsuri.23.b	#No 
+		ai_chance = { factor = 30 }
+		MAT = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Propose MAT-FBK Union
+country_event = {
+	id = matsuri.24
+	title = matsuri.24.t
+	desc = matsuri.24.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.24.a	#Yes
+		ai_chance = { factor = 100 }
+		MAT = { create_faction = MAT_FBK_UNION }
+		MAT = { country_event = { id = matsuri.25 }}
+	}
+	option = {
+		name = matsuri.24.b	#No 
+		ai_chance = { factor = 0 }
+		MAT = { country_event = { id = matsuri.26 }}
+	}
+}
+
+#FBK yes Union
+country_event = {
+	id = matsuri.25
+	title = matsuri.25.t
+	desc = matsuri.25.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.25.a
+		ai_chance = { factor = 100 }
+		MAT = { add_to_faction = FBK }
+	}
+}
+
+#FBK no Union
+country_event = {
+	id = matsuri.26
+	title = matsuri.26.t
+	desc = matsuri.26.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.26.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Puppet Luna
+country_event = {
+	id = matsuri.27
+	title = matsuri.27.t
+	desc = matsuri.27.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.27.a	#Yes
+		ai_chance = { factor = 50 }
+		MAT = { puppet = LUN }
+		MAT = { country_event = matsuri.28 }
+		
+	}
+	option = {
+		name = matsuri.27.b	#No 
+		ai_chance = { factor = 50 }
+		MAT = { country_event = matsuri.29 }
+		
+	}
+}
+
+#Luna yes puppet
+country_event = {
+	id = matsuri.28
+	title = matsuri.28.t
+	desc = matsuri.28.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.28.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Luna no puppet
+country_event = {
+	id = matsuri.29
+	title = matsuri.29.t
+	desc = matsuri.29.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.29.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Body Swap
+country_event = {
+	id = matsuri.30
+	title = matsuri.30.t
+	desc = matsuri.30.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.30.a	#Yes
+		ai_chance = { factor = 100 }
+		#transfer_state = 458
+		MAT = {
+		transfer_state = 101
+		transfer_state = 100
+		transfer_state = 337
+		}
+		FBK = {
+		transfer_state = 13
+		transfer_state = 191
+		transfer_state = 209
+		}
+	}
+	option = {
+		name = matsuri.30.b	#No 
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#FBK yes Swap
+country_event = {
+	id = matsuri.31
+	title = matsuri.31.t
+	desc = matsuri.31.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.31.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#FBK no Swap
+country_event = {
+	id = matsuri.32
+	title = matsuri.32.t
+	desc = matsuri.32.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.32.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri-Hoshikawa Civilwar
+country_event = {
+	id = matsuri.33
+	title = matsuri.33.t
+	desc = matsuri.33.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.33.a	#Yes
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = MAT_HSK_Civilwar_asHSK
+		hidden_effect = {
+			MAT = {
+declare_war_on = {
+    target = HSK
+    type = annex_everything
+}
+			}
+			HSK = { change_tag_from = MAT }
+			news_event = {
+            id = holo_news.4
+        }
+		}
+	}
+	option = {
+		name = matsuri.33.b	#No 
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = MAT_HSK_Civilwar_asMAT
+		hidden_effect = {
+			MAT = {
+declare_war_on = {
+    target = HSK
+    type = annex_everything
+}
+			}
+	    news_event = {
+            id = holo_news.4
+        }
+		}
+	}
+}
+
+#Join Aqua resistance
+country_event = {
+	id = matsuri.34
+	title = matsuri.34.t
+	desc = matsuri.34.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.34.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { add_to_faction = MAT }
+		MAT = { country_event = matsuri.35 }
+		
+	}
+	option = {
+		name = matsuri.34.b	#No 
+		ai_chance = { factor = 0 }
+		MAT = { country_event = matsuri.36 }
+		
+	}
+}
+
+#Aqua yes faction
+country_event = {
+	id = matsuri.35
+	title = matsuri.35.t
+	desc = matsuri.35.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.35.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aqua yes faction
+country_event = {
+	id = matsuri.36
+	title = matsuri.36.t
+	desc = matsuri.36.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.36.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MAT - Democratic Influencer
+country_event = {
+	id = matsuri.37
+	title = matsuri.37.t
+	desc = matsuri.37.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.37.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MAT - Join your faction
+country_event = {
+	id = matsuri.38
+	title = matsuri.38.t
+	desc = matsuri.38.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.38.a
+		ai_chance = { factor = 100 }
+		add_to_faction  = MAT
+
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.93 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.99 }}
+		}
+	}
+
+	option = {
+		name = matsuri.38.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.94 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#MAT - Matsuri-Fubuki Union
+country_event = {
+	id = matsuri.39
+	title = matsuri.39.t
+	desc = matsuri.39.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.39.a
+		ai_chance = { factor = 100 }
+		MAT = {
+			create_faction = MAT_FBK_UNION
+			add_to_faction = FBK
+		}
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.23 }}
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.104 }
+		}
+	}
+
+	option = {
+		name = matsuri.39.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.24 }}
+		}
+	}
+}
+
+#MAT - Puppet Fubuki
+country_event = {
+	id = matsuri.40
+	title = matsuri.40.t
+	desc = matsuri.40.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.40.a
+		ai_chance = { factor = 100 }
+		MAT = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.23 }}
+		}
+	}
+
+	option = {
+		name = matsuri.40.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.24 }}
+		}
+	}
+}
+
+#MAT - Molotov-Matsuri Pact
+country_event = {
+	id = matsuri.41
+	title = matsuri.41.t
+	desc = matsuri.41.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.41.a
+		ai_chance = { factor = 100 }
+		diplomatic_relation = {
+    		country = MAT
+    		relation = non_aggression_pact
+    		active = yes
+		}
+		if = {
+			limit = { tag = SOV }
+			MAT = { country_event = { id = proposed.101 }}
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.106 }
+		}
+	}
+
+	option = {
+		name = matsuri.41.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = SOV }
+			MAT = { country_event = { id = proposed.102 }}
+		}
+	}
+}
+
+#MAT - Mamatsuri
+country_event = {
+	id = matsuri.42
+	title = matsuri.42.t
+	desc = matsuri.42.d
+	picture = GFX_report_event_matsuri_mamatsuri
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.42.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {retire_ideology_leader = democratic
+		news_event = {id = holo_news.109} }
+		create_country_leader = {
+				name = "Mamatsuri"
+				picture = "gfx/leaders/MAT/mamatsuri.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					loli_trait
+					pantsu_revealed_trait
+				}
+			}
+	}
+
+	option = {
+		name = matsuri.42.b
+		ai_chance = { factor = 0 }
+		generate_character = {
+				token_base = Mamatsuri_recruit_mat_focus
+				name="Mamatsuri"
+     			portraits={
+           		army={
+                 	large="gfx/leaders/MAT/mamatsuri.dds"
+                 	small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           		}
+     			}		
+
+     corps_commander = {
+           traits={trait_cautious career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     		}
+			}
+	}
+}
+
+#MAT - The New Hoshikawa state
+country_event = {
+	id = matsuri.43
+	title = matsuri.43.t
+	desc = matsuri.43.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.43.a
+		ai_chance = { factor = 0 }
+		HSK = { change_tag_from = MAT }
+		hidden_effect = {
+			HSK = { load_oob = HSK_1936 }
+		}
+	}
+
+	option = {
+		name = matsuri.43.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+
+		}
+	}
+}
+
+#HSK - Ask for control of Finland
+country_event = {
+	id = matsuri.44
+	title = matsuri.44.t
+	desc = matsuri.44.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.44.a
+		ai_chance = { factor = 100 }
+		every_state = {
+			limit = {
+				is_owned_by = MAT
+				is_core_of = NIN
+			}
+			transfer_state_to = HSK
+		}
+
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.49 }}
+		}
+	}
+
+	option = {
+		name = matsuri.44.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#HSK - Ask for control of Sweden
+country_event = {
+	id = matsuri.45
+	title = matsuri.45.t
+	desc = matsuri.45.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.45.a
+		ai_chance = { factor = 100 }
+		every_state = {
+			limit = {
+				is_owned_by = MAT
+				is_core_of = MRI
+			}
+			transfer_state_to = HSK
+		}
+
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.49 }}
+		}
+	}
+
+	option = {
+		name = matsuri.45.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#MAT - Ask to join faction
+country_event = {
+	id = matsuri.46
+	title = matsuri.46.t
+	desc = matsuri.46.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.46.a
+		ai_chance = { factor = 100 }
+
+		add_to_faction = MAT
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.23 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.93 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.99 }}
+		}
+
+	}
+
+	option = {
+		name = matsuri.46.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.24 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.94 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#MAT - 1936 Election
+country_event = {
+	id = matsuri.47
+	title = matsuri.47.t
+	desc = matsuri.47.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	#Matsurin
+	option = {
+		name = matsuri.47.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			create_country_leader = {
+				name = "Matsurin"
+				picture = "gfx/leaders/MAT/matsurin.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					cutting_board
+					lolicon
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Matsurin"
+							picture = "gfx/leaders/MAT/matsurin.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								cutting_board
+								lolicon
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Matsurin"
+							picture = "gfx/leaders/MAT/matsurin.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								cutting_board
+								lolicon
+								
+							}
+						}
+						create_country_leader = {
+							name = "Matsurin"
+							picture = "gfx/leaders/MAT/matsurin.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								cutting_board
+								lolicon
+								
+							}
+						}
+					}
+	}
+
+	#Matsuhiko
+	option = {
+		name = matsuri.47.b
+		ai_chance = { factor = 5 }
+		set_global_flag = MAT_matsuhiko_is_leader
+		add_stability = -0.1
+		hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			create_country_leader = {
+				name = "Matsuhiko"
+				picture = "gfx/leaders/FBK/matsuhiko.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					elite
+					very_cool_trait
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Matsuhiko"
+							picture = "gfx/leaders/FBK/matsuhiko.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								elite
+								very_cool_trait
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Matsuhiko"
+							picture = "gfx/leaders/FBK/matsuhiko.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								elite
+								very_cool_trait
+								
+							}
+						}
+						create_country_leader = {
+							name = "Matsuhiko"
+							picture = "gfx/leaders/FBK/matsuhiko.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								elite
+								very_cool_trait
+								
+							}
+						}
+					}
+		
+	}
+
+	#Matsuri God
+	option = {
+		name = matsuri.47.c
+		ai_chance = { factor = 5 }
+					hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			create_country_leader = {
+				name = "Matsuri God"
+				picture = "gfx/leaders/MAT/matsuri_god.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					lolicon
+					matsuri_god_trait
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Matsuri God"
+							picture = "gfx/leaders/MAT/matsuri_god.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								lolicon
+								matsuri_god_trait
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Matsuri God"
+							picture = "gfx/leaders/MAT/matsuri_god.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								lolicon
+								matsuri_god_trait
+								
+							}
+						}
+						create_country_leader = {
+							name = "Matsuri God"
+							picture = "gfx/leaders/MAT/matsuri_god.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								lolicon
+								matsuri_god_trait
+								
+							}
+						}
+					}
+		
+	}
+}
+
+#MAT - Demand Qidao
+country_event = {
+	id = matsuri.48
+	title = matsuri.48.t
+	desc = matsuri.48.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.48.a
+		ai_chance = { factor = 100 }
+
+		MAT = {
+			transfer_state = 743
+		}
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.23 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			MAT = { country_event = { id = proposed.107 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.93 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.99 }}
+		}
+
+	}
+
+	option = {
+		name = matsuri.48.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = FBK }
+			MAT = { country_event = { id = proposed.24 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			MAT = { country_event = { id = proposed.108 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MAT = { country_event = { id = proposed.94 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			MAT = { country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			MAT = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#HSK - Demand Sumiree
+country_event = {
+	id = matsuri.49
+	title = matsuri.49.t
+	desc = matsuri.49.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.49.a
+		ai_chance = { factor = 100 }
+
+		HSK = {
+			transfer_state = 811
+		}
+
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.49 }}
+		}
+		
+	}
+
+	option = {
+		name = matsuri.49.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MAT }
+			HSK = { country_event = { id = proposed.50 }}
+		}
+		
+	}
+}
+
+#HSK - Ask to join faction
+country_event = {
+	id = matsuri.50
+	title = matsuri.50.t
+	desc = matsuri.50.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.50.a
+		ai_chance = { factor = 100 }
+
+		add_to_faction = HSK
+
+		if = {
+			limit = { tag = GER }
+			HSK = { country_event = { id = proposed.99 }}
+		}
+		
+	}
+
+	option = {
+		name = matsuri.50.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = GER }
+			HSK = { country_event = { id = proposed.100 }}
+		}
+		
+	}
+}
+
+#HSK - Miko military support
+country_event = {
+	id = matsuri.51
+	title = matsuri.51.t
+	desc = matsuri.51.d
+	picture = GFX_report_event_hoshikawa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = matsuri.51.a
+		ai_chance = { factor = 100 }
+
+		HSK = {
+			add_timed_idea = {
+                idea = sakurakaze_idea
+                days = 365
+            }
+		}
+
+		add_political_power = 100
+
+		if = {
+			limit = { tag = GER }
+			HSK = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = MIK }
+			HSK = { country_event = { id = proposed.53 }}
+		}
+		
+	}
+
+	option = {
+		name = matsuri.51.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = GER }
+			HSK = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = MIK }
+			HSK = { country_event = { id = proposed.54 }}
+		}
+		
+	}
+}

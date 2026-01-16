@@ -1,0 +1,61 @@
+Generic_ACH_china_historical = {
+	name = "Hololive China plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = ACH
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = ACH
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		hololive_china_ach_focus
+		rearmament_effort_ach_focus
+
+		x1936_budget_ach_focus
+		beijing_university_ach_focus
+
+		recruit_a_chan_ach_focus
+		fortify_beijing_ach_focus
+		the_dragon_herself_ach_focus
+
+		prepare_war_against_japan_ach_focus
+		defend_the_yellow_river_ach_focus
+		war_of_attrition_ach_focus
+		internal_politics_ach_focus
+
+		open_recruitment_center_ach_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

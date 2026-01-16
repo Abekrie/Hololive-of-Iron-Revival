@@ -1,0 +1,4250 @@
+add_namespace = holo_news
+
+#holo_news News
+#Noel Noel forms Indochina
+news_event = {
+	id = holo_news.1
+	title = holo_news.1.t
+	desc = holo_news.1.d
+	picture = GFX_news_event_noel1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.1.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = NOE 
+		}
+	}
+
+	option = {
+		name = holo_news.1.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { original_tag = NOE }
+		}
+	}
+}
+
+#Noel-Flare Union
+news_event = {
+	id = holo_news.2
+	title = holo_news.2.t
+	desc = holo_news.2.d
+	picture = GFX_news_event_flare_noel
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.2.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = NOE 
+			original_tag = FLA
+		}
+	}
+
+	option = {
+		name = holo_news.2.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { original_tag = NOE 
+			original_tag = FLA }
+		}
+	}
+}
+
+
+#Sui forms France
+news_event = {
+	id = holo_news.3
+	title = holo_news.3.t
+	desc = holo_news.3.d
+	picture = GFX_news_event_suisei1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.3.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = SUI 
+		}
+	}
+
+	option = {
+		name = holo_news.3.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { original_tag = SUI }
+		}
+	}
+}
+
+#HSK - MAT Civil War
+news_event = {
+	id = holo_news.4
+	title = holo_news.4.t
+	desc = holo_news.4.d
+	picture = GFX_news_event_mat_hsk_civwar
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Fubuki forms Nordic Union
+news_event = {
+	id = holo_news.5
+	title = holo_news.5.t
+	desc = holo_news.5.d
+	picture = GFX_news_event_fubuki1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Rushia forms Raj
+news_event = {
+	id = holo_news.6
+	title = holo_news.6.t
+	desc = holo_news.6.d
+	picture = GFX_news_event_rus_form_raj
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Matsuri forms Commonwealth
+news_event = {
+	id = holo_news.7
+	title = holo_news.7.t
+	desc = holo_news.7.d
+	picture = GFX_news_event_matsuri1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Pekora forms Italy
+news_event = {
+	id = holo_news.8
+	title = holo_news.8.t
+	desc = holo_news.8.d
+	picture = GFX_news_event_pekora1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Miko nuke her own country FOCUS
+news_event = {
+	id = holo_news.9
+	title = holo_news.9.t
+	desc = holo_news.9.d
+	picture = GFX_news_event_elite_miko
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Miko forms Commonwealth
+news_event = {
+	id = holo_news.10
+	title = holo_news.10.t
+	desc = holo_news.10.d
+	picture = GFX_news_event_miko1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.10.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Miko forms Germany
+news_event = {
+	id = holo_news.11
+	title = holo_news.11.t
+	desc = holo_news.11.d
+	picture = GFX_news_event_miko1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.11.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#PPTenshi forms Raj
+news_event = {
+	id = holo_news.12
+	title = holo_news.12.t
+	desc = holo_news.12.d
+	picture = GFX_news_event_kanata1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.12.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#HTO forms Nordic
+news_event = {
+	id = holo_news.13
+	title = holo_news.13.t
+	desc = holo_news.13.d
+	picture = GFX_news_event_haato1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.13.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#AChan - Shion
+news_event = {
+	id = holo_news.14
+	title = holo_news.14.t
+	desc = holo_news.14.d
+	picture = GFX_news_event_achan1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.14.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHION Aqua War in Peace
+news_event = {
+	id = holo_news.15
+	title = holo_news.15.t
+	desc = holo_news.15.d
+	picture = GFX_news_event_aqa_shi_war
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.15.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+#SHION Aqua War in WAR
+news_event = {
+	id = holo_news.16
+	title = holo_news.16.t
+	desc = holo_news.16.d
+	picture = GFX_news_event_aqa_shi_war
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.16.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Tension AQA_SHI War
+news_event = {
+	id = holo_news.17
+	title = holo_news.17.t
+	desc = holo_news.17.d
+	picture = GFX_news_event_aqa_shi_war
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.17.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#AQA_SHI War
+news_event = {
+	id = holo_news.18
+	title = holo_news.18.t
+	desc = holo_news.18.d
+	picture = GFX_news_event_aqa_shi_war
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.18.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Shion form Persia
+news_event = {
+	id = holo_news.19
+	title = holo_news.19.t
+	desc = holo_news.19.d
+	picture = GFX_news_event_shion1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.19.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Risu nuke her own country
+news_event = {
+	id = holo_news.20
+	title = holo_news.20.t
+	desc = holo_news.20.d
+	picture = GFX_news_event_risu1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.20.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Establish Hololive HQ
+news_event = {
+	id = holo_news.21
+	title = holo_news.21.t
+	desc = holo_news.21.d
+	picture = GFX_news_event_yagoo1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.21.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Guarantee Aloe by YAG
+news_event = {
+	id = holo_news.22
+	title = holo_news.22.t
+	desc = holo_news.22.d
+	picture = GFX_news_event_aloe1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.22.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Budapest Uprising
+news_event = {
+	id = holo_news.23
+	title = holo_news.23.t
+	desc = holo_news.23.d
+	picture = GFX_news_event_budapest_up
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.23.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aloe submission
+news_event = {
+	id = holo_news.24
+	title = holo_news.24.t
+	desc = holo_news.24.d
+	picture = GFX_news_event_aloe1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.24.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#ALO-HUN form
+news_event = {
+	id = holo_news.25
+	title = holo_news.25.t
+	desc = holo_news.25.d
+	picture = GFX_news_event_aloe1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.25.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Luna forms USAM
+news_event = {
+	id = holo_news.26
+	title = holo_news.26.t
+	desc = holo_news.26.d
+	picture = GFX_news_event_luna1
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = holo_news.26.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Watame forms USAM
+news_event = {
+	id = holo_news.27
+	title = holo_news.27.t
+	desc = holo_news.27.d
+	picture = GFX_news_event_watame1
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.27.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Coco ded
+news_event = {
+	id = holo_news.28
+	title = holo_news.28.t
+	desc = holo_news.28.d
+	picture = GFX_news_event_coco_ded
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.28.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Kazuma Coup
+news_event = {
+	id = holo_news.29
+	title = holo_news.29.t
+	desc = holo_news.29.d
+	picture = GFX_news_event_COC_kazuma
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.29.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Revive Coco
+news_event = {
+	id = holo_news.30
+	title = holo_news.30.t
+	desc = holo_news.30.d
+	picture = GFX_news_event_coco1
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.30.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aloe war with Haters
+news_event = {
+	id = holo_news.31
+	title = holo_news.31.t
+	desc = holo_news.31.d
+	picture = GFX_news_event_budapest_up
+	
+	#is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		ALO = { has_war_with = HAT }
+		NOT = { has_global_flag = holo_news.31_fired }
+	}
+	
+	mean_time_to_happen = { days = 2 } 
+	
+	immediate = { set_global_flag = holo_news.31_fired	}
+
+	option = {
+		name = holo_news.31.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = ALO 
+		}
+	}
+
+	option = {
+		name = holo_news.31.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { original_tag = ALO
+			original_tag = LAM
+			original_tag = BTN
+			original_tag = PLK
+			original_tag = NEN }
+		}
+	}
+
+	option = {
+		name = holo_news.31.c
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = LAM
+			original_tag = BTN
+			original_tag = PLK
+			original_tag = NEN
+		}
+	}
+}
+
+#Coco form CSA
+news_event = {
+	id = holo_news.32
+	title = holo_news.32.t
+	desc = holo_news.32.d
+	picture = GFX_news_event_coco1
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.32.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Coco form USA
+news_event = {
+	id = holo_news.33
+	title = holo_news.33.t
+    desc = holo_news.33.d
+    picture = GFX_news_event_coco1
+
+     is_triggered_only = yes
+     major = yes
+
+     option = {
+     name = holo_news.33.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#flare Form USA
+news_event = {
+	id = holo_news.34
+	title = holo_news.34.t
+    desc = holo_news.34.d
+    picture = GFX_news_event_flare1
+
+     is_triggered_only = yes
+     major = yes
+
+     option = {
+     name = holo_news.34.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#mio Form USA
+news_event = {
+	id = holo_news.35
+	title = holo_news.35.t
+    desc = holo_news.35.d
+    picture = GFX_news_event_mio1
+
+     is_triggered_only = yes
+     major = yes
+
+     option = {
+     name = holo_news.35.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#botan Form USA
+news_event = {
+	id = holo_news.36
+	title = holo_news.36.t
+    desc = holo_news.36.d
+    picture = GFX_news_event_botan1
+
+     is_triggered_only = yes
+     major = yes
+
+     option = {
+     name = holo_news.36.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hitomi is a thing
+news_event = {
+	id = holo_news.37
+	title = holo_news.37.t
+	desc = holo_news.37.d
+	picture = GFX_news_event_hitomi1
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_news.37.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Coco marches North
+news_event = {
+	id = holo_news.39
+	title = holo_news.39.t
+	desc = holo_news.39.d
+	picture = GFX_news_event_coco1
+
+	major = yes
+	#is_triggered_only = yes
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 2 }
+
+	trigger = {
+		COC = { has_offensive_war_with = MIO }
+	}
+	
+	option = {
+		name = holo_news.39.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			original_tag = MIO 
+		}
+	}
+
+	option = {
+		name = holo_news.39.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { original_tag = MIO }
+		}
+	}
+}
+
+#Watson forms UK
+news_event = {
+	id = holo_news.40
+	title = holo_news.40.t
+	desc = holo_news.40.d
+	picture = GFX_news_event_amelia1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.40.a
+		ai_chance = { factor = 100 }
+
+	}
+
+}
+
+#Choco forms UK
+news_event = {
+	id = holo_news.41
+	title = holo_news.41.t
+	desc = holo_news.41.d
+	picture = GFX_news_event_choco1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.41.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Hololive ID Civil War
+news_event = {
+	id = holo_news.42
+	title = holo_news.42.t
+	desc = holo_news.42.d
+	picture = GFX_news_event_hololive_ins1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.42.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Risu forms Indonesia
+news_event = {
+	id = holo_news.43
+	title = holo_news.43.t
+	desc = holo_news.43.d
+	picture = GFX_news_event_hololive_ins1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.43.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Moona forms Indonesia
+news_event = {
+	id = holo_news.44
+	title = holo_news.44.t
+	desc = holo_news.44.d
+	picture = GFX_news_event_hololive_ins1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.44.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Iofi forms Indonesia
+news_event = {
+	id = holo_news.45
+	title = holo_news.45.t
+	desc = holo_news.45.d
+	picture = GFX_news_event_hololive_ins1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.45.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Choco - Question of Ireland
+news_event = {
+	id = holo_news.46
+	title = holo_news.46.t
+	desc = holo_news.46.d
+	picture = GFX_news_event_choco1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.46.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Kiara - KFP
+news_event = {
+	id = holo_news.47
+	title = holo_news.47.t
+	desc = holo_news.47.d
+	picture = GFX_news_event_kiara1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.47.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Kiara - KIA-MRI Union
+news_event = {
+	id = holo_news.48
+	title = holo_news.48.t
+	desc = holo_news.48.d
+	picture = GFX_news_event_kiara_calli
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.48.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Subaru - Ui coup
+news_event = {
+	id = holo_news.49
+	title = holo_news.49.t
+	desc = holo_news.49.d
+	picture = GFX_news_event_ui1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.49.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Lamy - Winter Purge
+news_event = {
+	id = holo_news.50
+	title = holo_news.50.t
+	desc = holo_news.50.d
+	picture = GFX_news_event_lamy1
+
+	major = yes
+	is_triggered_only = yes
+
+	#fire_only_once = yes
+
+	#mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = holo_news.50.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Pekora - Usaken
+news_event = {
+	id = holo_news.51
+	title = holo_news.51.t
+    desc = holo_news.51.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.51.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Sicily Trial
+news_event = {
+	id = holo_news.52
+	title = holo_news.52.t
+    desc = holo_news.52.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.52.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Sora - Sora falls and dies
+news_event = {
+	id = holo_news.53
+	title = holo_news.53.t
+    desc = holo_news.53.d
+    picture = GFX_news_event_sora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.53.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Towa - TNT Prank focus
+news_event = {
+	id = holo_news.54
+	title = holo_news.54.t
+    desc = holo_news.54.d
+    picture = GFX_news_event_towa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.54.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Watame - Stalking Wife
+news_event = {
+	id = holo_news.55
+	title = holo_news.55.t
+    desc = holo_news.55.d
+    picture = GFX_news_event_watame_haato
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.55.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Watame - Impersonate Ui
+news_event = {
+	id = holo_news.56
+	title = holo_news.56.t
+    desc = holo_news.56.d
+    picture = GFX_news_event_watame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.56.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Luna - Queen Luna coup
+news_event = {
+	id = holo_news.57
+	title = holo_news.57.t
+    desc = holo_news.57.d
+    picture = GFX_news_event_luna1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.57.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kanata - Control Asacoco trade
+news_event = {
+	id = holo_news.58
+	title = holo_news.58.t
+    desc = holo_news.58.d
+    picture = GFX_news_event_kanata1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.58.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloEN - Project Hope IRyS
+news_event = {
+	id = holo_news.59
+	title = holo_news.59.t
+    desc = holo_news.59.d
+    picture = GFX_news_event_irys1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.59.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Amesame
+news_event = {
+	id = holo_news.60
+	title = holo_news.60.t
+    desc = holo_news.60.d
+    picture = GFX_news_event_amesame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.60.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Alternating timeline
+news_event = {
+	id = holo_news.61
+	title = holo_news.61.t
+    desc = holo_news.61.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.61.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Gura - Operation Save Watson
+news_event = {
+	id = holo_news.62
+	title = holo_news.62.t
+    desc = holo_news.62.d
+    picture = GFX_news_event_gura1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.62.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Calliope - Deadbeats Division
+news_event = {
+	id = holo_news.63
+	title = holo_news.63.t
+    desc = holo_news.63.d
+    picture = GFX_news_event_calliope1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.63.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ina - Tako Bell
+news_event = {
+	id = holo_news.64
+	title = holo_news.64.t
+    desc = holo_news.64.d
+    picture = GFX_news_event_ina1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.64.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ina - Ina of the mountain
+news_event = {
+	id = holo_news.65
+	title = holo_news.65.t
+    desc = holo_news.65.d
+    picture = GFX_news_event_ina1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.65.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ina - Tale of the Ancient ones
+news_event = {
+	id = holo_news.66
+	title = holo_news.66.t
+    desc = holo_news.66.d
+    picture = GFX_news_event_ina1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.66.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Miko - Fire disaster
+news_event = {
+	id = holo_news.67
+	title = holo_news.67.t
+    desc = holo_news.67.d
+    picture = GFX_news_event_miko1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.67.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Miko - Unholy Alliance
+news_event = {
+	id = holo_news.68
+	title = holo_news.68.t
+    desc = holo_news.68.d
+    picture = GFX_news_event_pekomiko
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.68.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Miko - Elite Policy
+news_event = {
+	id = holo_news.69
+	title = holo_news.69.t
+    desc = holo_news.69.d
+    picture = GFX_news_event_miko1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.69.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aqua - Akukin
+news_event = {
+	id = holo_news.70
+	title = holo_news.70.t
+    desc = holo_news.70.d
+    picture = GFX_news_event_aqua1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.70.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aqua - Dawn of Resistance
+news_event = {
+	id = holo_news.71
+	title = holo_news.71.t
+    desc = holo_news.71.d
+    picture = GFX_news_event_aqua1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.71.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aqua - 5th Internationale
+news_event = {
+	id = holo_news.72
+	title = holo_news.72.t
+    desc = holo_news.72.d
+    picture = GFX_news_event_aqua1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.72.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Tension rises between neighbor
+news_event = {
+	id = holo_news.73
+	title = holo_news.73.t
+    desc = holo_news.73.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.73.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Neighbor War
+news_event = {
+	id = holo_news.74
+	title = holo_news.74.t
+    desc = holo_news.74.d
+    picture = GFX_news_event_aqa_shi_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.74.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Peace for our time
+news_event = {
+	id = holo_news.75
+	title = holo_news.75.t
+    desc = holo_news.75.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.75.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Assassination of Shion
+news_event = {
+	id = holo_news.76
+	title = holo_news.76.t
+    desc = holo_news.76.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.76.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Revive
+news_event = {
+	id = holo_news.77
+	title = holo_news.77.t
+    desc = holo_news.77.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.77.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Yo dayo!
+news_event = {
+	id = holo_news.78
+	title = holo_news.78.t
+    desc = holo_news.78.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.78.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Assassination of Stalin
+news_event = {
+	id = holo_news.79
+	title = holo_news.79.t
+    desc = holo_news.79.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.79.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Stalin escape to Georgia
+news_event = {
+	id = holo_news.80
+	title = holo_news.80.t
+    desc = holo_news.80.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.80.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Intervene in neighbor war
+news_event = {
+	id = holo_news.81
+	title = holo_news.81.t
+    desc = holo_news.81.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.81.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - Nuke Moscow
+news_event = {
+	id = holo_news.82
+	title = holo_news.82.t
+    desc = holo_news.82.d
+    picture = GFX_news_event_nene1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.82.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - Nuke Stalingrad
+news_event = {
+	id = holo_news.83
+	title = holo_news.83.t
+    desc = holo_news.83.d
+    picture = GFX_news_event_nene1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.83.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - Nuke Minsk
+news_event = {
+	id = holo_news.84
+	title = holo_news.84.t
+    desc = holo_news.84.d
+    picture = GFX_news_event_nene1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.84.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - Husband Collection
+news_event = {
+	id = holo_news.85
+	title = holo_news.85.t
+    desc = holo_news.85.d
+    picture = GFX_news_event_nene1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.85.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Okayu - Okakoro
+news_event = {
+	id = holo_news.86
+	title = holo_news.86.t
+    desc = holo_news.86.d
+    picture = GFX_news_event_okakoro
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.86.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Okayu - Okayu court
+news_event = {
+	id = holo_news.87
+	title = holo_news.87.t
+    desc = holo_news.87.d
+    picture = GFX_news_event_okayu1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.87.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Korone - Bakery shop
+news_event = {
+	id = holo_news.88
+	title = holo_news.88.t
+    desc = holo_news.88.d
+    picture = GFX_news_event_korone1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.88.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Korone - Project Sneeze
+news_event = {
+	id = holo_news.89
+	title = holo_news.89.t
+    desc = holo_news.89.d
+    picture = GFX_news_event_korone1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.89.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Korone - Doog Ethernal
+news_event = {
+	id = holo_news.90
+	title = holo_news.90.t
+    desc = holo_news.90.d
+    picture = GFX_news_event_korone1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.90.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Korone - Mogu yatch
+news_event = {
+	id = holo_news.91
+	title = holo_news.91.t
+    desc = holo_news.91.d
+    picture = GFX_news_event_korone1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.91.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Haato - Haachama Sunday
+news_event = {
+	id = holo_news.92
+	title = holo_news.92.t
+    desc = holo_news.92.d
+    picture = GFX_news_event_haato_black_sunday
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.92.a	#Yes
+       ai_chance = { factor = 100 }
+
+    }
+}
+
+#Haato - Haachama coup
+news_event = {
+	id = holo_news.93
+	title = holo_news.93.t
+    desc = holo_news.93.d
+    picture = GFX_news_event_haato1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.93.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Haato - Emu Division
+news_event = {
+	id = holo_news.94
+	title = holo_news.94.t
+    desc = holo_news.94.d
+    picture = GFX_news_event_haato1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.94.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Noel - Noefure
+news_event = {
+	id = holo_news.95
+	title = holo_news.95.t
+    desc = holo_news.95.d
+    picture = GFX_news_event_flare_noel
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.95.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Noel - Fate of China
+news_event = {
+	id = holo_news.96
+	title = holo_news.96.t
+    desc = holo_news.96.d
+    picture = GFX_news_event_noel1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.96.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Noel - Order of Shirogane/Shogunate
+news_event = {
+	id = holo_news.97
+	title = holo_news.97.t
+    desc = holo_news.97.d
+    picture = GFX_news_event_noel1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.97.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Operation Revival
+news_event = {
+	id = holo_news.98
+	title = holo_news.98.t
+    desc = holo_news.98.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.98.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Halloween night, tonight!
+news_event = {
+	id = holo_news.99
+	title = holo_news.99.t
+    desc = holo_news.99.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.99.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Wall Rushia
+news_event = {
+	id = holo_news.100
+	title = holo_news.100.t
+    desc = holo_news.100.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.100.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Soviet Rushia
+news_event = {
+	id = holo_news.101
+	title = holo_news.101.t
+    desc = holo_news.101.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.101.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Pink Rushia
+news_event = {
+	id = holo_news.102
+	title = holo_news.102.t
+    desc = holo_news.102.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.102.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Nekomancer
+news_event = {
+	id = holo_news.103
+	title = holo_news.103.t
+    desc = holo_news.103.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.103.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Matsuri-Fubuki Union
+news_event = {
+	id = holo_news.104
+	title = holo_news.104.t
+    desc = holo_news.104.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.104.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Independent for Hoshikawa
+news_event = {
+	id = holo_news.105
+	title = holo_news.105.t
+    desc = holo_news.105.d
+    picture = GFX_news_event_hoshikawa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.105.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Molotov-Matsuri Pact
+news_event = {
+	id = holo_news.106
+	title = holo_news.106.t
+    desc = holo_news.106.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.106.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Matsuri is God
+news_event = {
+	id = holo_news.107
+	title = holo_news.107.t
+    desc = holo_news.107.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.107.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Matsuri is Hololive
+news_event = {
+	id = holo_news.108
+	title = holo_news.108.t
+    desc = holo_news.108.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.108.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Mamatsuri
+news_event = {
+	id = holo_news.109
+	title = holo_news.109.t
+    desc = holo_news.109.d
+    picture = GFX_news_event_matsuri_mamatsuri
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.109.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hoshikawa - Matsuri-Hoshikawa Civil War
+news_event = {
+	id = holo_news.110
+	title = holo_news.110.t
+    desc = holo_news.110.d
+    picture = GFX_news_event_hoshikawa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.110.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - Remilitarize on Estonia
+news_event = {
+	id = holo_news.111
+	title = holo_news.111.t
+    desc = holo_news.111.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.111.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Anemachi takeover
+news_event = {
+	id = holo_news.112
+	title = holo_news.112.t
+    desc = holo_news.112.d
+    picture = GFX_news_event_anemachi
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.112.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Anemachi inquisition
+news_event = {
+	id = holo_news.113
+	title = holo_news.113.t
+    desc = holo_news.113.d
+    picture = GFX_news_event_anemachi
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.113.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Anemachi claims Spanish throne
+news_event = {
+	id = holo_news.114
+	title = holo_news.114.t
+    desc = holo_news.114.d
+    picture = GFX_news_event_anemachi
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.114.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Anemachi in North Africa
+news_event = {
+	id = holo_news.115
+	title = holo_news.115.t
+    desc = holo_news.115.d
+    picture = GFX_news_event_anemachi
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.115.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Anemachi in Switzerland
+news_event = {
+	id = holo_news.116
+	title = holo_news.116.t
+    desc = holo_news.116.d
+    picture = GFX_news_event_anemachi
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.116.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Question of France
+news_event = {
+	id = holo_news.117
+	title = holo_news.117.t
+    desc = holo_news.117.d
+    picture = GFX_news_event_suisei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.117.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Hi Honey Virus
+news_event = {
+	id = holo_news.118
+	title = holo_news.118.t
+    desc = holo_news.118.d
+    picture = GFX_news_event_suisei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.118.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Sussei
+news_event = {
+	id = holo_news.119
+	title = holo_news.119.t
+    desc = holo_news.119.d
+    picture = GFX_news_event_suisei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.119.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+
+#Suisei - 5th Geneva Convention
+news_event = {
+	id = holo_news.120
+	title = holo_news.120.t
+    desc = holo_news.120.d
+    picture = GFX_news_event_suisei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.120.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Church of the Northern Fox
+news_event = {
+	id = holo_news.121
+	title = holo_news.121.t
+    desc = holo_news.121.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.121.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+
+#Fubuki - Foxist Crusade
+news_event = {
+	id = holo_news.122
+	title = holo_news.122.t
+    desc = holo_news.122.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.122.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+
+#Fubuki - Holy Fubuki Empire
+news_event = {
+	id = holo_news.123
+	title = holo_news.123.t
+    desc = holo_news.123.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.123.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Kurokami Coup
+news_event = {
+	id = holo_news.124
+	title = holo_news.124.t
+    desc = holo_news.124.d
+    picture = GFX_news_event_kurokami
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.124.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Matsuhiko in Exile
+news_event = {
+	id = holo_news.125
+	title = holo_news.125.t
+    desc = holo_news.125.d
+    picture = GFX_news_event_kurokami
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.125.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Matsuhiko reclaim the throne
+news_event = {
+	id = holo_news.126
+	title = holo_news.126.t
+    desc = holo_news.126.d
+    picture = GFX_news_event_kurokami
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.126.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Kurohiko Union
+news_event = {
+	id = holo_news.127
+	title = holo_news.127.t
+    desc = holo_news.127.d
+    picture = GFX_news_event_kurokami
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.127.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Friendzone Act
+news_event = {
+	id = holo_news.128
+	title = holo_news.128.t
+    desc = holo_news.128.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.128.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Glasses Policy
+news_event = {
+	id = holo_news.129
+	title = holo_news.129.t
+    desc = holo_news.129.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.129.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Shitposting Queen
+news_event = {
+	id = holo_news.130
+	title = holo_news.130.t
+    desc = holo_news.130.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.130.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fubuki - Fubuki's Bizarre Adventure
+news_event = {
+	id = holo_news.131
+	title = holo_news.131.t
+    desc = holo_news.131.d
+    picture = GFX_news_event_fubuki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.131.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloID - Reine uprising in ID Civil War
+news_event = {
+	id = holo_news.132
+	title = holo_news.132.t
+    desc = holo_news.132.d
+    picture = GFX_news_event_hololive_ins2
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.132.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloID - Ollie uprising in ID Civil War
+news_event = {
+	id = holo_news.133
+	title = holo_news.133.t
+    desc = holo_news.133.d
+    picture = GFX_news_event_hololive_ins2
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.133.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloID - Anya uprising in ID Civil War
+news_event = {
+	id = holo_news.134
+	title = holo_news.134.t
+    desc = holo_news.134.d
+    picture = GFX_news_event_hololive_ins2
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.134.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Moona - Empire of the Rising Moon
+news_event = {
+	id = holo_news.135
+	title = holo_news.135.t
+    desc = holo_news.135.d
+    picture = GFX_news_event_moona1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.135.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Moona - NPC Moona
+news_event = {
+	id = holo_news.136
+	title = holo_news.136.t
+    desc = holo_news.136.d
+    picture = GFX_news_event_moona1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.136.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Moona - First to the Moon
+news_event = {
+	id = holo_news.137
+	title = holo_news.137.t
+    desc = holo_news.137.d
+    picture = GFX_news_event_moona_moon_landing
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.137.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Iofi - First to the Moon
+news_event = {
+	id = holo_news.138
+	title = holo_news.138.t
+    desc = holo_news.138.d
+    picture = GFX_news_event_iofi_moon_landing
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.138.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Iofi - IO Reinforcement
+news_event = {
+	id = holo_news.139
+	title = holo_news.139.t
+    desc = holo_news.139.d
+    picture = GFX_news_event_iofi1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.139.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Risu - Ayunda takeover
+news_event = {
+	id = holo_news.140
+	title = holo_news.140.t
+    desc = holo_news.140.d
+    picture = GFX_news_event_risu1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.140.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Risu - Magical Squirrel
+news_event = {
+	id = holo_news.141
+	title = holo_news.141.t
+    desc = holo_news.141.d
+    picture = GFX_news_event_risu1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.141.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Risu - Intervene in neighbor war
+news_event = {
+	id = holo_news.142
+	title = holo_news.142.t
+    desc = holo_news.142.d
+    picture = GFX_news_event_risu1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.142.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Risu - Non-stop Nut November
+news_event = {
+	id = holo_news.143
+	title = holo_news.143.t
+    desc = holo_news.143.d
+    picture = GFX_news_event_risu1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.143.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Marine - Pirate of the Caribbean
+news_event = {
+	id = holo_news.144
+	title = holo_news.144.t
+    desc = holo_news.144.d
+    picture = GFX_news_event_marine1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.144.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Botan - The Lion Lady
+news_event = {
+	id = holo_news.145
+	title = holo_news.145.t
+    desc = holo_news.145.d
+    picture = GFX_news_event_botan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.145.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Botan - Commander Botan
+news_event = {
+	id = holo_news.146
+	title = holo_news.146.t
+    desc = holo_news.146.d
+    picture = GFX_news_event_botan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.146.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Botan - Coup in Siberia
+news_event = {
+	id = holo_news.147
+	title = holo_news.147.t
+    desc = holo_news.147.d
+    picture = GFX_news_event_botan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.147.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Polka - Circus radio
+news_event = {
+	id = holo_news.148
+	title = holo_news.148.t
+    desc = holo_news.148.d
+    picture = GFX_news_event_polka1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.148.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Choco - Succubus Entente
+news_event = {
+	id = holo_news.149
+	title = holo_news.149.t
+    desc = holo_news.149.d
+    picture = GFX_news_event_choco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.149.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Choco - Seduction Warfare
+news_event = {
+	id = holo_news.150
+	title = holo_news.150.t
+    desc = holo_news.150.d
+    picture = GFX_news_event_choco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.150.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Choco - Enderman Massacre
+news_event = {
+	id = holo_news.151
+	title = holo_news.151.t
+    desc = holo_news.151.d
+    picture = GFX_news_event_choco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.151.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Mel - Monetization effort
+news_event = {
+	id = holo_news.152
+	title = holo_news.152.t
+    desc = holo_news.152.d
+    picture = GFX_news_event_mel1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.152.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Roboco - Iron Queen
+news_event = {
+	id = holo_news.153
+	title = holo_news.153.t
+    desc = holo_news.153.d
+    picture = GFX_news_event_roboco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.153.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Roboco - Where did Hitler go?
+news_event = {
+	id = holo_news.154
+	title = holo_news.154.t
+    desc = holo_news.154.d
+    picture = GFX_news_event_roboco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.154.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Mio - Mama for everyone
+news_event = {
+	id = holo_news.155
+	title = holo_news.155.t
+    desc = holo_news.155.d
+    picture = GFX_news_event_mio1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.155.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Mio - Wolf of Wall Street
+news_event = {
+	id = holo_news.156
+	title = holo_news.156.t
+    desc = holo_news.156.d
+    picture = GFX_news_event_mio1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.156.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Mio - Mother of Liberty
+news_event = {
+	id = holo_news.157
+	title = holo_news.157.t
+    desc = holo_news.157.d
+    picture = GFX_news_event_mio1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.157.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Flare - Shiranui Kensetsu
+news_event = {
+	id = holo_news.158
+	title = holo_news.158.t
+    desc = holo_news.158.d
+    picture = GFX_news_event_flare1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.158.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Flare - Fire and Flare
+news_event = {
+	id = holo_news.159
+	title = holo_news.159.t
+    desc = holo_news.159.d
+    picture = GFX_news_event_flare1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.159.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Flare - Gen 3 Soap Opera
+news_event = {
+	id = holo_news.160
+	title = holo_news.160.t
+    desc = holo_news.160.d
+    picture = GFX_news_event_flare1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.160.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aki - Heroine Audition
+news_event = {
+	id = holo_news.161
+	title = holo_news.161.t
+    desc = holo_news.161.d
+    picture = GFX_news_event_aki1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.161.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - League of Manager
+news_event = {
+	id = holo_news.162
+	title = holo_news.162.t
+    desc = holo_news.162.d
+    picture = GFX_news_event_manager1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.162.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Hololive Crusade
+news_event = {
+	id = holo_news.163
+	title = holo_news.163.t
+    desc = holo_news.163.d
+    picture = GFX_news_event_manager1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.163.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Order of Manager
+news_event = {
+	id = holo_news.164
+	title = holo_news.164.t
+    desc = holo_news.164.d
+    picture = GFX_news_event_manager1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.164.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Hololive Imperialism(Colonial Empire)
+news_event = {
+	id = holo_news.165
+	title = holo_news.165.t
+    desc = holo_news.165.d
+    picture = GFX_news_event_yagoo1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.165.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - The Resistance Purge
+news_event = {
+	id = holo_news.166
+	title = holo_news.166.t
+    desc = holo_news.166.d
+    picture = GFX_news_event_yagoo1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.166.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Belgrade Conference
+news_event = {
+	id = holo_news.167
+	title = holo_news.167.t
+    desc = holo_news.167.d
+    picture = GFX_news_event_achan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.167.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Flat Chest deal
+news_event = {
+	id = holo_news.168
+	title = holo_news.168.t
+    desc = holo_news.168.d
+    picture = GFX_news_event_achan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.168.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Nagasaki coup
+news_event = {
+	id = holo_news.169
+	title = holo_news.169.t
+    desc = holo_news.169.d
+    picture = GFX_news_event_achan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.169.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hololive HQ - Treaty of Tokyo
+news_event = {
+	id = holo_news.170
+	title = holo_news.170.t
+    desc = holo_news.170.d
+    picture = GFX_news_event_achan1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.170.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - The Yakuza
+news_event = {
+	id = holo_news.171
+	title = holo_news.171.t
+    desc = holo_news.171.d
+    picture = GFX_news_event_coco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.171.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Assassination of Coco
+news_event = {
+	id = holo_news.172
+	title = holo_news.172.t
+    desc = holo_news.172.d
+    picture = GFX_news_event_coco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.172.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Kazuma coup
+news_event = {
+	id = holo_news.173
+	title = holo_news.173.t
+    desc = holo_news.173.d
+    picture = GFX_news_event_COC_kazuma
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.173.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Coco Kaine
+news_event = {
+	id = holo_news.174
+	title = holo_news.174.t
+    desc = holo_news.174.d
+    picture = GFX_news_event_COC_kaine
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.174.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Socialist Republic of Sin
+news_event = {
+	id = holo_news.175
+	title = holo_news.175.t
+    desc = holo_news.175.d
+    picture = GFX_news_event_COC_kaine
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.175.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Coco Swallow the Sun
+news_event = {
+	id = holo_news.176
+	title = holo_news.176.t
+    desc = holo_news.176.d
+    picture = GFX_news_event_coco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.176.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Usaken West Indies
+news_event = {
+	id = holo_news.177
+	title = holo_news.177.t
+    desc = holo_news.177.d
+    picture = GFX_news_event_coco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.177.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Coco - Lady Coco (Coco America)
+news_event = {
+	id = holo_news.178
+	title = holo_news.178.t
+    desc = holo_news.178.d
+    picture = GFX_news_event_coco1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.178.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Subaru - International Police
+news_event = {
+	id = holo_news.179
+	title = holo_news.179.t
+    desc = holo_news.179.d
+    picture = GFX_news_event_subaru1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.179.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Subaru - Geneva Convention Enforcement
+news_event = {
+	id = holo_news.180
+	title = holo_news.180.t
+    desc = holo_news.180.d
+    picture = GFX_news_event_subaru2
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.180.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Small Ame is leaving the EU
+news_event = {
+	id = holo_news.181
+	title = holo_news.181.t
+    desc = holo_news.181.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.181.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Union of Small Ame Republics
+news_event = {
+	id = holo_news.182
+	title = holo_news.182.t
+    desc = holo_news.182.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.182.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Franco-Amelia Union
+news_event = {
+	id = holo_news.183
+	title = holo_news.183.t
+    desc = holo_news.183.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.183.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Amelia Imperial Federation
+news_event = {
+	id = holo_news.184
+	title = holo_news.184.t
+    desc = holo_news.184.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.184.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Amelia - Watson's Interrogation
+news_event = {
+	id = holo_news.185
+	title = holo_news.185.t
+    desc = holo_news.185.d
+    picture = GFX_news_event_amelia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.185.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aloe - Aloe in Exiled
+news_event = {
+	id = holo_news.186
+	title = holo_news.186.t
+    desc = holo_news.186.d
+    picture = GFX_news_event_aloe1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.186.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aloe - Aloe is back
+news_event = {
+	id = holo_news.187
+	title = holo_news.187.t
+    desc = holo_news.187.d
+    picture = GFX_news_event_aloe1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.187.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Release the War Criminal
+news_event = {
+	id = holo_news.188
+	title = holo_news.188.t
+    desc = holo_news.188.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.188.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Pekora's Coronation
+news_event = {
+	id = holo_news.189
+	title = holo_news.189.t
+    desc = holo_news.189.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.189.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Holy Peko Empire
+news_event = {
+	id = holo_news.190
+	title = holo_news.190.t
+    desc = holo_news.190.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.190.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Greater Pekoland
+news_event = {
+	id = holo_news.191
+	title = holo_news.191.t
+    desc = holo_news.191.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.190.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Pekora - Libyan rebellion
+news_event = {
+	id = holo_news.192
+	title = holo_news.192.t
+    desc = holo_news.192.d
+    picture = GFX_news_event_pekora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.192.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - The Kaiserin
+news_event = {
+	id = holo_news.193
+	title = holo_news.193.t
+    desc = holo_news.193.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.193.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - Kiara Reich
+news_event = {
+	id = holo_news.194
+	title = holo_news.194.t
+    desc = holo_news.194.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.194.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - National Phoenix Party
+news_event = {
+	id = holo_news.195
+	title = holo_news.195.t
+    desc = holo_news.195.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.195.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - Fast Food United Front
+news_event = {
+	id = holo_news.196
+	title = holo_news.196.t
+    desc = holo_news.196.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.196.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ina - Ina'nist Uralic Federation
+news_event = {
+	id = holo_news.197
+	title = holo_news.197.t
+    desc = holo_news.197.d
+    picture = GFX_news_event_ina1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.197.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Gura - Shark Infested
+news_event = {
+	id = holo_news.198
+	title = holo_news.198.t
+    desc = holo_news.198.d
+    picture = GFX_news_event_gura1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.198.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Gura - Vietcong
+news_event = {
+	id = holo_news.199
+	title = holo_news.199.t
+    desc = holo_news.199.d
+    picture = GFX_news_event_gura1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.199.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Gura - The New Atlantis
+news_event = {
+	id = holo_news.200
+	title = holo_news.200.t
+    desc = holo_news.200.d
+    picture = GFX_news_event_gura1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.200.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Calliope - Death, Destroyer of the World
+news_event = {
+	id = holo_news.201
+	title = holo_news.201.t
+    desc = holo_news.201.d
+    picture = GFX_news_event_calliope1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.201.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Calliope - Realm of the Dead
+news_event = {
+	id = holo_news.202
+	title = holo_news.202.t
+    desc = holo_news.202.d
+    picture = GFX_news_event_calliope1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.202.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aqua - Union of Aquaist Republics
+news_event = {
+	id = holo_news.203
+	title = holo_news.203.t
+    desc = holo_news.203.d
+    picture = GFX_news_event_aqua1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.203.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Black Magic EXPO
+news_event = {
+	id = holo_news.204
+	title = holo_news.204.t
+    desc = holo_news.204.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.204.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Victory on Neighbor War
+news_event = {
+	id = holo_news.205
+	title = holo_news.205.t
+    desc = holo_news.205.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.205.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Aqua - Victory on Neighbor War
+news_event = {
+	id = holo_news.206
+	title = holo_news.206.t
+    desc = holo_news.206.d
+    picture = GFX_news_event_aqua1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.206.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Shionist Federation
+news_event = {
+	id = holo_news.207
+	title = holo_news.207.t
+    desc = holo_news.207.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.207.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Kazakh Rebellion
+news_event = {
+	id = holo_news.208
+	title = holo_news.208.t
+    desc = holo_news.208.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.208.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Treaty of Tehran
+news_event = {
+	id = holo_news.209
+	title = holo_news.209.t
+    desc = holo_news.209.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.209.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Shion - Shion-Aqua Commonwealth
+news_event = {
+	id = holo_news.210
+	title = holo_news.210.t
+    desc = holo_news.210.d
+    picture = GFX_news_event_shion1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.210.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Stalin is assassinated
+news_event = {
+	id = holo_news.211
+	title = holo_news.211.t
+    desc = holo_news.211.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.211.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Ayame - Oni Goddess
+news_event = {
+	id = holo_news.212
+	title = holo_news.212.t
+    desc = holo_news.212.d
+    picture = GFX_news_event_ayame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.212.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloCN - CN United Front
+news_event = {
+	id = holo_news.213
+	title = holo_news.213.t
+    desc = holo_news.213.d
+    picture = GFX_news_event_holo_cn1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.213.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#HoloCN - Anti-Hololive Pact
+news_event = {
+	id = holo_news.214
+	title = holo_news.214.t
+    desc = holo_news.214.d
+    picture = GFX_news_event_holo_cn2
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.214.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nodoka - HoloCN Purge
+news_event = {
+	id = holo_news.215
+	title = holo_news.215.t
+    desc = holo_news.215.d
+    picture = GFX_news_event_nodoka1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.215.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nodoka - United Hololive China
+news_event = {
+	id = holo_news.216
+	title = holo_news.216.t
+    desc = holo_news.216.d
+    picture = GFX_news_event_nodoka1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.216.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Towa - Ottowa Empire
+news_event = {
+	id = holo_news.217
+	title = holo_news.217.t
+    desc = holo_news.217.d
+    picture = GFX_news_event_towa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.217.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Towa - Eternal Tokoyami Empire
+news_event = {
+	id = holo_news.218
+	title = holo_news.218.t
+    desc = holo_news.218.d
+    picture = GFX_news_event_towa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.218.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Towa - Kenzoku Victory
+news_event = {
+	id = holo_news.219
+	title = holo_news.219.t
+    desc = holo_news.219.d
+    picture = GFX_news_event_towa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.219.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Towa - Towa Maji Tenshi
+news_event = {
+	id = holo_news.220
+	title = holo_news.220.t
+    desc = holo_news.220.d
+    picture = GFX_news_event_towa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.220.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Okayu - Better Call Saul
+news_event = {
+	id = holo_news.221
+	title = holo_news.221.t
+    desc = holo_news.221.d
+    picture = GFX_news_event_okayu_court
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.221.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Korone - Suez Crisis
+news_event = {
+	id = holo_news.222
+	title = holo_news.222.t
+    desc = holo_news.222.d
+    picture = GFX_news_event_korone1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.222.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Noel - Order of Shirogane
+news_event = {
+	id = holo_news.223
+	title = holo_news.223.t
+    desc = holo_news.223.d
+    picture = GFX_news_event_noel1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.223.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Noel - The Holy Order
+news_event = {
+	id = holo_news.224
+	title = holo_news.224.t
+    desc = holo_news.224.d
+    picture = GFX_news_event_noel1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.224.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Operation Iron Citadel
+news_event = {
+	id = holo_news.225
+	title = holo_news.225.t
+    desc = holo_news.225.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.225.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Soviet Rushia
+news_event = {
+	id = holo_news.226
+	title = holo_news.226.t
+    desc = holo_news.226.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.226.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Rushia - Commonwealth of Rushia
+news_event = {
+	id = holo_news.227
+	title = holo_news.227.t
+    desc = holo_news.227.d
+    picture = GFX_news_event_rushia1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.227.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Haato - Greater Australia
+news_event = {
+	id = holo_news.228
+	title = holo_news.228.t
+    desc = holo_news.228.d
+    picture = GFX_news_event_haato1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.228.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Haato - Australia-Haachama Union
+news_event = {
+	id = holo_news.229
+	title = holo_news.229.t
+    desc = holo_news.229.d
+    picture = GFX_news_event_haato1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.229.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Watame - Kaiju War
+news_event = {
+	id = holo_news.230
+	title = holo_news.230.t
+    desc = holo_news.230.d
+    picture = GFX_news_event_kaiju_war1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.230.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Watame - Watamerica
+news_event = {
+	id = holo_news.231
+	title = holo_news.231.t
+    desc = holo_news.231.d
+    picture = GFX_news_event_watame1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.231.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Luna - 1940 World Cup
+news_event = {
+	id = holo_news.232
+	title = holo_news.232.t
+    desc = holo_news.232.d
+    picture = GFX_news_event_luna1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.232.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Luna - Luna Imperial Ambition
+news_event = {
+	id = holo_news.233
+	title = holo_news.233.t
+    desc = holo_news.233.d
+    picture = GFX_news_event_luna1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.233.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kanata - Kanata Heavenly Kingdom
+news_event = {
+	id = holo_news.234
+	title = holo_news.234.t
+    desc = holo_news.234.d
+    picture = GFX_news_event_kanata1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.234.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kanata - Rise of Kanatanism
+news_event = {
+	id = holo_news.235
+	title = holo_news.235.t
+    desc = holo_news.235.d
+    picture = GFX_news_event_kanata1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.235.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - Timeline Shifts
+news_event = {
+	id = holo_news.236
+	title = holo_news.236.t
+    desc = holo_news.236.d
+    picture = GFX_news_event_trash_taste1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.236.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - The Warden Falls
+news_event = {
+	id = holo_news.237
+	title = holo_news.237.t
+    desc = holo_news.237.d
+    picture = GFX_news_event_trash_taste1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.237.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - Doctor Ligma Coup
+news_event = {
+	id = holo_news.238
+	title = holo_news.238.t
+    desc = holo_news.238.d
+    picture = GFX_news_event_trash_taste1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.238.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - Killer Chris
+news_event = {
+	id = holo_news.239
+	title = holo_news.239.t
+    desc = holo_news.239.d
+    picture = GFX_news_event_trash_taste1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.239.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - Kronos Reich
+news_event = {
+	id = holo_news.240
+	title = holo_news.240.t
+    desc = holo_news.240.d
+    picture = GFX_news_event_kronii1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.240.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kronii - Bunkeronii
+news_event = {
+	id = holo_news.241
+	title = holo_news.241.t
+    desc = holo_news.241.d
+    picture = GFX_news_event_kronii1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.241.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Suisei - Holymachi Empire
+news_event = {
+	id = holo_news.242
+	title = holo_news.242.t
+    desc = holo_news.242.d
+    picture = GFX_news_event_suisei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.242.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Lamy - Lamification
+news_event = {
+	id = holo_news.243
+	title = holo_news.243.t
+    desc = holo_news.243.d
+    picture = GFX_news_event_lamy1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.243.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Lamy - The New Unylia
+news_event = {
+	id = holo_news.244
+	title = holo_news.244.t
+    desc = holo_news.244.d
+    picture = GFX_news_event_lamy1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.244.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Sora - Goddess of Athens
+news_event = {
+	id = holo_news.245
+	title = holo_news.245.t
+    desc = holo_news.245.d
+    picture = GFX_news_event_sora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.245.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Sora - Prepare for Remilitarization
+news_event = {
+	id = holo_news.246
+	title = holo_news.246.t
+    desc = holo_news.246.d
+    picture = GFX_news_event_sora1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.246.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - NenePro
+news_event = {
+	id = holo_news.247
+	title = holo_news.247.t
+    desc = holo_news.247.d
+    picture = GFX_news_event_nene1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.247.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Nene - Nishizawa coup
+news_event = {
+	id = holo_news.248
+	title = holo_news.248.t
+    desc = holo_news.248.d
+    picture = GFX_news_event_nishizawa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.248.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Matsuri - New Prussia Empire
+news_event = {
+	id = holo_news.249
+	title = holo_news.249.t
+    desc = holo_news.249.d
+    picture = GFX_news_event_matsuri1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.249.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Miko - Fourth Rome
+news_event = {
+	id = holo_news.250
+	title = holo_news.250.t
+    desc = holo_news.250.d
+    picture = GFX_news_event_miko1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.250.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Hoshikawa - Northern Stardust
+news_event = {
+	id = holo_news.251
+	title = holo_news.251.t
+    desc = holo_news.251.d
+    picture = GFX_news_event_hoshikawa1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.251.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - KFP Worker Revolution
+news_event = {
+	id = holo_news.252
+	title = holo_news.252.t
+    desc = holo_news.252.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.252.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Kiara - Employee's Republic of Kiara
+news_event = {
+	id = holo_news.253
+	title = holo_news.253.t
+    desc = holo_news.253.d
+    picture = GFX_news_event_kiara1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.253.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+
+#Mumei - Ancient Mumei Empire
+news_event = {
+	id = holo_news.254
+	title = holo_news.254.t
+    desc = holo_news.254.d
+    picture = GFX_news_event_mumei1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.254.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Sana - Rumbling is coming
+news_event = {
+	id = holo_news.255
+	title = holo_news.255.t
+    desc = holo_news.255.d
+    picture = GFX_news_event_sana_rumbling1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.255.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Sana - Mission to Mars
+news_event = {
+	id = holo_news.256
+	title = holo_news.256.t
+    desc = holo_news.256.d
+    picture = GFX_news_event_sana1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.256.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}
+
+#Fauna - Faunatic Ural Empire
+news_event = {
+	id = holo_news.257
+	title = holo_news.257.t
+    desc = holo_news.257.d
+    picture = GFX_news_event_fauna1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+       name = holo_news.257.a	#Yes
+       ai_chance = { factor = 100 }
+    }
+}

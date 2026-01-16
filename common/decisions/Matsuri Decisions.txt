@@ -1,0 +1,99 @@
+matsuri_democratic_influence_decision_category = {
+
+	MIK_boost_dem_matsuri_dec = {
+
+		icon = generic_form_nation
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						is_capital = yes
+						CONTROLLER = {
+							NOT = {
+								tag = ROOT
+							}
+							is_neighbor_of = ROOT
+						}
+					}
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    OR = { tag = MAT
+		    tag = YAG }
+		    has_government = democratic
+		    FROM.OWNER = {
+				NOT = {
+					has_government = democratic
+				}
+				exists = yes
+			}
+		    has_country_flag = Matsuri_can_democratic_influence
+		}
+
+		available = {
+			FROM.OWNER = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			is_ai = no
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			if = {
+				limit = { FROM.OWNER = { democratic < 0.20 }}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = democratic popularity = 0.05 }
+				}
+			}
+
+			if = {
+				limit = { FROM.OWNER = { democratic > 0.19 
+				democratic < 0.40}}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = democratic popularity = 0.04 }
+				}
+			}
+
+			if = {
+				limit = { FROM.OWNER = { democratic > 0.39 
+				democratic < 0.60}}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = democratic popularity = 0.03 }
+				}
+			}
+
+			if = {
+				limit = {
+					tag = MAT
+				}
+				FROM.OWNER = {
+					country_event = { id = matsuri.37 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

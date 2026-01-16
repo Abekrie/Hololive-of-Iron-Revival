@@ -1,0 +1,53 @@
+add_namespace = mel
+
+#MEL - Ask to join faction
+country_event = {
+	id = mel.1
+	title = mel.1.t
+	desc = mel.1.d
+	picture = GFX_report_event_mel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mel.1.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_to_faction = MEL
+		}
+
+		MEL = { country_event = { id = proposed.11 }}
+	}
+
+	option = {
+		name = mel.1.b
+		ai_chance = { factor = 0 }
+		MEL = { country_event = { id = proposed.12 }}
+	}
+}
+
+#MEL - Demand puppet
+country_event = {
+	id = mel.2
+	title = mel.2.t
+	desc = mel.2.d
+	picture = GFX_report_event_mel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mel.2.a
+		ai_chance = { factor = 100 }
+		MEL = {
+			puppet = ROOT
+		}
+
+		MEL = { country_event = { id = proposed.11 }}
+	}
+
+	option = {
+		name = mel.2.b
+		ai_chance = { factor = 0 }
+		MEL = { country_event = { id = proposed.12 }}
+	}
+}

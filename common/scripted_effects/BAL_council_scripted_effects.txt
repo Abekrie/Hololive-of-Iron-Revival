@@ -1,0 +1,11 @@
+hololive_clear_council_host = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_hololive_council = yes
+			}
+
+			clr_country_flag = is_current_council_host
+		}
+	}
+}

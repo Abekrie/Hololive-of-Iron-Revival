@@ -1,0 +1,529 @@
+add_namespace = marine
+
+#marine Accept Invite
+country_event = {
+	id = marine.1
+	title = marine.1.t
+	desc = marine.1.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#marine NO Invite
+country_event = {
+	id = marine.2
+	title = marine.2.t
+	desc = marine.2.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Marine accept DYC
+country_event = {
+	id = marine.3
+	title = marine.3.t
+	desc = marine.3.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.3.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		    limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Marine no DYC
+country_event = {
+	id = marine.4
+	title = marine.4.t
+	desc = marine.4.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MAR - Raid others coast (Marine)
+country_event = {
+	id = marine.10
+	title = marine.10.t
+	desc = marine.10.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.10.a
+		ai_chance = { factor = 100 }
+		random_list = {
+    		75 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 1000
+		    	producer = ROOT
+	    	}
+    		}
+    		20 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+    		}
+    		5 = {
+    			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 3000
+		    	producer = ROOT
+	    	}
+    		}
+		}
+	}
+}
+
+#MAR - Raid others coast (Others)
+country_event = {
+	id = marine.11
+	title = marine.11.t
+	desc = marine.11.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.11.a
+		ai_chance = { factor = 25 }
+		add_stability = 0.01
+		add_political_power = -25
+	}
+
+	option = {
+		name = marine.11.b
+		ai_chance = { factor = 75 }
+	}
+}
+
+#MAR - Belize Purchase
+country_event = {
+	id = marine.12
+	title = marine.12.t
+	desc = marine.12.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.12.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			transfer_state = 311
+		}
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.105 }}
+		}
+		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 8000
+		    	producer = ROOT
+	    	}
+	}
+
+	option = {
+		name = marine.12.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.106 }}
+		}
+	}
+}
+
+#MAR - Fate of Cuba
+country_event = {
+	id = marine.13
+	title = marine.13.t
+	desc = marine.13.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.13.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			annex_country = {
+    			target = CUB
+    			transfer_troops = yes
+			}
+		}
+	}
+
+	option = {
+		name = marine.13.b
+		ai_chance = { factor = 0 }
+		MAR = {create_wargoal = { type = annex_everything target = CUB }}
+	}
+}
+
+#MAR - Raid others coast (Marine)
+country_event = {
+	id = marine.14
+	title = marine.14.t
+	desc = marine.14.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.14.a
+		ai_chance = { factor = 100 }
+		random_list = {
+    		75 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 1000
+		    	producer = ROOT
+	    	}
+    		}
+    		20 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+    		}
+    		5 = {
+    			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 3000
+		    	producer = ROOT
+	    	}
+    		}
+		}
+	}
+}
+
+#MAR - Raid others coast (Marine)
+country_event = {
+	id = marine.15
+	title = marine.15.t
+	desc = marine.15.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.15.a
+		ai_chance = { factor = 100 }
+		random_list = {
+    		75 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 1000
+		    	producer = ROOT
+	    	}
+    		}
+    		20 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+    		}
+    		5 = {
+    			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 3000
+		    	producer = ROOT
+	    	}
+    		}
+		}
+	}
+}
+
+#MAR - Raid others coast (Marine)
+country_event = {
+	id = marine.16
+	title = marine.16.t
+	desc = marine.16.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.16.a
+		ai_chance = { factor = 100 }
+		random_list = {
+    		75 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 1000
+		    	producer = ROOT
+	    	}
+    		}
+    		20 = {
+        		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+    		}
+    		5 = {
+    			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 3000
+		    	producer = ROOT
+	    	}
+    		}
+		}
+	}
+}
+
+#MAR - Seek to join faction
+country_event = {
+	id = marine.17
+	title = marine.17.t
+	desc = marine.17.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.17.a
+		ai_chance = { factor = 100 }
+		add_to_faction = MAR
+
+		if = {
+			limit = { tag = AQA }
+			MAR = {country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = NOE }
+			MAR = {country_event = { id = proposed.63 }}
+		}
+
+		if = {
+			limit = { tag = HTO }
+			MAR = {country_event = { id = proposed.33 }}
+		}
+
+	}
+
+	option = {
+		name = marine.17.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = AQA }
+			MAR = {country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = NOE }
+			MAR = {country_event = { id = proposed.64 }}
+		}
+
+		if = {
+			limit = { tag = HTO }
+			MAR = {country_event = { id = proposed.34 }}
+		}
+	}
+}
+
+#MAR - Bahamas Purchase
+country_event = {
+	id = marine.18
+	title = marine.18.t
+	desc = marine.18.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.18.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			transfer_state = 690
+			transfer_state = 693
+		}
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.105 }}
+		}
+		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 12000
+		    	producer = ROOT
+	    	}
+	}
+
+	option = {
+		name = marine.18.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.106 }}
+		}
+	}
+}
+
+#MAR - British Caribbean Purchase
+country_event = {
+	id = marine.19
+	title = marine.19.t
+	desc = marine.19.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.19.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			transfer_state = 689
+			transfer_state = 308
+			transfer_state = 692
+		}
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.105 }}
+		}
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 12000
+		    	producer = ROOT
+	    	}
+	}
+
+	option = {
+		name = marine.19.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.106 }}
+		}
+	}
+}
+
+#MAR - French Caribbean Purchase
+country_event = {
+	id = marine.20
+	title = marine.20.t
+	desc = marine.20.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.20.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			transfer_state = 694
+		}
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.105 }}
+		}
+
+		if = {
+			limit = { tag = FRA }
+			MAR = {country_event = { id = proposed.103 }}
+		}
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 12000
+		    	producer = ROOT
+	    	}
+	}
+
+	option = {
+		name = marine.20.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ENG }
+			MAR = {country_event = { id = proposed.106 }}
+		}
+
+		if = {
+			limit = { tag = FRA }
+			MAR = {country_event = { id = proposed.103 }}
+		}
+	}
+}
+
+#MAR - Demand puppet
+country_event = {
+	id = marine.21
+	title = marine.21.t
+	desc = marine.21.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = marine.21.a
+		ai_chance = { factor = 100 }
+		MAR = {
+			puppet = ROOT
+		}
+		if = {
+			limit = { tag = RUS }
+			MAR = {country_event = { id = proposed.77 }}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			MAR = {country_event = { id = proposed.79 }}
+		}
+	}
+
+	option = {
+		name = marine.21.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = RUS }
+			MAR = {country_event = { id = proposed.78 }}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			MAR = {country_event = { id = proposed.80 }}
+		}
+	}
+}

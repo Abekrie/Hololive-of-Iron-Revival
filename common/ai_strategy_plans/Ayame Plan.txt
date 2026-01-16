@@ -1,0 +1,52 @@
+Generic_KRN_historical = {
+	name = "AYA historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = AYA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = AYA
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ayame_nakiri_aya_focus
+		president_of_student_council_aya_focus
+		spiritual_warrior_aya_focus
+		dominate_the_gulf_aya_focus
+		arsenal_of_seiso_aya_focus
+		cover_budget_aya_focus
+		caucasus_oil_leasing_aya_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

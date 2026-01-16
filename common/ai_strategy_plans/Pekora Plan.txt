@@ -1,0 +1,70 @@
+Generic_PEK_historical = {
+	name = "PEK historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = PEK
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = PEK
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		usada_pekora_pek_focus
+		emergency_rearmament_pek_focus
+		release_the_war_criminal_pek_focus
+		war_crime_pek_focus
+
+		rabbit_volunteer_pek_focus
+
+		usada_kensetsu_pek_focus
+		partially_disarmed_pek_focus
+
+		support_moona_pek_focus
+		hell_gate_pek_focus
+		the_sorrow_pek_focus
+		slime_trap_pek_focus
+
+		pekodam_pek_focus
+
+		PEK_idol_creator
+		PEK_minecraft_server
+		PEK_wooden_house
+		PEK_nether_portal
+		PEK_wooden_in_nether
+
+		PEK_oversea_fanbase
+		PEK_yuri_ship
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

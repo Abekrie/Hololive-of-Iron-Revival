@@ -1,0 +1,1426 @@
+add_namespace = suisei
+
+#suisei refuses corsica
+country_event = {
+	id = suisei.1
+	title = suisei.1.t
+	desc = suisei.1.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#Suisei accepted corsica
+country_event = {
+	id = suisei.2
+	title = suisei.2.t
+	desc = suisei.2.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.1.a
+		set_global_flag = corsica_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#suisei Demands n ireland
+country_event = {
+	id = suisei.3
+	title = suisei.3.t
+	desc = suisei.3.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.3.a	#Yes
+		ai_chance = { factor = 70 }
+		SUI = { 
+		    transfer_state = 119
+			country_event = { id = choco.1 }
+		}
+	}
+	option = {
+		name = suisei.3.b	#No 
+		ai_chance = { factor = 30 }
+		SUI = { country_event = { id = choco.2 } }
+	}
+}
+
+
+#suisei Demands puppet
+country_event = {
+	id = suisei.4
+	title = suisei.4.t
+	desc = suisei.4.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.4.a	#Yes
+		ai_chance = { factor = 40 }
+		if = {
+		limit = { original_tag = HTO }
+		SUI = { 
+		    puppet = HTO
+			country_event = { id = haato.1 }
+		      }
+		}
+
+		if = {
+		limit = { original_tag = MAT }
+		SUI = { 
+		    puppet = MAT
+			country_event = { id = matsuri.5 }
+		      }
+		}
+	}
+	option = {
+		name = suisei.4.b	#No 
+		ai_chance = { factor = 60 }
+		if = {
+		limit = { original_tag = HTO }
+		SUI = { country_event = { id = haato.2 } }
+		}
+
+		if = {
+		limit = { original_tag = MAT }
+		SUI = { country_event = { id = matsuri.6 } }
+		}
+	}
+}
+
+#suisei-matsuri alliance
+country_event = {
+	id = suisei.5
+	title = suisei.5.t
+	desc = suisei.5.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.5.a	#Yes
+		ai_chance = { factor = 80 }
+
+		SUI = { create_faction = suisei_matsuri_ally }
+		SUI = { country_event = { id = matsuri.7 } }
+	}
+	option = {
+		name = suisei.5.b	#No 
+		ai_chance = { factor = 20 }
+		
+		SUI = { country_event = { id = matsuri.4 } }
+	}
+}
+
+#suisei demand faroe island
+country_event = {
+	id = suisei.6
+	title = suisei.6.t
+	desc = suisei.6.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.6.a	#Yes
+		ai_chance = { factor = 80 }
+
+		SUI = { 
+		    transfer_state = 337
+			country_event = { id = fubuki.7 }
+		}
+	}
+	option = {
+		name = suisei.6.b	#No 
+		ai_chance = { factor = 20 }
+		
+		SUI = { country_event = { id = fubuki.8 } }
+	}
+}
+###########################################
+
+###########################################
+#Buy Greenland
+country_event = {
+	id = suisei.8
+	title = suisei.8.t
+	desc = suisei.8.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.8.a	#Yes
+		ai_chance = { factor = 80 }
+		SUI = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.8.b	#No 
+		ai_chance = { factor = 20 }
+		SUI = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = suisei.9
+	title = suisei.9.t
+	desc = suisei.9.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.9.a	#Yes
+		ai_chance = { factor = 80 }
+		SUI = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.9.b	#No 
+		ai_chance = { factor = 20 }
+		SUI = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = suisei.10
+	title = suisei.10.t
+	desc = suisei.10.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.10.a	#Yes
+		ai_chance = { factor = 30 }
+		SUI = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = suisei.10.b	#No 
+		ai_chance = { factor = 70 }
+		SUI = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = suisei.11
+	title = suisei.11.t
+	desc = suisei.11.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.11.a	#Yes
+		ai_chance = { factor = 50 }
+		SUI = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = suisei.11.b	#No 
+		ai_chance = { factor = 50 }
+		SUI = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = suisei.12
+	title = suisei.12.t
+	desc = suisei.12.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.12.a	#Yes
+		ai_chance = { factor = 75 }
+		SUI = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.12.b	#No 
+		ai_chance = { factor = 25 }
+		SUI = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = suisei.13
+	title = suisei.13.t
+	desc = suisei.13.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.13.a	#Yes
+		ai_chance = { factor = 50 }
+		SUI = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = suisei.13.b	#No 
+		ai_chance = { factor = 50 }
+		SUI = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = suisei.14
+	title = suisei.14.t
+	desc = suisei.14.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.14.a	#Yes
+		ai_chance = { factor = 50 }
+		SUI = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		IOF = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = suisei.14.b	#No 
+		ai_chance = { factor = 50 }
+		SUI = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = suisei.15
+	title = suisei.15.t
+	desc = suisei.15.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.15.a	#Yes
+		ai_chance = { factor = 80 }
+		SUI = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.15.b	#No 
+		ai_chance = { factor = 20 }
+		SUI = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = suisei.16
+	title = suisei.16.t
+	desc = suisei.16.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.16.a	#Yes
+		ai_chance = { factor = 20 }
+		SUI = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = suisei.16.b	#No 
+		ai_chance = { factor = 80 }
+		SUI = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = suisei.17
+	title = suisei.17.t
+	desc = suisei.17.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.17.a	#Yes
+		ai_chance = { factor = 50 }
+		SUI = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = suisei.17.b	#No 
+		ai_chance = { factor = 50 }
+		SUI = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+
+#Buy Sardinia
+country_event = {
+	id = suisei.19
+	title = suisei.19.t
+	desc = suisei.19.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.19.a	#Yes
+		ai_chance = { factor = 40 }
+		SUI = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = suisei.19.b	#No 
+		ai_chance = { factor = 60 }
+		SUI = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = suisei.20
+	title = suisei.20.t
+	desc = suisei.20.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.20.a	#Yes
+		ai_chance = { factor = 90 }
+		SUI = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.20.b	#No 
+		ai_chance = { factor = 10 }
+		SUI = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = suisei.21
+	title = suisei.21.t
+	desc = suisei.21.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.21.a	#Yes
+		ai_chance = { factor = 80 }
+		SUI = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.21.b	#No 
+		ai_chance = { factor = 20 }
+		SUI = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = suisei.22
+	title = suisei.22.t
+	desc = suisei.22.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.22.a	#Yes
+		ai_chance = { factor = 80 }
+		SUI = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = suisei.22.b	#No 
+		ai_chance = { factor = 20 }
+		SUI = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = suisei.23
+	title = suisei.23.t
+	desc = suisei.23.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.23.a	#Yes
+		ai_chance = { factor = 70 }
+		SUI = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = suisei.23.b	#No 
+		ai_chance = { factor = 30 }
+		SUI = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Suisei propose ICC
+country_event = {
+	id = suisei.24
+	title = suisei.24.t
+	desc = suisei.24.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.24.a	#Yes
+		ai_chance = { factor = 80 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+		limit = { original_tag = FLA}
+		SUI = {country_event = { id = flare.3 }}
+		}
+
+		if = {
+		limit = { original_tag = AQA}
+		SUI = {country_event = { id = aqua.5 }}
+		}
+
+		if = {
+		limit = { original_tag = HTO}
+		SUI = {country_event = { id = haato.3 }}
+		}
+		
+	}
+	option = {
+		name = suisei.24.b	#No 
+		ai_chance = { factor = 20 }
+
+		if = {
+		limit = { original_tag = FLA}
+		SUI = {country_event = { id = flare.4 }}
+		}
+
+		if = {
+		limit = { original_tag = AQA}
+		SUI = {country_event = { id = aqua.6 }}
+		}
+
+		if = {
+		limit = { original_tag = HTO}
+		SUI = {country_event = { id = haato.4 }}
+		}
+		
+	}
+}
+
+#suiei MR 1
+country_event = {
+	id = suisei.26
+	title = suisei.26.t
+	desc = suisei.26.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.26.a	#Yes
+		ai_chance = { factor = 80 }
+		
+		if = {
+		limit = { original_tag = FLA }
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				uses = 1
+				category = artillery
+		}
+		SUI = {country_event = { id = flare.7 }}
+		}
+
+		if = {
+		limit = { original_tag = PEK }
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		SUI = {country_event = { id = pekora.3 }}
+		}
+
+		if = {
+		limit = { original_tag = RUS }
+		add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		SUI = {country_event = { id = rushia.3 }}
+		}
+
+		if = {
+		limit = { original_tag = KAN }
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		SUI = {country_event = { id = kanata.2 }}
+		}
+
+	}
+
+
+
+
+	option = {
+		name = suisei.26.b	#No 
+		ai_chance = { factor = 20 }
+		
+		if = {
+		limit = { original_tag = FLA}
+		SUI = {country_event = { id = flare.8 }}
+		}
+
+		if = {
+		limit = { original_tag = PEK}
+		SUI = {country_event = { id = pekora.4 }}
+		}
+
+		if = {
+		limit = { original_tag = RUS}
+		SUI = {country_event = { id = rushia.2 }}
+		}
+
+		if = {
+		limit = { original_tag = KAN}
+		SUI = {country_event = { id = kanata.1 }}
+		}
+
+		
+		
+	}
+}
+
+#Invite Peko to Latin faction
+country_event = {
+	id = suisei.27
+	title = suisei.27.t
+	desc = suisei.27.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.27.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { add_to_faction = PEK }
+		SUI = { country_event = { id = suisei.28} }
+	}
+	option = {
+		name = suisei.27.b	#No 
+		ai_chance = { factor = 0 }
+		SUI = { country_event = { id = suisei.29} }
+	}
+}
+
+#PEK accepted Latin Union
+country_event = {
+	id = suisei.28
+	title = suisei.28.t
+	desc = suisei.28.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.28.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#PEK rejected Latin Union
+country_event = {
+	id = suisei.29
+	title = suisei.29.t
+	desc = suisei.29.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.29.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Demand North Africa FRA
+country_event = {
+	id = suisei.30
+	title = suisei.30.t
+	desc = suisei.30.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.30.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { country_event = { id = suisei.31} }
+	}
+	option = {
+		name = suisei.30.b	#No 
+		ai_chance = { factor = 0 }
+		SUI = { country_event = { id = suisei.32} }
+	}
+}
+
+#FRA accepted N Africa
+country_event = {
+	id = suisei.31
+	title = suisei.31.t
+	desc = suisei.31.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.31.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = {
+transfer_state = 514
+transfer_state = 513
+transfer_state = 461
+transfer_state = 460
+transfer_state = 459
+transfer_state = 462
+		}
+	}
+	
+}
+
+#FRA refused N Africa
+country_event = {
+	id = suisei.32
+	title = suisei.32.t
+	desc = suisei.32.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.32.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Demand southern FRA
+country_event = {
+	id = suisei.33
+	title = suisei.33.t
+	desc = suisei.33.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.33.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { country_event = { id = suisei.34} }
+	}
+	option = {
+		name = suisei.33.b	#No 
+		ai_chance = { factor = 0 }
+		SUI = { country_event = { id = suisei.35} }
+	}
+}
+
+#FRA accepted S FRA
+country_event = {
+	id = suisei.34
+	title = suisei.34.t
+	desc = suisei.34.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.34.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = {
+transfer_state = 23
+transfer_state = 19
+		}
+	}
+	
+}
+
+#FRA refused S FRA
+country_event = {
+	id = suisei.35
+	title = suisei.35.t
+	desc = suisei.35.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.35.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Demand annex FRA
+country_event = {
+	id = suisei.36
+	title = suisei.36.t
+	desc = suisei.36.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.36.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { country_event = { id = suisei.37} }
+		SUI = { annex_country = {
+		target = FRA
+		transfer_troops = yes
+		} }
+	}
+	option = {
+		name = suisei.36.b	#No 
+		ai_chance = { factor = 0 }
+		SUI = { country_event = { id = suisei.38} }
+	}
+}
+
+#FRA accepted annex
+country_event = {
+	id = suisei.37
+	title = suisei.37.t
+	desc = suisei.37.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.37.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#FRA refused annex
+country_event = {
+	id = suisei.38
+	title = suisei.38.t
+	desc = suisei.38.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.38.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Demand puppet FRA
+country_event = {
+	id = suisei.39
+	title = suisei.39.t
+	desc = suisei.39.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.39.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { create_faction = sui_franco_union }
+		SUI = { puppet = FRA }
+		SUI = { country_event = { id = suisei.40} }
+	}
+	option = {
+		name = suisei.39.b	#No 
+		ai_chance = { factor = 0 }
+		SUI = { country_event = { id = suisei.41} }
+	}
+}
+
+#FRA accepted puppet
+country_event = {
+	id = suisei.40
+	title = suisei.40.t
+	desc = suisei.40.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.40.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#FRA refused puppet
+country_event = {
+	id = suisei.41
+	title = suisei.41.t
+	desc = suisei.41.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.41.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Suisei accept ICC
+country_event = {
+	id = suisei.42
+	title = suisei.42.t
+	desc = suisei.42.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.42.a	#Yes
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Suisei no ICC
+country_event = {
+	id = suisei.43
+	title = suisei.43.t
+	desc = suisei.43.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.43.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SUI - Hi Honey virus outbreak!
+country_event = {
+	id = suisei.44
+	title = suisei.44.t
+	desc = suisei.44.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.44.a	#Yes
+		ai_chance = { factor = 90 }
+			add_timed_idea = {
+                idea = hi_honey_virus_ns
+                days = 30
+            }
+	}
+
+	option = {
+		name = suisei.44.b	#Yes
+		ai_chance = { factor = 10 }
+		add_political_power = -100
+	}
+}
+
+#SUI - Hi Honey virus vaccines
+country_event = {
+	id = suisei.45
+	title = suisei.45.t
+	desc = suisei.45.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.45.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#SUI - Occitaine Compromise
+country_event = {
+	id = suisei.46
+	title = suisei.46.t
+	desc = suisei.46.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.46.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		SUI = {
+			transfer_state = 806
+			transfer_state = 19
+			transfer_state = 23
+			country_event = { id = proposed.103 }
+		}
+	}
+
+	option = {
+		name = suisei.46.b	#No
+		ai_chance = { factor = 0 }
+		country_event = { id = proposed.104 }
+	}
+}
+
+#SUI - Question of France
+country_event = {
+	id = suisei.47
+	title = suisei.47.t
+	desc = suisei.47.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.47.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		SUI = {
+			puppet = FRA
+			country_event = { id = proposed.103 }
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.117 }
+		}
+	}
+
+	option = {
+		name = suisei.47.b	#No
+		ai_chance = { factor = 0 }
+
+		country_event = { id = proposed.104 }
+		create_wargoal = { type = annex_everything target = FRA }
+	}
+}
+
+#SUI - North Africa purchase
+country_event = {
+	id = suisei.48
+	title = suisei.48.t
+	desc = suisei.48.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.48.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		FRA = {
+			end_puppet = NFS
+			add_offsite_building = { type = industrial_complex level = 6 }
+		}
+		SUI = {
+			puppet = NFS
+			country_event = { id = proposed.103 }
+		}
+	}
+
+	option = {
+		name = suisei.48.b	#No
+		ai_chance = { factor = 0 }
+		
+		country_event = { id = proposed.104 }
+	}
+}
+
+#SUI - Anemachi referendum
+country_event = {
+	id = suisei.49
+	title = suisei.49.t
+	desc = suisei.49.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.49.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = {
+			puppet = SWI
+		}
+		SWI = {
+			retire_ideology_leader = democratic
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = fascism
+			retire_ideology_leader = communism
+			set_cosmetic_tag = SUI_ANE
+			create_country_leader = {
+			name = "Anemachi"
+			picture = "gfx/leaders/SUI/anemachi.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				stay_hungry_trait
+				trait_no_more_spamming
+				}
+			}
+			create_country_leader = {
+			name = "Anemachi"
+			picture = "gfx/leaders/SUI/anemachi.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				stay_hungry_trait
+				trait_no_more_spamming
+				}
+			}
+			create_country_leader = {
+			name = "Anemachi"
+			picture = "gfx/leaders/SUI/anemachi.dds"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {
+				stay_hungry_trait
+				trait_no_more_spamming
+				}
+			}
+			create_country_leader = {
+			name = "Anemachi"
+			picture = "gfx/leaders/SUI/anemachi.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				stay_hungry_trait
+				trait_no_more_spamming
+				}
+			}
+
+
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.116 }
+		}
+	}
+
+	option = {
+		name = suisei.49.b	#No
+		ai_chance = { factor = 0 }
+
+	}
+}
+
+#SUI - Ask to join faction
+country_event = {
+	id = suisei.50
+	title = suisei.50.t
+	desc = suisei.50.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.50.a	#Yes
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_to_faction = SUI
+		}
+
+		if = {
+			limit = { tag = YAG }
+			SUI = { country_event = { id = proposed.93 }}
+		}
+
+		if = {
+			limit = { tag = COC }
+			SUI = { country_event = { id = proposed.15 }}
+		}
+	}
+
+	option = {
+		name = suisei.50.b	#No
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = YAG }
+			SUI = { country_event = { id = proposed.94 }}
+		}
+
+		if = {
+			limit = { tag = COC }
+			SUI = { country_event = { id = proposed.16 }}
+		}
+	}
+}
+
+#SUI - 5th Geneva Convention entrance fee
+country_event = {
+	id = suisei.51
+	title = suisei.51.t
+	desc = suisei.51.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = suisei.51.a	#Yes
+		ai_chance = { factor = 75 }
+		SUI = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 500
+		    producer = SWI
+	    }
+		}
+
+		add_war_support = 0.05
+	}
+
+	option = {
+		name = suisei.51.b	#No
+		ai_chance = { factor = 25 }
+		add_political_power = -25
+	}
+}
+
+#Anemachi invites to faction
+country_event = {
+	id = suisei.52
+	title = suisei.52.t
+	desc = suisei.52.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.52.a	#Yes
+		ai_chance = { factor = 100 }
+		SUI = { add_to_faction = ROOT }
+	}
+	option = {
+		name = suisei.52.b	#No 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#SUI - Mission to Miko
+country_event = {
+	id = suisei.53
+	title = suisei.53.t
+	desc = suisei.53.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.53.a	#Yes
+		ai_chance = { factor = 100 }
+		army_experience = 50
+		SUI = { add_ideas = freedom_lady_idea }
+
+		if = {
+    		limit = {
+    			tag = MIK
+    		}
+    		SUI = { country_event = { id = proposed.53 }}
+    	}
+	}
+	option = {
+		name = suisei.53.b	#No 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#SUI - Mission to Germany
+country_event = {
+	id = suisei.54
+	title = suisei.54.t
+	desc = suisei.54.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = suisei.54.a	#Yes
+		ai_chance = { factor = 100 }
+		add_equipment_to_stockpile = {
+		    type = infantry_equipment_0
+		    amount = 5000
+		    producer = SUI
+	    }
+		SUI = { add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.25
+                uses = 1
+                category = armor
+            }}
+        if = {
+    		limit = {
+    			tag = GER
+    		}
+    		SUI = { country_event = { id = proposed.99 }}
+    	}
+	}
+	option = {
+		name = suisei.54.b	#No 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#SUI - 1936 National Election
+country_event = {
+	id = suisei.55
+	title = suisei.55.t
+	desc = suisei.55.d
+	picture = GFX_report_event_suisei_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = SUI
+    	date > 1936.1.20
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = suisei.55.a	#Yes
+		ai_chance = { factor = 80 }
+		set_country_flag = SUI_1936_ELECTION_Dem_won
+		add_war_support = 0.05
+	}
+	option = {
+		name = suisei.55.b	#No 
+		ai_chance = { factor = 10 }
+		set_country_flag = SUI_1936_ELECTION_Anemachi_won
+		add_popularity = { ideology = neutrality popularity = 0.6 }
+            set_politics = {
+                ruling_party = neutrality
+            }
+	}
+
+	option = {
+		name = suisei.55.c	#No 
+		ai_chance = { factor = 10 }
+		set_country_flag = SUI_1936_ELECTION_Fas_won
+		add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+	}
+}

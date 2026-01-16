@@ -1,0 +1,55 @@
+Generic_WTS_historical = {
+	name = "Watson historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = WTS
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = WTS
+			}
+			is_historical_focus_on = yes
+			is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		amelia_watson_wts_focus
+		hold_the_national_referendum_wts_focus
+		neutral_victory_wts_focus
+		amesame_wts_focus
+
+		funny_debut_wts_focus
+		WTS_HOLOEN_establish_mi6_eng_focus
+		WTS_HOLOEN_patially_disarmed_eng_focus
+		WTS_HOLOEN_no_disarmed_eng_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

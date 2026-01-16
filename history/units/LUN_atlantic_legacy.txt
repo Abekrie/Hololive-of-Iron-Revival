@@ -1,0 +1,66 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Grand Atlantic Fleet"		
+		naval_base = 10980
+		task_force = {				
+			name = "Atlantic Force"			
+			location = 10980 
+
+			ship = { name = "Godzilla" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "South Congo" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Amazonian" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Rio de Janeiro 1 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 2 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 3 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 4 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 5 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 6 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 7 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Rio de Janeiro 8 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+		}						
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

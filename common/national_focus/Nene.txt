@@ -1,0 +1,2964 @@
+focus_tree = {
+	id = NEN_fifthgen_generic_hololive
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = NEN
+			} 
+		}
+	}
+
+	continuous_focus_position = { x = 2500 y = 1000 }
+
+	#Diplomatic and Political
+	focus = {
+        id = momosuzu_nene_nen_focus
+        icon = GFX_focus_nene_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 12
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = continue_nene_regime_nen_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = momosuzu_nene_nen_focus}
+        mutually_exclusive = { focus =nishizawa_coup_nen_focus  }
+        relative_position_id = momosuzu_nene_nen_focus
+        x = -6
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.10
+        }
+    }
+
+    focus = {
+        id = nishizawa_coup_nen_focus
+        icon = GFX_focus_NEN_nishizawa
+        prerequisite = { focus = momosuzu_nene_nen_focus}
+        mutually_exclusive = { focus = continue_nene_regime_nen_focus }
+        relative_position_id = momosuzu_nene_nen_focus
+        x = 6
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {   
+        set_country_flag = Nene_can_propaganda_3
+            set_cosmetic_tag = NEN_nishizawa
+            hidden_effect = {
+                kill_ideology_leader = fascism
+            }
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+            create_country_leader = {
+            name = "Nishizawa"
+            picture = "gfx/leaders/NEN/nishizawa.dds"
+            expire = "1965.1.1"
+            ideology = fascism_ideology
+            traits = {
+                onee_san_trait
+        
+                }
+            }
+            hidden_effect = { news_event = { id = holo_news.248 }}
+            custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_fas_advisor
+            custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = manga_creator_nen_focus
+        icon = GFX_focus_generic_treaty
+        prerequisite = { focus = nishizawa_coup_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nishizawa_coup_nen_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = haters_among_us_idea
+        }
+    }
+
+    focus = {
+        id = manga_publisher_nen_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = nishizawa_coup_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nishizawa_coup_nen_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = f5mm_factory_nen_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = nishizawa_coup_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nishizawa_coup_nen_focus
+        x = 3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = berlin_kiev_axis_nen_focus
+        icon = GFX_focus_chi_mission_to_germany
+        prerequisite = { focus = f5mm_factory_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = f5mm_factory_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                GER = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = GER
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            GER = { country_event = { id = nene.28 }}
+        }
+    }
+
+    focus = {
+        id = import_german_tank_nen_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = berlin_kiev_axis_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = berlin_kiev_axis_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = light_tank_chassis_0
+                    amount = 500
+                    producer = GER
+            }
+        }
+    }
+
+    focus = {
+        id = comic_con_nen_focus
+        icon = GFX_focus_generic_self_management
+        prerequisite = { focus = f5mm_factory_nen_focus}
+        prerequisite = { focus = manga_publisher_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = manga_publisher_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = labour_reform_nen_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = comic_con_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = comic_con_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_efficiency_idea = yes
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_nen_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = labour_reform_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = labour_reform_nen_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = invastion_of_matsuri_nen_focus
+        icon = GFX_focus_MAT_matsuri
+        prerequisite = { focus = faction_of_our_own_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = faction_of_our_own_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 10
+                is_in_faction_with = GER
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = MAT
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                MAT = { exists = no }
+                MAT = { is_subject_of = ROOT }
+                MAT = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = MAT }
+        }
+    }
+
+    focus = {
+        id = war_on_miko_nen_focus
+        icon = GFX_focus_MIK_miko
+        prerequisite = { focus = faction_of_our_own_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = faction_of_our_own_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 10
+                is_in_faction_with = GER
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = MIK
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                MIK = { exists = no }
+                MIK = { is_subject_of = ROOT }
+                MIK = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = MIK }
+        }
+    }
+
+    focus = {
+        id = nishizawa_commonwealth_nen_focus
+        icon = GFX_focus_NEN_commonwealth
+        prerequisite = { focus = war_on_miko_nen_focus
+        focus = invastion_of_matsuri_nen_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_miko_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 10
+            has_full_control_of_state = 88
+            has_full_control_of_state = 763
+            has_full_control_of_state = 206
+            has_full_control_of_state = 808
+        }
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_cosmetic_tag = NEN_nishizawa_common
+            every_state = {
+                limit = { OR = {
+                    is_core_of = MAT
+                    is_core_of = UKR
+                    is_core_of = POL
+                    is_core_of = MIK
+                    is_core_of = BLR
+                } }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = onna_no_hadaka_nen_focus
+        icon = GFX_focus_NEN_manga1
+        prerequisite = { focus = manga_creator_nen_focus}
+        prerequisite = {focus = manga_publisher_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = manga_creator_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_onna_no_hadaka_nen_focus
+            set_country_flag = Nene_can_propaganda_4
+        }
+    }
+
+    focus = {
+        id = hikawa_sensei_wa_otaku_nen_focus
+        icon = GFX_focus_NEN_manga2
+        prerequisite = { focus = onna_no_hadaka_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = onna_no_hadaka_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_hikawa_sensei_wa_otaku_nen_focus
+            set_country_flag = haato_prop_im_not_emused
+        }
+    }
+
+    focus = {
+        id = mikami_san_wo_furimukasetai_nen_focus
+        icon = GFX_focus_NEN_manga3
+        prerequisite = { focus = onna_no_hadaka_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = onna_no_hadaka_nen_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_mikami_san_wo_furimukasetai_nen_focus
+            set_country_flag = haato_prop_go_with_watame
+        }
+    }
+
+    focus = {
+        id = tanin_no_sex_wo_souzousuru_na_nen_focus
+        icon = GFX_focus_NEN_manga4
+        prerequisite = { focus = onna_no_hadaka_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = onna_no_hadaka_nen_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_tanin_no_sex_wo_souzousuru_na_nen_focus
+            set_country_flag = haato_prop_war_prop
+        }
+    }
+
+    focus = {
+        id = watashi_no_hajimete_nen_focus
+        icon = GFX_focus_NEN_manga5
+        prerequisite = { focus = tanin_no_sex_wo_souzousuru_na_nen_focus}
+        prerequisite = { focus = mikami_san_wo_furimukasetai_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tanin_no_sex_wo_souzousuru_na_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_watashi_no_hajimete_nen_focus
+            set_country_flag = nen_watashi_no_hajimete
+        }
+    }
+
+    focus = {
+        id = kirei_na_onee_san_nen_focus
+        icon = GFX_focus_NEN_manga6
+        prerequisite = { focus = watashi_no_hajimete_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = watashi_no_hajimete_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_kirei_na_onee_san_nen_focus
+            set_country_flag = nen_kirei_na_onee_san
+        }
+    }
+
+    focus = {
+        id = recruit_the_readers_nen_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = manga_creator_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = manga_creator_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = drawing_with_marine_nen_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = recruit_the_readers_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_the_readers_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            MAR = { navy_experience = 15 }
+        }
+    }
+
+    focus = {
+        id = nenemax_nen_focus
+        icon = GFX_focus_NEN_nene
+        prerequisite = { focus = continue_nene_regime_nen_focus}
+        mutually_exclusive = { focus = nenepro_nen_focus }
+        relative_position_id = continue_nene_regime_nen_focus
+        x = -4
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+				kill_ideology_leader = communism
+				kill_ideology_leader = democratic
+				kill_ideology_leader = fascism
+				kill_ideology_leader = neutrality
+			}
+
+			create_country_leader = {
+	name = "Nenechi"
+	picture = "gfx/leaders/NEN/nenechi.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		nene_name_trait
+		
+	}
+}
+
+hidden_effect = {
+create_country_leader = {
+	name = "Nenechi"
+	picture = "gfx/leaders/NEN/nenechi.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		nene_name_trait
+		
+	}
+}
+
+create_country_leader = {
+	name = "Nenechi"
+	picture = "gfx/leaders/NEN/nenechi.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		nene_name_trait
+		
+	}
+}
+
+create_country_leader = {
+	name = "Nenechi"
+	picture = "gfx/leaders/NEN/nenechi.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		nene_name_trait
+		
+	}
+}}
+
+            custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_fas_advisor
+            set_country_flag = Player_can_com_advisor
+            set_country_flag = Player_can_dem_advisor
+
+            custom_effect_tooltip = "Kiryu Coco"
+            custom_effect_tooltip = "Tokino Sora"
+            custom_effect_tooltip = "Minato Aqua"
+        }
+    }
+
+    focus = {
+        id = nenepro_nen_focus
+        icon = GFX_focus_prc_agrarian_socialism
+        prerequisite = { focus = continue_nene_regime_nen_focus}
+        mutually_exclusive = { focus = nenemax_nen_focus }
+        relative_position_id = continue_nene_regime_nen_focus
+        x = 4
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = { news_event = { id = holo_news.247} }
+            add_popularity = { ideology = communism popularity = 0.6 }
+            set_politics = {
+                ruling_party = communism
+            }
+            custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_com_advisor
+            custom_effect_tooltip = "Minato Aqua"
+        }
+    }
+
+    focus = {
+        id = carry_on_resistance_ideal_nen_focus
+        icon = GFX_focus_AQA_com_hand
+        prerequisite = { focus = nenepro_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nenepro_nen_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = hololive_resistance_ns
+        }
+    }
+
+    focus = {
+        id = idol_demolition_company_nen_focus
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = carry_on_resistance_ideal_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = carry_on_resistance_ideal_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_idol_demolition_company_nen_focus
+            set_country_flag = Aqua_can_akukin_construction
+        }
+    }
+
+    focus = {
+        id = nene_botan_pact_nen_focus
+        icon = GFX_focus_BTN_botan
+        prerequisite = { focus = idol_demolition_company_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = idol_demolition_company_nen_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                
+            }
+            
+            bypass = {
+                owns_state = 745
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            BTN = { give_military_access = ROOT }
+            745 = {
+                OWNER = {
+                    country_event = { id = nene.30 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = anti_idol_coalition_nen_focus
+        icon = GFX_focus_CN_attack_hololive
+        prerequisite = { focus = idol_demolition_company_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = idol_demolition_company_nen_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = abolish_the_policy_nen_focus
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        prerequisite = { focus = idol_demolition_company_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = idol_demolition_company_nen_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = haters_among_us_idea
+        }
+    }
+
+    focus = {
+        id = merge_with_artia_nen_focus
+        icon = GFX_focus_CN_artia
+        prerequisite = { focus = nene_botan_pact_nen_focus}
+        prerequisite = { focus = anti_idol_coalition_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = anti_idol_coalition_nen_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                ART = {
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_subject = no
+                
+                hidden_trigger = {OR = {
+                                    AND = {
+                                        is_ai = no
+                                    }
+                                    AND = {
+                                        is_ai = yes
+                                        ART = { is_ai = yes }
+                                    }
+                                }}
+            }
+            
+            bypass = {
+                OR = {
+                    ART = {exists = no}
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ART = { country_event = { id = nene.31 }}
+        }
+    }
+
+    focus = {
+        id = take_back_our_homeland_nen_focus
+        icon = GFX_focus_CN_army
+        prerequisite = { focus = merge_with_artia_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = merge_with_artia_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = ACH
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                ACH = { exists = no }
+                ACH = { is_subject_of = ROOT }
+                ACH = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = ACH }
+        }
+    }
+
+    focus = {
+        id = purchase_strait_pass_nen_focus
+        icon = GFX_focus_TUR_the_montreux_convention
+        prerequisite = { focus = abolish_the_policy_nen_focus}
+        prerequisite = { focus = anti_idol_coalition_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = anti_idol_coalition_nen_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            TOW = { add_political_power = 25 }
+            custom_effect_tooltip = CET_operation_citadel_rus_focus
+            set_country_flag  = Towa_sell_us_strait_pass
+        }
+    }
+
+    focus = {
+        id = fund_the_haters_nen_focus
+        icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = purchase_strait_pass_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = purchase_strait_pass_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            HAT = { exists = yes }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+            HAT = {add_equipment_to_stockpile = {
+                                type = infantry_equipment_0
+                                amount = 5000
+                                producer = ROOT
+                        }}
+        }
+    }
+
+    focus = {
+        id = rescuse_russian_scientist_nen_focus
+        icon = GFX_focus_generic_socialist_science
+        prerequisite = { focus = nenepro_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nenepro_nen_focus
+        x = 2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = four_trillion_yen_plan_nen_focus
+        icon = GFX_focus_mex_privatisation
+        prerequisite = { focus = rescuse_russian_scientist_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rescuse_russian_scientist_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 30000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = employee_recruitment_nen_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = four_trillion_yen_plan_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = four_trillion_yen_plan_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = reform_state_police_nen_focus
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = employee_recruitment_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = employee_recruitment_nen_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+            #add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = no_paid_vacation_nen_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = employee_recruitment_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = employee_recruitment_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_efficiency_idea = yes
+        }
+    }
+
+    focus = {
+        id = the_eternal_nenechi_republic_nen_focus
+        icon = GFX_focus_NEN_symbol
+        prerequisite = { focus = no_paid_vacation_nen_focus
+        focus = reform_state_police_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = no_paid_vacation_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 613
+            has_full_control_of_state = 592
+            has_full_control_of_state = 608
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_cosmetic_tag = NEN_china
+            hidden_effect = {
+                kill_ideology_leader = communism
+            }
+            create_country_leader = {
+            name = "Supreme Leader Nenechi"
+            picture = "gfx/leaders/NEN/empress.dds"
+            expire = "1965.1.1"
+            ideology = marxism
+            traits = {
+                aquaist_trait
+                nene_name_trait
+                }
+            }
+            every_state = {
+                limit = { OR = {
+                    is_core_of = CHI
+                    is_core_of = PRC
+                    is_core_of = ACH
+
+                    is_core_of = YOG
+                    is_core_of = ECH
+                    is_core_of = DOR
+                    is_core_of = ART
+                    is_core_of = CIV
+                } }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = nationalize_gyoza_industry_nen_focus
+        icon = GFX_focus_NEN_gyoza
+        prerequisite = { focus = nenemax_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nenemax_nen_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = support_aloe_in_exile_nen_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = nenemax_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nenemax_nen_focus
+        x = 2
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = volunteer_corps_focus
+		    add_ideas = independent_volunteer_corps_ns
+		    set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = join_aloe_defence_pact_nen_focus
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = support_aloe_in_exile_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = support_aloe_in_exile_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                ALO = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = ALO
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ALO = { country_event = { id = nene.28 }}
+        }
+    }
+
+    focus = {
+        id = aloe_in_army_nen_focus
+        icon = GFX_focus_ALO_guns
+        prerequisite = { focus = join_aloe_defence_pact_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_aloe_defence_pact_nen_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = ALO_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Mano Aloe"
+        }
+    }
+
+    focus = {
+        id = line_up_on_the_eastern_front_nen_focus
+        icon = GFX_focus_BAL_council
+        prerequisite = { focus = aloe_in_army_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = aloe_in_army_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = operation_subutai_ns
+                days = 365
+            }
+        }
+    }
+
+    focus = {
+        id = aloe_in_navy_nen_focus
+        icon = GFX_focus_ALO_battleship
+        prerequisite = { focus = aloe_in_army_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = aloe_in_army_nen_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = ALO_recruit_admiral_dec_flag
+            custom_effect_tooltip = CET_available_as_admiral
+            custom_effect_tooltip = "Mano Aloe"
+        }
+    }
+
+    focus = {
+        id = supernenechi_fleet_nen_focus
+        icon = GFX_focus_NEN_navy
+        prerequisite = { focus = aloe_in_navy_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = aloe_in_navy_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 192
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_supernenechi_nene_focus
+			hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = NEN_supernenechi_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = NEN_supernenechi_legacy
+						}}
+        }
+    }
+
+    focus = {
+        id = husband_collection_nen_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = nenemax_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nenemax_nen_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = unlimited_manpower_1
+            hidden_effect = { news_event = { id = holo_news.85 }}
+        }
+    }
+
+    focus = {
+        id = purge_the_haters_nen_focus
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = husband_collection_nen_focus
+        focus = support_aloe_in_exile_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = husband_collection_nen_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = haters_among_us_idea
+        }
+    }
+
+    focus = {
+        id = crimea_purchase_nen_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = purge_the_haters_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = purge_the_haters_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                
+            }
+            
+            bypass = {
+                owns_state = 137
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            137 = {
+                OWNER = {
+                    country_event = { id = nene.29 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = increase_defence_budget_nen_focus
+        icon = GFX_goal_generic_defence
+        prerequisite = { focus = husband_collection_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = husband_collection_nen_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = museum_of_husbando_nen_focus
+        icon = GFX_focus_research2
+        prerequisite = { focus = increase_defence_budget_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = increase_defence_budget_nen_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = war_on_matsuri_nen_focus
+        icon = GFX_focus_matsuri_flag
+        prerequisite = { focus = museum_of_husbando_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = museum_of_husbando_nen_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = MAT
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                MAT = { exists = no }
+                MAT = { is_subject_of = ROOT }
+                MAT = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = MAT }
+        }
+    }
+
+    focus = {
+        id = war_on_baelz_nen_focus
+        icon = GFX_focus_baelz_flag
+        prerequisite = { focus = museum_of_husbando_nen_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = museum_of_husbando_nen_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+            	factor = 10
+            	is_in_faction = yes
+            	date > 1940.1.1
+            	has_war = no
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = BAL
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                BAL = { exists = no }
+                BAL = { is_subject_of = ROOT }
+                BAL = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = BAL }
+        }
+    }
+	#Economy and Industry
+	focus = {
+		id = NEN_5thgen_idol_creator
+		text = idol_creator
+		icon = GFX_focus_engineer_2
+		relative_position_id = momosuzu_nene_nen_focus
+		x = 15
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = NEN_5thgen_minecraft_server
+		text = minecraft_server
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = NEN_5thgen_idol_creator }
+		relative_position_id = NEN_5thgen_idol_creator
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = minecraft_resource
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_wooden_house
+		text = wooden_house
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = NEN_5thgen_minecraft_server }
+		relative_position_id = NEN_5thgen_minecraft_server
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	}
+
+	focus = {
+		id = NEN_5thgen_nether_portal
+		text = nether_portal
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = NEN_5thgen_wooden_house }
+		relative_position_id = NEN_5thgen_wooden_house
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+	    }
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_wooden_in_nether
+		text = wooden_in_nether
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = NEN_5thgen_nether_portal }
+		relative_position_id = NEN_5thgen_nether_portal
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_oversea_fanbase
+		text = oversea_fanbase
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = NEN_5thgen_idol_creator }
+		relative_position_id = NEN_5thgen_idol_creator
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		navy_experience = 25
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_yuri_ship
+		text = yuri_ship
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NEN_5thgen_oversea_fanbase }
+		relative_position_id = NEN_5thgen_oversea_fanbase
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_beach_eps
+		text = beach_eps
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NEN_5thgen_yuri_ship }
+		relative_position_id = NEN_5thgen_yuri_ship
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_azur_lane_collab
+		text = azur_lane_collab
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NEN_5thgen_beach_eps }
+		relative_position_id = NEN_5thgen_beach_eps
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_offensive_marketing
+		text = offensive_marketing
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = NEN_5thgen_idol_creator }
+		relative_position_id = NEN_5thgen_idol_creator
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_body_pillow
+		text = body_pillow
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = NEN_5thgen_offensive_marketing }
+		relative_position_id = NEN_5thgen_offensive_marketing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_bath_water
+		text = bath_water
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = NEN_5thgen_body_pillow }
+		relative_position_id = NEN_5thgen_body_pillow
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_t_shirt
+		text = t_shirt
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = NEN_5thgen_bath_water }
+		relative_position_id = NEN_5thgen_bath_water
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_idol_research_generic
+		text = idol_research_generic
+		icon = GFX_focus_research
+		prerequisite = { focus = NEN_5thgen_t_shirt 
+		focus = NEN_5thgen_azur_lane_collab
+		focus = NEN_5thgen_wooden_in_nether}
+		relative_position_id = NEN_5thgen_azur_lane_collab
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_research_slot = 1
+	    }
+	}
+#Army Research
+    focus = {
+		id = NEN_5thgen_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = NEN_5thgen_idol_creator
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = NEN_5thgen_gaming }
+		relative_position_id = NEN_5thgen_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = NEN_5thgen_animal_crossing }
+		relative_position_id = NEN_5thgen_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = NEN_5thgen_gaming }
+		relative_position_id = NEN_5thgen_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = NEN_5thgen_tetris }
+		relative_position_id = NEN_5thgen_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = NEN_5thgen_gaming }
+		relative_position_id = NEN_5thgen_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = NEN_5thgen_dark_soul_resh }
+		relative_position_id = NEN_5thgen_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = NEN_5thgen_apex_legend  focus = NEN_5thgen_ring_fit }
+		relative_position_id = NEN_5thgen_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = NEN_5thgen_pubg  focus = NEN_5thgen_ring_fit }
+		relative_position_id = NEN_5thgen_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}	
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = NEN_5thgen_minecraft_resh  focus = NEN_5thgen_mario_kart }
+		relative_position_id = NEN_5thgen_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = NEN_5thgen_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = NEN_5thgen_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = NEN_5thgen_hololive_music }
+		relative_position_id = NEN_5thgen_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = NEN_5thgen_hololive_music }
+		relative_position_id = NEN_5thgen_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = NEN_5thgen_hololive_music }
+		relative_position_id = NEN_5thgen_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = NEN_5thgen_yumemiru_sora_he 
+		focus = NEN_5thgen_shiny_smily_story}
+		relative_position_id = NEN_5thgen_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = NEN_5thgen_yumemiru_sora_he 
+		focus = NEN_5thgen_kirame_rider}
+		relative_position_id = NEN_5thgen_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = NEN_5thgen_azur_lane_boss_music }
+		prerequisite = { focus = NEN_5thgen_fukkireta }
+		relative_position_id = NEN_5thgen_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = NEN_5thgen_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = NEN_5thgen_azur_lane_boss_music }
+		relative_position_id = NEN_5thgen_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+
+    #Navy Research
+    focus = {
+		id = NEN_turkish_navy_blacksea_focus
+		text = turkish_navy_blacksea_focus
+		icon = GFX_focus_generic_befriend_turkey
+		relative_position_id = NEN_5thgen_hololive_music
+		mutually_exclusive = { focus = NEN_soviet_navy_blacksea_focus }
+		x = 6
+		y = 0
+		cost = 7
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = NEN_soviet_navy_blacksea_focus
+		text = soviet_navy_blacksea_focus
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		relative_position_id = NEN_turkish_navy_blacksea_focus
+		mutually_exclusive = { focus = NEN_turkish_navy_blacksea_focus }
+		x = 6
+		y = 0
+		cost = 7
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = NEN_construct_dry_dock_blacksea_focus
+		text = construct_dry_dock_blacksea_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NEN_soviet_navy_blacksea_focus }
+		relative_position_id = NEN_soviet_navy_blacksea_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = NEN_expand_naval_base_blacksea_focus
+		text = expand_naval_base_blacksea_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = NEN_turkish_navy_blacksea_focus }
+		relative_position_id = NEN_turkish_navy_blacksea_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = NEN_fox_pack_blacksea_focus
+		text = fox_pack_blacksea_focus
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = NEN_construct_dry_dock_blacksea_focus }
+		relative_position_id = NEN_construct_dry_dock_blacksea_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_black_sea_fleet_blacksea_focus
+		text = black_sea_fleet_blacksea_focus
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = NEN_fox_pack_blacksea_focus }
+		relative_position_id = NEN_fox_pack_blacksea_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.75
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = BUL_a_black_sea_fleet
+			    bonus = 1.0
+			    uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_air_to_sea_combat_blacksea_focus
+		text = air_to_sea_combat_blacksea_focus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = NEN_fox_pack_blacksea_focus }
+		relative_position_id = NEN_fox_pack_blacksea_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = TUR_the_path_of_the_wolf
+				bonus = 1.00
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = BUL_modern_tactics
+			    bonus = 0.75
+			    uses = 2
+			    category = naval_air
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_torpedo_bomber_blacksea_focus
+		text = torpedo_bomber_blacksea_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = NEN_air_to_sea_combat_blacksea_focus }
+		prerequisite = { focus = NEN_black_sea_fleet_blacksea_focus }
+		relative_position_id = NEN_black_sea_fleet_blacksea_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = BUL_modern_tactics
+			    bonus = 1.0
+			    uses = 2
+			    category = naval_bomber
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = NEN_nene_spaceship_blacksea_focus
+		text = nene_spaceship_blacksea_focus
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = NEN_expand_naval_base_blacksea_focus }
+		relative_position_id = NEN_expand_naval_base_blacksea_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.50
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.75
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_anti_sub_warfare_blacksea_focus
+		text = anti_sub_warfare_blacksea_focus
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = NEN_nene_spaceship_blacksea_focus }
+		relative_position_id = NEN_nene_spaceship_blacksea_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = BUL_a_black_sea_fleet
+			    bonus = 1.0
+			    uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_aegean_sea_fleet_blacksea_focus
+		text = aegean_sea_fleet_blacksea_focus
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = NEN_nene_spaceship_blacksea_focus }
+		relative_position_id = NEN_nene_spaceship_blacksea_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.50
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				#name = TUR_the_legacy_of_osmanli_donanmasi
+				bonus = 1.50
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_sea_to_land_combat_blacksea_focus
+		text = sea_to_land_combat_blacksea_focus
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = NEN_aegean_sea_fleet_blacksea_focus }
+		prerequisite = { focus = NEN_anti_sub_warfare_blacksea_focus }
+		relative_position_id = NEN_aegean_sea_fleet_blacksea_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = BUL_strike_from_the_seas
+			    bonus = 1.0
+			    uses = 2
+			    category = marine_tech
+			    category = tp_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_break_the_treaty_blacksea_focus
+		text = break_the_treaty_blacksea_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = NEN_expand_naval_base_blacksea_focus 
+		focus = NEN_construct_dry_dock_blacksea_focus }
+		relative_position_id = NEN_expand_naval_base_blacksea_focus
+		x = 3
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    if = {
+		    	limit = { NOT = { has_idea = MTG_naval_treaty_adherent }}
+		    	navy_experience = 25
+		    }
+		    if = {
+		    	limit = { has_idea = MTG_naval_treaty_adherent }
+		    	remove_ideas = MTG_naval_treaty_adherent
+		    }
+		}
+	}
+
+	focus = {
+		id = NEN_naval_reform_blacksea_focus
+		text = naval_reform_blacksea_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = NEN_break_the_treaty_blacksea_focus }
+		relative_position_id = NEN_break_the_treaty_blacksea_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = NEN_supremacy_on_bosporus_blacksea_focus
+		text = supremacy_on_bosporus_blacksea_focus
+		icon = GFX_focus_generic_black_sea_focus
+		prerequisite = { focus = NEN_naval_reform_blacksea_focus }
+		relative_position_id = NEN_naval_reform_blacksea_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = BUL_supremacy_on_the_bosporus
+		}
+	}
+
+	focus = {
+		id = NEN_train_by_Marine_blacksea_focus
+		text = train_by_Marine_blacksea_focus
+		icon = GFX_focus_marine_flag
+		prerequisite = { focus = NEN_naval_reform_blacksea_focus }
+		relative_position_id = NEN_naval_reform_blacksea_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = GRE_ancient_talents
+		}
+	}
+
+	focus = {
+		id = NEN_naval_supremacy_blacksea_focus
+		text = naval_supremacy_blacksea_focus
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = NEN_train_by_Marine_blacksea_focus }
+		prerequisite = { focus = NEN_supremacy_on_bosporus_blacksea_focus }
+		relative_position_id = NEN_supremacy_on_bosporus_blacksea_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.75
+				uses = 3
+				category = naval_doctrine
+			}
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+		}
+	}
+
+
+
+}

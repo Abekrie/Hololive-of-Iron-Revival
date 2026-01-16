@@ -1,0 +1,49 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Fauna Fleet"			
+		naval_base = 3338 
+		task_force = {				
+			name = "Fauna Force"			
+			location = 3338 
+
+			ship = { name = "Fauna" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Fauna 2" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Fauna 3" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Fauna 4" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class"  } } }
+		}
+
+		task_force = {				
+			name = "Arctic Force"			
+			location = 3338 
+
+			ship = { name = "Saplings" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Faunatics" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

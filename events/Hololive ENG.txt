@@ -1,0 +1,67 @@
+add_namespace = holo_en
+
+#Project Hope - Choose between OG and IRyS
+country_event = {
+	id = holo_en.1
+	title = holo_en.1.t
+	desc = holo_en.1.d
+	picture = GFX_report_event_irys_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holo_en.1.a
+		ai_chance = { factor = 100 }
+		
+		set_cosmetic_tag = HOLOEN_IRYS
+		hidden_effect = {
+			retire_ideology_leader = fascism
+			retire_ideology_leader = communism
+			retire_ideology_leader = democratic
+			retire_ideology_leader = neutrality
+		}
+			create_country_leader = {
+				name = "IRyS"
+				picture = "gfx/leaders/WTS/irys.dds"
+				expire = "1975.1.1"
+				ideology = centrism
+				traits = {
+					angel_and_demon_trait
+				}
+			}
+			create_country_leader = {
+				name = "IRyS"
+				picture = "gfx/leaders/WTS/irys.dds"
+				expire = "1975.1.1"
+				ideology = fascism_ideology
+				traits = {
+					angel_and_demon_trait
+				}
+			}
+			create_country_leader = {
+				name = "IRyS"
+				picture = "gfx/leaders/WTS/irys.dds"
+				expire = "1975.1.1"
+				ideology = marxism
+				traits = {
+					angel_and_demon_trait
+				}
+			}
+			create_country_leader = {
+				name = "IRyS"
+				picture = "gfx/leaders/WTS/irys.dds"
+				expire = "1975.1.1"
+				ideology = liberalism
+				traits = {
+					angel_and_demon_trait
+				}
+			}
+	}
+
+	option = {
+		name = holo_en.1.b
+		ai_chance = { factor = 0 }
+		add_war_support = 0.1
+		add_stability = 0.1
+	}
+}

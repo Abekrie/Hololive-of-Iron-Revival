@@ -1,0 +1,349 @@
+add_namespace = mio
+
+#mio refuses india islands
+country_event = {
+	id = mio.1
+	title = mio.1.t
+	desc = mio.1.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#mio accepted india islands
+country_event = {
+	id = mio.2
+	title = mio.2.t
+	desc = mio.2.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.2.a
+		set_global_flag = india_ocean_islands_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+#mio refuses india islands
+country_event = {
+	id = mio.3
+	title = mio.3.t
+	desc = mio.3.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#mio accepted india islands
+country_event = {
+	id = mio.4
+	title = mio.4.t
+	desc = mio.4.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.4.a
+		set_global_flag = madagascar_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Mio - Dec/Invest in Material Factory
+country_event = {
+	id = mio.5
+	title = mio.5.t
+	desc = mio.5.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.5.a
+		ai_chance = { factor = 100 }
+
+		random_list = {
+    		70 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.5
+					uses = 1
+					category = support_tech	
+				}
+    			}
+    		20 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.75
+					uses = 1
+					category = support_tech	
+				}
+    			}
+    		10 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 1
+					uses = 1
+					category = support_tech	
+				}
+    			}
+		}
+	}
+}
+
+#Mio - Dec/Invest in Fuel Industry
+country_event = {
+	id = mio.6
+	title = mio.6.t
+	desc = mio.6.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.6.a
+		ai_chance = { factor = 100 }
+
+		random_list = {
+    		70 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.75
+					uses = 1
+					category = synth_resources	
+					category = cat_synth_rubber
+					category = cat_synth_oil
+				}
+    			}
+    		20 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 1
+					uses = 1
+					category = synth_resources	
+					category = cat_synth_rubber
+					category = cat_synth_oil
+				}
+    			}
+    		10 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 1.25
+					uses = 1
+					category = synth_resources	
+					category = cat_synth_rubber
+					category = cat_synth_oil
+				}
+    			}
+		}
+	}
+}
+
+#Mio - Dec/Invest in Electronic Industry
+country_event = {
+	id = mio.7
+	title = mio.7.t
+	desc = mio.7.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.7.a
+		ai_chance = { factor = 100 }
+
+		random_list = {
+    		70 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.50
+					uses = 1
+					category = electronics
+				}
+    			}
+    		20 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.75
+					uses = 1
+					category = electronics
+				}
+    			}
+    		10 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+    			}
+		}
+	}
+}
+
+#Mio - Dec/Invest in Naval Industry
+country_event = {
+	id = mio.8
+	title = mio.8.t
+	desc = mio.8.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.8.a
+		ai_chance = { factor = 100 }
+
+		random_list = {
+    		70 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.50
+					uses = 1
+					category = naval_equipment
+				}
+    			}
+    		20 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 0.75
+					uses = 1
+					category = naval_equipment
+				}
+    			}
+    		10 = {
+        		add_tech_bonus = {
+					name = CZE_support_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = naval_equipment
+				}
+    			}
+		}
+	}
+}
+
+#Mio - Ask to join faction
+country_event = {
+	id = mio.9
+	title = mio.9.t
+	desc = mio.9.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.9.a
+		ai_chance = { factor = 100 }
+
+		add_to_faction = MIO
+		MIO = {
+			country_event = { id = proposed.3 }
+		}
+	}
+
+	option = {
+		name = mio.9.b
+		ai_chance = { factor = 100 }
+
+		MIO = {
+			country_event = { id = proposed.4 }
+		}
+	}
+}
+
+#Mio - Demand puppet
+country_event = {
+	id = mio.10
+	title = mio.10.t
+	desc = mio.10.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.10.a
+		ai_chance = { factor = 100 }
+
+		MIO = { puppet = ROOT }
+		MIO = {
+			country_event = { id = proposed.83 }
+		}
+	}
+
+	option = {
+		name = mio.10.b
+		ai_chance = { factor = 100 }
+
+		MIO = {
+			country_event = { id = proposed.84 }
+		}
+	}
+}
+
+#Mio - Greenland deal
+country_event = {
+	id = mio.11
+	title = mio.11.t
+	desc = mio.11.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.11.a
+		ai_chance = { factor = 100 }
+
+		add_equipment_to_stockpile = {
+			type = hololive_yen_0
+			amount = 10000
+			producer = MIO
+		}
+
+		MIO = { transfer_state = 101 }
+		MIO = {
+			country_event = { id = mio.12 }
+		}
+	}
+
+	option = {
+		name = mio.11.b
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Mio - Greenland deal #YES
+country_event = {
+	id = mio.12
+	title = mio.12.t
+	desc = mio.12.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mio.12.a
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,216 @@
+﻿division_template = {
+    name = "Teamates"      
+
+    division_names_group = WTS_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Amelewd Gang"      
+
+    division_names_group = WTS_INFB_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Investigator"      
+
+    division_names_group = WTS_CAV_01
+
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+    }
+}
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 9458
+    division_template ="Teamates"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 9458
+    division_template ="Teamates"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 11221
+    division_template ="Teamates"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 13070
+    division_template ="Teamates"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 11253
+    division_template ="Teamates"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 516
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 516
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 516
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 391
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 391
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 6
+    }
+    location = 391
+    division_template ="Amelewd Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 13068
+    division_template ="Investigator"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 11407
+    division_template ="Investigator"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 9239
+    division_template ="Investigator"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+}
+
+air_wings = {
+	126 = {
+		fighter_equipment_0 =  {
+			owner = "WTS" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {
+			owner = "WTS" 
+			amount = 150
+		}
+	}
+}

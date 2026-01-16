@@ -1,0 +1,49 @@
+Generic_hololive_historical = {
+	name = "HIT historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = HIT
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = HIT
+			}
+			is_historical_focus_on = yes
+			is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		idkmate_hololive_memba
+		idkmate_follow_the_policy
+		idkmate_yagoos_dream
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

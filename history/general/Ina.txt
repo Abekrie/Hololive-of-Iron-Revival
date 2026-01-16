@@ -1,0 +1,74 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NIN
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = NIN_small_ina_holo_xgeneral
+    name="Small Ina"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/small_ina.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = NIN_machodachi_holo_xgeneral
+    name="Machodachi"
+      portraits={
+            army={
+                  large="gfx/leaders/NIN/machodachi.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard commando paratrooper}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = NIN_takodachi_holo_xgeneral
+    name="Takodachi"
+      portraits={
+            army={
+                  large="gfx/leaders/NIN/tako.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader commando camouflage_expert}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

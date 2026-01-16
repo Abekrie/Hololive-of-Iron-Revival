@@ -1,0 +1,54 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = KIA
+        original_tag = COG
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = KIA_small_kiara_holo_xgeneral
+    name="Small Kiara"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/small_kiara.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { }
+      }
+  }
+
+  generate_character = {
+    token_base = KIA_employee_holo_xgeneral
+    name="Employee Commander"
+      portraits={
+            army={
+                  large="gfx/leaders/KIA/employee.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader skilled_staffer}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

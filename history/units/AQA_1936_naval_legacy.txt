@@ -1,0 +1,77 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Minato Fleet"			
+		naval_base = 9975 
+		task_force = {				
+			name = "Aqua Force"			
+			location = 9975 
+
+			ship = { name = "ARS Berbera" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Wal Wal" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Harar" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Asella" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Jiren" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = AQA } } }
+		}			
+	}
+
+	fleet = {
+		name = "East Africa Fleet"			
+		naval_base = 10833 
+		task_force = {				
+			name = "Kagura Force"			
+			location = 10833 
+
+ship = { name = "ARS Mea Kagura"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+AQA
+} } }
+ 
+ship = { name = "ARS Minato Aqua"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+AQA
+} } }
+
+			ship = { name = "ARS Ahmadabad" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Karachi" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Jaipur" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = AQA } } }
+
+			ship = { name = "ARS Lahore" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = AQA } } }
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

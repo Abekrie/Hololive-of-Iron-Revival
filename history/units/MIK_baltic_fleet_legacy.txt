@@ -1,0 +1,40 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Baltic Fleet"		
+		naval_base = 362
+		task_force = {				
+			name = "Baltic Force"			
+			location = 362 
+
+			ship = { name = "Sakura" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = MIK } } }
+
+			ship = { name = "Elite" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = MIK } } }
+
+			ship = { name = "Shrine Maiden" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = MIK } } }
+
+			
+		}
+	}
+
+	
+
+
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

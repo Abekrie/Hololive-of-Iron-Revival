@@ -1,0 +1,33 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NEN
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = NEN_nishizawa_holo_xgeneral
+    name="Nishizawa 5mm"
+      portraits={
+            army={
+                  large="gfx/leaders/NEN/nishizawa.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={scavenger politically_connected }
+            skill = 5
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 4
+            #visible = { has_country_flag =  }
+      }
+  }
+}

@@ -1,0 +1,168 @@
+﻿capital = 248
+
+oob = "FAU_1936"
+set_naval_oob = "FAU_1936_naval_legacy"
+set_stability = 0.8
+set_war_support = 0.1
+set_research_slots = 3
+starting_train_buffer = 1.5
+add_ideas = {
+	exploit_the_earth_1
+}
+
+set_variable = { FAU_council_status = 0 }
+set_country_flag = is_current_council_host
+
+set_variable = { FAU_plant_shooter = 0 }
+set_variable = { FAU_plant_defender = 0 }
+set_variable = { FAU_plant_artillery = 0 }
+set_variable = { FAU_plant_special = 0 }
+
+#Shooter ID = Pea Shooter/Repeater/Gatling/Cactus
+#Defender ID = Wallnut/Tallnut/Potato Mine/Magnet
+#Artillery ID = Cabbage/Kernel/Melon/Winter Melon/Cob Cannon
+#Special ID = Cherry/Jalapeno/Hypno/Doom/Sunflower
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	CAS1 = 1
+	gwtank = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	basic_train = 1
+	gwtank_chassis = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "FAU_1936_naval_mtg"
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_dp_light_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 75
+
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	neutrality = 70
+	fascism = 5
+	communism = 5
+}
+
+create_country_leader = {
+	name = "Ceres Fauna"
+	picture = "gfx/leaders/FAU/fauna_neu.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		affable_kro_trait
+	}
+}
+
+create_country_leader = {
+	name = "Ceres Fauna"
+	picture = "gfx/leaders/FAU/fauna_fas.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		affable_kro_trait
+	}
+}
+
+create_country_leader = {
+	name = "Ceres Fauna"
+	picture = "gfx/leaders/FAU/fauna_com.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		affable_kro_trait
+	}
+}
+
+create_country_leader = {
+	name = "Ceres Fauna"
+	picture = "gfx/leaders/FAU/fauna_dem.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		affable_kro_trait
+	}
+}
+
+recruit_character = FAU_ceres_fauna_general
+recruit_character = FAU_ceres_fauna_admiral
+
+
+
+
+

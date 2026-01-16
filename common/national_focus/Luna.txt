@@ -1,0 +1,2417 @@
+focus_tree = {
+	id = luna_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			
+			OR = {tag = LUN
+						}
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 2000 y = 900 }
+
+    initial_show_position = {
+        x = 6
+        y = 0
+    }
+
+    #Diplomatic and Political focus
+    focus = {
+        id = himemori_luna_lun_focus
+        icon = GFX_focus_luna_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 4
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = political_reform_lun_focus
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = himemori_luna_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = himemori_luna_lun_focus
+        x = 8
+        y = 1
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+
+    focus = {
+        id = constitutional_monarchy_lun_focus
+        icon = GFX_focus_LUN_president
+        prerequisite = { focus = political_reform_lun_focus}
+        mutually_exclusive = { focus = the_queen_party_lun_focus }
+        relative_position_id = political_reform_lun_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    	retire_ideology_leader = communism
+		    	retire_ideology_leader = democratic
+		    	retire_ideology_leader = neutrality
+		    }
+		    add_war_support = 0.1
+        	create_country_leader = {
+    name = "President Luna"
+    picture = "gfx/leaders/LUN/luna_president.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        president_of_the_people_trait
+        zero_yo
+    }
+}
+hidden_effect = {
+create_country_leader = {
+    name = "President Luna"
+    picture = "gfx/leaders/LUN/luna_president.dds"
+    expire = "1965.1.1"
+    ideology = fascism_ideology
+    traits = {
+        president_of_the_people_trait
+        zero_yo
+    }
+}
+
+create_country_leader = {
+    name = "President Luna"
+    picture = "gfx/leaders/LUN/luna_president.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        president_of_the_people_trait
+        zero_yo
+    }
+}
+
+create_country_leader = {
+    name = "President Luna"
+    picture = "gfx/leaders/LUN/luna_president.dds"
+    expire = "1965.1.1"
+    ideology = liberalism
+    traits = {
+        president_of_the_people_trait
+        zero_yo
+    }
+}}
+
+			custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_dem_advisor
+		    custom_effect_tooltip = "Tokino Sora"
+        }
+    }
+
+    focus = {
+        id = the_queen_party_lun_focus
+        icon = GFX_focus_LUN_queen
+        prerequisite = { focus = political_reform_lun_focus}
+        mutually_exclusive = { focus = constitutional_monarchy_lun_focus }
+        relative_position_id = political_reform_lun_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_stability = -0.1
+        	hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    }
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+		    create_country_leader = {
+				name = "Queen Luna"
+				picture = "gfx/leaders/LUN/luna_queen.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					onee_san_trait
+					zero_yo
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = royal_budget_lun_focus
+        icon = GFX_focus_generic_royal_wedding
+        prerequisite = { focus = political_reform_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = political_reform_lun_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_lun_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = royal_budget_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royal_budget_lun_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = war_princess_lun_focus
+        icon = GFX_focus_LUN_guns
+        prerequisite = { focus = royal_budget_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royal_budget_lun_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = war_princess_trait
+        }
+    }
+
+    focus = {
+        id = claim_the_brazillian_states_lun_focus
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = war_princess_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_princess_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 503
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_state_core = 503
+        	add_state_core = 502
+            503 = {
+                OWNER = {
+                    country_event = { id = luna.49 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = her_majesty_secret_service_lun_focus
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = war_princess_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_princess_lun_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+            #add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = liberate_uruguay_lun_focus
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        prerequisite = { focus = her_majesty_secret_service_lun_focus
+        focus = claim_the_brazillian_states_lun_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = her_majesty_secret_service_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 300
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            300 = {
+                OWNER = {
+                    country_event = { id = luna.50 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = imperial_research_center_lun_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = constitutional_monarchy_lun_focus
+        focus = the_queen_party_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = constitutional_monarchy_lun_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = candy_factory_lun_focus
+        icon = GFX_focus_LUN_industry
+        prerequisite = { focus = constitutional_monarchy_lun_focus
+        focus = the_queen_party_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_queen_party_lun_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = join_noel_lun_focus
+        icon = GFX_focus_NOE_shirogane_federation
+        prerequisite = { focus = candy_factory_lun_focus}
+        mutually_exclusive = { focus = join_fastfood_united_front_lun_focus }
+        relative_position_id = candy_factory_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                NOE = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = NOE
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            NOE = { country_event = { id = luna.48 }}
+        }
+    }
+
+    focus = {
+        id = join_fastfood_united_front_lun_focus
+        icon = GFX_focus_KIA_fastfood
+        prerequisite = { focus = imperial_research_center_lun_focus}
+        mutually_exclusive = { focus = join_noel_lun_focus  }
+        relative_position_id = imperial_research_center_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                KIA = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = KIA
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            KIA = { country_event = { id = luna.48 }}
+        }
+    }
+
+    focus = {
+        id = recruit_kiara_lun_focus
+        icon = GFX_focus_KIA_kiara
+        prerequisite = { focus = join_fastfood_united_front_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_fastfood_united_front_lun_focus
+        x = -1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = KIA_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Takanashi Kiara"
+        }
+    }
+
+    focus = {
+        id = kfp_takoyaki_lun_focus
+        icon = GFX_focus_KIA_kfp
+        prerequisite = { focus = join_fastfood_united_front_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_fastfood_united_front_lun_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = efficiency_i_ns
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = host_the_world_cup_lun_focus
+        icon = GFX_focus_LUN_world_cup
+        prerequisite = { focus = join_fastfood_united_front_lun_focus
+        focus = join_noel_lun_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_fastfood_united_front_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 10000
+                    producer = ROOT
+            }
+            every_country = {
+            	limit = { is_in_faction_with = ROOT }
+            	add_war_support = 0.05
+            }
+            hidden_effect = {
+            	news_event = { id = holo_news.232 }
+            }
+        }
+    }
+
+    focus = {
+        id = hire_the_knight_lun_focus
+        icon = GFX_focus_NOE_noel
+        prerequisite = { focus = join_noel_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_noel_lun_focus
+        x = 1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = NOE_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Shirogane Noel"
+        }
+    }
+
+    focus = {
+        id = noel_doctrine_lun_focus
+        icon = GFX_focus_noel_flag
+        prerequisite = { focus = join_noel_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_noel_lun_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = noel_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = tac_motors_lun_focus
+        icon = GFX_focus_LUN_tac_motors
+        prerequisite = { focus = imperial_research_center_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = imperial_research_center_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = armor
+            }
+            random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = godzilla_lun_focus
+        icon = GFX_focus_LUN_godzilla
+        prerequisite = { focus = tac_motors_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tac_motors_lun_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = { has_full_control_of_state = 500 }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_equipment_to_stockpile = {
+                    type = light_tank_chassis_0
+                    amount = 500
+                    producer = ROOT
+            }
+        	custom_effect_tooltip = CET_godzilla_lun_focus
+			hidden_effect = {load_oob = LUN_godzilla_nora_lun_focus}
+
+        }
+    }
+
+    focus = {
+        id = smoking_snake_lun_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = himemori_luna_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = himemori_luna_lun_focus
+        x = 0
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = princess_of_the_forest_lun_focus
+        icon = GFX_focus_por_reclaim_crown_jewel
+        prerequisite = { focus = himemori_luna_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = himemori_luna_lun_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = princess_of_the_forest_ns
+        }
+    }
+
+    focus = {
+        id = influence_paraguay_lun_focus
+        icon = GFX_focus_WAT_paraguay
+        prerequisite = { focus = princess_of_the_forest_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = princess_of_the_forest_lun_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = can_influence_paraguay_future
+            custom_effect_tooltip = CET_influence_paraguay_wat_focus
+        }
+    }
+
+    focus = {
+        id = rearmament_effort_lun_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = princess_of_the_forest_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = princess_of_the_forest_lun_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = prepare_for_kaiju_war_lun_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = rearmament_effort_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_lun_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = supply_hub_building_idea
+        }
+    }
+
+    focus = {
+        id = jungle_specialist_lun_focus
+        icon = GFX_focus_secret_rearmament
+        prerequisite = { focus = rearmament_effort_lun_focus
+        focus = influence_paraguay_lun_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_lun_focus
+        x = -2
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = five_idols_army_ns
+        }
+    }
+
+    focus = {
+        id = repopulate_paraguay_lun_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = jungle_specialist_lun_focus}
+        prerequisite = { focus = influence_paraguay_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = jungle_specialist_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	PAR = {
+        		is_subject_of = ROOT
+        	}
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            PAR = {add_ideas = f2_conscription_ns}
+        }
+    }
+
+    focus = {
+        id = assimilate_amazonian_tribes_lun_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = jungle_specialist_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = jungle_specialist_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = multi_ethnics_nation_idea
+        }
+    }
+
+    focus = {
+        id = develop_paraguay_lun_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = influence_paraguay_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = influence_paraguay_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	PAR = { is_subject_of = ROOT }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            688 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            301 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = luna_imperialism_lun_focus
+        icon = GFX_focus_generic_monarchy_2
+        prerequisite = { focus = himemori_luna_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = himemori_luna_lun_focus
+        x = -2
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.1
+            add_ideas = usa_world_police
+        }
+    }
+
+    focus = {
+        id = luna_south_congo_lun_focus
+        icon = GFX_focus_LUN_south_congo
+        prerequisite = { focus = luna_imperialism_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = luna_imperialism_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        bypass = {
+        	ANG = {
+        		is_subject_of = ROOT
+        	}
+        }
+
+        available = {
+        	is_subject = no
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	if = {
+        		limit = { NOT = { owns_state = 540 }}
+        		540 = {
+        			OWNER = {
+        				country_event = { id = luna.47 }
+        			}
+        		}
+        	}
+            ANG = {
+            	transfer_state = 540
+            }
+            puppet = ANG
+            ANG = {
+            	set_cosmetic_tag = LUN_south_congo
+            }
+            hidden_effect = {
+            	news_event = { id = holo_news.233 }
+            }
+        }
+    }
+
+    focus = {
+        id = liberia_purchase_lun_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = luna_imperialism_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = luna_imperialism_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 298
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            298 = {
+                OWNER = {
+                    country_event = { id = luna.45 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = grand_atlantic_fleet_lun_focus
+        icon = GFX_focus_LUN_battleship
+        prerequisite = { focus = liberia_purchase_lun_focus
+        focus = luna_south_congo_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = liberia_purchase_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        available = {
+        	has_full_control_of_state = 500
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_grand_atlantic_fleet_lun_focus
+			hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = LUN_atlantic_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = LUN_atlantic_legacy
+						}}
+        }
+    }
+
+    focus = {
+        id = expand_the_colony_lun_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = luna_south_congo_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = luna_south_congo_lun_focus
+        x = 0
+        y = 2
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	ANG = {
+        		add_state_core = 771
+        		add_state_core = 545
+        		add_state_core = 770
+        		add_state_core = 544
+        		}
+        }
+    }
+
+    focus = {
+        id = war_on_south_africa_lun_focus
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = expand_the_colony_lun_focus}
+        prerequisite = { focus = grand_atlantic_fleet_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_the_colony_lun_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+                ANG = { is_subject_of = ROOT }
+            }
+        }
+
+            will_lead_to_war_with = SAF
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                SAF = { exists = no }
+                SAF = { is_subject_of = ROOT }
+                SAF = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = SAF }
+        }
+    }
+
+    focus = {
+        id = develop_rubber_industry_lun_focus
+        icon = GFX_focus_generic_rubber
+        prerequisite = { focus = luna_south_congo_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = luna_south_congo_lun_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	ANG = {
+        		is_subject_of = ROOT
+        	}
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ANG = {random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 1
+                                instant_build = yes
+                            }
+                        add_resource = {
+                            type = rubber
+                            amount = 8
+                            }
+                        }}
+        }
+    }
+
+    focus = {
+        id = colonial_army_lun_focus
+        icon = GFX_focus_por_luso_tropicalism
+        prerequisite = { focus = develop_rubber_industry_lun_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = develop_rubber_industry_lun_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	ANG = {
+        		is_subject_of = ROOT
+        	}
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ANG = {add_ideas = f2_conscription_ns}
+            #add_ideas = being_meme
+        }
+    }
+
+    #Economy and Industry
+	focus = {
+		id = LUN_banana_republic_LatinAmerica_focus
+		text = banana_republic_LatinAmerica_focus
+		icon = GFX_goal_generic_consumer_goods
+		#prerequisite = { focus = idkeator }
+		#mutually_exclusive = { focus = idbili }
+		relative_position_id = himemori_luna_lun_focus
+		x = 18
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 5000
+		    	producer = ROOT
+	    	}
+	    }
+	}
+
+	focus = {
+		id = LUN_support_agriculture_LatinAmerica_focus
+		text = support_agriculture_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LUN_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = LUN_support_rearmament_LatinAmerica_focus }
+		relative_position_id = LUN_banana_republic_LatinAmerica_focus
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_support_rearmament_LatinAmerica_focus
+		text = support_rearmament_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LUN_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = LUN_support_agriculture_LatinAmerica_focus }
+		relative_position_id = LUN_banana_republic_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_war_on_drug_LatinAmerica_focus
+		text = war_on_drug_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = LUN_support_agriculture_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_support_agriculture_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = LUN_export_banana_LatinAmerica_focus
+		text = export_banana_LatinAmerica_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = LUN_war_on_drug_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_war_on_drug_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = LUN_seek_flare_support_LatinAmerica_focus
+		text = seek_flare_support_LatinAmerica_focus
+		icon = GFX_focus_flare_flag
+		prerequisite = { focus = LUN_export_banana_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_export_banana_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = FLA
+		    modifier = faction_unity_opinion
+		    }
+		    FLA = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+			
+	    }
+	}
+
+	focus = {
+		id = LUN_hire_aqua_construction_LatinAmerica_focus
+		text = hire_aqua_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LUN_support_agriculture_LatinAmerica_focus 
+		focus = LUN_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_support_agriculture_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			AQA = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_hire_pekora_construction_LatinAmerica_focus
+		text = hire_pekora_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LUN_support_agriculture_LatinAmerica_focus 
+		focus = LUN_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_support_rearmament_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			PEK = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_coco_arms_factory_LatinAmerica_focus
+		text = coco_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LUN_hire_pekora_construction_LatinAmerica_focus
+		focus = LUN_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_hire_pekora_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_mio_arms_factory_LatinAmerica_focus
+		text = mio_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LUN_hire_pekora_construction_LatinAmerica_focus
+		focus = LUN_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_hire_aqua_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_drug_to_usa_LatinAmerica_focus
+		text = drug_to_usa_LatinAmerica_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LUN_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_support_rearmament_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = asacoco_idea
+	    }
+	}
+
+	focus = {
+		id = LUN_underground_tunnel_LatinAmerica_focus
+		text = underground_tunnel_LatinAmerica_focus
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = LUN_drug_to_usa_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_drug_to_usa_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_seek_coco_support_LatinAmerica_focus
+		text = seek_coco_support_LatinAmerica_focus
+		icon = GFX_focus_coco_flag
+		prerequisite = { focus = LUN_underground_tunnel_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_underground_tunnel_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = COC
+		    modifier = faction_unity_opinion
+		    }
+		    COC = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+	    }
+	}
+
+	focus = {
+		id = LUN_pacific_coast_dock_LatinAmerica_focus
+		text = pacific_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LUN_mio_arms_factory_LatinAmerica_focus
+		focus = LUN_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_mio_arms_factory_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = LUN_atlantic_coast_dock_LatinAmerica_focus
+		text = atlantic_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LUN_mio_arms_factory_LatinAmerica_focus
+		focus = LUN_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_mio_arms_factory_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = LUN_maya_carlender_LatinAmerica_focus
+		text = maya_carlender_LatinAmerica_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = LUN_pacific_coast_dock_LatinAmerica_focus
+		focus = LUN_atlantic_coast_dock_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = LUN_atlantic_coast_dock_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+	    }
+	}
+
+	#Army Research
+    focus = {
+		id = LUN_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = LUN_banana_republic_LatinAmerica_focus
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = LUN_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LUN_gaming }
+		relative_position_id = LUN_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = LUN_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LUN_animal_crossing }
+		relative_position_id = LUN_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = LUN_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = LUN_gaming }
+		relative_position_id = LUN_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = LUN_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LUN_tetris }
+		relative_position_id = LUN_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = LUN_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = LUN_gaming }
+		relative_position_id = LUN_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LUN_dark_soul_resh }
+		relative_position_id = LUN_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = LUN_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LUN_apex_legend  focus = LUN_ring_fit }
+		relative_position_id = LUN_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LUN_pubg  focus = LUN_ring_fit }
+		relative_position_id = LUN_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = LUN_minecraft_resh  focus = LUN_mario_kart }
+		relative_position_id = LUN_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = LUN_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = LUN_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = LUN_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = LUN_hololive_music }
+		relative_position_id = LUN_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = LUN_hololive_music }
+		relative_position_id = LUN_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = LUN_hololive_music }
+		relative_position_id = LUN_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = LUN_yumemiru_sora_he 
+		focus = LUN_shiny_smily_story}
+		relative_position_id = LUN_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = LUN_yumemiru_sora_he 
+		focus = LUN_kirame_rider}
+		relative_position_id = LUN_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = LUN_azur_lane_boss_music }
+		prerequisite = { focus = LUN_fukkireta }
+		relative_position_id = LUN_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = LUN_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = LUN_azur_lane_boss_music }
+		relative_position_id = LUN_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = LUN_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = LUN_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = LUN_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = LUN_live_streaming_gen }
+		mutually_exclusive = { focus = LUN_bilibili }
+		relative_position_id = LUN_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LUN_youtube_gen }
+		relative_position_id = LUN_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = LUN_live_streaming_gen }
+		mutually_exclusive = { focus = LUN_youtube_gen }
+		relative_position_id = LUN_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = LUN_bilibili 
+		focus = LUN_youtube_gen}
+		relative_position_id = LUN_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LUN_superchat 
+		focus = LUN_game_casting}
+		prerequisite = { focus = LUN_karaoke }
+		relative_position_id = LUN_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = LUN_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = LUN_superchat 
+		focus = LUN_game_casting}
+		prerequisite = { focus = LUN_3d_studio }
+		relative_position_id = LUN_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = LUN_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = LUN_bilibili }
+		relative_position_id = LUN_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+    
+}

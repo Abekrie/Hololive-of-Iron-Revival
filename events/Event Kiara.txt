@@ -1,0 +1,686 @@
+add_namespace = kiara
+
+#KIA-MRI personal union
+country_event = {
+	id = kiara.1
+	title = kiara.1.t
+	desc = kiara.1.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.1.a
+		ai_chance = { factor = 100 }
+		KIA = { country_event = { id = kiara.2 }}
+	}
+
+	option = {
+		name = kiara.1.b
+		ai_chance = { factor = 0 }
+		KIA = { country_event = { id = kiara.3 }}
+	}
+}
+
+#KIA-MRI personal union - YES
+country_event = {
+	id = kiara.2
+	title = kiara.2.t
+	desc = kiara.2.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.2.a
+		ai_chance = { factor = 100 }
+		create_faction = FACTION_KIA_MRI_Kialiope
+		add_to_faction = MRI
+		hidden_effect = { news_event = { id = holo_news.48 }}
+	}
+}
+
+#KIA-MRI personal union - NO
+country_event = {
+	id = kiara.3
+	title = kiara.3.t
+	desc = kiara.3.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.3.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#KIA-MRI Royal Wedding
+country_event = {
+	id = kiara.4
+	title = kiara.4.t
+	desc = kiara.4.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.4.a
+		ai_chance = { factor = 100 }
+		KIA = { country_event = { id = kiara.5 }}
+	}
+
+	option = {
+		name = kiara.4.b
+		ai_chance = { factor = 0 }
+		KIA = { country_event = { id = kiara.6 }}
+	}
+}
+
+#KIA-MRI Royal Wedding - YES
+country_event = {
+	id = kiara.5
+	title = kiara.5.t
+	desc = kiara.5.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.5.a
+		ai_chance = { factor = 100 }
+		puppet = MRI
+	}
+}
+
+#KIA-MRI Royal Wedding - NO
+country_event = {
+	id = kiara.6
+	title = kiara.6.t
+	desc = kiara.6.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.6.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#KIA Anschluss Württemberg
+country_event = {
+	id = kiara.7
+	title = kiara.7.t
+	desc = kiara.7.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.7.a
+		ai_chance = { factor = 100 }
+		KIA = { country_event = { id = kiara.8 }}
+	}
+
+	option = {
+		name = kiara.7.b
+		ai_chance = { factor = 0 }
+		KIA = { country_event = { id = kiara.9 }}
+	}
+}
+
+#KIA Anschluss Württemberg - YES
+country_event = {
+	id = kiara.8
+	title = kiara.8.t
+	desc = kiara.8.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.8.a
+		ai_chance = { factor = 100 }
+		transfer_state = 50
+	}
+}
+
+#KIA Anschluss Württemberg - NO
+country_event = {
+	id = kiara.9
+	title = kiara.9.t
+	desc = kiara.9.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.9.a
+		ai_chance = { factor = 100 }
+		create_wargoal = { type = annex_everything target = GER }
+	}
+}
+
+#KIA demand Luxembourg
+country_event = {
+	id = kiara.10
+	title = kiara.10.t
+	desc = kiara.10.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.10.a
+		ai_chance = { factor = 100 }
+		KIA = { country_event = { id = kiara.11 }}
+	}
+
+	option = {
+		name = kiara.10.b
+		ai_chance = { factor = 0 }
+		KIA = { country_event = { id = kiara.12 }}
+	}
+}
+
+#KIA demand Luxembourg - YES
+country_event = {
+	id = kiara.11
+	title = kiara.11.t
+	desc = kiara.11.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.11.a
+		ai_chance = { factor = 100 }
+		transfer_state = 8
+	}
+}
+
+#KIA demand Luxembourg - NO
+country_event = {
+	id = kiara.12
+	title = kiara.12.t
+	desc = kiara.12.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kiara.12.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#KIA - Demand the Netherlands
+country_event = {
+	id = kiara.13
+	title = kiara.13.t
+	desc = kiara.13.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.13.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { tag = WTS }
+			KIA = { country_event = { id = proposed.91 }}
+		}
+		KIA = {
+			transfer_state = 35
+			transfer_state = 36
+			transfer_state = 7
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.13.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = WTS }
+			KIA = { country_event = { id = proposed.92 }}
+		}
+		add_political_power = -50
+	}
+}
+
+#KIA - Invite to faction
+country_event = {
+	id = kiara.14
+	title = kiara.14.t
+	desc = kiara.14.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.14.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { tag = MRI }
+			KIA = { country_event = { id = proposed.17 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			KIA = { country_event = { id = proposed.61 }}
+		}
+		KIA = {
+			add_to_faction = ROOT
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.14.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MRI }
+			KIA = { country_event = { id = proposed.18 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			KIA = { country_event = { id = proposed.62 }}
+		}
+	}
+}
+
+#KIA - Demand Burundi and Rwanda
+country_event = {
+	id = kiara.15
+	title = kiara.15.t
+	desc = kiara.15.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.15.a
+		ai_chance = { factor = 100 }
+
+		KIA = {
+			transfer_state = 769
+			transfer_state = 768
+		}
+		if = {
+			limit = { tag = MRI }
+			KIA = { country_event = { id = proposed.17 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			KIA = { country_event = { id = proposed.61 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.15.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MRI }
+			KIA = { country_event = { id = proposed.18 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			KIA = { country_event = { id = proposed.62 }}
+		}
+	}
+}
+
+#KIA - Opening of the Kongo branch
+country_event = {
+	id = kiara.16
+	title = kiara.16.t
+	desc = kiara.16.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.16.a
+		ai_chance = { factor = 100 }
+
+		add_war_support = 0.1
+	}
+
+	#No
+	option = {
+		name = kiara.16.b
+		ai_chance = { factor = 0 }
+
+		COG = { change_tag_from = KIA }
+	}
+}
+
+#COG - Middle Congo purchase
+country_event = {
+	id = kiara.17
+	title = kiara.17.t
+	desc = kiara.17.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.17.a
+		ai_chance = { factor = 100 }
+
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 10000
+                    producer = ROOT
+            }
+
+		COG = {
+			transfer_state = 772
+		}
+
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.61 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.17.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.62 }}
+		}
+	}
+}
+
+#COG - Gabon purchase
+country_event = {
+	id = kiara.18
+	title = kiara.18.t
+	desc = kiara.18.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.18.a
+		ai_chance = { factor = 100 }
+
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 10000
+                    producer = ROOT
+            }
+
+		COG = {
+			transfer_state = 539
+		}
+
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.61 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.18.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.62 }}
+		}
+	}
+}
+
+#COG - Angola purchase
+country_event = {
+	id = kiara.19
+	title = kiara.19.t
+	desc = kiara.19.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.19.a
+		ai_chance = { factor = 100 }
+
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 10000
+                    producer = ROOT
+            }
+
+		COG = {
+			transfer_state = 540
+		}
+
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.61 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.19.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			COG = { country_event = { id = proposed.62 }}
+		}
+	}
+}
+
+#COG - Demand North Angola
+country_event = {
+	id = kiara.20
+	title = kiara.20.t
+	desc = kiara.20.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.20.a
+		ai_chance = { factor = 100 }
+
+		COG = {
+			transfer_state = 796
+		}
+
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.39 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.20.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KMR }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.40 }}
+		}
+	}
+}
+
+#COG - Seek to join faction
+country_event = {
+	id = kiara.21
+	title = kiara.21.t
+	desc = kiara.21.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.21.a
+		ai_chance = { factor = 100 }
+
+		add_to_faction = COG
+
+		if = {
+			limit = { tag = GER }
+			COG = { country_event = { id = proposed.99 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.39 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.21.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = GER }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.40 }}
+		}
+	}
+}
+
+#COG - Demand Calli Africa
+country_event = {
+	id = kiara.22
+	title = kiara.22.t
+	desc = kiara.22.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.22.a
+		ai_chance = { factor = 100 }
+
+		COG = {
+			transfer_state = 699
+		}
+
+		if = {
+			limit = { owns_state = 783 }
+			COG = { transfer_state = 783 }
+		}
+
+		if = {
+			limit = { tag = MRI }
+			COG = { country_event = { id = proposed.17 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.39 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kiara.22.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MRI }
+			COG = { country_event = { id = proposed.18 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			COG = { country_event = { id = proposed.100 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			COG = { country_event = { id = proposed.40 }}
+		}
+	}
+}
+
+#COG - Operation Fire Storm WARNING
+country_event = {
+	id = kiara.23
+	title = kiara.23.t
+	desc = kiara.23.d
+	picture = GFX_report_event_kiara_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kiara.23.a
+		ai_chance = { factor = 100 }
+	}
+}

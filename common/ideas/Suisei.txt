@@ -1,0 +1,624 @@
+ideas = {
+    country = {
+	    suisei_royal_navy_idea1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_navy
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    naval_invasion_prep_speed = 0.25
+			}
+		}
+
+		suisei_royal_navy_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_navy
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    naval_invasion_prep_speed = 0.25
+			    naval_coordination = 0.1
+			    naval_retreat_speed = 0.15
+			    navy_org_factor = 0.15
+			}
+		}
+
+		suisei_royal_air_idea1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_airforce
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    experience_gain_air = 0.3
+			    experience_gain_air_factor = 0.1
+			}
+		}
+
+		suisei_royal_air_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_airforce
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    experience_gain_air = 0.3
+			    experience_gain_air_factor = 0.1
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		suisei_royal_air_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_airforce
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    experience_gain_air = 0.3
+			    experience_gain_air_factor = 0.1
+			    air_ace_generation_chance_factor = 0.1
+			    air_accidents_factor = -0.1
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		suisei_royal_army_tank1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_armor_attack_factor = 0.1
+			    army_armor_defence_factor = 0.1
+			    army_armor_speed_factor = 0.15
+			    mechanized_attack_factor = 0.1
+			    motorized_attack_factor = 0.1
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_tank2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_armor_attack_factor = 0.1
+			    army_armor_defence_factor = 0.1
+			    army_armor_speed_factor = 0.15
+			    mechanized_attack_factor = 0.1
+			    motorized_attack_factor = 0.1
+			}
+
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		suisei_royal_army_cons1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.1
+			    army_infantry_attack_factor = 0.1
+			    army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_cons2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.2
+			    army_morale_factor = 0.1
+			    army_infantry_attack_factor = 0.1
+			    army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_cons3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    conscription_factor = 0.3
+			    army_morale_factor = 0.1
+			    max_dig_in_factor = 0.15
+			    army_infantry_attack_factor = 0.1
+			    army_infantry_defence_factor = 0.20
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_fire1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_artillery_attack_factor = 0.1
+			    army_artillery_defence_factor = 0.1
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_fire2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_artillery_attack_factor = 0.1
+			    army_artillery_defence_factor = 0.1
+			    ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				
+			}
+		}
+
+		suisei_royal_army_fire3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_artillery_attack_factor = 0.1
+			    army_artillery_defence_factor = 0.1
+			    ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		suisei_royal_army_fire4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = sui_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_artillery_attack_factor = 0.2
+			    army_artillery_defence_factor = 0.2
+			    army_core_attack_factor = 0.15
+			    ground_attack_factor = 0.15
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		axe_producer_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = suisei_generic
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_attack_factor = 0.05
+			    training_time_factor = -0.10
+			    production_speed_arms_factory_factor = 0.15
+			}
+		}
+
+		axe_producer_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = suisei_generic
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_attack_factor = 0.05
+			    training_time_factor = -0.10
+			    production_speed_arms_factory_factor = 0.10
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		anemachi_space_program_idea1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = sui_space
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_radar_station_factor = 0.25
+			    production_speed_rocket_site_factor = 0.25
+			}
+
+			equipment_bonus = {
+				
+			}
+
+			research_bonus = {
+				rocketry = 0.30
+			}
+		}
+
+		anemachi_space_program_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = sui_space
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_radar_station_factor = 0.35
+			    production_speed_rocket_site_factor = 0.30
+			    production_speed_air_base_factor = 0.15
+			}
+
+			equipment_bonus = {
+				
+			}
+
+			research_bonus = {
+				rocketry = 0.50
+			}
+		}
+
+		sui_wall_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_bunker_factor = 0.25
+			    production_speed_coastal_bunker_factor = 0.25
+			}
+		}
+
+		reign_of_psychopath_idea1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_anti_fascist_crusade
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_defence_factor = -0.25
+			    army_attack_factor = -0.25
+			    research_speed_factor = -0.10
+			}
+		}
+
+		reign_of_psychopath_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_anti_fascist_crusade
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = -0.15
+			    army_attack_factor = -0.15
+			    research_speed_factor = -0.05
+			}
+		}
+
+		reign_of_psychopath_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_anti_fascist_crusade
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_defence_factor = 0.10
+			    army_attack_factor = 0.10
+			    research_speed_factor = 0.05
+			}
+		}
+	}
+}

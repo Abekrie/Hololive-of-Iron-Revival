@@ -1,0 +1,947 @@
+add_namespace = risu
+
+#risu refuses india islands
+country_event = {
+	id = risu.1
+	title = risu.1.t
+	desc = risu.1.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#risu accepted india islands
+country_event = {
+	id = risu.2
+	title = risu.2.t
+	desc = risu.2.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.2.a
+		set_global_flag = india_ocean_islands_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+#risu refuses Taiwan
+country_event = {
+	id = risu.3
+	title = risu.3.t
+	desc = risu.3.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#risu accepted Taiwan
+country_event = {
+	id = risu.4
+	title = risu.4.t
+	desc = risu.4.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.4.a
+		set_global_flag = taiwan_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = risu.8
+	title = risu.8.t
+	desc = risu.8.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.8.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.8.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = risu.9
+	title = risu.9.t
+	desc = risu.9.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.9.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.9.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = risu.10
+	title = risu.10.t
+	desc = risu.10.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.10.a	#Yes
+		ai_chance = { factor = 30 }
+		RIS = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = risu.10.b	#No 
+		ai_chance = { factor = 70 }
+		RIS = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = risu.11
+	title = risu.11.t
+	desc = risu.11.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.11.a	#Yes
+		ai_chance = { factor = 50 }
+		RIS = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = risu.11.b	#No 
+		ai_chance = { factor = 50 }
+		RIS = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = risu.12
+	title = risu.12.t
+	desc = risu.12.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.12.a	#Yes
+		ai_chance = { factor = 75 }
+		RIS = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.12.b	#No 
+		ai_chance = { factor = 25 }
+		RIS = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = risu.13
+	title = risu.13.t
+	desc = risu.13.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.13.a	#Yes
+		ai_chance = { factor = 50 }
+		RIS = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = risu.13.b	#No 
+		ai_chance = { factor = 50 }
+		RIS = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = risu.14
+	title = risu.14.t
+	desc = risu.14.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.14.a	#Yes
+		ai_chance = { factor = 50 }
+		RIS = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = risu.14.b	#No 
+		ai_chance = { factor = 50 }
+		RIS = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = risu.15
+	title = risu.15.t
+	desc = risu.15.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.15.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.15.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = risu.16
+	title = risu.16.t
+	desc = risu.16.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.16.a	#Yes
+		ai_chance = { factor = 20 }
+		RIS = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = risu.16.b	#No 
+		ai_chance = { factor = 80 }
+		RIS = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = risu.17
+	title = risu.17.t
+	desc = risu.17.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.17.a	#Yes
+		ai_chance = { factor = 50 }
+		RIS = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = risu.17.b	#No 
+		ai_chance = { factor = 50 }
+		RIS = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = risu.19
+	title = risu.19.t
+	desc = risu.19.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.19.a	#Yes
+		ai_chance = { factor = 40 }
+		RIS = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = risu.19.b	#No 
+		ai_chance = { factor = 60 }
+		RIS = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = risu.20
+	title = risu.20.t
+	desc = risu.20.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.20.a	#Yes
+		ai_chance = { factor = 90 }
+		RIS = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.20.b	#No 
+		ai_chance = { factor = 10 }
+		RIS = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = risu.21
+	title = risu.21.t
+	desc = risu.21.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.21.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.21.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = risu.22
+	title = risu.22.t
+	desc = risu.22.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.22.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = risu.22.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = risu.23
+	title = risu.23.t
+	desc = risu.23.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.23.a	#Yes
+		ai_chance = { factor = 70 }
+		RIS = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = risu.23.b	#No 
+		ai_chance = { factor = 30 }
+		RIS = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Risu propose ICC
+country_event = {
+	id = risu.24
+	title = risu.24.t
+	desc = risu.24.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.24.a	#Yes
+		ai_chance = { factor = 80 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+		limit = { original_tag = IOF}
+		RIS = {country_event = { id = iof.1 }}
+		}
+
+		if = {
+		limit = { original_tag = MOO}
+		RIS = {country_event = { id = moona.5 }}
+		}
+
+		
+	}
+	option = {
+		name = risu.24.b	#No 
+		ai_chance = { factor = 20 }
+
+		if = {
+		limit = { original_tag = IOF}
+		RIS = {country_event = { id = iof.2 }}
+		}
+
+		if = {
+		limit = { original_tag = MOO}
+		RIS = {country_event = { id = moona.6 }}
+		}
+		
+	}
+}
+
+#Risu demand annex Korone
+country_event = {
+	id = risu.25
+	title = risu.25.t
+	desc = risu.25.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.25.a	#Yes
+		ai_chance = { factor = 30 }
+		RIS = { annex_country = {
+		target = ROOT
+		transfer_troops = yes
+		}
+
+		RIS = { country_event = { id = risu.26 }}
+	}
+	}
+	option = {
+		name = risu.25.b	#No 
+		ai_chance = { factor = 70 }
+		RIS = { country_event = { id = risu.27 }}
+	}
+}
+
+#Korone yes annex
+country_event = {
+	id = risu.26
+	title = risu.26.t
+	desc = risu.26.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.26.a	#Yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+#Korone no annex
+country_event = {
+	id = risu.27
+	title = risu.27.t
+	desc = risu.27.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.27.a	#Yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+#Risu demand Malay or War
+country_event = {
+	id = risu.28
+	title = risu.28.t
+	desc = risu.28.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.28.a	#Yes
+		ai_chance = { factor = 80 }
+		RIS = { transfer_state = 336 }
+
+		RIS = { country_event = { id = risu.29 }}
+	}
+	option = {
+		name = risu.28.b	#No 
+		ai_chance = { factor = 20 }
+		RIS = { country_event = { id = risu.30 }}
+	}
+}
+
+#NOEL yes Malay
+country_event = {
+	id = risu.29
+	title = risu.29.t
+	desc = risu.29.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.29.a	#Yes
+		ai_chance = { factor = 30 }
+	}
+}
+
+#Noel no Malay
+country_event = {
+	id = risu.30
+	title = risu.30.t
+	desc = risu.30.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.30.a	#Yes
+		ai_chance = { factor = 30 }
+		ROOT = { create_wargoal = { type = annex_everything target = NOE } }
+	}
+}
+
+#Risu demand annex Korone
+country_event = {
+	id = risu.31
+	title = risu.31.t
+	desc = risu.31.d
+	picture = GFX_report_event_risu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = risu.31.a	#Yes
+		ai_chance = { factor = 60 }
+
+		RIS = { annex_country = {
+		target = ROOT
+		transfer_troops = yes
+		}}
+
+		if = {
+		limit = { original_tag = CHI }
+		RIS = {country_event = { id = risu.32 }}
+		}
+
+		if = {
+		limit = { original_tag = TIB }
+		RIS = {country_event = { id = risu.34 }}
+		}
+
+		if = {
+		limit = { original_tag = XSM }
+		RIS = {country_event = { id = risu.36 }}
+		}
+
+		if = {
+		limit = { original_tag = PRC }
+		RIS = {country_event = { id = risu.38 }}
+		}
+
+		if = {
+		limit = { original_tag = SHX }
+		RIS = {country_event = { id = risu.40 }}
+		}
+
+		if = {
+		limit = { original_tag = SIK }
+		RIS = {country_event = { id = risu.42 }}
+		}
+
+		if = {
+		limit = { original_tag = MAN }
+		RIS = {country_event = { id = risu.44 }}
+		}
+	}
+	
+	option = {
+		name = risu.31.b	#No 
+		ai_chance = { factor = 40 }
+
+		if = {
+		limit = { original_tag = CHI }
+		RIS = {country_event = { id = risu.33 }}
+		}
+
+		if = {
+		limit = { original_tag = TIB }
+		RIS = {country_event = { id = risu.35 }}
+		}
+
+		if = {
+		limit = { original_tag = XSM }
+		RIS = {country_event = { id = risu.37 }}
+		}
+
+		if = {
+		limit = { original_tag = PRC }
+		RIS = {country_event = { id = risu.39 }}
+		}
+
+		if = {
+		limit = { original_tag = SHX }
+		RIS = {country_event = { id = risu.41 }}
+		}
+
+		if = {
+		limit = { original_tag = SIK }
+		RIS = {country_event = { id = risu.43 }}
+		}
+
+		if = {
+		limit = { original_tag = MAN }
+		RIS = {country_event = { id = risu.45 }}
+		}
+	}
+}
+
+#Chinese Stuff
+country_event = {
+	id = risu.32
+	title = risu.32.t
+    desc = risu.32.d
+    picture = GFX_report_event_chi_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = risu.32.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+	id = risu.33
+	title = risu.33.t
+     desc = risu.33.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.33.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.34
+	title = risu.34.t
+     desc = risu.34.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.34.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.35
+	title = risu.35.t
+     desc = risu.35.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.35.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.36
+	title = risu.36.t
+     desc = risu.36.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.36.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.37
+	title = risu.37.t
+     desc = risu.37.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.37.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.38
+	title = risu.38.t
+     desc = risu.38.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.38.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.39
+	title = risu.39.t
+     desc = risu.39.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.39.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.40
+	title = risu.40.t
+     desc = risu.40.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.40.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.41
+	title = risu.41.t
+     desc = risu.41.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.41.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.42
+	title = risu.42.t
+     desc = risu.42.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.42.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.43
+	title = risu.43.t
+     desc = risu.43.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.43.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.44
+	title = risu.44.t
+     desc = risu.44.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.44.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = risu.45
+	title = risu.45.t
+     desc = risu.45.d
+     picture = GFX_report_event_chi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.45.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+#RIS - Ask to join Okakoro
+country_event = {
+	id = risu.46
+	title = risu.46.t
+     desc = risu.46.d
+     picture = GFX_report_event_risu_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = risu.46.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_to_faction = RIS
+     	if = {
+     		limit = { tag = KRN }
+     		RIS = { country_event = { id = proposed.41 }}
+     	}
+
+     	if = {
+     		limit = { tag = OKA }
+     		RIS = { country_event = { id = proposed.65 }}
+     	}
+     }
+
+     option = {
+     name = risu.46.b	#Yes
+     ai_chance = { factor = 0 }
+     	if = {
+     		limit = { tag = KRN }
+     		RIS = { country_event = { id = proposed.42 }}
+     	}
+
+     	if = {
+     		limit = { tag = OKA }
+     		RIS = { country_event = { id = proposed.66 }}
+     	}
+     }
+}

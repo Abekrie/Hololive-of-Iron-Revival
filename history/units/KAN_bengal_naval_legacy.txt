@@ -1,0 +1,66 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Bengal Fleet"		
+		naval_base = 4245
+		task_force = {				
+			name = "Bengal Force"			
+			location = 4245 
+
+			ship = { name = "Gorilla" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Gorilla 2" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Gorilla 3" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Heimin 1 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 2 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 3 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 4 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 5 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 6 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 7 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }
+ 
+ship = { name = "Heimin 8 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = LUN } } }	
+		}						
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

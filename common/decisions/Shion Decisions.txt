@@ -1,0 +1,120 @@
+shion_mage_of_violet_category = {
+
+	shion_deny_permission_to_die_dec = {
+
+		icon = generic_army_support
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = SHI
+			has_country_flag = Shion_can_deny_permission_to_die
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = no_permission_to_die_idea
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	shion_mp_burst_dec = {
+
+		icon = generic_army_support
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = SHI
+			has_country_flag = Shion_can_mp_burst
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = mp_burst_idea
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	shion_shionist_jihad_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 80
+
+		allowed = {
+			
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = SHI
+			has_country_flag = Shion_can_jihad
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		days_remove = 100
+
+		remove_effect = {
+			custom_effect_tooltip = CET_shion_shionist_jihad_dec
+			every_enemy_country = {
+				country_event = { id = shion.53 }
+				show_ideas_tooltip = terrorist_attacked_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

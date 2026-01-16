@@ -1,0 +1,175 @@
+add_namespace = calliope
+
+#MRI - Takamori/Approach first
+country_event = {
+	id = calliope.1
+	title = calliope.1.t
+	desc = calliope.1.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.1.a
+		ai_chance = { factor = 100 }
+		MRI = { create_faction = FACTION_KIA_MRI_Kialiope 
+		add_to_faction = ROOT }
+		MRI = { country_event = { id = proposed.39 }}
+		hidden_effect = { news_event = { id = holo_news.48  days = 1}}
+	}
+
+	#No
+	option = {
+		name = calliope.1.b
+		ai_chance = { factor = 0 }
+		MRI = { country_event = { id = proposed.40 }}
+	}
+}
+
+#MRI - Royal Wedding/Demand puppet
+country_event = {
+	id = calliope.2
+	title = calliope.2.t
+	desc = calliope.2.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.2.a
+		ai_chance = { factor = 100 }
+		MRI = { puppet = ROOT }
+		MRI = { country_event = { id = proposed.39 }}
+	}
+
+	#No
+	option = {
+		name = calliope.2.b
+		ai_chance = { factor = 0 }
+		MRI = { country_event = { id = proposed.40 }}
+	}
+}
+
+#MRI - Demand Copenhagen
+country_event = {
+	id = calliope.3
+	title = calliope.3.t
+	desc = calliope.3.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.3.a
+		ai_chance = { factor = 100 }
+		
+		MRI = { transfer_state = 37 }
+		MRI = { country_event = { id = proposed.23 }}
+	}
+
+	#No
+	option = {
+		name = calliope.3.b
+		ai_chance = { factor = 0 }
+		MRI = { country_event = { id = proposed.24 }}
+	}
+}
+
+#MRI - Sell Sahara colony
+country_event = {
+	id = calliope.4
+	title = calliope.4.t
+	desc = calliope.4.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.4.a
+		ai_chance = { factor = 100 }
+		
+		POR = { transfer_state = 699 }
+		MRI = { country_event = { id = calliope.5  hours = 6 }}
+	}
+
+	#No
+	option = {
+		name = calliope.4.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#MRI - Sell Sahara colony YES
+country_event = {
+	id = calliope.5
+	title = calliope.5.t
+	desc = calliope.5.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.5.a
+		ai_chance = { factor = 100 }
+		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 20000
+		    	producer = ROOT
+	    	}
+	}
+}
+
+#MRI - Ask to join faction
+country_event = {
+	id = calliope.6
+	title = calliope.6.t
+	desc = calliope.6.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.6.a
+		ai_chance = { factor = 100 }
+		
+		add_to_faction = MRI
+
+		if = {
+			limit = { tag = KIA }
+			country_event = { id = proposed.39 }
+		}
+	}
+
+	#No
+	option = {
+		name = calliope.6.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KIA }
+			country_event = { id = proposed.40 }
+		}
+	}
+}
+
+#MRI - Calliope destroys our capital!
+country_event = {
+	id = calliope.7
+	title = calliope.7.t
+	desc = calliope.7.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = calliope.7.a
+		ai_chance = { factor = 100 }
+	}
+}

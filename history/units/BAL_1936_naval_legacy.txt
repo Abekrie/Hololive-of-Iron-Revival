@@ -1,0 +1,53 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Bealz Fleet"		
+		naval_base = 9417
+
+		task_force = {				
+			name = "Bealz Force"			
+			location = 9417	
+
+ship = { name = "Bealz 1 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+NEN
+} } }
+ 
+ship = { name = "Bealz 2 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+NEN
+} } }
+ 
+ship = { name = "Bealz 3 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+NEN
+} } }
+ 
+ship = { name = "Bealz 4 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+NEN
+} } }
+ 
+ship = { name = "Bealz 5 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+NEN
+} } }
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

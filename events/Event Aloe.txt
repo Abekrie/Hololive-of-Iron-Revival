@@ -1,0 +1,965 @@
+add_namespace = aloe
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = aloe.8
+	title = aloe.8.t
+	desc = aloe.8.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.8.a	#Yes
+		ai_chance = { factor = 80 }
+		ALO = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.8.b	#No 
+		ai_chance = { factor = 20 }
+		ALO = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = aloe.9
+	title = aloe.9.t
+	desc = aloe.9.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.9.a	#Yes
+		ai_chance = { factor = 80 }
+		ALO = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.9.b	#No 
+		ai_chance = { factor = 20 }
+		ALO = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = aloe.10
+	title = aloe.10.t
+	desc = aloe.10.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.10.a	#Yes
+		ai_chance = { factor = 30 }
+		ALO = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aloe.10.b	#No 
+		ai_chance = { factor = 70 }
+		ALO = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = aloe.11
+	title = aloe.11.t
+	desc = aloe.11.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.11.a	#Yes
+		ai_chance = { factor = 50 }
+		ALO = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = aloe.11.b	#No 
+		ai_chance = { factor = 50 }
+		ALO = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = aloe.12
+	title = aloe.12.t
+	desc = aloe.12.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.12.a	#Yes
+		ai_chance = { factor = 75 }
+		ALO = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.12.b	#No 
+		ai_chance = { factor = 25 }
+		ALO = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = aloe.13
+	title = aloe.13.t
+	desc = aloe.13.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.13.a	#Yes
+		ai_chance = { factor = 50 }
+		ALO = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aloe.13.b	#No 
+		ai_chance = { factor = 50 }
+		ALO = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = aloe.14
+	title = aloe.14.t
+	desc = aloe.14.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.14.a	#Yes
+		ai_chance = { factor = 50 }
+		ALO = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aloe.14.b	#No 
+		ai_chance = { factor = 50 }
+		ALO = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = aloe.15
+	title = aloe.15.t
+	desc = aloe.15.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.15.a	#Yes
+		ai_chance = { factor = 80 }
+		ALO = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.15.b	#No 
+		ai_chance = { factor = 20 }
+		ALO = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = aloe.16
+	title = aloe.16.t
+	desc = aloe.16.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.16.a	#Yes
+		ai_chance = { factor = 20 }
+		ALO = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = aloe.16.b	#No 
+		ai_chance = { factor = 80 }
+		ALO = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = aloe.17
+	title = aloe.17.t
+	desc = aloe.17.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.17.a	#Yes
+		ai_chance = { factor = 50 }
+		ALO = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aloe.17.b	#No 
+		ai_chance = { factor = 50 }
+		ALO = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = aloe.19
+	title = aloe.19.t
+	desc = aloe.19.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.19.a	#Yes
+		ai_chance = { factor = 40 }
+		ALO = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = aloe.19.b	#No 
+		ai_chance = { factor = 60 }
+		ALO = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = aloe.20
+	title = aloe.20.t
+	desc = aloe.20.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.20.a	#Yes
+		ai_chance = { factor = 90 }
+		ALO = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.20.b	#No 
+		ai_chance = { factor = 10 }
+		ALO = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = aloe.21
+	title = aloe.21.t
+	desc = aloe.21.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.21.a	#Yes
+		ai_chance = { factor = 80 }
+		ALO = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.21.b	#No 
+		ai_chance = { factor = 20 }
+		ALO = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = aloe.22
+	title = aloe.22.t
+	desc = aloe.22.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.22.a	#Yes
+		ai_chance = { factor = 80 }
+		ALO = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aloe.22.b	#No 
+		ai_chance = { factor = 20 }
+		ALO = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = aloe.23
+	title = aloe.23.t
+	desc = aloe.23.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.23.a	#Yes
+		ai_chance = { factor = 70 }
+		ALO = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aloe.23.b	#No 
+		ai_chance = { factor = 30 }
+		ALO = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Peaceful Graduation
+country_event = {
+	id = aloe.24
+	title = aloe.24.t
+	desc = aloe.24.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.24.a	#Yes
+		ai_chance = { factor = 50 }
+		add_war_support = 0.10
+		add_stability = -0.05
+	}
+}
+
+#Continue the fight
+country_event = {
+	id = aloe.25
+	title = aloe.25.t
+	desc = aloe.25.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.25.a	#Yes
+		ai_chance = { factor = 50 }
+		add_war_support = 0.10
+		add_stability = -0.05
+	}
+}
+
+#Puppet Lamy
+country_event = {
+	id = aloe.26
+	title = aloe.26.t
+	desc = aloe.26.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.26.a	#Yes
+		ai_chance = { factor = 30 }
+		ALO = { puppet = ROOT }
+		ALO = { country_event = { id = aloe.27 }}
+	}
+
+	option = {
+		name = aloe.26.b	#No 
+		ai_chance = { factor = 70 }
+		ALO = { country_event = { id = aloe.28 }}
+	}
+}
+
+#Lamy yes puppet
+country_event = {
+	id = aloe.27
+	title = aloe.27.t
+	desc = aloe.27.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.27.a	#Yes
+		ai_chance = { factor = 50 }
+	}
+}
+
+#Lamy no puppet
+country_event = {
+	id = aloe.28
+	title = aloe.28.t
+	desc = aloe.28.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.28.a	#Yes
+		ai_chance = { factor = 50 }
+	}
+}
+
+#ALO - Invite 5th Gen
+country_event = {
+	id = aloe.29
+	title = aloe.29.t
+	desc = aloe.29.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.29.a	#Yes
+		ai_chance = { factor = 100 }
+		ALO = { add_to_faction = ROOT }
+
+		if = { limit = { original_tag = LAM }
+		ALO = { country_event = { id = aloe.30 }}
+		}
+
+		if = { limit = { original_tag = BTN }
+		ALO = { country_event = { id = aloe.32 }}
+		}
+
+		if = { limit = { original_tag = NEN }
+		ALO = { country_event = { id = aloe.34 }}
+		}
+
+		if = { limit = { original_tag = PLK }
+		ALO = { country_event = { id = aloe.36 }}
+		}
+
+		if = { limit = { original_tag = TOW }
+		ALO = { country_event = { id = proposed.87 }}
+		}
+
+		hidden_effect = {
+		add_opinion_modifier = {
+		    target = ALO
+		    modifier = faction_unity_opinion
+		    }
+		ALO = {
+		add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }
+		}
+		}
+	}
+
+	option = {
+		name = aloe.29.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = { limit = { original_tag = LAM }
+		ALO = { country_event = { id = aloe.31 }}
+		}
+
+		if = { limit = { original_tag = BTN }
+		ALO = { country_event = { id = aloe.33 }}
+		}
+
+		if = { limit = { original_tag = NEN }
+		ALO = { country_event = { id = aloe.35 }}
+		}
+
+		if = { limit = { original_tag = PLK }
+		ALO = { country_event = { id = aloe.37 }}
+		}
+
+		if = { limit = { original_tag = TOW }
+		ALO = { country_event = { id = proposed.88 }}
+		}
+
+	}
+}
+
+country_event = {
+	id = aloe.30
+	title = aloe.30.t
+    desc = aloe.30.d
+    picture = GFX_report_event_lamy_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.30.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.31
+	title = aloe.31.t
+    desc = aloe.31.d
+    picture = GFX_report_event_lamy_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.31.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.32
+	title = aloe.32.t
+    desc = aloe.32.d
+    picture = GFX_report_event_botan_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.32.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.33
+	title = aloe.33.t
+    desc = aloe.33.d
+    picture = GFX_report_event_botan_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.33.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.34
+	title = aloe.34.t
+    desc = aloe.34.d
+    picture = GFX_report_event_nene_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.34.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.35
+	title = aloe.35.t
+    desc = aloe.35.d
+    picture = GFX_report_event_nene_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.35.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.36
+	title = aloe.36.t
+    desc = aloe.36.d
+    picture = GFX_report_event_polka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.36.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.37
+	title = aloe.37.t
+    desc = aloe.37.d
+    picture = GFX_report_event_polka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = aloe.37.a	#Yes
+     ai_chance = { factor = 30 }
+     }
+}
+
+country_event = {
+	id = aloe.38
+	title = aloe.38.t
+    desc = aloe.38.d
+    picture = GFX_report_event_alo_back_home
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.38.a	#Yes
+    ai_chance = { factor = 30 }
+    declare_war_on = {
+    target = HAT
+    type = annex_everything
+    }
+    }
+}
+
+#Aloe ask to join faction
+country_event = {
+	id = aloe.39
+	title = aloe.39.t
+	desc = aloe.39.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.39.a	#Yes
+		ai_chance = { factor = 100 }
+		ROOT = { add_to_faction = ALO }
+		if = { limit = { original_tag = YAG }
+		ALO = { country_event = { id = aloe.40 }}
+		}
+
+		if = { limit = { original_tag = AQA }
+		ALO = { country_event = { id = aloe.42 }}
+		}
+	}
+
+	option = {
+		name = aloe.39.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { original_tag = YAG }
+		ALO = { country_event = { id = aloe.41 }}
+		}
+
+		if = { limit = { original_tag = AQA }
+		ALO = { country_event = { id = aloe.43 }}
+		}
+	}
+}
+
+country_event = {
+	id = aloe.40
+	title = aloe.40.t
+    desc = aloe.40.d
+    picture = GFX_report_event_yagoo_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.40.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+	id = aloe.41
+	title = aloe.41.t
+    desc = aloe.41.d
+    picture = GFX_report_event_yagoo_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.41.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+	id = aloe.42
+	title = aloe.42.t
+    desc = aloe.42.d
+    picture = GFX_report_event_aqua_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.42.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+	id = aloe.43
+	title = aloe.43.t
+    desc = aloe.43.d
+    picture = GFX_report_event_aqua_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.43.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+#ALO - Anschluss
+country_event = {
+	id = aloe.44
+	title = aloe.44.t
+	desc = aloe.44.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.44.a	#Yes
+		ai_chance = { factor = 100 }
+		ALO = {annex_country = {
+		           target = AUS
+		           transfer_troops = yes
+		        }}
+		ALO = { country_event = { id = aloe.45 }}
+	}
+
+	option = {
+		name = aloe.44.b	#No 
+		ai_chance = { factor = 0 }
+		ALO = { country_event = { id = aloe.46 }}
+		
+	}
+}
+
+country_event = {
+	id = aloe.45
+	title = aloe.45.t
+    desc = aloe.45.d
+    picture = GFX_report_event_aus_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.45.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+	id = aloe.46
+	title = aloe.46.t
+    desc = aloe.46.d
+    picture = GFX_report_event_aus_generic1
+
+    is_triggered_only = yes
+
+    option = {
+    name = aloe.46.a	#Yes
+    ai_chance = { factor = 30 }
+    }
+}
+
+#ALO - Exiled to Romania
+country_event = {
+	id = aloe.47
+	title = aloe.47.t
+	desc = aloe.47.d
+	picture = GFX_report_event_aloe_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	date > 1936.4.1
+    	tag = ALO
+    }
+
+    fire_only_once = yes
+	
+	option = {
+		name = aloe.47.a	#Yes
+		ai_chance = { factor = 100 }
+		HAT = {
+			transfer_state = 43
+			transfer_state = 155
+			transfer_state = 154
+			add_ideas = regional_conflict_idea
+		}
+		set_country_flag = Hater_uprising_flag
+		hidden_effect = {
+			news_event = { id = holo_news.186 }
+			HAT = { load_oob = HAT_war_with_alo 
+		    add_manpower = 400000}
+		    add_offsite_building = { type = arms_factory level = 5 }
+		    add_offsite_building = { type = industrial_complex level = 10 }
+		    set_capital ={state = 89 }
+		}
+	}
+}
+
+#ALO - Back to the throne
+country_event = {
+	id = aloe.48
+	title = aloe.48.t
+	desc = aloe.48.d
+	picture = GFX_report_event_aloe_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	ROOT = {has_full_control_of_state = 155
+    	has_full_control_of_state = 154
+    	has_full_control_of_state = 43}
+    	tag = ALO
+    	has_country_flag = Hater_uprising_flag
+    }
+
+    fire_only_once = yes
+	
+	option = {
+		name = aloe.48.a	#Yes
+		ai_chance = { factor = 100 }
+		add_war_support = 0.1
+		set_capital = { state = 43 }
+		hidden_effect = {
+			news_event = { id = holo_news.187 }
+		}
+	}
+}
+
+#ALO - Partition of Poland
+country_event = {
+	id = aloe.49
+	title = aloe.49.t
+	desc = aloe.49.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.48.a	#Yes
+		ai_chance = { factor = 100 }
+		ALO = {
+			transfer_state = 91
+		}
+	}
+
+	option = {
+		name = aloe.49.b	#No
+		ai_chance = { factor = 0 }
+		ALO = {
+			create_wargoal = { type = annex_everything target = POL }
+		}
+	}
+}
+
+#ALO - Demand Austria
+country_event = {
+	id = aloe.50
+	title = aloe.50.t
+	desc = aloe.50.d
+	picture = GFX_report_event_aloe_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aloe.50.a	#Yes
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { owns_state = 4 }
+			ALO = {
+			transfer_state = 4
+			#transfer_state = 153
+			#transfer_state = 152
+		    }
+		}
+
+		if = {
+			limit = { owns_state = 153 }
+			ALO = {
+			transfer_state = 153
+		    }
+		}
+
+		if = {
+			limit = { owns_state = 152 }
+			ALO = {
+			transfer_state = 152
+		    }
+		}
+		
+		if = {
+			limit = { tag = GER }
+			ALO = { country_event = { id = proposed.99 }}
+		}
+	}
+
+	option = {
+		name = aloe.50.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = GER }
+			ALO = { country_event = { id = proposed.100 }}
+		}
+		
+	}
+}

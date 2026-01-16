@@ -1,0 +1,54 @@
+Generic_ART_historical = {
+	name = "ART plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = ART
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = ART
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		storm_of_revolution_cn_focus
+		education_reform_cn_focus
+		comecon_cn_focus
+		establish_new_government_cn_focus
+		unthinkable_option_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

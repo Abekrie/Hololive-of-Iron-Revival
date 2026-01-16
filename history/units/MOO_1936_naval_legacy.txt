@@ -1,0 +1,134 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Hoshinova Fleet"		
+		naval_base = 12299
+		task_force = {				
+			name = "Moona Force"			
+			location = 12299 
+ship = { name = "Jupiter 1 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 2 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 3 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 4 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 5 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 6 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 7 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Jupiter 8 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+MOO
+} } }
+
+ship = { name = "Saturn 1 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Saturn 2 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Saturn 3 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Saturn 4 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Saturn 5 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+MOO
+} } }		
+			
+		}
+		task_force = {				
+			name = "Indonesian Force"			
+			location = 4652	
+ship = { name = "Indonesian 1 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Indonesian 2 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Indonesian 3 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Indonesian 4 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+MOO
+} } }
+ 
+ship = { name = "Indonesian 5 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+MOO
+} } }
+			
+		}	
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

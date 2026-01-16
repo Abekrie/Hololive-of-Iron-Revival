@@ -1,0 +1,366 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+      token_base = RSA_generic_holo_xgeneral
+
+     name="Rosalyn-chan"
+     portraits={
+           army={
+                 large="gfx/leaders/RSA/rsa_neu.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={harsh_leader trickster}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = RSA_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+      token_base = RSA_generic_holo_xadmiral
+     name="Rosalyn-san"
+     portraits={
+           army={
+                 large="gfx/leaders/RSA/rsa_neu.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ fleet_protector career_officer }
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = RSA_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+      token_base = ART_generic_holo_xgeneral
+
+     name="Artia chan"
+     portraits={
+           army={
+                 large="gfx/leaders/ART/art_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={armor_officer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = ART_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+      token_base = ART_generic_holo_xadmiral
+     name="Artia-san"
+     portraits={
+           army={
+                 large="gfx/leaders/ART/art_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={cuts_corners torpedo_expert}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = ART_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+      token_base = YOG_generic_holo_xgeneral
+
+     name="Yogiri-chan"
+     portraits={
+           army={
+                 large="gfx/leaders/YOG/yog_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = YOG_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+      token_base = YOG_generic_holo_xadmiral
+     name="Yogiri-san"
+     portraits={
+           army={
+                 large="gfx/leaders/YOG/yog_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={career_officer cuts_corners}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = YOG_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+      token_base = CIV_generic_holo_xgeneral
+
+     name="Civia-chan"
+     portraits={
+           army={
+                 large="gfx/leaders/CIV/civ_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer skilled_staffer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = CIV_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+      token_base = CIV_generic_holo_xadmiral
+     name="Civia-san"
+     portraits={
+           army={
+                 large="gfx/leaders/CIV/civ_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ironside navy_career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = CIV_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+      token_base = DOR_generic_holo_xgeneral
+
+     name="Doris-chan"
+     portraits={
+           army={
+                 large="gfx/leaders/DOR/dor_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={career_officer politically_connected}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = DOR_recruit_general_dec_flag }
+
+     }
+
+}
+
+generate_character = {
+      token_base = DOR_generic_holo_xadmiral
+      name="Doris-san"
+      portraits={
+           army={
+                 large="gfx/leaders/DOR/dor_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+      }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector blockade_runner}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = DOR_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+      token_base = ECH_generic_holo_xgeneral
+
+     name="Echo"
+     portraits={
+           army={
+                 large="gfx/leaders/ECH/ech_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless cavalry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = ECH_recruit_general_dec_flag }
+
+     }
+
+}
+generate_character = {
+      token_base = ECH_generic_holo_xadmiral
+      name="Spade"
+      portraits={
+           army={
+                 large="gfx/leaders/ECH/ech_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={war_hero naval_lineage}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = ECH_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+      token_base = ACH_nodoka_holo_xgeneral
+
+     name="Nodoka"
+     portraits={
+           army={
+                 large="gfx/leaders/ACH/nodoka.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = ACH_nodoka_recruit_general_dec_flag }
+
+     }
+
+}
+generate_character = {
+      token_base = ACH_nodoka_holo_xadmiral
+     name="Harusaki"
+     portraits={
+           army={
+                 large="gfx/leaders/ECH/ech_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={war_hero naval_lineage}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = ACH_nodoka_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+}

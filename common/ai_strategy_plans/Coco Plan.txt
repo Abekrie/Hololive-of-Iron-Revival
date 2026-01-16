@@ -1,0 +1,48 @@
+Generic_COC_historical = {
+	name = "COC historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = COC
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = COC
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		kiryu_coco_coc_focus
+		arms_against_mio_coc_focus
+		coco_state_of_america_coc_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

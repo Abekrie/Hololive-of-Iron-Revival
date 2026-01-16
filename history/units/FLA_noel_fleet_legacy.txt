@@ -1,0 +1,49 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Shirogane Fleet"			
+		naval_base = 9671 
+		task_force = {				
+			name = "Indochinese Force"			
+			location = 9671 
+
+			ship = { name = "Saigon" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Hanoi" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Vientiane" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Phanom Phenge" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE  } } }
+		}
+
+		task_force = {				
+			name = "Siamese Force"			
+			location = 9671 
+
+			ship = { name = "Bangkok" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Chiang Mai" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = NOE } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

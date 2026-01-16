@@ -1,0 +1,59 @@
+
+
+#### Propaganda assets and posters ####
+
+spriteTypes = {	
+
+	### HTO ###
+	spriteType = {
+		name = "GFX_HTO_propaganda_bg"
+		texturefile = "gfx/interface/propaganda/propaganda_bg.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_HTO_propaganda_strip"
+		texturefile = "gfx/interface/propaganda/HTO_propaganda_strip.dds"
+		legacy_lazy_load = no
+		noOfFrames = 26
+	}
+	spriteType = {
+		name = "GFX_HTO_propaganda_strip_aged_1"
+		texturefile = "gfx/interface/propaganda/HTO_propaganda_strip_aged_texture1.dds"
+		legacy_lazy_load = no
+		noOfFrames = 26
+	}
+	spriteType = {
+		name = "GFX_HTO_propaganda_strip_aged_2"
+		texturefile = "gfx/interface/propaganda/HTO_propaganda_strip_aged_texture2.dds"
+		legacy_lazy_load = no
+		noOfFrames = 26
+	}
+	spriteType = {
+		name = "GFX_HTO_propaganda_strip_aged_3"
+		texturefile = "gfx/interface/propaganda/HTO_propaganda_strip_aged_texture3.dds"
+		legacy_lazy_load = no
+		noOfFrames = 26
+	}
+
+	#BAL Council
+	spriteType = {
+		name = "GFX_holo_council_bg"
+		texturefile = "gfx/interface/holo_council/holo_council_bg.dds"
+		legacy_lazy_load = no
+	}
+
+	#LAM Lamification
+	spriteType = {
+		name = "GFX_lamification_bg"
+		texturefile = "gfx/interface/lamification/lamification_bg.dds"
+		legacy_lazy_load = no
+	}
+
+	#MAR Pirate
+	spriteType = {
+		name = "GFX_marine_pirate_bg"
+		texturefile = "gfx/interface/marine_pirate/marine_pirate_bg.dds"
+		legacy_lazy_load = no
+	}
+
+}

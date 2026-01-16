@@ -1,0 +1,251 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+            NOT = {
+            tag = USA
+            }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+      token_base = SAN_generic_holo_xgeneral
+     name="Sana"
+     portraits={
+           army={
+                 large="gfx/leaders/SAN/sana_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={skilled_staffer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = SAN_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = SAN_generic_holo_xadmiral
+     name="Tsukumo"
+     portraits={
+           army={
+                 large="gfx/leaders/SAN/sana_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = SAN_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+      token_base = FAU_generic_holo_xgeneral
+     name="Fauna"
+     portraits={
+           army={
+                 large="gfx/leaders/FAU/fauna_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={brilliant_strategist infantry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = FAU_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = FAU_generic_holo_xadmiral
+     name="Ceres"
+     portraits={
+           army={
+                 large="gfx/leaders/FAU/fauna_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert caustic_personality}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = FAU_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+      token_base = KRO_generic_holo_xgeneral
+     name="Kronii"
+     portraits={
+           army={
+                 large="gfx/leaders/KRO/kronii_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = KRO_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = KRO_generic_holo_xadmiral
+     name="Ouro"
+     portraits={
+           army={
+                 large="gfx/leaders/KRO/kronii_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={cuts_corners ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = KRO_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+      token_base = MUM_generic_holo_xgeneral
+     name="Mumei"
+     portraits={
+           army={
+                 large="gfx/leaders/MUM/mumei_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trickster career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = MUM_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = MUM_generic_holo_xadmiral
+     name="Nanashi"
+     portraits={
+           army={
+                 large="gfx/leaders/MUM/mumei_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = MUM_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+      token_base = BAL_generic_holo_xgeneral
+     name="Baelz"
+     portraits={
+           army={
+                 large="gfx/leaders/BAL/baelz_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trickster commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = BAL_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = BAL_generic_holo_xadmiral
+     name="Hakos"
+     portraits={
+           army={
+                 large="gfx/leaders/BAL/baelz_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert blockade_runner}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = BAL_recruit_admiral_dec_flag }
+     }
+
+}
+}

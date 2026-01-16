@@ -1,0 +1,115 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Amelia Fleet"		
+		naval_base = 10265
+		task_force = {				
+			name = "Watson Force"			
+			location = 10265 
+
+ship = { name = "Queen of England 1 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Queen of England 2 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Queen of England 3 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+
+ship = { name = "Groundpounder 1 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 2 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 3 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 4 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 5 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 6 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Groundpounder 7 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+
+ship = { name = "Undergroundpounder 1 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Undergroundpounder 2 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Undergroundpounder 3 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Undergroundpounder 4 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Undergroundpounder 5 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }	
+			
+		}
+						
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

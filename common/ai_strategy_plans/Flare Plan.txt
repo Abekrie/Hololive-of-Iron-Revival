@@ -1,0 +1,50 @@
+Generic_FLA_historical = {
+	name = "FLA historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = FLA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = FLA
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		shiranui_flare_fla_focus
+		kintsuba_fla_focus
+		shiranui_kensetsu_fla_focus
+		company_budget_fla_focus
+		stop_being_depress_fla_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

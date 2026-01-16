@@ -1,0 +1,31 @@
+ideas = {
+
+
+	high_command = {
+		
+		PEK_moona_high_com = {
+			ledger = navy
+
+			picture = moona_advisor
+
+			available = {
+				OR = {has_completed_focus = hey_moona_pek_focus}
+			}
+			
+			allowed = {
+				OR =
+				{
+				original_tag = PEK
+				}
+			}
+			
+			traits = { moona_usaken_trait }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	
+}

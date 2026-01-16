@@ -1,0 +1,34 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = MRI
+				original_tag = NIN
+        original_tag = BAL
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = IRYS_HoloEN_advisor
+    name = "IRyS"
+    advisor = {
+      slot = high_command
+      traits = { irys_high_com_trait }
+      cost = 50
+
+      available = {
+        has_country_flag = IRYS_HERE_COMES_HOPE_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_irys_advisor }
+    }
+  }
+}

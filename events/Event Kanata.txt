@@ -1,0 +1,803 @@
+add_namespace = kanata
+
+#KAN no MR
+country_event = {
+	id = kanata.1
+	title = kanata.1.t
+	desc = kanata.1.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+#KAN yes MR Tank
+country_event = {
+	id = kanata.2
+	title = kanata.2.t
+	desc = kanata.2.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.2.a
+		ai_chance = { factor = 100 }
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    
+		
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = kanata.8
+	title = kanata.8.t
+	desc = kanata.8.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.8.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.8.b	#No 
+		ai_chance = { factor = 20 }
+		KAN = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = kanata.9
+	title = kanata.9.t
+	desc = kanata.9.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.9.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.9.b	#No 
+		ai_chance = { factor = 20 }
+		KAN = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = kanata.10
+	title = kanata.10.t
+	desc = kanata.10.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.10.a	#Yes
+		ai_chance = { factor = 30 }
+		KAN = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = kanata.10.b	#No 
+		ai_chance = { factor = 70 }
+		KAN = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = kanata.11
+	title = kanata.11.t
+	desc = kanata.11.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.11.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = kanata.11.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = kanata.12
+	title = kanata.12.t
+	desc = kanata.12.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.12.a	#Yes
+		ai_chance = { factor = 75 }
+		KAN = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.12.b	#No 
+		ai_chance = { factor = 25 }
+		KAN = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = kanata.13
+	title = kanata.13.t
+	desc = kanata.13.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.13.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = kanata.13.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = kanata.14
+	title = kanata.14.t
+	desc = kanata.14.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.14.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = kanata.14.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = kanata.15
+	title = kanata.15.t
+	desc = kanata.15.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.15.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.15.b	#No 
+		ai_chance = { factor = 20 }
+		KAN = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = kanata.16
+	title = kanata.16.t
+	desc = kanata.16.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.16.a	#Yes
+		ai_chance = { factor = 20 }
+		KAN = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = kanata.16.b	#No 
+		ai_chance = { factor = 80 }
+		KAN = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = kanata.17
+	title = kanata.17.t
+	desc = kanata.17.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.17.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = kanata.17.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = kanata.19
+	title = kanata.19.t
+	desc = kanata.19.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.19.a	#Yes
+		ai_chance = { factor = 40 }
+		KAN = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = kanata.19.b	#No 
+		ai_chance = { factor = 60 }
+		KAN = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = kanata.20
+	title = kanata.20.t
+	desc = kanata.20.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.20.a	#Yes
+		ai_chance = { factor = 90 }
+		KAN = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.20.b	#No 
+		ai_chance = { factor = 10 }
+		KAN = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = kanata.21
+	title = kanata.21.t
+	desc = kanata.21.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.21.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.21.b	#No 
+		ai_chance = { factor = 20 }
+		KAN = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = kanata.22
+	title = kanata.22.t
+	desc = kanata.22.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.22.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = kanata.22.b	#No 
+		ai_chance = { factor = 20 }
+		KAN = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = kanata.23
+	title = kanata.23.t
+	desc = kanata.23.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.23.a	#Yes
+		ai_chance = { factor = 70 }
+		KAN = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = kanata.23.b	#No 
+		ai_chance = { factor = 30 }
+		KAN = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Invite to faction
+country_event = {
+	id = kanata.24
+	title = kanata.24.t
+	desc = kanata.24.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.24.a	#Yes
+		ai_chance = { factor = 80 }
+		KAN = { add_to_faction = ROOT }
+		if = {
+		limit = { original_tag = COC }
+		KAN = { country_event = { id = kanata.25 }}
+		}
+
+		if = {
+		limit = { original_tag = WAT }
+		KAN = { country_event = { id = kanata.27 }}
+		}
+	}
+	option = {
+		name = kanata.24.b	#No 
+		ai_chance = { factor = 20 }
+		if = {
+		limit = { original_tag = COC }
+		KAN = { country_event = { id = kanata.26 }}
+		}
+
+		if = {
+		limit = { original_tag = WAT }
+		KAN = { country_event = { id = kanata.28 }}
+		}
+	}
+}
+
+#Coco yes faction
+country_event = {
+	id = kanata.25
+	title = kanata.25.t
+	desc = kanata.25.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.25.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Coco no faction
+country_event = {
+	id = kanata.26
+	title = kanata.26.t
+	desc = kanata.26.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.26.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Watame yes faction
+country_event = {
+	id = kanata.27
+	title = kanata.27.t
+	desc = kanata.27.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.27.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Watame no faction
+country_event = {
+	id = kanata.28
+	title = kanata.28.t
+	desc = kanata.28.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.28.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Puppet Suisei
+country_event = {
+	id = kanata.29
+	title = kanata.29.t
+	desc = kanata.29.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.29.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { puppet = ROOT }
+		KAN = { country_event = { id = kanata.30 }}
+		
+	}
+	option = {
+		name = kanata.29.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = kanata.31 }}
+	}
+}
+
+#Suisei yes puppet
+country_event = {
+	id = kanata.30
+	title = kanata.30.t
+	desc = kanata.30.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.30.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Suisei no puppet
+country_event = {
+	id = kanata.31
+	title = kanata.31.t
+	desc = kanata.31.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.31.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Chile Watame
+country_event = {
+	id = kanata.32
+	title = kanata.32.t
+	desc = kanata.32.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.32.a	#Yes
+		ai_chance = { factor = 50 }
+		KAN = { transfer_state = 507 }
+		KAN = { country_event = { id = kanata.33 }}
+		
+	}
+	option = {
+		name = kanata.32.b	#No 
+		ai_chance = { factor = 50 }
+		KAN = { country_event = { id = kanata.34 }}
+	}
+}
+
+#Watame yes Chile
+country_event = {
+	id = kanata.33
+	title = kanata.33.t
+	desc = kanata.33.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.33.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Watame no Chile
+country_event = {
+	id = kanata.34
+	title = kanata.34.t
+	desc = kanata.34.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.34.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Ask to Join Coco
+country_event = {
+	id = kanata.35
+	title = kanata.35.t
+	desc = kanata.35.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.35.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = KAN
+
+		if = {
+			limit = { tag = COC }
+			KAN = { country_event = { id = proposed.15 }}
+		}
+
+		if = {
+			limit = { tag = PEK }
+			KAN = { country_event = { id = proposed.67 }}
+		}
+	}
+	option = {
+		name = kanata.35.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = COC }
+			KAN = { country_event = { id = proposed.16 }}
+		}
+
+		if = {
+			limit = { tag = PEK }
+			KAN = { country_event = { id = proposed.68 }}
+		}
+	}
+}
+
+#Demand Burma
+country_event = {
+	id = kanata.36
+	title = kanata.36.t
+	desc = kanata.36.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.36.a	#Yes
+		ai_chance = { factor = 100 }
+
+		if = {
+			limit = { tag = NOE }
+			KAN = { country_event = { id = proposed.63 }}
+		}
+		KAN = {
+			transfer_state = 640
+			transfer_state = 288
+		}
+	}
+	option = {
+		name = kanata.36.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = NOE }
+			KAN = { country_event = { id = proposed.64 }}
+		}
+	}
+}
+
+#KAN - Burma or War
+country_event = {
+	id = kanata.37
+	title = kanata.37.t
+	desc = kanata.37.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.37.a	#Yes
+		ai_chance = { factor = 10 
+			modifier = {
+				KAN = {
+					is_major = yes
+				}
+				factor = 100
+			}
+		}
+
+		if = {
+			limit = { tag = NOE }
+			KAN = { country_event = { id = proposed.63 }}
+		}
+		KAN = {
+			transfer_state = 640
+			transfer_state = 288
+		}
+
+	}
+	option = {
+		name = kanata.37.b	#No 
+		ai_chance = { factor = 0
+			modifier = {
+				KAN = {
+					is_major = no
+				}
+				factor = 100
+			}
+		}
+		if = {
+			limit = { tag = NOE }
+			KAN = { country_event = { id = proposed.64 }}
+		}
+
+		KAN = {
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+	}
+}
+
+
+#KAN - Tibet or War
+country_event = {
+	id = kanata.38
+	title = kanata.38.t
+	desc = kanata.38.d
+	picture = GFX_report_event_kanata_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kanata.38.a	#Yes
+		ai_chance = { factor = 100 }
+
+		if = {
+			limit = { tag = YOG }
+			KAN = { country_event = { id = proposed.95 }}
+		}
+
+		if = {
+			limit = { owns_state = 758 }
+			KAN = {
+				transfer_state = 758
+			}
+		}
+
+		if = {
+			limit = { owns_state = 322 }
+			KAN = {
+				transfer_state = 322
+			}
+		}
+
+		if = {
+			limit = { owns_state = 601 }
+			KAN = {
+				transfer_state = 601
+			}
+		}
+
+		KAN = {
+			transfer_state = 757
+		}
+	}
+	option = {
+		name = kanata.38.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = YOG }
+			KAN = { country_event = { id = proposed.96 }}
+		}
+
+		KAN = {
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+	}
+}

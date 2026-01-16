@@ -1,0 +1,49 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Shirakami Fleet"			
+		naval_base = 11050 
+		task_force = {				
+			name = "Kitsune Force"			
+			location = 11050 
+
+			ship = { name = "Scatman" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Fox" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Kitsune" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Meme" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK  } } }
+		}
+
+		task_force = {				
+			name = "Fubuki Force"			
+			location = 11050 
+
+			ship = { name = "Shirakami" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Fubuki" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = FBK } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

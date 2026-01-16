@@ -1,0 +1,76 @@
+@POSTER_LEFT_X = 10
+@POSTER_CENTER_X = 170
+@POSTER_RIGHT_X = 325
+
+@POSTERS_Y = 0
+@TEXT_LEFT_X = 15
+@TEXT_CENTER_X = 170
+@TEXT_RIGHT_X = 315
+@TEXTS_Y = 215
+
+@BACKGROUND_X = 0 #Should be 0 but the UI moves to the right once after activating GUI or taking a dec
+@BACKGROUND_Y = 0
+
+@TOPIC_Y = 15
+@TOPIC__DETAIL_Y = 125
+@TOPIC_TEXT_DETAIL_Y = 160
+@PROPOSER_Y = 50
+@PROPOSER_NAME_Y = 75
+@RIGHT_SIDE = 20
+
+@VOTE_SIDE_X = 225
+@VOTE_TAG_Y = 15
+
+@FINAL_RESULT_X = 250
+@FINAL_RESULT_Y = 170
+
+@REQUIREMENT_X = 15
+@REQUIREMENT_Y = 250
+
+guiTypes = {
+	containerWindowType = {
+		name = "lamy_lamification_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 400 }
+
+		#BACKGROUND
+		iconType = {
+			name ="LAM_lamification_bg"
+			spriteType = "GFX_lamification_bg"
+			position = { x=@BACKGROUND_X y=@BACKGROUND_Y }
+		}
+
+		#Lamification Detail
+		instantTextBoxType = {
+			name ="lam_lamification_detail_cat"
+			position = { x = @VOTE_SIDE_X y = @VOTE_TAG_Y }
+			font = "hoi_30mbs"
+			text = "lam_lamification_detail_cat"
+			format = left
+			maxHeight = 40
+			maxWidth = 270
+		}
+
+		#Lamification Target Country
+		instantTextBoxType = {
+			name ="lam_lamification_target_country"
+			position = { x = @VOTE_SIDE_X y = @FINAL_RESULT_Y }
+			font = "hoi_24header"
+			text = "lam_lamification_target_country"
+			format = left
+			maxHeight = 40
+			maxWidth = 270
+		}
+
+		#Lamification Level
+		instantTextBoxType = {
+			name ="lam_lamification_level"
+			position = { x = @VOTE_SIDE_X y = @REQUIREMENT_Y }
+			font = "hoi_24header"
+			text = "lam_lamification_level"
+			format = left
+			maxHeight = 40
+		}
+	}
+
+}

@@ -1,0 +1,166 @@
+
+every_possible_country = {
+  limit = {
+    NOT = {
+        OR = {
+          tag = SOR
+          tag = YAG
+          tag = ACH
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+
+  # generic army chiefs
+  generate_character = {
+    token_base = NOE_army_AMEx
+    name = "Ayunda Risu"
+    advisor = {
+      slot = army_chief
+      traits = { nuts_propagandist_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = AME_army_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_risu_small }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        is_hololive_council = yes
+        original_tag = ACH original_tag = COG 
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = YAG original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI original_tag = KRO
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic navy chiefs
+  generate_character = {
+    token_base = NOE_navy_GAWx
+    name = "Houshou Marine"
+    advisor = {
+      slot = navy_chief
+      traits = { marine_corps_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = GAW_navy_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_marine_small }
+    }
+  }
+
+  # generic air chiefs
+  generate_character = {
+    token_base = NOE_air_CLIx
+    name = "Moona Hoshinova"
+    advisor = {
+      slot = air_chief
+      traits = { gravity_scientist_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = CLI_air_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_moona_small }
+    }
+  }
+}
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MOO
+        original_tag = RIS
+        original_tag = IOF
+        }
+    #is_dynamic_country = no
+  }
+
+
+  #ANYA
+  generate_character = {
+    token_base = INS_HC_Anya
+    name = "Melfissa Anya"
+    advisor = {
+      slot = high_command
+      traits = { sword_of_malaya_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = ANY_army_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_anya_small }
+    }
+  }
+
+
+  #REINE
+  generate_character = {
+    token_base = INS_HC_Reine
+    name = "Pavolia Reine"
+    advisor = {
+      slot = political_advisor
+      traits = { lady_of_the_peafowl_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = RIN_politic_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_reine_small }
+    }
+  }
+
+  #Ollie
+  generate_character = {
+    token_base = INS_HC_Ollie
+    name = "Kureji Ollie"
+    advisor = {
+      slot = high_command
+      traits = { crazy_zombie_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = OLI_army_advisor_FLAG
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_ollie_small }
+    }
+  }
+}

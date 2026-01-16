@@ -1,0 +1,234 @@
+
+characters={
+MAR_marine_houshou_general = {
+     name="Marine"
+     portraits={
+           army={
+                 large="gfx/leaders/MAR/marine_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer trickster}
+           skill = 4
+           attack_skill = 3
+           defense_skill = 2
+           planning_skill = 4
+           logistics_skill = 4
+     }
+
+}
+
+MAR_marine_houshou_admiral = {
+     name="Houshou"
+     portraits={
+           army={
+                 large="gfx/leaders/MAR/marine_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={spotter gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+Roboco_roboco_roboco_general = {
+     name="Roboco"
+     portraits={
+           army={
+                 large="gfx/leaders/ROB/roboco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={politically_connected commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+Roboco_roboco_roboco_admiral = {
+     name="Admiral Roboco"
+     portraits={
+           army={
+                 large="gfx/leaders/ROB/roboco_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+ROS_aki_rosenthal_general = {
+     name="Aki"
+     portraits={
+           army={
+                 large="gfx/leaders/ROS/aki_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trickster skilled_staffer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+ROS_aki_rosenthal_admiral = {
+     name="Rosenthal"
+     portraits={
+           army={
+                 large="gfx/leaders/ROS/aki_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ironside gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+WAT_watame_tsunomaki_general = {
+     name="Watame"
+     portraits={
+           army={
+                 large="gfx/leaders/WAT/watame_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+WAT_watame_tsunomaki_admiral = {
+     name="Tsunomaki"
+     portraits={
+           army={
+                 large="gfx/leaders/WAT/watame_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={navy_career_officer spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+LUN_luna_himemori_general = {
+     name="Luna"
+     portraits={
+           army={
+                 large="gfx/leaders/LUN/luna_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer brilliant_strategist}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+LUN_luna_himemori_admiral = {
+     name="Himemori"
+     portraits={
+           army={
+                 large="gfx/leaders/LUN/luna_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={aviation_enthusiast torpedo_expert}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

@@ -1,0 +1,104 @@
+Generic_DOR_historical = {
+	name = "Doris plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = DOR
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = DOR
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		neutrality_pact_cn_focus
+		change_in_politic_cn_focus
+		reorganize_government_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_DOR_non_historical = {
+	name = "Doris plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = DOR
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = DOR
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		neutrality_pact_cn_focus
+		change_in_politic_cn_focus
+		reorganize_government_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

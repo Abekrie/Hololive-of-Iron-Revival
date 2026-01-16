@@ -1,0 +1,893 @@
+fauna_zen_garden_category = {
+	
+	fauna_wallnut_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_defender_available
+				check_variable = { FAU.FAU_plant_defender = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_defender_1
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.1
+			production_speed_bunker_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_defender = 1 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_defender = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_tallnut_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_defender_available
+				check_variable = { FAU.FAU_plant_defender = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_defender_2
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.2
+			production_speed_bunker_factor = 0.15
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_defender = 2 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_defender = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_potato_mine_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_defender_available
+				check_variable = { FAU.FAU_plant_defender = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_defender_3
+		}
+
+		modifier = {
+			army_core_attack_factor = 0.2
+			max_dig_in_factor = 0.15
+			local_resources_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_defender = 3 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_defender = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_magnet_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_defender_available
+				check_variable = { FAU.FAU_plant_defender = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_defender_4
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.1
+			land_night_attack = 0.15
+			breakthrough_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_defender = 4 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_defender = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_pea_shooter_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_shooter_available
+				check_variable = { FAU.FAU_plant_shooter = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_shooter_1
+		}
+
+		modifier = {
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 1 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_repeater_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_shooter_available
+				check_variable = { FAU.FAU_plant_shooter = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_shooter_2
+		}
+
+		modifier = {
+			army_infantry_attack_factor = 0.2
+			army_infantry_defence_factor = 0.2
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 2 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_gatling_pea_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_shooter_available
+				check_variable = { FAU.FAU_plant_shooter = 0 }
+			}
+		}
+
+		cost = 60
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_shooter_3
+		}
+
+		modifier = {
+			army_infantry_attack_factor = 0.3
+			army_infantry_defence_factor = 0.3
+			political_power_cost = 0.3
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 3 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_cactus_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_shooter_available
+				check_variable = { FAU.FAU_plant_shooter = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_shooter_4
+		}
+
+		modifier = {
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			static_anti_air_damage_factor = 0.1
+			static_anti_air_hit_chance_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 4 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_shooter = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_cherry_bomb_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_special_available
+				check_variable = { FAU.FAU_plant_special = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_special_1
+		}
+
+		modifier = {
+			air_cas_efficiency = 0.1
+			air_close_air_support_org_damage_factor = 0.1
+			air_strategic_bomber_bombing_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_special = 1 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_jalapeno_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_special_available
+				check_variable = { FAU.FAU_plant_special = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_special_2
+		}
+
+		modifier = {
+			air_cas_efficiency = 0.2
+			air_close_air_support_org_damage_factor = 0.2
+			air_strategic_bomber_bombing_factor = 0.2
+			political_power_cost = 0.3
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_special = 2 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_hypno_shroom_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_special_available
+				check_variable = { FAU.FAU_plant_special = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_special_3
+		}
+
+		modifier = {
+			decryption_factor = 0.5
+			recon_factor = 0.15
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_special = 3 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_doom_shroom_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_special_available
+				check_variable = { FAU.FAU_plant_special = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_special_4
+		}
+
+		modifier = {
+			nuclear_production_factor = 0.5
+			research_speed_factor = 0.04
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_special = 4 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+ 
+	fauna_sunflower_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_special_available
+				check_variable = { FAU.FAU_plant_special = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_special_5
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.1
+			army_morale_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_special = 5 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_cabbage_pult_dec = {
+
+		icon = generic_tank
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_artillery_available
+				check_variable = { FAU.FAU_plant_artillery = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_artillery_1
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.1
+			army_artillery_defence_factor = 0.1
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_artillery = 1 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_kernel_pult_dec = {
+
+		icon = generic_tank
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_artillery_available
+				check_variable = { FAU.FAU_plant_artillery = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_artillery_2
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.1
+			army_artillery_defence_factor = 0.1
+			org_loss_when_moving = -0.25
+			army_defence_against_major_factor = 0.15
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_artillery = 2 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_melon_pult_dec = {
+
+		icon = generic_tank
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_artillery_available
+				check_variable = { FAU.FAU_plant_artillery = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_artillery_3
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.15
+			army_artillery_defence_factor = 0.15
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_artillery = 3 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_winter_melon_dec = {
+
+		icon = generic_tank
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_artillery_available
+				check_variable = { FAU.FAU_plant_artillery = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_artillery_4
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.2
+			army_artillery_defence_factor = 0.15
+			acclimatization_cold_climate_gain_factor = 0.15
+			political_power_cost = 0.2
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_artillery = 4 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fauna_cob_cannon_dec = {
+
+		icon = generic_tank
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_fauna_plant_artillery_available
+				check_variable = { FAU.FAU_plant_artillery = 0 }
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = FAU
+		    has_country_flag = fauna_flag_artillery_5
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.3
+			army_artillery_defence_factor = 0.3
+			political_power_cost = 0.3
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_variable = { FAU.FAU_plant_artillery = 5 }
+		}
+
+		remove_effect = {
+			set_variable = { FAU.FAU_plant_special = 0 }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

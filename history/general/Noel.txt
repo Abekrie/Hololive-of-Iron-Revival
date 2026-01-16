@@ -1,0 +1,29 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = NOE_flare_fire_advisor
+    name = "Shiranui Flare"
+    advisor = {
+      slot = high_command
+      traits = { flare_fire_elf_trait }
+      cost = 50
+
+      available = {
+        has_completed_focus = fire_elf_noe_focus
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_flare_small }
+    }
+  }
+}

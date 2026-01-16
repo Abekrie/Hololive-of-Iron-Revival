@@ -1,0 +1,123 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Shiranui Fleet"		
+		naval_base = 7408 
+		task_force = {				
+			name = "California Force"			
+			location = 7408 
+ship = { name = "Shiranui 1 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 2 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 3 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 4 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 5 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 6 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 7 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 8 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 9 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Shiranui 10 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 1 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 2 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 3 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 4 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 5 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 6 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 7 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 8 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 9 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 10 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 11 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 12 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 13 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 14 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+ 
+ship = { name = "Flare 15 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = FLA } } }
+			
+		}
+				
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

@@ -1,0 +1,79 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Supernenechi Fleet"		
+		naval_base = 11670
+
+		task_force = {				
+			name = "Supernenechi Force"			
+			location = 11670	
+
+ship = { name = "Nanjing 1 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 2 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 3 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 4 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 5 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 6 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Nanjing 7 "
+definition = destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+
+ship = { name = "Kansai 1 "
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Kansai 2 "
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

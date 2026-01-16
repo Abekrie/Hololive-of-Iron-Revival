@@ -1,0 +1,54 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+# 
+#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+
+is_hololive_cn = {
+	OR = {
+		tag = ART
+		tag = DOR
+		tag = ECH
+		tag = YOG
+		tag = CIV
+		tag = RSA
+	}
+}
+
+is_hololive_id = {
+	OR = {
+		tag = MOO
+		tag = RIS
+		tag = IOF
+	}
+}
+
+is_hololive_en = {
+	OR = {
+		tag = MRI
+		tag = NIN
+		tag = GAW
+		tag = WTS
+		tag = KIA
+	}
+}
+
+is_hololive_council = {
+	OR = {
+		tag = MUM
+		tag = SAN
+		tag = FAU
+		tag = BAL
+		tag = KRO
+	}
+}

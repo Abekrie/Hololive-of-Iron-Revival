@@ -1,0 +1,73 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Superspace Fleet"		
+		naval_base = 3151
+
+		task_force = {				
+			name = "Ligma Force"			
+			location = 3151	
+
+			ship = { name = "Ligma 1" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 2" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 3" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 4" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 5" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 6" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 7" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 8" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 9" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 10" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 11" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Ligma 12" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

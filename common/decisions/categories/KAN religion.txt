@@ -1,0 +1,14 @@
+KAN_religion_category = {
+	priority = 100
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_picture_kanatanism
+
+	allowed = {
+		tag = KAN
+	}
+
+	visible = {
+		tag = KAN
+	}
+}

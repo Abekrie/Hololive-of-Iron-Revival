@@ -1,0 +1,53 @@
+Generic_WTS_historical = {
+	name = "Watson historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = KIA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = KIA
+			}
+			is_historical_focus_on = yes
+			#is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		takanashi_kiara_kia_focus
+		national_reform_kia_focus
+		the_kaiserin_kia_focus
+
+		fast_food_united_front_kia_focus
+		popular_queen_kia_focus
+		invite_calliope_kia_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

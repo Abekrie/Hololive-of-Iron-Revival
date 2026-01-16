@@ -1,0 +1,435 @@
+LAM_lamification_category = {
+
+	lamy_increase_check_dec = {
+
+		icon = generic_industry
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		#cost = 0
+
+		visible = {
+		    tag = LAM
+		    is_debug = yes 
+		    is_ai = no
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			increase_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_decrease_check_dec = {
+
+		icon = generic_industry
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		#cost = 0
+
+		visible = {
+			tag = LAM
+		    is_debug = yes 
+		    is_ai = no
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			decrease_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_choose_new_country_dec = {
+
+		icon = generic_lamy
+
+		days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		#cost = 0
+
+		visible = {
+		    has_global_flag = has_targeted_by_lamy_lamification
+		    has_country_flag = Lamy_can_lamification
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			clr_global_flag = has_targeted_by_lamy_lamification
+			every_country = {
+				limit = { has_country_flag = is_targeted_by_lamy_lamification }
+				clr_country_flag = is_targeted_by_lamy_lamification
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	lamy_select_target_country_for_lamification_dec = {
+
+		icon = generic_lamy
+
+		#days_re_enable = 365
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						OWNER = {
+							NOT = {tag = ROOT}
+							NOT = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						is_capital = yes
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		#cost = 0
+
+		visible = {
+		    tag = LAM
+			#has_country_flag = 
+			#is_ai = no
+			NOT = {has_global_flag = has_targeted_by_lamy_lamification}
+			has_country_flag = Lamy_can_lamification
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 15
+
+		complete_effect = {
+			FROM = {
+				OWNER = {
+					set_country_flag = is_targeted_by_lamy_lamification
+				}
+			}
+			set_variable = { lamy_lamify_target_id = FROM.OWNER }
+
+			set_variable = { lamy_lamify_target_state = FROM }
+
+			set_global_flag = has_targeted_by_lamy_lamification
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_select_state_country_for_lamification_dec = {
+
+		icon = generic_lamy
+
+		#days_re_enable = 365
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						OWNER = {
+							OR = {has_country_flag = is_targeted_by_lamy_lamification
+
+							tag = LAM}
+							
+						}
+						NOT = {
+							is_core_of = LAM
+						}
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		#cost = 0
+
+		visible = {
+		    tag = LAM
+			#has_country_flag = 
+			#is_ai = no
+			has_global_flag = has_targeted_by_lamy_lamification
+			has_country_flag = Lamy_can_lamification
+		}
+
+		available = {
+			LAM_level_4 = yes
+		}
+
+		#days_remove = 15
+
+		complete_effect = {
+			FROM = {
+				add_core_of = LAM
+			}
+			reset_lamify = yes
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_fund_the_yuki_min_dec = {
+
+		icon = ger_mefo_bills
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			hololive_yen_0 > 999
+			}
+		}
+
+		#cost = 0
+
+		visible = {
+		    has_global_flag = has_targeted_by_lamy_lamification
+		    has_country_flag = Lamy_can_lamification
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = -1000
+                    producer = ROOT
+            }
+		}
+
+		remove_effect = {
+			increase_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_construct_lamy_outpost_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		#cost = 0
+
+		visible = {
+		    has_global_flag = has_targeted_by_lamy_lamification
+		    has_country_flag = Lamy_can_lamification
+		}
+
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			increase_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_arm_the_yuki_min_militia_dec = {
+
+		icon = generic_industry
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			infantry_equipment > 2999
+			}
+		}
+
+		#cost = 0
+
+		visible = {
+		    has_global_flag = has_targeted_by_lamy_lamification
+		    has_country_flag = Lamy_can_lamification
+		}
+
+		days_remove = 35
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -3000
+            }
+		}
+
+		remove_effect = {
+			increase_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	lamy_send_lamy_missionaries_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 300
+
+		visible = {
+		    has_global_flag = has_targeted_by_lamy_lamification
+		    has_country_flag = Lamy_can_lamification
+		}
+
+		days_remove = 35
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			increase_lamify = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

@@ -1,0 +1,111 @@
+subaru_international_police_category = {
+
+	subaru_investigate_pekora_education_camp_dec = {
+
+		icon = generic_pekora
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							tag = PEK
+						}
+						is_core_of = PEK
+						has_state_flag = PEK_already_developed
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 75
+
+		visible = {
+		    tag = SUB
+			has_country_flag = SUB_can_interpol
+			PEK = {
+				has_country_flag = PEK_can_war_criminal
+			}	
+			FROM = {
+				NOT = {
+					has_state_flag = SUB_already_inspected
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = SUB_doing_the_investigation
+			}
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			set_country_flag = SUB_doing_the_investigation
+		}
+
+		remove_effect = {
+			PEK = { 
+				country_event = {
+					id = subaru.5
+				}
+			}
+
+			FROM = {set_state_flag = SUB_already_inspected}
+
+			clr_country_flag = SUB_doing_the_investigation
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	subaru_police_exercise_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = SUB
+			has_country_flag = SUB_can_interpol
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

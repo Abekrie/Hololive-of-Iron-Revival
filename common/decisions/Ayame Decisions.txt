@@ -1,0 +1,71 @@
+ayame_caucasus_oil_leasing_category = {
+
+	ayame_caucasus_oil_leasing = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						OWNER = {
+							OR = {
+								tag = PEK
+								tag = AQA
+								tag = YAG
+								tag = ENG
+								tag = FRA
+								tag = JAP
+								tag = GER
+								tag = WTS
+								}
+							NOT = { has_war_with = AYA }
+						}
+						is_capital = yes
+					}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view 
+
+		cost = 25
+
+		visible = {
+		    tag = AYA
+			has_country_flag = Ayame_can_lease_caucasus_oil
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = Ayame_oil_already_leased
+			}
+			has_full_control_of_state = 229
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = Ayame_oil_already_leased
+			FROM.OWNER = { 
+				country_event = {
+					id = ayame.28
+				}
+			}
+			#clr_country_flag = Ayame_oil_already_leased
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

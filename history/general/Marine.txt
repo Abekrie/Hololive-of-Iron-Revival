@@ -1,0 +1,74 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MAR
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MAR_jack_holo_xgeneral
+    name="Jack"
+      portraits={
+            army={
+                  large="gfx/leaders/MAR/jack.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      field_marshal={
+            traits={ organizer aggressive_assaulter }
+            skill=5
+            attack_skill=6
+            defense_skill=5
+            planning_skill=4
+            logistics_skill=5
+            legacy_id=0
+      }
+  }
+
+  generate_character = {
+    token_base = MAR_megu_marine_holo_xgeneral
+    name="Megu-Marine"
+      portraits={
+            army={
+                  large="gfx/leaders/MAR/megu_marine.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={ trait_engineer fortress_buster }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = MAR__holo_xgeneral
+    name="Captain Lui"
+      portraits={
+            army={
+                  large="gfx/leaders/MAR/lui.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={ infantry_officer }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

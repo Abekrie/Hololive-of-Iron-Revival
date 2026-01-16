@@ -1,0 +1,37 @@
+
+state={
+	id=110
+	name="STATE_110"
+	manpower = 1410219
+	
+	state_category = city
+	
+	resources={
+		aluminium=5 # was: 8
+	}
+
+	history={
+		victory_points = {
+			6115 15 
+		}
+		
+		owner = FBK
+		add_core_of = FBK
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+			air_base = 4
+			6115 = {
+				naval_base = 6
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = NOR
+	}
+
+	provinces={
+		14 3007 3171 6115 9103 11078 11151 11184 
+	}
+}

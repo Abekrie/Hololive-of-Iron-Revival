@@ -1,0 +1,68 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Kronii Fleet"		
+		naval_base = 3151
+
+		task_force = {				
+			name = "Kronii Force"			
+			location = 3151	
+
+			ship = { name = "Timer 1" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Timer 2" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Timer 3" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Kronii 1" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Kronii 2" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Kronii 3" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Kronii 4" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Kronii 5" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Baltic 1" 
+			definition = submarine 
+			equipment = { ship_hull_submarine_1 = { amount = 1 owner = GER version_name = "Type II Class" } } }
+
+			ship = { name = "Baltic 2" 
+			definition = submarine 
+			equipment = { ship_hull_submarine_1 = { amount = 1 owner = GER version_name = "Type II Class" } } }
+
+			ship = { name = "Baltic 3" 
+			definition = submarine 
+			equipment = { ship_hull_submarine_1 = { amount = 1 owner = GER version_name = "Type II Class" } } }
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

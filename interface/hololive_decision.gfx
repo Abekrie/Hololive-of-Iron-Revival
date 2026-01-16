@@ -1,0 +1,85 @@
+spriteTypes = {	
+
+
+
+	spriteType = {
+		name = "GFX_decision_generic_pekora"
+		texturefile = "gfx/interface/decisions/decision_generic_pekora.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_kiara"
+		texturefile = "gfx/interface/decisions/decision_generic_kiara.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_lamy"
+		texturefile = "gfx/interface/decisions/decision_generic_lamy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_gura"
+		texturefile = "gfx/interface/decisions/decision_generic_gura.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_kanata"
+		texturefile = "gfx/interface/decisions/decision_generic_kanata.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_subaru_geneva"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_subaru_geneva.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_haachama_sunday"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_haachama_sunday.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_miko_fire"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_miko_fire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_future_of_paraguay"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_future_of_paraguay.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_space_station"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_space_station.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_kanatanism"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_kanatanism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_anemachi_railgun"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_anemachi_railgun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_aqua_resistance"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_aqua_resistance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_aegean_dispute_sora"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_aegean_dispute_sora.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_seduction_warfare"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_seduction_warfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_guardian_of_civ"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_guardian_of_civ.dds"
+	}
+
+}

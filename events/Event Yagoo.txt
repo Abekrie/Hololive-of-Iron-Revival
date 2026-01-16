@@ -1,0 +1,1120 @@
+add_namespace = yagoo
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = yagoo.8
+	title = yagoo.8.t
+	desc = yagoo.8.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.8.a	#Yes
+		ai_chance = { factor = 80 }
+		YAG = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.8.b	#No 
+		ai_chance = { factor = 20 }
+		YAG = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = yagoo.9
+	title = yagoo.9.t
+	desc = yagoo.9.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.9.a	#Yes
+		ai_chance = { factor = 80 }
+		YAG = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.9.b	#No 
+		ai_chance = { factor = 20 }
+		YAG = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = yagoo.10
+	title = yagoo.10.t
+	desc = yagoo.10.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.10.a	#Yes
+		ai_chance = { factor = 30 }
+		YAG = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = yagoo.10.b	#No 
+		ai_chance = { factor = 70 }
+		YAG = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = yagoo.11
+	title = yagoo.11.t
+	desc = yagoo.11.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.11.a	#Yes
+		ai_chance = { factor = 50 }
+		YAG = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = yagoo.11.b	#No 
+		ai_chance = { factor = 50 }
+		YAG = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = yagoo.12
+	title = yagoo.12.t
+	desc = yagoo.12.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.12.a	#Yes
+		ai_chance = { factor = 75 }
+		YAG = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.12.b	#No 
+		ai_chance = { factor = 25 }
+		YAG = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = yagoo.13
+	title = yagoo.13.t
+	desc = yagoo.13.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.13.a	#Yes
+		ai_chance = { factor = 50 }
+		YAG = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = yagoo.13.b	#No 
+		ai_chance = { factor = 50 }
+		YAG = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = yagoo.14
+	title = yagoo.14.t
+	desc = yagoo.14.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.14.a	#Yes
+		ai_chance = { factor = 50 }
+		YAG = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = yagoo.14.b	#No 
+		ai_chance = { factor = 50 }
+		YAG = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = yagoo.15
+	title = yagoo.15.t
+	desc = yagoo.15.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.15.a	#Yes
+		ai_chance = { factor = 80 }
+		YAG = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.15.b	#No 
+		ai_chance = { factor = 20 }
+		YAG = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = yagoo.16
+	title = yagoo.16.t
+	desc = yagoo.16.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.16.a	#Yes
+		ai_chance = { factor = 20 }
+		YAG = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = yagoo.16.b	#No 
+		ai_chance = { factor = 80 }
+		YAG = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = yagoo.17
+	title = yagoo.17.t
+	desc = yagoo.17.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.17.a	#Yes
+		ai_chance = { factor = 50 }
+		YAG = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = yagoo.17.b	#No 
+		ai_chance = { factor = 50 }
+		YAG = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = yagoo.19
+	title = yagoo.19.t
+	desc = yagoo.19.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.19.a	#Yes
+		ai_chance = { factor = 40 }
+		YAG = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = yagoo.19.b	#No 
+		ai_chance = { factor = 60 }
+		YAG = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = yagoo.20
+	title = yagoo.20.t
+	desc = yagoo.20.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.20.a	#Yes
+		ai_chance = { factor = 90 }
+		YAG = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.20.b	#No 
+		ai_chance = { factor = 10 }
+		YAG = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = yagoo.21
+	title = yagoo.21.t
+	desc = yagoo.21.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.21.a	#Yes
+		ai_chance = { factor = 80 }
+		YAG = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.21.b	#No 
+		ai_chance = { factor = 20 }
+		YAG = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = yagoo.22
+	title = yagoo.22.t
+	desc = yagoo.22.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.22.a	#Yes
+		ai_chance = { factor = 80 }
+		YAG = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = yagoo.22.b	#No 
+		ai_chance = { factor = 20 }
+		YAG = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = yagoo.23
+	title = yagoo.23.t
+	desc = yagoo.23.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.23.a	#Yes
+		ai_chance = { factor = 70 }
+		YAG = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = yagoo.23.b	#No 
+		ai_chance = { factor = 30 }
+		YAG = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Join faction AXIS/ALLIES/COM
+country_event = {
+	id = yagoo.24
+	title = yagoo.24.t
+	desc = yagoo.24.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.24.a	#Yes
+		ai_chance = { factor = 100 }
+		ROOT = { add_to_faction = YAG }
+
+		if = {
+		limit = { tag = ENG }
+		YAG = { country_event = { id = yagoo.25 }}
+		}
+
+		if = {
+		limit = { tag = GER }
+		YAG = { country_event = { id = yagoo.27 }}
+		}
+
+		if = {
+		limit = { tag = SOV }
+		YAG = { country_event = { id = yagoo.29 }}
+		}
+	}
+	option = {
+		name = yagoo.24.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = {
+		limit = { tag = ENG }
+		YAG = { country_event = { id = yagoo.26 }}
+		}
+
+		if = {
+		limit = { tag = GER }
+		YAG = { country_event = { id = yagoo.28 }}
+		}
+
+		if = {
+		limit = { tag = SOV }
+		YAG = { country_event = { id = yagoo.30 }}
+		}
+
+	}
+}
+
+#ENG response
+country_event = {
+	id = yagoo.25
+	title = yagoo.25.t
+	desc = yagoo.25.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.25.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#ENG response
+country_event = {
+	id = yagoo.26
+	title = yagoo.26.t
+	desc = yagoo.26.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.26.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#GER response
+country_event = {
+	id = yagoo.27
+	title = yagoo.27.t
+	desc = yagoo.27.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.27.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#GER response
+country_event = {
+	id = yagoo.28
+	title = yagoo.28.t
+	desc = yagoo.28.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.28.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SOV response
+country_event = {
+	id = yagoo.29
+	title = yagoo.29.t
+	desc = yagoo.29.d
+	picture = GFX_report_event_sov_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.29.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SOV response
+country_event = {
+	id = yagoo.30
+	title = yagoo.30.t
+	desc = yagoo.30.d
+	picture = GFX_report_event_sov_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.30.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#A chan be puppet
+country_event = {
+	id = yagoo.31
+	title = yagoo.31.t
+	desc = yagoo.31.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.31.a	#Yes
+		ai_chance = { factor = 100 }
+		puppet = ACH
+		ACH = { add_ideas = exploit_the_earth_1 }
+	}
+
+	option = {
+		name = yagoo.31.b	#Yes
+		ai_chance = { factor = 0 }
+		ACH = { change_tag_from = YAG }
+		ACH = { add_ideas = exploit_the_earth_1 }
+	}
+}
+
+#Puppet Sora
+country_event = {
+	id = yagoo.32
+	title = yagoo.32.t
+	desc = yagoo.32.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.32.a	#Yes
+		ai_chance = { factor = 30 }
+		YAG = { puppet = SOR }
+		YAG = { country_event = { id = yagoo.33 }}
+	}
+
+	option = {
+		name = yagoo.32.b	#Yes
+		ai_chance = { factor = 70 }
+		YAG = { country_event = { id = yagoo.34 }}
+	}
+}
+
+#Sora yes puppet
+country_event = {
+	id = yagoo.33
+	title = yagoo.33.t
+	desc = yagoo.33.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.33.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Sora no puppet
+country_event = {
+	id = yagoo.34
+	title = yagoo.34.t
+	desc = yagoo.34.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.34.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Macedonia for Crete
+country_event = {
+	id = yagoo.35
+	title = yagoo.35.t
+	desc = yagoo.35.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.35.a	#Yes
+		ai_chance = { factor = 70 }
+		YAG = { transfer_state = 183 }
+		SOR = { transfer_state = 106 }
+		YAG = { country_event = { id = yagoo.36 }}
+	}
+
+	option = {
+		name = yagoo.35.b	#Yes
+		ai_chance = { factor = 30 }
+		YAG = { country_event = { id = yagoo.37 }}
+	}
+}
+
+#Sora yes Macedonia
+country_event = {
+	id = yagoo.36
+	title = yagoo.36.t
+	desc = yagoo.36.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.36.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Sora no Macedonia
+country_event = {
+	id = yagoo.37
+	title = yagoo.37.t
+	desc = yagoo.37.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.37.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#HOLOLIVE - Invite to faction
+country_event = {
+	id = yagoo.38
+	title = yagoo.38.t
+	desc = yagoo.38.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.38.a	#Yes
+		ai_chance = { factor = 100 }
+
+		YAG = {add_to_faction = ROOT}
+
+		if = {
+			limit = { tag = SOR }
+			YAG = {
+				country_event = { id = proposed.81 }
+			}
+		}
+
+		if = {
+			limit = { tag = SUI }
+			YAG = {
+				country_event = { id = proposed.85 }
+			}
+		}
+
+		if = {
+			limit = { tag = RUS }
+			YAG = {
+				country_event = { id = proposed.77 }
+			}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			YAG = {
+				country_event = { id = proposed.79 }
+			}
+		}
+	}
+
+	option = {
+		name = yagoo.38.b	#Yes
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = SOR }
+			YAG = {
+				country_event = { id = proposed.82 }
+			}
+		}
+
+		if = {
+			limit = { tag = SUI }
+			YAG = {
+				country_event = { id = proposed.86 }
+			}
+		}
+
+		if = {
+			limit = { tag = RUS }
+			YAG = {
+				country_event = { id = proposed.78 }
+			}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			YAG = {
+				country_event = { id = proposed.80 }
+			}
+		}
+	}
+}
+
+#YAG - Demand Bosporus
+country_event = {
+	id = yagoo.39
+	title = yagoo.39.t
+	desc = yagoo.39.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.39.a	#Yes
+		ai_chance = { factor = 100 }
+
+		YAG = { transfer_state = 797 }
+
+		if = {
+			limit = { tag = TOW }
+			YAG = {
+				country_event = { id = proposed.87 }
+			}
+		}
+	}
+
+	option = {
+		name = yagoo.39.b	#Yes
+		ai_chance = { factor = 0 }
+		YAG = {create_wargoal = { type = annex_everything target = ROOT }}
+
+		if = {
+			limit = { tag = TOW }
+			YAG = {
+				country_event = { id = proposed.88 }
+			}
+		}
+	}
+}
+
+#YAG - Nagasaki Coup
+country_event = {
+	id = yagoo.40
+	title = yagoo.40.t
+	desc = yagoo.40.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.40.a	#Yes
+		ai_chance = { factor = 100 }
+
+		YAG = { transfer_state = 528 }
+	}
+}
+
+#ACHAN - Flat-chest deal
+country_event = {
+	id = yagoo.41
+	title = yagoo.41.t
+	desc = yagoo.41.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.41.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_offsite_building = { type = industrial_complex level = 2 }
+
+		YAG = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	option = {
+		name = yagoo.41.b	#Yes
+		ai_chance = { factor = 0 }
+
+	}
+}
+
+#ACHAN - Demand Korea
+country_event = {
+	id = yagoo.42
+	title = yagoo.42.t
+	desc = yagoo.42.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.42.a	#Yes
+		ai_chance = { factor = 100 }
+
+		YAG = {
+			transfer_state = 525
+			transfer_state = 527
+		}
+	}
+
+	option = {
+		name = yagoo.42.b	#Yes
+		ai_chance = { factor = 0 }
+
+	}
+}
+
+#YAG - Hokkaido Agreement
+country_event = {
+	id = yagoo.43
+	title = yagoo.43.t
+	desc = yagoo.43.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.43.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_offsite_building = { type = industrial_complex level = 15 }
+
+		YAG = {
+			transfer_state = 536
+		}
+	}
+
+	option = {
+		name = yagoo.43.b	#Yes
+		ai_chance = { factor = 0 }
+
+	}
+}
+
+#YAG - Demand puppet
+country_event = {
+	id = yagoo.44
+	title = yagoo.44.t
+	desc = yagoo.44.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.44.a	#Yes
+		ai_chance = { factor = 100 }
+
+		YAG = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = { tag = SOR }
+			YAG = {
+				country_event = { id = proposed.81 }
+			}
+		}
+	}
+
+	option = {
+		name = yagoo.44.b	#Yes
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = SOR }
+			YAG = {
+				country_event = { id = proposed.82 }
+			}
+		}
+	}
+}
+
+#YAG - Pressure Watson
+country_event = {
+	id = yagoo.45
+	title = yagoo.45.t
+	desc = yagoo.45.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.45.a	#Yes
+		ai_chance = { factor = 100 }
+		YAG = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+		}
+
+		if = {
+			limit = { tag = WTS }
+			YAG = {
+				country_event = { id = proposed.91 }
+			}
+		}
+	}
+
+	option = {
+		name = yagoo.45.b	#Yes
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = WTS }
+			YAG = {
+				country_event = { id = proposed.92 }
+			}
+		}
+	}
+}
+
+#YAG - First Election
+country_event = {
+	id = yagoo.46
+	title = yagoo.46.t
+	desc = yagoo.46.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.46.a	#Yes
+		ai_chance = { factor = 80 }
+		retire_ideology_leader = democratic
+		create_country_leader = {
+			name = "Yagoo"
+			picture = "gfx/leaders/YAG/just_yagoo.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				best_girl_yagoo
+			}
+		}
+		set_country_flag = YAG_Yagoo_leader
+	}
+
+	option = {
+		name = yagoo.46.b	#Yes
+		ai_chance = { factor = 10 }
+		retire_ideology_leader = democratic
+		create_country_leader = {
+			name = "A-chan"
+			picture = "gfx/leaders/YAG/achan.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				cutting_board
+				the_manager_trait
+			}
+		}
+		set_country_flag = YAG_AChan_leader
+	}
+
+	#option = {
+	#	name = yagoo.46.c	#Yes
+	#	ai_chance = { factor = 10 }
+	#	set_country_flag = YAG_No_leader
+	#}
+}
+
+#YAG - Second Election
+country_event = {
+	id = yagoo.47
+	title = yagoo.47.t
+	desc = yagoo.47.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.47.a	#Yes
+		ai_chance = { factor = 80 }
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 1
+					}
+		create_country_leader = {
+			name = "Enma"
+			picture = "gfx/leaders/YAG/enma.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				the_manager_trait
+			}
+		}
+		set_country_flag = YAG_Enma_leader
+	}
+
+	option = {
+		name = yagoo.47.b	#Yes
+		ai_chance = { factor = 10 }
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 1
+					}
+		create_country_leader = {
+			name = "J-Chad"
+			picture = "gfx/leaders/YAG/jchad.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				the_manager_trait
+			}
+		}
+		set_country_flag = YAG_J_Chad_leader
+	}
+
+	option = {
+		name = yagoo.47.c	#Yes
+		ai_chance = { factor = 10 }
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 1
+					}
+		create_country_leader = {
+			name = "Jenma"
+			picture = "gfx/leaders/YAG/jenma.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				the_manager_trait
+			}
+		}
+		set_country_flag = YAG_Jenma_leader
+	}
+}
+
+#YAG - A-chan colony
+country_event = {
+	id = yagoo.48
+	title = yagoo.48.t
+	desc = yagoo.48.d
+	picture = GFX_report_event_achan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = yagoo.48.a	#Yes
+		ai_chance = { factor = 80 }
+		ACH = {
+			transfer_state = 779
+		}
+
+		puppet = IVO
+
+		set_country_flag = Achan_go_to_ivory_coast
+
+		every_state = {
+			limit = { OR = {is_core_of = WAM} }
+			add_core_of = IVO
+		}
+
+		IVO = { set_cosmetic_tag = YAG_COLONY }
+	}
+
+	option = {
+		name = yagoo.48.b	#Yes
+		ai_chance = { factor = 10 }
+		ERI = {
+			transfer_state = 550
+		}
+
+		puppet = ERI
+
+		set_country_flag = Achan_go_to_eritrea
+
+		every_state = {
+			limit = { OR = {is_core_of = EAM} }
+			add_core_of = ERI
+		}
+
+		ERI = { set_cosmetic_tag = YAG_COLONY }
+	}
+}

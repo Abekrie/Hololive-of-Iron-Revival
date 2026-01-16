@@ -1,0 +1,65 @@
+Generic_NOE_historical = {
+	name = "NOE historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = NOE
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = NOE
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		shirogane_noel_noe_focus
+		mace_production_noe_focus
+		steel_for_tank_noe_focus
+		chula_university_noe_focus
+
+		crack_down_on_corruption_noe_focus
+		meal_bowl_noe_focus
+		feed_the_population_noe_focus
+
+		order_of_shirogane_noe_focus
+		aggressive_expansion_noe_focus
+
+		suppress_the_seperatist_noe_focus
+		united_under_one_banner_noe_focus
+
+		international_stage_noe_focus
+		intervene_in_id_civil_war_noe_focus
+
+		industry_effort_noe_focus
+		military_effort_noe_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

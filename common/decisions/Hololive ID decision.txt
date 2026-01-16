@@ -1,0 +1,131 @@
+#Hololive Indonesia
+form_hololive_ins_category = {
+
+	form_indonesia_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = MOO
+				original_tag = RIS
+				original_tag = IOF
+			}
+		}
+
+		available = {
+owns_state = 672
+owns_state = 335
+owns_state = 673
+		}
+
+		visible = {
+			OR = {
+				original_tag = MOO
+				original_tag = RIS
+				original_tag = IOF
+			}
+			AND = {NOT = { has_global_flag = ins_holo_is_formed }}
+		}
+
+		complete_effect = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = dockyard level = 5 }
+			set_capital = {state = 335}
+			custom_effect_tooltip = CET_core_all_ins
+			hidden_effect = {
+672 = { add_core_of = ROOT }
+334 = { add_core_of = ROOT }
+333 = { add_core_of = ROOT }
+336 = { add_core_of = ROOT }
+335 = { add_core_of = ROOT }
+673 = { add_core_of = ROOT }
+667 = { add_core_of = ROOT }
+721 = { add_core_of = ROOT }
+668 = { add_core_of = ROOT }
+738 = { add_core_of = ROOT }
+669 = { add_core_of = ROOT }
+523 = { add_core_of = ROOT }
+			set_global_flag = ins_holo_is_formed
+			}
+
+        hidden_effect = {
+        	if = {
+        		limit = { tag = RIS 
+        		NOT = { has_country_flag = is_HOLOID2 }}
+				news_event = { id = holo_news.43 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { tag = MOO 
+        		NOT = { has_country_flag = is_HOLOID2 }}
+				news_event = { id = holo_news.44 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { tag = IOF 
+        		NOT = { has_country_flag = is_HOLOID2 }}
+				news_event = { id = holo_news.45 hours = 6 }
+        	}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	gura_dockyard_construction_indonesia_holo_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 30
+
+		cost = 100
+
+		allowed = {
+			OR = {
+				original_tag = MOO
+				original_tag = RIS
+				original_tag = IOF
+			}
+		}
+
+		available = {
+		}
+
+		visible = {
+			OR = {
+				original_tag = MOO
+				original_tag = RIS
+				original_tag = IOF
+			}
+			OR = {
+				has_war_with = MOO
+				has_war_with = RIS
+				has_war_with = IOF
+			}
+		}
+
+		complete_effect = {
+			add_offsite_building = { type = dockyard level = 3 }
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 15
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

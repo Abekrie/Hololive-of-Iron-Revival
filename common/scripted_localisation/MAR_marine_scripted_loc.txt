@@ -1,0 +1,132 @@
+defined_text = {
+	name = GetMarineTactic
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_tactic_idea
+		}
+		localization_key = mar_tactic_idea_loc
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_tactic_camouflaged_hull
+		}
+		localization_key = mar_tactic_camouflaged_hull
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_tactic_false_flag
+		}
+		localization_key = "False Flag"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_tactic_encourage_mutiny
+		}
+		localization_key = mar_tactic_encourage_mutiny
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_tactic_boarding_attack
+		}
+		localization_key = mar_tactic_boarding_attack
+	}
+}
+
+defined_text = {
+	name = GetMarineQmaster
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_qmaster_idea
+		}
+		localization_key = "---"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_qmaster_aqua
+		}
+		localization_key = "Minato Aqua"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_qmaster_haato
+		}
+		localization_key = "Akai Haato"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_qmaster_marine
+		}
+		localization_key = "Houshou Marine"
+	}
+}
+
+defined_text = {
+	name = GetMarineBmaster
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_idea
+		}
+		localization_key = "---"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_shion
+		}
+		localization_key = "Murasaki Shion"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_rushia
+		}
+		localization_key = "Uruha Rushia"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_noel
+		}
+		localization_key = "Shirogane Noel"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_gura
+		}
+		localization_key = "Gawr Gura"
+	}
+
+	#Tactic Normal
+	text = {
+		trigger = {
+			has_idea = mar_bmaster_ina
+		}
+		localization_key = "Ninomae Ina"
+	}
+
+}

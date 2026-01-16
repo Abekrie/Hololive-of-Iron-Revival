@@ -1,0 +1,243 @@
+add_namespace = towa
+
+#towa refuses n angola
+country_event = {
+	id = towa.1
+	title = towa.1.t
+	desc = towa.1.d
+	picture = GFX_report_event_towa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = towa.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#towa accepted n angola
+country_event = {
+	id = towa.2
+	title = towa.2.t
+	desc = towa.2.d
+	picture = GFX_report_event_towa_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = towa.2.a
+		set_global_flag = n_angola_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+#TOW - Ask to join your faction
+country_event = {
+	id = towa.3
+	title = towa.3.t
+    desc = towa.3.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.3.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_to_faction = TOW
+
+     	if = {
+     		limit = { tag = PEK }
+     		TOW = { country_event = proposed.67 }
+     	}
+
+     	if = {
+     		limit = { tag = ALO }
+     		TOW = { country_event = proposed.1 }
+     	}
+     }
+ 
+     option = {
+     name = towa.3.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+     		limit = { tag = PEK }
+     		TOW = { country_event = proposed.68 }
+     	}
+
+     	if = {
+     		limit = { tag = ALO }
+     		TOW = { country_event = proposed.2 }
+     	}
+     }
+}
+
+#TOW - Demand Edirne
+country_event = {
+	id = towa.4
+	title = towa.4.t
+    desc = towa.4.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.4.a	#Yes
+     ai_chance = { factor = 100 }
+     	TOW = {
+     		transfer_state = 341
+     	}
+
+     	if = {
+     		limit = { tag = SOR }
+     		TOW = { country_event = proposed.81 }
+     	}
+     }
+ 
+     option = {
+     name = towa.4.b	#No
+     ai_chance = { factor = 0 }
+
+     	if = {
+     		limit = { tag = SOR }
+     		TOW = { country_event = proposed.82 }
+     	}
+     }
+}
+
+#TOW - Offer passage through Bosphorus
+country_event = {
+	id = towa.5
+	title = towa.5.t
+    desc = towa.5.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.5.a	#Yes
+     ai_chance = { factor = 100 }
+     	set_country_flag = Towa_sell_us_strait_pass
+     	TOW = {
+     		country_event = {
+     			id = towa.6
+     		}
+     	}
+     }
+ 
+     option = {
+     name = towa.5.b	#No
+     ai_chance = { factor = 0 }
+     	TOW = {
+     		country_event = {
+     			id = towa.7
+     		}
+     	}
+     }
+}
+
+#TOW - Strait deal completes
+country_event = {
+	id = towa.6
+	title = towa.6.t
+    desc = towa.6.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.6.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_equipment_to_stockpile = {
+                type = hololive_yen_0
+                amount = 2500
+                producer = ROOT
+            }
+        clr_country_flag = towa_strait_deal_still_going
+     }
+}
+
+#TOW - Strait deal fails
+country_event = {
+	id = towa.7
+	title = towa.7.t
+    desc = towa.7.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.7.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#TOW - Request NAP
+country_event = {
+	id = towa.8
+	title = towa.8.t
+    desc = towa.8.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.8.a	#Yes
+     ai_chance = { factor = 100 }
+     	diplomatic_relation = {
+     		country = TOW
+     		relation = non_aggression_pact
+     		active = yes
+     	}
+     	if = {
+     		limit = { tag = YAG }
+     		TOW = { country_event = proposed.93 }
+     	}
+     }
+ 
+     option = {
+     name = towa.8.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+     		limit = { tag = YAG }
+     		TOW = { country_event = proposed.94 }
+     	}
+     }
+}
+
+#TOW - Demand Annex
+country_event = {
+	id = towa.9
+	title = towa.9.t
+    desc = towa.9.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = towa.9.a	#Yes
+     ai_chance = { factor = 100 }
+     	TOW = {annex_country = {
+     	     		target = ROOT
+     	     		transfer_troops = yes
+     	     	}}
+     	if = {
+     		limit = { tag = KAN }
+     		custom_effect_tooltip = CET_event_towa_9
+     		TOW = { change_tag_from = KAN }
+     		TOW = { country_event = proposed.37 }
+     	}
+     }
+ 
+     option = {
+     name = towa.9.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+     		limit = { tag = KAN }
+     		TOW = { country_event = proposed.38 }
+     	}
+     }
+}

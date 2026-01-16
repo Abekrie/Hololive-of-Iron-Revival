@@ -1,0 +1,263 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+token_base = PEK_generic_holo_xgeneral
+
+     name="Pekora"
+     portraits={
+           army={
+                 large="gfx/leaders/PEK/pekora_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero trickster}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = PEK_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = PEK_generic_holo_xadmiral
+     name="Usada"
+     portraits={
+           army={
+                 large="gfx/leaders/PEK/pekora_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector superior_tactician}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = PEK_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+token_base = KIA_generic_holo_xgeneral
+
+     name="Kiara"
+     portraits={
+           army={
+                 large="gfx/leaders/KIA/kiara_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={organizer inflexible_strategist}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = KIA_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = KIA_generic_holo_xadmiral
+     name="Takanashi"
+     portraits={
+           army={
+                 large="gfx/leaders/KIA/kiara_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = KIA_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+token_base = SUI_generic_holo_xgeneral
+
+     name="Suisei"
+     portraits={
+           army={
+                 large="gfx/leaders/SUI/sui_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={armor_officer skilled_staffer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = SUI_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = SUI_generic_holo_xadmiral
+     name="Hoshimachi"
+     portraits={
+           army={
+                 large="gfx/leaders/SUI/sui_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={war_hero aviation_enthusiast}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = SUI_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+token_base = WTS_generic_holo_xgeneral
+
+     name="Amelia"
+     portraits={
+           army={
+                 large="gfx/leaders/WTS/watson_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_engineer politically_connected}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = WTS_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = WTS_generic_holo_xadmiral
+     name="Watson"
+     portraits={
+           army={
+                 large="gfx/leaders/WTS/watson_dem.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ironside spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = WTS_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+generate_character={
+token_base = CHC_generic_holo_xgeneral
+
+     name="Choco"
+     portraits={
+           army={
+                 large="gfx/leaders/CHC/choco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero organizer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = CHC_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = CHC_generic_holo_xadmiral
+     name="Yuzuki"
+     portraits={
+           army={
+                 large="gfx/leaders/CHC/choco_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={spotter blockade_runner}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = CHC_recruit_admiral_dec_flag }
+     }
+
+}
+
+}

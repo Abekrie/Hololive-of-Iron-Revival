@@ -1,0 +1,49 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Fauna Fleet"			
+		naval_base = 3338 
+		task_force = {				
+			name = "Fauna Force"			
+			location = 3338 
+
+			ship = { name = "Fauna" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Fauna 2" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Fauna 3" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Fauna 4" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = FBK  } } }
+		}
+
+		task_force = {				
+			name = "Arctic Force"			
+			location = 3338 
+
+			ship = { name = "Saplings" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = FBK } } }
+
+			ship = { name = "Faunatics" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = FBK } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

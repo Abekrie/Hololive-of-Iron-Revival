@@ -1,0 +1,21 @@
+﻿l_english:
+ NEN_propaganda_poster_slot_available_tt:0 "Has an empty propaganda poster slot."
+ 
+ NEN_poster_left_text:0 "[NEN_GetDaysRemainingLeft]"
+ NEN_poster_center_text:0 "[NEN_GetDaysRemainingCenter]"
+ NEN_poster_right_text:0 "[NEN_GetDaysRemainingRight]"
+ NEN_poster_no_text:0 ""
+ NEN_poster_left_days_remaining_text:0 "§Y[?NEN_propaganda_left_days_remaining_flag:days_left|Y0]§! days remaining"
+ NEN_poster_center_days_remaining_text:0 "§Y[?NEN_propaganda_center_days_remaining_flag:days_left|Y0]§! days remaining"
+ NEN_poster_right_days_remaining_text:0 "§Y[?NEN_propaganda_right_days_remaining_flag:days_left|Y0]§! days remaining"
+
+ NEN_propaganda_campaigns:0 "Manga Sales"
+
+ NEN_propaganda_3:0 "Damena Onee-san Demo Sukida yo ne?"
+ NEN_propaganda_4:0 "Onna no Hadaka wo Nama de Mitai"
+ NEN_propaganda_5:0 "Hikawa-sensei wa Otaku Kareshi ga Hoshii"
+ NEN_propaganda_6:0 "Mikami-san wo Furimukasetai"
+ NEN_propaganda_7:0 "Tanin no Sex wo Souzousuru na"
+ NEN_propaganda_8:0 "Watashi no Hajimete, Kimi ni Agemasu"
+ NEN_propaganda_9:0 "Kirei na Oneesan ni Yashinawaretaku Nai Otokonoko nante Iru no?"
+ NEN_propaganda_10:0 "Haachama is Watching you"

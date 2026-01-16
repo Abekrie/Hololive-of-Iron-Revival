@@ -1,0 +1,63 @@
+calliope_dead_on_arrival_category = {
+
+	calliope_nuke_the_capital_dec = {
+
+		icon = generic_ignite_civil_war
+
+		days_re_enable = 365
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							NOT = {tag = ROOT}
+						}
+						OWNER = {
+							NOT = {tag = ROOT}
+						}
+						is_capital = yes
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 300
+
+		visible = {
+		    tag = MRI
+			has_country_flag = Calliope_can_dead_on_arrival
+			is_ai = no
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 15
+
+		remove_effect = {
+			launch_nuke = {
+				state = FROM
+				controller = FROM.CONTROLLER
+				use_nuke = yes
+			}
+			FROM.OWNER = {
+				country_event = { id = calliope.7 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

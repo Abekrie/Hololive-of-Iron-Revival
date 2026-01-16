@@ -1,0 +1,278 @@
+
+characters={
+NIN_ninomae_ina_general = {
+     name="Ninomae"
+     portraits={
+           army={
+                 large="gfx/leaders/NIN/ninomae_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={politically_connected inflexible_strategist}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           #visible = {  }
+     }
+
+}
+
+NIN_ninomae_ina_admiral = {
+     name="Ina"
+     portraits={
+           army={
+                 large="gfx/leaders/NIN/ninomae_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={spotter ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+FBK_fubuki_shirakami_general = {
+     name="Fubuki"
+     portraits={
+           army={
+                 large="gfx/leaders/FBK/fbk_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer trait_cautious}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+FBK_fubuki_shirakami_admiral = {
+     name="Shirakami"
+     portraits={
+           army={
+                 large="gfx/leaders/FBK/fbk_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gentlemanly superior_tactician}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+HSK_hoshikawa_sara_general = {
+     name="Hoshikawa"
+     portraits={
+           army={
+                 large="gfx/leaders/HSK/hoshikawa_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={commando career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+HSK_hoshikawa_sara_admiral = {
+     name="Sara"
+     portraits={
+           army={
+                 large="gfx/leaders/HSK/hoshikawa_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={old_guard_navy superior_tactician}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+MAT_matsuri_natsuiro_general = {
+     name="Matsuri"
+     portraits={
+           army={
+                 large="gfx/leaders/MAT/matsuri_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     field_marshal={
+            traits={ organizer logistics_wizard offensive_doctrine }
+            skill=4
+            attack_skill=4
+            defense_skill=3
+            planning_skill=2
+            logistics_skill=4
+            legacy_id=0
+      }
+
+}
+
+MAT_matsuri_natsuiro_admiral = {
+     name="Matsuri"
+     portraits={
+           army={
+                 large="gfx/leaders/MAT/matsuri_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={blockade_runner navy_career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+MIK_miko_sakura_general = {
+     name="Miko"
+     portraits={
+           army={
+                 large="gfx/leaders/MIK/miko_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_engineer commando}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 4
+           planning_skill = 2
+           logistics_skill = 1
+     }
+
+}
+
+MIK_miko_sakura_admiral = {
+     name="Sakura"
+     portraits={
+           army={
+                 large="gfx/leaders/MIK/miko_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={superior_tactician gunnery_expert}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+MRI_mori_calliope_general = {
+     name="Mori"
+     portraits={
+           army={
+                 large="gfx/leaders/MRI/mori_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless brilliant_strategist}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+MRI_mori_calliope_admiral = {
+     name="Calliope"
+     portraits={
+           army={
+                 large="gfx/leaders/MRI/mori_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality old_guard_navy}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

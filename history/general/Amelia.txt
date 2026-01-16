@@ -1,0 +1,84 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = ROB
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = WTS_small_ame_advisor
+    name = "Small Ame"
+    advisor = {
+      slot = high_command
+      traits = { amelia_groundpounder_trait }
+      cost = 50
+
+      available = {
+        OR = {
+        has_completed_focus = squeeze_small_ame_rob_focus}
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_small_ame_advisor }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = WTS
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = WTS_small_ame_holo_xgeneral
+    name="Small Ame"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/small_ame.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher urban_assault_specialist}
+            skill = 4
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+
+  generate_character = {
+    token_base = WTS_ame_bee_holo_xgeneral
+    name="Ame Bee"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/ame_bee.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard media_personality}
+            skill = 3
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+}

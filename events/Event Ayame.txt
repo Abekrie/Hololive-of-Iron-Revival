@@ -1,0 +1,353 @@
+add_namespace = ayame
+
+#ayame refuses tunisia
+country_event = {
+	id = ayame.1
+	title = ayame.1.t
+	desc = ayame.1.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#ayame accepted tunisia
+country_event = {
+	id = ayame.2
+	title = ayame.2.t
+	desc = ayame.2.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.2.a
+		set_global_flag = tunisia_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+#############################################
+
+#AYA - Assassination of Stalin (TO Council)(OP Red Moon)
+country_event = {
+	id = ayame.20
+	title = ayame.20.t
+	desc = ayame.20.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.20.a
+		ai_chance = { factor = 100 }
+
+		create_wargoal = { type = annex_everything target = SOV }
+
+		add_stability = -0.1
+		hidden_effect = {
+			news_event = { id = holo_news.211 }
+		}
+	}
+}
+
+#AYA - Caucasus or War
+country_event = {
+	id = ayame.21
+	title = ayame.21.t
+	desc = ayame.21.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.21.a
+		ai_chance = { factor = 100 }
+		AYA = {
+			transfer_state = 232
+			transfer_state = 821
+			transfer_state = 828
+			transfer_state = 827
+			transfer_state = 233
+		}
+	}
+
+	option = {
+		name = ayame.21.b
+		ai_chance = { factor = 0 }
+		AYA = { create_wargoal = { type = annex_everything target = ROOT } }
+	}
+}
+
+#AYA - Ask to join faction
+country_event = {
+	id = ayame.22
+	title = ayame.22.t
+	desc = ayame.22.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.22.a
+		ai_chance = { factor = 100 }
+		add_to_faction = AYA
+
+		if = { limit = { tag = AQA }
+			AYA = { country_event = { id = proposed.3 }}
+		}
+
+		if = { limit = { tag = OKA }
+			AYA = { country_event = { id = proposed.65 }}
+		}
+
+		if = { limit = { tag = SOV }
+			AYA = { country_event = { id = ayame.23 }}
+		}
+	}
+
+	option = {
+		name = ayame.22.b
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = AQA }
+			AYA = { country_event = { id = proposed.4 }}
+		}
+
+		if = { limit = { tag = OKA }
+			AYA = { country_event = { id = proposed.66 }}
+		}
+	}
+}
+
+#AYA - Soviet accepted to faction
+country_event = {
+	id = ayame.23
+	title = ayame.23.t
+	desc = ayame.23.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ayame.23.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#AYA - Secret deal
+country_event = {
+	id = ayame.24
+	title = ayame.24.t
+    desc = ayame.24.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.24.a	#Yes
+     ai_chance = { factor = 100 }
+     	dismantle_faction = yes
+     	if = {
+     		limit = { AYA = { is_faction_leader = yes }}
+     		AYA = { add_to_faction = ROOT }
+     	}
+     	else_if = {
+     		limit = { AQA = { is_faction_leader = yes }
+     		AYA = { is_in_faction_with = AQA }
+     		}
+     		AQA = { add_to_faction = ROOT }
+     	}
+     }
+ 
+     option = {
+     name = ayame.24.b	#No
+     ai_chance = { factor = 0 }
+     	start_civil_war = {
+    		ruling_party = communism
+    		ideology = democratic
+    		size = 0.5
+    		#only_own_territory = no
+    		#capital = 282
+    		#states = {  }
+    		#keep_unit_leaders = {  }
+    		keep_political_leader = yes
+    		keep_political_party_members = yes
+		}
+     }
+}
+
+#AYA - Manji-Gumi deal
+country_event = {
+	id = ayame.25
+	title = ayame.25.t
+    desc = ayame.25.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.25.a	#Yes
+     ai_chance = { factor = 100 }
+     	set_global_flag = Ayame_shion_manji_gumi_deal
+     }
+}
+
+#AYA - Demand puppet
+country_event = {
+	id = ayame.26
+	title = ayame.26.t
+    desc = ayame.26.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.26.a	#Yes
+     ai_chance = { factor = 100 }
+     	AYA  = { puppet = ROOT }
+     	if = { limit = { tag = KRN }
+			AYA = { country_event = { id = proposed.41 }}
+		}
+     }
+
+     option = {
+     name = ayame.26.b	#Yes
+     ai_chance = { factor = 100 }
+     	if = { limit = { tag = KRN }
+			AYA = { country_event = { id = proposed.42 }}
+		}
+     }
+}
+
+#AYA - Steal puppet
+country_event = {
+	id = ayame.27
+	title = ayame.27.t
+    desc = ayame.27.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.27.a	#Yes
+     ai_chance = { factor = 100 }
+     	if = { limit = { tag = OKA }
+			AYA = { country_event = { id = proposed.65 }}
+			OKA = { end_puppet = KRN }
+			AYA = { puppet = KRN }
+		}
+     }
+
+     option = {
+     name = ayame.27.b	#Yes
+     ai_chance = { factor = 100 }
+     	if = { limit = { tag = OKA }
+			AYA = { country_event = { id = proposed.66 }}
+		}
+     }
+}
+
+#AYA - Caucasus Oil Leasing
+country_event = {
+	id = ayame.28
+	title = ayame.28.t
+    desc = ayame.28.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.28.a	#Yes
+     ai_chance = { factor = 100 }
+     	give_resource_rights = { receiver = ROOT state = 229 }
+     	AYA = { country_event = { id = ayame.29 }}
+     	hidden_effect = {
+     		country_event = { id = ayame.31 days = 180 }
+     	}
+     }
+
+     option = {
+     name = ayame.28.b	#Yes
+     ai_chance = { factor = 0 }
+     	AYA = { country_event = { id = ayame.30 }}
+     }
+}
+
+#AYA - Caucasus Oil Leasing YES
+country_event = {
+	id = ayame.29
+	title = ayame.29.t
+    desc = ayame.29.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.29.a	#Yes
+     ai_chance = { factor = 100 }
+     			add_offsite_building = { type = industrial_complex level = 15 }
+     	     	add_equipment_to_stockpile = {
+     	                    type = hololive_yen_0
+     	                    amount = 2000
+     	                    producer = ROOT
+     	            }
+     }
+}
+
+#AYA - Caucasus Oil Leasing NO
+country_event = {
+	id = ayame.30
+	title = ayame.30.t
+    desc = ayame.30.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.30.a	#Yes
+     ai_chance = { factor = 100 }
+     	clr_country_flag = Ayame_oil_already_leased
+     }
+}
+
+#AYA - Caucasus Oil Leasing EXPIRE to BUYER
+country_event = {
+	id = ayame.31
+	title = ayame.31.t
+    desc = ayame.31.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.31.a	#Yes
+     ai_chance = { factor = 100 }
+     	ROOT = { remove_resource_rights = 229 }
+     }
+}
+
+#AYA - Caucasus Oil Leasing EXPIRE to AYAME
+country_event = {
+	id = ayame.32
+	title = ayame.32.t
+    desc = ayame.32.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = ayame.32.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_offsite_building = { type = industrial_complex level = -15 }
+     	clr_country_flag = Ayame_oil_already_leased
+     }
+}

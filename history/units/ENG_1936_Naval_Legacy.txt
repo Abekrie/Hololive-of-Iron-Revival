@@ -1,0 +1,65 @@
+﻿units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "Home Command Legacy Test"			
+		naval_base = 540 # Scapa Flow
+				
+		
+		
+		
+		
+		task_force = {
+			name = "Western Approaches Fleet"
+			location = 540 # Plymouth
+			# Western Approaches Destroyer Division
+			ship = { name = "HMS Montrose" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Sturdy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Valentine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Vega" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Westminster" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			# 11th Destroyer Flotilla
+			ship = { name = "HMS Mackay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			# Destroyer Division 21
+			ship = { name = "HMS Vanquisher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Vanoc" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Walpole" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Winchelsea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			# Destroyer Division 22
+			ship = { name = "HMS Versatile" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Vimiera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Whirlwind" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Warwick" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+		}
+		task_force = {
+			name = "North Atlantic Fleet"
+			location = 4135 # Gibraltar
+			ship = { name = "HMS Colombo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Capetown" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Wryneck" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }	
+			# 13th Destroyer Flotilla
+			ship = { name = "HMS Keppel" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			# Destroyer Division 25
+			ship = { name = "HMS Vidette" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Vortigern" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Velox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Watchman" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			# Destroyer Division 26
+			ship = { name = "HMS Douglas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Active" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG version_name = "A/B/C/D Class" } } }	
+			ship = { name = "HMS Wishart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "HMS Wrestler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+		}
+		
+		
+	}
+
+	### MEDITERRANIAN FLEET ###			
+	
+				
+	### NORTH AND SOUTH AMERICAS ###			
+	
+
+	### FAR EAST ###			
+	
+}

@@ -1,0 +1,148 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Amelia Fleet"		
+		naval_base = 9458
+		task_force = {				
+			name = "England Force"			
+			location = 9458 
+
+ship = { name = "AWS Amelia Watson"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Aoi Nabi"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Bubba"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+WTS
+} } }
+
+ship = { name = "AWS Portsmouth"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Morwich"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Kortrijk"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Charleroi"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Namur"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Liege"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Antwerpen"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+
+ship = { name = "AWS Amsterdam"
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Rotterdam"
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Utrecht"
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Breda"
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Leeuwarden"
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+WTS
+} } }
+			
+		}
+
+		task_force = {				
+			name = "Benelux Force"			
+			location = 3314 
+ship = { name = "AWS The Hague"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Gorningen"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Arnhem"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Eindhoven"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+ 
+ship = { name = "AWS Luxembourg"
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+WTS
+} } }
+			
+		}						
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

@@ -1,0 +1,129 @@
+KAN_hindu_rebel = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_hindu
+		OR = {
+			check_variable = {
+				var = KAN_religion_hinduism
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_muslim_rebel = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_hindu
+		OR = {
+			check_variable = {
+				var = KAN_religion_islam
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_buddhist_rebel = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_hindu
+		OR = {
+			check_variable = {
+				var = KAN_religion_buddhism
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_population_can_integrate_hindu = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_hindu
+		OR = {
+			check_variable = {
+				var = KAN_religion_hinduism
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_population_can_integrate_muslim = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_muslim
+		OR = {
+			check_variable = {
+				var = KAN_religion_islam
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_population_can_integrate_buddhist = {
+	custom_trigger_tooltip = {
+		tooltip = CTT_KAN_population_can_integrate_buddhist
+		OR = {
+			check_variable = {
+				var = KAN_religion_buddhism
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_atleast_20 = {
+	custom_trigger_tooltip = {
+		tooltip = KAN_atleast_20
+		OR = {
+			check_variable = {
+				var = KAN_kanatan_percent
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_atleast_40 = {
+	custom_trigger_tooltip = {
+		tooltip = KAN_atleast_40
+		OR = {
+			check_variable = {
+				var = KAN_kanatan_percent
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_atleast_50 = {
+	custom_trigger_tooltip = {
+		tooltip = KAN_atleast_50
+		OR = {
+			check_variable = {
+				var = KAN_kanatan_percent
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}
+
+KAN_atleast_75 = {
+	custom_trigger_tooltip = {
+		tooltip = KAN_atleast_75
+		OR = {
+			check_variable = {
+				var = KAN_kanatan_percent
+				value = 75
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+ideas = {
+    country = {
+	    efficiency_i_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.05
+			    production_factory_efficiency_gain_factor = 0.02
+			}
+		}
+
+		efficiency_ii_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.1
+			    production_factory_efficiency_gain_factor = 0.04
+			}
+		}
+
+		efficiency_iii_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.15
+			    production_factory_efficiency_gain_factor = 0.06
+			}
+		}
+
+		efficiency_iv_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.2
+			    production_factory_efficiency_gain_factor = 0.08
+			}
+		}
+
+		efficiency_v_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.25
+			    production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+	}
+}

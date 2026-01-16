@@ -1,0 +1,10 @@
+MAR_pirate_of_the_high_sea_category = {
+	priority = 100
+	icon = army_reform
+
+	scripted_gui = marine_pirate_decision_ui
+
+	allowed = {
+		
+	}
+}

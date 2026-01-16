@@ -1,0 +1,724 @@
+#Hololive Indonesia
+hololive_china_main_category = {
+
+	form_china_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = YOG
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = ART
+				original_tag = RSA
+				original_tag = ECH
+			}
+		}
+
+		available = {		
+			controls_state = 608
+			controls_state = 613
+			controls_state = 328
+			controls_state = 594
+		}
+
+		visible = {
+			OR = {
+				original_tag = YOG
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = ART
+				original_tag = RSA
+				original_tag = ECH
+			}
+			AND = {NOT = { has_global_flag = hololive_china_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_china_holo
+			hidden_effect = {
+			set_global_flag = hololive_china_is_formed
+
+        }
+
+        hidden_effect = {every_state = {
+		   					limit = { OR = {is_core_of = CHI
+		   					is_core_of = MON
+		   					is_core_of = PRC
+		   					is_core_of = ECH
+		   					is_core_of = YOG
+		   					is_core_of = DOR
+		   					is_core_of = TIB
+		   					is_core_of = SIK} }
+		   					add_core_of = ROOT
+		   					}}
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_request_garrison_support_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = { 
+		    	original_tag = YOG
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = ART
+				original_tag = RSA
+				original_tag = ECH
+		    	}
+		    has_country_flag = CN_can_request_HQ_support
+		    NOT = {
+		    	has_country_flag = CN_no_more_request
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			if = { limit = { tag = RSA }
+                ACH = { country_event = { id = holo_cn.7 }}
+            }
+
+            if = { limit = { tag = ECH }
+                ACH = { country_event = { id = holo_cn.8 }}
+            }
+
+            if = { limit = { tag = YOG }
+                ACH = { country_event = { id = holo_cn.9 }}
+            }
+
+            if = { limit = { tag = ART }
+                ACH = { country_event = { id = holo_cn.10 }}
+            }
+
+            if = { limit = { tag = CIV }
+                ACH = { country_event = { id = holo_cn.11 }}
+            }
+
+            if = { limit = { tag = DOR }
+                ACH = { country_event = { id = holo_cn.12 }}
+            }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_request_equipment_support_dec = {
+
+		icon = generic_prepare_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 75
+
+		visible = {
+		    OR = { 
+		    	original_tag = YOG
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = ART
+				original_tag = RSA
+				original_tag = ECH
+		    	}
+		    has_country_flag = CN_can_request_HQ_support
+		    NOT = {
+		    	has_country_flag = CN_no_more_request
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			if = { limit = { tag = RSA }
+                ACH = { country_event = { id = holo_cn.14 }}
+            }
+
+            if = { limit = { tag = ECH }
+                ACH = { country_event = { id = holo_cn.15 }}
+            }
+
+            if = { limit = { tag = YOG }
+                ACH = { country_event = { id = holo_cn.16 }}
+            }
+
+            if = { limit = { tag = ART }
+                ACH = { country_event = { id = holo_cn.17 }}
+            }
+
+            if = { limit = { tag = CIV }
+                ACH = { country_event = { id = holo_cn.18 }}
+            }
+
+            if = { limit = { tag = DOR }
+                ACH = { country_event = { id = holo_cn.19 }}
+            }
+		}
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_request_extra_budget_dec = {
+
+		icon = ger_mefo_bills
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    is_hololive_cn = yes
+		    has_country_flag = CN_can_request_HQ_support
+		    NOT = {
+		    	has_country_flag = CN_no_more_request
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			if = { limit = { tag = RSA }
+                ACH = { country_event = { id = holo_cn.20 }}
+            }
+
+            if = { limit = { tag = ECH }
+                ACH = { country_event = { id = holo_cn.21 }}
+            }
+
+            if = { limit = { tag = YOG }
+                ACH = { country_event = { id = holo_cn.22 }}
+            }
+
+            if = { limit = { tag = ART }
+                ACH = { country_event = { id = holo_cn.23 }}
+            }
+
+            if = { limit = { tag = CIV }
+                ACH = { country_event = { id = holo_cn.24 }}
+            }
+
+            if = { limit = { tag = DOR }
+                ACH = { country_event = { id = holo_cn.25 }}
+            }
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_invite_to_faction_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							OR = {
+								original_tag = YOG
+								original_tag = DOR
+								original_tag = CIV
+								original_tag = ART
+								original_tag = RSA
+								original_tag = ECH
+							}
+							NOT = { tag = ROOT }
+						}
+					is_capital = yes
+				}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		cost = 50
+
+		visible = {
+		    OR = { 
+		    	original_tag = YOG
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = ART
+				original_tag = RSA
+				original_tag = ECH
+		    	}
+		    has_country_flag = CN_can_invite_to_faction
+		}
+
+		available = {
+			FROM.OWNER = {
+				is_in_faction = no
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+			if = {
+				limit = { is_ai = yes }
+				FROM.OWNER = {
+					has_government = neutrality
+				}
+			}
+			is_subject = no
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			if = { limit = { tag = RSA }
+                FROM.OWNER = { country_event = { id = holo_cn.26 }}
+            }
+
+            if = { limit = { tag = ECH }
+                FROM.OWNER = { country_event = { id = holo_cn.27 }}
+            }
+
+            if = { limit = { tag = YOG }
+                FROM.OWNER = { country_event = { id = holo_cn.28 }}
+            }
+
+            if = { limit = { tag = ART }
+                FROM.OWNER = { country_event = { id = holo_cn.29 }}
+            }
+
+            if = { limit = { tag = CIV }
+                FROM.OWNER = { country_event = { id = holo_cn.30 }}
+            }
+
+            if = { limit = { tag = DOR }
+                FROM.OWNER = { country_event = { id = holo_cn.31 }}
+            }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_demand_border_states_dec = {
+
+		icon = border_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		#target_array = neighbors
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							is_hololive_cn = yes
+							is_neighbor_of = ROOT
+							NOT = { tag = ROOT }
+						}
+					is_capital = no
+				}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 100
+
+		visible = {
+		    is_hololive_cn = yes
+		    has_country_flag = CN_can_border_war
+		    if = { limit = { tag = RSA }
+                 FROM = { has_state_flag = RSA_can_claim_this_state }
+            }
+
+            if = { limit = { tag = ECH }
+                 FROM = {has_state_flag = ECH_can_claim_this_state }
+            }
+
+            if = { limit = { tag = YOG }
+                 FROM = {has_state_flag = YOG_can_claim_this_state }
+            }
+
+            if = { limit = { tag = ART }
+                 FROM = {has_state_flag = ART_can_claim_this_state }
+            }
+
+            if = { limit = { tag = CIV }
+                 FROM = {has_state_flag = CIV_can_claim_this_state }
+            }
+
+            if = { limit = { tag = DOR }
+                 FROM = {has_state_flag = DOR_can_claim_this_state }
+            }
+		}
+
+		available = {
+			is_ai = no
+			FROM.OWNER = {
+				NOT = { has_war_with = ROOT 
+				is_in_faction_with = ROOT }
+			}
+			is_subject = no
+			NOT = {
+				has_country_flag = cn_ongoing_claiming_state
+			}
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			hidden_effect = {every_state = {
+			                limit = { is_owned_and_controlled_by = RSA }
+			                every_neighbor_state = { set_state_flag = RSA_can_claim_this_state }
+			            }
+			
+			            every_state = {
+			                 limit = { is_owned_and_controlled_by = ECH }
+			                 every_neighbor_state = { set_state_flag = ECH_can_claim_this_state }
+			            }
+			
+			            every_state = {
+			                 limit = { is_owned_and_controlled_by = YOG }
+			                 every_neighbor_state = { set_state_flag = YOG_can_claim_this_state }
+			            }
+			
+			            every_state = {
+			                 limit = { is_owned_and_controlled_by = ART }
+			                 every_neighbor_state = { set_state_flag = ART_can_claim_this_state }
+			            }
+			
+			            every_state = {
+			                 limit = { is_owned_and_controlled_by = CIV }
+			                 every_neighbor_state = { set_state_flag = CIV_can_claim_this_state }
+			            }
+			
+			            every_state = {
+			                 limit = { is_owned_and_controlled_by = DOR }
+			                 every_neighbor_state = { set_state_flag = DOR_can_claim_this_state }
+			            }}
+
+            if = { limit = { tag = RSA }
+                 FROM = { set_state_flag = RSA_claims_this_state }
+            }
+
+            if = { limit = { tag = ECH }
+                 FROM = { set_state_flag = ECH_claims_this_state }
+            }
+
+            if = { limit = { tag = YOG }
+                 FROM = { set_state_flag = YOG_claims_this_state }
+            }
+
+            if = { limit = { tag = ART }
+                 FROM = { set_state_flag = ART_claims_this_state }
+            }
+
+            if = { limit = { tag = CIV }
+                 FROM = { set_state_flag = CIV_claims_this_state }
+            }
+
+            if = { limit = { tag = DOR }
+                 FROM = { set_state_flag = DOR_claims_this_state }
+            }
+
+            set_country_flag = cn_ongoing_claiming_state
+		}
+
+		remove_effect = {
+			clr_country_flag = cn_ongoing_claiming_state
+			if = { limit = { tag = RSA }
+                FROM.OWNER = { country_event = { id = holo_cn.32 }}
+            }
+
+            if = { limit = { tag = ECH }
+                FROM.OWNER = { country_event = { id = holo_cn.33 }}
+            }
+
+            if = { limit = { tag = YOG }
+                FROM.OWNER = { country_event = { id = holo_cn.34 }}
+            }
+
+            if = { limit = { tag = ART }
+                FROM.OWNER = { country_event = { id = holo_cn.35 }}
+            }
+
+            if = { limit = { tag = CIV }
+                FROM.OWNER = { country_event = { id = holo_cn.36 }}
+            }
+
+            if = { limit = { tag = DOR }
+                FROM.OWNER = { country_event = { id = holo_cn.37 }}
+            }
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_organized_terrorist_attack_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 80
+
+		allowed = {
+			
+		}
+
+		cost = 300
+
+		visible = {
+		    is_hololive_cn = yes
+			has_country_flag = cn_can_terrorist_attack
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		days_remove = 120
+
+		remove_effect = {
+			custom_effect_tooltip = CET_shion_shionist_jihad_dec
+			every_enemy_country = {
+				#country_event = { id = shion.53 }
+				show_ideas_tooltip = terrorist_attacked_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_organized_cyber_bullying_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 80
+
+		allowed = {
+			
+		}
+
+		cost = 300
+
+		visible = {
+		    is_hololive_cn = yes
+			has_country_flag = cn_can_cyber_bully
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		days_remove = 120
+
+		remove_effect = {
+			custom_effect_tooltip = CET_cn_organized_cyber_bullying_dec
+			every_enemy_country = {
+				#country_event = { id = shion.53 }
+				show_ideas_tooltip = cyberbully_ns
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_beijing_conference_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							OR = {
+								original_tag = YOG
+								original_tag = DOR
+								original_tag = CIV
+								original_tag = ART
+								original_tag = RSA
+								original_tag = ECH
+							}
+							NOT = { tag = ROOT }
+						}
+					is_capital = yes
+				}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		cost = 100
+
+		visible = {
+		    OR = { 
+		    	original_tag = ACH
+		    	}
+		    has_country_flag = CN_can_beijing_conference
+		}
+
+		available = {
+			FROM.OWNER = {
+				is_hololive_cn =yes
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					}
+			}
+			is_subject = no
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			FROM.OWNER = { country_event = { id = holo_cn.48 }}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	cn_55_days_at_beijing_dec = {
+
+		icon = jap_conquer_china
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = { 
+		    	is_hololive_cn = yes
+		    	}
+		    NOT = {
+		    	is_puppet_of = ACH
+		    	is_in_faction_with = ACH
+		    }
+		    NOT = { has_country_flag = cn_55_days_at_beijing_dec_FLAG }
+		}
+
+		available = {
+			has_war_with = ACH
+			has_full_control_of_state = 608
+		}
+
+		days_remove = 55
+
+		remove_effect = {
+			set_country_flag = cn_55_days_at_beijing_dec_FLAG
+			add_timed_idea = {
+            	idea = operation_rolling_dragon_ns
+            	days = 180
+            }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+mar_clear_tactic = {
+	custom_effect_tooltip = mar_clear_tactic
+	hidden_effect = {
+		remove_ideas = mar_tactic_idea
+		remove_ideas = mar_tactic_camouflaged_hull
+		remove_ideas = mar_tactic_false_flag
+		remove_ideas = mar_tactic_encourage_mutiny
+		remove_ideas = mar_tactic_boarding_attack
+	}
+}
+
+mar_clear_qmaster = {
+	custom_effect_tooltip = mar_clear_qmaster
+	hidden_effect = {
+		remove_ideas = mar_qmaster_idea
+		remove_ideas = mar_qmaster_aqua
+		remove_ideas = mar_qmaster_haato
+		remove_ideas = mar_qmaster_marine
+	}
+}
+
+mar_clear_bmaster = {
+	custom_effect_tooltip = mar_clear_bmaster
+	hidden_effect = {
+		remove_ideas = mar_bmaster_idea
+		remove_ideas = mar_bmaster_shion
+		remove_ideas = mar_bmaster_rushia
+		remove_ideas = mar_bmaster_noel
+		remove_ideas = mar_bmaster_gura
+		remove_ideas = mar_bmaster_ina
+	}
+}

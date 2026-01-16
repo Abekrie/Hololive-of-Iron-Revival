@@ -1,0 +1,58 @@
+
+state={
+	id=55
+	name="STATE_55"
+	manpower = 3798235
+
+	state_category = large_city
+
+	history={
+		owner = KIA
+		add_core_of = KIA
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+
+			564 = {
+				bunker = 5
+			}
+			9524 = {
+				bunker = 5
+			}
+			11445 = {
+				bunker = 5
+			}
+			3397 = {
+				bunker = 5
+			}
+			6488 = {
+				bunker = 5
+			}
+			589 = {
+				bunker = 5
+			}
+			3574 = {
+				bunker = 5
+			}
+		}
+		victory_points = {
+			6488 30 
+		}
+		victory_points = {
+			564 3
+		}
+		add_core_of = GER
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+				arms_factory = 4
+			}
+		}
+	}
+
+	provinces={
+		564 589 3397 3524 3574 6444 6488 6549 9486 9524 9547 11445 11533 11560 
+	}
+}

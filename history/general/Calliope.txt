@@ -1,0 +1,55 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MRI
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MRI_mamamori_holo_xgeneral
+    name="Mamamori"
+      portraits={
+            army={
+                  large="gfx/leaders/MRI/mamamori.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={scavenger fortress_buster skilled_staffer}
+            skill = 5
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 4
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MRI_small_calli_holo_xgeneral
+    name="Small Calli"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/small_calliope.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+}

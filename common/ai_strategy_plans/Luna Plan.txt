@@ -1,0 +1,98 @@
+Generic_LUN_historical = {
+	name = "LUN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = LUN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = LUN
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		himemori_luna_lun_focus
+		princess_of_the_forest_lun_focus
+		influence_paraguay_lun_focus
+
+		political_reform_lun_focus
+		constitutional_monarchy_lun_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_LUN_non_historical = {
+	name = "LUN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = LUN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = LUN
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		himemori_luna_lun_focus
+		princess_of_the_forest_lun_focus
+		influence_paraguay_lun_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

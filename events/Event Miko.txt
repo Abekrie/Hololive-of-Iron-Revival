@@ -1,0 +1,592 @@
+add_namespace = miko
+
+#Buy Greenland
+country_event = {
+	id = miko.8
+	title = miko.8.t
+	desc = miko.8.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.8.a	#Yes
+		ai_chance = { factor = 80 }
+		MIK = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.8.b	#No 
+		ai_chance = { factor = 20 }
+		MIK = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = miko.9
+	title = miko.9.t
+	desc = miko.9.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.9.a	#Yes
+		ai_chance = { factor = 80 }
+		MIK = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.9.b	#No 
+		ai_chance = { factor = 20 }
+		MIK = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = miko.10
+	title = miko.10.t
+	desc = miko.10.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.10.a	#Yes
+		ai_chance = { factor = 30 }
+		MIK = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = miko.10.b	#No 
+		ai_chance = { factor = 70 }
+		MIK = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = miko.11
+	title = miko.11.t
+	desc = miko.11.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.11.a	#Yes
+		ai_chance = { factor = 50 }
+		MIK = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = miko.11.b	#No 
+		ai_chance = { factor = 50 }
+		MIK = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = miko.12
+	title = miko.12.t
+	desc = miko.12.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.12.a	#Yes
+		ai_chance = { factor = 75 }
+		MIK = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.12.b	#No 
+		ai_chance = { factor = 25 }
+		MIK = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = miko.13
+	title = miko.13.t
+	desc = miko.13.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.13.a	#Yes
+		ai_chance = { factor = 50 }
+		MIK = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = miko.13.b	#No 
+		ai_chance = { factor = 50 }
+		MIK = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = miko.14
+	title = miko.14.t
+	desc = miko.14.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.14.a	#Yes
+		ai_chance = { factor = 50 }
+		MIK = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = miko.14.b	#No 
+		ai_chance = { factor = 50 }
+		MIK = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = miko.15
+	title = miko.15.t
+	desc = miko.15.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.15.a	#Yes
+		ai_chance = { factor = 80 }
+		MIK = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.15.b	#No 
+		ai_chance = { factor = 20 }
+		MIK = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = miko.16
+	title = miko.16.t
+	desc = miko.16.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.16.a	#Yes
+		ai_chance = { factor = 20 }
+		MIK = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = miko.16.b	#No 
+		ai_chance = { factor = 80 }
+		MIK = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = miko.17
+	title = miko.17.t
+	desc = miko.17.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.17.a	#Yes
+		ai_chance = { factor = 50 }
+		MIK = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = miko.17.b	#No 
+		ai_chance = { factor = 50 }
+		MIK = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = miko.19
+	title = miko.19.t
+	desc = miko.19.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.19.a	#Yes
+		ai_chance = { factor = 40 }
+		MIK = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = miko.19.b	#No 
+		ai_chance = { factor = 60 }
+		MIK = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = miko.20
+	title = miko.20.t
+	desc = miko.20.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.20.a	#Yes
+		ai_chance = { factor = 90 }
+		MIK = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.20.b	#No 
+		ai_chance = { factor = 10 }
+		MIK = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = miko.21
+	title = miko.21.t
+	desc = miko.21.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.21.a	#Yes
+		ai_chance = { factor = 80 }
+		MIK = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.21.b	#No 
+		ai_chance = { factor = 20 }
+		MIK = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = miko.22
+	title = miko.22.t
+	desc = miko.22.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.22.a	#Yes
+		ai_chance = { factor = 80 }
+		MIK = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = miko.22.b	#No 
+		ai_chance = { factor = 20 }
+		MIK = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = miko.23
+	title = miko.23.t
+	desc = miko.23.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.23.a	#Yes
+		ai_chance = { factor = 70 }
+		MIK = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = miko.23.b	#No 
+		ai_chance = { factor = 30 }
+		MIK = { country_event = { id = noel.37 } }
+	}
+}
+
+#----------- Rework section -----------
+
+#MIK - Seek to join a faction
+country_event = {
+	id = miko.24
+	title = miko.24.t
+	desc = miko.24.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.24.a	#Yes
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_to_faction = MIK
+		}
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.67 }}
+			hidden_effect = { news_event = { id = holo_news.68 days=1}}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.33 }}
+		}
+
+		if = { limit = { tag = COC }
+			MIK = { country_event = { id = proposed.15 }}
+		}
+	}
+	option = {
+		name = miko.24.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.68 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.34 }}
+		}
+
+		if = { limit = { tag = COC }
+			MIK = { country_event = { id = proposed.16 }}
+		}
+	}
+}
+
+#MIK - Demand German border states
+country_event = {
+	id = miko.25
+	title = miko.25.t
+	desc = miko.25.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.25.a	#Yes
+		ai_chance = { factor = 100 }
+		MIK = {
+			transfer_state = 63
+		}
+
+		if = {
+			limit = { owns_state = 68 }
+			MIK = {
+				transfer_state = 68
+			}
+		}
+		if = {
+			limit = { owns_state = 66 }
+			MIK = {
+				transfer_state = 66
+			}
+		}
+		if = {
+			limit = { owns_state = 67 }
+			MIK = {
+				transfer_state = 67
+			}
+		}
+
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.33 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.99 }}
+		}
+	}
+	option = {
+		name = miko.25.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.68 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.34 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#MIK - Buy New York
+country_event = {
+	id = miko.26
+	title = miko.26.t
+	desc = miko.26.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.26.a	#Yes
+		ai_chance = { factor = 100 }
+		add_equipment_to_stockpile = {
+            type = hololive_yen_0
+            amount = 20000
+            producer = MIK
+        }
+
+		MIK = {
+			transfer_state = 358
+		}
+
+
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.67 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.33 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.99 }}
+		}
+	}
+	option = {
+		name = miko.26.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.68 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.34 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#MIK - Sell Malta
+country_event = {
+	id = miko.27
+	title = miko.27.t
+	desc = miko.27.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = miko.27.a	#Yes
+		ai_chance = { factor = 100 }
+
+		transfer_state = 116
+
+		MIK = {
+			add_equipment_to_stockpile = {
+            	type = hololive_yen_0
+            	amount = 20000
+            	producer = ROOT
+        	}
+		}
+
+
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.67 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.33 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.99 }}
+		}
+	}
+	option = {
+		name = miko.27.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = PEK }
+			MIK = { country_event = { id = proposed.68 }}
+		}
+
+		if = { limit = { tag = HTO }
+			MIK = { country_event = { id = proposed.34 }}
+		}
+
+		if = { limit = { tag = GER }
+			MIK = { country_event = { id = proposed.100 }}
+		}
+	}
+}

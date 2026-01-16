@@ -1,0 +1,108 @@
+ideas = {
+    country = {
+	    research_level_i_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.04
+			    industrial_capacity_factory = 0.03
+			    decryption_factor = 0.01
+			}
+		}
+
+		research_level_ii_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.08
+			    industrial_capacity_factory = 0.06
+			    decryption_factor = 0.02
+			}
+		}
+
+		research_level_iii_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.12
+			    industrial_capacity_factory = 0.09
+			    decryption_factor = 0.03
+			}
+		}
+
+		research_level_iv_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.16
+			    industrial_capacity_factory = 0.12
+			    decryption_factor = 0.04
+			}
+		}
+
+		research_level_v_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.20
+			    industrial_capacity_factory = 0.15
+			    decryption_factor = 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,525 @@
+﻿l_english:
+ exile_government_alo_action_category:0 "Exile Government"
+ budapest_uprising_dec:0 "Ignite Budapest Uprising"
+ have_all_original_alo_can:0 "Control all of original Aloe"
+ have_all_aus_can:0 "Control all of Austria"
+ CET_alo_hun_form:0 "Add core on all of Austria, Hungary and some other surrounding states"
+ form_alo_hun_holo:0 "Form Aloe-Hungary"
+ form_alo_hun_category:0 "Aloe-Hungary"
+ form_united_south_america_category:0 "United South America"
+ form_usam_holo:0 "Form United South America"
+ CET_get_cored_all_USAM:0 "Get all on almost all states in South America"
+ CET_can_form_usam_hololive:0 "Unlock decision: Form United South America"
+ form_csa_coco_category:0 "Coco states of America"
+ EFF_COC_Form_CSA_cores:0 "Get core on all 4 newly annexed states"
+ form_coco_csa_decision:0 "Form CSA"
+ form_coco_csa_decision_have_all_COC:0 "Control all of Coco"
+ form_hololive_USA_category:0 "Hololive USA"
+ form_united_hololive_america_decision:0 "Form United Hololive of America"
+ control_united_hololive_america_decision_COC:0 "Control:Georgia, Florida and Texas"
+ control_united_hololive_america_decision_FLA:0 "Control:California, Nevada and Colorado"
+ control_united_hololive_america_decision_USA:0 "Control:Illinois, Oklahoma and Minnesota"
+ control_united_hololive_america_decision_MIO:0 "Control:Maryland, Virginia and New England"
+ EFF_COC_Form_hololive_USA_cores:0 "Get core on all of USA"
+ EFF_core_all_britain_and_ireland:0 "Get core on all of Britain and Ireland"
+ form_united_kingdom_category:0 "Form United Kingdom"
+ form_ENG_UK_holo:0 "Form United Kingdom"
+ form_uk_holo_decision_have_all_WTS:0 "Control all of Watson on Britain"
+ form_uk_holo_decision_have_all_ENG:0 "Control all of England"
+ form_uk_holo_decision_have_all_CHC:0 "Control all of Choco on Britain"
+ army_general_hololive_category:0 "Recruit Hololive General"
+ ###
+ 
+ ALO_recruit_general_dec:0 "Recruit Aloe"
+ AQA_recruit_general_dec:0 "Recruit Aqua"
+ ART_recruit_general_dec:0 "Recruit Artia"
+ AYA_recruit_general_dec:0 "Recruit Ayame"
+ BTN_recruit_general_dec:0 "Recruit Botan"
+ CIV_recruit_general_dec:0 "Recruit Civia"
+ CHC_recruit_general_dec:0 "Recruit Choco"
+ COC_recruit_general_dec:0 "Recruit Coco"
+ DOR_recruit_general_dec:0 "Recruit Doris"
+ ECH_recruit_general_dec:0 "Recruit Echo"
+ FLA_recruit_general_dec:0 "Recruit Flare"
+ FBK_recruit_general_dec:0 "Recruit Fubuki"
+ GAW_recruit_general_dec:0 "Recruit Gura"
+ HTO_recruit_general_dec:0 "Recruit Haachama"
+ IOF_recruit_general_dec:0 "Recruit Iofifteen"
+ KIA_recruit_general_dec:0 "Recruit Kiara"
+ KRN_recruit_general_dec:0 "Recruit Korone"
+ KAN_recruit_general_dec:0 "Recruit Kanata"
+ LUN_recruit_general_dec:0 "Recruit Luna"
+ LAM_recruit_general_dec:0 "Recruit Lamy"
+ MRI_recruit_general_dec:0 "Recruit Calliope"
+ MAR_recruit_general_dec:0 "Recruit Marine"
+ MEL_recruit_general_dec:0 "Recruit Mel"
+ MAT_recruit_general_dec:0 "Recruit Matsuri"
+ MIK_recruit_general_dec:0 "Recruit Miko"
+ MIO_recruit_general_dec:0 "Recruit Mio"
+ MOO_recruit_general_dec:0 "Recruit Moona"
+ NEN_recruit_general_dec:0 "Recruit Nene"
+ NOE_recruit_general_dec:0 "Recruit Noel"
+ NIN_recruit_general_dec:0 "Recruit Ina"
+ OKA_recruit_general_dec:0 "Recruit Okayu"
+ PLK_recruit_general_dec:0 "Recruit Polka"
+ PEK_recruit_general_dec:0 "Recruit Pekora"
+ ROS_recruit_general_dec:0 "Recruit Aki"
+ RSA_recruit_general_dec:0 "Recruit Rosalyn"
+ RUS_recruit_general_dec:0 "Recruit Rushia"
+ RIS_recruit_general_dec:0 "Recruit Risu"
+ ROB_recruit_general_dec:0 "Recruit Roboco"
+ TOW_recruit_general_dec:0 "Recruit Towa"
+ SOR_recruit_general_dec:0 "Recruit Sora"
+ SUI_recruit_general_dec:0 "Recruit Suisei"
+ WAT_recruit_general_dec:0 "Recruit Watame"
+ WTS_recruit_general_dec:0 "Recruit Watson"
+ SUB_recruit_general_dec:0 "Recruit Subaru"
+ SHI_recruit_general_dec:0 "Recruit Shion"
+ YOG_recruit_general_dec:0 "Recruit Yogiri"
+
+ #Hololive ID
+ gura_dockyard_construction_indonesia_holo_dec:0 "Gura dockyard construction"
+ CET_core_all_ins:0 "Get core on all of Indonesia"
+ form_hololive_ins_category:0 "Hololive Indonesia"
+ form_indonesia_holo:0 "Form Indonesia"
+ war_tax_indonesia_holo_dec:0 "War tax"
+ 
+ #Hololive CN
+ form_china_holo_category:0 "Hololive China"
+ form_china_holo:0 "Form China"
+ EFF_core_all_china_holo:0 "Get core on all of China"
+
+ #Hololive Oceania
+ form_oceania_holo_category:0 "Hololive Oceania"
+ form_oceania_holo:0 "Form Oceania"
+ EFF_core_all_OCEANIA:0 "Get core on all of Pacific Ocean"
+ form_oceania_holo_decision_have_all_GAW:0 "Control all of mainland Gura"
+ form_oceania_holo_decision_have_all_HTO:0 "Control all of Haato Australia"
+
+ #Hololive Arabia
+ form_arabia_holo_category:0 "Hololive Arabia"
+ form_arabia_holo:0 "Form Arabia"
+ form_arabia_holo_decision_have_all_KRN:0 "Control all of mainland Korone"
+ form_arabia_holo_decision_have_all_SUB:0 "Control all of mainland Subaru"
+ EFF_core_all_ARABIA:0 "Get core on all of Arab states"
+
+ #Hololive Turkey
+ form_ottoman_holo_category:0 "Hololive Turkey"
+ form_ottoman_holo:0 "Form Turkey"
+ form_ottoman_holo_decision_have_all_TUR:0 "Control all of mainland Turkey"
+ EFF_core_all_TURKEY:0 "Get core on all of §YTurkey §W"
+ 
+ #Economic action
+ buy_civ_hololive_dec:0 "(4,000) Buy Civilian Factory"
+ buy_mil_hololive_dec:0 "(3,000) Buy Military Factory"
+ buy_dock_hololive_dec:0 "(2,500) Buy Naval Dockyard"
+ buy_infantry_equipment_hololive_dec:0 "(2,000) Buy infantry equipment"
+ buy_artillery_hololive_dec:0 "(2,000) Buy artillery"
+ buy_manpower_hololive_dec:0 "(5,000) Buy manpower"
+ buy_support_equipment_hololive_dec:0 "(2,000) Buy support equipment"
+ buy_amelia_watson_hololive_dec:0 "(5,000) Buy Amelia Watson"
+
+ #Hololive Balkan
+ holo_balkan_category:0 "Hololive Balkan"
+ form_united_balkan_holo:0 "Form United Balkan"
+ form_balkan_holo_decision_have_all_SOR:0 "Control all of mainland Sora"
+ form_balkan_holo_decision_have_all_YAG:0 "Control all of Yugoslavia"
+ form_balkan_holo_decision_have_all_LAM:0 "Control all of Lamy"
+ form_balkan_holo_decision_have_all_ALO:0 "Control all of Romania core in Aloe"
+ EFF_core_all_BALKAN:0 "Get core on all of Balkan"
+ attract_foreign_investor_balkan_holo:0 "Attract foreign investor"
+ trans_balkan_railway_balkan_holo:0 "Trans-Balkan Railway"
+ organise_partisan_balkan_holo:0 "Organise Partisan"
+
+ #Nene Decision
+ nene_nuclear_operation_decision_category:0 "Supernenechi Nuclear Operation"
+ nuke_moscow_nene_dec:0 "Nuke Moscow"
+ nuke_stalingrad_nene_dec:0 "Nuke Stalingrad"
+ nuke_minsk_nene_dec:0 "Nuke Minsk"
+
+ form_ukraine_holo_category:0 "Hololive Russia"
+ form_ukraine_holo:0 "Form Ukraine"
+ form_ukraine_holo_decision_have_all_NEN:0 "Control all of Nene"
+ EFF_core_all_UKRAINE:0 "Get core on all of Ukraine"
+
+ #Matsuri Decision
+ matsuri_democratic_influence_decision_category:0 "Democratic Influencer"
+ MIK_boost_dem_matsuri_dec:0 "Influence [From.Owner.GetNameDef]"
+
+ #Suisei Decision
+ suisei_hi_honey_virus_decision_category:0 "Hi Honey Virus"
+ suisei_superspreading_dec:0 "Superspreading"
+ CET_suisei_superspreading_dec:0 "Every §Yenemy§W country will get §O'Hi Honey Virus'§W\n(This decision will be re-enable every 35 days)"
+ suisei_indirect_virus_transmission_dec:0 "Indirect Virus Transmission"
+ CET_suisei_indirect_virus_transmission_dec:0 "Every §Yneighbor§W country will get §O'Hi Honey Virus'§W\n(This decision will be re-enable every 35 days)"
+ suisei_vaccine_booster_dec:0 "Vaccine booster"
+ CET_suisei_vaccine_booster_dec:0 "Every §Cally§W country will get §G'Hi Honey Booster'§W\n(This decision will be re-enable every 125 days)"
+ suisei_weaponize_the_virus_dec:0 "Weaponize the Virus"
+ CET_suisei_weaponize_the_virus_dec:0 "(This decision will be re-enable every 125 days)"
+
+ suisei_anemachi_inquisition_decision_category:0 "Anemachi Inquisition"
+ suisei_inquisition_in_galicia_dec:0 "Inquisition in Galicia"
+ suisei_inquisition_in_catalonia_dec:0 "Inquisition in Catalonia"
+ suisei_inquisition_in_madrid_dec:0 "Inquisition in Madrid"
+ suisei_inquisition_in_sevilla_dec:0 "Inquisition in Sevilla"
+ CTT_anemachi_sevilla:0 "Has inquisited Sevilla"
+ CTT_anemachi_madrid:0 "Has inquisited Madrid"
+ CTT_anemachi_catalonia:0 "Has inquisited Catalonia"
+ CTT_anemachi_galicia:0 "Has inquisited Galicia"
+ suisei_end_the_inquisition_dec:0 "End the Inquisition"
+ CET_suisei_end_the_inquisition_dec:0 "Get core on every Spanish states"
+
+ #Fubuki Decision
+ fubuki_biszarre_adventure_decision_category:0 "Fubuki's Bizarre Adventure"
+ fubuki_grandpas_treasure_chest_dec:0 "Grandpa's treasure chest"
+ CET_fubuki_grandpas_treasure_chest_dec:0 "§G(10%) §WAdd §G1 §YCivilian Factory\n§G(20%) §WAdd §G1 §YMilitary Factory\n§G(20%) §WAdd §G1 §YNaval Dockyard\n§G(50%) §WWar Support §G+1%§W"
+ fubuki_whiteout_blizzard_dec:0 "Whiteout Blizzard"
+ fubuki_seven_page_ari_dec:0 "Seven Page Ari"
+
+ fubuki_nordic_industrial_development_category:0 "Nordic Industrial Development"
+ hololive_nordic_industrial_development_dec:0 "Develop State Industry" 
+ #Marine Decision
+ marine_pirateer_category:0 "Pirateer"
+ CET_marine_pirateer_dec:0 "§G(75%) §WAdd §G1000 §YYen\n§G(20%) §WAdd §G2000 §YYen\n§G(5%) §WAdd §G3000 §YYen\n§W"
+ marine_raid_mel_coast_dec:0 "Raid Mel"
+ marine_raid_aki_coast_dec:0 "Raid Aki"
+ marine_raid_coco_coast_dec:0 "Raid Coco"
+ marine_raid_flare_coast_dec:0 "Raid Flare"
+
+ #Moona Decision
+ moona_spacerace_decision_category:0 "Space Race"
+ moona_space_shuttle_sr_dec:0 "Space Shuttle"
+ moona_logistic_sr_dec:0 "Logistic"
+ moona_train_the_astronaut_sr_dec:0 "Train the Astronaut"
+ moona_rocket_site_sr_dec:0 "Rocket Site"
+
+ moona_space_shuttle_sr_dec_FLAG:0 "Take decision: §YSpace shuttle§W"
+ moona_logistic_sr_dec_FLAG:0 "Take decision: §YLogistic§W"
+ moona_train_the_astronaut_sr_dec_FLAG:0 "Take decision: §YTrain the Astronaut§W"
+ moona_rocket_site_sr_dec_FLAG:0 "Take decision: §YRocket site§W"
+
+ form_united_mexico_category:0 "Hololive Mexico"
+ form_mexico_holo:0 "United Mexico"
+
+ #Choco Decision
+ choco_seduction_warfare_category:0 "Seduction Warfare"
+ choco_issue_military_condom_dec:0 "Issue Military Condom"
+ choco_drop_ntr_leaflet_dec:0 "Drop NTR leaflet"
+ choco_asmr_radio_dec:0 "ASMR radio"
+ choco_publish_lewd_poster_dec:0 "Publish Lewd Poster"
+ choco_legalise_hentai_industry_dec:0 "Legalize Hentai Industry"
+ choco_organise_doujin_charity_dec:0 "Organise doujin charity"
+ 
+ CET_choco_drop_ntr_leaflet_dec:0 "Every §Yenemy§W country will get §O'NTR leaflet'§W\n(This decision will be re-enable every 60 days)"
+ CET_choco_asmr_radio_dec:0 "(This decision will be re-enable every 60 days)"
+
+ #Mio Decision
+ mio_wolf_of_wall_street_decision_category:0 "Wolf of Wall Street"
+ mio_invest_in_material_factory_dec:0 "Invest in Material Factory"
+ mio_invest_in_fuel_industry_dec:0 "Invest in Fuel Industry"
+ mio_invest_in_electronic_industry_dec:0 "Invest in Electronic Industry"
+ mio_invest_in_naval_industry_dec:0 "Invest in Naval Industry"
+ 
+ CET_mio_invest_in_electronic_industry_dec:0 "When the investment complete, you will get §YElectronic §Gresearch bonus §Wand your §YMoney §Wback"
+ CET_mio_invest_in_naval_industry_dec:0 "When the investment complete, you will get §YNaval Equipment §Gresearch bonus §Wand your §YMoney §Wback"
+ CET_mio_invest_in_fuel_industry_dec:0 "When the investment complete, you will get §YRefinery §Gresearch bonus §Wand your §YMoney §Wback"
+ CET_mio_invest_in_material_factory_dec:0 "When the investment complete, you will get §YSupport Equipment §Gresearch bonus §Wand your §YMoney §Wback"
+
+ #Flare decision
+ flare_soap_opera_category:0 "Soap Opera"
+ flare_influence_noel_dec:0 "Influence Noel"
+ flare_influence_rushia_dec:0 "Influence Rushia"
+ flare_influence_marine_dec:0 "Influence Marine"
+ flare_influence_pekora_dec:0 "Influence Pekora"
+
+ flare_enforce_nap_dec:0 "Enforce NAP"
+ flare_enforce_military_access_dec:0 "Enforce Military Access"
+ flare_enforce_intelligence_dec:0 "Intelligence sharing"
+ flare_enforce_guarantee_dec:0 "Seek guarantee"
+ flare_choose_new_influencee_dec:0 "Choose new Influencee"
+
+ CET_flare_choose_new_influencee_dec:0 "You can choose new Influencee every §Y180 §Wdays"
+
+ #Yagoo decision
+ yagoo_colonial_empire_decision_category:0 "Hololive Colonial Empire"
+ yagoo_develop_our_colony_dec:0 "Develop our colony"
+ yagoo_encourage_settlement_dec:0 "Encourage settlement"
+
+ #Pekora decision
+ pekora_war_criminal_category:0 "War Crime Activity"
+ pekora_build_idol_education_camp_dec:0 "Idol Education Camp"
+ pekora_employ_poison_asacoco_dec:0 "Employ Poison Asacoco"
+ pekora_joseph_human_experiment_dec:0 "Joseph Human Experiment"
+ pekora_dismantle_eiffel_tower_dec:0 "Dismantle Eiffel Tower"
+
+ #Subaru decision
+ subaru_international_police_category:0 "International Police"
+ subaru_international_police_category_desc:0 "We have many reports from Italy that Pekora has been putting Italian in Education camp. The Italians are receiving inhumane treatment. Try checking in on Pekora's education camp on the map.\nPekora will pay the fine or bribe us once we investigate her education camp"
+ subaru_investigate_pekora_education_camp_dec:0 "Investigate the Education camp"
+ subaru_police_exercise_dec:0 "Police Exercise"
+ SUB_doing_the_investigation:0 "Already have an on going investigation"
+
+ #Kiara decision
+ kiara_kfp_category:0 "Kiara Fried Chicken"
+ kiara_open_new_kfp_dec:0 "Open new KFP"
+
+ #Amelia decision
+ amelia_detective_on_the_scene_category:0 "Detective on the scene"
+ amelia_investigate_kfp_misconduct_dec:0 "Investigate KFP misconduct"
+ amelia_007_dec:0 "Deploy 007"
+ WTS_doing_the_investigation:0 "No on going investigation"
+ amelia_break_the_enigma_code_dec:0 "Break the enigma"
+ CET_amelia_break_the_enigma_code_dec:0 "Every §Yenemy§W country will get §O'Intelligence sabotaged'§W\n(This decision will be re-enable every 50 days)"
+ amelia_imperial_federation_category:0 "Imperial Federation"
+ amelia_establish_canada_colony_dec:0 "Establish Canadian colony"
+ amelia_establish_raj_colony_dec:0 "Establish Raj colony"
+ amelia_establish_australia_colony_dec:0 "Establish Australia colony"
+ amelia_establish_hongkong_colony_dec:0 "Establish Hong Kong colony"
+
+ amelia_small_ame_manifesto_category:0 "Small Ame Manifesto"
+ amelia_boost_com_holoen_dec:0 "Spread Smallist idea in [From.Owner.GetNameDef]"
+ amelia_set_up_puppet_gov_dec:0 "Establish puppet government in [From.Owner.GetNameDef]"
+
+ #Gura
+ gura_shark_activity_category:0 "Shark Activity"
+ gura_shark_infested_area_dec:0 "Shark infesting"
+ gura_ongoing_shark_infestation:0 "No on going shark infestation"
+ gura_build_royal_dockyard_dec:0 "Build Royal Dockyard"
+
+ #Calliope
+ calliope_dead_on_arrival_category:0 "Dead on Arrival"
+ calliope_nuke_the_capital_dec:0 "Nuke this capital"
+ 
+ #Paraguay
+ paraguay_infiltrate_enemy_border_category:0 "Infiltrate Enemy's Borders"
+ paraguay_infiltrate_border_dec:0 "Infiltrate [From.Owner.GetNameDef]"
+
+ #Shion
+ shion_mage_of_violet_category:0 "Mage of Violet"
+ shion_deny_permission_to_die_dec:0 "Deny permission to die"
+ shion_mp_burst_dec:0 "MP Burst"
+ shion_shionist_jihad_dec:0 "Shionist Jihad"
+ CET_shion_shionist_jihad_dec:0 "Every §Yenemy§W country will get §O'Terrorist Attacked'§W\n"
+
+ #Ayame Decision
+ ayame_caucasus_oil_leasing_category:0 "Caucasus Oil Leasing"
+ ayame_caucasus_oil_leasing:0 "Made deal with [From.Owner.GetNameDef]"
+ Ayame_oil_already_leased:0 "§OAyame already lease oil§W"
+
+ #HoloCN
+ hololive_china_main_category:0 "Hololive CN"
+ cn_request_garrison_support_dec:0 "Request Garrison Support"
+ cn_request_equipment_support_dec:0 "Request Infantry Equipment"
+ cn_request_extra_budget_dec:0 "Request Extra Budget"
+ cn_invite_to_faction_dec:0 "Invite [From.Owner.GetNameDef] to faction"
+ cn_demand_border_states_dec:0 "Border state or War"
+ cn_ongoing_claiming_state:0 "Has ongoing state claiming"
+ cn_organized_terrorist_attack_dec:0 "Terrorist Attack"
+ cn_organized_cyber_bullying_dec:0 "Cyber bullying"
+ CET_cn_organized_cyber_bullying_dec:0 "Every §Yenemy§W country will get §O'Cyberbully'§W\n"
+ cn_beijing_conference_dec:0 "Invite [From.Owner.GetNameDef] to Beijing"
+ cn_55_days_at_beijing_dec:0 "55 Days at Beijing"
+
+ #Towa Decision
+ towa_debiru_activity_category:0 "Debiru Activity"
+ towa_sell_strait_pass_dec:0 "Sell strait pass to [From.Owner.GetNameDef]"
+ towa_delamification_dec:0 "De-Lamify this state"
+
+ #Okayu Decision
+ okayu_okayu_court_category:0 "Okayu Court"
+ okayu_okayu_court_category_desc:0 "After each statement of Hololive members they let the viewers vote for guilty or innocent on twitter. The final verdict, as you could imagine, was guilty."
+ okayu_sicily_trial_dec:0 "Sicily Trial"
+ better_call_saul_dec:0 "Better Call Saul"
+ #Korone Decision
+ korone_suez_crisis_category:0 "Suez Crisis"
+ korone_ignite_the_suez_crisis_dec:0 "Ignite the Suez Crisis"
+ korone_prevent_intervention_in_suez_crisis_dec:0 "Prevent [From.Owner.GetNameDef] from intervention"
+ korone_suez_crisis_category_desc:0 "The more country enter the crisis, the more likely East Africa mandate is going to refuse our demand."
+
+ #Noel Decision
+ noel_shirogane_federation_category:0 "Shirogane Federation"
+ noel_establish_a_puppet_state_dec:0 "Establish [From.Owner.GetNameDef] puppet state"
+ noel_knight_exercise_dec:0 "Knight Exercise"
+
+ #Rushia Decision
+ rushia_necromancer_power_category:0 "Necromancer Power"
+ rushia_death_stare_dec:0 "Death Stare"
+ rushia_cursed_of_the_undead_dec:0 "Cursed of the Undead"
+ rushia_soviet_rushia_dec:0 "Soviet Rushia"
+
+ #Black Sunday
+ black_sunday_decision_category:0 "Black Sunday"
+ black_sunday_decision_category_desc:0 "Haato, a major player in Oceania, has plunged herself into a civil war. This cause a world wide shortage in MRE and food supply. Food price has rised up as high as ever, especially in the industrial based economy country."
+ black_sunday_send_troops_back_home_dec:0 "Send troops back home"
+ ongoing_black_sunday_removal:0 "Had already taken action on Black Sunday"
+ black_sunday_introduce_a_new_currency_dec:0 "Introduce a new currency"
+ black_sunday_public_work_programs_dec:0 "Public Works Program"
+ black_sunday_rally_for_work_dec:0 "Rally for work"
+ black_sunday_support_worker_union_dec:0 "Support worker union"
+
+ #Paraguay
+ paraguay_future_of_paraguay_category:0 "Future of Paraguay"
+ paraguay_future_of_paraguay_category_desc:0 "Paraguay, the last non-Hololive nation in South America, has always been recognized as a buffer state between Watame, Luna, and Roboco. However, the future of Paraguay is still uncertain, as the major players in the region are going after its natural resource"
+ par_cave_to_watame_dec:0 "Cave to Watame"
+ par_cave_to_luna_dec:0 "Cave to Luna"
+ WAT_influence_paraguay_breakdown:0 "[Root.GetNameDefCap] has [?Root.WAT_influence_paraguay|+0] §HInfluence Points§!\n"
+ WAT_influence_paraguay_icon_value:0 "[?Root.WAT_influence_paraguay|0H]"
+ LUN_influence_paraguay_breakdown:0 "[Root.GetNameDefCap] has [?Root.LUN_influence_paraguay|+0] §HInfluence Points§!\n"
+ LUN_influence_paraguay_icon_value:0 "[?Root.LUN_influence_paraguay|0H]"
+
+ par_send_volunteer_to_paraguay_dec:0 "Send volunteer"
+ par_send_economic_aid_paraguay_dec:0 "Send economic aid"
+ par_strengthen_diplomatic_tie_paraguay_dec:0 "Strengthen diplomatic tie"
+ par_invest_in_the_industrial_complex_paraguay_dec:0 "Invest in the Industrial Complex"
+ par_demand_luna_out_of_paraguay_dec:0 "Demand Luna out of Paraguay"
+
+ CET_paraguay_inflnce_10:0 "Gain §G10 §YInfluence Points§W"
+ CET_paraguay_inflnce_5:0 "Gain §G5 §YInfluence Points§W"
+ CET_paraguay_inflnce_15:0 "Gain §G15 §YInfluence Points§W"
+
+ CTT_par_demand_luna_out_of_paraguay_dec:0 "Must have §O25§W or more §YInfluence Points§W than §YLuna§W"
+ CTT_par_demand_watame_out_of_paraguay_dec:0 "Must have §O25§W or more §YInfluence Points§W than §YWatame§W"
+
+ par_set_collaborate_government_paraguay_dec:0 "Set up collaborate government"
+ FLAG_Future_of_Paraguay_end:0 "Watame or Luna backed out of Paraguay"
+
+ ongoing_influence_on_paraguay:0 "Is Influencing Paraguay"
+
+ watame_sheep_house_category:0 "Sheep House"
+ watame_sheep_house_dec:0 "Build a sheep house"
+
+ #Anemachi Railgun
+ anemachi_railgun_category:0 "Stellaire Artillerie"
+ anemachi_railgun_category_desc:0 "Stellaire Artillerie. Anemachi believes that Stellaire Artillerie will be the ultimate weapon of deterrence. Anyone who dares to invade Stellar Sphere will have to think twice."
+ anemachi_railgun_load_1_dec:0 "Load the 1st chamber"
+ anemachi_railgun_load_2_dec:0 "Load the 2nd chamber"
+ anemachi_railgun_load_3_dec:0 "Load the 3rd chamber"
+ anemachi_railgun_load_4_dec:0 "Load the 4th chamber"
+ anemachi_activate_stellarie_artillerie_dec:0 "Activate Stellaire Artillerie"
+
+ anemachi_railgun_load_1_flag:0 "Loaded 1st chamber"
+ anemachi_railgun_load_2_flag:0 "Loaded 2nd chamber"
+ anemachi_railgun_load_3_flag:0 "Loaded 3rd chamber"
+ anemachi_railgun_load_4_flag:0 "Loaded 4th chamber"
+
+ hololive_economic_action_category_desc:0 "\nTotal balance: §Y[?num_equipment@hololive_yen_0]§! Yen\n"
+
+ #Sora Decision
+ sora_towa_aegean_islands_dispute_decision_category:0 "Aegean Sea Dispute"
+ sora_towa_aegean_islands_dispute_decision_category_desc:0 "Sora and Towa situated in the region that connect Europe and Asia. It is without a doubt, there will be some dispute between these two country. Treaty of Sevres states that Sora will be demilitarized from Edirne and the Aegean Islands. However, everything changes when the HoloCouncil spawns. Bosporus strait is more important than ever to connect the world with the council...\n\nThe §Ghigher§! the §Ypopularity§!, the more likely §4[SOR.GetNameWithFlag]§! will be able to remilitarize.\nThe §Rlower§! the §Ypopularity§! the more likely §1[TOW.GetNameWithFlag]§! will be able to stage coup in these states\n\n§Y[SOR.GetNameWithFlag]'s§! popularity: §Y[?Root.SOR_sora_popularity_aegean|+0]§!"
+ add_to_sora_pop:0 "Add §Y5§! §CSora popularity§!"
+ add_to_sora_pop_10:0 "Add §Y10§! §CSora popularity§!"
+ remove_from_sora_pop:0 "Remove §Y5§! §CSora popularity§!"
+ remove_from_sora_pop_10:0 "Remove §Y10§! §CSora popularity§!"
+remove_from_sora_pop_15:0 "Remove §Y15§! §CSora popularity§!"
+ SOR_aegean_islands_at_least_25:0 "Has at least §Y25§! §CSora popularity§!"
+ SOR_aegean_islands_less_than_10:0 "Has §Y-10§! or less §CSora popularity§!"
+
+ sora_improve_relation_with_the_local_dec:0 "Improve relation with the locals"
+ sora_aegean_islands_development_plan_dec:0 "Aegean Islands Development Plan"
+ sora_dodecanese_development_plan_dec:0 "Dodecanese Development Plan"
+ sora_edirne_development_plan_dec:0 "Edirne Development Plan"
+ sora_hold_a_concert_dec:0 "Hold a concert"
+ sora_remilitarize_on_aegean_islands_dec:0 "Remilitarize on Aegean Islands"
+ sora_remilitarize_on_dodecanese_dec:0 "Remilitarize on Dodecanese"
+ sora_remilitarize_on_edinre_dec:0 "Remilitarize on Edirne"
+
+ towa_defame_sora_dec:0 "Defame Sora"
+ towa_fund_greek_separatist_dec:0 "Fund Greek Separatist"
+ towa_naval_exercise_in_the_area_dec:0 "Naval Exercise in the area"
+ towa_stage_coup_on_aegean_islands_dec:0 "Stage coup on Aegean Islands"
+ towa_stage_coup_on_dodecanese_dec:0 "Stage coup on Dodecanese"
+
+ #Seduction Warfare Expansion
+ choco_seduction_warfare_category_desc:0 "Seduction Warfare, the ultimate weapon of Succubus Entente. While many consider it to be unethical, some still support it and even wish the weapon to be used upon themselves.\n\n§1Seduction Points§!: §Y[?Root.succubus_points|+0]§!\n§YSeduction Points§! Change: §G[?Root.succubus_monthly|=+0]§! per month"
+ choco_hip_attack_dec:0 "Hips Attack"
+ CHC_has_sp_1:0 "Has 1 §1Seduction Points§!"
+ CHC_has_sp_2:0 "Has 2 §1Seduction Points§!"
+ CHC_has_sp_3:0 "Has 3 §1Seduction Points§!"
+ CHC_has_sp_4:0 "Has 4 §1Seduction Points§!"
+ CHC_has_sp_5:0 "Has 5 §1Seduction Points§!"
+ CHC_has_sp_6:0 "Has 6 §1Seduction Points§!"
+ CHC_has_sp_10:0 "Has 10 §1Seduction Points§!"
+ CHC_remove_sp_1:0 "Remove 1 §1Seduction Points§!"
+ CHC_remove_sp_2:0 "Remove 2 §1Seduction Points§!"
+ CHC_remove_sp_3:0 "Remove 3 §1Seduction Points§!"
+ CHC_remove_sp_4:0 "Remove 4 §1Seduction Points§!"
+ CHC_remove_sp_5:0 "Remove 5 §1Seduction Points§!"
+ CHC_remove_sp_6:0 "Remove 6 §1Seduction Points§!"
+ CHC_remove_sp_10:0 "Remove 10 §1Seduction Points§!"
+ CHC_extra_sp_monthly:0 "Gain extra 1 §1Seduction Points§! per month"
+
+ #Question of Ireland
+ choco_question_of_ireland_category:0 "Question of Ireland"
+ choco_develop_leinster_dec:0 "Develop Leinster"
+ choco_develop_northern_ireland_dec:0 "Develop Northern Ireland"
+ choco_develop_connaught_dec:0 "Develop Connaught"
+ choco_develop_munster_dec:0 "Develop Munster"
+ choco_peace_talk_with_the_IRA_dec:0 "Peace Talk with IRA"
+ CTT_choco_peace_talk_with_the_IRA_dec:0 "Develop every state in Ireland"
+
+ choco_oglaigh_na_choco_category:0 "Oglaigh na Choco"
+ CET_choco_oglaigh_na_france_dec:0 "Create a §YLocal Defence Force§! in France"
+ CET_choco_oglaigh_na_spain_dec:0 "Create a §YLocal Defence Force§! in Spain"
+ CET_choco_oglaigh_na_germany_dec:0 "Create a §YLocal Defence Force§! in Germany"
+ CET_choco_oglaigh_na_norway_dec:0 "Create a §YLocal Defence Force§! in Norway"
+ choco_oglaigh_na_germany_dec:0 "Oglaigh na Germany"
+ choco_oglaigh_na_france_dec:0 "Oglaigh na France"
+ choco_oglaigh_na_spain_dec:0 "Oglaigh na Spain"
+ choco_oglaigh_na_norway_dec:0 "Oglaigh na Norway"
+
+ #Matsuri Remilitarize Estonia
+ matsuri_remilitarize_estonia_category:0 "Remilitarization of Estonia"
+ matsuri_remilitarize_estonia_category_desc:0 "In order to remilitarize Estonia, Matsuri must make sure that the locals will vote in her favour before holding the referendum. To increase her popularity, Matsuri launched a campaign to develop and provide job for unemployed Estonian"
+ develop_estonia_state_matsuri_dec:0 "Develop [FROM.GetName]"
+ hold_referendum_in_estonia_matsuri_dec:0 "Hold referendum in Estonia"
+ MAT_estonia_already_developed:0 "Already Developed"
+ release_hoshikawa_matsuri_dec:0 "Release Hoshikawa"
+
+ #Miko Fire Disaster
+ miko_great_fire_disaster_category:0 "Great Fire Disaster"
+ miko_great_fire_disaster_category_desc:0 "Lava is the double edged bucket. You can use it against your enemy, but it can also burn your hands.\n\nMiko is the elitest of the elite. She a professional Lava bender. However, even professional makes mistake. A droplet of Lava can cause the §YGreat Fire Disaster§!"
+ miko_recover_from_fire_disaster_dec:0 "Recover from Fire"
+ miko_lava_trap_dec:0 "Lava Trap"
+ miko_reconstruction_bill_dec:0 "Reconstruction Bill"
+ miko_agent_orange_dec:0 "Agent Orange"
+
+ #KFP Kongo
+ kiara_future_of_kongo_category:0 "Future of Kongo"
+ kongo_ally_with_other_dec:0 "Ally with [FROM.OWNER.GetNameWithFlag]"
+ kongo_integrate_african_state_dec:0 "Integrate [FROM.GetName]"
+
+ #Mumei
+ guardian_of_civilization_category:0 "Guardian of Civilization"
+ guardian_of_civilization_category_desc:0 "As a living embodiment of the sum of mankind's efforts—the mark that humans have left on the world—she is far removed from her fellow members, as well as other lifeforms. Due to not being created by the Gods, she was free to choose her own appearance, and decided to make herself owl-like, after the bird that symbolizes wisdom."
+ mumei_seven_poetry_dec:0 "Seven Poetry"
+ mumei_seven_deadly_sin_dec:0 "Seven Deadly Sin"
+
+ #Sana
+ sana_space_station_category:0 "Space Station"
+ sana_space_station_category_desc:0 ""Space" refers not only to this universe we live in, but all dimensions and matter to exist. It is a concept unbridled by definition, and one that continues to grow in scope limitlessly. As it is yet to be fully explored by man, her seemingly strange behavior and speech can be explained away with a simple, "Humanity simply isn't yet ready to understand.""
+ sana_invite_to_faction_dec:0 "Invite [FROM.OWNER.GetName] to faction"
+ sana_orbital_strike_dec:0 "Orbital strike [FROM.OWNER.GetName]"
+ sana_humanity_reservation_coalition_category:0 "Humanity Preservation Coalition"
+ sana_humanity_reservation_coalition_category_desc:0 "In order to preserve the humanity, we must work together to fight Sana and Ina's aggression"
+ sana_wall_rushia_dec:0 "Build the Wall Rushia"
+ sana_infiltrate_inanist_hq_dec:0 "Infiltrate Inanist HQ"
+ sana_establish_the_survey_corps_dec:0 "Establish the Survey Corps"
+ sana_massive_bombing_campaign_dec:0 "Massive Bombing Campaign"
+ sana_pre_emptive_strike_dec:0 "Pre-emptive Strike"
+ sana_rumbling_final_stage_dec:0 "Nuke [FROM.GetName]"
+ sana_recruit_mikasa_dec:0 "Recruit Mikasa"
+
+#Baelz
+baelz_council_economic_sphere_category:0 "Council Economic Sphere"
+baelz_council_economic_sphere_category_desc:0 "Baelz believes that Council Economic Sphere will not only improve trade but also strengthen ties among council members. We must grow stronger together."
+baelz_invests_in_your_industry_dec:0 "Invest in [FROM.OWNER.GetNameWithFlag]"
+on_going_investment_bal:0 "Have an ongoing investment"
+baelz_invests_in_our_own_industry_dec:0 "Invest in our own industry"
+
+#Aqua resistance military training
+aqua_hololive_resistance_category:0 "Hololive Resistance"
+aqua_hololive_resistance_category_desc:0 "Resistance power is not a miracle-working talisman. It does not, overnight, heal all the evils of the past- illiteracy, lack of culture, the consequences of a barbarous war, the aftermath of predatory Idolism. But it does pave the way to Aquaism. It gives those who were formerly oppressed the chance to straighten their backs and to an ever-increasing degree to take the whole government of the country, the whole administration of the economy, the whole management of production, into their own hands."
+aqua_military_training_with_the_resistance_dec:0 "Military Traning in [FROM.OWNER.GetNameWithFlag]"
+on_going_resistance_training:0 "On going Resistance Military training"
+aqua_inspect_the_resistance_army_dec:0 "Inspect the Resistance Army"

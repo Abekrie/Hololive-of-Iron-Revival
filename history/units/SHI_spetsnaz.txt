@@ -1,0 +1,80 @@
+﻿division_template = {
+    name = "Spetsnaz"      
+
+    division_names_group = SHI_MNT_01
+
+    regiments = {
+        mountaineers = { x = 0 y = 0 }  
+        mountaineers = { x = 0 y = 1 }
+        mountaineers = { x = 0 y = 2 }  
+        mountaineers = { x = 1 y = 0 }
+        mountaineers = { x = 1 y = 1 }
+        mountaineers = { x = 1 y = 2 }
+        mountaineers = { x = 2 y = 0 }  
+        mountaineers = { x = 2 y = 1 }  
+        mountaineers = { x = 2 y = 2 }  
+        mountaineers = { x = 3 y = 0 }  
+        mountaineers = { x = 3 y = 1 }  
+        mountaineers = { x = 3 y = 2 }  
+    }
+}
+
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 10837
+    division_template ="Spetsnaz"
+    start_experience_factor = 0.75
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 10837
+    division_template ="Spetsnaz"
+    start_experience_factor = 0.75
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 10837
+    division_template ="Spetsnaz"
+    start_experience_factor = 0.75
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 10837
+    division_template ="Spetsnaz"
+    start_experience_factor = 0.75
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 10837
+    division_template ="Spetsnaz"
+    start_experience_factor = 0.75
+    start_equipment_factor = 1
+}
+}
+

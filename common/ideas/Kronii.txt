@@ -1,0 +1,107 @@
+ideas = {
+    country = {
+	    first_magic_kro_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kro_first_magic
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    weekly_manpower = 1000 
+			}
+		}
+
+		second_magic_kro_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kro_second_magic
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    weekly_manpower = 2000
+			    industrial_capacity_factory = 0.05 
+			}
+		}
+
+		third_magic_kro_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kro_third_magic
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    weekly_manpower = 2500
+			    industrial_capacity_factory = 0.1 
+			}
+		}
+
+		kroniium_kro_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kronii_generic
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    local_resources_factor = 0.2
+			}
+		}
+
+		anti_crust_equation_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				
+			}
+
+			modifier = {
+				offensive_war_stability_factor = 0.1
+				equipment_conversion_speed = 0.1
+				production_lack_of_resource_penalty_factor = -0.75
+			}
+		}
+
+	}
+}

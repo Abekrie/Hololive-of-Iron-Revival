@@ -1,0 +1,201 @@
+matsuri_remilitarize_estonia_category = {
+
+	develop_estonia_state_matsuri_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						OR = {
+							state = 811
+							state = 812
+							state = 13
+							state = 813
+							state = 191
+
+							state = 12
+							state = 810
+						}
+						NOT = {
+								has_state_flag = MAT_estonia_already_developed
+						}
+					}
+			}
+		}
+
+		cost = 75
+
+		visible = {
+		    OR = { tag = MAT }
+		    810 = { is_demilitarized_zone = yes }
+		    811 = { is_demilitarized_zone = yes }
+		    813 = { is_demilitarized_zone = yes }
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			FROM = {
+				set_state_flag = MAT_estonia_already_developed
+			}
+			FROM = {
+			add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	hold_referendum_in_estonia_matsuri_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			811= { has_state_flag = MAT_estonia_already_developed }
+							812= { has_state_flag = MAT_estonia_already_developed }
+							13 = { has_state_flag = MAT_estonia_already_developed }
+							813= { has_state_flag = MAT_estonia_already_developed }
+							191= { has_state_flag = MAT_estonia_already_developed }
+
+							12 = { has_state_flag = MAT_estonia_already_developed }
+							810= { has_state_flag = MAT_estonia_already_developed }
+		}
+
+		#cost = 300
+
+		visible = {
+		    tag = MAT
+		    any_owned_state	 = {
+		    	is_demilitarized_zone = yes
+		    }
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			810 = { set_demilitarized_zone = no }
+		    811 = { set_demilitarized_zone = no }
+		    813 = { set_demilitarized_zone = no }
+		    191 = { set_demilitarized_zone = no }
+		    13 = { set_demilitarized_zone = no }
+		    812 = { set_demilitarized_zone = no }
+		    12 = { set_demilitarized_zone = no }
+		    hidden_effect = {
+				news_event = { id = holo_news.111 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	release_hoshikawa_matsuri_dec = {
+
+		icon = generic_form_nation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_subject = no
+			HSK = {
+				exists = no
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = MAT
+		    810 = { is_demilitarized_zone = yes }
+		    811 = { is_demilitarized_zone = yes }
+		    813 = { is_demilitarized_zone = yes }
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			country_event = { id = matsuri.43 }
+		    #HSK = {
+		    #	transfer_state = 191
+		    #	transfer_state = 813
+		    #	transfer_state = 812
+		    #	transfer_state = 13
+		    #}
+
+		    191 = { add_core_of = HSK }
+		    813 = { add_core_of = HSK }
+		    812 = { add_core_of = HSK }
+		    13 = { add_core_of = HSK }
+
+		    release_puppet = HSK
+		    HSK = {
+		    	set_capital = { state = 812 }
+		    }
+		    hidden_effect = {
+		    	HSK = {
+		    		add_ideas = exploit_the_earth_1
+		    		add_ideas = pre_degenerate_era_1
+		    	}
+		    }
+
+		    custom_effect_tooltip = "---"
+		    810 = { set_demilitarized_zone = no }
+		    811 = { set_demilitarized_zone = no }
+		    813 = { set_demilitarized_zone = no }
+		    191 = { set_demilitarized_zone = no }
+		    13 = { set_demilitarized_zone = no }
+		    812 = { set_demilitarized_zone = no }
+		    12 = { set_demilitarized_zone = no }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 10
+				is_historical_focus_on = no
+			}
+		}
+	}
+}

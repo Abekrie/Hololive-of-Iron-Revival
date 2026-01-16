@@ -1,0 +1,16 @@
+BAL_council_category = {
+	priority = 100
+	icon = SOV_propaganda
+
+	scripted_gui = bal_council_decision_ui
+
+	allowed = {
+		OR = {
+			is_hololive_council = yes
+		}
+	}
+
+	visible = {
+		is_debug = yes
+	}
+}

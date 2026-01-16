@@ -1,0 +1,128 @@
+ideas = {
+    country = {
+	    hi_honey_virus_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_cost = 0.5
+			    army_org_regain = -0.1
+			    consumer_goods_factor = 0.05
+			    war_support_factor = -0.2
+			}
+		}
+
+		hi_honey_booster_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = 0.5
+			    army_org_regain = 0.1
+			    research_speed_factor = 0.25
+			}
+		}
+
+		bluerose_of_marseille_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_undividable
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_abilities_cost_factor = -0.1
+			    war_support_weekly = 0.005
+			    army_core_defence_factor = 0.1
+			}
+		}
+
+		whiteout_blizzard_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    breakthrough_factor = 0.1
+			    winter_attrition_factor = -0.75
+			    land_night_attack = 0.5
+			}
+		}
+
+		seven_page_ari_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    breakthrough_factor = 0.15
+			    army_morale_factor = 0.5
+			}
+		}
+
+		forest_keeper_ns = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = fauna_forest_keeper
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    special_forces_attack_factor = 0.05
+			    special_forces_defence_factor = 0.05
+			}
+		}
+	}
+}

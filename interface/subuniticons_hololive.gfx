@@ -1,0 +1,22 @@
+spriteTypes = {	
+	
+	######################### Green #########################
+	spriteType = { name = "GFX_unit_siberian_ranger_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_siberian_ranger_icon.dds" noOfFrames = 2 }
+
+	spriteType = { name = "GFX_unit_desert_rabbit_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_desert_rabbit_icon.dds" noOfFrames = 2 }
+
+	spriteType = { name = "GFX_unit_takodachi_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_takodachi_icon.dds" noOfFrames = 2 }
+
+	spriteType = { name = "GFX_unit_emu_cavalry_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_emu_cavalry_icon.dds" noOfFrames = 2 }
+
+
+	######################### White #########################
+	spriteType = { name = "GFX_unit_siberian_ranger_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_siberian_ranger_icon.dds" noOfFrames = 2}
+
+	spriteType = { name = "GFX_unit_desert_rabbit_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_desert_rabbit_icon.dds" noOfFrames = 2}
+
+	spriteType = { name = "GFX_unit_takodachi_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_takodachi_icon.dds" noOfFrames = 2}
+
+	spriteType = { name = "GFX_unit_emu_cavalry_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_emu_cavalry_icon.dds" noOfFrames = 2}
+	
+}

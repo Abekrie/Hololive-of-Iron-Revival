@@ -1,0 +1,1405 @@
+add_namespace = fubuki
+
+#Fubuki Refuses Greenland
+country_event = {
+	id = fubuki.1
+	title = fubuki.1.t
+	desc = fubuki.1.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#FBK accepted Greenland
+country_event = {
+	id = fubuki.2
+	title = fubuki.2.t
+	desc = fubuki.2.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.1.a
+		set_global_flag = greenland_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Fubuki Refuses Iceland
+country_event = {
+	id = fubuki.3
+	title = fubuki.3.t
+	desc = fubuki.3.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#FBK accepted Greenland
+country_event = {
+	id = fubuki.4
+	title = fubuki.4.t
+	desc = fubuki.4.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.4.a
+		set_global_flag = iceland_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#FBK accepted faction
+country_event = {
+	id = fubuki.5
+	title = fubuki.5.t
+	desc = fubuki.5.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#FBK no faction
+country_event = {
+	id = fubuki.6
+	title = fubuki.6.t
+	desc = fubuki.6.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Fubuki accept
+country_event = {
+	id = fubuki.7
+	title = fubuki.7.t
+	desc = fubuki.7.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Fubuki not accept
+country_event = {
+	id = fubuki.8
+	title = fubuki.8.t
+	desc = fubuki.8.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+###########################################
+
+#Buy Borneo
+country_event = {
+	id = fubuki.10
+	title = fubuki.10.t
+	desc = fubuki.10.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.10.a	#Yes
+		ai_chance = { factor = 30 }
+		FBK = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = fubuki.10.b	#No 
+		ai_chance = { factor = 70 }
+		FBK = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = fubuki.11
+	title = fubuki.11.t
+	desc = fubuki.11.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.11.a	#Yes
+		ai_chance = { factor = 50 }
+		FBK = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = fubuki.11.b	#No 
+		ai_chance = { factor = 50 }
+		FBK = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = fubuki.12
+	title = fubuki.12.t
+	desc = fubuki.12.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.12.a	#Yes
+		ai_chance = { factor = 75 }
+		FBK = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = fubuki.12.b	#No 
+		ai_chance = { factor = 25 }
+		FBK = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = fubuki.13
+	title = fubuki.13.t
+	desc = fubuki.13.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.13.a	#Yes
+		ai_chance = { factor = 50 }
+		FBK = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = fubuki.13.b	#No 
+		ai_chance = { factor = 50 }
+		FBK = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = fubuki.14
+	title = fubuki.14.t
+	desc = fubuki.14.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.14.a	#Yes
+		ai_chance = { factor = 50 }
+		FBK = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = fubuki.14.b	#No 
+		ai_chance = { factor = 50 }
+		FBK = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = fubuki.15
+	title = fubuki.15.t
+	desc = fubuki.15.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.15.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = fubuki.15.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = fubuki.16
+	title = fubuki.16.t
+	desc = fubuki.16.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.16.a	#Yes
+		ai_chance = { factor = 20 }
+		FBK = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = fubuki.16.b	#No 
+		ai_chance = { factor = 80 }
+		FBK = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = fubuki.17
+	title = fubuki.17.t
+	desc = fubuki.17.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.17.a	#Yes
+		ai_chance = { factor = 50 }
+		FBK = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = fubuki.17.b	#No 
+		ai_chance = { factor = 50 }
+		FBK = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+
+#Buy Sardinia
+country_event = {
+	id = fubuki.19
+	title = fubuki.19.t
+	desc = fubuki.19.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.19.a	#Yes
+		ai_chance = { factor = 40 }
+		FBK = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = fubuki.19.b	#No 
+		ai_chance = { factor = 60 }
+		FBK = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = fubuki.20
+	title = fubuki.20.t
+	desc = fubuki.20.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.20.a	#Yes
+		ai_chance = { factor = 90 }
+		FBK = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = fubuki.20.b	#No 
+		ai_chance = { factor = 10 }
+		FBK = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = fubuki.21
+	title = fubuki.21.t
+	desc = fubuki.21.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.21.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = fubuki.21.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = fubuki.22
+	title = fubuki.22.t
+	desc = fubuki.22.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.22.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = fubuki.22.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = fubuki.23
+	title = fubuki.23.t
+	desc = fubuki.23.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.23.a	#Yes
+		ai_chance = { factor = 70 }
+		FBK = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = fubuki.23.b	#No 
+		ai_chance = { factor = 30 }
+		FBK = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Propose FBK-MAT Union
+country_event = {
+	id = fubuki.24
+	title = fubuki.24.t
+	desc = fubuki.24.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.24.a	#Yes
+		ai_chance = { factor = 100 }
+		FBK = { create_faction = FUBUKI_MAT_UNION 
+		country_event = { id = fubuki.25 }}
+		
+	}
+	option = {
+		name = fubuki.24.b	#No 
+		ai_chance = { factor = 0 }
+		FBK = { country_event = { id = fubuki.26 }}
+	}
+}
+
+#Yes Union
+country_event = {
+	id = fubuki.25
+	title = fubuki.25.t
+	desc = fubuki.25.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.25.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = MAT
+	}
+}
+
+#NO Union
+country_event = {
+	id = fubuki.26
+	title = fubuki.26.t
+	desc = fubuki.26.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.26.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Annex Matsuris
+country_event = {
+	id = fubuki.27
+	title = fubuki.27.t
+	desc = fubuki.27.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.27.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+		annex_country = {
+           target = MAT
+           transfer_troops = yes
+        }
+		country_event = { id = fubuki.28 }}
+		
+	}
+	option = {
+		name = fubuki.27.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.29 }}
+	}
+}
+
+#Yes annex
+country_event = {
+	id = fubuki.28
+	title = fubuki.28.t
+	desc = fubuki.28.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.28.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#no annex
+country_event = {
+	id = fubuki.29
+	title = fubuki.29.t
+	desc = fubuki.29.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.29.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Puppet Matsuris
+country_event = {
+	id = fubuki.30
+	title = fubuki.30.t
+	desc = fubuki.30.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.30.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+		puppet = MAT
+		country_event = { id = fubuki.31 }}
+		
+	}
+	option = {
+		name = fubuki.30.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.32 }}
+	}
+}
+
+#Yes puppet
+country_event = {
+	id = fubuki.31
+	title = fubuki.31.t
+	desc = fubuki.31.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.31.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NO puppet
+country_event = {
+	id = fubuki.32
+	title = fubuki.32.t
+	desc = fubuki.32.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.32.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Seek to Aqua Faction
+country_event = {
+	id = fubuki.33
+	title = fubuki.33.t
+	desc = fubuki.33.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.33.a	#Yes
+		ai_chance = { factor = 100 }
+		FBK = { country_event = { id = aqua.63 }}
+	}
+	option = {
+		name = fubuki.33.b	#No 
+		ai_chance = { factor = 0 }
+		FBK = { country_event = { id = aqua.63 }}
+	}
+}
+
+#Demand Washington
+country_event = {
+	id = fubuki.34
+	title = fubuki.34.t
+	desc = fubuki.34.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.34.a	#Yes
+		ai_chance = { factor = 70 }
+		FBK = { 
+			country_event = { id = fubuki.35 }
+			transfer_state = 386
+		}
+	}
+	option = {
+		name = fubuki.34.b	#No 
+		ai_chance = { factor = 30 }
+		FBK = { country_event = { id = fubuki.36 } }
+	}
+}
+
+#Yes Eritrea
+country_event = {
+	id = fubuki.35
+	title = fubuki.35.t
+	desc = fubuki.35.d
+	picture = GFX_report_event_flare_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.35.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#no Eritrea
+country_event = {
+	id = fubuki.36
+	title = fubuki.36.t
+	desc = fubuki.36.d
+	picture = GFX_report_event_flare_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.36.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Corsica
+country_event = {
+	id = fubuki.37
+	title = fubuki.37.t
+	desc = fubuki.37.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.37.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.38 }
+			transfer_state = 1
+		}
+	}
+	option = {
+		name = fubuki.37.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.39 } }
+	}
+}
+
+#Yes Corsica
+country_event = {
+	id = fubuki.38
+	title = fubuki.38.t
+	desc = fubuki.38.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.38.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#no Cosicar
+country_event = {
+	id = fubuki.39
+	title = fubuki.39.t
+	desc = fubuki.39.d
+	picture = GFX_report_event_suisei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.39.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Cyprus
+country_event = {
+	id = fubuki.40
+	title = fubuki.40.t
+	desc = fubuki.40.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.40.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.41 }
+			transfer_state = 183
+		}
+	}
+	option = {
+		name = fubuki.40.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.42 } }
+	}
+}
+
+#Yes Cyprus
+country_event = {
+	id = fubuki.41
+	title = fubuki.41.t
+	desc = fubuki.41.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.41.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NO Cyprus
+country_event = {
+	id = fubuki.42
+	title = fubuki.42.t
+	desc = fubuki.42.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.42.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Mad
+country_event = {
+	id = fubuki.43
+	title = fubuki.43.t
+	desc = fubuki.43.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.43.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.44 }
+			transfer_state = 359
+		}
+	}
+	option = {
+		name = fubuki.43.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.45 } }
+	}
+}
+
+#Yes Mad
+country_event = {
+	id = fubuki.44
+	title = fubuki.44.t
+	desc = fubuki.44.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.44.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#No Mad
+country_event = {
+	id = fubuki.45
+	title = fubuki.45.t
+	desc = fubuki.45.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.45.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand NZL
+country_event = {
+	id = fubuki.46
+	title = fubuki.46.t
+	desc = fubuki.46.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.46.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.47 }
+			transfer_state = 284
+			transfer_state = 723
+		}
+	}
+	option = {
+		name = fubuki.46.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.48 } }
+	}
+}
+
+#Yes NZL
+country_event = {
+	id = fubuki.47
+	title = fubuki.47.t
+	desc = fubuki.47.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.47.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NO NZL
+country_event = {
+	id = fubuki.48
+	title = fubuki.48.t
+	desc = fubuki.48.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.48.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Papua
+country_event = {
+	id = fubuki.49
+	title = fubuki.49.t
+	desc = fubuki.49.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.49.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.50 }
+			transfer_state = 523
+			transfer_state = 669	
+		}
+	}
+	option = {
+		name = fubuki.49.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.51 } }
+	}
+}
+
+#Yes Papua
+country_event = {
+	id = fubuki.50
+	title = fubuki.50.t
+	desc = fubuki.50.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.50.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NO Papua
+country_event = {
+	id = fubuki.51
+	title = fubuki.51.t
+	desc = fubuki.51.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.51.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Tunisia
+country_event = {
+	id = fubuki.52
+	title = fubuki.52.t
+	desc = fubuki.52.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.52.a	#Yes
+		ai_chance = { factor = 80 }
+		FBK = { 
+			country_event = { id = fubuki.53 }
+			transfer_state = 413
+		}
+	}
+	option = {
+		name = fubuki.52.b	#No 
+		ai_chance = { factor = 20 }
+		FBK = { country_event = { id = fubuki.54 } }
+	}
+}
+
+#Yes Tunisia
+country_event = {
+	id = fubuki.53
+	title = fubuki.53.t
+	desc = fubuki.53.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.53.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#No Tunisia
+country_event = {
+	id = fubuki.54
+	title = fubuki.54.t
+	desc = fubuki.54.d
+	picture = GFX_report_event_ayame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.54.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Fubuki - Proposed NAP
+country_event = {
+	id = fubuki.55
+	title = fubuki.55.t
+	desc = fubuki.55.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.55.a	#Yes
+		ai_chance = { factor = 100 }
+
+		diplomatic_relation = {
+    		country = FBK
+    		relation = non_aggression_pact
+    		active = yes
+		}
+	}
+	option = {
+		name = fubuki.55.b	#No 
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Fubuki - Offer to puppet
+country_event = {
+	id = fubuki.56
+	title = fubuki.56.t
+	desc = fubuki.56.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.56.a	#Yes
+		ai_chance = { factor = 100 }
+
+		FBK = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = { tag = MAR }
+			FBK = { country_event = { id = proposed.47 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			FBK = { country_event = { id = proposed.61 }}
+		}
+
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.49 }}
+		}
+	}
+	option = {
+		name = fubuki.56.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MAR }
+			FBK = { country_event = { id = proposed.48 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			FBK = { country_event = { id = proposed.62 }}
+		}
+
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#Fubuki - Annex or War!
+country_event = {
+	id = fubuki.57
+	title = fubuki.57.t
+	desc = fubuki.57.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.57.a	#Yes
+		ai_chance = { factor = 100 }
+
+		FBK = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+
+		if = {
+			limit = { tag = MRI }
+			FBK = { country_event = { id = proposed.17 }}
+		}
+
+		if = {
+			limit = { tag = HSK }
+			FBK = { country_event = { id = proposed.31 }}
+		}
+	}
+	option = {
+		name = fubuki.57.b	#No 
+		ai_chance = { factor = 0 }
+
+		FBK = {
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+
+		if = {
+			limit = { tag = MRI }
+			FBK = { country_event = { id = proposed.18 }}
+		}
+
+		if = {
+			limit = { tag = HSK }
+			FBK = { country_event = { id = proposed.32 }}
+		}
+	}
+}
+
+#Kurokami - Matsuhiko is here!
+country_event = {
+	id = fubuki.58
+	title = fubuki.58.t
+	desc = fubuki.58.d
+	picture = GFX_report_event_kurokami_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.58.a	#Yes
+		ai_chance = { factor = 75 }
+
+		retire_ideology_leader = fascism
+		create_country_leader = {
+				name = "Matsuhiko"
+				picture = "gfx/leaders/FBK/matsuhiko.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					very_cool_trait
+					depressed_salaryman_trait
+				}
+			}
+		
+	}
+	option = {
+		name = fubuki.58.b	#No 
+		ai_chance = { factor = 25 }
+		generate_character = {
+				token_base = Matsuhiko_recruit_fbk_focus
+				name="Matsuhiko"
+     			portraits={
+           		army={
+                 	large="gfx/leaders/FBK/matsuhiko.dds"
+                 	small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           		}
+     			}		
+
+     		corps_commander = {
+           		traits={trait_cautious career_officer}
+           		skill = 4
+           		attack_skill = 3
+           		defense_skill = 3
+           		planning_skill = 2
+           		logistics_skill = 2
+     		}
+		}
+		
+	}
+}
+
+#Kurokami - Hoshikawa secret deal
+country_event = {
+	id = fubuki.59
+	title = fubuki.59.t
+	desc = fubuki.59.d
+	picture = GFX_report_event_kurokami_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.59.a	#Yes
+		ai_chance = { factor = 100 }
+		MAT = {end_puppet = HSK}
+		HSK = {
+			declare_war_on = {
+				target = MAT
+				type = annex_everything
+			}
+		}
+		FBK = {
+			declare_war_on = {
+				target = MAT
+				type = annex_everything
+			}
+		}
+
+		if = {
+			limit = { tag = HSK }
+			FBK = { country_event = { id = proposed.31 }}
+		}
+	}
+	option = {
+		name = fubuki.59.b	#No 
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = HSK }
+			FBK = { country_event = { id = proposed.32 }}
+		}
+	}
+}
+
+#Fubuki - Grand Father's treasure chest
+country_event = {
+	id = fubuki.60
+	title = fubuki.60.t
+	desc = fubuki.60.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.60.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		random_list = {
+    		50 = {
+        		add_war_support = 0.01
+    			}
+    		20 = {
+        		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+    			}
+    		20 = {
+        		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+		    	add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+				}
+    			}
+    		10 = {
+        		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+		    	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+    			}
+		}
+	}
+}
+
+#Fubuki - Ask to join faction
+country_event = {
+	id = fubuki.61
+	title = fubuki.61.t
+	desc = fubuki.61.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.61.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		ROOT = {
+			add_to_faction = FBK
+		}
+
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.49 }}
+		}
+	}
+	option = {
+		name = fubuki.61.b	#No 
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#Fubuki - Invite to faction
+country_event = {
+	id = fubuki.62
+	title = fubuki.62.t
+	desc = fubuki.62.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fubuki.62.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		FBK = {
+			add_to_faction = ROOT
+		}
+
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.49 }}
+		}
+
+		if = {
+			limit = { tag = MIO }
+			FBK = { country_event = { id = proposed.55 }}
+		}
+
+		if = {
+			limit = { tag = OKA }
+			FBK = { country_event = { id = proposed.65 }}
+		}
+
+		if = {
+			limit = { tag = KRN }
+			FBK = { country_event = { id = proposed.41 }}
+		}
+	}
+	option = {
+		name = fubuki.62.b	#No 
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = MAT }
+			FBK = { country_event = { id = proposed.50 }}
+		}
+
+		if = {
+			limit = { tag = MIO }
+			FBK = { country_event = { id = proposed.56 }}
+		}
+
+		if = {
+			limit = { tag = OKA }
+			FBK = { country_event = { id = proposed.66 }}
+		}
+
+		if = {
+			limit = { tag = KRN }
+			FBK = { country_event = { id = proposed.42 }}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+defined_text = {
+	name = GetLamyTargetLamify
+
+	#No
+	text = {
+		trigger = {
+			check_variable = {
+				var = lamy_lamify_target_id
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetLamyTargetLamify_no
+	}
+
+	#Country
+	text = {
+		trigger = {
+			check_variable = {
+				var = lamy_lamify_target_id
+				value = 0
+				compare = greater_than
+			}
+		}
+		localization_key = GetLamyTargetLamify_yes
+	}
+}
+
+defined_text = {
+	name = GetLamyLamifyLevel
+
+	#No
+	text = {
+		localization_key = GetLamyLamifyLevel
+	}
+}

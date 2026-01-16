@@ -1,0 +1,593 @@
+add_namespace = rushia
+
+
+#RUS yes MR Infantry
+country_event = {
+	id = rushia.1
+	title = rushia.1.t
+	desc = rushia.1.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.1.a
+		ai_chance = { factor = 100 }
+
+		if = {
+		limit = { original_tag = NOE }
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = infantry_weapons
+			}	
+	    }
+		
+	}
+}
+
+#RUS no MR
+country_event = {
+	id = rushia.2
+	title = rushia.2.t
+	desc = rushia.2.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#RUS yes MR land_doctrine
+country_event = {
+	id = rushia.3
+	title = rushia.3.t
+	desc = rushia.3.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.3.a
+		ai_chance = { factor = 100 }
+
+		
+		add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}	
+	    		
+	}
+}
+
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = rushia.8
+	title = rushia.8.t
+	desc = rushia.8.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.8.a	#Yes
+		ai_chance = { factor = 80 }
+		RUS = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.8.b	#No 
+		ai_chance = { factor = 20 }
+		RUS = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = rushia.9
+	title = rushia.9.t
+	desc = rushia.9.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.9.a	#Yes
+		ai_chance = { factor = 80 }
+		RUS = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.9.b	#No 
+		ai_chance = { factor = 20 }
+		RUS = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = rushia.10
+	title = rushia.10.t
+	desc = rushia.10.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.10.a	#Yes
+		ai_chance = { factor = 30 }
+		RUS = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = rushia.10.b	#No 
+		ai_chance = { factor = 70 }
+		RUS = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = rushia.11
+	title = rushia.11.t
+	desc = rushia.11.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.11.a	#Yes
+		ai_chance = { factor = 50 }
+		RUS = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = rushia.11.b	#No 
+		ai_chance = { factor = 50 }
+		RUS = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = rushia.12
+	title = rushia.12.t
+	desc = rushia.12.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.12.a	#Yes
+		ai_chance = { factor = 75 }
+		RUS = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.12.b	#No 
+		ai_chance = { factor = 25 }
+		RUS = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = rushia.13
+	title = rushia.13.t
+	desc = rushia.13.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.13.a	#Yes
+		ai_chance = { factor = 50 }
+		RUS = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = rushia.13.b	#No 
+		ai_chance = { factor = 50 }
+		RUS = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = rushia.14
+	title = rushia.14.t
+	desc = rushia.14.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.14.a	#Yes
+		ai_chance = { factor = 50 }
+		RUS = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = rushia.14.b	#No 
+		ai_chance = { factor = 50 }
+		RUS = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = rushia.15
+	title = rushia.15.t
+	desc = rushia.15.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.15.a	#Yes
+		ai_chance = { factor = 80 }
+		RUS = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.15.b	#No 
+		ai_chance = { factor = 20 }
+		RUS = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = rushia.16
+	title = rushia.16.t
+	desc = rushia.16.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.16.a	#Yes
+		ai_chance = { factor = 20 }
+		RUS = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = rushia.16.b	#No 
+		ai_chance = { factor = 80 }
+		RUS = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = rushia.17
+	title = rushia.17.t
+	desc = rushia.17.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.17.a	#Yes
+		ai_chance = { factor = 50 }
+		RUS = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = rushia.17.b	#No 
+		ai_chance = { factor = 50 }
+		RUS = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+#Buy Sardinia
+country_event = {
+	id = rushia.19
+	title = rushia.19.t
+	desc = rushia.19.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.19.a	#Yes
+		ai_chance = { factor = 40 }
+		RUS = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = rushia.19.b	#No 
+		ai_chance = { factor = 60 }
+		RUS = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = rushia.20
+	title = rushia.20.t
+	desc = rushia.20.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.20.a	#Yes
+		ai_chance = { factor = 90 }
+		RUS = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.20.b	#No 
+		ai_chance = { factor = 10 }
+		RUS = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = rushia.21
+	title = rushia.21.t
+	desc = rushia.21.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.21.a	#Yes
+		ai_chance = { factor = 80 }
+		RUS = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.21.b	#No 
+		ai_chance = { factor = 20 }
+		RUS = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = rushia.22
+	title = rushia.22.t
+	desc = rushia.22.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.22.a	#Yes
+		ai_chance = { factor = 80 }
+		RUS = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = rushia.22.b	#No 
+		ai_chance = { factor = 20 }
+		RUS = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = rushia.23
+	title = rushia.23.t
+	desc = rushia.23.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.23.a	#Yes
+		ai_chance = { factor = 70 }
+		RUS = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = rushia.23.b	#No 
+		ai_chance = { factor = 30 }
+		RUS = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#RUS - Demand annex IOMandate (End of the mandate)
+country_event = {
+	id = rushia.24
+	title = rushia.24.t
+	desc = rushia.24.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.24.a
+		ai_chance = { factor = 100 }
+		RUS = {
+			annex_country = {
+    			target = ROOT
+    			transfer_troops = yes
+			}
+
+			country_event = { id = rushia.25 }
+		}
+	}
+
+	option = {
+		name = rushia.24.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#RUS - Demand annex IOMandate (End of the mandate) YES
+country_event = {
+	id = rushia.25
+	title = rushia.25.t
+	desc = rushia.25.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.25.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#RUS - Operation Revival
+country_event = {
+	id = rushia.26
+	title = rushia.26.t
+	desc = rushia.26.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.26.a
+		ai_chance = { factor = 100 }
+
+		custom_effect_tooltip = CET_Operation_Revival_event
+
+		hidden_effect = {RUS = {
+					set_state_controller = 423
+					set_state_controller = 320
+					set_state_controller = 321
+					set_state_controller = 425
+					set_state_controller = 424
+					set_state_controller = 429
+					set_state_controller = 437
+				}}
+
+		hidden_effect = {
+			load_oob = RUS_operation_revival
+			news_event = { id = holo_news.98 }
+		}
+	}
+}
+
+#RUS - Ask to join faction
+country_event = {
+	id = rushia.27
+	title = rushia.27.t
+	desc = rushia.27.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.27.a
+		ai_chance = { factor = 100 }
+		add_to_faction = RUS
+
+		if = {
+			limit = { tag = NOE }
+			RUS = { country_event = { id = proposed.63 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			RUS = { country_event = { id = proposed.93 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			RUS = { country_event = { id = proposed.3 }}
+		}
+	}
+
+	option = {
+		name = rushia.27.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = NOE }
+			RUS = { country_event = { id = proposed.64 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			RUS = { country_event = { id = proposed.94 }}
+		}
+
+		if = {
+			limit = { tag = AQA }
+			RUS = { country_event = { id = proposed.4 }}
+		}
+	}
+}
+
+#RUS - Rushia takes control of Crimea
+country_event = {
+	id = rushia.28
+	title = rushia.28.t
+	desc = rushia.28.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rushia.28.a
+		ai_chance = { factor = 100 }
+		
+	}
+}

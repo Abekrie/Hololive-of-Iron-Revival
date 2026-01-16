@@ -1,0 +1,54 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Hololive China Fleet"		
+		naval_base = 12068
+
+		task_force = {				
+			name = "Hololive China Force"			
+			location = 12068	
+
+ship = { name = "Taiwan"
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+ACH
+} } }
+ 
+ship = { name = "Beijing"
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+ACH
+} } }
+ 
+ship = { name = "Guangzhou"
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+ACH
+} } }
+ 
+ship = { name = "Qingdao"
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner =
+ACH
+} } }
+
+ship = { name = "HMCS Nodoka"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ACH
+} } }
+ 
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

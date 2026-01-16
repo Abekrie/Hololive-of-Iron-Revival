@@ -1,0 +1,1801 @@
+add_namespace = proposed
+
+#Aloe proposed - YES
+country_event = {
+	id = proposed.1
+	title = proposed.1.t
+    desc = proposed.1.d
+    picture = GFX_report_event_aloe_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.1.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Aloe proposed - NO
+country_event = {
+	id = proposed.2
+	title = proposed.2.t
+    desc = proposed.2.d
+    picture = GFX_report_event_aloe_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.2.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Aqua proposed - YES
+country_event = {
+	id = proposed.3
+	title = proposed.3.t
+    desc = proposed.3.d
+    picture = GFX_report_event_aqua_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.3.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Aqua proposed - NO
+country_event = {
+	id = proposed.4
+	title = proposed.4.t
+    desc = proposed.4.d
+    picture = GFX_report_event_aqua_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.4.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Artia proposed - YES
+country_event = {
+	id = proposed.5
+	title = proposed.5.t
+    desc = proposed.5.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.5.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Artia proposed - NO
+country_event = {
+	id = proposed.6
+	title = proposed.6.t
+    desc = proposed.6.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.6.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Ayame proposed - YES
+country_event = {
+	id = proposed.7
+	title = proposed.7.t
+    desc = proposed.7.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.7.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Ayame proposed - NO
+country_event = {
+	id = proposed.8
+	title = proposed.8.t
+    desc = proposed.8.d
+    picture = GFX_report_event_ayame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.8.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Botan proposed - YES
+country_event = {
+	id = proposed.9
+	title = proposed.9.t
+    desc = proposed.9.d
+    picture = GFX_report_event_botan_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.9.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Botan proposed - NO
+country_event = {
+	id = proposed.10
+	title = proposed.10.t
+    desc = proposed.10.d
+    picture = GFX_report_event_botan_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.10.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Choco proposed - YES
+country_event = {
+	id = proposed.11
+	title = proposed.11.t
+    desc = proposed.11.d
+    picture = GFX_report_event_choco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.11.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Choco proposed - NO
+country_event = {
+	id = proposed.12
+	title = proposed.12.t
+    desc = proposed.12.d
+    picture = GFX_report_event_choco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.12.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Civia proposed - YES
+country_event = {
+	id = proposed.13
+	title = proposed.13.t
+    desc = proposed.13.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.13.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Civia proposed - NO
+country_event = {
+	id = proposed.14
+	title = proposed.14.t
+    desc = proposed.14.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.14.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Coco proposed - YES
+country_event = {
+	id = proposed.15
+	title = proposed.15.t
+    desc = proposed.15.d
+    picture = GFX_report_event_coco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.15.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Coco proposed - NO
+country_event = {
+	id = proposed.16
+	title = proposed.16.t
+    desc = proposed.16.d
+    picture = GFX_report_event_coco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.16.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Calliope proposed - YES
+country_event = {
+	id = proposed.17
+	title = proposed.17.t
+    desc = proposed.17.d
+    picture = GFX_report_event_calliope_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.17.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Calliope proposed - NO
+country_event = {
+	id = proposed.18
+	title = proposed.18.t
+    desc = proposed.18.d
+    picture = GFX_report_event_calliope_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.18.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Doris proposed - YES
+country_event = {
+	id = proposed.19
+	title = proposed.19.t
+    desc = proposed.19.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.19.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Doris proposed - NO
+country_event = {
+	id = proposed.20
+	title = proposed.20.t
+    desc = proposed.20.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.20.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Echo proposed - YES
+country_event = {
+	id = proposed.21
+	title = proposed.21.t
+    desc = proposed.21.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.21.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Echo proposed - NO
+country_event = {
+	id = proposed.22
+	title = proposed.22.t
+    desc = proposed.22.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.22.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Fubuki proposed - YES
+country_event = {
+	id = proposed.23
+	title = proposed.23.t
+    desc = proposed.23.d
+    picture = GFX_report_event_fubuki_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.23.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Fubuki proposed - NO
+country_event = {
+	id = proposed.24
+	title = proposed.24.t
+    desc = proposed.24.d
+    picture = GFX_report_event_fubuki_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.24.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Flare proposed - YES
+country_event = {
+	id = proposed.25
+	title = proposed.25.t
+    desc = proposed.25.d
+    picture = GFX_report_event_flare_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.25.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Flare proposed - NO
+country_event = {
+	id = proposed.26
+	title = proposed.26.t
+    desc = proposed.26.d
+    picture = GFX_report_event_flare_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.26.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Gura proposed - YES
+country_event = {
+	id = proposed.27
+	title = proposed.27.t
+    desc = proposed.27.d
+    picture = GFX_report_event_gura_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.27.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Gura proposed - NO
+country_event = {
+	id = proposed.28
+	title = proposed.28.t
+    desc = proposed.28.d
+    picture = GFX_report_event_gura_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.28.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hitomi proposed - YES
+country_event = {
+	id = proposed.29
+	title = proposed.29.t
+    desc = proposed.29.d
+    picture = GFX_report_event_hitomi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.29.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hitomi proposed - NO
+country_event = {
+	id = proposed.30
+	title = proposed.30.t
+    desc = proposed.30.d
+    picture = GFX_report_event_hitomi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.30.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hoshikawa proposed - YES
+country_event = {
+	id = proposed.31
+	title = proposed.31.t
+    desc = proposed.31.d
+    picture = GFX_report_event_hoshikawa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.31.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hoshikawa proposed - NO
+country_event = {
+	id = proposed.32
+	title = proposed.32.t
+    desc = proposed.32.d
+    picture = GFX_report_event_hoshikawa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.32.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Haato proposed - YES
+country_event = {
+	id = proposed.33
+	title = proposed.33.t
+    desc = proposed.33.d
+    picture = GFX_report_event_haato_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.33.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Haato proposed - NO
+country_event = {
+	id = proposed.34
+	title = proposed.34.t
+    desc = proposed.34.d
+    picture = GFX_report_event_haato_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.34.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Iofi proposed - YES
+country_event = {
+	id = proposed.35
+	title = proposed.35.t
+    desc = proposed.35.d
+    picture = GFX_report_event_iofi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.35.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Iofi proposed - NO
+country_event = {
+	id = proposed.36
+	title = proposed.36.t
+    desc = proposed.36.d
+    picture = GFX_report_event_iofi_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.36.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kanata proposed - YES
+country_event = {
+	id = proposed.37
+	title = proposed.37.t
+    desc = proposed.37.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.37.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kanata proposed - NO
+country_event = {
+	id = proposed.38
+	title = proposed.38.t
+    desc = proposed.38.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.38.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kiara proposed - YES
+country_event = {
+	id = proposed.39
+	title = proposed.39.t
+    desc = proposed.39.d
+    picture = GFX_report_event_kiara_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.39.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kiara proposed - NO
+country_event = {
+	id = proposed.40
+	title = proposed.40.t
+    desc = proposed.40.d
+    picture = GFX_report_event_kiara_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.40.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Korone proposed - YES
+country_event = {
+	id = proposed.41
+	title = proposed.41.t
+    desc = proposed.41.d
+    picture = GFX_report_event_korone_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.41.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Korone proposed - NO
+country_event = {
+	id = proposed.42
+	title = proposed.42.t
+    desc = proposed.42.d
+    picture = GFX_report_event_korone_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.42.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Lamy proposed - YES
+country_event = {
+	id = proposed.43
+	title = proposed.43.t
+    desc = proposed.43.d
+    picture = GFX_report_event_lamy_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.43.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Lamy proposed - NO
+country_event = {
+	id = proposed.44
+	title = proposed.44.t
+    desc = proposed.44.d
+    picture = GFX_report_event_lamy_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.44.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Luna proposed - YES
+country_event = {
+	id = proposed.45
+	title = proposed.45.t
+    desc = proposed.45.d
+    picture = GFX_report_event_luna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.45.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Luna proposed - NO
+country_event = {
+	id = proposed.46
+	title = proposed.46.t
+    desc = proposed.46.d
+    picture = GFX_report_event_luna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.46.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Marine proposed - YES
+country_event = {
+	id = proposed.47
+	title = proposed.47.t
+    desc = proposed.47.d
+    picture = GFX_report_event_marine_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.47.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Marine proposed - NO
+country_event = {
+	id = proposed.48
+	title = proposed.48.t
+    desc = proposed.48.d
+    picture = GFX_report_event_marine_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.48.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Matsuri proposed - YES
+country_event = {
+	id = proposed.49
+	title = proposed.49.t
+    desc = proposed.49.d
+    picture = GFX_report_event_matsuri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.49.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Matsuri proposed - NO
+country_event = {
+	id = proposed.50
+	title = proposed.50.t
+    desc = proposed.50.d
+    picture = GFX_report_event_matsuri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.50.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mel proposed - YES
+country_event = {
+	id = proposed.51
+	title = proposed.51.t
+    desc = proposed.51.d
+    picture = GFX_report_event_mel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.51.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mel proposed - NO
+country_event = {
+	id = proposed.52
+	title = proposed.52.t
+    desc = proposed.52.d
+    picture = GFX_report_event_mel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.52.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Miko proposed - YES
+country_event = {
+	id = proposed.53
+	title = proposed.53.t
+    desc = proposed.53.d
+    picture = GFX_report_event_miko_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.53.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Miko proposed - NO
+country_event = {
+	id = proposed.54
+	title = proposed.54.t
+    desc = proposed.54.d
+    picture = GFX_report_event_miko_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.54.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mio proposed - YES
+country_event = {
+	id = proposed.55
+	title = proposed.55.t
+    desc = proposed.55.d
+    picture = GFX_report_event_mio_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.55.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mio proposed - NO
+country_event = {
+	id = proposed.56
+	title = proposed.56.t
+    desc = proposed.56.d
+    picture = GFX_report_event_mio_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.56.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Moona proposed - YES
+country_event = {
+	id = proposed.57
+	title = proposed.57.t
+    desc = proposed.57.d
+    picture = GFX_report_event_moona_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.57.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Moona proposed - NO
+country_event = {
+	id = proposed.58
+	title = proposed.58.t
+    desc = proposed.58.d
+    picture = GFX_report_event_moona_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.58.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Nene proposed - YES
+country_event = {
+	id = proposed.59
+	title = proposed.59.t
+    desc = proposed.59.d
+    picture = GFX_report_event_nene_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.59.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Nene proposed - NO
+country_event = {
+	id = proposed.60
+	title = proposed.60.t
+    desc = proposed.60.d
+    picture = GFX_report_event_nene_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.60.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Ina proposed - YES
+country_event = {
+	id = proposed.61
+	title = proposed.61.t
+    desc = proposed.61.d
+    picture = GFX_report_event_ina_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.61.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Ina proposed - NO
+country_event = {
+	id = proposed.62
+	title = proposed.62.t
+    desc = proposed.62.d
+    picture = GFX_report_event_ina_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.62.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Noel proposed - YES
+country_event = {
+	id = proposed.63
+	title = proposed.63.t
+    desc = proposed.63.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.63.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Noel proposed - NO
+country_event = {
+	id = proposed.64
+	title = proposed.64.t
+    desc = proposed.64.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.64.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Okayu proposed - YES
+country_event = {
+	id = proposed.65
+	title = proposed.65.t
+    desc = proposed.65.d
+    picture = GFX_report_event_okayu_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.65.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Okayu proposed - NO
+country_event = {
+	id = proposed.66
+	title = proposed.66.t
+    desc = proposed.66.d
+    picture = GFX_report_event_okayu_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.66.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Pekora proposed - YES
+country_event = {
+	id = proposed.67
+	title = proposed.67.t
+    desc = proposed.67.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.67.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Pekora proposed - NO
+country_event = {
+	id = proposed.68
+	title = proposed.68.t
+    desc = proposed.68.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.68.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Polka proposed - YES
+country_event = {
+	id = proposed.69
+	title = proposed.69.t
+    desc = proposed.69.d
+    picture = GFX_report_event_polka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.69.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Polka proposed - NO
+country_event = {
+	id = proposed.70
+	title = proposed.70.t
+    desc = proposed.70.d
+    picture = GFX_report_event_polka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.70.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Risu proposed - YES
+country_event = {
+	id = proposed.71
+	title = proposed.71.t
+    desc = proposed.71.d
+    picture = GFX_report_event_risu_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.71.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Risu proposed - NO
+country_event = {
+	id = proposed.72
+	title = proposed.72.t
+    desc = proposed.72.d
+    picture = GFX_report_event_risu_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.72.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Roboco proposed - YES
+country_event = {
+	id = proposed.73
+	title = proposed.73.t
+    desc = proposed.73.d
+    picture = GFX_report_event_roboco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.73.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Roboco proposed - NO
+country_event = {
+	id = proposed.74
+	title = proposed.74.t
+    desc = proposed.74.d
+    picture = GFX_report_event_roboco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.74.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Rosalyn proposed - YES
+country_event = {
+	id = proposed.75
+	title = proposed.75.t
+    desc = proposed.75.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.75.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Rosalyn proposed - NO
+country_event = {
+	id = proposed.76
+	title = proposed.76.t
+    desc = proposed.76.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.76.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Rushia proposed - YES
+country_event = {
+	id = proposed.77
+	title = proposed.77.t
+    desc = proposed.77.d
+    picture = GFX_report_event_rushia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.77.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Rushia proposed - NO
+country_event = {
+	id = proposed.78
+	title = proposed.78.t
+    desc = proposed.78.d
+    picture = GFX_report_event_rushia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.78.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Shion proposed - YES
+country_event = {
+	id = proposed.79
+	title = proposed.79.t
+    desc = proposed.79.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.79.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Shion proposed - NO
+country_event = {
+	id = proposed.80
+	title = proposed.80.t
+    desc = proposed.80.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.80.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Sora proposed - YES
+country_event = {
+	id = proposed.81
+	title = proposed.81.t
+    desc = proposed.81.d
+    picture = GFX_report_event_sora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.81.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Sora proposed - NO
+country_event = {
+	id = proposed.82
+	title = proposed.82.t
+    desc = proposed.82.d
+    picture = GFX_report_event_sora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.82.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Subaru proposed - YES
+country_event = {
+	id = proposed.83
+	title = proposed.83.t
+    desc = proposed.83.d
+    picture = GFX_report_event_subaru_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.83.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Subaru proposed - NO
+country_event = {
+	id = proposed.84
+	title = proposed.84.t
+    desc = proposed.84.d
+    picture = GFX_report_event_subaru_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.84.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Suisei proposed - YES
+country_event = {
+	id = proposed.85
+	title = proposed.85.t
+    desc = proposed.85.d
+    picture = GFX_report_event_suisei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.85.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Suisei proposed - NO
+country_event = {
+	id = proposed.86
+	title = proposed.86.t
+    desc = proposed.86.d
+    picture = GFX_report_event_suisei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.86.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Towa proposed - YES
+country_event = {
+	id = proposed.87
+	title = proposed.87.t
+    desc = proposed.87.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.87.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Towa proposed - NO
+country_event = {
+	id = proposed.88
+	title = proposed.88.t
+    desc = proposed.88.d
+    picture = GFX_report_event_towa_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.88.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Watame proposed - YES
+country_event = {
+	id = proposed.89
+	title = proposed.89.t
+    desc = proposed.89.d
+    picture = GFX_report_event_watame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.89.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Watame proposed - NO
+country_event = {
+	id = proposed.90
+	title = proposed.90.t
+    desc = proposed.90.d
+    picture = GFX_report_event_watame_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.90.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Amelia proposed - YES
+country_event = {
+	id = proposed.91
+	title = proposed.91.t
+    desc = proposed.91.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.91.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Amelia proposed - NO
+country_event = {
+	id = proposed.92
+	title = proposed.92.t
+    desc = proposed.92.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.92.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Yagoo proposed - YES
+country_event = {
+	id = proposed.93
+	title = proposed.93.t
+    desc = proposed.93.d
+    picture = GFX_report_event_yagoo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.93.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Yagoo proposed - NO
+country_event = {
+	id = proposed.94
+	title = proposed.94.t
+    desc = proposed.94.d
+    picture = GFX_report_event_yagoo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.94.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Yogiri proposed - YES
+country_event = {
+	id = proposed.95
+	title = proposed.95.t
+    desc = proposed.95.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.95.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Yogiri proposed - NO
+country_event = {
+	id = proposed.96
+	title = proposed.96.t
+    desc = proposed.96.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.96.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Aki proposed - YES
+country_event = {
+	id = proposed.97
+	title = proposed.97.t
+    desc = proposed.97.d
+    picture = GFX_report_event_aki_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.97.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Aki proposed - NO
+country_event = {
+	id = proposed.98
+	title = proposed.98.t
+    desc = proposed.98.d
+    picture = GFX_report_event_aki_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.98.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Germany proposed - NO
+country_event = {
+    id = proposed.100
+    title = proposed.100.t
+    desc = proposed.100.d
+    picture = GFX_report_event_ger_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.100.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Germany proposed - YES
+country_event = {
+    id = proposed.99
+    title = proposed.99.t
+    desc = proposed.99.d
+    picture = GFX_report_event_ger_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.99.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Soviet proposed - YES
+country_event = {
+    id = proposed.101
+    title = proposed.101.t
+    desc = proposed.101.d
+    picture = GFX_report_event_sov_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.101.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Soviet proposed - NO
+country_event = {
+    id = proposed.102
+    title = proposed.102.t
+    desc = proposed.102.d
+    picture = GFX_report_event_sov_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.102.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#France proposed - YES
+country_event = {
+    id = proposed.103
+    title = proposed.103.t
+    desc = proposed.103.d
+    picture = GFX_report_event_fra_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.103.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#France proposed - NO
+country_event = {
+    id = proposed.104
+    title = proposed.104.t
+    desc = proposed.104.d
+    picture = GFX_report_event_fra_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.104.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Britain proposed - YES
+country_event = {
+    id = proposed.105
+    title = proposed.105.t
+    desc = proposed.105.d
+    picture = GFX_report_event_eng_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.105.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Britain proposed - NO
+country_event = {
+    id = proposed.106
+    title = proposed.106.t
+    desc = proposed.106.d
+    picture = GFX_report_event_eng_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.106.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hololive China proposed - YES
+country_event = {
+    id = proposed.107
+    title = proposed.107.t
+    desc = proposed.107.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.107.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Hololive China proposed - NO
+country_event = {
+    id = proposed.108
+    title = proposed.108.t
+    desc = proposed.108.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.108.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Japan proposed - YES
+country_event = {
+    id = proposed.109
+    title = proposed.109.t
+    desc = proposed.109.d
+    picture = GFX_report_event_jap_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.109.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Japan proposed - NO
+country_event = {
+    id = proposed.110
+    title = proposed.110.t
+    desc = proposed.110.d
+    picture = GFX_report_event_jap_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.110.a   #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Fauna proposed - YES
+country_event = {
+    id = proposed.111
+    title = proposed.111.t
+    desc = proposed.111.d
+    picture = GFX_report_event_fauna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.111.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Fauna proposed - NO
+country_event = {
+    id = proposed.112
+    title = proposed.112.t
+    desc = proposed.112.d
+    picture = GFX_report_event_fauna_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.112.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kronii proposed - YES
+country_event = {
+    id = proposed.113
+    title = proposed.113.t
+    desc = proposed.113.d
+    picture = GFX_report_event_kronii_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.113.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Kronii proposed - NO
+country_event = {
+    id = proposed.114
+    title = proposed.114.t
+    desc = proposed.114.d
+    picture = GFX_report_event_kronii_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.114.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Bealz proposed - YES
+country_event = {
+    id = proposed.115
+    title = proposed.115.t
+    desc = proposed.115.d
+    picture = GFX_report_event_bealz_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.115.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Bealz proposed - NO
+country_event = {
+    id = proposed.116
+    title = proposed.116.t
+    desc = proposed.116.d
+    picture = GFX_report_event_bealz_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.116.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mumei proposed - YES
+country_event = {
+    id = proposed.117
+    title = proposed.117.t
+    desc = proposed.117.d
+    picture = GFX_report_event_mumei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.117.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Mumei proposed - NO
+country_event = {
+    id = proposed.118
+    title = proposed.118.t
+    desc = proposed.118.d
+    picture = GFX_report_event_mumei_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.118.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Sana proposed - YES
+country_event = {
+    id = proposed.119
+    title = proposed.119.t
+    desc = proposed.119.d
+    picture = GFX_report_event_sana_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.119.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Sana proposed - NO
+country_event = {
+    id = proposed.120
+    title = proposed.120.t
+    desc = proposed.120.d
+    picture = GFX_report_event_sana_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = proposed.120.a  #Yes
+     ai_chance = { factor = 100 }
+     }
+}

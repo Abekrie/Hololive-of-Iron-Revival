@@ -1,0 +1,101 @@
+Generic_CIV_historical = {
+	name = "Civia plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = CIV
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = CIV
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		chinese_national_party_cn_focus
+		reach_out_to_japan_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_CIV_non_historical = {
+	name = "Civia plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = CIV
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = CIV
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		chinese_national_party_cn_focus
+		reach_out_to_japan_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

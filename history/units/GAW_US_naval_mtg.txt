@@ -1,0 +1,61 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "USA Fleet"		
+		naval_base = 10265
+		task_force = {				
+			name = "USA Force"			
+			location = 10265 
+
+			ship = { name = "America 1" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "America 2" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "America 3" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "America 4" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Enterprise" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "California" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Arizona" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Nevada" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Washington" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+
+		}						
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

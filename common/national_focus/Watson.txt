@@ -1,0 +1,2934 @@
+focus_tree = {
+	id = Amelia_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = WTS
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 2400 y = 1000 }
+    #Generic Eng Research
+    focus = {
+		id = WTS_HOLOEN_establish_mi6_eng_focus
+		text = establish_mi6_eng_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		#prerequisite = { focus = okayu_korone_union_oka_focus }
+		#relative_position_id = okayu_korone_union_oka_focus
+		#mutually_exclusive = { focus = the_land_down_under_oka_focus }
+		x = 17
+		y = 0
+		cost = 6
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = hololive_secret_police_idea
+		    custom_effect_tooltip = available_political_advisor
+show_ideas_tooltip = NOE_army_AME
+set_country_flag = AME_army_advisor_FLAG
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_patially_disarmed_eng_focus
+		text = patially_disarmed_eng_focus
+		icon = GFX_goal_generic_small_arms
+		#prerequisite = { focus = okayu_korone_union_oka_focus }
+		relative_position_id = WTS_HOLOEN_establish_mi6_eng_focus
+		#mutually_exclusive = { focus = the_land_down_under_oka_focus }
+		x = 3
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    swap_ideas = {
+    			remove_idea = full_disarmed_ns
+    			add_idea = partially_disarmed_ns
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_no_disarmed_eng_focus
+		text = no_disarmed_eng_focus
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = WTS_HOLOEN_patially_disarmed_eng_focus }
+		relative_position_id = WTS_HOLOEN_patially_disarmed_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    remove_ideas = partially_disarmed_ns
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_airforce_eng_focus
+		text = airforce_eng_focus
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = WTS_HOLOEN_no_disarmed_eng_focus }
+		relative_position_id = WTS_HOLOEN_no_disarmed_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    air_experience = 25
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_army_eng_focus
+		text = army_eng_focus
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = WTS_HOLOEN_no_disarmed_eng_focus }
+		relative_position_id = WTS_HOLOEN_no_disarmed_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    army_experience = 25
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_navy_eng_focus
+		text = navy_eng_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = WTS_HOLOEN_no_disarmed_eng_focus }
+		relative_position_id = WTS_HOLOEN_no_disarmed_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_chiefs_of_staff_committee_eng_focus
+		text = ENG_chiefs_of_staff_committee
+		prerequisite = { focus = WTS_HOLOEN_army_eng_focus }
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		x = 0
+		y = 1
+		relative_position_id = WTS_HOLOEN_army_eng_focus
+		cost = 8
+			
+		completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+show_ideas_tooltip = NOE_air_CLI
+set_country_flag = CLI_air_advisor_FLAG
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			add_ideas = ENG_chiefs_of_staff_committee_idea
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_groundpounder_eng_focus
+		text = groundpounder_eng_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = WTS_HOLOEN_airforce_eng_focus }
+		relative_position_id = WTS_HOLOEN_airforce_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_command_focus
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_watamelia_eng_focus
+		text = watamelia_eng_focus
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = WTS_HOLOEN_navy_eng_focus }
+		relative_position_id = WTS_HOLOEN_navy_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			WAT = { navy_experience = 10 }
+		    add_tech_bonus = {
+				name = uk_amphibious_focus
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = uk_amphibious_focus
+				bonus = 1.0
+				uses = 2
+				category = tp_tech
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_heavy_pounder_eng_focus
+		text = heavy_pounder_eng_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = WTS_HOLOEN_airforce_eng_focus }
+		relative_position_id = WTS_HOLOEN_airforce_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = -1
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_pound_the_ground_eng_focus
+		text = pound_the_ground_eng_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = WTS_HOLOEN_airforce_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_army_eng_focus }
+		relative_position_id = WTS_HOLOEN_airforce_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 1
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = coastal_command_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_bomber
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_destroyer_focus_eng_focus
+		text = destroyer_focus_eng_focus
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = WTS_HOLOEN_navy_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_army_eng_focus }
+		relative_position_id = WTS_HOLOEN_army_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 1
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_rules_the_waves_eng_focus
+		text = rules_the_waves_eng_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = WTS_HOLOEN_navy_eng_focus }
+		relative_position_id = WTS_HOLOEN_navy_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 1
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+show_ideas_tooltip = NOE_navy_GAW
+set_country_flag = GAW_navy_advisor_FLAG
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_aluminium_extraction_eng_focus
+		text = aluminium_extraction_eng_focus
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = WTS_HOLOEN_heavy_pounder_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_pound_the_ground_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_groundpounder_eng_focus }
+		relative_position_id = WTS_HOLOEN_groundpounder_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			add_ideas = british_fighter_discount
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_convoy_escort_focus_eng_focus
+		text = convoy_escort_focus_eng_focus
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = WTS_HOLOEN_chiefs_of_staff_committee_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_pound_the_ground_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_destroyer_focus_eng_focus }
+		relative_position_id = WTS_HOLOEN_chiefs_of_staff_committee_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = british_convoy_discount
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_steal_british_dock_eng_focus
+		text = steal_british_dock_eng_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WTS_HOLOEN_watamelia_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_rules_the_waves_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_destroyer_focus_eng_focus }
+		relative_position_id = WTS_HOLOEN_watamelia_eng_focus
+		#mutually_exclusive = { focus = the_landocus }
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			ENG = { add_stability = -0.01 }
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_gentlemen_warfare_eng_focus
+		text = gentlemen_warfare_eng_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = WTS_HOLOEN_establish_mi6_eng_focus }
+		relative_position_id = WTS_HOLOEN_establish_mi6_eng_focus
+		#mutually_exclusive = { focus = ther_oka_focus }
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_military_effort_eng_focus
+		text = military_effort_eng_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WTS_HOLOEN_patially_disarmed_eng_focus }
+		prerequisite = { focus = WTS_HOLOEN_establish_mi6_eng_focus }
+		relative_position_id = WTS_HOLOEN_patially_disarmed_eng_focus
+		#mutually_exclusive = { focus = the_land_down_under_oka_focus }
+		x = -2
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_industrial_effort_eng_focus
+		text = industrial_effort_eng_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WTS_HOLOEN_military_effort_eng_focus }
+		relative_position_id = WTS_HOLOEN_military_effort_eng_focus
+		#mutually_exclusive = { focus = the_land_down_under_oka_focus }
+		x = 0
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WTS_HOLOEN_watsons_lab_eng_focus
+		text = watsons_lab_eng_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = WTS_HOLOEN_industrial_effort_eng_focus }
+		relative_position_id = WTS_HOLOEN_industrial_effort_eng_focus
+		#mutually_exclusive = { focus = ther_oka_focus }
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+
+	#Economy and Industry
+	focus = {
+		id = WTS_HoloEN_idol_creator
+		text = idol_creator
+		icon = GFX_focus_engineer_2
+		relative_position_id = WTS_HOLOEN_patially_disarmed_eng_focus
+		x = 10
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = WTS_HoloEN_minecraft_server
+		text = minecraft_server
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = WTS_HoloEN_idol_creator }
+		relative_position_id = WTS_HoloEN_idol_creator
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = minecraft_resource
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_wooden_house
+		text = wooden_house
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WTS_HoloEN_minecraft_server }
+		relative_position_id = WTS_HoloEN_minecraft_server
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	}
+
+	focus = {
+		id = WTS_HoloEN_nether_portal
+		text = nether_portal
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WTS_HoloEN_wooden_house }
+		relative_position_id = WTS_HoloEN_wooden_house
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+	    }
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_wooden_in_nether
+		text = wooden_in_nether
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WTS_HoloEN_nether_portal }
+		relative_position_id = WTS_HoloEN_nether_portal
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_oversea_fanbase
+		text = oversea_fanbase
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = WTS_HoloEN_idol_creator }
+		relative_position_id = WTS_HoloEN_idol_creator
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		navy_experience = 25
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_yuri_ship
+		text = yuri_ship
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WTS_HoloEN_oversea_fanbase }
+		relative_position_id = WTS_HoloEN_oversea_fanbase
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_beach_eps
+		text = beach_eps
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WTS_HoloEN_yuri_ship }
+		relative_position_id = WTS_HoloEN_yuri_ship
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_azur_lane_collab
+		text = azur_lane_collab
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WTS_HoloEN_beach_eps }
+		relative_position_id = WTS_HoloEN_beach_eps
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_offensive_marketing
+		text = offensive_marketing
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = WTS_HoloEN_idol_creator }
+		relative_position_id = WTS_HoloEN_idol_creator
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_body_pillow
+		text = body_pillow
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WTS_HoloEN_offensive_marketing }
+		relative_position_id = WTS_HoloEN_offensive_marketing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_bath_water
+		text = bath_water
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WTS_HoloEN_body_pillow }
+		relative_position_id = WTS_HoloEN_body_pillow
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_t_shirt
+		text = t_shirt
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WTS_HoloEN_bath_water }
+		relative_position_id = WTS_HoloEN_bath_water
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WTS_HoloEN_idol_research_generic
+		text = idol_research_generic
+		icon = GFX_focus_research
+		prerequisite = { focus = WTS_HoloEN_t_shirt 
+		focus = WTS_HoloEN_azur_lane_collab
+		focus = WTS_HoloEN_wooden_in_nether}
+		relative_position_id = WTS_HoloEN_azur_lane_collab
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_research_slot = 1
+	    }
+	}
+
+	#Diplomatic focus
+	focus = {
+		id = amelia_watson_wts_focus
+		icon = GFX_focus_watson_flag
+		#prerequisite = { focus = WTS_ENG_hololive_en_holoen_focus }
+		#mutually_exclusive = { focus = idkmatsdfg }
+		#relative_position_id = WTS_ENG_hololive_en_holoen_focus
+		x = 6
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_political_power = 120
+	    }
+	}
+
+	focus = {
+		id = funny_debut_wts_focus
+		icon = GFX_focus_research2
+		prerequisite = { focus = amelia_watson_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = amelia_watson_wts_focus
+		x = 2
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = funny_gang
+	    }
+	}
+
+	focus = {
+		id = being_meme_wts_focus
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = funny_debut_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = funny_debut_wts_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = being_meme
+	    }
+	}
+
+	focus = {
+		id = watson_concoction_wts_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = being_meme_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = being_meme_wts_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = asacoco_idea
+	    }
+	}
+
+	focus = {
+		id = special_ame_service_wts_focus
+		icon = GFX_focus_WTS_guns
+		prerequisite = { focus = watson_concoction_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = watson_concoction_wts_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = five_idols_army_ns
+	    }
+	}
+
+	focus = {
+		id = hold_the_national_referendum_wts_focus
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = amelia_watson_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = amelia_watson_wts_focus
+		x = -3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    country_event = { id = amelia.8 }
+	    }
+	}
+
+	focus = {
+		id = neutral_victory_wts_focus
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = hold_the_national_referendum_wts_focus }
+		mutually_exclusive = { focus = royalist_victory_wts_focus }
+		mutually_exclusive = { focus = break_away_from_europe_wts_focus }
+		relative_position_id = hold_the_national_referendum_wts_focus
+		x = -4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			has_country_flag = Amelia_neutral_victory
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = CET_available_as_advisor
+		    set_country_flag = Player_can_dem_advisor
+		    set_country_flag = Player_can_fas_advisor
+		    set_country_flag = Player_can_com_advisor
+		    custom_effect_tooltip = "Tokino Sora"
+		    custom_effect_tooltip = "Minato Aqua"
+		    custom_effect_tooltip = "Kiryu Coco"
+	    }
+	}
+
+	focus = {
+		id = royalist_victory_wts_focus
+		icon = GFX_focus_WTS_princess
+		prerequisite = { focus = hold_the_national_referendum_wts_focus }
+		mutually_exclusive = { focus = neutral_victory_wts_focus }
+		mutually_exclusive = { focus = break_away_from_europe_wts_focus }
+		relative_position_id = hold_the_national_referendum_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			has_country_flag = Amelia_royalist_victory
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+			retire_ideology_leader = fascism
+			create_country_leader = {
+				name = "Princess Amelia"
+				picture = "gfx/leaders/WTS/watson_fas.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					crowned_by_god_trait
+					
+				}
+			}
+			custom_effect_tooltip = CET_available_as_advisor
+		    set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Kiryu Coco"
+	    }
+	}
+
+	focus = {
+		id = break_away_from_europe_wts_focus
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = hold_the_national_referendum_wts_focus }
+		mutually_exclusive = { focus = neutral_victory_wts_focus }
+		mutually_exclusive = { focus = royalist_victory_wts_focus }
+		relative_position_id = hold_the_national_referendum_wts_focus
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = Amelia_communist_victory
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_stability = -0.1
+			HOL = {
+				transfer_state = 36
+				transfer_state = 35
+				transfer_state = 7
+			}
+			BEL = {
+				transfer_state = 34
+				transfer_state = 6
+			}
+			LUX = {
+				transfer_state = 8
+			}
+			if = {
+				limit = {
+					HOL = { is_subject_of = ROOT }
+				}
+				end_puppet = HOL
+			}
+			if = {
+				limit = {
+					BEL = { is_subject_of = ROOT }
+				}
+				end_puppet = BEL
+			}
+			if = {
+				limit = {
+					LUX = { is_subject_of = ROOT }
+				}
+				end_puppet = LUX
+			}
+			custom_effect_tooltip = CET_available_as_advisor
+		    set_country_flag = Player_can_com_advisor
+		    custom_effect_tooltip = "Minato Aqua"
+		    hidden_effect = {
+		    	news_event = {
+					id = holo_news.181
+				}
+		    }
+	    }
+	}
+
+	focus = {
+		id = small_ame_wts_focus
+		icon = GFX_focus_WTS_small_ame_com
+		prerequisite = { focus = break_away_from_europe_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = break_away_from_europe_wts_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = Amelia_communist_victory
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+					set_politics = {
+						ruling_party = communism
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = 0.6
+					}
+					retire_ideology_leader = communism
+				create_country_leader = {
+				name = "Small Ame"
+				picture = "gfx/leaders/WTS/watson_com.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					smallism_trait
+					
+				}
+			}
+	    }
+	}
+
+	focus = {
+        id = infrastructure_effort_wts_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = small_ame_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_wts_focus
+        x = 4
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = infrastructure_building_idea
+        }
+    }
+
+	focus = {
+        id = befriend_ussr_wts_focus
+        icon = GFX_focus_chi_mission_to_the_soviet_union
+        prerequisite = { focus = small_ame_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_wts_focus
+        x = 2
+        y = 2
+        cost = 5
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	SOV = {
+		    add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }
+		    }
+        }
+    }
+
+    focus = {
+        id = crush_the_rebel_wts_focus
+        icon = GFX_focus_spr_crush_the_revolution
+        prerequisite = { focus = befriend_ussr_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = befriend_ussr_wts_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	create_wargoal = { type = annex_everything target = HOL }
+        	create_wargoal = { type = annex_everything target = BEL }
+        	create_wargoal = { type = annex_everything target = LUX }
+        }
+    }
+
+	focus = {
+        id = small_ame_manifesto_wts_focus
+        icon = GFX_focus_SOV_the_path_of_marxism_leninism
+        prerequisite = { focus = small_ame_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_wts_focus
+        x = 6
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_small_ame_manifesto_wts_focus
+        	set_country_flag = Amelia_can_communist_influence
+        }
+    }
+
+    focus = {
+        id = contact_the_resistance_wts_focus
+        icon = GFX_focus_aqua_flag
+        prerequisite = { focus = small_ame_manifesto_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_manifesto_wts_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = hololive_resistance_ns
+        }
+    }
+
+    focus = {
+        id = milk_factory_wts_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = small_ame_manifesto_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_manifesto_wts_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = amsterdam_pact_wts_focus
+        icon = GFX_focus_hol_the_fourth_ally
+        prerequisite = { focus = small_ame_manifesto_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_manifesto_wts_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	create_faction = FACTION_WTS_amsterdam_pact
+        	set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = groundpounder_in_the_sky_wts_focus
+        icon = GFX_focus_KIA_air
+        prerequisite = { focus = amsterdam_pact_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = amsterdam_pact_wts_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = kiara_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = sharing_is_caring_wts_focus
+        icon = GFX_goal_generic_soviet_construction
+        prerequisite = { focus = amsterdam_pact_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = amsterdam_pact_wts_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 20000
+		    	producer = SOV
+	    	}
+        }
+    }
+
+    focus = {
+        id = she_is_a_pumpkin_wts_focus
+        icon = GFX_focus_RUS_halloween
+        prerequisite = { focus = sharing_is_caring_wts_focus
+        focus = groundpounder_in_the_sky_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sharing_is_caring_wts_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = small_ame_is_watching_you_wts_focus
+        icon = GFX_focus_WTS_small_ame
+        prerequisite = { focus = milk_factory_wts_focus
+        focus = contact_the_resistance_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = milk_factory_wts_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = watson_secret_service_spy_idea
+        }
+    }
+
+    focus = {
+        id = ame_bee_wts_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = small_ame_is_watching_you_wts_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = small_ame_is_watching_you_wts_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_efficiency_idea = yes
+        }
+    }
+
+    focus = {
+        id = union_of_small_ame_republics_wts_focus
+        icon = GFX_focus_ger_great_red_menace
+        prerequisite = { focus = she_is_a_pumpkin_wts_focus}
+        prerequisite = { focus = ame_bee_wts_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = ame_bee_wts_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 16
+        	has_full_control_of_state = 26
+        	has_full_control_of_state = 41
+        	has_full_control_of_state = 2
+        	has_full_control_of_state = 64
+        	has_full_control_of_state = 7
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_cosmetic_tag = WTS_USSR
+			every_state = {
+		   		limit = { OR = {
+		   			is_core_of = FRA
+		   			is_core_of = SUI
+		   			is_core_of = ITA
+		   			is_core_of = PEK
+		   			is_core_of = GER
+		   			is_core_of = KIA
+		   		} }
+		   		add_core_of = ROOT
+		   	}
+		   	hidden_effect = {
+		    	news_event = {
+					id = holo_news.182
+				}
+		    }
+        }
+    }
+
+	focus = {
+		id = anti_policy_pact_wts_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = royalist_victory_wts_focus 
+		focus = break_away_from_europe_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = royalist_victory_wts_focus
+		x = 1
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    remove_ideas = bad_habit_ns
+	    }
+	}
+
+	focus = {
+		id = royal_budget_wts_focus
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = royalist_victory_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = royalist_victory_wts_focus
+		x = 0
+		y = 3
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 20000
+		    	producer = ROOT
+	    	}
+	    }
+	}
+
+	focus = {
+		id = ookami_blue_wts_focus
+		icon = GFX_focus_MIO_mio
+		prerequisite = { focus = royal_budget_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = royal_budget_wts_focus
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = CET_available_as_general
+			custom_effect_tooltip = "Ookami Mio"
+			set_country_flag = MIO_recruit_general_dec_flag
+	    }
+	}
+
+	focus = {
+		id = watson_sphere_wts_focus
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = ookami_blue_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ookami_blue_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = CET_watson_sphere_wts_focus
+			set_country_flag = WTS_can_imperial_federation
+	    }
+	}
+
+	focus = {
+		id = new_foundland_purchase_wts_focus
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = watson_sphere_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = watson_sphere_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			owns_state = 331
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    331 = {
+		    	OWNER = { country_event = { id = amelia.9 }}
+		    }
+	    }
+	}
+
+	focus = {
+		id = hong_kong_purchase_wts_focus
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = watson_sphere_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = watson_sphere_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			owns_state = 326
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    326 = {
+		    	OWNER = { country_event = { id = amelia.11 }}
+		    }
+	    }
+	}
+
+	focus = {
+		id = sunset_on_australia_wts_focus
+		icon = GFX_focus_haato_flag
+		prerequisite = { focus = hong_kong_purchase_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = hong_kong_purchase_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+                factor = 2
+                date > 1940.1.1
+                is_in_faction_with = GAW
+            }
+		}
+
+		will_lead_to_war_with = HTO
+		available = { date > 1938.1.1 }
+
+		bypass = { OR = {
+			HTO = { exists = no }
+			HTO = { is_subject_of = ROOT }
+			HTO = { is_in_faction_with = ROOT }
+		} }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_wargoal = { type = annex_everything target = HTO }
+	    }
+	}
+
+	focus = {
+		id = india_treaty_ports_wts_focus
+		icon = GFX_focus_RAJ_british_investors
+		prerequisite = { focus = hong_kong_purchase_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = hong_kong_purchase_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    RUS = {
+		    	country_event = { id = amelia.13 }
+		    }
+	    }
+	}
+
+	focus = {
+		id = god_save_amelia_wts_focus
+		icon = GFX_focus_WTS_powerful
+		prerequisite = { focus = india_treaty_ports_wts_focus 
+		focus = sunset_on_australia_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = india_treaty_ports_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = spiritual_warrior_idea
+	    }
+	}
+
+	focus = {
+		id = franco_watson_union_wts_focus
+		icon = GFX_focus_WTS_franco_union
+		prerequisite = { focus = god_save_amelia_wts_focus }
+		mutually_exclusive = { focus = amelia_imperial_federation_wts_focus }
+		relative_position_id = god_save_amelia_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 16
+			has_full_control_of_state = 14
+			has_full_control_of_state = 15
+			has_full_control_of_state = 19
+			has_full_control_of_state = 26
+			has_full_control_of_state = 21
+			has_full_control_of_state = 25
+			has_full_control_of_state = 18
+			has_full_control_of_state = 27
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_cosmetic_tag = WTS_FRA
+			every_state = {
+		   		limit = { OR = {
+		   			is_core_of = FRA
+		   			is_core_of = SUI
+		   		} }
+		   		add_core_of = ROOT
+		   	}
+		   	hidden_effect = {
+		    	news_event = {
+					id = holo_news.183
+				}
+		    }
+	    }
+	}
+
+	focus = {
+		id = amelia_imperial_federation_wts_focus
+		icon = GFX_focus_WTS_imperial_federation
+		prerequisite = { focus = god_save_amelia_wts_focus }
+		mutually_exclusive = { focus = franco_watson_union_wts_focus }
+		relative_position_id = god_save_amelia_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			CAN = { is_subject_of = ROOT 
+			has_full_control_of_state = 276 }
+			RAJ = { is_subject_of = ROOT 
+			has_full_control_of_state = 439 }
+			GXC = { is_subject_of = ROOT 
+			has_full_control_of_state = 608 }
+			AST = { is_subject_of = ROOT 
+			has_full_control_of_state = 285 }
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_cosmetic_tag = WTS_empire
+			every_state = {
+		   		limit = { OR = {
+		   			is_core_of = RAJ
+		   			is_core_of = CAN
+		   			is_core_of = GXC
+		   			is_core_of = AST
+		   		} }
+		   		add_core_of = ROOT
+		   	}
+		    CAN = { country_event = { id = amelia.16 } }
+		    RAJ = { country_event = { id = amelia.16 } }
+		    GXC = { country_event = { id = amelia.16 } }
+		    AST = { country_event = { id = amelia.16 } }
+		    hidden_effect = {
+		    	news_event = {
+					id = holo_news.184
+				}
+		    }
+	    }
+	}
+
+	focus = {
+		id = amesame_wts_focus
+		icon = GFX_focus_WTS_amesame
+		prerequisite = { focus = royalist_victory_wts_focus
+		focus = neutral_victory_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = royalist_victory_wts_focus
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			OR = {GAW = {is_in_faction = no}
+			GAW = {is_subject = no}}
+			NOT = {GAW = {has_war_with = ROOT}}
+		}
+
+		bypass = { GAW = { OR = {is_subject_of = ROOT
+		is_in_faction_with = ROOT }}}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    GAW = { country_event = { id = amelia.1 }}
+		    set_rule = { can_create_factions = yes }
+	    }
+	}
+
+	focus = {
+		id = director_amelia_wts_focus
+		icon = GFX_focus_WTS_amelia
+		prerequisite = { focus = neutral_victory_wts_focus }
+		mutually_exclusive = { focus = president_amelia_wts_focus }
+		relative_position_id = neutral_victory_wts_focus
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			hidden_effect = {create_country_leader = {
+							name = "Director Amelia"
+							picture = "gfx/leaders/WTS/watson_neu.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								doctor_trait
+								drug_dealer_trait
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Director Amelia"
+							picture = "gfx/leaders/WTS/watson_neu.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								doctor_trait
+								drug_dealer_trait
+								
+							}
+						}}
+
+			create_country_leader = {
+				name = "Director Amelia"
+				picture = "gfx/leaders/WTS/watson_neu.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					doctor_trait
+					drug_dealer_trait
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Director Amelia"
+							picture = "gfx/leaders/WTS/watson_neu.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								doctor_trait
+								drug_dealer_trait
+								
+							}
+						}}
+	    }
+	}
+
+	focus = {
+		id = president_amelia_wts_focus
+		icon = GFX_focus_WTS_casual
+		prerequisite = { focus = neutral_victory_wts_focus }
+		mutually_exclusive = { focus = director_amelia_wts_focus }
+		relative_position_id = neutral_victory_wts_focus
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			hidden_effect = {create_country_leader = {
+							name = "President Amelia"
+							picture = "gfx/leaders/WTS/watson_dem.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								onee_san_trait
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "President Amelia"
+							picture = "gfx/leaders/WTS/watson_dem.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								onee_san_trait
+								
+							}
+						}}
+
+			create_country_leader = {
+				name = "President Amelia"
+				picture = "gfx/leaders/WTS/watson_dem.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					onee_san_trait
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "President Amelia"
+							picture = "gfx/leaders/WTS/watson_dem.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								onee_san_trait
+								
+							}
+						}}
+	    }
+	}
+
+	focus = {
+		id = interrogating_holoen_wts_focus
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = president_amelia_wts_focus 
+		focus = director_amelia_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = president_amelia_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = CET_interrogating_holoen_wts_focus
+		    KIA = { country_event = { id = amelia.3 }}
+		    MRI = { country_event = { id = amelia.3 }}
+		    GAW = { country_event = { id = amelia.3 }}
+		    NIN = { country_event = { id = amelia.3 }}
+		    hidden_effect = {
+		    	news_event = {
+					id = holo_news.185
+				}
+		    }
+	    }
+	}
+
+	focus = {
+		id = WTS_project_hope_holoen_focus
+		text = project_hope_holoen_focus
+		icon = GFX_focus_IRYS_project_hope
+		prerequisite = { focus = interrogating_holoen_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = interrogating_holoen_wts_focus
+		x = -3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = { has_full_control_of_state = 327 
+		has_full_control_of_state = 126
+		has_full_control_of_state = 55
+		has_full_control_of_state = 141
+		has_full_control_of_state = 111}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			country_event = { id = holo_en.1 days = 7 }
+			custom_effect_tooltip = CET_project_hope_holoen_focus
+		    hidden_effect = {
+		    	news_event = { id = holo_news.59 }
+		    add_state_core = 55
+		    add_state_core = 56
+		    add_state_core = 57
+		    add_state_core = 51
+		    add_state_core = 42
+		    add_state_core = 28
+		    add_state_core = 796
+		    add_state_core = 295
+		    add_state_core = 538
+		    add_state_core = 718
+		    add_state_core = 111
+		    add_state_core = 149
+		    add_state_core = 148
+		    add_state_core = 150
+		    add_state_core = 146
+		    add_state_core = 722
+		    add_state_core = 147
+		    add_state_core = 213
+		    add_state_core = 215
+		    add_state_core = 216
+		    add_state_core = 141
+		    add_state_core = 140
+		    add_state_core = 139
+		    add_state_core = 138
+		    add_state_core = 38
+		    add_state_core = 666
+		    add_state_core = 124
+		    add_state_core = 145
+		    add_state_core = 783
+		    add_state_core = 699
+		    add_state_core = 623
+		    add_state_core = 327
+		    add_state_core = 624
+		    add_state_core = 626
+		    add_state_core = 628
+		    add_state_core = 625
+		    add_state_core = 627
+		    add_state_core = 729
+		    add_state_core = 647
+		    add_state_core = 737
+		    add_state_core = 129
+		    add_state_core = 125
+		    add_state_core = 126
+		    add_state_core = 127
+		    add_state_core = 8
+		    add_state_core = 6
+		    add_state_core = 7
+		    add_state_core = 36
+		    add_state_core = 34
+		    add_state_core = 35}
+	    }
+	}
+
+	focus = {
+		id = WTS_caesura_of_despair_holoen_focus
+		text = caesura_of_despair_holoen_focus
+		icon = GFX_focus_IRYS_despair
+		prerequisite = { focus = WTS_project_hope_holoen_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WTS_project_hope_holoen_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = caesura_of_despair_idea
+	    }
+	}
+
+	focus = {
+		id = WTS_here_comes_hope_holoen_focus
+		text = here_comes_hope_holoen_focus
+		icon = GFX_focus_IRYS_army
+		prerequisite = { focus = WTS_project_hope_holoen_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WTS_project_hope_holoen_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_country_flag = IRYS_HERE_COMES_HOPE_FLAG
+		    custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = IRYS_irys_high_com
+	    }
+	}
+
+	focus = {
+		id = WTS_irys_in_command_holoen_focus
+		text = irys_in_command_holoen_focus
+		icon = GFX_focus_IRYS_guns
+		prerequisite = { focus = WTS_project_hope_holoen_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WTS_project_hope_holoen_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		custom_effect_tooltip = CET_available_as_general
+custom_effect_tooltip = "IRyS"
+set_country_flag = IRYS_recruit_general_dec_flag
+	    }
+	}
+
+	focus = {
+		id = constitution_reform_wts_focus
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = interrogating_holoen_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = interrogating_holoen_wts_focus
+		x = 0
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			remove_ideas = bad_habit_ns
+	    }
+	}
+
+	focus = {
+		id = volunteer_army_wts_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = constitution_reform_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = constitution_reform_wts_focus
+		x = -1
+		y = 2
+		cost = 2
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		    add_ideas = independent_volunteer_corps_ns
+		    set_rule = { can_send_volunteers = yes }
+	    }
+	}
+
+	focus = {
+		id = deck_the_hall_wts_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = constitution_reform_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = constitution_reform_wts_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = centralized_banking_system_wts_focus
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = deck_the_hall_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = deck_the_hall_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = WTS
+	    }
+	    }
+	}
+
+	focus = {
+		id = steal_the_british_fleet_wts_focus
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		prerequisite = { focus = centralized_banking_system_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = centralized_banking_system_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_full_control_of_state = 123
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			#540 - Plymouth
+			custom_effect_tooltip = CET_steal_the_british_fleet_wts_focus
+
+		    hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = WTS_destroyers_for_bases_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = WTS_destroyers_for_bases
+						}}
+	    }
+	}
+
+	focus = {
+		id = aoi_nabi_wts_focus
+		icon = GFX_focus_WTS_aoi_nabi
+		prerequisite = { focus = centralized_banking_system_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = centralized_banking_system_wts_focus
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			create_corps_commander = {
+	name = "Aoi Nabi"
+	portrait_path = "gfx/leaders/WTS/aoi_nabi.dds"
+	traits = { old_guard organizer }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+}
+	    }
+	}
+
+	focus = {
+		id = standard_pistol_wts_focus
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = aoi_nabi_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = aoi_nabi_wts_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = infantry_equipment_0
+		    amount = 5000
+		    producer = ROOT
+	    }
+	    }
+	}
+
+	focus = {
+		id = investigation_expert_wts_focus
+		icon = GFX_focus_WTS_powerful
+		prerequisite = { focus = standard_pistol_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = standard_pistol_wts_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_country_flag = WTS_can_detective
+			custom_effect_tooltip = CET_investigation_expert_wts_focus
+	    }
+	}
+
+	focus = {
+		id = prepare_the_dutch_line_wts_focus
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = aoi_nabi_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = aoi_nabi_wts_focus
+		x = -1
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			35 = {
+				add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6500
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6496
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 11456
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+			36 = {
+			add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6241
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	    	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 9335
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	    	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6286
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+	    }
+	}
+
+	focus = {
+		id = prepare_the_belgian_line_wts_focus
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = prepare_the_dutch_line_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = prepare_the_dutch_line_wts_focus
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			34 = {
+				add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 9536
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 13081
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 9444
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	    	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 9418
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+			6 = {
+			add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6446
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	    	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 3576
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+	    }
+	}
+
+	focus = {
+		id = royal_dutch_shell_line_wts_focus
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = prepare_the_dutch_line_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = prepare_the_dutch_line_wts_focus
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		        add_resource = {
+					type = oil
+					amount = 8
+				}
+		    }
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = oil
+					amount = 8
+				}
+		    }
+	    }
+	}
+
+	focus = {
+		id = bubba_wts_focus
+		icon = GFX_focus_WTS_bubba
+		prerequisite = { focus = aoi_nabi_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = aoi_nabi_wts_focus
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+
+
+		create_corps_commander = {
+	name = "Bubba"
+	portrait_path = "gfx/leaders/WTS/bubba.dds"
+	traits = { old_guard brilliant_strategist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+	    }
+	}
+
+	focus = {
+		id = gura_in_army_wts_focus
+		icon = GFX_focus_GAW_guns
+		prerequisite = { focus = amesame_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = amesame_wts_focus
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+		
+		bypass = {
+		custom_trigger_tooltip = 
+			{has_country_flag = GAW_recruit_general_dec_flag
+						tooltip = CTT_GAW_recruit_general_dec_flag}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_country_flag = GAW_recruit_general_dec_flag
+		    custom_effect_tooltip = CET_available_as_general
+			custom_effect_tooltip = "Gawr Gura"
+	    }
+	}
+
+	focus = {
+		id = gura_in_navy_wts_focus
+		icon = GFX_focus_GAW_battleship
+		prerequisite = { focus = amesame_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = amesame_wts_focus
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    set_country_flag = GAW_recruit_admiral_dec_flag
+		    custom_effect_tooltip = CET_available_as_admiral
+			custom_effect_tooltip = "Gawr Gura"
+	    }
+	}
+
+	focus = {
+		id = visit_gura_wts_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = gura_in_navy_wts_focus 
+		focus = gura_in_army_wts_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = gura_in_navy_wts_focus
+		x = 1
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = watson_secret_service_wts_focus
+		icon = GFX_focus_WTS_guns
+		prerequisite = { focus = visit_gura_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = visit_gura_wts_focus
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = watson_secret_service_spy_idea
+	    }
+	}
+
+	focus = {
+		id = royal_wedding_wts_focus
+		icon = GFX_focus_WTS_amesame
+		prerequisite = { focus = watson_secret_service_wts_focus }
+		mutually_exclusive = { focus = political_bargaining_wts_focus }
+		relative_position_id = watson_secret_service_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = { GAW = {
+		is_in_faction_with = ROOT
+		is_subject = no
+		}
+		is_subject = no
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    GAW = { country_event = { id = amelia.2 }}
+	    }
+	}
+
+	focus = {
+		id = political_bargaining_wts_focus
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = watson_secret_service_wts_focus }
+		mutually_exclusive = { focus = royal_wedding_wts_focus }
+		relative_position_id = watson_secret_service_wts_focus
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.1
+	    }
+	}
+
+	focus = {
+		id = economic_support_wts_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = political_bargaining_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = political_bargaining_wts_focus
+		x = -1
+		y = 1
+		cost = 6
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			GAW = {random_owned_controlled_state = {
+					    add_extra_state_shared_building_slots = 2
+					    add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+						}}
+	    }
+	}
+
+	focus = {
+		id = boat_date_wts_focus
+		icon = GFX_focus_GAW_battleship
+		prerequisite = { focus = gura_in_navy_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = gura_in_navy_wts_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = { has_full_control_of_state = 127 }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = CET_boat_date_wts_focus
+		    hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = WTS_boat_date_naval_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = WTS_boat_date_naval_legacy
+						}}
+	    }
+	}
+
+	focus = {
+		id = reunite_the_british_isles_wts_focus
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = funny_debut_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = funny_debut_wts_focus
+		x = 3
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.15
+	    }
+	}
+
+	focus = {
+		id = war_on_england_wts_focus
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = reunite_the_british_isles_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = reunite_the_british_isles_wts_focus
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		will_lead_to_war_with = ENG
+		available = { date > 1938.1.1 }
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		bypass = { OR = {
+			ENG = { exists = no }
+			ENG = { is_subject_of = ROOT }
+			ENG = { is_in_faction_with = ROOT }
+		} }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_wargoal = { type = annex_everything target = ENG }
+	    }
+	}
+
+	focus = {
+		id = war_on_choco_wts_focus
+		icon = GFX_focus_choco_flag
+		prerequisite = { focus = reunite_the_british_isles_wts_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = reunite_the_british_isles_wts_focus
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 5
+                date > 1940.1.1
+                NOT = {
+                	has_war_with = ENG
+                }
+            }
+        }
+		
+		will_lead_to_war_with = CHC
+		available = { date > 1938.1.1 }
+
+		bypass = { OR = {
+			CHC = { exists = no }
+			CHC = { is_subject_of = ROOT }
+			CHC = { is_in_faction_with = ROOT }
+		} }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_wargoal = { type = annex_everything target = CHC }
+	    }
+	}
+
+	focus = {
+		id = island_fortress_wts_focus
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = war_on_choco_wts_focus
+		focus = war_on_england_wts_focus }
+		#mutually_exclusive = { focus = idkmatsdfg }
+		relative_position_id = war_on_choco_wts_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_timed_idea = {
+                idea = islands_fortress_1
+                days = 365
+            }
+	    }
+	}
+
+
+}

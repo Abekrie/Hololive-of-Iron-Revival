@@ -1,0 +1,623 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+### Generic English division and brigade names for Enlgigh-speaking minors (or colonies) and releasable nations 
+	# AQA_xxx = British English (or universal English) naming convention
+	# AMENGL_xxx = American English naming convention
+	
+AQA_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Aqua Infantry"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{   
+	   1 = { "%dth Karachi Infantry " }
+       2 = { "%dth Delhi Infantry " }
+       3 = { "%dth Resistance Infantry " }
+       4 = { "%dth Karachi Infantry " }
+       5 = { "%dth Aqua Crew Infantry " }
+       6 = { "%dth Aqua Crew Infantry " }
+       7 = { "%dth Quetta Infantry " }
+       8 = { "%dth Khuzdar Infantry " }
+       9 = { "%dth Purple Guard Infantry " }
+       10 = { "%dth Quetta Infantry " }
+       11 = { "%dth Lahore Infantry " }
+       12 = { "%dth Iron Maid Infantry " }
+       13 = { "%dth Khuzdar Infantry " }
+       14 = { "%dth Dai Tenshi Infantry " }
+       15 = { "%dth Resistance Infantry " }
+       16 = { "%dth Iron Maid Infantry " }
+       17 = { "%dth Karachi Infantry " }
+       18 = { "%dth Resistance Infantry " }
+       19 = { "%dth Quetta Infantry " }
+       20 = { "%dth Marine Maid Infantry " }
+       21 = { "%dth Purple Guard Infantry " }
+       22 = { "%dth Quetta Infantry " }
+       23 = { "%dth Lahore Infantry " }
+       24 = { "%dth Karachi Infantry " }
+       25 = { "%dth Quetta Infantry " }
+       26 = { "%dth Purple Guard Infantry " }
+       27 = { "%dth Resistance Infantry " }
+       28 = { "%dth Iron Maid Infantry " }
+       29 = { "%dth Aqua Crew Infantry " }
+       30 = { "%dth Khuzdar Infantry " }
+       31 = { "%dth Resistance Infantry " }
+       32 = { "%dth Dai Tenshi Infantry " }
+       33 = { "%dth Aqua Crew Infantry " }
+       34 = { "%dth Karachi Infantry " }
+       35 = { "%dth Purple Guard Infantry " }
+       36 = { "%dth Lahore Infantry " }
+       37 = { "%dth Resistance Infantry " }
+       38 = { "%dth Purple Guard Infantry " }
+       39 = { "%dth Delhi Infantry " }
+       40 = { "%dth Dai Tenshi Infantry " }
+       41 = { "%dth Khuzdar Infantry " }
+       42 = { "%dth Aqua Crew Infantry " }
+       43 = { "%dth Marine Maid Infantry " }
+       44 = { "%dth Lahore Infantry " }
+       45 = { "%dth Lahore Infantry " }
+       46 = { "%dth Iron Maid Infantry " }
+       47 = { "%dth Ahmadabad Infantry " }
+       48 = { "%dth Dai Tenshi Infantry " }
+       49 = { "%dth Resistance Infantry " }
+       50 = { "%dth Aqua Crew Infantry " }
+	}
+}
+
+AQA_INF_02 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{  1 = { "%dth Khuzdar Bridgade " }
+       2 = { "%dth Karachi Bridgade " }
+       3 = { "%dth Ahmadabad Bridgade " }
+       4 = { "%dth Lahore Bridgade " }
+       5 = { "%dth Delhi Bridgade " }
+       6 = { "%dth Lahore Bridgade " }
+       7 = { "%dth Lahore Bridgade " }
+       8 = { "%dth Khuzdar Bridgade " }
+       9 = { "%dth Dai Tenshi Bridgade " }
+       10 = { "%dth Dai Tenshi Bridgade " }
+       11 = { "%dth Resistance Bridgade " }
+       12 = { "%dth Dai Tenshi Bridgade " }
+       13 = { "%dth Ahmadabad Bridgade " }
+       14 = { "%dth Karachi Bridgade " }
+       15 = { "%dth Quetta Bridgade " }
+       16 = { "%dth Ahmadabad Bridgade " }
+       17 = { "%dth Ahmadabad Bridgade " }
+       18 = { "%dth Karachi Bridgade " }
+       19 = { "%dth Quetta Bridgade " }
+       20 = { "%dth Iron Maid Bridgade " }
+       21 = { "%dth Iron Maid Bridgade " }
+       22 = { "%dth Iron Maid Bridgade " }
+       23 = { "%dth Lahore Bridgade " }
+       24 = { "%dth Purple Guard Bridgade " }
+       25 = { "%dth Delhi Bridgade " }
+       26 = { "%dth Iron Maid Bridgade " }
+       27 = { "%dth Dai Tenshi Bridgade " }
+       28 = { "%dth Ahmadabad Bridgade " }
+       29 = { "%dth Delhi Bridgade " }
+       30 = { "%dth Khuzdar Bridgade " }
+       31 = { "%dth Quetta Bridgade " }
+       32 = { "%dth Quetta Bridgade " }
+       33 = { "%dth Marine Maid Bridgade " }
+       34 = { "%dth Quetta Bridgade " }
+       35 = { "%dth Lahore Bridgade " }
+       36 = { "%dth Quetta Bridgade " }
+       37 = { "%dth Aqua Crew Bridgade " }
+       38 = { "%dth Aqua Crew Bridgade " }
+       39 = { "%dth Iron Maid Bridgade " }
+       40 = { "%dth Karachi Bridgade " }
+       41 = { "%dth Purple Guard Bridgade " }
+       42 = { "%dth Delhi Bridgade " }
+       43 = { "%dth Lahore Bridgade " }
+       44 = { "%dth Dai Tenshi Bridgade " }
+       45 = { "%dth Ahmadabad Bridgade " }
+       46 = { "%dth Aqua Crew Bridgade " }
+       47 = { "%dth Resistance Bridgade " }
+       48 = { "%dth Khuzdar Bridgade " }
+       49 = { "%dth Khuzdar Bridgade " }
+       50 = { "%dth Khuzdar Bridgade " }
+	}
+}
+
+AQA_INFB_01 = 
+{
+	name = "Infantry Brigade"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Infantry Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Infantry Brigade" }
+		2 = { "%dnd Infantry Brigade" }
+		3 = { "%drd Infantry Brigade" }
+		4 = { "%dth Infantry Brigade" }
+		5 = { "%dth Infantry Brigade" }
+		6 = { "%dth Infantry Brigade" }
+		7 = { "%dth Infantry Brigade" }
+		8 = { "%dth Infantry Brigade" }
+		9 = { "%dth Infantry Brigade" }
+		10 = { "%dth Infantry Brigade" }
+		11 = { "%dth Infantry Brigade" }
+		12 = { "%dth Infantry Brigade" }
+		13 = { "%dth Infantry Brigade" }
+		14 = { "%dth Infantry Brigade" }
+		15 = { "%dth Infantry Brigade" }
+		16 = { "%dth Infantry Brigade" }
+		17 = { "%dst Infantry Brigade" }
+		18 = { "%dnd Infantry Brigade" }
+		19 = { "%drd Infantry Brigade" }
+		20 = { "%dth Infantry Brigade" }
+		21 = { "%dst Infantry Brigade" }
+		22 = { "%dnd Infantry Brigade" }
+		23 = { "%drd Infantry Brigade" }
+	}
+}
+
+AQA_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Cavalry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{   1 = { "%dth Lahore Cavalry " }
+       2 = { "%dth Quetta Cavalry " }
+       3 = { "%dth Purple Guard Cavalry " }
+       4 = { "%dth Aqua Crew Cavalry " }
+       5 = { "%dth Karachi Cavalry " }
+       6 = { "%dth Marine Maid Cavalry " }
+       7 = { "%dth Aqua Crew Cavalry " }
+       8 = { "%dth Aqua Crew Cavalry " }
+       9 = { "%dth Khuzdar Cavalry " }
+       10 = { "%dth Aqua Crew Cavalry " }
+       11 = { "%dth Delhi Cavalry " }
+       12 = { "%dth Resistance Cavalry " }
+       13 = { "%dth Ahmadabad Cavalry " }
+       14 = { "%dth Khuzdar Cavalry " }
+       15 = { "%dth Quetta Cavalry " }
+       16 = { "%dth Marine Maid Cavalry " }
+       17 = { "%dth Lahore Cavalry " }
+       18 = { "%dth Iron Maid Cavalry " }
+       19 = { "%dth Ahmadabad Cavalry " }
+       20 = { "%dth Iron Maid Cavalry " }
+       21 = { "%dth Ahmadabad Cavalry " }
+       22 = { "%dth Iron Maid Cavalry " }
+       23 = { "%dth Iron Maid Cavalry " }
+       24 = { "%dth Dai Tenshi Cavalry " }
+       25 = { "%dth Resistance Cavalry " }
+       26 = { "%dth Dai Tenshi Cavalry " }
+       27 = { "%dth Quetta Cavalry " }
+       28 = { "%dth Purple Guard Cavalry " }
+       29 = { "%dth Delhi Cavalry " }
+       30 = { "%dth Delhi Cavalry " }
+       31 = { "%dth Dai Tenshi Cavalry " }
+       32 = { "%dth Karachi Cavalry " }
+       33 = { "%dth Iron Maid Cavalry " }
+       34 = { "%dth Purple Guard Cavalry " }
+       35 = { "%dth Aqua Crew Cavalry " }
+       36 = { "%dth Karachi Cavalry " }
+       37 = { "%dth Iron Maid Cavalry " }
+       38 = { "%dth Iron Maid Cavalry " }
+       39 = { "%dth Iron Maid Cavalry " }
+       40 = { "%dth Quetta Cavalry " }
+       41 = { "%dth Lahore Cavalry " }
+       42 = { "%dth Marine Maid Cavalry " }
+       43 = { "%dth Aqua Crew Cavalry " }
+       44 = { "%dth Iron Maid Cavalry " }
+       45 = { "%dth Lahore Cavalry " }
+       46 = { "%dth Iron Maid Cavalry " }
+       47 = { "%dth Iron Maid Cavalry " }
+       48 = { "%dth Delhi Cavalry " }
+       49 = { "%dth Lahore Cavalry " }
+       50 = { "%dth Delhi Cavalry " }
+	}
+}
+
+AQA_CAV_02 = 
+{
+	name = "Cavalry Brigade"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Cavalry Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Cavalry Brigade" }
+		2 = { "%dnd Cavalry Brigade" }
+		3 = { "%drd Cavalry Brigade" }
+		4 = { "%dth Cavalry Brigade" }
+		5 = { "%dth Cavalry Brigade" }
+		6 = { "%dth Cavalry Brigade" }
+		7 = { "%dth Cavalry Brigade" }
+		8 = { "%dth Cavalry Brigade" }
+		9 = { "%dth Cavalry Brigade" }
+		10 = { "%dth Cavalry Brigade" }
+	}
+}
+
+AQA_MOT_01 = 
+{
+	name = "Motorised Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Motorised Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Motorised Division" }
+		2 = { "%dnd Motorised Division" }
+		3 = { "%drd Motorised Division" }
+		4 = { "%dth Motorised Division" }
+		5 = { "%dth Motorised Division" }
+		6 = { "%dth Motorised Division" }
+		7 = { "%dth Motorised Division" }	
+		8 = { "%dth Motorised Division" }
+		9 = { "%dth Motorised Division" }
+		10 = { "%dth Motorised Division" }
+	}
+}
+
+AQA_MEC_01 = 
+{
+	name = "Mechanised Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Mechanised Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Mechanised Division" }
+		2 = { "%dnd Mechanised Division" }
+		3 = { "%drd Mechanised Division" }
+		4 = { "%dth Mechanised Division" }
+		5 = { "%dth Mechanised Division" }
+		6 = { "%dth Mechanised Division" }
+		7 = { "%dth Mechanised Division" }	
+		8 = { "%dth Mechanised Division" }
+		9 = { "%dth Mechanised Division" }
+		10 = { "%dth Mechanised Division" }
+	}
+}
+
+AQA_ARM_01 = 
+{
+	name = "Armoured Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Armoured Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Armoured Division" }
+		2 = { "%dnd Armoured Division" }
+		3 = { "%drd Armoured Division" }
+		4 = { "%dth Armoured Division" }
+		5 = { "%dth Armoured Division" }
+		6 = { "%dth Armoured Division" }
+		7 = { "%dth Armoured Division" }
+		8 = { "%dth Armoured Division" }
+		9 = { "%dth Armoured Division" }
+		10 = { "%dth Armoured Division" }
+	}
+}
+
+AQA_ARM_02 = 
+{
+	name = "Tank Brigade"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Tank Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Tank Brigade" }
+		2 = { "%dnd Tank Brigade" }
+		3 = { "%drd Tank Brigade" }
+		4 = { "%dth Tank Brigade" }
+		5 = { "%dth Tank Brigade" }
+		6 = { "%dth Tank Brigade" }
+		7 = { "%dth Tank Brigade" }
+		8 = { "%dth Tank Brigade" }
+		9 = { "%dth Tank Brigade" }
+		10 = { "%dth Tank Brigade" }
+	}
+}
+
+AQA_PAR_01 = 
+{
+	name = "Airborne Division"
+
+	for_countries = { AQA } 
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Airborne Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Airborne Division" }
+		2 = { "%dnd Airborne Division" }	
+		3 = { "%drd Airborne Division" }
+		4 = { "%dth Airborne Division" }
+		5 = { "%dth Airborne Division" }
+		6 = { "%dth Airborne Division" }
+		7 = { "%dth Airborne Division" }	
+		8 = { "%dth Airborne Division" }
+		9 = { "%dth Airborne Division" }
+		10 = { "%dth Airborne Division" }
+	}
+}
+
+AQA_MAR_01 = 
+{
+	name = "Marine Division"
+
+	for_countries = { AQA} 
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dth Delhi Marines " }
+       2 = { "%dth Dai Tenshi Marines " }
+       3 = { "%dth Resistance Marines " }
+       4 = { "%dth Aqua Crew Marines " }
+       5 = { "%dth Khuzdar Marines " }
+       6 = { "%dth Lahore Marines " }
+       7 = { "%dth Ahmadabad Marines " }
+       8 = { "%dth Ahmadabad Marines " }
+       9 = { "%dth Purple Guard Marines " }
+       10 = { "%dth Khuzdar Marines " }
+       11 = { "%dth Ahmadabad Marines " }
+       12 = { "%dth Resistance Marines " }
+       13 = { "%dth Delhi Marines " }
+       14 = { "%dth Ahmadabad Marines " }
+       15 = { "%dth Khuzdar Marines " }
+       16 = { "%dth Khuzdar Marines " }
+       17 = { "%dth Delhi Marines " }
+       18 = { "%dth Marine Maid Marines " }
+       19 = { "%dth Purple Guard Marines " }
+       20 = { "%dth Delhi Marines " }
+       21 = { "%dth Marine Maid Marines " }
+       22 = { "%dth Marine Maid Marines " }
+       23 = { "%dth Marine Maid Marines " }
+       24 = { "%dth Lahore Marines " }
+       25 = { "%dth Karachi Marines " }
+       26 = { "%dth Marine Maid Marines " }
+       27 = { "%dth Delhi Marines " }
+       28 = { "%dth Resistance Marines " }
+       29 = { "%dth Delhi Marines " }
+       30 = { "%dth Purple Guard Marines " }
+       31 = { "%dth Aqua Crew Marines " }
+       32 = { "%dth Purple Guard Marines " }
+       33 = { "%dth Iron Maid Marines " }
+       34 = { "%dth Quetta Marines " }
+       35 = { "%dth Karachi Marines " }
+       36 = { "%dth Iron Maid Marines " }
+       37 = { "%dth Dai Tenshi Marines " }
+       38 = { "%dth Ahmadabad Marines " }
+       39 = { "%dth Lahore Marines " }
+       40 = { "%dth Delhi Marines " }
+       41 = { "%dth Purple Guard Marines " }
+       42 = { "%dth Dai Tenshi Marines " }
+       43 = { "%dth Marine Maid Marines " }
+       44 = { "%dth Quetta Marines " }
+       45 = { "%dth Ahmadabad Marines " }
+       46 = { "%dth Marine Maid Marines " }
+       47 = { "%dth Khuzdar Marines " }
+       48 = { "%dth Dai Tenshi Marines " }
+       49 = { "%dth Aqua Crew Marines " }
+       50 = { "%dth Khuzdar Marines " }
+	}
+}
+
+AQA_MNT_01 = 
+{
+	name = "Mountain Division"
+
+	for_countries = {AQA} 
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Mountain Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Mountain Division" }
+		2 = { "%dnd Mountain Division" }
+		3 = { "%drd Mountain Division" }
+		4 = { "%dth Mountain Division" }
+		5 = { "%dth Mountain Division" }
+		6 = { "%dth Mountain Division" }
+		7 = { "%dth Mountain Division" }
+		8 = { "%dth Mountain Division" }
+		9 = { "%dth Mountain Division" }
+		10 = { "%dth Mountain Division" }
+	}
+}
+
+AQA_GAR_01 = 
+{
+	name = "Garrison Division"
+
+	for_countries = { AQA} 
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { AQA_INF_01 }
+
+	fallback_name = "%dth Garrison Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Garrison Division" }
+		2 = { "%dnd Garrison Division" }
+		3 = { "%drd Garrison Division" }
+		4 = { "%dth Garrison Division" }
+		5 = { "%dth Garrison Division" }
+		6 = { "%dth Garrison Division" }
+		7 = { "%dth Garrison Division" }
+		8 = { "%dth Garrison Division" }
+		9 = { "%dth Garrison Division" }
+		10 = { "%dth Garrison Division" }
+	}
+}

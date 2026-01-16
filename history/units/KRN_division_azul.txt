@@ -1,0 +1,60 @@
+﻿
+division_template = {
+	name = "Korone Division Azul"		
+
+	division_names_group = KRN_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+}
+
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 2097
+    division_template ="Korone Division Azul"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 2097
+    division_template ="Korone Division Azul"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 2097
+    division_template ="Korone Division Azul"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1
+}
+}

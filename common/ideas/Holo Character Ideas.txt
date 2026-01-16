@@ -1,0 +1,199 @@
+ideas = {
+    country = {
+	    PEK_moona_high_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    experience_gain_navy = 0.02
+				production_speed_dockyard_factor = 0.15
+				naval_coordination = 0.1
+				amphibious_invasion = 0.15
+			}
+		}
+
+		IRYS_irys_high_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    training_time_factor = -0.25
+		army_armor_attack_factor = 0.25
+		breakthrough_factor = 0.1
+			}
+		}
+
+		NOE_flare_high_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    heat_attrition_factor = -0.2
+		winter_attrition_factor = 0.15
+		army_artillery_attack_factor = 0.25
+		army_artillery_defence_factor = 0.25
+			}
+		}
+
+		WTS_small_ame_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    air_strategic_bomber_bombing_factor = 0.15
+		air_close_air_support_attack_factor	= 0.1
+		air_superiority_efficiency = 0.1
+		mines_planting_by_air_factor = 0.25
+		mines_sweeping_by_air_factor = -0.25
+			}
+		}
+
+		WAT_ui_high_com = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    agency_upgrade_time = -0.25
+		operative_slot = 1
+		intel_network_gain_factor = 0.15
+			}
+		}
+
+		INS_HC_Anya = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    experience_gain_air = 0.08
+				army_attack_factor = 0.1
+				army_core_attack_factor = 0.15
+				land_night_attack = 0.1
+			}
+		}
+
+		INS_HC_Reine = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    political_power_gain = 0.25
+				war_support_factor = 0.1
+				max_command_power = 20
+				command_power_gain = 0.1
+			}
+		}
+
+		INS_HC_Ollie = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_defence_factor = 0.1
+		army_core_defence_factor = 0.15
+		max_dig_in = 10
+		no_supply_grace = 120
+			}
+		}
+
+		FAU_homeland_security = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = engineer
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    industry_free_repair_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				supply_node_range = 0.20
+			}
+		}
+	}
+}

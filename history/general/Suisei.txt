@@ -1,0 +1,73 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = SUI
+        }
+    #is_dynamic_country = no
+  }
+
+  generate_character = {
+    token_base = SUI_anemachi_holo_xgeneral
+    name="Anemachi"
+      portraits={
+            army={
+                  large="gfx/leaders/SUI/sui_anemachi.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard cavalry_leader winter_specialist}
+            skill = 5
+            attack_skill = 5
+            defense_skill = 4
+            planning_skill = 5
+            logistics_skill = 6
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = SUI_hoshimachi_miko_holo_xgeneral
+    name="Hoshimachi Miko"
+      portraits={
+            army={
+                  large="gfx/leaders/SUI/sui_miko.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = SUI_sui_of_arc_holo_xgeneral
+    name="Sui of Arc"
+      portraits={
+            army={
+                  large="gfx/leaders/SUI/sui_of_arc.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      field_marshal={
+            traits={ organizer aggressive_assaulter }
+            skill=5
+            attack_skill=6
+            defense_skill=5
+            planning_skill=4
+            logistics_skill=5
+            legacy_id=0
+      }
+  }
+
+}

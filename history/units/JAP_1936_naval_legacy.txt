@@ -1,0 +1,57 @@
+﻿
+##### OOB #####
+units = {
+### IJN ###
+	#Yokosuka (Tokyo)
+	
+	#Sasebo (Nagasaki)
+	
+	#Taiwan (Goaxing)
+
+	#Hiroshima (Kure)
+
+	# Naval District Forces #
+	fleet = {
+		name = "Kaigun Yobikantai"
+		naval_base = 9859  #Ominato
+		#Ominato
+		task_force = {
+			name = "Ominato Keibi Sentai"
+			location = 9859  #Ominato
+			#Dai 1 Kuchikutai
+			ship = { name = "Kamikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Nokaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Namikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Numakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }	
+		}
+		#Pusan
+	
+	}
+	
+	### Pacific Forces ###
+	fleet = {
+		name = "Taiheiyo Kantai"			
+		naval_base = 2489  # Truk
+		#Truk
+		task_force = {
+			name = "Nanpo Yuso Sendan"
+			location = 2489  # Truk
+			ship = { name = "Oite" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Hayate" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Yugao" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			#Former Dai 2 Kuchikutai
+			ship = { name = "Minekaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Sawakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Okikaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+			ship = { name = "Yakaze" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = JAP} } }
+		}
+	}
+}
+
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################

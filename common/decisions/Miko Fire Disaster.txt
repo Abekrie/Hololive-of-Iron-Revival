@@ -1,0 +1,192 @@
+miko_great_fire_disaster_category = {
+
+	miko_recover_from_fire_disaster_dec = {
+
+		icon = generic_civil_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+		    
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = MIK
+		    has_country_flag = Miko_can_recover_from_fire
+		    OR = {
+				has_idea = fire_disaster_mik_idea
+				has_idea = recovering_from_fire_mik_idea
+			}
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_idea = fire_disaster_mik_idea }
+				swap_ideas = {
+    				remove_idea = fire_disaster_mik_idea
+    				add_idea = recovering_from_fire_mik_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_fire_mik_idea }
+    			remove_ideas = recovering_from_fire_mik_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	miko_reconstruction_bill_dec = {
+
+		icon = ger_mefo_bills
+
+		days_re_enable = 200
+
+		allowed = {
+			
+		}
+
+		available = {
+		    has_war = no
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = MIK
+		    has_country_flag = Miko_can_reconstruction_bill
+		    NOT = { has_country_flag = Miko_is_already_at_war }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = reconstruction_bill_mik_idea
+                days = 180
+            }
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	miko_lava_trap_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		    has_war = yes
+		}
+
+		cost = 125
+
+		visible = {
+		    tag = MIK
+		    has_country_flag = Miko_can_recover_from_fire
+		}
+
+		days_remove = 35
+
+		modifier = {
+			army_defence_against_major_factor = 0.2
+			army_core_defence_factor = 0.15
+			max_dig_in_factor = 0.25
+			political_power_cost = 0.2
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	miko_agent_orange_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		    has_war = yes
+		}
+
+		cost = 125
+
+		visible = {
+		    tag = MIK
+		    has_country_flag = Miko_can_recover_from_fire
+		}
+
+		days_remove = 35
+
+		modifier = {
+			terrain_penalty_reduction = 0.2
+			air_cas_efficiency = 0.15
+			army_infantry_attack_factor = 0.2
+			political_power_cost = 0.2
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

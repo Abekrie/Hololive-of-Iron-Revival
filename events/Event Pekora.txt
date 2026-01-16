@@ -1,0 +1,826 @@
+add_namespace = pekora
+
+#pekora refuses sardinia
+country_event = {
+	id = pekora.1
+	title = pekora.1.t
+	desc = pekora.1.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#pekora accepted sardinia
+country_event = {
+	id = pekora.2
+	title = pekora.2.t
+	desc = pekora.2.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.2.a
+		set_global_flag = sardinia_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+ 
+#PEK yes MR Infantry
+country_event = {
+	id = pekora.3
+	title = pekora.3.t
+	desc = pekora.3.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.3.a
+		ai_chance = { factor = 100 }
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = infantry_weapons
+			}	
+	    
+		
+	}
+}
+
+#PEK no MR
+country_event = {
+	id = pekora.4
+	title = pekora.4.t
+	desc = pekora.4.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = pekora.8
+	title = pekora.8.t
+	desc = pekora.8.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.8.a	#Yes
+		ai_chance = { factor = 80 }
+		PEK = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.8.b	#No 
+		ai_chance = { factor = 20 }
+		PEK = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = pekora.9
+	title = pekora.9.t
+	desc = pekora.9.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.9.a	#Yes
+		ai_chance = { factor = 80 }
+		PEK = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.9.b	#No 
+		ai_chance = { factor = 20 }
+		PEK = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = pekora.10
+	title = pekora.10.t
+	desc = pekora.10.d
+	picture = GFX_report_event_fubuki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.10.a	#Yes
+		ai_chance = { factor = 30 }
+		PEK = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = pekora.10.b	#No 
+		ai_chance = { factor = 70 }
+		PEK = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = pekora.11
+	title = pekora.11.t
+	desc = pekora.11.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.11.a	#Yes
+		ai_chance = { factor = 50 }
+		PEK = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = pekora.11.b	#No 
+		ai_chance = { factor = 50 }
+		PEK = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = pekora.12
+	title = pekora.12.t
+	desc = pekora.12.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.12.a	#Yes
+		ai_chance = { factor = 75 }
+		PEK = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.12.b	#No 
+		ai_chance = { factor = 25 }
+		PEK = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = pekora.13
+	title = pekora.13.t
+	desc = pekora.13.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.13.a	#Yes
+		ai_chance = { factor = 50 }
+		PEK = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = pekora.13.b	#No 
+		ai_chance = { factor = 50 }
+		PEK = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = pekora.14
+	title = pekora.14.t
+	desc = pekora.14.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.14.a	#Yes
+		ai_chance = { factor = 50 }
+		PEK = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = pekora.14.b	#No 
+		ai_chance = { factor = 50 }
+		PEK = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = pekora.15
+	title = pekora.15.t
+	desc = pekora.15.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.15.a	#Yes
+		ai_chance = { factor = 80 }
+		PEK = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.15.b	#No 
+		ai_chance = { factor = 20 }
+		PEK = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = pekora.16
+	title = pekora.16.t
+	desc = pekora.16.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.16.a	#Yes
+		ai_chance = { factor = 20 }
+		PEK = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = pekora.16.b	#No 
+		ai_chance = { factor = 80 }
+		PEK = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = pekora.17
+	title = pekora.17.t
+	desc = pekora.17.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.17.a	#Yes
+		ai_chance = { factor = 50 }
+		PEK = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = pekora.17.b	#No 
+		ai_chance = { factor = 50 }
+		PEK = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+#Buy Sardinia
+country_event = {
+	id = pekora.19
+	title = pekora.19.t
+	desc = pekora.19.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.19.a	#Yes
+		ai_chance = { factor = 40 }
+		PEK = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = pekora.19.b	#No 
+		ai_chance = { factor = 60 }
+		PEK = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = pekora.20
+	title = pekora.20.t
+	desc = pekora.20.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.20.a	#Yes
+		ai_chance = { factor = 90 }
+		PEK = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.20.b	#No 
+		ai_chance = { factor = 10 }
+		PEK = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = pekora.21
+	title = pekora.21.t
+	desc = pekora.21.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.21.a	#Yes
+		ai_chance = { factor = 80 }
+		PEK = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.21.b	#No 
+		ai_chance = { factor = 20 }
+		PEK = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = pekora.22
+	title = pekora.22.t
+	desc = pekora.22.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.22.a	#Yes
+		ai_chance = { factor = 80 }
+		PEK = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = pekora.22.b	#No 
+		ai_chance = { factor = 20 }
+		PEK = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = pekora.23
+	title = pekora.23.t
+	desc = pekora.23.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.23.a	#Yes
+		ai_chance = { factor = 70 }
+		PEK = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = pekora.23.b	#No 
+		ai_chance = { factor = 30 }
+		PEK = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+#Annex Miko
+country_event = {
+	id = pekora.24
+	title = pekora.24.t
+	desc = pekora.24.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.24.a	#Yes
+		ai_chance = { factor = 35 }
+		PEK = {
+annex_country = {
+    target = MIK
+    transfer_troops = no
+}
+country_event = { id = pekora.25 }
+		}
+	}
+	option = {
+		name = pekora.24.b	#No 
+		ai_chance = { factor = 65 }
+		PEK = {
+		country_event = { id = pekora.26 }
+		}
+	}
+}
+
+#Miko yes annex
+country_event = {
+	id = pekora.25
+	title = pekora.25.t
+	desc = pekora.25.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.25.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Miko yes annex
+country_event = {
+	id = pekora.26
+	title = pekora.26.t
+	desc = pekora.26.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.26.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Pekora invites you to Usada Kensetsu
+country_event = {
+	id = pekora.27
+	title = pekora.27.t
+	desc = pekora.27.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.27.a	#Yes
+		ai_chance = { factor = 100 }
+		PEK = { add_to_faction = ROOT }
+
+		if = {
+			limit = { tag = MOO }
+			PEK = { country_event = { id = pekora.28 }}
+		}
+
+		if = {
+			limit = { tag = COC }
+			PEK = { country_event = { id = pekora.30 }}
+		}
+
+		if = {
+			limit = { tag = KAN }
+			PEK = { country_event = { id = pekora.32 }}
+		}
+
+	}
+	option = {
+		name = pekora.27.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MOO }
+			PEK = { country_event = { id = pekora.29 }}
+		}
+
+		if = {
+			limit = { tag = COC }
+			PEK = { country_event = { id = pekora.31 }}
+		}
+
+		if = {
+			limit = { tag = KAN }
+			PEK = { country_event = { id = pekora.33 }}
+		}
+		
+	}
+}
+
+#moona Usada Kensetsu - YES
+country_event = {
+	id = pekora.28
+	title = pekora.28.t
+    desc = pekora.28.d
+    picture = GFX_report_event_moona_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.28.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#moona Usada Kensetsu - NO
+country_event = {
+	id = pekora.29
+	title = pekora.29.t
+    desc = pekora.29.d
+    picture = GFX_report_event_moona_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.29.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#coco Usada Kensetsu - YES
+country_event = {
+	id = pekora.30
+	title = pekora.30.t
+    desc = pekora.30.d
+    picture = GFX_report_event_coco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.30.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#coco Usada Kensetsu - NO
+country_event = {
+	id = pekora.31
+	title = pekora.31.t
+    desc = pekora.31.d
+    picture = GFX_report_event_coco_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.31.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#kanata Usada Kensetsu - YES
+country_event = {
+	id = pekora.32
+	title = pekora.32.t
+    desc = pekora.32.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.32.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#kanata Usada Kensetsu - NO
+country_event = {
+	id = pekora.33
+	title = pekora.33.t
+    desc = pekora.33.d
+    picture = GFX_report_event_kanata_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.33.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Pekora - Demand Libya
+country_event = {
+	id = pekora.34
+	title = pekora.34.t
+	desc = pekora.34.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pekora.34.a	#Yes
+		ai_chance = { factor = 100 }
+		PEK = {
+			transfer_state = 448
+transfer_state = 661
+transfer_state = 449
+transfer_state = 273
+transfer_state = 662
+transfer_state = 450
+transfer_state = 663
+transfer_state = 451
+		}
+
+		PEK = { country_event = { id = pekora.35 }}
+	}
+	option = {
+		name = pekora.34.b	#No 
+		ai_chance = { factor = 0 }
+		PEK = { country_event = { id = pekora.36 }}
+	}
+}
+
+#Libya - YES
+country_event = {
+	id = pekora.35
+	title = pekora.35.t
+    desc = pekora.35.d
+    picture = GFX_report_event_ita_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.35.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Libya - NO
+country_event = {
+	id = pekora.36
+	title = pekora.36.t
+    desc = pekora.36.d
+    picture = GFX_report_event_ita_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.36.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#ITA - Libya Rebellion
+country_event = {
+	id = pekora.37
+	title = pekora.37.t
+    desc = pekora.37.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.37.a	#Yes
+     ai_chance = { factor = 100 }
+     	LBA = {
+     		transfer_state = 448
+     		transfer_state = 661
+     		hidden_effect = {
+     			add_offsite_building = { type = industrial_complex level = 10 }
+     		    add_offsite_building = { type = arms_factory level = 5 }
+     		    load_oob = PEK_libya_rebel 
+     		    add_manpower = 250000
+     		    add_ideas = generic_offence_ns
+            }
+            	add_timed_idea = {
+                	idea = regional_conflict_idea
+                	days = 250
+            	}
+     	}
+     	create_wargoal = { type = annex_everything target = LBA }
+     }
+ 
+}
+
+#PEK - Demand puppet
+country_event = {
+	id = pekora.38
+	title = pekora.38.t
+    desc = pekora.38.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.38.a	#Yes
+     ai_chance = { factor = 100 }
+     	PEK = {
+     		puppet = ROOT
+     	}
+
+     	if = {
+     		limit = { tag = MOO }
+     		PEK = {country_event = { id = proposed.57 }}
+     	}
+
+     }
+ 
+     option = {
+     name = pekora.38.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+     		limit = { tag = MOO }
+     		PEK = {country_event = { id = proposed.58 }}
+     	}
+     }
+}
+
+#PEK - Tunisia Purchase
+country_event = {
+	id = pekora.39
+	title = pekora.39.t
+    desc = pekora.39.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.39.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_offsite_building = { type = industrial_complex level = 6 }
+     	PEK = {
+     		transfer_state = 458
+     		transfer_state = 665
+     	}
+     	PEK = {country_event = {
+     	     		id = pekora.40
+     	     	}}
+     }
+ 
+     option = {
+     name = pekora.39.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#PEK - Tunisia Purchase YES
+country_event = {
+	id = pekora.40
+	title = pekora.40.t
+    desc = pekora.40.d
+    picture = GFX_report_event_pekora_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = pekora.40.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}

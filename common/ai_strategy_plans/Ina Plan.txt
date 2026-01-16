@@ -1,0 +1,59 @@
+Generic_NIN_historical = {
+	name = "Hololive EN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = NIN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = NIN
+			}
+			is_historical_focus_on = yes
+			is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		INA_HOLOEN_improve_working_cond_nord_focus
+		INA_HOLOEN_german_autobahn_nord_focus
+		ninomae_ina_nin_focus
+		INA_HOLOEN_iron_mines_nord_focus
+		INA_HOLOEN_improve_working_hour_nord_focus
+
+		national_reform_nin_focus
+		spirit_of_the_old_nin_focus
+		industry_focus_nin_focus
+		armament_focus_nin_focus
+		ancient_whisper_nin_focus
+
+		takodachi_nin_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

@@ -1,0 +1,123 @@
+on_actions = {
+
+	on_leave_faction = {
+		
+		effect = {
+			if = {
+				limit = { tag = KRO }
+				set_variable = { KRO.KRO_council_status = 3 }
+				subtract_from_variable = {
+					var = number_council_member
+					value = 1
+				}
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_leave_faction = {
+		
+		effect = {
+			if = {
+				limit = { tag = BAL }
+				set_variable = { BAL.BAL_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_leave_faction = {
+		
+		effect = {
+			if = {
+				limit = { tag = FAU }
+				set_variable = { FAU.FAU_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_leave_faction = {
+		
+		effect = {
+			if = {
+				limit = { tag = MUM }
+				set_variable = { MUM.MUM_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_leave_faction = {
+		
+		effect = {
+			if = {
+				limit = { tag = SAN }
+				set_variable = { SAN.SAN_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+}
+
+on_actions = {
+
+	on_annex = {
+		
+		effect = {
+			if = {
+				limit = { FROM = {tag = KRO} }
+				set_variable = { KRO.KRO_council_status = 3 }
+				subtract_from_variable = {
+					var = number_council_member
+					value = 1
+				}
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_annex = {
+		
+		effect = {
+			if = {
+				limit = { FROM = {tag = BAL} }
+				set_variable = { BAL.BAL_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_annex = {
+		
+		effect = {
+			if = {
+				limit = { FROM = {tag = FAU} }
+				set_variable = { FAU.FAU_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_annex = {
+		
+		effect = {
+			if = {
+				limit = { FROM = {tag = MUM} }
+				set_variable = { MUM.MUM_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+
+	on_annex = {
+		
+		effect = {
+			if = {
+				limit = { FROM = {tag = SAN} }
+				set_variable = { SAN.SAN_council_status = 3 }
+				set_country_flag = left_hololive_council
+			}
+		}
+	}
+}

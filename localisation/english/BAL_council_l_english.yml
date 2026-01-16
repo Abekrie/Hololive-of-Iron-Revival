@@ -1,0 +1,38 @@
+﻿l_english:
+BAL_council_category:0 "Hololive Council"
+bal_council_current_topic_text:0 "Topic:[GetHoloTopicTitle]"
+bal_council_proposer_text:0 "Current Host: §C[GetHoloCouncilHost]§!"
+bal_council_proposer_name:0 "[GetHoloCouncilHost]"
+bal_council_current_topic_detail_text:0 "Topic Detail"
+bal_council_final_result_header:0 "Final Result:"
+bal_council_detail_text:0 "[GetHoloTopicDetail]"
+bal_council_topic_requirement:0 "§RRequirement§!:\n[GetHoloTopicRequire]"
+
+FAU_GetHoloCouncilHost:0 "[FAU.GetNameDef]"
+SAN_GetHoloCouncilHost:0 "[SAN.GetNameDef]"
+BAL_GetHoloCouncilHost:0 "[BAL.GetNameDef]"
+KRO_GetHoloCouncilHost:0 "[KRO.GetNameDef]"
+MUM_GetHoloCouncilHost:0 "[MUM.GetNameDef]"
+NONE_GetHoloCouncilHost:0 "None"
+
+bal_council_vote_result_header:0 "Vote Results"
+bal_council_vote_result_tag:0 "§7[FAU.GetNameWithFlag]§!:\n\n[SAN.GetNameWithFlag]:\n\n§t[BAL.GetNameWithFlag]§!:\n\n§4[KRO.GetNameWithFlag]§!:\n\n§L[MUM.GetNameWithFlag]§!:"
+
+GetHoloCouncilVote_Yes:0 "§GApproved§!"
+GetHoloCouncilVote_Pending:0 "Pending"
+GetHoloCouncilVote_No:0 "§RDisapproved§!"
+GetHoloCouncilVote_Absent:0 "§OAbsent§!"
+
+bal_council_vote_result_real:0 "[GetHoloCouncilVote_FAU]\n\n[GetHoloCouncilVote_SAN]\n\n[GetHoloCouncilVote_BAL]\n\n[GetHoloCouncilVote_KRO]\n\n[GetHoloCouncilVote_MUM]"
+
+ongoing_holo_council_session:0 "Hololive council is already in session"
+
+fauna_council_team_tree_1:0 "Team Tree"
+
+GetHoloTopicTitle_0:0 "---"
+GetHoloTopicDetail_0:0 "---"
+GetHoloTopicRequire_0:0 "---"
+
+GetHoloTopicTitle_1:0 "Team Tree"
+GetHoloTopicDetail_1:0 "Guys I need §G4§! §YCivs§!. I need to use your §R1§! §YCiv§! for §Y60 days§!. I promise I will give it back. This is for the environment uuu."
+GetHoloTopicRequire_1:0 "§WUse §R1 §YCivilian Factory §Wfor §Y60 days§W"

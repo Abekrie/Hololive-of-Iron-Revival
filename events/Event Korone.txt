@@ -1,0 +1,984 @@
+add_namespace = korone
+
+#korone refuses cyprus
+country_event = {
+	id = korone.1
+	title = korone.1.t
+	desc = korone.1.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#korone accepted cyprus
+country_event = {
+	id = korone.2
+	title = korone.2.t
+	desc = korone.2.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.2.a
+		set_global_flag = cyprus_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = korone.8
+	title = korone.8.t
+	desc = korone.8.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.8.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.8.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = korone.9
+	title = korone.9.t
+	desc = korone.9.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.9.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.9.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = korone.10
+	title = korone.10.t
+	desc = korone.10.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.10.a	#Yes
+		ai_chance = { factor = 30 }
+		KRN = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = korone.10.b	#No 
+		ai_chance = { factor = 70 }
+		KRN = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = korone.11
+	title = korone.11.t
+	desc = korone.11.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.11.a	#Yes
+		ai_chance = { factor = 50 }
+		KRN = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = korone.11.b	#No 
+		ai_chance = { factor = 50 }
+		KRN = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = korone.12
+	title = korone.12.t
+	desc = korone.12.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.12.a	#Yes
+		ai_chance = { factor = 75 }
+		KRN = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.12.b	#No 
+		ai_chance = { factor = 25 }
+		KRN = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = korone.13
+	title = korone.13.t
+	desc = korone.13.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.13.a	#Yes
+		ai_chance = { factor = 50 }
+		KRN = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = korone.13.b	#No 
+		ai_chance = { factor = 50 }
+		KRN = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = korone.14
+	title = korone.14.t
+	desc = korone.14.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.14.a	#Yes
+		ai_chance = { factor = 50 }
+		KRN = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = korone.14.b	#No 
+		ai_chance = { factor = 50 }
+		KRN = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = korone.15
+	title = korone.15.t
+	desc = korone.15.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.15.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.15.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = korone.16
+	title = korone.16.t
+	desc = korone.16.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.16.a	#Yes
+		ai_chance = { factor = 20 }
+		KRN = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = korone.16.b	#No 
+		ai_chance = { factor = 80 }
+		KRN = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = korone.17
+	title = korone.17.t
+	desc = korone.17.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.17.a	#Yes
+		ai_chance = { factor = 50 }
+		KRN = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = korone.17.b	#No 
+		ai_chance = { factor = 50 }
+		KRN = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = korone.19
+	title = korone.19.t
+	desc = korone.19.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.19.a	#Yes
+		ai_chance = { factor = 40 }
+		KRN = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = korone.19.b	#No 
+		ai_chance = { factor = 60 }
+		KRN = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = korone.20
+	title = korone.20.t
+	desc = korone.20.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.20.a	#Yes
+		ai_chance = { factor = 90 }
+		KRN = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.20.b	#No 
+		ai_chance = { factor = 10 }
+		KRN = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = korone.21
+	title = korone.21.t
+	desc = korone.21.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.21.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.21.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = korone.22
+	title = korone.22.t
+	desc = korone.22.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.22.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = korone.22.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = korone.23
+	title = korone.23.t
+	desc = korone.23.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.23.a	#Yes
+		ai_chance = { factor = 70 }
+		KRN = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = korone.23.b	#No 
+		ai_chance = { factor = 30 }
+		KRN = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Korone-Okayu Union
+country_event = {
+	id = korone.24
+	title = korone.24.t
+	desc = korone.24.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.24.a	#Yes
+		ai_chance = { factor = 100 }
+		KRN = { create_faction = KRN_OKA_union }
+		KRN = { country_event = { id = korone.25 }}
+	}
+	option = {
+		name = korone.24.b	#No 
+		ai_chance = { factor = 0 }
+		KRN = { country_event = { id = korone.26 }}
+		
+	}
+}
+
+#OKA yes Union
+country_event = {
+	id = korone.25
+	title = korone.25.t
+	desc = korone.25.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.25.a	#Yes
+		ai_chance = { factor = 100 }
+		KRN = { add_to_faction = OKA }
+	}
+}
+
+#OKA no Union
+country_event = {
+	id = korone.26
+	title = korone.26.t
+	desc = korone.26.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.26.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand NZL
+country_event = {
+	id = korone.27
+	title = korone.27.t
+	desc = korone.27.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.27.a	#Yes
+		ai_chance = { factor = 80 }
+		KRN = { transfer_state = 284
+		transfer_state = 723 }
+		KRN = { country_event = { id = korone.28 }}
+	}
+	option = {
+		name = korone.27.b	#No 
+		ai_chance = { factor = 20 }
+		KRN = { country_event = { id = korone.29 }}
+		
+	}
+}
+
+#OKA yes NZL
+country_event = {
+	id = korone.28
+	title = korone.28.t
+	desc = korone.28.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.28.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#OKA no NZL
+country_event = {
+	id = korone.29
+	title = korone.29.t
+	desc = korone.29.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.29.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand puppet Shion
+country_event = {
+	id = korone.30
+	title = korone.30.t
+	desc = korone.30.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.30.a	#Yes
+		ai_chance = { factor = 20 }
+		KRN = { puppet = ROOT }
+		KRN = { country_event = { id = korone.31 }}
+	}
+	option = {
+		name = korone.30.b	#No 
+		ai_chance = { factor = 80 }
+		KRN = { country_event = { id = korone.32 }}
+		
+	}
+}
+
+#SHI yes Puppet
+country_event = {
+	id = korone.31
+	title = korone.31.t
+	desc = korone.31.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.31.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHI no Puppet
+country_event = {
+	id = korone.32
+	title = korone.32.t
+	desc = korone.32.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.32.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand puppet
+country_event = {
+	id = korone.33
+	title = korone.33.t
+	desc = korone.33.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.33.a	#Yes
+		ai_chance = { factor = 30 }
+		KRN = { puppet = ROOT }
+		KRN = { country_event = { id = korone.34 }}
+	}
+	option = {
+		name = korone.33.b	#No 
+		ai_chance = { factor = 70 }
+		KRN = { country_event = { id = korone.35 }}
+		
+	}
+}
+
+#MIK yes Puppet
+country_event = {
+	id = korone.34
+	title = korone.34.t
+	desc = korone.34.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.34.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MIK no Puppet
+country_event = {
+	id = korone.35
+	title = korone.35.t
+	desc = korone.35.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.35.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+###
+#KRN - Ask to join Okakoro
+country_event = {
+	id = korone.36
+	title = korone.36.t
+	desc = korone.36.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.36.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = {
+			add_to_faction = ROOT
+		}
+
+		KRN = {
+			country_event = { id = proposed.65 }
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.86 }
+		}
+	}
+	option = {
+		name = korone.36.b	#No 
+		ai_chance = { factor = 0 }
+		
+		KRN = {
+			country_event = { id = proposed.66 }
+		}
+	}
+}
+
+#KRN - Demand puppet Okayu
+country_event = {
+	id = korone.37
+	title = korone.37.t
+	desc = korone.37.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.37.a	#Yes
+		ai_chance = { factor = 100 }
+		KRN = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = { tag = OKA }
+			KRN = { country_event = { id = proposed.65 }}
+		}
+
+		if = {
+			limit = { tag = RIS }
+			KRN = { country_event = { id = proposed.71 }}
+		}
+
+	}
+	option = {
+		name = korone.37.b	#No 
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = OKA }
+			KRN = { country_event = { id = proposed.66 }}
+		}
+
+		if = {
+			limit = { tag = RIS }
+			KRN = { country_event = { id = proposed.72 }}
+		}
+	}
+}
+
+#KRN - Egypt or War
+country_event = {
+	id = korone.38
+	title = korone.38.t
+	desc = korone.38.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.38.a	#Yes
+		ai_chance = { factor = 100 }
+		KRN = {
+			transfer_state = 447
+			transfer_state = 446
+			transfer_state = 457
+			transfer_state = 456
+			transfer_state = 552
+			transfer_state = 452
+		}
+
+		KRN = {
+			country_event = { id = korone.39 }
+		}
+
+	}
+	option = {
+		name = korone.38.b	#No 
+		ai_chance = { factor = 0 }
+
+		KRN = {create_wargoal = { type = annex_everything target = EAM }}
+
+		KRN = {
+			country_event = { id = korone.40 }
+		}
+		
+	}
+}
+
+#KRN - Egypt or War YES
+country_event = {
+	id = korone.39
+	title = korone.39.t
+	desc = korone.39.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.39.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#KRN - Egypt or War NO
+country_event = {
+	id = korone.40
+	title = korone.40.t
+	desc = korone.40.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.40.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#KRN - Request Mandate of Hololive
+country_event = {
+	id = korone.41
+	title = korone.41.t
+	desc = korone.41.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.41.a	#Yes
+		ai_chance = { factor = 100 }
+		KRN = {
+			add_ideas = mandate_of_hololive_idea
+		}
+
+		KRN = { country_event = { id = proposed.93 }}
+	}
+
+	option = {
+		name = korone.41.b	#Yes
+		ai_chance = { factor = 0 }
+		KRN = { country_event = { id = proposed.94 }}
+	}
+}
+
+#KRN - Prevent XXX from intervention in Suez Crisis
+country_event = {
+	id = korone.42
+	title = korone.42.t
+	desc = korone.42.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.42.a	#Yes
+		ai_chance = { factor = 70 }
+
+		set_country_flag = can_no_longer_intervene_in_suez
+
+		custom_effect_tooltip = CET_event_korone_42
+
+		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = KRN
+	    	}
+
+		if = {	limit = { tag = YAG }
+			KRN = { country_event = { id = proposed.94 }}
+		}
+
+		if = {	limit = { tag = PEK }
+			KRN = { country_event = { id = proposed.67 }}
+		}
+
+		if = {	limit = { tag = AQA }
+			KRN = { country_event = { id = proposed.3 }}
+		}
+
+		if = {	limit = { tag = OKA }
+			KRN = { country_event = { id = proposed.65 }}
+		}
+	}
+
+	option = {
+		name = korone.42.b	#Yes
+		ai_chance = { factor = 30 }
+		if = {	limit = { tag = YAG }
+			KRN = { country_event = { id = proposed.94 }}
+		}
+
+		if = {	limit = { tag = PEK }
+			KRN = { country_event = { id = proposed.68 }}
+		}
+
+		if = {	limit = { tag = AQA }
+			KRN = { country_event = { id = proposed.4 }}
+		}
+
+		if = {	limit = { tag = OKA }
+			KRN = { country_event = { id = proposed.66 }}
+		}
+	}
+}
+
+#KRN - XXX sends support to East Africa Mandate
+country_event = {
+	id = korone.43
+	title = korone.43.t
+	desc = korone.43.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.43.a	#Yes
+		ai_chance = { factor = 70 }
+
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+		    producer = KRN
+	    }
+
+	    EAM = {
+	    		add_equipment_to_stockpile = {
+	    		type = infantry_equipment_0
+	    		amount = 3500
+	    		producer = ROOT
+	    	}
+	    }
+	}
+
+	option = {
+		name = korone.43.b	#Yes
+		ai_chance = { factor = 70 }
+
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1500
+		    producer = KRN
+	    }
+
+	    #EAM = {
+	    #		add_equipment_to_stockpile = {
+	    #		type = fighter_equipment_0
+	    #		amount = 200
+	    #		producer = ROOT
+	    #	}
+	    #}
+	}
+
+	option = {
+		name = korone.43.c	#Yes
+		ai_chance = { factor = 70 }
+
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1500
+		    producer = KRN
+	    }
+
+	    EAM = {
+	    		add_equipment_to_stockpile = {
+	    		type = light_tank_chassis_0
+	    		amount = 600
+	    		producer = ROOT
+	    	}
+	    }
+	}
+}
+
+#KRN - Breaking point of the Suez Crisis
+country_event = {
+	id = korone.44
+	title = korone.44.t
+	desc = korone.44.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = korone.44.a	#Yes
+		ai_chance = { 
+			factor = 10
+		}
+		KRN = {
+			transfer_state = 447
+			transfer_state = 446
+			transfer_state = 457
+			transfer_state = 456
+			transfer_state = 552
+			transfer_state = 452
+		}
+
+		KRN = {
+			country_event = { id = korone.39 }
+		}
+	}
+
+	option = {
+		name = korone.44.b	#Yes
+		ai_chance = { 
+			factor = 0 
+			modifier = {
+				factor = 100
+				strength_ratio = {
+    				tag = KRN
+    				ratio > 1
+				}
+			}
+		}
+
+		KRN = {
+			country_event = { id = korone.40 }
+		}
+
+		KRN = {create_wargoal = { type = annex_everything target = ROOT }}
+
+	}
+}

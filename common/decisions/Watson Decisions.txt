@@ -1,0 +1,711 @@
+amelia_detective_on_the_scene_category = {
+
+	amelia_investigate_kfp_misconduct_dec = {
+
+		icon = generic_kiara
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							tag = KIA
+							is_in_faction_with = KIA
+						}
+						has_state_flag = KIA_already_developed
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 75
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_detective
+				
+			FROM = {
+				NOT = {
+					has_state_flag = WTS_already_inspected
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = WTS_doing_the_investigation
+			}
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			set_country_flag = WTS_doing_the_investigation
+		}
+
+		remove_effect = {
+			FROM.CONTROLLER = { 
+				country_event = {
+					id = amelia.4
+				}
+			}
+
+			FROM = {set_state_flag = WTS_already_inspected}
+
+			clr_country_flag = WTS_doing_the_investigation
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_007_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 125
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_detective
+			NOT = { has_country_flag = amelia_007_dec_FLAG }
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = amelia_007_dec_FLAG
+			create_corps_commander = {
+	name = "James Bond"
+	portrait_path = "gfx/leaders/WTS/007.dds"
+	traits = { trait_cautious brilliant_strategist }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 5
+}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_break_the_enigma_code_dec = {
+
+		icon = generic_army_support
+
+		days_re_enable = 50
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_detective
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			custom_effect_tooltip = CET_amelia_break_the_enigma_code_dec
+			show_ideas_tooltip = intelligence_sabotaged_idea
+			every_enemy_country = {
+				add_timed_idea = {
+                	idea = intelligence_sabotaged_idea
+                	days = 30
+            	}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+amelia_imperial_federation_category = {
+
+	amelia_establish_canada_colony_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		#cost = 150
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_imperial_federation
+			NOT = { has_country_flag = amelia_establish_canada_colony_dec_FLAG }
+		}
+
+		available = {
+				AND = {
+						OR = {
+							CAN = { exists = no }
+							CAN = { is_puppet_of = ROOT }
+						}
+						OR = {has_full_control_of_state = 276
+						CAN = {has_full_control_of_state = 276}}
+					}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = amelia_establish_canada_colony_dec_FLAG
+			hidden_effect = {
+			every_state = {
+				limit = { 
+					OR = { is_core_of = PLK
+					 	is_core_of = BTN } 
+					}
+				add_core_of = CAN
+			}
+			}
+			every_state = {
+				limit = { 
+					is_core_of = CAN
+					is_fully_controlled_by = WTS 
+					}
+				transfer_state_to = CAN
+			}
+
+			puppet = CAN
+
+			hidden_effect = {
+				CAN = {
+					set_cosmetic_tag = WTS_CAN
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+					retire_ideology_leader = fascism
+					create_country_leader = {
+						name = "Aoi Nabi"
+						picture = "gfx/leaders/WTS/aoi_nabi.dds"
+						expire = "1965.1.1"
+						ideology = fascism_ideology
+						traits = {
+							colonial_government_trait
+							trait_no_more_spamming2
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_establish_raj_colony_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		#cost = 150
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_imperial_federation
+			NOT = { has_country_flag = amelia_establish_raj_colony_dec_FLAG }
+		}
+
+		available = {
+				AND = {
+						OR = {
+							RAJ = { exists = no }
+							RAJ = { is_puppet_of = ROOT }
+						}
+						OR = {
+							has_full_control_of_state = 320
+							has_full_control_of_state = 321
+							RAJ = {
+								has_full_control_of_state = 320
+							}
+							RAJ = {
+								has_full_control_of_state = 321
+							}
+							}
+					}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = amelia_establish_raj_colony_dec_FLAG
+			hidden_effect = {
+			every_state = {
+				limit = { 
+					OR = { is_core_of = KAN
+					 	is_core_of = AQA
+					 	is_core_of = RUS } 
+					}
+				add_core_of = RAJ
+			}
+			}
+			every_state = {
+				limit = { 
+					is_core_of = RAJ
+					is_fully_controlled_by = WTS 
+					}
+				transfer_state_to = RAJ
+			}
+
+			puppet = RAJ
+
+			hidden_effect = {
+				RAJ = {
+					set_cosmetic_tag = WTS_RAJ
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+					retire_ideology_leader = fascism
+					create_country_leader = {
+						name = "Prime Minister Watson"
+						picture = "gfx/leaders/WTS/watson_dem.dds"
+						expire = "1965.1.1"
+						ideology = fascism_ideology
+						traits = {
+							colonial_government_trait
+							trait_no_more_spamming2
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_establish_australia_colony_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		#cost = 150
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_imperial_federation
+			NOT = { has_country_flag = amelia_establish_ast_colony_dec_FLAG }
+		}
+
+		available = {
+				AND = {
+						OR = {
+							AST = { exists = no }
+							AST = { is_puppet_of = ROOT }
+						}
+						OR = {
+							has_full_control_of_state = 520
+							has_full_control_of_state = 520
+							has_full_control_of_state = 517
+							has_full_control_of_state = 285
+							has_full_control_of_state = 518
+							has_full_control_of_state = 522
+							has_full_control_of_state = 519
+							AST = {
+								has_full_control_of_state = 520
+								has_full_control_of_state = 520
+								has_full_control_of_state = 517
+								has_full_control_of_state = 285
+								has_full_control_of_state = 518
+								has_full_control_of_state = 522
+								has_full_control_of_state = 519
+							}
+							}
+					}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = amelia_establish_ast_colony_dec_FLAG
+			hidden_effect = {
+			every_state = {
+				limit = { 
+					OR = { is_core_of = HTO } 
+					}
+				add_core_of = AST
+			}
+			}
+			every_state = {
+				limit = { 
+					is_core_of = AST
+					is_fully_controlled_by = WTS 
+					}
+				transfer_state_to = AST
+			}
+
+			puppet = AST
+
+			hidden_effect = {
+				AST = {
+					set_cosmetic_tag = WTS_AST
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+					retire_ideology_leader = fascism
+					create_country_leader = {
+						name = "Director Watson"
+						picture = "gfx/leaders/WTS/watson_neu.dds"
+						expire = "1965.1.1"
+						ideology = fascism_ideology
+						traits = {
+							colonial_government_trait
+							trait_no_more_spamming2
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_establish_hongkong_colony_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		#cost = 150
+
+		visible = {
+		    tag = WTS
+			has_country_flag = WTS_can_imperial_federation
+			NOT = { has_country_flag = amelia_establish_chi_colony_dec_FLAG }
+		}
+
+		available = {
+				AND = {
+						OR = {
+							GXC = { exists = no }
+							GXC = { is_puppet_of = ROOT }
+						}
+						OR = {
+							has_full_control_of_state = 326
+							GXC = {
+								has_full_control_of_state = 326
+							}
+							}
+					}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = amelia_establish_chi_colony_dec_FLAG
+			hidden_effect = {
+			every_state = {
+				limit = { 
+					OR = { is_core_of = CHI
+					is_core_of = PRC
+					is_core_of = DOR
+					is_core_of = ART
+					is_core_of = TIB
+					is_core_of = RSA
+					is_core_of = CIV } 
+					}
+				add_core_of = GXC
+			}
+			}
+			every_state = {
+				limit = { 
+					is_core_of = GXC
+					is_fully_controlled_by = WTS 
+					}
+				transfer_state_to = GXC
+			}
+
+			puppet = GXC
+
+			hidden_effect = {
+				GXC = {
+					set_cosmetic_tag = WTS_CHI
+					set_politics = {
+						ruling_party = fascism
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+					retire_ideology_leader = fascism
+					create_country_leader = {
+						name = "Small Ame"
+						picture = "gfx/leaders/WTS/watson_com.dds"
+						expire = "1965.1.1"
+						ideology = fascism_ideology
+						traits = {
+							colonial_government_trait
+							trait_no_more_spamming2
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+amelia_small_ame_manifesto_category = {
+	
+	amelia_boost_com_holoen_dec = {
+
+		icon = generic_form_nation
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						is_capital = yes
+						CONTROLLER = {
+							OR = {
+								tag = NIN
+								tag = MRI
+								tag = KIA
+								tag = GAW
+							}
+						}
+					}
+			}
+		}
+
+		cost = 50
+
+		visible = {
+		    OR = { tag = WTS }
+		    has_government = communism
+		    FROM.OWNER = {
+				NOT = {
+					has_government = communism
+				}
+				exists = yes
+			}
+		    has_country_flag = Amelia_can_communist_influence
+		}
+
+		available = {
+			FROM.OWNER = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			is_ai = no
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			if = {
+				limit = { FROM.OWNER = { communism < 0.20 }}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = communism popularity = 0.05 }
+				}
+			}
+
+			if = {
+				limit = { FROM.OWNER = { communism > 0.19 
+				communism < 0.40}}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = communism popularity = 0.04 }
+				}
+			}
+
+			if = {
+				limit = { FROM.OWNER = { communism > 0.39 
+				communism < 0.60}}
+				FROM.OWNER = { 
+					add_popularity = { 
+					ideology = communism popularity = 0.03 }
+				}
+			}
+
+			FROM.OWNER = {
+					country_event = { id = amelia.6 }
+				}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	amelia_set_up_puppet_gov_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 280
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						is_capital = yes
+						CONTROLLER = {
+							OR = {
+								tag = NIN
+								tag = MRI
+								tag = KIA
+								tag = GAW
+							}
+						}
+					}
+			}
+		}
+
+		#cost = 50
+
+		visible = {
+		    OR = { tag = WTS }
+		    has_government = communism
+		    FROM.OWNER = {
+				exists = yes
+				NOT = {
+					has_country_flag = WTS_already_asked_small_ame
+				}
+			}
+		    has_country_flag = Amelia_can_communist_influence
+		}
+
+		available = {			
+			FROM.OWNER = {
+				has_government = communism
+				communism > 0.50
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = { 
+				is_ai = no
+				is_puppet = no
+				}
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			FROM.OWNER = {
+					country_event = { id = amelia.7 }
+					set_country_flag = WTS_already_asked_small_ame
+				}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

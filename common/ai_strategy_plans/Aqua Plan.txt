@@ -1,0 +1,60 @@
+Generic_AQA_historical = {
+	name = "AQA historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = AQA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = AQA
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+	#1936
+		akukin_kensetsu_aqa_focus
+		concentrated_construction_aqa_focus
+		mass_mobilization_aqa_focus
+		the_resistance_high_command_aqa_focus
+		suisei_maid_aqa_focus
+
+		dawn_of_resistance_aqa_focus
+		call_for_resistance_crusade_aqa_focus
+		mission_to_iofi_aqa_focus
+		fifth_internationale_aqa_focus
+
+	#1937
+
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

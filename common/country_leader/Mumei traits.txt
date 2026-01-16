@@ -1,0 +1,33 @@
+leader_traits = {
+    the_owl_pals_trait = {
+		random = no
+		intel_network_gain_factor = 0.25
+		recon_factor = 0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	old_woman_of_caucasus_trait = {
+		random = no
+		intel_network_gain_factor = 0.30
+		recon_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	owl_of_minerva_trait = {
+		random = no
+		intel_network_gain_factor = 0.30
+		recon_factor = 0.2
+		nuclear_production_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

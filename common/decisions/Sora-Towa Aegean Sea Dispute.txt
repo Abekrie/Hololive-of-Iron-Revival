@@ -1,0 +1,711 @@
+sora_towa_aegean_islands_dispute_decision_category = {
+
+	sora_debug_aegean_islands_dispute_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		#cost = 10
+
+		visible = {
+		    tag = SOR
+			is_debug = yes
+			is_ai = no
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			add_to_sora_pop_10 = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_improve_relation_with_the_local_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = SOR
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Sora_can_aegean_sea_dispute
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 45
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_sora_pop = yes
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 15
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_aegean_islands_development_plan_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = SOR
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Sora_can_aegean_sea_dispute
+		}
+
+		available = {
+			has_full_control_of_state = 187
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_sora_pop = yes
+			187 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 15
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_dodecanese_development_plan_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = SOR
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Sora_can_aegean_sea_dispute
+		}
+
+		available = {
+			has_full_control_of_state = 164
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_sora_pop = yes
+			164 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_edirne_development_plan_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = SOR
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Sora_can_aegean_sea_dispute
+		}
+
+		available = {
+			has_full_control_of_state = 341
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_sora_pop = yes
+			341 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_hold_a_concert_dec = {
+
+		icon = generic_civil_support
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = SOR
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Sora_can_aegean_sea_dispute
+		}
+
+		available = {
+			
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_sora_pop_10 = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_remilitarize_on_aegean_islands_dec = {
+
+		icon = infiltrate_state
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 200
+
+		visible = {
+		    tag = SOR
+		    187 = { is_demilitarized_zone = yes }
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOR_aegean_islands_at_least_25
+				check_variable = { SOR_sora_popularity_aegean > 24 }
+			}
+		}
+
+		fire_only_once = yes
+
+		#days_remove = 30
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			remove_from_sora_pop_15 = yes
+			187 = { set_demilitarized_zone = no }	
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_remilitarize_on_dodecanese_dec = {
+
+		icon = infiltrate_state
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 200
+
+		visible = {
+		    tag = SOR
+		    164 = { is_demilitarized_zone = yes }
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOR_aegean_islands_at_least_25
+				check_variable = { SOR_sora_popularity_aegean > 24 }
+			}
+		}
+
+		fire_only_once = yes
+
+		#days_remove = 30
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			remove_from_sora_pop_15 = yes
+			164 = { set_demilitarized_zone = no }	
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sora_remilitarize_on_edinre_dec = {
+
+		icon = infiltrate_state
+
+		days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 200
+
+		visible = {
+		    tag = SOR
+		    341 = { is_demilitarized_zone = yes }
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOR_aegean_islands_at_least_25
+				check_variable = { SOR_sora_popularity_aegean > 24 }
+			}
+		}
+
+		fire_only_once = yes
+
+		#days_remove = 30
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			remove_from_sora_pop_15 = yes
+			341 = { set_demilitarized_zone = no }	
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+
+
+sora_towa_aegean_islands_dispute_decision_category = {
+	towa_defame_sora_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = TOW
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Towa_can_aegean_sea_dispute
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 45
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			remove_from_sora_pop = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	towa_fund_greek_separatist_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = TOW
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		    has_country_flag = Towa_can_aegean_sea_dispute
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 45
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = -2000
+                    producer = ROOT
+            }
+		}
+
+		remove_effect = {
+			remove_from_sora_pop_15 = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	towa_naval_exercise_in_the_area_dec = {
+
+		icon = generic_naval
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = TOW
+		    has_country_flag = Towa_can_aegean_sea_dispute
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    	164 = { is_demilitarized_zone = yes }
+		    	341 = { is_demilitarized_zone = yes }
+		    }
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 45
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			navy_experience = 15
+		}
+
+		remove_effect = {
+			remove_from_sora_pop = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	towa_stage_coup_on_aegean_islands_dec = {
+
+		icon = infiltrate_state
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		#cost = 10
+
+		visible = {
+		    tag = TOW
+		    OR = {
+		    	187 = { is_demilitarized_zone = yes }
+		    }
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOR_aegean_islands_less_than_10
+				check_variable = { SOR_sora_popularity_aegean < -9 }
+			}
+		}
+
+		#days_remove = 45
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_sora_pop_10 = yes
+			transfer_state = 187
+			187 = { set_demilitarized_zone = no }
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	towa_stage_coup_on_dodecanese_dec = {
+
+		icon = infiltrate_state
+
+		#days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		#cost = 10
+
+		visible = {
+		    tag = TOW
+		    OR = {
+		    	164 = { is_demilitarized_zone = yes }
+		    }
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOR_aegean_islands_less_than_10
+				check_variable = { SOR_sora_popularity_aegean < -9 }
+			}
+		}
+
+		#days_remove = 45
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_sora_pop_10 = yes
+			transfer_state = 164
+			164 = { set_demilitarized_zone = no }
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+}

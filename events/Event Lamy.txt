@@ -1,0 +1,119 @@
+add_namespace = lamy
+
+##############################
+#LAM - Invite to faction
+country_event = {
+	id = lamy.1
+	title = lamy.1.t
+	desc = lamy.1.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lamy.1.a	#Yes
+		ai_chance = { factor = 100 }
+		LAM = {
+			add_to_faction = ROOT
+		}
+		if = {
+			limit = { tag = BTN }
+			LAM = { country_event = { id = proposed.9 }}
+		}
+	}
+	option = {
+		name = lamy.1.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = BTN }
+			LAM = { country_event = { id = proposed.10 }}
+		}
+	}
+}
+
+#LAM - Ask to join faction
+country_event = {
+	id = lamy.2
+	title = lamy.2.t
+	desc = lamy.2.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lamy.2.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = LAM
+		if = {
+			limit = { tag = ALO }
+			LAM = { country_event = { id = proposed.1 }}
+		}
+	}
+	option = {
+		name = lamy.2.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ALO }
+			LAM = { country_event = { id = proposed.2 }}
+		}
+	}
+}
+
+#LAM - Veto Towa
+country_event = {
+	id = lamy.3
+	title = lamy.3.t
+	desc = lamy.3.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lamy.3.a	#Yes
+		ai_chance = { factor = 100 }
+		TOW = { leave_faction = yes }
+		if = {
+			limit = { tag = ALO }
+			LAM = { country_event = { id = proposed.1 }}
+		}
+	}
+	option = {
+		name = lamy.3.b	#No 
+		ai_chance = { factor = 0 }
+		LAM = { leave_faction = yes }
+		if = {
+			limit = { tag = ALO }
+			LAM = { country_event = { id = proposed.2 }}
+		}
+	}
+}
+
+#LAM - Demand puppet
+country_event = {
+	id = lamy.4
+	title = lamy.4.t
+	desc = lamy.4.d
+	picture = GFX_report_event_lamy_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lamy.4.a	#Yes
+		ai_chance = { factor = 100 }
+		LAM = {
+			puppet = ROOT
+		}
+		if = {
+			limit = { tag = BTN }
+			LAM = { country_event = { id = proposed.9 }}
+		}
+	}
+	option = {
+		name = lamy.4.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = BTN }
+			LAM = { country_event = { id = proposed.10 }}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+HTO_propaganda_campaigns = {
+	priority = 100
+	icon = SOV_propaganda
+	scripted_gui = HTO_propaganda_campaigns_ui
+	allowed = {
+		OR = {
+			original_tag = HTO
+			}
+	}
+
+	visible = {
+		has_civil_war = no
+	}
+}

@@ -1,0 +1,289 @@
+choco_question_of_ireland_category = {
+
+	choco_develop_northern_ireland_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 119	
+				size > 5
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 119
+			} 
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_question_of_ireland
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			set_country_flag = developed_northern_ireland
+			119 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_develop_leinster_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 113	
+				size > 5
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 113
+			} 
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_question_of_ireland
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			set_country_flag = developed_leinster
+			113 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_develop_connaught_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 134	
+				size > 5
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 134
+			} 
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_question_of_ireland
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			set_country_flag = developed_connaught
+			134 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_develop_munster_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 135	
+				size > 5
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 135
+			} 
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_question_of_ireland
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			set_country_flag = developed_munster
+			135 = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_peace_talk_with_the_IRA_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_choco_peace_talk_with_the_IRA_dec
+				hidden_trigger = {
+					has_country_flag = developed_munster
+					has_country_flag = developed_connaught
+					has_country_flag = developed_northern_ireland
+					has_country_flag = developed_leinster
+					}
+			}
+		}
+
+		#cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_question_of_ireland
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			remove_ideas = multi_ethnics_nation_idea
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

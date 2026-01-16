@@ -1,0 +1,66 @@
+
+add_to_sora_pop = {
+		
+		custom_effect_tooltip = add_to_sora_pop
+
+		add_to_variable = { var = SOR.SOR_sora_popularity_aegean value = 5 }
+		#subtract_from_variable = { var = KAN_local_percent value = 5 }
+
+		clamp_variable = {
+			var = SOR.SOR_sora_popularity_aegean
+			min = -15
+			max = 50
+		}
+}
+
+add_to_sora_pop_10 = {
+		
+		custom_effect_tooltip = add_to_sora_pop_10
+
+		add_to_variable = { var = SOR.SOR_sora_popularity_aegean value = 10 }
+
+		clamp_variable = {
+			var = SOR.SOR_sora_popularity_aegean
+			min = -15
+			max = 50
+		}
+}
+
+remove_from_sora_pop = {
+		
+		custom_effect_tooltip = remove_from_sora_pop
+
+		subtract_from_variable = { var = SOR.SOR_sora_popularity_aegean value = 5 }
+
+		clamp_variable = {
+			var = SOR.SOR_sora_popularity_aegean
+			min = -15
+			max = 50
+		}
+}
+
+remove_from_sora_pop_10 = {
+		
+		custom_effect_tooltip = remove_from_sora_pop_10
+
+		subtract_from_variable = { var = SOR.SOR_sora_popularity_aegean value = 10 }
+
+		clamp_variable = {
+			var = SOR.SOR_sora_popularity_aegean
+			min = -15
+			max = 50
+		}
+}
+
+remove_from_sora_pop_15 = {
+		
+		custom_effect_tooltip = remove_from_sora_pop_15
+
+		subtract_from_variable = { var = SOR.SOR_sora_popularity_aegean value = 15 }
+
+		clamp_variable = {
+			var = SOR.SOR_sora_popularity_aegean
+			min = -15
+			max = 50
+		}
+}

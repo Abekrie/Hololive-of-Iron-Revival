@@ -1,0 +1,50 @@
+﻿division_template = {
+	name = "Nepali Militia"		
+
+	division_names_group = KAN_INF_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 2 }
+		
+	}
+}
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 4987
+    division_template ="Nepali Militia"
+    start_experience_factor = 0.8
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 4987
+    division_template ="Nepali Militia"
+    start_experience_factor = 0.8
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 4987
+    division_template ="Nepali Militia"
+    start_experience_factor = 0.8
+    start_equipment_factor = 1
+}
+
+}
+

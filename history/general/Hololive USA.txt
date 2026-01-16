@@ -1,0 +1,299 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+  
+generate_character={
+token_base = FLA_generic_holo_xgeneral
+     name="Flare"
+     portraits={
+           army={
+                 large="gfx/leaders/FLA/fla1.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer trait_engineer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = FLA_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = FLA_generic_holo_xadmiral
+     name="Shiranui"
+     portraits={
+           army={
+                 large="gfx/leaders/FLA/fla2.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={navy_career_officer bold}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = FLA_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+token_base = MEL_generic_holo_xgeneral
+     name="Mel"
+     portraits={
+           army={
+                 large="gfx/leaders/MEL/mel_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious war_hero}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = MEL_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = MEL_generic_holo_xadmiral
+     name="Yozora"
+     portraits={
+           army={
+                 large="gfx/leaders/MEL/mel_com.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold war_hero}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = MEL_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+token_base = PLK_generic_holo_xgeneral
+     name="Polka"
+     portraits={
+           army={
+                 large="gfx/leaders/PLK/plk_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={career_officer trait_cautious}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = PLK_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = PLK_generic_holo_xadmiral
+     name="Omaru"
+     portraits={
+           army={
+                 large="gfx/leaders/PLK/plk_fas.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = PLK_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+token_base = BTN_generic_holo_xgeneral
+     name="Botan"
+     portraits={
+           army={
+                 large="gfx/leaders/BTN/btn_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer organizer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = BTN_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = BTN_generic_holo_xadmiral
+     name="Shishiro"
+     portraits={
+           army={
+                 large="gfx/leaders/BTN/btn_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={career_officer gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = BTN_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+token_base = COC_generic_holo_xgeneral
+     name="Coco"
+     portraits={
+           army={
+                 large="gfx/leaders/COC/coco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={career_officer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = COC_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = COC_generic_holo_xadmiral
+     name="Kiryu"
+     portraits={
+           army={
+                 large="gfx/leaders/COC/coco_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality bold}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = COC_recruit_admiral_dec_flag }
+     }
+
+}
+
+generate_character={
+token_base = MIO_generic_holo_xgeneral
+     name="Mio"
+     portraits={
+           army={
+                 large="gfx/leaders/MIO/mio_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless politically_connected}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = MIO_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+token_base = MIO_generic_holo_xadmiral
+     name="Ookami"
+     portraits={
+           army={
+                 large="gfx/leaders/MIO/mio_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+           traits={spotter naval_lineage}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = MIO_recruit_admiral_dec_flag }
+     }
+
+}
+
+}

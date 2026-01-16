@@ -1,0 +1,157 @@
+﻿division_template = {
+	name = "Kiara Fan Club"		
+
+	division_names_group = KIA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+    name = "Kiara Fast Company"        
+
+    division_names_group = KIA_CAV_01
+
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+        cavalry = { x = 0 y = 2 }
+    }
+}
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 241
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 11264
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 6488
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 11264
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 7
+    }
+    location = 11531
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 8
+    }
+    location = 11531
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 11
+    }
+    location = 587
+    division_template ="Kiara Fan Club"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 587
+    division_template ="Kiara Fast Company"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 5117
+    division_template ="Kiara Fast Company"
+    start_experience_factor = 0.4
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 2115
+    division_template ="Kiara Fast Company"
+    start_experience_factor = 0.4
+    start_equipment_factor = 1
+}
+}
+
+air_wings = {
+	57 = {
+		fighter_equipment_0 =  {
+			owner = "KIA" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {
+			owner = "KIA" 
+			amount = 200
+		}
+	}
+}

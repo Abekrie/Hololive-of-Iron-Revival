@@ -1,0 +1,2950 @@
+focus_tree = {
+	id = marine_americas_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			
+			OR = {tag = MAR
+						}
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 2500 y = 1000 }
+
+    initial_show_position = {
+        x = 6
+        y = 0
+    }
+
+    #Diplomatic and Political
+    focus = {
+        id = houshou_marine_mar_focus
+        icon = GFX_focus_marine_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 6
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = marine_pirate_federation_mar_focus
+        icon = GFX_focus_MAR_communism
+        prerequisite = { focus = houshou_marine_mar_focus}
+        mutually_exclusive = { focus = red_and_black_mar_focus }
+        relative_position_id = houshou_marine_mar_focus
+        x = -5
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_popularity = { ideology = communism popularity = 0.6 }
+            set_politics = {
+                ruling_party = communism
+            }
+        }
+    }
+
+    focus = {
+        id = red_and_black_mar_focus
+        icon = GFX_goal_support_fascism
+        prerequisite = { focus = houshou_marine_mar_focus}
+        mutually_exclusive = { focus = marine_pirate_federation_mar_focus }
+        relative_position_id = houshou_marine_mar_focus
+        x = 7
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+            add_stability = -0.1
+        }
+    }
+
+    focus = {
+        id = church_of_the_marine_mar_focus
+        icon = GFX_focus_MAR_sister
+        prerequisite = { focus = red_and_black_mar_focus}
+        mutually_exclusive = { focus = marine_shogunate_mar_focus }
+        relative_position_id = red_and_black_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+				retire_ideology_leader = fascism
+			}
+        	create_country_leader = {
+	name = "Sister Marine"
+	picture = "gfx/leaders/MAR/sister_marine.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		
+		f40_yo
+		onee_san_trait
+	}
+}
+        }
+    }
+
+    focus = {
+        id = marine_shogunate_mar_focus
+        icon = GFX_focus_MAR_shogun
+        prerequisite = { focus = red_and_black_mar_focus}
+        mutually_exclusive = { focus = church_of_the_marine_mar_focus }
+        relative_position_id = red_and_black_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+				retire_ideology_leader = fascism
+			}
+        	create_country_leader = {
+	name = "Shogun Marine"
+	picture = "gfx/leaders/MAR/shogun_marine.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		
+		f40_yo
+		elite
+	}
+}
+        }
+    }
+
+    focus = {
+        id = crew_conscription_mar_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = marine_shogunate_mar_focus
+        focus = church_of_the_marine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_shogunate_mar_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = third_gen_alliance_mar_focus
+        icon = GFX_focus_NOE_shirogane_federation
+        prerequisite = { focus = crew_conscription_mar_focus}
+        mutually_exclusive = { focus = focus_on_the_pacific_mar_focus }
+        relative_position_id = crew_conscription_mar_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                NOE = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = NOE
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            NOE = { country_event = { id = marine.17 }}
+        }
+    }
+
+    focus = {
+        id = focus_on_the_pacific_mar_focus
+        icon = GFX_focus_HTO_powerful
+        prerequisite = { focus = crew_conscription_mar_focus}
+        mutually_exclusive = { focus = third_gen_alliance_mar_focus }
+        relative_position_id = crew_conscription_mar_focus
+        x = 5
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                HTO = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = HTO
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            HTO = { country_event = { id = marine.17 }}
+        }
+    }
+
+    focus = {
+        id = recruit_haato_mar_focus
+        icon = GFX_focus_HTO_guns
+        prerequisite = { focus = focus_on_the_pacific_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = focus_on_the_pacific_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = HTO_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Akai Haato"
+        }
+    }
+
+    focus = {
+        id = supply_for_ship_mar_focus
+        icon = GFX_focus_HTO_army
+        prerequisite = { focus = focus_on_the_pacific_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = focus_on_the_pacific_mar_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = haato_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = quartermaster_haato_mar_focus
+        icon = GFX_focus_HTO_battleship
+        prerequisite = { focus = focus_on_the_pacific_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = focus_on_the_pacific_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_qmaster_tt
+            show_ideas_tooltip = mar_qmaster_haato
+            set_country_flag = Marine_can_qmaster_haato
+        }
+    }
+
+    focus = {
+        id = recruit_noel_mar_focus
+        icon = GFX_focus_NOE_guns
+        prerequisite = { focus = third_gen_alliance_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = third_gen_alliance_mar_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = NOE_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Shirogane Noel"
+        }
+    }
+
+    focus = {
+        id = fleet_of_steel_mar_focus
+        icon = GFX_focus_secret_rearmament
+        prerequisite = { focus = third_gen_alliance_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = third_gen_alliance_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = noel_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = battle_master_noel_mar_focus
+        icon = GFX_focus_NOE_battleship
+        prerequisite = { focus = fleet_of_steel_mar_focus}
+        prerequisite = { focus = recruit_noel_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fleet_of_steel_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_bmaster_tt
+            show_ideas_tooltip = mar_bmaster_noel
+            set_country_flag = Marine_can_bmaster_noel
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_mar_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = crew_conscription_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crew_conscription_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = recruit_rushia_mar_focus
+        icon = GFX_focus_RUS_guns
+        prerequisite = { focus = faction_of_our_own_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = faction_of_our_own_mar_focus
+        x = 0
+        y = 2
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = RUS_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Uruha Rushia"
+        }
+    }
+
+    focus = {
+        id = battle_master_rushia_mar_focus
+        icon = GFX_focus_RUS_battleship
+        prerequisite = { focus = recruit_rushia_mar_focus}
+        mutually_exclusive = { focus = confess_to_rushia_mar_focus }
+        relative_position_id = recruit_rushia_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_bmaster_tt
+            show_ideas_tooltip = mar_bmaster_rushia
+            set_country_flag = Marine_can_bmaster_rushia
+        }
+    }
+
+    focus = {
+        id = confess_to_rushia_mar_focus
+        icon = GFX_focus_RUS_royalist
+        prerequisite = { focus = recruit_rushia_mar_focus}
+        mutually_exclusive = { focus = battle_master_rushia_mar_focus }
+        relative_position_id = recruit_rushia_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                RUS = {
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_subject = no
+                is_ai = no
+            }
+            
+            bypass = {
+                OR = {
+                    RUS = {is_puppet_of = ROOT}
+                    RUS = {exists = no}
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            RUS = { country_event = { id = marine.21 } }
+        }
+    }
+
+    focus = {
+        id = rearmament_effort_mar_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = red_and_black_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = red_and_black_mar_focus
+        x = -5
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = oversea_volunteer_mar_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = rearmament_effort_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_mar_focus
+        x = 0
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = fate_of_cuba_mar_focus
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = oversea_volunteer_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = oversea_volunteer_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                CUB = {
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_subject = no
+                is_ai = no
+            }
+            
+            bypass = {
+                OR = {
+                    CUB = {exists = no}
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            CUB = { country_event = { id = marine.13 }}
+        }
+    }
+
+    focus = {
+        id = treasure_chest_mar_focus
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        prerequisite = { focus = rearmament_effort_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_mar_focus
+        x = 2
+        y = 2
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = naval_academy_mar_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = treasure_chest_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treasure_chest_mar_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = subsidize_banana_farm_mar_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = treasure_chest_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treasure_chest_mar_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_efficiency_idea = yes
+            add_research_idea = yes
+        }
+    }
+
+    focus = {
+        id = intervene_in_neighbor_war_mar_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = marine_pirate_federation_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_pirate_federation_mar_focus
+        x = -1
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = join_the_resistance_mar_focus
+        icon = GFX_focus_AQA_com
+        prerequisite = { focus = marine_pirate_federation_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_pirate_federation_mar_focus
+        x = -2
+        y = 2
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                AQA = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = AQA
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            AQA = { country_event = { id = marine.17 }}
+        }
+    }
+
+    focus = {
+        id = recruit_shion_mar_focus
+        icon = GFX_focus_SHI_shion
+        prerequisite = { focus = join_the_resistance_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_the_resistance_mar_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = SHI_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Murasaki Shion"
+        }
+    }
+
+    focus = {
+        id = recruit_aqua_mar_focus
+        icon = GFX_focus_AQA_aqua
+        prerequisite = { focus = join_the_resistance_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_the_resistance_mar_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = AQA_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Minato Aqua"
+        }
+    }
+
+    focus = {
+        id = recruit_mio_mar_focus
+        icon = GFX_focus_MIO_mio
+        prerequisite = { focus = join_the_resistance_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_the_resistance_mar_focus
+        x = 2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = MIO_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Ookami Mio"
+        }
+    }
+
+    focus = {
+        id = resistance_ideal_mar_focus
+        icon = GFX_focus_aqua_flag
+        prerequisite = { focus = recruit_mio_mar_focus}
+        prerequisite = { focus = recruit_aqua_mar_focus}
+        prerequisite = { focus = recruit_shion_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_mio_mar_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = hololive_resistance_ns
+        }
+    }
+
+    focus = {
+        id = quartermaster_aqua_mar_focus
+        icon = GFX_focus_AQA_supreme
+        prerequisite = { focus = resistance_ideal_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = resistance_ideal_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_qmaster_tt
+            show_ideas_tooltip = mar_qmaster_aqua
+            set_country_flag = Marine_can_qmaster_aqua
+        }
+    }
+
+    focus = {
+        id = battle_master_shion_mar_focus
+        icon = GFX_focus_SHI_powerful
+        prerequisite = { focus = resistance_ideal_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = resistance_ideal_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_bmaster_tt
+            show_ideas_tooltip = mar_bmaster_shion
+            set_country_flag = Marine_can_bmaster_shion
+        }
+    }
+
+    focus = {
+        id = one_night_with_shion_mar_focus
+        icon = GFX_focus_SHI_princess
+        prerequisite = { focus = battle_master_shion_mar_focus}
+        mutually_exclusive = { focus = economic_support_mar_focus }
+        relative_position_id = battle_master_shion_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                SHI = {
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_subject = no
+                is_ai = no
+            }
+            
+            bypass = {
+                OR = {
+                    SHI = {is_puppet_of = ROOT}
+                    SHI = {exists = no}
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            SHI = { country_event = { id = marine.21 } }
+        }
+    }
+
+    focus = {
+        id = economic_support_mar_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = battle_master_shion_mar_focus}
+        mutually_exclusive = { focus = one_night_with_shion_mar_focus }
+        relative_position_id = battle_master_shion_mar_focus
+        x = 2
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            SHI = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            }
+        }
+    }
+
+    focus = {
+        id = pirating_hololive_concert_mar_focus
+        icon = GFX_focus_prc_infiltration
+        prerequisite = { focus = resistance_ideal_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = resistance_ideal_mar_focus
+        x = -3
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+            #add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = oversea_army_mar_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = marine_pirate_federation_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_pirate_federation_mar_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = marine_biology_mar_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = oversea_army_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = oversea_army_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = resistance_budget_mar_focus
+        icon = GFX_focus_AQA_com_hand
+        prerequisite = { focus = marine_pirate_federation_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_pirate_federation_mar_focus
+        x = 3
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = hire_akukin_mar_focus
+        icon = GFX_focus_AQA_akukin
+        prerequisite = { focus = resistance_budget_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = resistance_budget_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_efficiency_idea = yes
+        	random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = sailing_time_mar_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = hire_akukin_mar_focus
+        focus = marine_biology_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hire_akukin_mar_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+
+    focus = {
+        id = war_on_mel_mar_focus
+        icon = GFX_focus_MEL_mel
+        prerequisite = { focus = sailing_time_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sailing_time_mar_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            	factor = 2
+            	has_war = no
+            }
+            modifier = {
+            	factor = 4
+            	is_in_faction = yes
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = MEL
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                MEL = { exists = no }
+                MEL = { is_subject_of = ROOT }
+                MEL = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = MEL }
+        }
+    }
+
+    focus = {
+        id = war_on_cuba_mar_focus
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = sailing_time_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sailing_time_mar_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = CUB
+            available = { date > 1938.1.1 
+            is_ai = no}
+
+            bypass = { OR = {
+                CUB = { exists = no }
+                CUB = { is_subject_of = ROOT }
+                CUB = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = CUB }
+        }
+    }
+
+    focus = {
+        id = war_on_aki_mar_focus
+        icon = GFX_focus_ROS_aki
+        prerequisite = { focus = sailing_time_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sailing_time_mar_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = ROS
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                ROS = { exists = no }
+                ROS = { is_subject_of = ROOT }
+                ROS = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = ROS }
+        }
+    }
+
+    focus = {
+        id = belize_purchase_mar_focus
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = rearmament_effort_mar_focus
+        focus = resistance_budget_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_mar_focus
+        x = -2
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 311
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            311 = {
+                OWNER = {
+                    country_event = { id = marine.12 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = bahamas_purchase_mar_focus
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = belize_purchase_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = belize_purchase_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 693
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            693 = {
+                OWNER = {
+                    country_event = { id = marine.18 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = buy_british_caribbean_mar_focus
+        icon = GFX_focus_chi_british_cooperation
+        prerequisite = { focus = rearmament_effort_mar_focus
+        focus = resistance_budget_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_mar_focus
+        x = -1
+        y = 3
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 689
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            689 = {
+                OWNER = {
+                    country_event = { id = marine.19 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = buy_french_caribbean_mar_focus
+        icon = GFX_focus_chi_reach_out_to_france
+        prerequisite = { focus = rearmament_effort_mar_focus
+        focus = resistance_budget_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_mar_focus
+        x = -3
+        y = 3
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 694
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            694 = {
+                OWNER = {
+                    country_event = { id = marine.20 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = united_caribbean_mar_focus
+        icon = GFX_focus_MAR_navy
+        prerequisite = { focus = buy_french_caribbean_mar_focus}
+        prerequisite = { focus = buy_british_caribbean_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = buy_french_caribbean_mar_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 694
+        	has_full_control_of_state = 689
+        	has_full_control_of_state = 693
+        	has_full_control_of_state = 311
+        	has_full_control_of_state = 315
+        	has_full_control_of_state = 318
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	every_state = {
+        		limit = {region = 53}
+        		add_core_of = ROOT
+        	}
+        	add_state_core = 311
+        	hidden_effect = {
+        		news_event = { id = holo_news.144 }
+        	}
+        }
+    }
+
+
+    #Economy and Industry
+	focus = {
+		id = MAR_banana_republic_LatinAmerica_focus
+		text = banana_republic_LatinAmerica_focus
+		icon = GFX_goal_generic_consumer_goods
+		#prerequisite = { focus = idkeator }
+		#mutually_exclusive = { focus = idbili }
+		relative_position_id = houshou_marine_mar_focus
+		x = 18
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_efficiency_idea = yes
+		    add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+	    }
+	}
+
+	focus = {
+		id = MAR_support_agriculture_LatinAmerica_focus
+		text = support_agriculture_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MAR_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = MAR_support_rearmament_LatinAmerica_focus }
+		relative_position_id = MAR_banana_republic_LatinAmerica_focus
+		x = -2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_support_rearmament_LatinAmerica_focus
+		text = support_rearmament_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MAR_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = MAR_support_agriculture_LatinAmerica_focus }
+		relative_position_id = MAR_banana_republic_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_war_on_drug_LatinAmerica_focus
+		text = war_on_drug_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MAR_support_agriculture_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_support_agriculture_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = MAR_export_banana_LatinAmerica_focus
+		text = export_banana_LatinAmerica_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = MAR_war_on_drug_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_war_on_drug_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = MAR_seek_flare_support_LatinAmerica_focus
+		text = seek_flare_support_LatinAmerica_focus
+		icon = GFX_focus_flare_flag
+		prerequisite = { focus = MAR_export_banana_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_export_banana_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = FLA
+		    modifier = faction_unity_opinion
+		    }
+		    FLA = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+			
+	    }
+	}
+
+	focus = {
+		id = MAR_hire_aqua_construction_LatinAmerica_focus
+		text = hire_aqua_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MAR_support_agriculture_LatinAmerica_focus 
+		focus = MAR_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_support_agriculture_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			AQA = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_hire_pekora_construction_LatinAmerica_focus
+		text = hire_pekora_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MAR_support_agriculture_LatinAmerica_focus 
+		focus = MAR_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_support_rearmament_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			PEK = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_coco_arms_factory_LatinAmerica_focus
+		text = coco_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MAR_hire_pekora_construction_LatinAmerica_focus
+		focus = MAR_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_hire_pekora_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_mio_arms_factory_LatinAmerica_focus
+		text = mio_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MAR_hire_pekora_construction_LatinAmerica_focus
+		focus = MAR_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_hire_aqua_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_drug_to_usa_LatinAmerica_focus
+		text = drug_to_usa_LatinAmerica_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = MAR_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_support_rearmament_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = asacoco_idea
+	    }
+	}
+
+	focus = {
+		id = MAR_underground_tunnel_LatinAmerica_focus
+		text = underground_tunnel_LatinAmerica_focus
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = MAR_drug_to_usa_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_drug_to_usa_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_seek_coco_support_LatinAmerica_focus
+		text = seek_coco_support_LatinAmerica_focus
+		icon = GFX_focus_coco_flag
+		prerequisite = { focus = MAR_underground_tunnel_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_underground_tunnel_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = COC
+		    modifier = faction_unity_opinion
+		    }
+		    COC = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+	    }
+	}
+
+	focus = {
+		id = MAR_pacific_coast_dock_LatinAmerica_focus
+		text = pacific_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MAR_mio_arms_factory_LatinAmerica_focus
+		focus = MAR_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_mio_arms_factory_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = MAR_atlantic_coast_dock_LatinAmerica_focus
+		text = atlantic_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MAR_mio_arms_factory_LatinAmerica_focus
+		focus = MAR_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_mio_arms_factory_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = MAR_maya_carlender_LatinAmerica_focus
+		text = maya_carlender_LatinAmerica_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = MAR_pacific_coast_dock_LatinAmerica_focus
+		focus = MAR_atlantic_coast_dock_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = MAR_atlantic_coast_dock_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+	    }
+	}
+
+	#Army Research
+    focus = {
+		id = MAR_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = MAR_banana_republic_LatinAmerica_focus
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = MAR_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = MAR_gaming }
+		relative_position_id = MAR_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = MAR_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MAR_animal_crossing }
+		relative_position_id = MAR_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = MAR_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = MAR_gaming }
+		relative_position_id = MAR_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = MAR_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MAR_tetris }
+		relative_position_id = MAR_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = MAR_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = MAR_gaming }
+		relative_position_id = MAR_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MAR_dark_soul_resh }
+		relative_position_id = MAR_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = MAR_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MAR_apex_legend  focus = MAR_ring_fit }
+		relative_position_id = MAR_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MAR_pubg  focus = MAR_ring_fit }
+		relative_position_id = MAR_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = MAR_minecraft_resh  focus = MAR_mario_kart }
+		relative_position_id = MAR_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = MAR_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = MAR_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = MAR_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = MAR_hololive_music }
+		relative_position_id = MAR_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = MAR_hololive_music }
+		relative_position_id = MAR_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = MAR_hololive_music }
+		relative_position_id = MAR_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = MAR_yumemiru_sora_he 
+		focus = MAR_shiny_smily_story}
+		relative_position_id = MAR_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = MAR_yumemiru_sora_he 
+		focus = MAR_kirame_rider}
+		relative_position_id = MAR_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = MAR_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = MAR_azur_lane_boss_music }
+		prerequisite = { focus = MAR_fukkireta }
+		relative_position_id = MAR_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = MAR_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = MAR_azur_lane_boss_music }
+		relative_position_id = MAR_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+	#Navy Research
+	focus = {
+        id = marine_navy_mar_focus
+        icon = GFX_focus_MAR_navy
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = united_caribbean_mar_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 25
+            random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+        }
+    }
+
+    focus = {
+        id = fight_like_a_marine_mar_focus
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = marine_navy_mar_focus}
+        mutually_exclusive = { focus = fight_like_a_pirate_mar_focus }
+        relative_position_id = marine_navy_mar_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = fight_like_a_pirate_mar_focus
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = marine_navy_mar_focus}
+        mutually_exclusive = { focus = fight_like_a_marine_mar_focus }
+        relative_position_id = marine_navy_mar_focus
+        x = 3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = marine_doctrine_mar_focus
+        icon = GFX_focus_MAR_battleship
+        prerequisite = { focus = fight_like_a_pirate_mar_focus
+        focus = fight_like_a_marine_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fight_like_a_pirate_mar_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = marine_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = master_of_the_sea_mar_focus
+        icon = GFX_focus_MAR_navy
+        prerequisite = { focus = marine_doctrine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_doctrine_mar_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_qmaster_tt
+            show_ideas_tooltip = mar_qmaster_marine
+            set_country_flag = Marine_can_qmaster_marine
+        }
+    }
+
+    focus = {
+        id = battleship_effort_mar_focus
+        icon = GFX_focus_generic_navy_battleship2
+        prerequisite = { focus = marine_doctrine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_doctrine_mar_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 2
+                category = bc_tech
+				category = bb_tech
+				category = cv_tech
+            }
+        }
+    }
+
+    focus = {
+        id = special_fleet_mar_focus
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = marine_doctrine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marine_doctrine_mar_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+        }
+    }
+
+    focus = {
+        id = naval_doctrine_mar_focus
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = special_fleet_mar_focus
+        focus = battleship_effort_mar_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = special_fleet_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = false_flag_mar_focus
+        icon = GFX_focus_MAR_pirate
+        prerequisite = { focus = fight_like_a_pirate_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fight_like_a_pirate_mar_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_tactic_tt
+            show_ideas_tooltip = mar_tactic_false_flag
+            set_country_flag = Marine_can_tactic_false_flag
+        }
+    }
+
+    focus = {
+        id = treaty_with_gura_mar_focus
+        icon = GFX_focus_GAW_powerful
+        prerequisite = { focus = fight_like_a_pirate_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fight_like_a_pirate_mar_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = gura_doctrine_ns
+            custom_effect_tooltip = Marine_can_use_bmaster_tt
+            show_ideas_tooltip = mar_bmaster_gura
+            set_country_flag = Marine_can_bmaster_gura
+            GAW = {
+            	navy_experience = 25
+            }
+        }
+    }
+
+    focus = {
+        id = submarine_effort_mar_focus
+        icon = GFX_goal_generic_navy_submarine
+        prerequisite = { focus = treaty_with_gura_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treaty_with_gura_mar_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = ss_tech
+            }
+        }
+    }
+
+    focus = {
+        id = encourage_mutiny_mar_focus
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = treaty_with_gura_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treaty_with_gura_mar_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_tactic_tt
+            show_ideas_tooltip = mar_tactic_encourage_mutiny
+            set_country_flag = Marine_can_tactic_mutiny
+        }
+    }
+
+    focus = {
+        id = sharkmarine_warfare_mar_focus
+        icon = GFX_goal_generic_wolf_pack
+        prerequisite = { focus = encourage_mutiny_mar_focus}
+        prerequisite = { focus = submarine_effort_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = encourage_mutiny_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = USA_unrestricted_submarine_warfare
+        }
+    }
+
+
+    focus = {
+        id = camouflaged_hull_mar_focus
+        icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = fight_like_a_marine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fight_like_a_marine_mar_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = Marine_can_use_tactic_tt
+            show_ideas_tooltip = mar_tactic_camouflaged_hull
+            set_country_flag = Marine_can_tactic_camounflaged_hull
+        }
+    }
+
+    focus = {
+        id = treaty_with_ina_mar_focus
+        icon = GFX_focus_INA_powerful
+        prerequisite = { focus = fight_like_a_marine_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fight_like_a_marine_mar_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_technology = {
+    			takodachi_infantry = 1	
+			}
+
+            custom_effect_tooltip = Marine_can_use_bmaster_tt
+            show_ideas_tooltip = mar_bmaster_ina
+            set_country_flag = Marine_can_bmaster_ina
+            
+			NIN = {
+				navy_experience = 25
+			}
+        }
+    }
+
+    focus = {
+        id = real_marine_corps_mar_focus
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = treaty_with_ina_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treaty_with_ina_mar_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = five_idols_army_ns
+        }
+    }
+
+    focus = {
+        id = boarding_attack_mar_focus
+        icon = GFX_focus_secret_rearmament
+        prerequisite = { focus = treaty_with_ina_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treaty_with_ina_mar_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = Marine_can_use_tactic_tt
+            show_ideas_tooltip = mar_tactic_boarding_attack
+            set_country_flag = Marine_can_tactic_boarding
+        }
+    }
+
+    focus = {
+        id = escort_focus_mar_focus
+        icon = GFX_focus_generic_destroyer
+        prerequisite = { focus = treaty_with_ina_mar_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = treaty_with_ina_mar_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = dd_tech
+            }
+        }
+    }
+    
+}

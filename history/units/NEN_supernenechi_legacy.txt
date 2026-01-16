@@ -1,0 +1,77 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Supernenechi Fleet"		
+		naval_base = 11670
+
+		task_force = {				
+			name = "Supernenechi Force"			
+			location = 11670	
+
+ship = { name = "Nanjing 1 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 2 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 3 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 4 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 5 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 6 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+ 
+ship = { name = "Nanjing 7 "
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner =
+KIA"
+} } }
+
+ship = { name = "Kansai 1 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Kansai 2 "
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

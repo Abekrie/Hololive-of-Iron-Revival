@@ -1,0 +1,97 @@
+Generic_BTN_historical = {
+	name = "BTN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = BTN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = BTN
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		shishiro_botan_btn_focus
+		BTN_5thgen_live_streaming_gen
+		BTN_5thgen_youtube_gen
+		military_uniform_btn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_BTN_non_historical = {
+	name = "BTN non-historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = BTN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = BTN
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		shishiro_botan_btn_focus
+		BTN_5thgen_live_streaming_gen
+		BTN_5thgen_youtube_gen
+		soviet_in_exile_btn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

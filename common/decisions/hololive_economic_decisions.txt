@@ -1,0 +1,343 @@
+hololive_economic_action_category = {
+
+	buy_civ_hololive_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 3999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -4000
+			}
+
+			add_offsite_building = { type = industrial_complex level = 1 }
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_mil_hololive_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 2999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -3000
+			}
+
+			add_offsite_building = { type = arms_factory level = 1 }
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_dock_hololive_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 2499
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -2500
+			}
+
+			add_offsite_building = { type = dockyard level = 1 }
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_infantry_equipment_hololive_dec = {
+
+		icon = ger_military_buildup
+
+		#days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -2000
+			}
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_artillery_hololive_dec = {
+
+		icon = ger_military_buildup
+
+		#days_re_enable = 30
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -2000
+			}
+			
+			add_equipment_to_stockpile = {
+						type = artillery_equipment_1
+						amount = 500
+					}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_support_equipment_hololive_dec = {
+
+		icon = ger_military_buildup
+
+		#days_re_enable = 30
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -2000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 750
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_manpower_hololive_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 30
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 4999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+
+		}
+
+		complete_effect = {
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -5000
+			}
+			add_manpower = 100000
+
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_amelia_watson_hololive_dec = {
+
+		icon = generic_political_discourse
+
+		##days_re_enable = 90
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 4999
+			}
+		}
+
+		#cost = 25
+
+		visible = {
+			NOT = { has_country_flag = buy_amelia_watson_hololive_dec_FLAG }
+		}
+
+		complete_effect = {
+			set_country_flag = buy_amelia_watson_hololive_dec_FLAG
+	    	add_equipment_to_stockpile = {
+				type = hololive_yen_0
+				amount = -5000
+			}
+			add_ideas = renting_a_spy_idea
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = -100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

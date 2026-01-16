@@ -1,0 +1,3007 @@
+focus_tree = {
+	id = KAN_generic_hololive
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = KAN
+			} 
+		}
+	}
+
+
+	#Diplomatic Focus
+    focus = {
+        id = amane_kanata_kan_focus
+        icon = GFX_focus_kanata_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 18
+        y = 5
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = regular_religion_kan_focus
+        icon = GFX_focus_KAN_kanatanism_red
+        prerequisite = { focus = amane_kanata_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = amane_kanata_kan_focus
+        x = -6
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            KAN_atleast_50 = yes
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = kanatanism_unpopular
+                add_idea = kanatanism_regular
+            }
+            hidden_effect = {
+                news_event = { id = holo_news.235 }
+            }
+        }
+    }
+
+    focus = {
+        id = seek_donation_kan_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = regular_religion_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = regular_religion_kan_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = popular_religion_kan_focus
+        icon = GFX_focus_KAN_kanatanism_yellow
+        prerequisite = { focus = regular_religion_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = regular_religion_kan_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            KAN_atleast_75 = yes
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = kanatanism_regular
+                add_idea = kanatanism_popular
+            }
+        }
+    }
+
+    focus = {
+        id = co_founder_of_asacoco_kan_focus
+        icon = GFX_focus_COC_asacoco
+        prerequisite = { focus = popular_religion_kan_focus}
+        prerequisite = { focus = seek_donation_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = popular_religion_kan_focus
+        x = -2
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = "Unlock Economic Law:"
+            show_ideas_tooltip = cartel_economy
+            set_country_flag = can_use_cartel_economy
+        }
+    }
+
+    focus = {
+        id = kanata_heavenly_kingdom_kan_focus
+        icon = GFX_focus_KAN_heavenly_kingdom
+        prerequisite = { focus = co_founder_of_asacoco_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = co_founder_of_asacoco_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 757
+            has_full_control_of_state = 322
+            has_full_control_of_state = 601
+            has_full_control_of_state = 758
+
+            has_full_control_of_state = 640
+            has_full_control_of_state = 288
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_cosmetic_tag = KAN_heaven
+            hidden_effect = {
+                news_event = { id = holo_news.234 }
+            }
+            every_state = {
+                limit = { OR = {
+                    is_core_of = TIB
+                    is_core_of = BRM
+                } }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = goddess_kanata_kan_focus
+        icon = GFX_focus_KAN_powerful
+        prerequisite = { focus = kanata_heavenly_kingdom_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kanata_heavenly_kingdom_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                retire_ideology_leader = fascism
+                retire_ideology_leader = democratic
+                retire_ideology_leader = neutrality
+                retire_ideology_leader = communism
+            }
+            create_country_leader = {
+    name = "Goddess Kanata"
+    picture = "gfx/leaders/KAN/kanata_supreme_leader.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        goddess_of_commoner_trait
+        doctor_trait
+        pptenshi
+    }
+}
+hidden_effect = {
+create_country_leader = {
+    name = "Goddess Kanata"
+    picture = "gfx/leaders/KAN/kanata_supreme_leader.dds"
+    expire = "1965.1.1"
+    ideology = fascism_ideology
+    traits = {
+        goddess_of_commoner_trait
+        doctor_trait
+        pptenshi
+    }
+}
+
+create_country_leader = {
+    name = "Goddess Kanata"
+    picture = "gfx/leaders/KAN/kanata_supreme_leader.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        goddess_of_commoner_trait
+        doctor_trait
+        pptenshi
+    }
+}
+
+create_country_leader = {
+    name = "Goddess Kanata"
+    picture = "gfx/leaders/KAN/kanata_supreme_leader.dds"
+    expire = "1965.1.1"
+    ideology = liberalism
+    traits = {
+        goddess_of_commoner_trait
+        doctor_trait
+        pptenshi
+    }
+}}
+        }
+    }
+
+    focus = {
+        id = things_in_this_world_are_too_weak_kan_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = kanata_heavenly_kingdom_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kanata_heavenly_kingdom_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = nuclear
+            }
+        }
+    }
+
+    focus = {
+        id = international_stage_kan_focus
+        icon = GFX_focus_generic_trade
+        prerequisite = { focus = amane_kanata_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = amane_kanata_kan_focus
+        x = 2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = hololive_trade       
+            custom_effect_tooltip = hololive_trade_allows
+        }
+    }
+
+    focus = {
+        id = national_presentation_kan_focus
+        icon = GFX_focus_KAN_kanatanism_blue
+        prerequisite = { focus = amane_kanata_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = amane_kanata_kan_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_national_presentation_kan_focus
+            set_country_flag = kanata_can_national_presentation
+        }
+    }
+
+    focus = {
+        id = gorilla_corps_kan_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = national_presentation_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = national_presentation_kan_focus
+        x = 3
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = join_usaken_kan_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = national_presentation_kan_focus}
+        mutually_exclusive = { focus = join_coco_kan_focus }
+        relative_position_id = national_presentation_kan_focus
+        x = 6
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                PEK = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = PEK
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            PEK = { country_event = { id = kanata.35 }}
+        }
+    }
+
+    focus = {
+        id = join_coco_kan_focus
+        icon = GFX_focus_COC_coco
+        prerequisite = { focus = national_presentation_kan_focus}
+        mutually_exclusive = { focus = join_usaken_kan_focus }
+        relative_position_id = national_presentation_kan_focus
+        x = 9
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                COC = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = COC
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            COC = { country_event = { id = kanata.35 }}
+        }
+    }
+
+    focus = {
+        id = asacoco_kan_focus
+        icon = GFX_focus_COC_asacoco
+        prerequisite = { focus = join_coco_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_coco_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = asacoco_idea
+        }
+    }
+
+    focus = {
+        id = furniture_incident_kan_focus
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = asacoco_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = asacoco_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = national_building_1
+                days = 165
+            }
+        }
+    }
+
+    focus = {
+        id = recruit_suisei_kan_focus
+        icon = GFX_focus_SUI_suisei
+        prerequisite = { focus = furniture_incident_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = furniture_incident_kan_focus
+        x = 1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = SUI_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Hoshimachi Suisei"
+        }
+    }
+
+    focus = {
+        id = impersonate_flare_kan_focus
+        icon = GFX_focus_FLA_fire_and_flare
+        prerequisite = { focus = recruit_suisei_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_suisei_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = kintsuba
+        }
+    }
+
+    focus = {
+        id = fate_of_burma_kan_focus
+        icon = GFX_focus_KAN_fate_of_burma
+        prerequisite = { focus = impersonate_flare_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = impersonate_flare_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 288
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            288 = {
+                OWNER = {
+                    country_event = { id = kanata.37 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = hire_usaken_kan_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = join_usaken_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = join_usaken_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = efficiency_i_ns
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = recruit_pekora_kan_focus
+        icon = GFX_focus_PEK_pekora
+        prerequisite = { focus = hire_usaken_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hire_usaken_kan_focus
+        x = 0
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = PEK_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Usada Pekora"
+        }
+    }
+
+    focus = {
+        id = recruit_coco_kan_focus
+        icon = GFX_focus_COC_guns
+        prerequisite = { focus = recruit_pekora_kan_focus
+        focus = furniture_incident_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_pekora_kan_focus
+        x = 2
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = COC_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = gorilla_spy_kan_focus
+        icon = GFX_focus_KAN_gorilla
+        prerequisite = { focus = recruit_coco_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_coco_kan_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            #add_ideas = extra_holo_spy_idea
+            add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = frontline_country_kan_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = gorilla_spy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = gorilla_spy_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = supply_hub_building_idea
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = war_on_noel_kan_focus
+        icon = GFX_focus_noel_flag
+        prerequisite = { focus = frontline_country_kan_focus
+        focus = fate_of_burma_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = frontline_country_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = NOE
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                NOE = { exists = no }
+                NOE = { is_subject_of = ROOT }
+                NOE = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = NOE }
+        }
+    }
+
+    focus = {
+        id = moona_in_navy_kan_focus
+        icon = GFX_focus_MOO_moona
+        prerequisite = { focus = recruit_pekora_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_pekora_kan_focus
+        x = 0
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = MOO_recruit_admiral_dec_flag
+            custom_effect_tooltip = CET_available_as_admiral
+            custom_effect_tooltip = "Moona Hoshinova"
+        }
+    }
+
+    focus = {
+        id = moona_dockyard_kan_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = moona_in_navy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = moona_in_navy_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MOO = {
+                navy_experience = 25
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = commission_bengal_fleet_kan_focus
+        icon = GFX_focus_KAN_navy
+        prerequisite = { focus = moona_dockyard_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = moona_dockyard_kan_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 431
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_commission_bengal_fleet_kan_focus
+            hidden_effect = {if = {
+                            limit = {
+                                has_dlc = "Man the Guns"
+                            }
+                            load_oob = KAN_bengal_naval_mtg
+                        }
+            
+                        if = {
+                            limit = {
+                                NOT = {has_dlc = "Man the Guns"}
+                            }
+                            load_oob = KAN_bengal_naval_legacy
+                        }}
+        }
+    }
+
+    focus = {
+        id = white_shirt_rally_kan_focus
+        icon = GFX_focus_KAN_white_shirt
+        prerequisite = { focus = national_presentation_kan_focus}
+        mutually_exclusive = { focus = appeasement_policy_kan_focus }
+        relative_position_id = national_presentation_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                retire_ideology_leader = fascism
+            }
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+            create_country_leader = {
+                name = "White Shirt Kanata"
+                picture = "gfx/leaders/KAN/kanata_white_shirt.dds"
+                expire = "1965.1.1"
+                ideology = fascism_ideology
+                traits = {
+                    autocratic_imperialist
+                    pptenshi
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = appeasement_policy_kan_focus
+        icon = GFX_focus_KAN_nurse
+        prerequisite = { focus = national_presentation_kan_focus}
+        mutually_exclusive = { focus = white_shirt_rally_kan_focus }
+        relative_position_id = national_presentation_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                retire_ideology_leader = fascism
+                retire_ideology_leader = democratic
+                retire_ideology_leader = neutrality
+                retire_ideology_leader = communism
+            }
+            create_country_leader = {
+    name = "Nurse Kanata"
+    picture = "gfx/leaders/KAN/kanata_nurse.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        doctor_trait
+        pptenshi
+    }
+}
+hidden_effect = {
+create_country_leader = {
+    name = "Nurse Kanata"
+    picture = "gfx/leaders/KAN/kanata_nurse.dds"
+    expire = "1965.1.1"
+    ideology = fascism_ideology
+    traits = {
+        doctor_trait
+        pptenshi
+    }
+}
+
+create_country_leader = {
+    name = "Nurse Kanata"
+    picture = "gfx/leaders/KAN/kanata_nurse.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        doctor_trait
+        pptenshi
+    }
+}
+
+create_country_leader = {
+    name = "Nurse Kanata"
+    picture = "gfx/leaders/KAN/kanata_nurse.dds"
+    expire = "1965.1.1"
+    ideology = liberalism
+    traits = {
+        doctor_trait
+        pptenshi
+    }
+}}
+        }
+    }
+
+    focus = {
+        id = heaven_academy_kan_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = appeasement_policy_kan_focus
+        focus = white_shirt_rally_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = appeasement_policy_kan_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = soran_bushi_kan_focus
+        icon = GFX_focus_smiling_buddha
+        prerequisite = { focus = appeasement_policy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = appeasement_policy_kan_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.05
+            add_buddhist_ops = yes
+        }
+    }
+
+    focus = {
+        id = power_is_power_kan_focus
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = soran_bushi_kan_focus}
+        prerequisite = { focus = heaven_academy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = soran_bushi_kan_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.05
+            add_to_kanatan = yes
+        }
+    }
+
+    focus = {
+        id = revise_budget_policy_kan_focus
+        icon = GFX_focus_generic_treaty
+        prerequisite = { focus = heaven_academy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = heaven_academy_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = proficient_producer_tenshi_kan_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = heaven_academy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = heaven_academy_kan_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = healing_angel_kan_focus
+        icon = GFX_focus_KAN_nurse
+        prerequisite = { focus = revise_budget_policy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = revise_budget_policy_kan_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            KAN_atleast_40 = yes
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_healing_angel_kan_focus
+            set_country_flag = kanata_can_healing_angel
+            show_ideas_tooltip = kanata_healing_angel_idea
+        }
+    }
+
+    focus = {
+        id = self_defence_kan_focus
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = healing_angel_kan_focus}
+        prerequisite = { focus = mountain_roads_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = healing_angel_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = deterrence
+        }
+    }
+
+    focus = {
+        id = third_eye_kan_focus
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = self_defence_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = self_defence_kan_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+            #add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = student_council_kan_focus
+        icon = GFX_focus_generic_self_management
+        prerequisite = { focus = self_defence_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = self_defence_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = reroganised_gov_ns
+        }
+    }
+
+    focus = {
+        id = perfect_pitch_tenshi_kan_focus
+        icon = GFX_focus_KAN_powerful
+        prerequisite = { focus = student_council_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = student_council_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = perfect_pitch_tenshi_trait
+        }
+    }
+
+    focus = {
+        id = support_the_farmer_kan_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = proficient_producer_tenshi_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = proficient_producer_tenshi_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = mountain_roads_kan_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = revise_budget_policy_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = revise_budget_policy_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = infrastructure_building_idea
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_kan_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = mountain_roads_kan_focus
+        focus = support_the_farmer_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mountain_roads_kan_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = violence_is_the_solution_to_everything_kan_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = mountain_roads_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mountain_roads_kan_focus
+        x = 0
+        y = 2
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = usa_world_police
+        }
+    }
+
+    focus = {
+        id = gorilla_is_the_angel_kan_focus
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = support_the_farmer_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = support_the_farmer_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = cute_1
+        }
+    }
+
+    focus = {
+        id = gorilla_grip_kan_focus
+        icon = GFX_focus_KAN_gorilla
+        prerequisite = { focus = gorilla_is_the_angel_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = gorilla_is_the_angel_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            KAN_atleast_40 = yes
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_gorilla_grip_kan_focus
+            set_country_flag = kanata_can_gorilla_grip
+            show_ideas_tooltip = kanata_gorilla_grip_idea
+        }
+    }
+
+    focus = {
+        id = war_on_rushia_kan_focus
+        icon = GFX_focus_rushia_flag
+        prerequisite = { focus = violence_is_the_solution_to_everything_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = violence_is_the_solution_to_everything_kan_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+                is_in_faction = yes
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = RUS
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                RUS = { exists = no }
+                RUS = { is_subject_of = ROOT }
+                RUS = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = RUS }
+        }
+    }
+
+    focus = {
+        id = war_on_aqua_kan_focus
+        icon = GFX_focus_aqua_flag
+        prerequisite = { focus = violence_is_the_solution_to_everything_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = violence_is_the_solution_to_everything_kan_focus
+        x = 2
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1939.1.1
+                is_in_faction_with = PEK
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = AQA
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                AQA = { exists = no }
+                AQA = { is_subject_of = ROOT }
+                AQA = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = AQA }
+        }
+    }
+
+    focus = {
+        id = fate_of_tibet_kan_focus
+        icon = GFX_focus_KAN_fate_of_tibet
+        prerequisite = { focus = violence_is_the_solution_to_everything_kan_focus
+        focus = gorilla_grip_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = violence_is_the_solution_to_everything_kan_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 757
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            757 = {
+                OWNER = {
+                    country_event = { id = kanata.38 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = war_on_yogiri_kan_focus
+        icon = GFX_focus_yogiri_flag
+        prerequisite = { focus = fate_of_tibet_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fate_of_tibet_kan_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = YOG
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                YOG = { exists = no }
+                YOG = { is_subject_of = ROOT }
+                YOG = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = YOG }
+        }
+    }
+
+    focus = {
+        id = feather_researches_kan_focus
+        icon = GFX_focus_research2
+        prerequisite = { focus = gorilla_grip_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = gorilla_grip_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = note_pad_idea
+        }
+    }
+
+
+	#Army Research
+	focus = {
+        id = kanata_national_army_kan_focus
+        icon = GFX_focus_KAN_army
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 6
+        y = 0
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            army_experience = 25
+            #navy_experience = 25
+            #air_experience = 25
+        }
+    }
+
+    focus = {
+        id = quality_focus_kan_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = kanata_national_army_kan_focus}
+        mutually_exclusive = { focus = quantity_is_quality_kan_focus }
+        relative_position_id = kanata_national_army_kan_focus
+        x = 4
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = quantity_is_quality_kan_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = kanata_national_army_kan_focus}
+        mutually_exclusive = { focus = quality_focus_kan_focus }
+        relative_position_id = kanata_national_army_kan_focus
+        x = 6
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = learn_from_calliope_kan_focus
+        icon = GFX_focus_MRI_calliope
+        prerequisite = { focus = quality_focus_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = quality_focus_kan_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = calliope_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = armour_gorilla_kan_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = quality_focus_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = quality_focus_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = light_tank_chassis_0
+                    amount = 600
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = arms_the_army_kan_focus
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = quantity_is_quality_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = quantity_is_quality_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 5000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = learn_from_noel_kan_focus
+        icon = GFX_focus_NOE_noel
+        prerequisite = { focus = quantity_is_quality_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = quantity_is_quality_kan_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = noel_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = kanata_doctrine_kan_focus
+        icon = GFX_focus_KAN_powerful
+        prerequisite = { focus = quantity_is_quality_kan_focus
+        focus = quality_focus_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = quantity_is_quality_kan_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	KAN_atleast_20 = yes
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = kanata_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = propaganda_effort_kan_focus
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = kanata_doctrine_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kanata_doctrine_kan_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+        }
+    }
+
+    focus = {
+        id = employ_gurkha_kan_focus
+        icon = GFX_focus_KAN_gurkha
+        prerequisite = { focus = kanata_national_army_kan_focus}
+        mutually_exclusive = { focus = angelical_warrior_kan_focus }
+        relative_position_id = kanata_national_army_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_hindu_ops = yes
+        	add_buddhist_ops = yes
+            add_ideas = kanata_gurkha_idea
+        }
+    }
+
+    focus = {
+        id = angelical_warrior_kan_focus
+        icon = GFX_focus_KAN_army_upgrade
+        prerequisite = { focus = kanata_national_army_kan_focus}
+        mutually_exclusive = { focus = employ_gurkha_kan_focus }
+        relative_position_id = kanata_national_army_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_to_kanatan = yes
+            add_ideas = kanata_angelical_warrior_idea
+        }
+    }
+
+    focus = {
+        id = infantry_equipment_kan_focus
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = employ_gurkha_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = employ_gurkha_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+    }
+
+    focus = {
+        id = motorized_equipment_kan_focus
+        icon = GFX_goal_generic_army_motorized
+        prerequisite = { focus = angelical_warrior_kan_focus
+        focus = employ_gurkha_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = angelical_warrior_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = motorized_equipment
+            }
+        }
+    }
+
+    focus = {
+        id = support_equipment_kan_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = angelical_warrior_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = angelical_warrior_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = support_tech
+            }
+        }
+    }
+
+    focus = {
+        id = tata_kan_focus
+        icon = GFX_focus_RUS_tata
+        prerequisite = { focus = motorized_equipment_kan_focus}
+        prerequisite = { focus = support_equipment_kan_focus
+        focus = infantry_equipment_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = support_equipment_kan_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 2
+                category = armor
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = artillery_support_kan_focus
+        icon = GFX_goal_generic_army_artillery2
+        prerequisite = { focus = tata_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tata_kan_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = artillery
+            }
+        }
+    }
+
+    focus = {
+        id = armour_effort_kan_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = tata_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tata_kan_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = armor
+            }
+        }
+    }
+
+    focus = {
+        id = burmese_line_kan_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = kanata_national_army_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kanata_national_army_kan_focus
+        x = -4
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	430 = {
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 9991
+            	    level = 2
+            	    instant_build = yes
+            	}
+			}
+
+			432 = {
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 997
+            	    level = 2
+            	    instant_build = yes
+            	}
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 1581
+            	    level = 2
+            	    instant_build = yes
+            	}
+			}
+        }
+    }
+
+    focus = {
+        id = hq_in_bangladesh_kan_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = burmese_line_kan_focus}
+        mutually_exclusive = { focus = hq_in_bhutan_kan_focus }
+        relative_position_id = burmese_line_kan_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_muslim_ops = yes
+            430 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = hq_in_bhutan_kan_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = burmese_line_kan_focus}
+        mutually_exclusive = { focus = hq_in_bangladesh_kan_focus }
+        relative_position_id = burmese_line_kan_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_buddhist_ops = yes
+            324 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = improve_burmese_line_kan_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = burmese_line_kan_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = burmese_line_kan_focus
+        x = 1
+        y = 2
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	430 = {
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 9991
+            	    level = 2
+            	    instant_build = yes
+            	}
+			}
+
+			432 = {
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 997
+            	    level = 2
+            	    instant_build = yes
+            	}
+            	add_building_construction = {
+            	    type = bunker
+            	    province = 1581
+            	    level = 2
+            	    instant_build = yes
+            	}
+			}
+        }
+    }
+   
+#Air Research
+    focus = {
+		id = KAN_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = kanata_national_army_kan_focus
+		x = 11
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = KAN_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = KAN_hololive_music }
+		relative_position_id = KAN_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = KAN_hololive_music }
+		relative_position_id = KAN_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = KAN_hololive_music }
+		relative_position_id = KAN_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = KAN_yumemiru_sora_he 
+		focus = KAN_shiny_smily_story}
+		relative_position_id = KAN_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = KAN_yumemiru_sora_he 
+		focus = KAN_kirame_rider}
+		relative_position_id = KAN_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = KAN_azur_lane_boss_music }
+		prerequisite = { focus = KAN_fukkireta }
+		relative_position_id = KAN_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = KAN_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = KAN_azur_lane_boss_music }
+		relative_position_id = KAN_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = KAN_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = KAN_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = KAN_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = KAN_live_streaming_gen }
+		mutually_exclusive = { focus = KAN_bilibili }
+		relative_position_id = KAN_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = KAN_youtube_gen }
+		relative_position_id = KAN_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KAN_live_streaming_gen }
+		mutually_exclusive = { focus = KAN_youtube_gen }
+		relative_position_id = KAN_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = KAN_bilibili 
+		focus = KAN_youtube_gen}
+		relative_position_id = KAN_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = KAN_superchat 
+		focus = KAN_game_casting}
+		prerequisite = { focus = KAN_karaoke }
+		relative_position_id = KAN_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KAN_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = KAN_superchat 
+		focus = KAN_game_casting}
+		prerequisite = { focus = KAN_3d_studio }
+		relative_position_id = KAN_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = KAN_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = KAN_bilibili }
+		relative_position_id = KAN_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+
+    #Economy and Industry
+    focus = {
+        id = KAN_idol_creator
+        text = idol_creator
+        icon = GFX_focus_engineer_2
+        relative_position_id = KAN_live_streaming_gen
+        x = 8
+        y = 0
+        cost = 8
+
+        available_if_capitulated = yes
+        
+        ai_will_do = {
+            factor = 20
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = steel
+                    amount = 8
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 8
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 8
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_minecraft_server
+        text = minecraft_server
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = KAN_idol_creator }
+        relative_position_id = KAN_idol_creator
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = minecraft_resource
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_wooden_house
+        text = wooden_house
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KAN_minecraft_server }
+        relative_position_id = KAN_minecraft_server
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+    }
+    }
+
+    focus = {
+        id = KAN_nether_portal
+        text = nether_portal
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KAN_wooden_house }
+        relative_position_id = KAN_wooden_house
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+        }
+        }
+    }
+
+    focus = {
+        id = KAN_wooden_in_nether
+        text = wooden_in_nether
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KAN_nether_portal }
+        relative_position_id = KAN_nether_portal
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_oversea_fanbase
+        text = oversea_fanbase
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = KAN_idol_creator }
+        relative_position_id = KAN_idol_creator
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+        available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        navy_experience = 25
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = dockyard
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = KAN_yuri_ship
+        text = yuri_ship
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = KAN_oversea_fanbase }
+        relative_position_id = KAN_oversea_fanbase
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = KAN_beach_eps
+        text = beach_eps
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = KAN_yuri_ship }
+        relative_position_id = KAN_yuri_ship
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = KAN_azur_lane_collab
+        text = azur_lane_collab
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = KAN_beach_eps }
+        relative_position_id = KAN_beach_eps
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = KAN_offensive_marketing
+        text = offensive_marketing
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = KAN_idol_creator }
+        relative_position_id = KAN_idol_creator
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_body_pillow
+        text = body_pillow
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = KAN_offensive_marketing }
+        relative_position_id = KAN_offensive_marketing
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_bath_water
+        text = bath_water
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = KAN_body_pillow }
+        relative_position_id = KAN_body_pillow
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_t_shirt
+        text = t_shirt
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = KAN_bath_water }
+        relative_position_id = KAN_bath_water
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = KAN_idol_research_generic
+        text = idol_research_generic
+        icon = GFX_focus_research
+        prerequisite = { focus = KAN_t_shirt 
+        focus = KAN_azur_lane_collab
+        focus = KAN_wooden_in_nether}
+        relative_position_id = KAN_azur_lane_collab
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_research_slot = 1
+        }
+    }
+}

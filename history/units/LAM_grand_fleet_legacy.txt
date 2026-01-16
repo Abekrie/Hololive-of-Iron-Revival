@@ -1,0 +1,43 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Grand Lamy Fleet"		
+		naval_base = 657
+
+		task_force = {				
+			name = "Grand Lamy Force"			
+			location = 657	
+
+			ship = { name = "Subterrlamyan" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Irish" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "ExArchos Wamy" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "NaClamy" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Kenzou-traitor" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

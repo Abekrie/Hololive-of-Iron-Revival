@@ -1,0 +1,633 @@
+
+#Hololive USA
+form_hololive_USA_category = {
+
+	form_united_hololive_america_decision = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = COC
+				original_tag = FLA
+				original_tag = MIO
+				original_tag = BTN
+				original_tag = PLK
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = control_united_hololive_america_decision_COC
+controls_state = 365
+controls_state = 366
+controls_state = 375
+			}
+			custom_trigger_tooltip = {
+				tooltip = control_united_hololive_america_decision_FLA
+controls_state = 378
+controls_state = 379
+controls_state = 382
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = control_united_hololive_america_decision_USA
+controls_state = 374
+controls_state = 395
+controls_state = 391
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = control_united_hololive_america_decision_MIO
+controls_state = 361
+controls_state = 362
+controls_state = 357
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = COC
+				original_tag = MIO
+				original_tag = FLA
+				original_tag = BTN
+				original_tag = PLK
+			}
+			NOT = { has_global_flag = USA_hololive_is_formed }
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_COC_Form_hololive_USA_cores
+			hidden_effect = {
+				set_global_flag = USA_hololive_is_formed
+388 = { add_core_of = ROOT }
+383 = { add_core_of = ROOT }
+374 = { add_core_of = ROOT }
+373 = { add_core_of = ROOT }
+389 = { add_core_of = ROOT }
+391 = { add_core_of = ROOT }
+384 = { add_core_of = ROOT }
+390 = { add_core_of = ROOT }
+394 = { add_core_of = ROOT }
+392 = { add_core_of = ROOT }
+395 = { add_core_of = ROOT }
+#Flare
+378 = { add_core_of = ROOT }
+385 = { add_core_of = ROOT }
+386 = { add_core_of = ROOT }
+379 = { add_core_of = ROOT }
+377 = { add_core_of = ROOT }
+387 = { add_core_of = ROOT }
+380 = { add_core_of = ROOT }
+376 = { add_core_of = ROOT }
+382 = { add_core_of = ROOT }
+381 = { add_core_of = ROOT }
+
+#Coco
+366 = { add_core_of = ROOT }
+367 = { add_core_of = ROOT }
+365 = { add_core_of = ROOT }
+364 = { add_core_of = ROOT }
+368 = { add_core_of = ROOT }
+370 = { add_core_of = ROOT }
+363 = { add_core_of = ROOT }
+375 = { add_core_of = ROOT }
+372 = { add_core_of = ROOT }
+371 = { add_core_of = ROOT }
+
+#Mio
+357 = { add_core_of = ROOT }
+358 = { add_core_of = ROOT }
+360 = { add_core_of = ROOT }
+389 = { add_core_of = ROOT }
+361 = { add_core_of = ROOT }
+362 = { add_core_of = ROOT }
+261 = { add_core_of = ROOT }
+369 = { add_core_of = ROOT }
+396 = { add_core_of = ROOT }
+393 = { add_core_of = ROOT }
+359 = { add_core_of = ROOT }
+816 = { add_core_of = ROOT }
+            }
+
+        hidden_effect = {
+        	if = {
+        		limit = { original_tag = COC }
+				
+				news_event = { id = holo_news.33 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { original_tag = MIO }
+				
+				news_event = { id = holo_news.35 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { original_tag = FLA }
+				
+				news_event = { id = holo_news.34 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { original_tag = BTN }
+				
+				news_event = { id = holo_news.36 hours = 6 }
+        	}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Hololive forms UK
+form_united_kingdom_category = {
+
+	form_ENG_UK_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CHC
+				original_tag = WTS
+			}
+		}
+
+		available = {		
+
+			custom_trigger_tooltip = {
+			tooltip = form_uk_holo_decision_have_all_WTS
+controls_state = 129
+controls_state = 125
+controls_state = 126
+controls_state = 127
+			}
+
+			custom_trigger_tooltip = {
+			tooltip = form_uk_holo_decision_have_all_ENG
+controls_state = 123
+controls_state = 338
+controls_state = 128
+controls_state = 122
+controls_state = 132
+			}
+
+			custom_trigger_tooltip = {
+			tooltip = form_uk_holo_decision_have_all_CHC
+controls_state = 130
+controls_state = 131
+controls_state = 121
+controls_state = 133
+controls_state = 136
+controls_state = 120
+			}
+
+		}
+
+		visible = {
+			OR = {
+				original_tag = CHC
+				original_tag = WTS
+			}
+			AND = {NOT = { has_global_flag = hololive_uk_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_britain_and_ireland
+			hidden_effect = {
+			set_global_flag = hololive_uk_is_formed
+129 = { add_core_of = ROOT }
+125 = { add_core_of = ROOT }
+126 = { add_core_of = ROOT }
+127 = { add_core_of = ROOT }
+123 = { add_core_of = ROOT }
+338 = { add_core_of = ROOT }
+128 = { add_core_of = ROOT }
+122 = { add_core_of = ROOT }
+132 = { add_core_of = ROOT }
+130 = { add_core_of = ROOT }
+131 = { add_core_of = ROOT }
+121 = { add_core_of = ROOT }
+133 = { add_core_of = ROOT }
+136 = { add_core_of = ROOT }
+120 = { add_core_of = ROOT }
+119 = { add_core_of = ROOT }
+134 = { add_core_of = ROOT }
+113 = { add_core_of = ROOT }
+135 = { add_core_of = ROOT }
+        }
+
+        hidden_effect = {
+        	if = {
+        		limit = { original_tag = WTS }
+				news_event = { id = holo_news.40 hours = 6 }
+        	}
+
+        	if = {
+        		limit = { original_tag = CHC }
+				news_event = { id = holo_news.41 hours = 6 }
+        	}
+		}
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Hololive forms China
+
+
+#Hololive forms Oceania
+form_oceania_holo_category = {
+
+	form_oceania_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = IOF
+				original_tag = HTO
+				original_tag = GAW
+			}
+		}
+
+		available = {		
+
+			custom_trigger_tooltip = {
+			tooltip = form_oceania_holo_decision_have_all_GAW
+				controls_state = 623
+				controls_state = 327
+				controls_state = 624
+				controls_state = 625
+				controls_state = 628
+				controls_state = 627
+			}
+
+			custom_trigger_tooltip = {
+			tooltip = form_oceania_holo_decision_have_all_HTO
+				controls_state = 522
+				controls_state = 519
+				controls_state = 674
+				controls_state = 520
+				controls_state = 521
+				controls_state = 285
+				controls_state = 517
+			}
+			controls_state = 669
+			controls_state = 523
+		}
+
+		visible = {
+			OR = {
+				original_tag = IOF
+				original_tag = HTO
+				original_tag = GAW
+			}
+			AND = {NOT = { has_global_flag = hololive_oceania_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_OCEANIA
+			hidden_effect = {
+				set_global_flag = hololive_oceania_is_formed
+
+        	}
+
+        hidden_effect = {
+        	518 = { add_core_of = ROOT }
+517 = { add_core_of = ROOT }
+285 = { add_core_of = ROOT }
+521 = { add_core_of = ROOT }
+519 = { add_core_of = ROOT }
+674 = { add_core_of = ROOT }
+522 = { add_core_of = ROOT }
+520 = { add_core_of = ROOT }
+523 = { add_core_of = ROOT }
+669 = { add_core_of = ROOT }
+627 = { add_core_of = ROOT }
+628 = { add_core_of = ROOT }
+625 = { add_core_of = ROOT }
+624 = { add_core_of = ROOT }
+626 = { add_core_of = ROOT }
+327 = { add_core_of = ROOT }
+623 = { add_core_of = ROOT }
+284 = { add_core_of = ROOT }
+723 = { add_core_of = ROOT }
+635 = { add_core_of = ROOT }
+634 = { add_core_of = ROOT }
+737 = { add_core_of = ROOT }
+		}
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Hololive forms the Arabia
+form_arabia_holo_category = {
+
+	form_arabia_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = KRN
+				original_tag = SUB
+				original_tag = AYA
+			}
+		}
+
+		available = {		
+
+			custom_trigger_tooltip = {
+			tooltip = form_arabia_holo_decision_have_all_SUB
+				controls_state = 678
+     controls_state = 659
+     controls_state = 294
+     controls_state = 679
+     controls_state = 292
+     controls_state = 293
+			}
+
+			custom_trigger_tooltip = {
+			tooltip = form_arabia_holo_decision_have_all_KRN
+		  		controls_state = 676
+         		controls_state = 291
+         		controls_state = 675
+         		controls_state = 680
+         		controls_state = 554
+
+         		controls_state = 454
+         		controls_state = 553
+         		controls_state = 677
+         		controls_state = 453
+			}
+			controls_state = 447
+         	controls_state = 446
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = KRN
+				original_tag = SUB
+				AND = {
+					original_tag = AYA
+					has_country_flag = AYA_can_form_arabia
+				}
+			}
+			AND = {NOT = { has_global_flag = hololive_arabia_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_ARABIA
+			hidden_effect = {
+				set_global_flag = hololive_arabia_is_formed
+				452= { add_core_of = ROOT }
+552= { add_core_of = ROOT }
+456= { add_core_of = ROOT }
+446= { add_core_of = ROOT }
+447= { add_core_of = ROOT }
+457= { add_core_of = ROOT }
+453= { add_core_of = ROOT }
+454= { add_core_of = ROOT }
+455= { add_core_of = ROOT }
+679= { add_core_of = ROOT }
+293= { add_core_of = ROOT }
+659= { add_core_of = ROOT }
+678= { add_core_of = ROOT }
+294= { add_core_of = ROOT }
+658= { add_core_of = ROOT }
+765= { add_core_of = ROOT }
+292= { add_core_of = ROOT }
+554= { add_core_of = ROOT }
+553= { add_core_of = ROOT }
+680= { add_core_of = ROOT }
+677= { add_core_of = ROOT }
+799= { add_core_of = ROOT }
+675= { add_core_of = ROOT }
+656= { add_core_of = ROOT }
+291= { add_core_of = ROOT }
+676= { add_core_of = ROOT }
+        	}
+
+        hidden_effect = {
+        	
+		}
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Hololive forms Ottoman Empire
+form_ottoman_holo_category = {
+
+	form_ottoman_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = TOW
+				original_tag = OKA
+			}
+		}
+
+		available = {		
+
+
+			custom_trigger_tooltip = {
+			tooltip = form_ottoman_holo_decision_have_all_TUR
+				controls_state = 797
+         controls_state = 347
+         controls_state = 340
+         controls_state = 343
+         controls_state = 339
+         controls_state = 342
+         controls_state = 49
+         controls_state = 356
+         controls_state = 346
+         controls_state = 345
+         controls_state = 798
+         controls_state = 348
+         controls_state = 355
+         controls_state = 349
+         controls_state = 344
+         controls_state = 350
+         controls_state = 352
+         controls_state = 353
+         controls_state = 800
+         controls_state = 354
+
+			}
+			
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = TOW
+				original_tag = OKA
+			}
+			AND = {NOT = { has_global_flag = hololive_ottoman_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_TURKEY
+			hidden_effect = {
+				set_global_flag = hololive_ottoman_is_formed
+				
+        	}
+
+        hidden_effect = {
+        every_state = {
+		   	limit = { OR = {is_core_of = TUR
+		   	is_core_of = OKA
+		   	is_core_of = TOW} }
+		   	add_core_of = ROOT
+		   	}
+		}
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Hololive forms Ukraine
+form_ukraine_holo_category = {
+
+	form_ukraine_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = NEN
+			}
+		}
+
+		available = {		
+
+
+			custom_trigger_tooltip = {
+			tooltip = form_ukraine_holo_decision_have_all_NEN
+				controls_state = 192
+         controls_state = 198
+         controls_state = 199
+         controls_state = 201
+         controls_state = 202
+         controls_state = 200
+         controls_state = 203
+         controls_state = 226
+         controls_state = 196
+         controls_state = 197
+			}
+
+		
+         controls_state = 193
+         controls_state = 225
+         controls_state = 259
+         controls_state = 221
+         controls_state = 228
+         controls_state = 227
+			
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = NEN
+			}
+			AND = {NOT = { has_global_flag = hololive_ukraine_is_formed }}
+		}
+
+	complete_effect = {
+			
+			custom_effect_tooltip = EFF_core_all_UKRAINE
+			hidden_effect = {
+				set_global_flag = hololive_ukraine_is_formed
+				
+        	}
+
+        	hidden_effect = {
+        		93 = { add_core_of = ROOT }
+91 = { add_core_of = ROOT }
+199 = { add_core_of = ROOT }
+201 = { add_core_of = ROOT }
+202 = { add_core_of = ROOT }
+203 = { add_core_of = ROOT }
+200 = { add_core_of = ROOT }
+196 = { add_core_of = ROOT }
+192 = { add_core_of = ROOT }
+197 = { add_core_of = ROOT }
+198 = { add_core_of = ROOT }
+226 = { add_core_of = ROOT }
+137 = { add_core_of = ROOT }
+241 = { add_core_of = ROOT }
+194 = { add_core_of = ROOT }
+224 = { add_core_of = ROOT }
+193 = { add_core_of = ROOT }
+225 = { add_core_of = ROOT }
+259 = { add_core_of = ROOT }
+220 = { add_core_of = ROOT }
+240 = { add_core_of = ROOT }
+221 = { add_core_of = ROOT }
+227 = { add_core_of = ROOT }
+228 = { add_core_of = ROOT }
+260 = { add_core_of = ROOT }
+218 = { add_core_of = ROOT }
+245 = { add_core_of = ROOT }
+265 = { add_core_of = ROOT }
+			}
+
+	}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

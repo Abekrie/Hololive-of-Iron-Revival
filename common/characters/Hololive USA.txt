@@ -1,0 +1,264 @@
+characters={
+FLA_flare_shiranui_general = {
+     name="Flare"
+     portraits={
+           army={
+                 large="gfx/leaders/FLA/fla1.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer trait_engineer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+FLA_flare_shiranui_admiral = {
+     name="Shiranui"
+     portraits={
+           army={
+                 large="gfx/leaders/FLA/fla2.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={navy_career_officer bold}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+
+MEL_mel_yozora_general = {
+     name="Mel"
+     portraits={
+           army={
+                 large="gfx/leaders/MEL/mel_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious war_hero}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+MEL_mel_yozora_admiral = {
+     name="Yozora"
+     portraits={
+           army={
+                 large="gfx/leaders/MEL/mel_com.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold war_hero}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+
+PLK_polka_omaru_general = {
+     name="Polka"
+     portraits={
+           army={
+                 large="gfx/leaders/PLK/plk_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={career_officer trait_cautious}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+PLK_polka_omaru_admiral = {
+     name="Omaru"
+     portraits={
+           army={
+                 large="gfx/leaders/PLK/plk_fas.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+
+BTN_botan_shishiro_general = {
+     name="Botan"
+     portraits={
+           army={
+                 large="gfx/leaders/BTN/btn_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer organizer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+BTN_botan_shishiro_admiral = {
+     name="Shishiro"
+     portraits={
+           army={
+                 large="gfx/leaders/BTN/btn_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={career_officer gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+
+COC_coco_kiryu_general = {
+     name="Coco"
+     portraits={
+           army={
+                 large="gfx/leaders/COC/coco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={career_officer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+COC_coco_kiryu_admiral = {
+     name="Kiryu"
+     portraits={
+           army={
+                 large="gfx/leaders/COC/coco_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality bold}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+
+MIO_mio_ookami_general = {
+     name="Mio"
+     portraits={
+           army={
+                 large="gfx/leaders/MIO/mio_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless politically_connected}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+MIO_mio_ookami_admiral = {
+     name="Ookami"
+     portraits={
+           army={
+                 large="gfx/leaders/MIO/mio_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+           traits={spotter naval_lineage}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

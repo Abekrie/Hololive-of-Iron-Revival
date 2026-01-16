@@ -1,0 +1,53 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = ACH
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = YAG original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI
+        }
+    #is_dynamic_country = no
+  }
+
+  generate_character={
+    token_base = IRYS_generic_holo_xgeneral
+ 
+
+     name="IRyS"
+     portraits={
+           army={
+                 large="gfx/leaders/WTS/irys.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={politically_connected inflexible_strategist trait_reckless}
+           skill = 5
+           attack_skill = 3
+           defense_skill = 3
+           planning_skill = 3
+           logistics_skill = 3
+           visible = { has_country_flag = IRYS_recruit_general_dec_flag }
+           #visible = {  }
+     }
+
+    }
+
+}

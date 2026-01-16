@@ -1,0 +1,186 @@
+add_namespace = sora
+
+#sora refuses crete
+country_event = {
+	id = sora.1
+	title = sora.1.t
+	desc = sora.1.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#sora accepted crete
+country_event = {
+	id = sora.2
+	title = sora.2.t
+	desc = sora.2.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.2.a
+		set_global_flag = crete_sold
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+#sora refuses india islands
+country_event = {
+	id = sora.3
+	title = sora.3.t
+	desc = sora.3.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#sora accepted india islands
+country_event = {
+	id = sora.4
+	title = sora.4.t
+	desc = sora.4.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.4.a
+		set_global_flag = madagascar_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Sora falls and die
+country_event = {
+	id = sora.5
+	title = sora.5.t
+	desc = sora.5.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.5.a	#Yes
+		ai_chance = { factor = 51 }
+		add_political_power = -200
+		hidden_effect = { news_event = { id = holo_news.53 }}
+	}
+
+	option = {
+		name = sora.5.b	#No 
+		ai_chance = { factor = 49 }
+		add_stability = -0.1
+		hidden_effect = { news_event = { id = holo_news.53 }}
+	}
+}
+
+#Macedonia for Peace
+country_event = {
+	id = sora.6
+	title = sora.6.t
+	desc = sora.6.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.6.a	#Yes
+		ai_chance = { factor = 100 }
+		SOR = { transfer_state = 106 }
+		diplomatic_relation = {
+    		country = SOR
+    		relation = non_aggression_pact
+    		active = yes
+		}
+
+		SOR = { country_event = { id = sora.7 }}
+	}
+
+	option = {
+		name = sora.6.b	#No 
+		ai_chance = { factor = 0 }
+		SOR = { country_event = { id = sora.8 }}
+	}
+}
+
+#Macedonia for Peace - YES
+country_event = {
+	id = sora.7
+	title = sora.7.t
+	desc = sora.7.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.7.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#Macedonia for Peace - NO
+country_event = {
+	id = sora.8
+	title = sora.8.t
+	desc = sora.8.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.8.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SOR - Ask to join faction
+country_event = {
+	id = sora.9
+	title = sora.9.t
+	desc = sora.9.d
+	picture = GFX_report_event_sora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sora.9.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_to_faction = SOR
+
+		if = {
+			limit = { tag = YAG }
+			SOR = { country_event = { id = proposed.93 }}
+		}
+	}
+
+	option = {
+		name = sora.9.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = YAG }
+			SOR = { country_event = { id = proposed.94 }}
+		}
+	}
+}

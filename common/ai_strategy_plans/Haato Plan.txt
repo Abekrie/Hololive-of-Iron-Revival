@@ -1,0 +1,52 @@
+Generic_HTO_historical = {
+	name = "HTO historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = HTO
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = HTO
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		akai_haato_hto_focus
+		haato_national_army_hto_focus
+		accept_squirrel_refugee_hto_focus
+		emu_doctrine_hto_focus
+		haachama_coup_hto_focus
+		i_m_not_e_mused_hto_focus
+		haato_doctrine_hto_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

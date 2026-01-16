@@ -1,0 +1,105 @@
+Generic_LAM_historical = {
+	name = "LAM historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = LAM
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = LAM
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		yukihana_lamy_lam_focus
+		winter_purge_lam_focus
+		yuki_march_lam_focus
+		yuki_min_youth_lam_focus
+		there_is_a_hater_among_us_lam_focus
+		purge_the_hater_lam_focus
+		education_reform_lam_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_LAM_non_historical = {
+	name = "LAM historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = LAM
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = LAM
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		yukihana_lamy_lam_focus
+		winter_purge_lam_focus
+		yuki_march_lam_focus
+		yuki_min_youth_lam_focus
+		there_is_a_hater_among_us_lam_focus
+		purge_the_hater_lam_focus
+
+		winter_alliance_lam_focus
+		education_reform_lam_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

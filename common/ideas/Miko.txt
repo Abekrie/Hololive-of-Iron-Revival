@@ -1,0 +1,77 @@
+ideas = {
+    country = {
+	    fire_disaster_mik_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = saf_history_of_segregation
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			    army_defence_factor = -0.5
+			    army_attack_factor	 = -0.5
+			    industrial_capacity_factory = -0.15
+			    production_speed_buildings_factor = -0.2
+			    political_power_cost = 0.25
+			}
+		}
+
+		recovering_from_fire_mik_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = saf_history_of_segregation
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			    army_defence_factor = -0.25
+			    army_attack_factor	 = -0.25
+			    industrial_capacity_factory = -0.1
+			    production_speed_buildings_factor = -0.1
+			    political_power_cost = 0.1
+			}
+		}
+
+		reconstruction_bill_mik_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = generic_production_bonus
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				war_support_weekly = 0.05
+			    production_speed_industrial_complex_factor = 0.25
+			    production_speed_arms_factory_factor = 0.25
+			    production_speed_dockyard_factor = 0.25
+			    production_oil_factor = 0.2
+			    industrial_capacity_factory = 0.1
+			    industrial_capacity_dockyard = 0.1
+			}
+		}
+	}
+}

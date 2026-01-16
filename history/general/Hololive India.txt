@@ -1,0 +1,163 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+      token_base = RUS_generic_holo_xgeneral
+     name="Rushia"
+     portraits={
+           army={
+                 large="gfx/leaders/RUS/rushia_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={brilliant_strategist infantry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = RUS_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = RUS_generic_holo_xadmiral
+     name="Uruha"
+     portraits={
+           army={
+                 large="gfx/leaders/RUS/rushia_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert caustic_personality}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = RUS_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+      token_base = AQA_generic_holo_xgeneral
+     name="Aqua"
+     portraits={
+           army={
+                 large="gfx/leaders/AQA/aqua_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer career_officer}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 4
+           planning_skill = 4
+           logistics_skill = 4
+           visible = { has_country_flag = AQA_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = AQA_generic_holo_xadmiral
+     name="Minato"
+     portraits={
+           army={
+                 large="gfx/leaders/AQA/aqua_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={cuts_corners ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = AQA_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+      token_base = KAN_generic_holo_xgeneral
+     name="Kanata"
+     portraits={
+           army={
+                 large="gfx/leaders/KAN/kanata_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={skilled_staffer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = KAN_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+      token_base = KAN_generic_holo_xadmiral
+     name="Amane"
+     portraits={
+           army={
+                 large="gfx/leaders/KAN/kanata_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = KAN_recruit_admiral_dec_flag }
+     }
+
+}
+
+}

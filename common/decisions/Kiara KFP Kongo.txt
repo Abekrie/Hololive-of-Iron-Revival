@@ -1,0 +1,114 @@
+kiara_future_of_kongo_category = {
+
+	kongo_ally_with_other_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				OWNER = {
+					is_faction_leader = yes
+				}
+				is_capital = yes
+			}
+		}
+
+		#on_map_mode = map_only
+
+		cost = 100
+
+		visible = {
+			tag = COG
+			has_country_flag = Congo_can_seek_international_alliance
+			is_in_faction = no
+		}
+
+		available = {
+			NOT = {
+				has_war_with = FROM.OWNER
+			}
+		}
+
+		#days_remove = 60
+
+		#remove_effect = {}
+
+		complete_effect = {
+			FROM.OWNER = {
+				country_event = { id = kiara.21 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kongo_integrate_african_state_dec = {
+
+		icon = generic_kiara
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				CONTROLLER = {
+					tag = COG
+				}
+				NOT = {
+					is_core_of = COG
+				}
+				is_on_continent = africa
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 50
+
+		visible = {
+			tag = COG
+			has_country_flag = Congo_can_integrate_african_state
+		}
+
+		available = {}
+
+		days_remove = 60
+
+		remove_effect = {
+			FROM = {
+				add_core_of = COG
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+}

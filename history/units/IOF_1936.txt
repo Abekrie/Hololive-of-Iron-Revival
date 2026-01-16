@@ -1,0 +1,168 @@
+﻿division_template = {
+	name = "IOFORIA"		
+
+	division_names_group = IOF_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "ID Volunteer"		
+
+	division_names_group = IOF_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Alien Gang"		
+
+	division_names_group = IOF_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+	}
+}
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 10263
+    division_template ="IOFORIA"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 10153
+    division_template ="IOFORIA"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 10222
+    division_template ="IOFORIA"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 7413
+    division_template ="IOFORIA"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 1574
+    division_template ="IOFORIA"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 12371
+    division_template ="Alien Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 12237
+    division_template ="Alien Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 1389
+    division_template ="Alien Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 4579
+    division_template ="Alien Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 4329
+    division_template ="Alien Gang"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+}
+
+air_wings = {
+	673 = {
+		fighter_equipment_0 =  {
+			owner = "IOF" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {
+			owner = "IOF" 
+			amount = 200
+		}
+	}
+}

@@ -1,0 +1,182 @@
+add_namespace = baelz
+
+##############################
+#Baelz - Council Military Support
+country_event = {
+	id = baelz.1
+	title = baelz.1.t
+	desc = baelz.1.d
+	picture = GFX_report_event_baelz_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = baelz.1.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_tech_bonus = {
+			name = FRA_flexible_support
+			bonus = 1
+			uses = 1
+			category = support_tech
+		}
+
+		if = {
+			limit = { tag = AQA }
+			BAL = {country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BAL = {country_event = { id = proposed.107 }}
+		}
+	}
+
+	option = {
+		name = baelz.1.b	#No
+		ai_chance = { factor = 0 }
+
+		BTN = { leave_faction = yes }
+
+		if = {
+			limit = { tag = AQA }
+			BAL = {country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BAL = {country_event = { id = proposed.108 }}
+		}
+	}
+}
+
+#Baelz - Invite to Economic Sphere
+country_event = {
+	id = baelz.2
+	title = baelz.2.t
+	desc = baelz.2.d
+	picture = GFX_report_event_baelz_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = baelz.2.a	#Yes
+		ai_chance = { factor = 100 }
+
+		set_country_flag = BAL_is_in_council_economic_sphere
+
+		if = {
+			limit = { tag = AQA }
+			BAL = {country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = KRO }
+			BAL = {country_event = { id = proposed.113 }}
+		}
+
+		if = {
+			limit = { tag = MUM }
+			BAL = {country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			BAL = {country_event = { id = proposed.111 }}
+		}
+
+		if = {
+			limit = { tag = SAN }
+			BAL = {country_event = { id = proposed.119 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BAL = {country_event = { id = proposed.107 }}
+		}
+	}
+
+	option = {
+		name = baelz.2.b	#No
+		ai_chance = { factor = 0 }
+
+		BTN = { leave_faction = yes }
+
+		if = {
+			limit = { tag = AQA }
+			BAL = {country_event = { id = proposed.4 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BAL = {country_event = { id = proposed.108 }}
+		}
+
+		if = {
+			limit = { tag = KRO }
+			BAL = {country_event = { id = proposed.114 }}
+		}
+
+		if = {
+			limit = { tag = MUM }
+			BAL = {country_event = { id = proposed.118 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			BAL = {country_event = { id = proposed.112 }}
+		}
+
+		if = {
+			limit = { tag = SAN }
+			BAL = {country_event = { id = proposed.120 }}
+		}
+	}
+}
+
+#Baelz - Baelz invests in your industry
+country_event = {
+	id = baelz.3
+	title = baelz.3.t
+	desc = baelz.3.d
+	picture = GFX_report_event_baelz_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = baelz.3.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_offsite_building = { type = industrial_complex level = 1 }
+
+		if = {
+			limit = { tag = AQA }
+			BAL = {country_event = { id = proposed.3 }}
+		}
+
+		if = {
+			limit = { tag = KRO }
+			BAL = {country_event = { id = proposed.113 }}
+		}
+
+		if = {
+			limit = { tag = MUM }
+			BAL = {country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			BAL = {country_event = { id = proposed.111 }}
+		}
+
+		if = {
+			limit = { tag = SAN }
+			BAL = {country_event = { id = proposed.119 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BAL = {country_event = { id = proposed.107 }}
+		}
+	}
+}

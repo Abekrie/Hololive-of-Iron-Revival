@@ -1,0 +1,125 @@
+towa_debiru_activity_category = {
+
+	towa_sell_strait_pass_dec = {
+
+		icon = generic_decision
+
+		days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					OR = {is_on_continent = europe
+						is_on_continent = middle_east}
+					OWNER = {
+								NOT = {
+									tag = TOW
+									has_country_flag = Towa_sell_us_strait_pass
+								}	
+							}
+					is_capital = yes
+				}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		cost = 100
+
+		visible = {
+			tag = TOW
+			has_country_flag = Towa_can_sell_strait_pass
+			has_full_control_of_state = 797
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = towa_strait_deal_still_going
+			}
+		}
+
+		days_remove = 15
+
+		complete_effect = {
+			set_country_flag = towa_strait_deal_still_going
+		}
+
+		remove_effect = {
+			FROM.OWNER = {
+				country_event = { id = towa.5 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 20
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	towa_delamification_dec = {
+
+		icon = generic_form_nation
+
+		days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					CONTROLLER = {
+						tag = TOW
+					}
+					is_core_of = LAM
+					NOT = {
+						is_core_of = TOW
+					}
+				}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 125
+
+		visible = {
+			tag = TOW
+			has_country_flag = Towa_can_delamify
+		}
+
+		available = {
+			divisions_in_state = {
+				state = FROM	
+				size > 9
+			}
+		}
+
+		days_remove = 60
+
+		#complete_effect = {}
+
+		remove_effect = {
+			ROOT = { add_state_core = FROM }
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 20
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

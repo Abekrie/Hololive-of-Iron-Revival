@@ -1,0 +1,137 @@
+remove_hindu_ops = {
+		
+		custom_effect_tooltip = remove_hindu_ops
+
+		subtract_from_variable = { var = KAN_religion_hinduism value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_hinduism
+			min = -10
+			max = 60
+		}
+}
+
+remove_muslim_ops = {
+		
+		custom_effect_tooltip = remove_muslim_ops
+
+		subtract_from_variable = { var = KAN_religion_islam value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_islam
+			min = -10
+			max = 60
+		}
+}
+
+remove_buddhist_ops = {
+		
+		custom_effect_tooltip = remove_buddhist_ops
+
+		subtract_from_variable = { var = KAN_religion_buddhism value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_buddhism
+			min = -10
+			max = 60
+		}
+}
+
+add_hindu_ops = {
+		
+		custom_effect_tooltip = add_hindu_ops
+
+		add_to_variable = { var = KAN_religion_hinduism value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_hinduism
+			min = -50
+			max = 50
+		}
+}
+
+add_muslim_ops = {
+		
+		custom_effect_tooltip = add_muslim_ops
+
+		add_to_variable = { var = KAN_religion_islam value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_islam
+			min = -50
+			max = 50
+		}
+}
+
+add_buddhist_ops = {
+		
+		custom_effect_tooltip = add_buddhist_ops
+
+		add_to_variable = { var = KAN_religion_buddhism value = 5 }
+
+		clamp_variable = {
+			var = KAN_religion_buddhism
+			min = -50
+			max = 50
+		}
+}
+
+add_to_kanatan = {
+		
+		custom_effect_tooltip = add_to_kanatanist
+
+		add_to_variable = { var = KAN_kanatan_percent value = 5 }
+		subtract_from_variable = { var = KAN_local_percent value = 5 }
+
+		clamp_variable = {
+			var = KAN_kanatan_percent
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = KAN_local_percent
+			min = 0
+			max = 100
+		}
+
+}
+
+add_to_kanatan_15 = {
+		
+		custom_effect_tooltip = add_to_kanatan_15
+
+		add_to_variable = { var = KAN_kanatan_percent value = 15 }
+		subtract_from_variable = { var = KAN_local_percent value = 15 }
+
+		clamp_variable = {
+			var = KAN_kanatan_percent
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = KAN_local_percent
+			min = 0
+			max = 100
+		}
+
+}
+
+remove_from_kanatan = {
+		
+		custom_effect_tooltip = remove_from_kanatanist
+
+		add_to_variable = { var = KAN_local_percent value = 5 }
+		subtract_from_variable = { var = KAN_kanatan_percent value = 5 }
+
+		clamp_variable = {
+			var = KAN_kanatan_percent
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = KAN_local_percent
+			min = 0
+			max = 100
+		}
+
+}

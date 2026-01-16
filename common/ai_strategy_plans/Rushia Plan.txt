@@ -1,0 +1,49 @@
+Generic_RUS_historical = {
+	name = "RUS historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = RUS
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = RUS
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		uruha_rushia_rus_focus
+		tread_on_the_safe_path_rus_focus
+		revise_the_policy_rus_focus
+		royalist_referendum_rus_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

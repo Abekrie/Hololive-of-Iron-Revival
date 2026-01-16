@@ -1,0 +1,1222 @@
+army_general_hololive_category = {
+
+	ALO_recruit_general_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		NOT = { tag = ALO }
+		
+		}
+
+		cost = 125
+
+		visible = {
+			owns_state = 43
+			NOT = { tag = ALO }
+		    NOT = { has_country_flag = ALO_recruit_general_dec_flag }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+			set_country_flag = ALO_recruit_general_dec_flag
+		}
+
+		
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	AQA_recruit_general_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		NOT = { tag = AQA }
+		
+		}
+
+		cost = 125
+
+		visible = {
+			owns_state = 439
+			NOT = { tag = AQA }
+		    NOT = { has_country_flag = AQA_recruit_general_dec_flag }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+		set_country_flag = AQA_recruit_general_dec_flag
+		}
+
+		
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	ART_recruit_general_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		NOT = { tag = ART }
+		
+		}
+
+		cost = 125
+
+		visible = {
+			owns_state = 613
+			NOT = { tag = ART }
+		    NOT = { has_country_flag = ART_recruit_general_dec_flag }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+		set_country_flag = ART_recruit_general_dec_flag
+		}
+
+		
+
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	AYA_recruit_general_dec = {
+
+		icon = generic_prepare_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+		NOT = { tag = AYA }
+		
+		}
+
+		cost = 125
+
+		visible = {
+			owns_state = 420
+			NOT = { tag = AYA }
+		    NOT = { has_country_flag = AYA_recruit_general_dec_flag }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+		set_country_flag = AYA_recruit_general_dec_flag
+		}
+
+		
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	BTN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =BTN } }
+	cost = 125
+	visible = {
+owns_state = 473
+NOT = { tag =BTN }
+NOT = { has_country_flag = BTN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = BTN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+	CIV_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =CIV } }
+	cost = 125
+	visible = {
+owns_state = 605
+NOT = { tag =CIV }
+NOT = { has_country_flag = CIV_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = CIV_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+	CHC_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =CHC } }
+	cost = 125
+	visible = {
+owns_state = 133
+NOT = { tag =CHC }
+NOT = { has_country_flag = CHC_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = CHC_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+COC_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =COC } }
+	cost = 125
+	visible = {
+owns_state = 365
+NOT = { tag =COC }
+NOT = { has_country_flag = COC_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = COC_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+DOR_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =DOR } }
+	cost = 125
+	visible = {
+owns_state = 592
+NOT = { tag =DOR }
+NOT = { has_country_flag = DOR_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = DOR_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+ECH_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =ECH } }
+	cost = 125
+	visible = {
+owns_state = 328
+NOT = { tag =ECH }
+NOT = { has_country_flag = ECH_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = ECH_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+FLA_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =FLA } }
+	cost = 125
+	visible = {
+owns_state = 378
+NOT = { tag =FLA }
+NOT = { has_country_flag = FLA_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = FLA_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+FBK_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =FBK } }
+	cost = 125
+	visible = {
+owns_state = 110
+NOT = { tag =FBK }
+NOT = { has_country_flag = FBK_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = FBK_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+	GAW_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =GAW } }
+	cost = 125
+	visible = {
+owns_state = 327
+NOT = { tag =GAW }
+NOT = { has_country_flag = GAW_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = GAW_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+HTO_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =HTO } }
+	cost = 125
+	visible = {
+owns_state = 285
+NOT = { tag =HTO }
+NOT = { has_country_flag = HTO_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = HTO_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+IOF_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =IOF } }
+	cost = 125
+	visible = {
+owns_state = 673
+NOT = { tag =IOF }
+NOT = { has_country_flag = IOF_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = IOF_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+KIA_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =KIA } }
+	cost = 125
+	visible = {
+owns_state = 55
+NOT = { tag =KIA }
+NOT = { has_country_flag = KIA_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = KIA_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+	KRN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =KRN } }
+	cost = 125
+	visible = {
+owns_state = 291
+NOT = { tag =KRN }
+NOT = { has_country_flag = KRN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = KRN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+KAN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =KAN } }
+	cost = 125
+	visible = {
+owns_state = 430
+NOT = { tag =KAN }
+NOT = { has_country_flag = KAN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = KAN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+LUN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =LUN } }
+	cost = 125
+	visible = {
+owns_state = 500
+NOT = { tag =LUN }
+NOT = { has_country_flag = LUN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = LUN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+LAM_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =LAM } }
+	cost = 125
+	visible = {
+owns_state = 46
+NOT = { tag =LAM }
+NOT = { has_country_flag = LAM_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = LAM_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MRI_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MRI } }
+	cost = 125
+	visible = {
+owns_state = 141
+NOT = { tag =MRI }
+NOT = { has_country_flag = MRI_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MRI_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MAR_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MAR } }
+	cost = 125
+	visible = {
+owns_state = 316
+NOT = { tag =MAR }
+NOT = { has_country_flag = MAR_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MAR_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MEL_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MEL } }
+	cost = 125
+	visible = {
+owns_state = 277
+NOT = { tag =MEL }
+NOT = { has_country_flag = MEL_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MEL_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MAT_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MAT } }
+	cost = 125
+	visible = {
+owns_state = 763
+NOT = { tag =MAT }
+NOT = { has_country_flag = MAT_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MAT_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MIK_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MIK } }
+	cost = 125
+	visible = {
+owns_state = 10
+NOT = { tag =MIK }
+NOT = { has_country_flag = MIK_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MIK_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MIO_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MIO } }
+	cost = 125
+	visible = {
+owns_state = 361
+NOT = { tag =MIO }
+NOT = { has_country_flag = MIO_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MIO_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+MOO_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =MOO } }
+	cost = 125
+	visible = {
+owns_state = 672
+NOT = { tag =MOO }
+NOT = { has_country_flag = MOO_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = MOO_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+NEN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =NEN } }
+	cost = 125
+	visible = {
+owns_state = 202
+NOT = { tag =NEN }
+NOT = { has_country_flag = NEN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = NEN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+NOE_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =NOE } }
+	cost = 125
+	visible = {
+owns_state = 289
+NOT = { tag =NOE }
+NOT = { has_country_flag = NOE_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = NOE_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+NIN_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =NIN } }
+	cost = 125
+	visible = {
+owns_state = 111
+NOT = { tag =NIN }
+NOT = { has_country_flag = NIN_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = NIN_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+OKA_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =OKA } }
+	cost = 125
+	visible = {
+owns_state = 344
+NOT = { tag =OKA }
+NOT = { has_country_flag = OKA_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = OKA_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+PLK_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =PLK } }
+	cost = 125
+	visible = {
+owns_state = 276
+NOT = { tag =PLK }
+NOT = { has_country_flag = PLK_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = PLK_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+PEK_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =PEK } }
+	cost = 125
+	visible = {
+owns_state = 2
+NOT = { tag =PEK }
+NOT = { has_country_flag = PEK_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = PEK_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+ROS_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =ROS } }
+	cost = 125
+	visible = {
+owns_state = 306
+NOT = { tag =ROS }
+NOT = { has_country_flag = ROS_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = ROS_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+RSA_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =RSA } }
+	cost = 125
+	visible = {
+owns_state = 608
+NOT = { tag =RSA }
+NOT = { has_country_flag = RSA_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = RSA_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+RUS_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =RUS } }
+	cost = 125
+	visible = {
+owns_state = 429
+NOT = { tag =RUS }
+NOT = { has_country_flag = RUS_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = RUS_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+RIS_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =RIS } }
+	cost = 125
+	visible = {
+owns_state = 335
+NOT = { tag =RIS }
+NOT = { has_country_flag = RIS_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = RIS_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+ROB_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =ROB } }
+	cost = 125
+	visible = {
+owns_state = 278
+NOT = { tag =ROB }
+NOT = { has_country_flag = ROB_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = ROB_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+TOW_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =TOW } }
+	cost = 125
+	visible = {
+owns_state = 49
+NOT = { tag =TOW }
+NOT = { has_country_flag = TOW_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = TOW_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+SOR_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =SOR } }
+	cost = 125
+	visible = {
+owns_state = 47
+NOT = { tag =SOR }
+NOT = { has_country_flag = SOR_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = SOR_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+SUI_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =SUI } }
+	cost = 125
+	visible = {
+owns_state = 26
+NOT = { tag =SUI }
+NOT = { has_country_flag = SUI_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = SUI_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+WAT_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =WAT } }
+	cost = 125
+	visible = {
+owns_state = 303
+NOT = { tag =WAT }
+NOT = { has_country_flag = WAT_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = WAT_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+YOG_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =YOG } }
+	cost = 125
+	visible = {
+owns_state = 536
+NOT = { tag =YOG }
+NOT = { has_country_flag = YOG_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = YOG_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+SUB_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =SUB } }
+	cost = 125
+	visible = {
+owns_state = 292
+NOT = { tag =SUB }
+NOT = { has_country_flag = SUB_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = SUB_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+SHI_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =SHI } }
+	cost = 125
+	visible = {
+owns_state = 266
+NOT = { tag =SHI }
+NOT = { has_country_flag = SHI_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = SHI_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+WTS_recruit_general_dec = {
+	icon = generic_prepare_civil_war
+	#days_re_enable = 10
+	allowed = {	}
+	available = { NOT = { tag =WTS } }
+	cost = 125
+	visible = {
+owns_state = 126
+NOT = { tag =WTS }
+NOT = { has_country_flag = WTS_recruit_general_dec_flag }
+	}
+	complete_effect = {
+	hidden_effect = {
+set_country_flag = WTS_recruit_general_dec_flag }
+
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+}

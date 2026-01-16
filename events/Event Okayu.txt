@@ -1,0 +1,1178 @@
+add_namespace = okayu
+
+#okayu refuses nzl
+country_event = {
+	id = okayu.1
+	title = okayu.1.t
+	desc = okayu.1.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#okayu accepted nzl
+country_event = {
+	id = okayu.2
+	title = okayu.2.t
+	desc = okayu.2.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.2.a
+		set_global_flag = nzl_sold
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = okayu.8
+	title = okayu.8.t
+	desc = okayu.8.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.8.a	#Yes
+		ai_chance = { factor = 80 }
+		OKA = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.8.b	#No 
+		ai_chance = { factor = 20 }
+		OKA = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = okayu.9
+	title = okayu.9.t
+	desc = okayu.9.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.9.a	#Yes
+		ai_chance = { factor = 80 }
+		OKA = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.9.b	#No 
+		ai_chance = { factor = 20 }
+		OKA = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = okayu.10
+	title = okayu.10.t
+	desc = okayu.10.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.10.a	#Yes
+		ai_chance = { factor = 30 }
+		OKA = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = okayu.10.b	#No 
+		ai_chance = { factor = 70 }
+		OKA = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = okayu.11
+	title = okayu.11.t
+	desc = okayu.11.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.11.a	#Yes
+		ai_chance = { factor = 50 }
+		OKA = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = okayu.11.b	#No 
+		ai_chance = { factor = 50 }
+		OKA = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = okayu.12
+	title = okayu.12.t
+	desc = okayu.12.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.12.a	#Yes
+		ai_chance = { factor = 75 }
+		OKA = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.12.b	#No 
+		ai_chance = { factor = 25 }
+		OKA = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = okayu.13
+	title = okayu.13.t
+	desc = okayu.13.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.13.a	#Yes
+		ai_chance = { factor = 50 }
+		OKA = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = okayu.13.b	#No 
+		ai_chance = { factor = 50 }
+		OKA = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = okayu.14
+	title = okayu.14.t
+	desc = okayu.14.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.14.a	#Yes
+		ai_chance = { factor = 50 }
+		OKA = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = okayu.14.b	#No 
+		ai_chance = { factor = 50 }
+		OKA = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = okayu.15
+	title = okayu.15.t
+	desc = okayu.15.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.15.a	#Yes
+		ai_chance = { factor = 80 }
+		OKA = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.15.b	#No 
+		ai_chance = { factor = 20 }
+		OKA = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = okayu.16
+	title = okayu.16.t
+	desc = okayu.16.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.16.a	#Yes
+		ai_chance = { factor = 20 }
+		OKA = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = okayu.16.b	#No 
+		ai_chance = { factor = 80 }
+		OKA = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = okayu.17
+	title = okayu.17.t
+	desc = okayu.17.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.17.a	#Yes
+		ai_chance = { factor = 50 }
+		OKA = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = okayu.17.b	#No 
+		ai_chance = { factor = 50 }
+		OKA = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = okayu.19
+	title = okayu.19.t
+	desc = okayu.19.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.19.a	#Yes
+		ai_chance = { factor = 40 }
+		OKA = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = okayu.19.b	#No 
+		ai_chance = { factor = 60 }
+		OKA = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = okayu.20
+	title = okayu.20.t
+	desc = okayu.20.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.20.a	#Yes
+		ai_chance = { factor = 90 }
+		OKA = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.20.b	#No 
+		ai_chance = { factor = 10 }
+		OKA = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = okayu.21
+	title = okayu.21.t
+	desc = okayu.21.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.21.a	#Yes
+		ai_chance = { factor = 80 }
+		OKA = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.21.b	#No 
+		ai_chance = { factor = 20 }
+		OKA = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = okayu.22
+	title = okayu.22.t
+	desc = okayu.22.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.22.a	#Yes
+		ai_chance = { factor = 80 }
+		OKA = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = okayu.22.b	#No 
+		ai_chance = { factor = 20 }
+		OKA = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = okayu.23
+	title = okayu.23.t
+	desc = okayu.23.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.23.a	#Yes
+		ai_chance = { factor = 70 }
+		OKA = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = okayu.23.b	#No 
+		ai_chance = { factor = 30 }
+		OKA = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Okayu - Korone Union
+country_event = {
+	id = okayu.24
+	title = okayu.24.t
+	desc = okayu.24.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.24.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { create_faction = OKA_KRN_Union_FACTION }
+		OKA = { country_event = { id = okayu.25 }}
+		
+	}
+	option = {
+		name = okayu.24.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.26 }}
+	}
+}
+
+#Korone yes Union
+country_event = {
+	id = okayu.25
+	title = okayu.25.t
+	desc = okayu.25.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.25.a	#Yes
+		ai_chance = { factor = 70 }
+		OKA = { add_to_faction = KRN }
+	}
+}
+
+#Korone no Union
+country_event = {
+	id = okayu.26
+	title = okayu.26.t
+	desc = okayu.26.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.26.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#Demand Cyprus
+country_event = {
+	id = okayu.27
+	title = okayu.27.t
+	desc = okayu.27.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.27.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { transfer_state = 183 }
+		OKA = { country_event = { id = okayu.28 }}
+		
+	}
+	option = {
+		name = okayu.27.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.29 }}
+	}
+}
+
+#Korone yes cyprus
+country_event = {
+	id = okayu.28
+	title = okayu.28.t
+	desc = okayu.28.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.28.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Korone no cyprus
+country_event = {
+	id = okayu.29
+	title = okayu.29.t
+	desc = okayu.29.d
+	picture = GFX_report_event_korone_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.29.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Demand puppet Watame
+country_event = {
+	id = okayu.30
+	title = okayu.30.t
+	desc = okayu.30.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.30.a	#Yes
+		ai_chance = { factor = 40 }
+		OKA = { puppet = WAT }
+		OKA = { country_event = { id = okayu.31 }}
+		
+	}
+	option = {
+		name = okayu.30.b	#No 
+		ai_chance = { factor = 60 }
+		OKA = { country_event = { id = okayu.32 }}
+	}
+}
+
+#Watame yes puppet
+country_event = {
+	id = okayu.31
+	title = okayu.31.t
+	desc = okayu.31.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.31.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Watame no puppet
+country_event = {
+	id = okayu.32
+	title = okayu.32.t
+	desc = okayu.32.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.32.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Demand Qatar
+country_event = {
+	id = okayu.33
+	title = okayu.33.t
+	desc = okayu.33.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.33.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { transfer_state = 765 }
+		OKA = { country_event = { id = okayu.34 }}
+		
+	}
+	option = {
+		name = okayu.33.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.35 }}
+	}
+}
+
+#SUB yes Qatar
+country_event = {
+	id = okayu.34
+	title = okayu.34.t
+	desc = okayu.34.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.34.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#SUB no Qatar
+country_event = {
+	id = okayu.35
+	title = okayu.35.t
+	desc = okayu.35.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.35.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Demand Pacific Colony
+country_event = {
+	id = okayu.36
+	title = okayu.36.t
+	desc = okayu.36.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.36.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { transfer_state = 725
+		transfer_state = 636
+		transfer_state = 643
+		transfer_state = 639 }
+		OKA = { country_event = { id = okayu.37 }}
+		
+	}
+	option = {
+		name = okayu.36.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.38 }}
+	}
+}
+
+#ENG yes Pacific
+country_event = {
+	id = okayu.37
+	title = okayu.37.t
+	desc = okayu.37.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.37.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#ENG no Pacific
+country_event = {
+	id = okayu.38
+	title = okayu.38.t
+	desc = okayu.38.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.38.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Join Allies
+country_event = {
+	id = okayu.39
+	title = okayu.39.t
+	desc = okayu.39.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.39.a	#Yes
+		ai_chance = { factor = 100 }
+		ENG = { add_to_faction = OKA }
+		OKA = { country_event = { id = okayu.40 }}
+		
+	}
+	option = {
+		name = okayu.39.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.41 }}
+	}
+}
+
+#ENG yes allies
+country_event = {
+	id = okayu.40
+	title = okayu.40.t
+	desc = okayu.40.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.40.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#ENG no allies
+country_event = {
+	id = okayu.41
+	title = okayu.41.t
+	desc = okayu.41.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.41.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Demand AST
+country_event = {
+	id = okayu.42
+	title = okayu.42.t
+	desc = okayu.42.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.42.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { annex_country = {
+           target = ROOT
+           transfer_troops = yes
+        } }
+		OKA = { country_event = { id = okayu.43 }}
+		
+	}
+	option = {
+		name = okayu.42.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.44 }}
+	}
+}
+
+#AST yes
+country_event = {
+	id = okayu.43
+	title = okayu.43.t
+	desc = okayu.43.d
+	picture = GFX_report_event_ast_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.43.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#AST yes
+country_event = {
+	id = okayu.44
+	title = okayu.44.t
+	desc = okayu.44.d
+	picture = GFX_report_event_ast_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.44.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#Demand NZL
+country_event = {
+	id = okayu.45
+	title = okayu.45.t
+	desc = okayu.45.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.45.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { annex_country = {
+           target = ROOT
+           transfer_troops = yes
+        } }
+		OKA = { country_event = { id = okayu.46 }}
+		
+	}
+	option = {
+		name = okayu.45.b	#No 
+		ai_chance = { factor = 0 }
+		OKA = { country_event = { id = okayu.47 }}
+	}
+}
+
+#NZL yes
+country_event = {
+	id = okayu.46
+	title = okayu.46.t
+	desc = okayu.46.d
+	picture = GFX_report_event_nzl_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.46.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#NZL yes
+country_event = {
+	id = okayu.47
+	title = okayu.47.t
+	desc = okayu.47.d
+	picture = GFX_report_event_nzl_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.47.a	#Yes
+		ai_chance = { factor = 70 }
+	}
+}
+
+#####
+#OKA - Okayu court order
+country_event = {
+	id = okayu.48
+	title = okayu.48.t
+	desc = okayu.48.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.48.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+		}
+
+		if = { limit = { tag = AQA }
+			OKA = { country_event = { id = proposed.3 }}
+		}
+
+		if = { limit = { tag = SUB }
+			OKA = { country_event = { id = proposed.83 }}
+		}
+
+		if = { limit = { tag = RUS }
+			OKA = { country_event = { id = proposed.77 }}
+		}
+	}
+
+	option = {
+		name = okayu.48.b	#Yes
+		ai_chance = { factor = 0 }
+		add_political_power = -25
+		if = { limit = { tag = AQA }
+			OKA = { country_event = { id = proposed.4 }}
+		}
+
+		if = { limit = { tag = SUB }
+			OKA = { country_event = { id = proposed.84 }}
+		}
+
+		if = { limit = { tag = RUS }
+			OKA = { country_event = { id = proposed.78 }}
+		}
+	}
+}
+
+
+#OKA - Okakoro
+country_event = {
+	id = okayu.49
+	title = okayu.49.t
+	desc = okayu.49.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.49.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { 
+			create_faction = FACTION_OKA_oka_koro
+			add_to_faction = ROOT
+		}
+
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.41 }}
+		}
+
+		hidden_effect = {
+			news_event = { id = holo_news.86 }
+		}
+	}
+
+	option = {
+		name = okayu.49.b	#Yes
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.42 }}
+		}
+	}
+}
+
+#OKA - Demand puppet Korone
+country_event = {
+	id = okayu.50
+	title = okayu.50.t
+	desc = okayu.50.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.50.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = {
+			puppet = KRN
+		}
+
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.41 }}
+		}
+	}
+
+	option = {
+		name = okayu.50.b	#Yes
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.42 }}
+		}
+	}
+}
+
+#OKA - Invite to faction
+country_event = {
+	id = okayu.51
+	title = okayu.51.t
+	desc = okayu.51.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.51.a	#Yes
+		ai_chance = { factor = 100 }
+		OKA = { 
+			add_to_faction = ROOT
+		}
+
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.41 }}
+		}
+
+		if = { limit = { tag = SUB }
+			OKA = { country_event = { id = proposed.83 }}
+		}
+
+	}
+
+	option = {
+		name = okayu.51.b	#Yes
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.42 }}
+		}
+
+		if = { limit = { tag = SUB }
+			OKA = { country_event = { id = proposed.84 }}
+		}
+	}
+}
+
+#OKA - Baghdad Award
+country_event = {
+	id = okayu.52
+	title = okayu.52.t
+	desc = okayu.52.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.52.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		every_state = {
+			limit = { is_core_of = SUB
+			is_controlled_by = OKA }
+			set_state_owner_to = KRN
+		}
+
+		if = { limit = { tag = KRN }
+			OKA = { country_event = { id = proposed.41 }}
+		}
+	}
+}
+
+#OKA - Sicily Trial
+country_event = {
+	id = okayu.53
+	title = okayu.53.t
+	desc = okayu.53.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.53.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		remove_ideas = war_criminal_in_the_state_ns
+		custom_effect_tooltip = CET_event_okayu_53
+		set_country_flag = pekora_accepted_the_sicily_trial
+
+		if = { limit = { tag = PEK }
+			OKA = { country_event = { id = proposed.41 }}
+		}
+	}
+
+	option = {
+		name = okayu.53.b	#Yes
+		ai_chance = { factor = 100 }
+		
+
+		if = { limit = { tag = PEK }
+			OKA = { country_event = { id = proposed.68 }}
+		}
+	}
+}
+
+#OKA - Sicily Trial RETURN
+country_event = {
+	id = okayu.54
+	title = okayu.54.t
+	desc = okayu.54.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.54.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 10000
+		    producer = PEK
+	    }
+	}
+}
+
+#OKA - You're summon to Okayu Court
+country_event = {
+	id = okayu.55
+	title = okayu.55.t
+	desc = okayu.55.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.55.a	#Yes
+		ai_chance = { factor = 65 }
+		add_political_power = -100
+		OKA = {
+			country_event = { id = okayu.56 }
+		}
+	}
+
+	option = {
+		name = okayu.55.b	#Yes
+		ai_chance = { factor = 25 }
+		add_political_power = -100
+		OKA = {
+			country_event = { id = okayu.57 }
+		}
+	}
+
+	option = {
+		name = okayu.55.c	#Yes
+		ai_chance = { factor = 10 }
+		OKA = {create_wargoal = { type = annex_everything target = ROOT }}
+		OKA = {
+			country_event = { id = okayu.58 }
+		}
+	}
+}
+
+#OKA - You're summon to Okayu Court #Pay in Yen
+country_event = {
+	id = okayu.56
+	title = okayu.56.t
+	desc = okayu.56.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.56.a	#Yes
+		ai_chance = { factor = 75 }
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 4000
+		    producer = ROOT
+	    }
+	}
+}
+
+#OKA - You're summon to Okayu Court #Pay in Civ
+country_event = {
+	id = okayu.57
+	title = okayu.57.t
+	desc = okayu.57.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.57.a	#Yes
+		ai_chance = { factor = 75 }
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+#OKA - You're summon to Okayu Court #Do not pay
+country_event = {
+	id = okayu.58
+	title = okayu.58.t
+	desc = okayu.58.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = okayu.58.a	#Yes
+		ai_chance = { factor = 75 }
+		
+	}
+}

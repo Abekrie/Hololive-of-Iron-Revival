@@ -1,0 +1,112 @@
+Generic_SHI_historical = {
+	name = "SHI historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = SHI
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = SHI
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		SHI_nationalize_oil_production_meast_focus
+		SHI_kick_out_foreigners_meast_focus
+		SHI_export_focus_meast_focus
+		SHI_farmers_to_factory_meast_focus
+
+		ignite_the_neighbor_war_shi_focus
+		train_to_kabul_shi_focus
+		soviet_arms_purchase_shi_focus
+		emergency_war_factory_shi_focus
+		operation_enduring_freedom_shi_focus
+
+		murasaki_shion_shi_focus
+		shion_socialist_republics_shi_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_SHI_non_historical = {
+	name = "SHI historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = SHI
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = SHI
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		SHI_nationalize_oil_production_meast_focus
+		SHI_kick_out_foreigners_meast_focus
+		SHI_export_focus_meast_focus
+		SHI_farmers_to_factory_meast_focus
+
+		ignite_the_neighbor_war_shi_focus
+		train_to_kabul_shi_focus
+		soviet_arms_purchase_shi_focus
+		emergency_war_factory_shi_focus
+		operation_enduring_freedom_shi_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

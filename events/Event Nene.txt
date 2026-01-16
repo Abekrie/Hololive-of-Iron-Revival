@@ -1,0 +1,238 @@
+add_namespace = nene
+
+#NEN - Demand Ukraine
+country_event = {
+	id = nene.26
+	title = nene.26.t
+	desc = nene.26.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.26.a
+		ai_chance = { factor = 100 }
+		NEN = {
+			transfer_state = 194
+transfer_state = 193
+transfer_state = 225
+transfer_state = 259
+transfer_state = 221
+transfer_state = 228
+transfer_state = 227
+transfer_state = 137
+		}
+
+		NEN = { country_event = { id = nene.27 }}
+
+	}
+
+	option = {
+		name = nene.26.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#NEN - Demand Ukraine YES
+country_event = {
+	id = nene.27
+	title = nene.27.t
+	desc = nene.27.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.27.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+
+}
+
+
+
+#NEN - Ask to join faction
+country_event = {
+	id = nene.28
+	title = nene.28.t
+	desc = nene.28.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.28.a
+		ai_chance = { factor = 100 }
+		add_to_faction = NEN
+
+		if = {
+			limit = { tag = ALO }
+			NEN = { country_event = { id = proposed.1 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			NEN = { country_event = { id = proposed.99 }}
+		}
+
+	}
+
+	option = {
+		name = nene.28.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ALO }
+			NEN = { country_event = { id = proposed.2 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			NEN = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#NEN - Buy Crimea
+country_event = {
+	id = nene.29
+	title = nene.29.t
+	desc = nene.29.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.29.a
+		ai_chance = { factor = 100 }
+
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 12000
+                    producer = NEN
+            }
+		
+		NEN = { transfer_state = 137 }
+
+		if = {
+			limit = { tag = ALO }
+			NEN = { country_event = { id = proposed.1 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			NEN = { country_event = { id = proposed.93 }}
+		}
+
+	}
+
+	option = {
+		name = nene.29.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ALO }
+			NEN = { country_event = { id = proposed.2 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			NEN = { country_event = { id = proposed.94 }}
+		}
+	}
+}
+
+#NEN - Buy Port Arthur
+country_event = {
+	id = nene.30
+	title = nene.30.t
+	desc = nene.30.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.30.a
+		ai_chance = { factor = 100 }
+
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 12000
+                    producer = NEN
+            }
+		
+		NEN = { transfer_state = 745 }
+
+		if = {
+			limit = { tag = ACH }
+			NEN = { country_event = { id = proposed.107 }}
+		}
+
+		if = {
+			limit = { tag = BTN }
+			NEN = { country_event = { id = proposed.9 }}
+		}
+
+	}
+
+	option = {
+		name = nene.30.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ACH }
+			NEN = { country_event = { id = proposed.108 }}
+		}
+
+		if = {
+			limit = { tag = BTN }
+			NEN = { country_event = { id = proposed.10 }}
+		}
+	}
+}
+
+#NEN - Demand Annex
+country_event = {
+	id = nene.31
+	title = nene.31.t
+	desc = nene.31.d
+	picture = GFX_report_event_nene_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nene.31.a
+		ai_chance = { factor = 100 }
+		
+		NEN = { 
+			annex_country = {
+    			target = ART
+    			transfer_troops = yes
+			} 
+		}
+
+		if = {
+			limit = { tag = ART }
+			NEN = { country_event = { id = proposed.5 }}
+		}
+
+		if = {
+			limit = { tag = BTN }
+			NEN = { country_event = { id = proposed.9 }}
+		}
+
+	}
+
+	option = {
+		name = nene.31.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ART }
+			NEN = { country_event = { id = proposed.6 }}
+		}
+
+		if = {
+			limit = { tag = BTN }
+			NEN = { country_event = { id = proposed.10 }}
+		}
+	}
+}

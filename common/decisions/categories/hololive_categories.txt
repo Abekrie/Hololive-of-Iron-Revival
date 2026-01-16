@@ -1,0 +1,537 @@
+
+noe_hololive_trade_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_great_indochina_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_france_sui_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_nordic_fbk_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_holo_raj_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_pol_commonwealth_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_pek_italy_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_holo_ger_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_holo_per_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+hololive_industrial_action_category = {
+
+    icon = generic_prospect_for_resources
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+hololive_economic_action_category = {
+
+    priority = 10
+	icon = generic_economy
+
+	#picture = GFX_decision_cat_picture_anemachi_railgun
+}
+
+exile_government_alo_action_category = {
+
+    icon = generic_monarchism
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+form_alo_hun_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_united_south_america_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_csa_coco_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_hololive_USA_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_united_kingdom_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+army_general_hololive_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_hololive_ins_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_china_holo_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_oceania_holo_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_arabia_holo_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_ottoman_holo_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+holo_balkan_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+nene_nuclear_operation_decision_category = {
+
+    icon = border_conflict
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+form_ukraine_holo_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+matsuri_democratic_influence_decision_category = {
+
+    icon = generic_democracy
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+suisei_hi_honey_virus_decision_category = {
+
+	priority = 150
+
+    icon = generic_propaganda
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+suisei_anemachi_inquisition_decision_category = {
+	
+	priority = 150
+
+    icon = generic_propaganda
+
+	picture = GFX_decision_cat_generic_arabia
+}
+
+choco_seduction_warfare_category = {
+
+	priority = 150
+
+    icon = military_operation
+
+	picture = GFX_decision_cat_picture_seduction_warfare
+}
+
+fubuki_biszarre_adventure_decision_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+marine_pirateer_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+moona_spacerace_decision_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+form_united_mexico_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+mio_wolf_of_wall_street_decision_category = {
+
+    icon = generic_industry
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+flare_soap_opera_category = {
+
+    icon = generic_propaganda
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+yagoo_colonial_empire_decision_category = {
+
+    icon = generic_monarchism
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+fubuki_nordic_industrial_development_category = {
+
+    icon = generic_industry
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+pekora_war_criminal_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+subaru_international_police_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_subaru_geneva
+}
+
+okayu_okayu_court_category = {
+
+    icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_subaru_geneva
+}
+
+korone_suez_crisis_category = {
+
+    icon = military_operation
+
+	picture = GFX_decision_cat_picture_subaru_geneva
+}
+
+kiara_kfp_category = {
+
+    icon = generic_industry
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+watame_sheep_house_category = {
+
+    icon = generic_industry
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+amelia_detective_on_the_scene_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+amelia_imperial_federation_category = {
+
+    icon = generic_monarchism
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+amelia_small_ame_manifesto_category = {
+
+    icon = generic_communism
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+gura_shark_activity_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+calliope_dead_on_arrival_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+paraguay_infiltrate_enemy_border_category = {
+
+    icon = military_operation
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+ayame_caucasus_oil_leasing_category = {
+
+    icon = generic_prospect_for_resources
+
+	#picture = GFX_decision_cat_generic_arabia
+}
+
+shion_mage_of_violet_category = {
+
+    icon = army_reform
+
+	#picture = military_operation
+}
+
+rushia_necromancer_power_category = {
+
+    icon = army_reform
+
+	#picture = military_operation
+}
+
+hololive_china_main_category = {
+
+    icon = generic_political_actions
+
+	#picture = military_operation
+}
+
+towa_debiru_activity_category = {
+
+    icon = generic_political_actions
+
+	#picture = military_operation
+}
+
+noel_shirogane_federation_category = {
+
+    icon = generic_monarchism
+
+	#picture = military_operation
+}
+
+choco_question_of_ireland_category = {
+
+	priority = 200
+
+    icon = generic_political_actions
+
+	#picture = military_operation
+}
+
+choco_oglaigh_na_choco_category = {
+
+	priority = 175
+
+    icon = generic_fascism
+
+	#picture = military_operation
+}
+
+black_sunday_decision_category = {
+	priority = 250
+	icon = generic_economy
+
+	picture = GFX_decision_cat_picture_haachama_sunday
+}
+
+paraguay_future_of_paraguay_category = {
+	priority = 150
+	icon = power_struggle
+
+	picture = GFX_decision_cat_picture_future_of_paraguay
+
+	custom_icon = {
+		tag = WAT
+		value = WAT_influence_paraguay_icon_value
+		desc = WAT_influence_paraguay_breakdown
+
+		visible = {
+			country_exists = WAT
+		}
+	}
+
+	custom_icon = {
+		tag = LUN
+		value = LUN_influence_paraguay_icon_value
+		desc = LUN_influence_paraguay_breakdown
+
+		visible = {
+			country_exists = LUN
+		}
+	}
+
+	visible = {
+		OR = {
+			tag = LUN
+			tag = WAT
+			tag = PAR
+		}
+	}
+}
+
+anemachi_railgun_category = {
+	priority = 150
+    icon = ger_military_buildup
+
+	picture = GFX_decision_cat_picture_anemachi_railgun
+}
+
+sora_towa_aegean_islands_dispute_decision_category = {
+	priority = 150
+	icon = power_struggle
+
+	picture = GFX_decision_cat_picture_aegean_dispute_sora
+}
+
+matsuri_remilitarize_estonia_category = {
+	priority = 150
+    icon = ger_military_buildup
+
+	#picture = GFX_decision_cat_picture_anemachi_railgun
+}
+
+miko_great_fire_disaster_category = {
+	priority = 150
+    icon = generic_political_actions
+
+	picture = GFX_decision_cat_picture_miko_fire
+}
+
+
+kiara_future_of_kongo_category = {
+	priority = 150
+    icon = generic_political_actions
+
+	#picture = GFX_decision_cat_picture_miko_fire
+}
+
+guardian_of_civilization_category = {
+	priority = 150
+    icon = generic_political_actions
+
+	picture = GFX_decision_cat_picture_guardian_of_civ
+}
+
+sana_space_station_category = {
+	priority = 150
+    icon = generic_political_actions
+
+	picture = GFX_decision_cat_picture_space_station
+}
+
+sana_humanity_reservation_coalition_category = {
+	priority = 250
+    icon = generic_political_actions
+
+	#picture = GFX_decision_cat_picture_space_station
+}
+
+fauna_zen_garden_category = {
+	priority = 250
+    icon = generic_political_actions
+
+	#picture = GFX_decision_cat_picture_space_station
+}
+
+baelz_council_economic_sphere_category = {
+	priority = 250
+    icon = generic_political_actions
+
+	#picture = GFX_decision_cat_picture_space_station
+}
+
+aqua_hololive_resistance_category = {
+	priority = 150
+    icon = generic_political_actions
+
+	picture = GFX_decision_cat_picture_aqua_resistance
+}

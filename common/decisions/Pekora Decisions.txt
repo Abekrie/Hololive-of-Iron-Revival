@@ -1,0 +1,215 @@
+pekora_war_criminal_category = {
+
+	pekora_build_idol_education_camp_dec = {
+
+		icon = generic_pekora
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							tag = ROOT
+						}
+						is_core_of = ROOT
+						NOT = {
+								has_state_flag = PEK_already_developed
+						}
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 75
+
+		visible = {
+		    FROM.OWNER = {
+				OR = {
+					tag = PEK
+				}
+				has_country_flag = PEK_can_war_criminal
+			}
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			FROM = {
+			add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			FROM = {set_state_flag = PEK_already_developed}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	pekora_employ_poison_asacoco_dec = {
+
+		icon = generic_pekora
+
+		days_re_enable = 180
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    OR = {
+					tag = PEK
+				}
+			has_country_flag = PEK_can_war_criminal
+		}
+
+		available = {
+			is_ai = no
+			has_war = yes
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = gas_attack_idea
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	pekora_joseph_human_experiment_dec = {
+
+		icon = generic_research
+
+		days_re_enable = 180
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    OR = {
+					tag = PEK
+				}
+			has_country_flag = PEK_can_war_criminal
+			NOT = {
+				has_country_flag = pekora_joseph_human_experiment_FLAG
+			}
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			add_manpower = -10000
+			set_country_flag = pekora_joseph_human_experiment_FLAG
+		}
+
+		remove_effect = {
+			add_ideas = efficiency_ii_ns
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	pekora_dismantle_eiffel_tower_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 180
+
+		allowed = {
+			
+		}
+
+		cost = 300
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 16
+			} 
+		}
+
+		visible = {
+		    OR = {
+					tag = PEK
+				}
+			has_country_flag = PEK_can_war_criminal
+			NOT = {
+				has_country_flag = pekora_dismantle_eiffel_tower_FLAG
+			}
+		}
+
+		available = {
+			is_ai = no
+			has_full_control_of_state = 16
+		}
+
+		days_remove = 120
+
+		complete_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			set_country_flag = pekora_dismantle_eiffel_tower_FLAG
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+                idea = national_building_1
+                days = 180
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+
+}

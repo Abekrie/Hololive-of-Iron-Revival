@@ -1,0 +1,103 @@
+Generic_ECH_historical = {
+	name = "Echo plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = ECH
+				original_tag = YOG
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = ECH
+				original_tag = YOG
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		stay_with_hololive_cn_focus
+		together_for_victory_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_ECH_non_historical = {
+	name = "Echo plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = ECH
+				original_tag = YOG
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = ECH
+				original_tag = YOG
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		neutrality_pact_cn_focus
+		change_in_politic_cn_focus
+		reorganize_government_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

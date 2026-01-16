@@ -1,0 +1,716 @@
+form_france_sui_category = {
+
+	form_france_sui = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = SUI
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_france_sui
+#controls_state = 640
+controls_state = 23
+controls_state = 19
+controls_state = 14
+controls_state = 30
+controls_state = 24
+controls_state = 15
+controls_state = 16
+controls_state = 18
+controls_state = 27
+controls_state = 17
+controls_state = 785
+#controls_state = 29
+#controls_state = 28
+}
+
+custom_trigger_tooltip = {
+tooltip = have_all_suisei_states
+controls_state = 31
+controls_state = 20
+controls_state = 25
+controls_state = 32
+controls_state = 33
+controls_state = 735
+controls_state = 26
+controls_state = 21
+controls_state = 1
+controls_state = 22
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = SUI
+			}
+			AND = {NOT = { has_global_flag = france_suisei }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_france
+			hidden_effect = {
+			set_global_flag = france_suisei
+				
+  
+  #423 = { add_core_of = ROOT }
+  23 = { add_core_of = ROOT }
+19 = { add_core_of = ROOT }
+14 = { add_core_of = ROOT }
+30 = { add_core_of = ROOT }
+24 = { add_core_of = ROOT }
+15 = { add_core_of = ROOT }
+16 = { add_core_of = ROOT }
+785 = { add_core_of = ROOT }
+27 = { add_core_of = ROOT }
+18 = { add_core_of = ROOT }
+17 = { add_core_of = ROOT }
+29 = { add_core_of = ROOT }
+28 = { add_core_of = ROOT }
+			}
+
+			hidden_effect = {
+				news_event = { id = holo_news.3 hours = 6 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+######################### Fubuki Nordic ###############################
+form_nordic_fbk_category = {
+
+	form_nordic_fbk = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = MRI
+				original_tag = NIN
+				tag = HSK
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_nordic_states
+#controls_state = 640
+controls_state = 99
+controls_state = 100
+controls_state = 101
+controls_state = 37
+controls_state = 337
+controls_state = 110
+controls_state = 142
+controls_state = 143
+controls_state = 144
+
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_swe_states
+controls_state = 138
+controls_state = 139
+controls_state = 38
+controls_state = 666
+controls_state = 140
+controls_state = 141
+controls_state = 145
+controls_state = 124
+
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_fin_states
+controls_state = 111
+controls_state = 150
+controls_state = 149
+controls_state = 148
+
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = FBK
+				original_tag = MRI
+				original_tag = NIN
+				tag = HSK
+			}
+			AND = {NOT = { has_global_flag = nordic_formed_fbk }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_nordic
+			hidden_effect = {
+			set_global_flag = nordic_formed_fbk
+
+if = { limit = { NOT = { original_tag = FBK }}
+99 = { add_core_of = ROOT }
+100 = { add_core_of = ROOT }
+101 = { add_core_of = ROOT }
+37 = { add_core_of = ROOT }
+337 = { add_core_of = ROOT }
+110 = { add_core_of = ROOT }
+142 = { add_core_of = ROOT }
+143 = { add_core_of = ROOT }
+144 = { add_core_of = ROOT }
+}
+
+111 = { add_core_of = ROOT }
+150 = { add_core_of = ROOT }
+149 = { add_core_of = ROOT }
+148 = { add_core_of = ROOT }
+
+
+138 = { add_core_of = ROOT }
+139 = { add_core_of = ROOT }
+39 = { add_core_of = ROOT }
+666 = { add_core_of = ROOT }
+140 = { add_core_of = ROOT }
+141 = { add_core_of = ROOT }
+145 = { add_core_of = ROOT }
+124 = { add_core_of = ROOT }
+38 = { add_core_of = ROOT }
+
+			}
+			if = { limit = { original_tag = FBK}
+			hidden_effect = {
+				news_event = { id = holo_news.5 hours = 6 }
+			}}
+
+			
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+############################ RAJ #############################
+form_holo_raj_category = {
+
+	form_raj_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = RUS
+				original_tag = KAN
+				original_tag = AQA
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_rushia_raj_can
+#controls_state = 640
+controls_state = 444
+controls_state = 441
+controls_state = 443
+controls_state = 440
+controls_state = 445
+controls_state = 433
+controls_state = 442
+controls_state = 428
+controls_state = 787
+controls_state = 439
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_kanata_raj_can
+#controls_state = 640
+controls_state = 438
+controls_state = 426
+controls_state = 435
+controls_state = 431
+controls_state = 432
+controls_state = 434
+controls_state = 430
+controls_state = 436
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_moona_raj_can
+#controls_state = 640
+controls_state = 437
+controls_state = 429
+controls_state = 423
+controls_state = 427
+controls_state = 425
+controls_state = 424
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = RUS
+				original_tag = KAN
+				original_tag = AQA
+			}
+			AND = {NOT = { has_global_flag = raj_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_raj
+			hidden_effect = {
+			set_global_flag = raj_is_formed
+if ={
+	limit = { NOT = {original_tag = AQA} }
+444 = { add_core_of = ROOT }
+441 = { add_core_of = ROOT }
+440 = { add_core_of = ROOT }
+443 = { add_core_of = ROOT }
+445 = { add_core_of = ROOT }
+433 = { add_core_of = ROOT }
+442 = { add_core_of = ROOT }
+428 = { add_core_of = ROOT }
+787 = { add_core_of = ROOT }
+439 = { add_core_of = ROOT }
+}
+
+if ={
+	limit = { NOT = {original_tag = KAN} }
+438 = { add_core_of = ROOT }
+426 = { add_core_of = ROOT }
+436 = { add_core_of = ROOT }
+435 = { add_core_of = ROOT }
+431 = { add_core_of = ROOT }
+432 = { add_core_of = ROOT }
+434 = { add_core_of = ROOT }
+430 = { add_core_of = ROOT }
+}
+
+if ={
+	limit = { NOT = {original_tag = RUS} }
+437 = { add_core_of = ROOT }
+429 = { add_core_of = ROOT }
+423 = { add_core_of = ROOT }
+427 = { add_core_of = ROOT }
+425 = { add_core_of = ROOT }
+424 = { add_core_of = ROOT }
+}
+
+}
+
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+
+##################### PEKORA ITALY #####################
+form_pek_italy_category = {
+
+	form_pek_italy = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = PEK
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_pek_can
+#controls_state = 640
+controls_state = 115
+controls_state = 156
+controls_state = 117
+controls_state = 114
+controls_state = 157
+controls_state = 2
+controls_state = 162
+controls_state = 161
+controls_state = 159
+controls_state = 158
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_italy_can
+#controls_state = 640
+controls_state = 160
+controls_state = 39
+controls_state = 736
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = PEK
+			}
+			AND = {NOT = { has_global_flag = italy_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_italy
+			hidden_effect = {
+			set_global_flag = italy_is_formed
+160 = { add_core_of = ROOT }
+39 = { add_core_of = ROOT }
+736 = { add_core_of = ROOT }
+
+}
+
+hidden_effect = {
+				news_event = { id = holo_news.8 hours = 6 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+##################### GERMANY #####################
+form_holo_ger_category = {
+
+	form_ger_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = KIA
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_mik_ger_can
+#controls_state = 640
+controls_state = 63
+controls_state = 68
+controls_state = 66
+controls_state = 67
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_ger_ger_can
+#controls_state = 640
+controls_state = 62
+controls_state = 64
+controls_state = 65
+controls_state = 59
+controls_state = 60
+controls_state = 54
+controls_state = 53
+controls_state = 52
+controls_state = 50
+controls_state = 55
+controls_state = 57
+controls_state = 56
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_mar_ger_can
+#controls_state = 640
+controls_state = 42
+controls_state = 51
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = KIA
+			}
+			AND = {NOT = { has_global_flag = ger_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_ger
+			hidden_effect = {
+			set_global_flag = ger_is_formed
+if ={
+	limit = { NOT = {original_tag = MIK} }
+63 = { add_core_of = ROOT }
+68 = { add_core_of = ROOT }
+66 = { add_core_of = ROOT }
+67 = { add_core_of = ROOT }
+}
+
+if ={
+	limit = { NOT = {original_tag = GER} }
+62 = { add_core_of = ROOT }
+64 = { add_core_of = ROOT }
+65 = { add_core_of = ROOT }
+59 = { add_core_of = ROOT }
+60 = { add_core_of = ROOT }
+54 = { add_core_of = ROOT }
+53 = { add_core_of = ROOT }
+52 = { add_core_of = ROOT }
+50 = { add_core_of = ROOT }
+55 = { add_core_of = ROOT }
+57 = { add_core_of = ROOT }
+56 = { add_core_of = ROOT }
+}
+
+if ={
+	limit = { NOT = {original_tag = KIA} }
+42 = { add_core_of = ROOT }
+51 = { add_core_of = ROOT }
+}
+
+#Alsace-Loraine
+28 = { add_core_of = ROOT }
+#Shlaswig-Hostein
+58 = { add_core_of = ROOT }
+#AUS
+153 = { add_core_of = ROOT }
+152 = { add_core_of = ROOT }
+4 = { add_core_of = ROOT }
+#Sudetenland
+69 = { add_core_of = ROOT }
+
+}
+
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+########################### Persia ###########################
+form_holo_per_category = {
+
+	form_per_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = AYA
+				original_tag = SHI
+			}
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = have_all_ayame_per_can
+#controls_state = 640
+controls_state = 412
+controls_state = 411
+controls_state = 413
+controls_state = 419
+controls_state = 421
+controls_state = 420
+controls_state = 417
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = have_all_shion_per_can
+#controls_state = 640
+controls_state = 266
+controls_state = 410
+controls_state = 418
+controls_state = 416
+controls_state = 414
+			}
+
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = SHI
+				original_tag = AYA
+			}
+			AND = {NOT = { has_global_flag = per_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = ef_core_all_persia
+			hidden_effect = {
+			set_global_flag = per_is_formed
+hidden_effect = {every_state = {
+		   					limit = { OR = {is_core_of = SHI
+		   					is_core_of = PER
+		   					is_core_of = AYA } }
+		   					add_core_of = ROOT
+		   					}}
+
+}
+
+		
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+
+########################### USAM ###########################
+form_united_south_america_category = {
+
+	form_usam_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = ROS
+				original_tag = ROB
+			}
+		}
+
+		available = {
+controls_state = 303
+controls_state = 306
+controls_state = 307
+controls_state = 278
+controls_state = 279
+controls_state = 500
+controls_state = 301
+controls_state = 305
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = ROS
+				original_tag = ROB
+			}
+			AND = {NOT = { has_global_flag = usam_is_formed }}
+		}
+
+		complete_effect = {
+			
+			custom_effect_tooltip = CET_get_cored_all_USAM
+			hidden_effect = {
+			set_global_flag = usam_is_formed
+				hidden_effect = {every_state = {
+		   					limit = { OR = {is_core_of = LUN
+		   					is_core_of = ROS
+		   					is_core_of = ROB
+		   					is_core_of = ECU
+		   					is_core_of = WAT
+		   					is_core_of = PAR } }
+		   					add_core_of = ROOT
+		   					}}
+            }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+########################### United Mexico ###########################
+form_united_mexico_category = {
+
+	form_mexico_holo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = MEL
+				original_tag = MAR
+			}
+		}
+
+		available = {
+controls_state = 317
+controls_state = 277
+controls_state = 475
+controls_state = 482
+
+			
+		}
+
+		visible = {
+			OR = {
+				original_tag = MEL
+				original_tag = MAR
+			}
+			AND = {NOT = { has_global_flag = mexico_is_formed }}
+		}
+
+		complete_effect = {
+			
+			#custom_effect_tooltip = CET_get_cored_all_USAM
+			every_state = {
+		   					limit = { OR = {is_core_of = MAR
+		   					is_core_of = MEX
+		   					is_core_of = MEL} }
+		   					add_core_of = ROOT
+		   					}
+			hidden_effect = {
+			set_global_flag = mexico_is_formed
+            }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

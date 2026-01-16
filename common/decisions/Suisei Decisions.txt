@@ -1,0 +1,645 @@
+anemachi_railgun_category = {
+	anemachi_railgun_load_1_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			#has_war = yes
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_anemachi_railgun
+		    NOT = {
+		    	has_country_flag = anemachi_railgun_load_1_flag
+		    }
+		}
+
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			set_country_flag = anemachi_railgun_load_1_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	anemachi_railgun_load_2_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			#has_war = yes
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_anemachi_railgun
+		    NOT = {
+		    	has_country_flag = anemachi_railgun_load_2_flag
+		    }
+		}
+
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			set_country_flag = anemachi_railgun_load_2_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	anemachi_railgun_load_3_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			#has_war = yes
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_anemachi_railgun
+		    NOT = {
+		    	has_country_flag = anemachi_railgun_load_3_flag
+		    }
+		}
+
+		days_remove = 45
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			set_country_flag = anemachi_railgun_load_3_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	anemachi_railgun_load_4_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			#has_war = yes
+		}
+
+		cost = 10
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_anemachi_railgun
+		    NOT = {
+		    	has_country_flag = anemachi_railgun_load_4_flag
+		    }
+		}
+
+		days_remove = 45
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			set_country_flag = anemachi_railgun_load_4_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	anemachi_activate_stellarie_artillerie_dec = {
+
+		icon = generic_tank
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+			has_country_flag = anemachi_railgun_load_1_flag
+			has_country_flag = anemachi_railgun_load_2_flag
+			has_country_flag = anemachi_railgun_load_3_flag
+			has_country_flag = anemachi_railgun_load_4_flag
+		}
+
+		#cost = 0
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_anemachi_railgun
+		}
+
+		days_remove = 30
+
+		modifier = {
+			army_core_attack_factor = 0.15
+			army_artillery_attack_factor = 0.4
+			breakthrough_factor = 0.15
+			railway_gun_bombardment_factor = 0.75
+		}
+
+		remove_effect = {
+			clr_country_flag = anemachi_railgun_load_1_flag
+			clr_country_flag = anemachi_railgun_load_2_flag
+			clr_country_flag = anemachi_railgun_load_3_flag
+			clr_country_flag = anemachi_railgun_load_4_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+suisei_hi_honey_virus_decision_category = {
+
+	suisei_superspreading_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_spread_hi_honey_virus
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			custom_effect_tooltip = CET_suisei_superspreading_dec
+			every_enemy_country = {
+				country_event = { id = suisei.44 }
+				show_ideas_tooltip = hi_honey_virus_ns
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_indirect_virus_transmission_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_capitulated = no
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_spread_hi_honey_virus
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			custom_effect_tooltip = CET_suisei_indirect_virus_transmission_dec
+			every_neighbor_country = {
+				country_event = { id = suisei.44 }
+				show_ideas_tooltip = hi_honey_virus_ns
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_vaccine_booster_dec = {
+
+		icon = generic_research
+
+		days_re_enable = 125
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_in_faction = yes
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_spread_hi_honey_virus
+		}
+
+		days_remove = 15
+
+		remove_effect = {
+			custom_effect_tooltip = CET_suisei_vaccine_booster_dec
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_timed_idea = {
+                	idea = hi_honey_booster_ns
+                	days = 120
+            	}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_weaponize_the_virus_dec = {
+
+		icon = generic_research
+
+		days_re_enable = 125
+
+		allowed = {
+			
+		}
+
+		available = {
+			#is_in_faction = yes
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = Suisei_can_spread_hi_honey_virus
+		}
+
+		days_remove = 15
+
+		remove_effect = {
+			custom_effect_tooltip = CET_suisei_weaponize_the_virus_dec
+			add_timed_idea = {
+                	idea = hi_honey_booster_ns
+                	days = 120
+            	}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+suisei_anemachi_inquisition_decision_category = {
+
+	suisei_inquisition_in_galicia_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 0
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 171	
+				size > 9
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 171
+			} 
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = SUI_anemachi_can_inquisition
+		    NOT = { has_country_flag = anemachi_inquisition_flag_galicia }
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			add_stability = 0.02
+			set_country_flag = anemachi_inquisition_flag_galicia
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_inquisition_in_catalonia_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 0
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 165	
+				size > 9
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 165
+			} 
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = SUI_anemachi_can_inquisition
+		    NOT = { has_country_flag = anemachi_inquisition_flag_catalonia }
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			add_stability = 0.02
+			set_country_flag = anemachi_inquisition_flag_catalonia
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_inquisition_in_madrid_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 0
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 41	
+				size > 9
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 41
+			} 
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = SUI_anemachi_can_inquisition
+		    NOT = { has_country_flag = anemachi_inquisition_flag_madrid }
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			add_stability = 0.02
+			set_country_flag = anemachi_inquisition_flag_madrid
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_inquisition_in_sevilla_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 0
+
+		allowed = {
+			
+		}
+
+		available = {
+			divisions_in_state = {
+				state = 169	
+				size > 9
+			}
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 169
+			} 
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = SUI_anemachi_can_inquisition
+		    NOT = { has_country_flag = anemachi_inquisition_flag_sevilla }
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			add_stability = 0.02
+			set_country_flag = anemachi_inquisition_flag_sevilla
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	suisei_end_the_inquisition_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 0
+
+		allowed = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CTT_anemachi_sevilla
+				has_country_flag = anemachi_inquisition_flag_sevilla
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = CTT_anemachi_madrid
+				has_country_flag = anemachi_inquisition_flag_madrid
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = CTT_anemachi_catalonia
+				has_country_flag = anemachi_inquisition_flag_catalonia
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = CTT_anemachi_galicia
+				has_country_flag = anemachi_inquisition_flag_galicia
+			}
+		}
+
+
+		cost = 100
+
+		visible = {
+		    tag = SUI
+		    has_country_flag = SUI_anemachi_can_inquisition
+		    NOT = { has_country_flag = suisei_end_the_inquisition_dec_flag }
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			set_country_flag = suisei_end_the_inquisition_dec_flag
+			add_war_support = 0.05
+			every_state = {
+				limit = { OR = {is_core_of = SPA
+				is_core_of = SPR} }
+				add_core_of = ROOT
+			}
+			custom_effect_tooltip = CET_suisei_end_the_inquisition_dec
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

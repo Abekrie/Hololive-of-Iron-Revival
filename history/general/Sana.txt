@@ -1,0 +1,29 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = SAN
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = SAN_elon_musk_advisor
+    name = "Elon Musk"
+    advisor = {
+      slot = high_command
+      traits = { space_master_trait }
+      cost = 150
+
+      available = {
+        has_completed_focus = spacex_san_focus
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_elon_small }
+    }
+  }
+}

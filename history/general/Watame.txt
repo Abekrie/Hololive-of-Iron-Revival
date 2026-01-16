@@ -1,0 +1,27 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = WAT
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = WAT_ui_advisor
+    name = "Shigure Ui"
+    advisor = {
+      slot = high_command
+      traits = { ui_watame_trait }
+      cost = 50
+
+      available = {
+        has_completed_focus = ui_in_command_wat_focus
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_ui_advisor }
+    }
+  }
+}

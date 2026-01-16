@@ -1,0 +1,1321 @@
+add_namespace = haato
+
+#haato yes puppet
+country_event = {
+	id = haato.1
+	title = haato.1.t
+	desc = haato.1.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#haato no no-cb
+country_event = {
+	id = haato.2
+	title = haato.2.t
+	desc = haato.2.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#HTO yes ICC
+country_event = {
+	id = haato.3
+	title = haato.3.t
+	desc = haato.3.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.3.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+#HTO no ICC
+country_event = {
+	id = haato.4
+	title = haato.4.t
+	desc = haato.4.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = haato.8
+	title = haato.8.t
+	desc = haato.8.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.8.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.8.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = haato.9
+	title = haato.9.t
+	desc = haato.9.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.9.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.9.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = haato.10
+	title = haato.10.t
+	desc = haato.10.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.10.a	#Yes
+		ai_chance = { factor = 30 }
+		HTO = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = haato.10.b	#No 
+		ai_chance = { factor = 70 }
+		HTO = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = haato.11
+	title = haato.11.t
+	desc = haato.11.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.11.a	#Yes
+		ai_chance = { factor = 50 }
+		HTO = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = haato.11.b	#No 
+		ai_chance = { factor = 50 }
+		HTO = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = haato.12
+	title = haato.12.t
+	desc = haato.12.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.12.a	#Yes
+		ai_chance = { factor = 75 }
+		HTO = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.12.b	#No 
+		ai_chance = { factor = 25 }
+		HTO = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = haato.13
+	title = haato.13.t
+	desc = haato.13.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.13.a	#Yes
+		ai_chance = { factor = 50 }
+		HTO = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = haato.13.b	#No 
+		ai_chance = { factor = 50 }
+		HTO = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = haato.14
+	title = haato.14.t
+	desc = haato.14.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.14.a	#Yes
+		ai_chance = { factor = 50 }
+		HTO = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = haato.14.b	#No 
+		ai_chance = { factor = 50 }
+		HTO = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = haato.15
+	title = haato.15.t
+	desc = haato.15.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.15.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.15.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = haato.16
+	title = haato.16.t
+	desc = haato.16.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.16.a	#Yes
+		ai_chance = { factor = 20 }
+		HTO = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = haato.16.b	#No 
+		ai_chance = { factor = 80 }
+		HTO = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = haato.17
+	title = haato.17.t
+	desc = haato.17.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.17.a	#Yes
+		ai_chance = { factor = 50 }
+		HTO = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = haato.17.b	#No 
+		ai_chance = { factor = 50 }
+		HTO = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = haato.19
+	title = haato.19.t
+	desc = haato.19.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.19.a	#Yes
+		ai_chance = { factor = 40 }
+		HTO = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = haato.19.b	#No 
+		ai_chance = { factor = 60 }
+		HTO = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = haato.20
+	title = haato.20.t
+	desc = haato.20.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.20.a	#Yes
+		ai_chance = { factor = 90 }
+		HTO = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.20.b	#No 
+		ai_chance = { factor = 10 }
+		HTO = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = haato.21
+	title = haato.21.t
+	desc = haato.21.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.21.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.21.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = haato.22
+	title = haato.22.t
+	desc = haato.22.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.22.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = haato.22.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = haato.23
+	title = haato.23.t
+	desc = haato.23.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.23.a	#Yes
+		ai_chance = { factor = 70 }
+		HTO = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = haato.23.b	#No 
+		ai_chance = { factor = 30 }
+		HTO = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Demand Estonia
+country_event = {
+	id = haato.24
+	title = haato.24.t
+	desc = haato.24.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.24.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = {transfer_state = 191
+		transfer_state = 13}
+		HTO = { country_event = { id = haato.25 }}
+	}
+	option = {
+		name = haato.24.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = haato.26 }}
+	}
+}
+
+#MAT yes Estonia
+country_event = {
+	id = haato.25
+	title = haato.25.t
+	desc = haato.25.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.25.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#MAT no Estonia
+country_event = {
+	id = haato.26
+	title = haato.26.t
+	desc = haato.26.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.26.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#Demand Florida
+country_event = {
+	id = haato.27
+	title = haato.27.t
+	desc = haato.27.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.27.a	#Yes
+		ai_chance = { factor = 80 }
+		HTO = { transfer_state = 366 }
+		HTO = { country_event = { id = haato.28 }}
+	}
+	option = {
+		name = haato.27.b	#No 
+		ai_chance = { factor = 20 }
+		HTO = { country_event = { id = haato.29 }}
+	}
+}
+
+#COC yes Florida
+country_event = {
+	id = haato.28
+	title = haato.28.t
+	desc = haato.28.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.28.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#COC no Florida
+country_event = {
+	id = haato.29
+	title = haato.29.t
+	desc = haato.29.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.29.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#Propose Para-officer training
+country_event = {
+	id = haato.30
+	title = haato.30.t
+	desc = haato.30.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.30.a	#Yes
+		ai_chance = { factor = 100 }
+create_corps_commander = {
+	name = "Haachama"
+	portrait_path = "gfx/leaders/HTO/haato_fas.dds"
+	traits = { inflexible_strategist trait_cautious }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+		HTO = { country_event = { id = haato.31 }}
+	}
+	option = {
+		name = haato.30.b	#No 
+		ai_chance = { factor = 0 }
+		HTO = { country_event = { id = haato.32 }}
+	}
+}
+
+#CHC yes training
+country_event = {
+	id = haato.31
+	title = haato.31.t
+	desc = haato.31.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.31.a	#Yes
+		ai_chance = { factor = 80 }
+
+create_corps_commander = {
+	name = "Choco"
+	portrait_path = "gfx/leaders/CHC/choco_fas.dds"
+	traits = { trait_cautious infantry_leader }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+	}
+}
+
+
+#CHC no training
+country_event = {
+	id = haato.32
+	title = haato.32.t
+	desc = haato.32.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.32.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#Invite to classroom
+country_event = {
+	id = haato.33
+	title = haato.33.t
+	desc = haato.33.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.33.a	#Yes
+		ai_chance = { factor = 60 }
+		HTO = { add_to_faction = ROOT }
+		add_opinion_modifier = {
+		    target = HTO
+		    modifier = faction_unity_opinion
+		    }
+
+		HTO = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+
+		if = { limit = { original_tag = MIO }
+		HTO = {country_event = {id = haato.34}}}
+
+		if = { limit = { original_tag = MAT }
+		HTO = {country_event = {id = haato.36}}}
+
+		if = { limit = { original_tag = MAR }
+		HTO = {country_event = {id = haato.38}}}
+
+		if = { limit = { original_tag = MIK }
+		HTO = {country_event = {id = haato.40}}}
+
+		if = { limit = { original_tag = COC }
+		HTO = {country_event = {id = haato.42}}}
+	}
+	option = {
+		name = haato.33.b	#No 
+		ai_chance = { factor = 40 }
+
+		if = { limit = { original_tag = MIO }
+		HTO = {country_event = {id = haato.35}}}
+
+		if = { limit = { original_tag = MAT }
+		HTO = {country_event = {id = haato.37}}}
+
+		if = { limit = { original_tag = MAR }
+		HTO = {country_event = {id = haato.39}}}
+
+		if = { limit = { original_tag = MIK }
+		HTO = {country_event = {id = haato.41}}}
+
+		if = { limit = { original_tag = COC }
+		HTO = {country_event = {id = haato.43}}}
+	}
+}
+
+
+#MIO yes Classroom
+country_event = {
+	id = haato.34
+	title = haato.34.t
+	desc = haato.34.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.34.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#MIO no Classroom
+country_event = {
+	id = haato.35
+	title = haato.35.t
+	desc = haato.35.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.35.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#MAT yes Classroom
+country_event = {
+	id = haato.36
+	title = haato.36.t
+	desc = haato.36.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.36.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#MAT no Classroom
+country_event = {
+	id = haato.37
+	title = haato.37.t
+	desc = haato.37.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.37.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#MAR yes Classroom
+country_event = {
+	id = haato.38
+	title = haato.38.t
+	desc = haato.38.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.38.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#MAR no Classroom
+country_event = {
+	id = haato.39
+	title = haato.39.t
+	desc = haato.39.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.39.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#MIK yes Classroom
+country_event = {
+	id = haato.40
+	title = haato.40.t
+	desc = haato.40.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.40.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#MIK no Classroom
+country_event = {
+	id = haato.41
+	title = haato.41.t
+	desc = haato.41.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.41.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#COC yes Classroom
+country_event = {
+	id = haato.42
+	title = haato.42.t
+	desc = haato.42.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.42.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+
+#COC no Classroom
+country_event = {
+	id = haato.43
+	title = haato.43.t
+	desc = haato.43.d
+	picture = GFX_report_event_coco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.43.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#Demand Australia
+country_event = {
+	id = haato.44
+	title = haato.44.t
+	desc = haato.44.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.44.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = { transfer_state = 674
+		transfer_state = 520
+		transfer_state = 522
+		transfer_state = 519
+		transfer_state = 517
+		transfer_state = 285
+		transfer_state = 521
+		transfer_state = 518}
+		HTO = { country_event = { id = haato.45 }}
+		
+	}
+	option = {
+		name = haato.44.b	#No 
+		ai_chance = { factor = 0 }
+		HTO = { country_event = { id = haato.46 }}
+	}
+}
+
+#OKA yes AST
+country_event = {
+	id = haato.45
+	title = haato.45.t
+	desc = haato.45.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.45.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#OKA no AST
+country_event = {
+	id = haato.46
+	title = haato.46.t
+	desc = haato.46.d
+	picture = GFX_report_event_okayu_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.46.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#Demand annex PHI
+country_event = {
+	id = haato.47
+	title = haato.47.t
+	desc = haato.47.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.47.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = { 
+		    annex_country = {
+		    target = ROOT
+		    transfer_troops = no }
+		    }
+		HTO = { country_event = { id = haato.48 }}
+		
+	}
+	option = {
+		name = haato.47.b	#No 
+		ai_chance = { factor = 0 }
+		HTO = { country_event = { id = haato.49 }}
+	}
+}
+
+#PHI yes Annex
+country_event = {
+	id = haato.48
+	title = haato.48.t
+	desc = haato.48.d
+	picture = GFX_report_event_phi_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.48.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#PHI no Annex
+country_event = {
+	id = haato.49
+	title = haato.49.t
+	desc = haato.49.d
+	picture = GFX_report_event_phi_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.49.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#WAT-HTO Union
+country_event = {
+	id = haato.50
+	title = haato.50.t
+	desc = haato.50.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.50.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = { create_faction = HTO_WAT_union_faction }
+		HTO = { country_event = { id = haato.51 }}
+		
+	}
+	option = {
+		name = haato.50.b	#No 
+		ai_chance = { factor = 0 }
+		HTO = { country_event = { id = haato.52 }}
+	}
+}
+
+#WAT yes union
+country_event = {
+	id = haato.51
+	title = haato.51.t
+	desc = haato.51.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.51.a	#Yes
+		ai_chance = { factor = 80 }
+		add_opinion_modifier = {
+		    target = WAT
+		    modifier = faction_unity_opinion
+		    }
+		WAT = {add_opinion_modifier = {
+		    target = HTO
+		    modifier = faction_unity_opinion
+		    }}
+		HTO = { add_to_faction = WAT }
+	}
+}
+
+#WAT no union
+country_event = {
+	id = haato.52
+	title = haato.52.t
+	desc = haato.52.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.52.a	#Yes
+		ai_chance = { factor = 80 }
+	}
+}
+
+#HTO - Pacific Alliance (With Watame)
+country_event = {
+	id = haato.53
+	title = haato.53.t
+	desc = haato.53.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.53.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = { create_faction = FACTION_HTO_Pacific_Alliance }
+		HTO = { add_to_faction = WAT }
+		HTO = { country_event = { id = proposed.89 }}
+		hidden_effect = {
+			news_event = { id = holo_news.55 days = 1}
+		}
+		
+	}
+	option = {
+		name = haato.53.b	#No 
+		ai_chance = { factor = 0 }
+		HTO = { country_event = { id = proposed.90 }}
+	}
+}
+
+#HTO - Demand puppet
+country_event = {
+	id = haato.54
+	title = haato.54.t
+	desc = haato.54.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.54.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = { puppet = WAT }
+		if = {
+			limit = { tag = WAT }
+			HTO = { country_event = { id = proposed.89 }}
+		}
+		
+	}
+	option = {
+		name = haato.54.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = WAT }
+			HTO = { country_event = { id = proposed.90 }}
+		}
+	}
+}
+
+#HTO - English Class
+country_event = {
+	id = haato.55
+	title = haato.55.t
+	desc = haato.55.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = haato.55.a	#Yes
+		ai_chance = { factor = 90 }
+		add_offsite_building = { type = industrial_complex level = 1 }
+		HTO = {add_equipment_to_stockpile = {
+				    type = hololive_yen_0
+				    amount = 1000
+				    producer = ROOT
+			    }}
+
+	}
+	option = {
+		name = haato.55.b	#No 
+		ai_chance = { factor = 10 }
+
+	}
+}
+
+#HTO - Haachama Sunday
+country_event = {
+	id = haato.56
+	title = haato.56.t
+	desc = haato.56.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = haato.56.a	#Yes
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = { tag = HTO }
+			}
+			add_ideas = black_sunday_idea
+		}
+		custom_effect_tooltip = CET_event_haato_56
+	}
+}
+
+#HTO - Solomon islands purchase
+country_event = {
+	id = haato.57
+	title = haato.57.t
+	desc = haato.57.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = haato.57.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = {transfer_state = 634}
+		if = {
+			limit = {
+				owns_state = 734
+			}
+			HTO = {transfer_state = 734}
+		}
+		if = {
+			limit = {
+				owns_state = 635
+			}
+			HTO = {transfer_state = 635}
+		}
+
+		HTO = {
+			country_event = {
+				id = haato.58
+			}
+		}
+			add_equipment_to_stockpile = {
+                type = hololive_yen_0
+                amount = 20000
+                producer = ROOT
+            }
+	}
+
+	option = {
+		name = haato.57.b	#Yes
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#HTO - Solomon islands purchase COMPLETE
+country_event = {
+	id = haato.58
+	title = haato.58.t
+	desc = haato.58.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = haato.58.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#HTO - Haachama coup
+country_event = {
+	id = haato.59
+	title = haato.59.t
+	desc = haato.59.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = haato.59.a	#Yes
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = CET_event_HTO_59_a
+		hidden_effect = {
+			#Haachama rebel
+            start_civil_war = {
+                ruling_party = fascism
+                ideology = ROOT
+                size = 0.4
+                states = { 
+                    285 517 521 518 284
+                }
+            }
+            set_cosmetic_tag = HTO_haachama
+            retire_ideology_leader = neutrality
+         			create_country_leader = {
+         			name = "Akai Haato"
+         			picture = "gfx/leaders/HTO/haato_neu.dds"
+         			expire = "1965.1.1"
+         			ideology = centrism
+         			traits = {
+         				tsundere
+         				}
+         			}
+		}
+		hidden_effect = {
+		    retire_ideology_leader = fascism
+			create_country_leader = {
+			name = "Haachama"
+			picture = "gfx/leaders/HTO/haachama.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				sassy_kouhai_trait
+				}
+			}
+		}
+		clr_country_flag = Player_can_com_advisor
+		clr_country_flag = Player_can_dem_advisor
+		add_ideas = recovering_from_black_sunday_idea
+	}
+
+	option = {
+		name = haato.59.b	#Yes
+		ai_chance = { factor = 0 }
+		#Central Gov Haato
+		custom_effect_tooltip = CET_event_HTO_59_b
+        hidden_effect = {   
+         	start_civil_war = {
+                ruling_party = ROOT
+                ideology = fascism
+                size = 0.4
+                states = { 
+                    522 519 674 520 723
+                }
+                    retire_ideology_leader = fascism
+         			create_country_leader = {
+         			name = "Haachama"
+         			picture = "gfx/leaders/HTO/haachama.dds"
+         			expire = "1965.1.1"
+         			ideology = fascism_ideology
+         			traits = {
+         				sassy_kouhai_trait
+         				}
+         			}
+         			add_manpower = 100000
+         			add_offsite_building = { type = industrial_complex level = 3 }
+         			add_offsite_building = { type = arms_factory level = 3 }
+            }
+        }
+	}
+}
+
+#HTO - Invite to faction
+country_event = {
+	id = haato.60
+	title = haato.60.t
+	desc = haato.60.d
+	picture = GFX_report_event_haato_generic1
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = haato.60.a	#Yes
+		ai_chance = { factor = 100 }
+		HTO = {
+			add_to_faction = ROOT
+		}
+		if = {
+			limit = { tag = WAT }
+			HTO = { country_event = { id = proposed.89 }}
+		}
+
+		if = {
+			limit = { tag = MIK }
+			HTO = { country_event = { id = proposed.53 }}
+		}
+	}
+
+	option = {
+		name = haato.60.b	#Yes
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = WAT }
+			HTO = { country_event = { id = proposed.90 }}
+		}
+
+		if = {
+			limit = { tag = MIK }
+			HTO = { country_event = { id = proposed.54 }}
+		}
+	}
+}

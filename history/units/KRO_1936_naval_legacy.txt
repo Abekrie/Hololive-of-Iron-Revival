@@ -1,0 +1,67 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Kronii Fleet"		
+		naval_base = 3151
+
+		task_force = {				
+			name = "Kronii Force"			
+			location = 3151	
+
+			ship = { name = "Timer 1" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Timer 2" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Timer 3" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = LUN } } }
+
+			ship = { name = "Kronii 1" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = LAM } } }
+
+			ship = { name = "Kronii 2" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = LAM } } }
+
+			ship = { name = "Kronii 3" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = LAM } } }
+
+			ship = { name = "Kronii 4" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = LAM } } }
+
+			ship = { name = "Kronii 5" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = LAM } } }
+
+			ship = { name = "Baltic 1" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = MAT } } }	
+
+			ship = { name = "Baltic 2" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = MAT } } }	
+
+			ship = { name = "Baltic 3" 
+			definition = submarine 
+			equipment = { submarine_1 = { amount = 1 owner = MAT } } }
+		}			
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

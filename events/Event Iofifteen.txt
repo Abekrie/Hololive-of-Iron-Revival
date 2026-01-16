@@ -1,0 +1,139 @@
+add_namespace = iof
+
+#Iof yes ICC
+country_event = {
+	id = iof.1
+	title = iof.1.t
+	desc = iof.1.d
+	picture = GFX_report_event_iof_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iof.1.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Iof no ICC
+country_event = {
+	id = iof.2
+	title = iof.2.t
+	desc = iof.2.d
+	picture = GFX_report_event_iof_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iof.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#IOF - Buy Bismarck Islands
+country_event = {
+	id = iof.20
+	title = iof.20.t
+	desc = iof.20.d
+	picture = GFX_report_event_iof_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iof.20.a
+		ai_chance = { factor = 100 }
+		IOF = {transfer_state = 737}
+		GAW = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 8000
+		    producer = IOF
+	    }
+		}
+
+		IOF = {
+			country_event = { id = proposed.27 }
+		}
+	}
+
+	option = {
+		name = iof.20.b
+		ai_chance = { factor = 0 }
+
+		IOF = {
+			country_event = { id = proposed.28 }
+		}
+	}
+}
+
+#IOF - Seek to Join faction
+country_event = {
+	id = iof.21
+	title = iof.21.t
+	desc = iof.21.d
+	picture = GFX_report_event_iof_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iof.21.a
+		ai_chance = { factor = 100 }
+		add_to_faction = IOF
+
+		if = {
+			limit = { tag = AQA }
+			IOF = { country_event = { id = proposed.3 }}
+		}
+	}
+
+	option = {
+		name = iof.21.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = AQA }
+			IOF = { country_event = { id = proposed.4 }}
+		}
+	}
+}
+
+#IOF - Demand puppet
+country_event = {
+	id = iof.22
+	title = iof.22.t
+	desc = iof.22.d
+	picture = GFX_report_event_iof_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = iof.22.a
+		ai_chance = { factor = 100 }
+		IOF = {puppet = MOO}
+
+		if = {
+			limit = { tag = MOO }
+			IOF = { country_event = { id = proposed.57 }}
+		}
+	}
+
+	option = {
+		name = iof.22.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MOO }
+			IOF = { country_event = { id = proposed.58 }}
+		}
+	}
+}

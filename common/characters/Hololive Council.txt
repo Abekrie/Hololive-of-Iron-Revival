@@ -1,0 +1,230 @@
+
+characters={
+KRO_ouro_kronii_general = {
+     name="Kronii"
+     portraits={
+           army={
+                 large="gfx/leaders/KRO/kronii_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero trickster}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 4
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+KRO_ouro_kronii_admiral = {
+     name="Ouro"
+     portraits={
+           army={
+                 large="gfx/leaders/KRO/kronii_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector superior_tactician}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+FAU_ceres_fauna_general = {
+     name="Fauna"
+     portraits={
+           army={
+                 large="gfx/leaders/FAU/fauna_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={brilliant_strategist infantry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 4
+     }
+
+}
+
+FAU_ceres_fauna_admiral = {
+     name="Ceres"
+     portraits={
+           army={
+                 large="gfx/leaders/FAU/fauna_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert caustic_personality}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 4
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+BAL_baelz_hakos_general = {
+     name="Baelz"
+     portraits={
+           army={
+                 large="gfx/leaders/BAL/baelz_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={skilled_staffer commando}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+BAL_baelz_hakos_admiral = {
+     name="Hakos"
+     portraits={
+           army={
+                 large="gfx/leaders/BAL/baelz_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 4
+           coordination_skill = 2
+     }
+
+}
+}
+
+characters={
+MUM_nanashi_mumei_general = {
+     name="Mumei"
+     portraits={
+           army={
+                 large="gfx/leaders/MUM/mumei_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={war_hero career_officer}
+           skill = 4
+           attack_skill = 3
+           defense_skill = 4
+           planning_skill = 2
+           logistics_skill = 3
+     }
+
+}
+
+MUM_nanashi_mumei_admiral = {
+     name="Nanashi"
+     portraits={
+           army={
+                 large="gfx/leaders/MUM/mumei_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={career_officer gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 3
+           maneuvering_skill = 2
+           coordination_skill = 4
+     }
+
+}
+}
+
+characters={
+SAN_tsukumo_sana_general = {
+     name="Sana"
+     portraits={
+           army={
+                 large="gfx/leaders/SAN/sana_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious commando}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+SAN_tsukumo_sana_admiral = {
+     name="Tsukuno"
+     portraits={
+           army={
+                 large="gfx/leaders/SAN/sana_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality old_guard_navy}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

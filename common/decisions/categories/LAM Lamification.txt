@@ -1,0 +1,25 @@
+LAM_lamification_category = {
+	priority = 100
+	icon = SOV_propaganda
+
+	scripted_gui = lamy_lamification_decision_ui
+
+	allowed = {
+		
+	}
+
+	on_map_area = {
+		
+		targets = { 2 289 395 248 }
+
+		target_trigger = {
+			#is_capital = yes 
+		}
+		name = lamy_select_lamify_target_view
+		zoom = 850
+
+		target_trigger = {
+			NOT = {has_global_flag = has_targeted_by_lamy_lamification}
+		}
+	}
+}

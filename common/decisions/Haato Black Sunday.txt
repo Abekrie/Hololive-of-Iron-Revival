@@ -1,0 +1,300 @@
+black_sunday_decision_category = {
+	black_sunday_send_troops_back_home_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+			OR = {
+				has_idea = black_sunday_idea
+				has_idea = recovering_from_black_sunday_idea
+				}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ongoing_black_sunday_removal
+			}
+			has_manpower > 99999
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			add_manpower = -100000
+			set_country_flag = ongoing_black_sunday_removal
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_black_sunday_removal
+			if = {
+				limit = { has_idea = black_sunday_idea }
+				swap_ideas = {
+    				remove_idea = black_sunday_idea
+    				add_idea = recovering_from_black_sunday_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_black_sunday_idea }
+    			remove_ideas = recovering_from_black_sunday_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	black_sunday_introduce_a_new_currency_dec = {
+
+		icon = ger_mefo_bills
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+			OR = {
+				has_idea = black_sunday_idea
+				has_idea = recovering_from_black_sunday_idea
+				}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ongoing_black_sunday_removal
+			}
+			has_equipment = {
+    			hololive_yen_0 > 2999
+			}
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                type = hololive_yen_0
+                amount = -3000
+            }
+			set_country_flag = ongoing_black_sunday_removal
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_black_sunday_removal
+			if = {
+				limit = { has_idea = black_sunday_idea }
+				swap_ideas = {
+    				remove_idea = black_sunday_idea
+    				add_idea = recovering_from_black_sunday_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_black_sunday_idea }
+    			remove_ideas = recovering_from_black_sunday_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	black_sunday_public_work_programs_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+			OR = {
+				has_idea = black_sunday_idea
+				has_idea = recovering_from_black_sunday_idea
+				}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ongoing_black_sunday_removal
+			}
+			industrial_complex > 9
+		}
+
+		days_remove = 35
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		complete_effect = {
+			set_country_flag = ongoing_black_sunday_removal
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_black_sunday_removal
+			if = {
+				limit = { has_idea = black_sunday_idea }
+				swap_ideas = {
+    				remove_idea = black_sunday_idea
+    				add_idea = recovering_from_black_sunday_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_black_sunday_idea }
+    			remove_ideas = recovering_from_black_sunday_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	black_sunday_support_worker_union_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 50
+
+		visible = {
+			OR = {
+				has_idea = black_sunday_idea
+				has_idea = recovering_from_black_sunday_idea
+				}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ongoing_black_sunday_removal
+			}
+		}
+
+		days_remove = 35
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			add_war_support = -0.1
+			add_stability = -0.15
+			set_country_flag = ongoing_black_sunday_removal
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_black_sunday_removal
+			if = {
+				limit = { has_idea = black_sunday_idea }
+				swap_ideas = {
+    				remove_idea = black_sunday_idea
+    				add_idea = recovering_from_black_sunday_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_black_sunday_idea }
+    			remove_ideas = recovering_from_black_sunday_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	black_sunday_rally_for_work_dec = {
+
+		icon = generic_civil_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 250
+
+		visible = {
+			OR = {
+				has_idea = black_sunday_idea
+				has_idea = recovering_from_black_sunday_idea
+				}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ongoing_black_sunday_removal
+			}
+		}
+
+		days_remove = 35
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			set_country_flag = ongoing_black_sunday_removal
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_black_sunday_removal
+			if = {
+				limit = { has_idea = black_sunday_idea }
+				swap_ideas = {
+    				remove_idea = black_sunday_idea
+    				add_idea = recovering_from_black_sunday_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = recovering_from_black_sunday_idea }
+    			remove_ideas = recovering_from_black_sunday_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

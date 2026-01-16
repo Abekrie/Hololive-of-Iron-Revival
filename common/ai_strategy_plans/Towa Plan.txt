@@ -1,0 +1,55 @@
+Generic_TOW_historical = {
+	name = "TOW historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = TOW
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = TOW
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		tokoyami_towa_tow_focus
+		tokyo_tower_tow_focus
+		aegean_sea_dispute_tow_focus
+		tnt_prank_tow_focus
+		palette_tow_focus
+		currency_reform_tow_focus
+
+		towa_maji_tenshi_tow_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+
+

@@ -1,0 +1,48 @@
+Generic_NEN_historical = {
+	name = "NEN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = NEN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = NEN
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		momosuzu_nene_nen_focus
+		continue_nene_regime_nen_focus
+		nenemax_nen_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

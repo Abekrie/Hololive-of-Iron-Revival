@@ -1,0 +1,51 @@
+Generic_MEL_historical = {
+	name = "MEL historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = MEL
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = MEL
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		MEL_hololive_memba
+		MEL_follow_the_policy
+		MEL_yagoos_dream
+
+		MEL_banana_republic_LatinAmerica_focus
+		yozora_mel_mel_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

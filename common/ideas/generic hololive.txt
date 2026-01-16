@@ -1,0 +1,185 @@
+ideas = {
+    country = {
+	    unlimited_manpower_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+			
+			modifier = {
+			    conscription = 0.025
+			    non_core_manpower = 0.2
+			    MONTHLY_POPULATION = 0.5
+			}
+		}
+
+		national_building_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_reform
+
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.85
+			    local_resources_factor = 0.3
+			}
+		}
+
+		big_brain_education_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+			    research_speed_factor = 0.1
+			    agency_upgrade_time = -0.15
+			    decryption_factor = 0.5
+			}
+		}
+
+		exploit_the_earth_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+
+			removal_cost = -1
+			
+			modifier = {
+			    local_resources_factor = 0.10
+			    political_power_gain = 0.2
+			    production_speed_industrial_complex_factor = 0.10
+			}
+		}
+
+		islands_fortress_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_sea_focused_navy
+
+			removal_cost = -1
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			modifier = {
+			    experience_gain_navy_factor = 0.5
+			    amphibious_invasion = 0.20
+			    production_speed_dockyard_factor = 0.50
+			    fuel_gain = 100
+			}
+		}
+
+		tropical_paradise_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+
+			removal_cost = -1
+
+			research_bonus = {
+				
+			}
+			
+			modifier = {
+			    heat_attrition_factor = -0.20
+			    terrain_penalty_reduction = 0.15
+			    org_loss_when_moving = -0.2
+			    production_speed_supply_node_factor = 0.5
+			}
+		}
+
+		dragon_region_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = man_low_legitimacy5
+
+			removal_cost = -1
+
+			research_bonus = {
+				
+			}
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.15
+			    refit_speed = 0.5
+			    political_power_factor = 0.1
+			    industrial_capacity_factory = 0.1
+			    industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		pre_degenerate_era_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_scientist_defect
+
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = 0.1
+			    political_power_factor = -0.1
+			}
+		}
+	}
+}

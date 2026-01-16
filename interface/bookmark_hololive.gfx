@@ -1,0 +1,14 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_select_date_hololive"
+		texturefile = "gfx/interface/select_date_hololive.dds"	
+	}
+	SpriteType = {
+		name = "GFX_select_date_hololive2"
+		texturefile = "gfx/interface/select_date_hololive2.dds"	
+	}
+
+}

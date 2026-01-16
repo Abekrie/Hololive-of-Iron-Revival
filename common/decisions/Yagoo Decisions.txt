@@ -1,0 +1,103 @@
+yagoo_colonial_empire_decision_category = {
+
+	yagoo_develop_our_colony_dec = {
+
+		icon = generic_construction
+
+		days_re_enable = 180
+
+		allowed = {
+			
+		}
+
+		available = {
+			ACH = {
+				is_puppet_of = ROOT
+			}
+		}
+
+		cost = 125
+
+		visible = {
+		    tag = YAG
+		    has_country_flag = Yagoo_can_colonial_empire
+		    #NOT = { has_country_flag =  }
+		}
+
+		complete_effect = {
+
+		ACH = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+		   		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+		   		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	yagoo_encourage_settlement_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 270
+
+		allowed = {
+			
+		}
+
+		available = {
+			ACH = {
+				is_puppet_of = ROOT
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = YAG
+		    has_country_flag = Yagoo_can_colonial_empire
+		    #NOT = { has_country_flag =  }
+		}
+
+		complete_effect = {
+
+			ACH = {
+				add_manpower = 50000
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+	
+
+}

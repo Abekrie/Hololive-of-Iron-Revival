@@ -1,0 +1,170 @@
+﻿division_template = {
+	name = "Resistance Infantry"		
+
+	division_names_group = AQA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		
+	}
+}
+
+division_template = {
+	name = "Resistance Garrison Battalion"		
+
+	division_names_group = AQA_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Aqua Crew"		
+
+	division_names_group = AQA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Aqua Navy Seal"		
+
+	division_names_group = AQA_MAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+}
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 12717
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 12005
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 4998
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 1978
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 10843
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 6
+    }
+    location = 11955
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 7
+    }
+    location = 8036
+    division_template ="Resistance Infantry"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 7
+    }
+    location = 10833
+    division_template ="Aqua Crew"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+}
+
+air_wings = {
+	439 = {
+		fighter_equipment_0 =  {
+			owner = "AQA" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {
+			owner = "AQA" 
+			amount = 200
+		}
+	}
+}

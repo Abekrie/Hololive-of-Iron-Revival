@@ -1,0 +1,89 @@
+guardian_of_civilization_category = {
+
+	mumei_seven_poetry_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MUM}
+		    has_country_flag = mumei_can_seven_poetry
+		}
+
+		days_remove = 75
+
+		complete_effect = {
+			add_timed_idea = {
+                	idea = seven_poetry_mum_idea
+                	days = 30
+            	}
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	mumei_seven_deadly_sin_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MUM}
+		    has_country_flag = mumei_can_seven_deadly_sin
+		}
+
+		days_remove = 75
+
+		complete_effect = {
+			add_timed_idea = {
+                	idea = seven_deadly_sin_mum_idea
+                	days = 30
+            	}
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+

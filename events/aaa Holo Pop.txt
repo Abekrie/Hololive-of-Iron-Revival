@@ -1,0 +1,189 @@
+add_namespace = holo_pop
+
+#Ayame - Gura as puppet
+country_event = {
+	id = holo_pop.1
+	title = holo_pop.1.t
+	desc = holo_pop.1.d
+	picture = GFX_report_event_gura_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = AYA
+    	GAW = { is_puppet_of = ROOT }
+    	NOT = {
+    		owns_state = 327
+    	}
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.1.a	#Yes
+		ai_chance = { factor = 100 }
+		create_corps_commander = {
+			name = "Kimono Clad Gura"
+			portrait_path = "gfx/leaders/GAW/ayame_kimono.dds"
+			traits = { old_guard politically_connected }
+			skill =4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}
+
+#Ina - Welcome back to Korea
+country_event = {
+	id = holo_pop.2
+	title = holo_pop.2.t
+	desc = holo_pop.2.d
+	picture = GFX_report_event_ina_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = NIN
+    	has_full_control_of_state = 527
+    	has_full_control_of_state = 525
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.2.a	#Yes
+		ai_chance = { factor = 100 }
+		add_state_core = 527
+		add_state_core = 525
+	}
+}
+
+#Watson - Evacuate London
+country_event = {
+	id = holo_pop.3
+	title = holo_pop.3.t
+	desc = holo_pop.3.d
+	picture = GFX_report_event_amelia_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = WTS
+    	owns_state = 7
+    	has_full_control_of_state = 7
+    	NOT = { has_full_control_of_state = 126 }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.3.a	#Yes
+		ai_chance = { factor = 100 }
+		set_capital = { state = 7 }
+	}
+
+	option = {
+		name = holo_pop.3.b	#Yes
+		ai_chance = { factor = 0 }
+		add_war_support = 0.05
+	}
+}
+
+#Kronii - Welcome back to Korea
+country_event = {
+	id = holo_pop.4
+	title = holo_pop.4.t
+	desc = holo_pop.4.d
+	picture = GFX_report_event_kronii_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KRO
+    	has_full_control_of_state = 527
+    	has_full_control_of_state = 525
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.4.a	#Yes
+		ai_chance = { factor = 100 }
+		add_state_core = 527
+		add_state_core = 525
+	}
+}
+
+#Calliope - Calli-fornia
+country_event = {
+	id = holo_pop.5
+	title = holo_pop.5.t
+	desc = holo_pop.5.d
+	picture = GFX_report_event_calliope_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = MRI
+    	owns_state = 378
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.5.a	#Yes
+		ai_chance = { factor = 100 }
+		add_state_core = 378
+		378 = {
+			set_state_name = "Calli-fornia"
+		}
+	}
+}
+
+#Kiara - New Leader of FFUF
+country_event = {
+	id = holo_pop.6
+	title = holo_pop.6.t
+	desc = holo_pop.6.d
+	picture = GFX_report_event_kiara_generic1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KIA
+    	surrender_progress > 0.4
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = holo_pop.6.a	#Yes
+		ai_chance = { factor = 100 }
+		trigger = {
+			MRI = { is_in_faction_with = ROOT }
+		}
+		MRI = { set_faction_leader = yes }
+	}
+	option = {
+		name = holo_pop.6.n	#Yes
+		ai_chance = { factor = 100 }
+		trigger = {
+			NIN = { is_in_faction_with = ROOT }
+		}
+		NIN = { set_faction_leader = yes }
+	}
+}

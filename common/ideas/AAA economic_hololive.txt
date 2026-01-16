@@ -1,0 +1,67 @@
+ideas = {
+
+	economy = {
+		law = yes
+		use_list_view = yes
+
+		cartel_economy = {
+
+			allowed = {
+				OR = {
+					tag = COC
+					tag = KAN
+					tag = BAL
+					}
+			}
+
+			available = {
+				has_country_flag = can_use_cartel_economy
+				has_war_support > 0.35
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.30
+				conversion_cost_civ_to_mil_factor= -0.1
+				fuel_gain_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	economy = {
+		law = yes
+		use_list_view = yes
+
+		entertainment_economy = {
+
+			allowed = {
+				OR = {
+					tag = SOR
+					tag = SUI
+					}
+			}
+
+			available = {
+				has_country_flag = can_use_entertainment_economy
+				has_war_support > 0.50
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.30
+				conversion_cost_mil_to_civ_factor= -0.5
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -1,0 +1,53 @@
+Generic_MIK_historical = {
+	name = "MIK historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = MIK
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = MIK
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		sakura_miko_mik_focus
+		recover_from_fire_disaster_mik_focus
+		pass_the_reconstruction_bill_mik_focus
+		execute_low_credit_citizen_mik_focus
+		sakurakaze_mik_focus
+		the_true_maiden_mik_focus
+		foreign_policy_mik_focus
+		join_english_class_mik_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

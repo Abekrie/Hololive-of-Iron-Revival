@@ -1,0 +1,273 @@
+bookmarks = {
+	bookmark = {
+		name = "HOLO_STORM_NAME"
+		desc = "HOLO_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_hololive"
+		default_country = "FBK"
+		default = yes
+		
+		"NOE"={
+			history = "NOE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				unlimited_manpower_1
+				multi_ethnics_nation_idea
+				land_of_corruption_idea
+			}
+			focuses = {
+			    shirogane_shogunate_noe_focus
+			    order_of_shirogane_noe_focus
+			    crusade_for_the_holy_land_noe_focus
+			}
+		}
+
+		"SUI"={
+			history = "SUI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				exploit_the_earth_1
+				axe_producer_idea
+				partially_disarmed_ns
+			}
+			focuses = {
+				reign_of_psycopath_sui_focus
+				holymachi_empire_sui_focus
+				sister_takeover_sui_focus
+			}
+		}
+		"AQA"={
+			history = "AQA_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				unlimited_manpower_1
+				femine_hololive_idea
+			}
+			focuses = {
+				dawn_of_resistance_aqa_focus
+				akukin_kensetsu_aqa_focus
+				union_of_aquaist_republics_aqa_focus
+			}
+		}
+
+		"FBK"={
+			history = "FBK_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				exploit_the_earth_1
+				worker_strike_holo_ns
+			}
+			focuses = {
+				shitposting_queen_fbk_focus
+				church_of_the_northern_fox_fbk_focus
+				kurohiko_union_fbk_focus
+			}
+		}
+		
+		"MAT"={
+			history = "MAT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				exploit_the_earth_1
+			}	
+			focuses = {
+				i_am_hololive_mat_focus
+				new_prussia_mat_focus
+				dark_side_of_hololive_mat_focus
+			}		
+		}
+		"PEK"={
+			history = "PEK_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				exploit_the_earth_1
+				war_criminal_in_the_state_ns
+				full_disarmed_ns
+			}	
+			focuses = {
+				greater_pekoland_pek_focus
+				peko_royalist_assembly_pek_focus
+				usada_kensetsu_pek_focus
+			}			
+		}
+		"RUS"={
+			history = "RUS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				unlimited_manpower_1
+				limited_by_the_policy_idea
+			}
+			focuses = {
+				nekomancer_rus_focus
+				wall_rushia_rus_focus
+				soviet_rushia_rus_focus
+			}	
+		}
+
+
+		# minors from DLC ####
+		
+
+		#"OKA"={
+		#   minor = yes
+		#	history = "OKA_GATHERING_STORM_DESC"
+		#	ideology = neutrality
+		#	ideas = {
+		#	    big_brain_education_1
+		#	}
+		#	focuses = {
+		#	
+		#	}
+		#}
+
+		"WAT"={
+			history = "WAT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    tropical_paradise_1
+			    goat_of_galapagos_idea
+			}
+			focuses = {
+			    stalking_wife_wat_focus
+			    watame_shogunate_wat_focus
+			    watamerica_wat_focus
+			}
+		}
+
+		"MIK"={
+		   minor = yes
+			history = "MIK_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    exploit_the_earth_1
+			    fire_disaster_mik_idea
+			}
+			focuses = {
+			    sakurakaze_mik_focus
+			    the_true_maiden_mik_focus
+			    unholy_alliance_mik_focus
+			}
+		}
+
+		"KAN"={
+		   minor = yes
+			history = "KAN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    unlimited_manpower_1
+			    kanatanism_unpopular
+			}
+			focuses = {
+				national_presentation_kan_focus
+				goddess_kanata_kan_focus
+				kanata_heavenly_kingdom_kan_focus
+			}
+		}
+
+		"MAR"={
+		   minor = yes
+			history = "MAR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    mar_tactic_idea
+				mar_qmaster_idea
+				mar_bmaster_idea
+			}
+			focuses = {
+			    marine_pirate_federation_mar_focus
+			    church_of_the_marine_mar_focus
+			    master_of_the_sea_mar_focus
+			}
+		}
+
+		"HTO"={
+		   minor = yes
+			history = "HTO_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    islands_fortress_1
+				underpopulation_ns
+				crop_destruction_idea
+			}
+			focuses = {
+			    haachama_is_watching_you_hto_focus
+			    emu_cavalry_hto_focus
+			    australia_haachama_union_hto_focus
+			}
+		}
+
+		"WTS"={
+		   minor = yes
+			history = "WTS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    exploit_the_earth_1
+			    full_disarmed_ns
+			    bad_habit_ns
+			}
+			focuses = {
+			    director_amelia_wts_focus
+			    royalist_victory_wts_focus
+			    small_ame_wts_focus
+			}
+		}
+
+		"SHI"={
+		   minor = yes
+			history = "SHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    national_building_1
+			    foreign_debts_hololive_ns
+			}
+			focuses = {
+			    mage_of_violet_shi_focus
+			    aqua_shion_commonwealth_shi_focus
+			    shionist_federation_shi_focus
+			}
+		}
+
+		"CHC"={
+		   minor = yes
+			history = "CHC_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    exploit_the_earth_1
+				multi_ethnics_nation_idea
+				full_disarmed_ns
+			}
+			focuses = {
+			    succubus_entente_chc_focus
+			    seduction_warfare_chc_focus
+			    choco_sphere_chc_focus
+			}
+		}
+
+		"LAM"={
+		   minor = yes
+			history = "LAM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			    haters_among_us_idea
+			    winter_purge_idea
+				tweeur_of_bucharest_idea
+			}
+			focuses = {
+			    nyanmy_lam_focus
+			    tweeur_of_bucharest_lam_focus
+			    the_new_unylia_lam_focus
+			}
+		}
+
+		
+
+		
+
+		
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

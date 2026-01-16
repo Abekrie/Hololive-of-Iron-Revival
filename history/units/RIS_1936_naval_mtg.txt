@@ -1,0 +1,138 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Ayunda Fleet"		
+		naval_base = 7381
+		task_force = {				
+			name = "Risu Force"			
+			location = 7381 
+ship = { name = "Java 1 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Java 2 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Java 3 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Java 4 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+ 
+ship = { name = "Java 5 "
+definition = Destroyer
+equipment = { ship_hull_light_1 = { amount = 1 owner =
+ENG version_name = "V/W Class"
+} } }
+
+ship = { name = "Water Risu 1 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Water Risu 2 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Water Risu 3 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Water Risu 4 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Water Risu 5 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+	
+		}
+
+		task_force = {				
+			name = "Borneo Force"			
+			location = 4608 
+ship = { name = "Borneo 1 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 2 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 3 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 4 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 5 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 6 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 7 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Borneo 8 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+
+
+	
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

@@ -1,0 +1,62 @@
+Generic_IOF_historical = {
+	name = "IOF historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = IOF
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = IOF
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		IOF_hololive_indonesia_holoid_focus
+		IOF_emergency_war_industry_holoid_focus
+		IOF_stay_the_way_we_are_holoid_focus
+		IOF_purchase_foreign_arms_holoid_focus
+		IOF_print_money_holoid_focus
+
+		IOF_political_reform_holoid_focus
+		IOF_neutrality_focus_holoid_focus
+
+		airani_iofi_iofi_focus
+		import_food_iofi_focus
+		io_reinforcement_iofi_focus
+		aircraft_industry_iofi_focus
+		space_race_iofi_focus
+
+		IOF_continue_the_civil_war_holoid_focus
+
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

@@ -1,0 +1,96 @@
+Generic_MAT_historical = {
+	name = "MAT historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = MAT
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = MAT
+			}
+			is_historical_focus_on = yes
+			#is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		natsuiro_matsuri_mat_focus
+		regime_change_mat_focus
+
+
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_MAT_non_historical = {
+	name = "MAT non-historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = MAT
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = MAT
+			}
+			is_historical_focus_on = no
+			#is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		natsuiro_matsuri_mat_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

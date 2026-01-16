@@ -1,0 +1,39 @@
+ideas = {
+	aircraft_manufacturer = {
+					
+		air_company_kiwawa = {
+			
+			picture = kiara_kiwawa_small
+
+			allowed = {
+				OR =
+				{
+				original_tag = KIA
+				original_tag = AQA
+				#idkmatw
+				}
+			}
+
+			available = {
+				if = {
+					limit = { tag = KIA }
+					has_completed_focus = kiwawa_kia_focus
+				}
+				if = {
+					limit = { tag = AQA }
+					has_country_flag = aqua_can_kiwawa_airline
+				}
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+				extra_paratrooper_supply_grace = 96
+			}
+		}
+	}
+}

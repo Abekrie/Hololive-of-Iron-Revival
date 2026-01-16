@@ -1,0 +1,23 @@
+﻿l_english:
+LAM_lamification_category:0 "Lamification"
+lam_lamification_detail_cat:0 "Lamification is the process of turning someone into Lamy. The forbidden magic from Unylia is possessed by Yukihana Lamy. She has the ability to enter someone dream and turn them into her simp"
+lamy_select_target_country_for_lamification_dec:0 "Target §7[FROM.OWNER.GetName]§!"
+lamy_select_lamify_target_view:0 "Select a target country"
+lam_lamification_target_country:0 "Target Country:\n[GetLamyTargetLamify]"
+GetLamyTargetLamify_no:0 "---"
+GetLamyTargetLamify_yes:0 "§Y[?lamy_lamify_target_id.GetName]§! is our target"
+lam_lamification_level:0 "§CLamification§! Level: [GetLamyLamifyLevel]/4"
+GetLamyLamifyLevel:0 "§Y[?LAM.lamy_lamify_level]§!"
+
+increase_lamify:0 "§YIncrease§! 1 Level of §CLamification§!"
+decrease_lamify:0 "§YDecrease§! 1 Level of §CLamification§!"
+reset_lamify:0 "§YRemove§! 4 Level of §CLamification§!"
+
+lamy_choose_new_country_dec:0 "Choose new target"
+lamy_select_state_country_for_lamification_dec:0 "Lamify this state"
+LAM_level_4_tt:0 "Has §CLamification§! Level §Y4§!"
+
+lamy_fund_the_yuki_min_dec:0 "Fund the Yuki-min"
+lamy_construct_lamy_outpost_dec:0 "Construct Lamy outpost"
+lamy_arm_the_yuki_min_militia_dec:0 "Arm the Yuki-min Militia"
+lamy_send_lamy_missionaries_dec:0 "Send Lamissionary"

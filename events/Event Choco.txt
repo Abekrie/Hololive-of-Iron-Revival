@@ -1,0 +1,298 @@
+add_namespace = choco
+
+#choco yes
+country_event = {
+	id = choco.1
+	title = choco.1.t
+	desc = choco.1.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#choco no no-cb
+country_event = {
+	id = choco.2
+	title = choco.2.t
+	desc = choco.2.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Question of Ireland
+country_event = {
+	id = choco.3
+	title = choco.3.t
+	desc = choco.3.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.3.a
+		ai_chance = { factor = 50 }
+		add_political_power = -100
+		add_stability = -0.1
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		}
+	}
+
+	option = {
+		name = choco.3.b
+		ai_chance = { factor = 50 }
+		IRE = {
+			transfer_state = 134
+transfer_state = 135
+transfer_state = 119
+transfer_state = 113
+		}
+		CHC = { puppet = IRE }
+		hidden_effect = {
+			news_event = { id = holo_news.46 }
+		}
+	}
+}
+
+#Demand Wales
+country_event = {
+	id = choco.4
+	title = choco.4.t
+	desc = choco.4.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.4.a
+		ai_chance = { factor = 100 }
+		CHC = { transfer_state = 122 }
+		CHC = { country_event = { id = choco.5 }}
+	}
+
+	option = {
+		name = choco.4.b
+		ai_chance = { factor = 0 }
+		CHC = { country_event = { id = choco.6 }}
+	}
+}
+
+#Demand Wales - YES
+country_event = {
+	id = choco.5
+	title = choco.5.t
+	desc = choco.5.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.5.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Wales - NO
+country_event = {
+	id = choco.6
+	title = choco.6.t
+	desc = choco.6.d
+	picture = GFX_report_event_eng_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Brittany
+country_event = {
+	id = choco.7
+	title = choco.7.t
+	desc = choco.7.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.7.a
+		ai_chance = { factor = 100 }
+		CHC = { transfer_state = 14 }
+		CHC = { country_event = { id = choco.8 }}
+	}
+
+	option = {
+		name = choco.7.b
+		ai_chance = { factor = 0 }
+		CHC = { country_event = { id = choco.9 }}
+	}
+}
+
+#Demand Brittany - YES
+country_event = {
+	id = choco.8
+	title = choco.8.t
+	desc = choco.8.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Brittany - NO
+country_event = {
+	id = choco.9
+	title = choco.9.t
+	desc = choco.9.d
+	picture = GFX_report_event_france_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Choco - Decision/NTR Leaflet
+country_event = {
+	id = choco.10
+	title = choco.10.t
+	desc = choco.10.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.10.a
+		ai_chance = { factor = 100 }
+
+		add_timed_idea = {
+                idea = ntr_idea
+                days = 30
+            }
+	}
+}
+
+#Choco - Succubus Entente
+country_event = {
+	id = choco.11
+	title = choco.11.t
+	desc = choco.11.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.11.a
+		ai_chance = { factor = 100 }
+		CHC = {
+			create_faction = FACTION_succubus_entente
+			add_to_faction = MEL
+			country_event = { id = proposed.51 }
+		}
+		hidden_effect = {
+			news_event = { id = holo_news.149 }
+		}
+	}
+
+	option = {
+		name = choco.11.b
+		ai_chance = { factor = 0 }
+		CHC = {
+			country_event = { id = proposed.52 }
+		}
+	}
+}
+
+#Choco - Demand puppet
+country_event = {
+	id = choco.12
+	title = choco.12.t
+	desc = choco.12.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.11.a
+		ai_chance = { factor = 100 }
+		CHC = {
+			puppet = MEL
+			country_event = { id = proposed.51 }
+		}
+	}
+
+	option = {
+		name = choco.12.b
+		ai_chance = { factor = 0 }
+		CHC = {
+			country_event = { id = proposed.52 }
+		}
+	}
+}
+
+#Choco - Invite to faction
+country_event = {
+	id = choco.13
+	title = choco.13.t
+	desc = choco.13.d
+	picture = GFX_report_event_choco_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = choco.13.a
+		ai_chance = { factor = 100 }
+		CHC = {
+			add_to_faction = ROOT
+		}
+		if = {
+			limit = { tag = MEL }
+			CHC = { country_event = { id = proposed.51 }}
+		}
+		if = {
+			limit = { tag = ROS }
+			CHC = { country_event = { id = proposed.97 }}
+		}
+		if = {
+			limit = { tag = ROB }
+			CHC = { country_event = { id = proposed.73 }}
+		}
+	}
+
+	option = {
+		name = choco.13.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MEL }
+			CHC = { country_event = { id = proposed.52 }}
+		}
+		if = {
+			limit = { tag = ROS }
+			CHC = { country_event = { id = proposed.98 }}
+		}
+		if = {
+			limit = { tag = ROB }
+			CHC = { country_event = { id = proposed.74 }}
+		}
+		
+	}
+}

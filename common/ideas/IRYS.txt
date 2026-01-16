@@ -1,0 +1,37 @@
+ideas = {
+
+
+	high_command = {
+		
+		IRYS_irys_high_com = {
+			ledger = army
+
+			picture = irys_advisor
+
+			available = {
+				OR = {
+					has_country_flag = IRYS_HERE_COMES_HOPE_FLAG
+					}
+			}
+			
+			allowed = {
+				OR =
+				{
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = MRI
+				original_tag = NIN
+				}
+			}
+			
+			traits = { irys_high_com_trait }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	
+}

@@ -1,0 +1,49 @@
+Generic_SOR_historical = {
+	name = "SOR historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = SOR
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = SOR
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		tokino_sora_sor_focus
+		aegean_sea_dispute_sor_focus
+		rally_sora_tomo_sor_focus
+		yagoo_s_hope_sor_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

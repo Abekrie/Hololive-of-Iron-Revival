@@ -1,0 +1,2699 @@
+focus_tree = {
+	id = RUS_generic_hololive
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = RUS
+			} 
+		}
+	}
+
+	continuous_focus_position = { x = 2000 y = 1000 }
+
+	initial_show_position = {
+		x = 5
+		y = 0
+	}
+
+	#Diplomatic and Political focus
+	focus = {
+        id = uruha_rushia_rus_focus
+        icon = GFX_focus_rushia_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 8
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = tread_on_the_safe_path_rus_focus
+        icon = GFX_focus_MAT_hololive
+        prerequisite = { focus = uruha_rushia_rus_focus}
+        mutually_exclusive = { focus = down_with_the_hq_rus_focus }
+        relative_position_id = uruha_rushia_rus_focus
+        x = 4
+        y = 1
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+
+    focus = {
+        id = down_with_the_hq_rus_focus
+        icon = GFX_focus_RUS_com
+        prerequisite = { focus = uruha_rushia_rus_focus}
+        mutually_exclusive = { focus = tread_on_the_safe_path_rus_focus }
+        relative_position_id = uruha_rushia_rus_focus
+        x = -4
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_popularity = { ideology = communism popularity = 0.6 }
+            set_politics = {
+                ruling_party = communism
+            }
+            custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_com_advisor
+		    custom_effect_tooltip = "Minato Aqua"
+        }
+    }
+
+    focus = {
+        id = international_stage_rus_focus
+        text = international_stage_kan_focus
+        icon = GFX_focus_generic_trade
+        prerequisite = { focus = down_with_the_hq_rus_focus
+        focus = tread_on_the_safe_path_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = down_with_the_hq_rus_focus
+        x = 3
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = hololive_trade		
+		    custom_effect_tooltip = hololive_trade_allows
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_rus_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = international_stage_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = international_stage_rus_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = volunteer_corps_rus_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = down_with_the_hq_rus_focus
+        focus = tread_on_the_safe_path_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = down_with_the_hq_rus_focus
+        x = 5
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = armament_effort_rus_focus
+        icon = GFX_focus_generic_tank_production
+        prerequisite = { focus = down_with_the_hq_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = down_with_the_hq_rus_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = contact_the_resistance_rus_focus
+        icon = GFX_focus_AQA_com_hand
+        prerequisite = { focus = down_with_the_hq_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = down_with_the_hq_rus_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = hololive_resistance_ns
+        }
+    }
+
+    focus = {
+        id = resistance_budget_rus_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = contact_the_resistance_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = contact_the_resistance_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = unrestrict_partisan_warfare_rus_focus
+        icon = GFX_focus_prc_infiltration
+        prerequisite = { focus = down_with_the_hq_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = down_with_the_hq_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = extra_holo_spy_idea
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = pink_rushia_rus_focus
+        icon = GFX_focus_RUS_pink_rushia
+        prerequisite = { focus = unrestrict_partisan_warfare_rus_focus
+        focus = contact_the_resistance_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = unrestrict_partisan_warfare_rus_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+		    hidden_effect = {
+				retire_ideology_leader = communism
+		    }
+
+		    create_country_leader = {
+				name = "Pink Rushia"
+				picture = "gfx/leaders/RUS/pink_rushia.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					necromancer_princess_trait
+					trait_no_more_spamming
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = library_of_mumbai_rus_focus
+        icon = GFX_focus_generic_socialist_science
+        prerequisite = { focus = pink_rushia_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pink_rushia_rus_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = infrastructure_effort_rus_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = library_of_mumbai_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = library_of_mumbai_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = infrastructure_building_idea
+        }
+    }
+
+    focus = {
+        id = death_metal_rus_focus
+        icon = GFX_focus_generic_steel
+        prerequisite = { focus = pink_rushia_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pink_rushia_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_resource = {
+                type = steel
+                amount = 8
+                }
+            }
+            random_owned_controlled_state = {
+            add_resource = {
+                type = steel
+                amount = 8
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = rushia_sneeze_rus_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = death_metal_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = death_metal_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = nuclear
+            }
+        }
+    }
+
+    focus = {
+        id = tear_down_the_policy_rus_focus
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = death_metal_rus_focus
+        focus = library_of_mumbai_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = death_metal_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_war_support = 0.1
+            remove_ideas = limited_by_the_policy_idea
+        }
+    }
+
+    focus = {
+        id = no_turning_back_rus_focus
+        icon = GFX_focus_RAJ_indian_gentlemen_offcers
+        prerequisite = { focus = tear_down_the_policy_rus_focus}
+        mutually_exclusive = { focus = dead_but_never_done_rus_focus }
+        relative_position_id = tear_down_the_policy_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_war_support = 0.1
+            add_ideas = spiritual_warrior_idea
+            add_ideas = five_idols_army_ns
+        }
+    }
+
+    focus = {
+        id = dead_but_never_done_rus_focus
+        icon = GFX_focus_RUS_mikeneko
+        prerequisite = { focus = tear_down_the_policy_rus_focus}
+        mutually_exclusive = { focus = no_turning_back_rus_focus }
+        relative_position_id = tear_down_the_policy_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_stability = -0.10
+        	hidden_effect = {
+				retire_ideology_leader = communism
+		    }
+
+		    create_country_leader = {
+				name = "Mikeneko"
+				picture = "gfx/leaders/RUS/mikeneko.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					necromancer_princess_trait
+					a_post_trait
+					trait_no_more_spamming
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = operation_citadel_rus_focus
+        icon = GFX_focus_attack_soviet
+        prerequisite = { focus = dead_but_never_done_rus_focus
+        focus = no_turning_back_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = dead_but_never_done_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+        		news_event = { id = holo_news.225 }
+        	}
+        	custom_effect_tooltip = CET_operation_citadel_rus_focus
+        	set_country_flag  = Towa_sell_us_strait_pass
+        	custom_effect_tooltip = "---"
+        	if = {
+        		limit = { NOT = { owns_state = 137 }}
+        		137 = {
+        			OWNER = {country_event = { id = rushia.28 }}
+        		}
+        	}
+        	transfer_state = 137
+        	custom_effect_tooltip = "---"
+            add_timed_idea = {
+			        idea = operation_subutai_ns
+			        days = 360
+			    }
+        }
+    }
+
+    focus = {
+        id = soviet_rushia_rus_focus
+        icon = GFX_focus_RUS_soviet_rushia
+        prerequisite = { focus = operation_citadel_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = operation_citadel_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+        		news_event = { id = holo_news.226 }
+        	}
+        	set_cosmetic_tag = RUS_soviet
+            custom_effect_tooltip = CET_soviet_rushia_rus_focus
+            set_country_flag = Rushia_can_soviet_rushia
+        }
+    }
+
+    focus = {
+        id = enemy_of_the_enemy_rus_focus
+        icon = GFX_goal_tripartite_pact
+        prerequisite = { focus = dead_but_never_done_rus_focus
+        focus = no_turning_back_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = no_turning_back_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                AQA = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = AQA
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            AQA = { country_event = { id = rushia.27 }}
+        }
+    }
+
+    focus = {
+        id = cursed_of_the_undead_rus_focus
+        icon = GFX_focus_RUS_guns
+        prerequisite = { focus = enemy_of_the_enemy_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = enemy_of_the_enemy_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = Rushia_can_use_cursed_of_the_undead
+            custom_effect_tooltip = CET_cursed_of_the_undead_rus_focus
+            show_ideas_tooltip = cursed_of_the_undead_idea
+        }
+    }
+
+    focus = {
+        id = recruit_aqua_rus_focus
+        icon = GFX_focus_AQA_aqua
+        prerequisite = { focus = enemy_of_the_enemy_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = enemy_of_the_enemy_rus_focus
+        x = -2
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = AQA_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Minato Aqua"
+        }
+    }
+
+
+    focus = {
+        id = revise_the_policy_rus_focus
+        icon = GFX_focus_generic_treaty
+        prerequisite = { focus = tread_on_the_safe_path_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tread_on_the_safe_path_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = limited_by_the_policy_idea
+        }
+    }
+
+    focus = {
+        id = halloween_night_tonight_rus_focus
+        icon = GFX_focus_RUS_halloween
+        prerequisite = { focus = tread_on_the_safe_path_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tread_on_the_safe_path_rus_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 10000
+		    producer = ROOT
+	    }
+	    army_experience = 25
+	   	SHI = { army_experience = 5 }
+	   	CHC = { army_experience = 5 }
+	   	MEL = { army_experience = 5 }
+	   		hidden_effect = {
+	   			news_event = {id = holo_news.99}
+	   		}
+        }
+    }
+
+    focus = {
+        id = nekomancer_rus_focus
+        icon = GFX_focus_RUS_nekomancer
+        prerequisite = { focus = revise_the_policy_rus_focus}
+        mutually_exclusive = { focus = royalist_referendum_rus_focus }
+        relative_position_id = revise_the_policy_rus_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = { news_event = { id = holo_news.103}}
+		    hidden_effect = {
+		    	retire_ideology_leader = fascism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = communism
+		    }
+		    create_country_leader = {
+	name = "Neko Rushia"
+	picture = "gfx/leaders/RUS/nekomancer.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		nekomancer_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+hidden_effect = {
+create_country_leader = {
+	name = "Neko Rushia"
+	picture = "gfx/leaders/RUS/nekomancer.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		nekomancer_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Neko Rushia"
+	picture = "gfx/leaders/RUS/nekomancer.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		nekomancer_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Neko Rushia"
+	picture = "gfx/leaders/RUS/nekomancer.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		nekomancer_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}}
+
+			custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_dem_advisor
+            set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Tokino Sora"
+		    custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = royalist_referendum_rus_focus
+        icon = GFX_focus_RUS_royalist
+        prerequisite = { focus = revise_the_policy_rus_focus}
+        mutually_exclusive = { focus = nekomancer_rus_focus }
+        relative_position_id = revise_the_policy_rus_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    }
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+		    create_country_leader = {
+				name = "Princess Rushia"
+				picture = "gfx/leaders/RUS/princess.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					necromancer_princess_trait
+					trait_no_more_spamming
+				}
+			}
+			custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = tata_rus_focus
+        icon = GFX_focus_RUS_tata
+        prerequisite = { focus = royalist_referendum_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royalist_referendum_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 2
+                category = armor
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = death_stare_rus_focus
+        icon = GFX_focus_RUS_guns
+        prerequisite = { focus = royalist_referendum_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royalist_referendum_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = Rushia_can_use_death_stare
+            custom_effect_tooltip = CET_death_stare_rus_focus
+            show_ideas_tooltip = death_stare_idea
+        }
+    }
+
+    focus = {
+        id = end_of_the_mandate_rus_focus
+        icon = GFX_focus_RUS_end_of_the_mandate
+        prerequisite = { focus = tata_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tata_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	IOM = {
+        		is_subject = no
+        		exists = yes
+        		NOT = { has_war_with = ROOT }
+        	}
+        	is_subject = no
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            IOM = {country_event = { id = rushia.24 }}
+        }
+    }
+
+    focus = {
+        id = learn_the_way_of_boing_rus_focus
+        icon = GFX_focus_NOE_shirogane_federation
+        prerequisite = { focus = death_stare_rus_focus
+        focus = tata_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = death_stare_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                NOE = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = NOE
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            NOE = { country_event = { id = rushia.27 }}
+        }
+    }
+
+    focus = {
+        id = wall_rushia_rus_focus
+        icon = GFX_focus_RUS_wall_rushia
+        prerequisite = { focus = nekomancer_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nekomancer_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = wall_rushia_idea
+			hidden_effect = {
+	   			news_event = {id = holo_news.100}
+	   		}
+        }
+    }
+
+    focus = {
+        id = operation_enduring_freedom_rus_focus
+        text = operation_enduring_freedom_shi_focus
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = wall_rushia_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = wall_rushia_rus_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_war_with = AQA
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = operation_enduring_freedom_ns
+                days = 180
+            }
+        }
+    }
+
+    focus = {
+        id = subsidize_celon_rubber_rus_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = nekomancer_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = nekomancer_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            422 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = the_good_ending_rus_focus
+        icon = GFX_focus_YAG_colonial_empire
+        prerequisite = { focus = subsidize_celon_rubber_rus_focus
+        focus = wall_rushia_rus_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = subsidize_celon_rubber_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                YAG = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = YAG
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            YAG = { country_event = { id = rushia.27 }}
+        }
+    }
+
+    focus = {
+        id = demonic_realm_academy_rus_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = the_good_ending_rus_focus
+        focus = learn_the_way_of_boing_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_good_ending_rus_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = super_chat_rus_focus
+        icon = GFX_focus_mex_privatisation
+        prerequisite = { focus = the_good_ending_rus_focus
+        focus = learn_the_way_of_boing_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = learn_the_way_of_boing_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = x1_600_year_plan_rus_focus
+        icon = GFX_focus_generic_industry_3
+        prerequisite = { focus = super_chat_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = super_chat_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = national_building_1
+                days = 365
+            }
+        }
+    }
+
+    focus = {
+        id = flat_chest_ally_rus_focus
+        icon = GFX_focus_YAG_achan
+        prerequisite = { focus = the_good_ending_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_good_ending_rus_focus
+        x = -1
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	create_corps_commander = {
+	name = "A Chan"
+	portrait_path = "gfx/leaders/YAG/achan.dds"
+	traits = { trait_cautious brilliant_strategist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+        }
+    }
+
+    focus = {
+        id = war_on_kanata_rus_focus
+        icon = GFX_focus_kanata_flag
+        prerequisite = { focus = the_good_ending_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_good_ending_rus_focus
+        x = -2
+        y = 2
+        cost = 5
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+                is_in_faction = yes
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = KAN
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                KAN = { exists = no }
+                KAN = { is_subject_of = ROOT }
+                KAN = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = KAN }
+        }
+    }
+
+    focus = {
+        id = operation_revival_rus_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = the_good_ending_rus_focus
+        focus = rushia_sneeze_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_good_ending_rus_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+			NOT = {
+				AND = {
+					has_full_control_of_state = 437
+					has_full_control_of_state = 429
+					has_full_control_of_state = 427
+				}
+			}
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	country_event = { id = rushia.26}
+			custom_effect_tooltip = CET_Operation_Revival_event
+        }
+    }
+
+    focus = {
+        id = follow_the_policy_rus_focus
+        icon = GFX_focus_MAT_hololive
+        prerequisite = { focus = flat_chest_ally_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = flat_chest_ally_rus_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = mandate_of_hololive_idea
+        }
+    }
+
+    focus = {
+        id = war_on_aqua_rus_focus
+        icon = GFX_focus_aqua_flag
+        prerequisite = { focus = follow_the_policy_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = follow_the_policy_rus_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = AQA
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                AQA = { exists = no }
+                AQA = { is_subject_of = ROOT }
+                AQA = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = AQA }
+        }
+    }
+
+    focus = {
+        id = noel_doctrine_rus_focus
+        icon = GFX_focus_NOE_guns
+        prerequisite = { focus = learn_the_way_of_boing_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = learn_the_way_of_boing_rus_focus
+        x = 2
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = noel_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = recruit_noel_rus_focus
+        icon = GFX_focus_NOE_noel
+        prerequisite = { focus = learn_the_way_of_boing_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = learn_the_way_of_boing_rus_focus
+        x = 1
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = NOE_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Shirogane Noel"
+        }
+    }
+
+    focus = {
+        id = meat_bowl_rus_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = recruit_noel_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = recruit_noel_rus_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = meat_bowl
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = extra_spy_rus_focus
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = meat_bowl_rus_focus
+        focus = follow_the_policy_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = meat_bowl_rus_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+        }
+    }
+
+    focus = {
+        id = dominate_india_ocean_rus_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = meat_bowl_rus_focus
+        focus = follow_the_policy_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = meat_bowl_rus_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = rushia_commonwealth_rus_focus
+        icon = GFX_focus_RUS_commonwealth
+        prerequisite = { focus = dominate_india_ocean_rus_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = dominate_india_ocean_rus_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 422
+        	has_full_control_of_state = 281
+        	has_full_control_of_state = 543
+        	has_full_control_of_state = 672
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+        		news_event = { id = holo_news.227 }
+        	}
+        	every_state = {
+                limit = { OR = {
+                    is_core_of = IOM
+                    is_core_of = MOO
+                } }
+                add_core_of = ROOT
+            }
+            set_cosmetic_tag = RUS_commonwealth
+            hidden_effect = {
+		    	retire_ideology_leader = fascism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = communism
+		    }
+		    create_country_leader = {
+	name = "Queen Rushia"
+	picture = "gfx/leaders/RUS/queen.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		necromancer_princess_trait
+		crowned_by_god_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+hidden_effect = {
+create_country_leader = {
+	name = "Queen Rushia"
+	picture = "gfx/leaders/RUS/queen.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		necromancer_princess_trait
+		crowned_by_god_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Queen Rushia"
+	picture = "gfx/leaders/RUS/queen.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		necromancer_princess_trait
+		crowned_by_god_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Queen Rushia"
+	picture = "gfx/leaders/RUS/queen.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		necromancer_princess_trait
+		crowned_by_god_trait
+		cutting_board
+		trait_no_more_spamming
+	}
+}}
+        }
+    }
+
+
+    #Economy and Industry
+	focus = {
+		id = RUS_idol_creator
+		text = idol_creator
+		icon = GFX_focus_engineer_2
+		relative_position_id = uruha_rushia_rus_focus
+		x = 12
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = RUS_minecraft_server
+		text = minecraft_server
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = RUS_idol_creator }
+		relative_position_id = RUS_idol_creator
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = minecraft_resource
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_wooden_house
+		text = wooden_house
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_minecraft_server }
+		relative_position_id = RUS_minecraft_server
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	}
+
+	focus = {
+		id = RUS_nether_portal
+		text = nether_portal
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_wooden_house }
+		relative_position_id = RUS_wooden_house
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+	    }
+	    }
+	}
+
+	focus = {
+		id = RUS_wooden_in_nether
+		text = wooden_in_nether
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_nether_portal }
+		relative_position_id = RUS_nether_portal
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_oversea_fanbase
+		text = oversea_fanbase
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = RUS_idol_creator }
+		relative_position_id = RUS_idol_creator
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		navy_experience = 25
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = RUS_yuri_ship
+		text = yuri_ship
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RUS_oversea_fanbase }
+		relative_position_id = RUS_oversea_fanbase
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = RUS_beach_eps
+		text = beach_eps
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RUS_yuri_ship }
+		relative_position_id = RUS_yuri_ship
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = RUS_azur_lane_collab
+		text = azur_lane_collab
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RUS_beach_eps }
+		relative_position_id = RUS_beach_eps
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = RUS_offensive_marketing
+		text = offensive_marketing
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = RUS_idol_creator }
+		relative_position_id = RUS_idol_creator
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_body_pillow
+		text = body_pillow
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RUS_offensive_marketing }
+		relative_position_id = RUS_offensive_marketing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_bath_water
+		text = bath_water
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RUS_body_pillow }
+		relative_position_id = RUS_body_pillow
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_t_shirt
+		text = t_shirt
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RUS_bath_water }
+		relative_position_id = RUS_bath_water
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_idol_research_generic
+		text = idol_research_generic
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_t_shirt 
+		focus = RUS_azur_lane_collab
+		focus = RUS_wooden_in_nether}
+		relative_position_id = RUS_azur_lane_collab
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_research_slot = 1
+	    }
+	}
+#Army Research
+    focus = {
+		id = RUS_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = RUS_idol_creator
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = RUS_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = RUS_gaming }
+		relative_position_id = RUS_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = RUS_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RUS_animal_crossing }
+		relative_position_id = RUS_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = RUS_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = RUS_gaming }
+		relative_position_id = RUS_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = RUS_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RUS_tetris }
+		relative_position_id = RUS_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = RUS_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RUS_gaming }
+		relative_position_id = RUS_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = RUS_dark_soul_resh }
+		relative_position_id = RUS_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = RUS_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RUS_apex_legend  focus = RUS_ring_fit }
+		relative_position_id = RUS_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RUS_pubg  focus = RUS_ring_fit }
+		relative_position_id = RUS_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = RUS_minecraft_resh  focus = RUS_mario_kart }
+		relative_position_id = RUS_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = RUS_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = RUS_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = RUS_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = RUS_hololive_music }
+		relative_position_id = RUS_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = RUS_hololive_music }
+		relative_position_id = RUS_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = RUS_hololive_music }
+		relative_position_id = RUS_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = RUS_yumemiru_sora_he 
+		focus = RUS_shiny_smily_story}
+		relative_position_id = RUS_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = RUS_yumemiru_sora_he 
+		focus = RUS_kirame_rider}
+		relative_position_id = RUS_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = RUS_azur_lane_boss_music }
+		prerequisite = { focus = RUS_fukkireta }
+		relative_position_id = RUS_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = RUS_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = RUS_azur_lane_boss_music }
+		relative_position_id = RUS_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = RUS_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = RUS_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = RUS_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = RUS_live_streaming_gen }
+		mutually_exclusive = { focus = RUS_bilibili }
+		relative_position_id = RUS_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = RUS_youtube_gen }
+		relative_position_id = RUS_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RUS_live_streaming_gen }
+		mutually_exclusive = { focus = RUS_youtube_gen }
+		relative_position_id = RUS_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = RUS_bilibili 
+		focus = RUS_youtube_gen}
+		relative_position_id = RUS_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = RUS_superchat 
+		focus = RUS_game_casting}
+		prerequisite = { focus = RUS_karaoke }
+		relative_position_id = RUS_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = RUS_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = RUS_superchat 
+		focus = RUS_game_casting}
+		prerequisite = { focus = RUS_3d_studio }
+		relative_position_id = RUS_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = RUS_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = RUS_bilibili }
+		relative_position_id = RUS_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+}

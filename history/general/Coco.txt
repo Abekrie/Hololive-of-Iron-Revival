@@ -1,0 +1,32 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = COC
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = COC_heisenberg_advisor
+    name = "Heisenberg"
+    advisor = {
+      slot = high_command
+      traits = { meth_cook_trait }
+      cost = 150
+
+      available = {
+        AND = {
+        has_completed_focus = a_chemist_teacher_from_new_mexico_coc_focus
+        has_full_control_of_state = 376
+        }
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_walt_small }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+scripted_gui = {
+
+	marine_pirate_decision_ui = {
+		context_type = decision_category
+		window_name = "marine_pirate_ui_window"
+
+		properties = {
+			mar_pirate_perfer_tactic = {
+				image  = "[GetMarineTactic]"
+			}
+
+			mar_pirate_quartermaster = {
+				image  = "[GetMarineQmaster]"
+			}
+
+			mar_pirate_battle_master = {
+				image  = "[GetMarineBmaster]"
+			}
+		}
+	}
+	
+}
+

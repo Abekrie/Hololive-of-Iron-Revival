@@ -1,0 +1,55 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Hololive China Fleet"		
+		naval_base = 12068
+
+		task_force = {				
+			name = "Hololive China Force"			
+			location = 12068	
+
+ship = { name = "Taiwan"
+definition = submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Guangzhou"
+definition = submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Beijing"
+definition = submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Qingdao"
+definition = submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+
+ship = { name = "HMCS Nodoka"
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

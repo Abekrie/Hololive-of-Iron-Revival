@@ -1,0 +1,54 @@
+Generic_RSA_historical = {
+	name = "RSA plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = RSA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				original_tag = RSA
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		holocn_cn_focus
+		cut_tie_with_the_hq_cn_focus
+
+		question_of_independence_cn_focus
+		neutrality_pact_cn_focus
+		change_in_politic_cn_focus
+		reorganize_government_cn_focus
+		
+		scout_for_ally_cn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

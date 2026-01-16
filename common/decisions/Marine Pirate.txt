@@ -1,0 +1,695 @@
+MAR_pirate_of_the_high_sea_category = {
+
+	marine_pirate_debug_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		#cost = 30
+
+		visible = {
+		    tag = MAR
+		    is_debug = yes
+		    is_ai = no
+		}
+
+		#days_remove = 35
+
+		remove_effect = {
+			
+		}
+
+		complete_effect = {
+			add_war_support = 0.1
+			mar_clear_tactic = yes
+			add_ideas = mar_tactic_camouflaged_hull
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_tactic_camouflaged_hull_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_tactic_camounflaged_hull
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_tactic_for_30_days
+		    	has_idea = mar_tactic_camouflaged_hull
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_tactic = yes
+			add_ideas = mar_tactic_camouflaged_hull
+			set_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_tactic_false_flag_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_tactic_false_flag
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_tactic_for_30_days
+		    	has_idea = mar_tactic_false_flag
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_tactic = yes
+			add_ideas = mar_tactic_false_flag
+			set_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_tactic_encourage_mutiny_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_tactic_mutiny
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_tactic_for_30_days
+		    	has_idea = mar_tactic_encourage_mutiny
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_tactic = yes
+			add_ideas = mar_tactic_encourage_mutiny
+			set_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_tactic_boarding_attack_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_tactic_boarding
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_tactic_for_30_days
+		    	has_idea = mar_tactic_boarding_attack
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_tactic = yes
+			add_ideas = mar_tactic_boarding_attack
+			set_country_flag = cannot_new_tactic_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_qmaster_aqua_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_qmaster_aqua
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_qmaster_for_30_days
+		    	has_idea = mar_qmaster_aqua
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_qmaster = yes
+			add_ideas = mar_qmaster_aqua
+			set_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_qmaster_haato_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_qmaster_haato
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_qmaster_for_30_days
+		    	has_idea = mar_qmaster_haato
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_qmaster = yes
+			add_ideas = mar_qmaster_haato
+			set_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_qmaster_marine_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_qmaster_marine
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_qmaster_for_30_days
+		    	has_idea = mar_qmaster_marine
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_qmaster = yes
+			add_ideas = mar_qmaster_marine
+			set_country_flag = cannot_new_qmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_bmaster_shion_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_bmaster_shion
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_bmaster_for_30_days
+		    	has_idea = mar_bmaster_shion
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_bmaster = yes
+			add_ideas = mar_bmaster_shion
+			set_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_bmaster_rushia_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_bmaster_rushia
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_bmaster_for_30_days
+		    	has_idea = mar_bmaster_rushia
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_bmaster = yes
+			add_ideas = mar_bmaster_rushia
+			set_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_bmaster_noel_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_bmaster_noel
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_bmaster_for_30_days
+		    	has_idea = mar_bmaster_noel
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_bmaster = yes
+			add_ideas = mar_bmaster_noel
+			set_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_bmaster_gura_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_bmaster_gura
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_bmaster_for_30_days
+		    	has_idea = mar_bmaster_gura
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_bmaster = yes
+			add_ideas = mar_bmaster_gura
+			set_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_bmaster_ina_dec = {
+
+		icon = generic_nationalism
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			tag = MAR
+		    OR = {
+		    	AND = {
+		    		is_debug = yes
+		    		is_ai = no
+		    	}
+		    	AND = {
+		    		has_country_flag = Marine_can_bmaster_ina
+		    	}
+		    }
+		    NOT = {
+		    	has_country_flag = cannot_new_bmaster_for_30_days
+		    	has_idea = mar_bmaster_ina
+		    }
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			clr_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		complete_effect = {
+			mar_clear_bmaster = yes
+			add_ideas = mar_bmaster_ina
+			set_country_flag = cannot_new_bmaster_for_30_days
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	
+}

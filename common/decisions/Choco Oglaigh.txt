@@ -1,0 +1,171 @@
+choco_oglaigh_na_choco_category = {
+
+	choco_oglaigh_na_france_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_full_control_of_state = 16
+			#11506
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_defence_force
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			custom_effect_tooltip = CET_choco_oglaigh_na_france_dec
+			hidden_effect = {
+				load_oob = CHC_defence_force_france
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_oglaigh_na_spain_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_full_control_of_state = 41
+			#3938
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_defence_force
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			custom_effect_tooltip = CET_choco_oglaigh_na_spain_dec
+			hidden_effect = {
+				load_oob = CHC_defence_force_spain
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_oglaigh_na_norway_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_full_control_of_state = 110
+			#6115
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_defence_force
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			custom_effect_tooltip = CET_choco_oglaigh_na_norway_dec
+			hidden_effect = {
+				load_oob = CHC_defence_force_norway
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	choco_oglaigh_na_germany_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_full_control_of_state = 64
+			#6521
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		visible = {
+		    tag = CHC
+		    has_country_flag = Choco_can_defence_force
+		}
+
+		#days_remove = 60
+
+		complete_effect = {
+			custom_effect_tooltip = CET_choco_oglaigh_na_germany_dec
+			hidden_effect = {
+				load_oob = CHC_defence_force_germany
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

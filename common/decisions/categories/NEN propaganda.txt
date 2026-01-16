@@ -1,0 +1,14 @@
+NEN_propaganda_campaigns = {
+	priority = 100
+	icon = SOV_propaganda
+	scripted_gui = NEN_propaganda_campaigns_ui
+	allowed = {
+		OR = {
+			original_tag = NEN
+			}
+	}
+
+	visible = {
+		has_civil_war = no
+	}
+}

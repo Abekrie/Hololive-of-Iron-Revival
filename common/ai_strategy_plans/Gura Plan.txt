@@ -1,0 +1,47 @@
+Generic_GAW_historical = {
+	name = "GAW historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = GAW
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = GAW
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		gawr_gura_gaw_focus
+		princess_of_atlantis_gaw_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

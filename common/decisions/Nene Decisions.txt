@@ -1,0 +1,151 @@
+nene_nuclear_operation_decision_category = {
+
+	nuke_moscow_nene_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war_with = SOV
+			SOV = { has_full_control_of_state = 219 }
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = NEN
+		    has_country_flag = NEN_farewell_of_moscow_decision
+		    NOT = { has_country_flag = nuke_moscow_nene_dec_FLAG }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+			set_country_flag = nuke_moscow_nene_dec_FLAG
+			news_event = { id = holo_news.82 }
+		}
+
+		launch_nuke = {
+			province = 6380
+			state = 219
+			controller = SOV
+			use_nuke = yes
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	nuke_stalingrad_nene_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war_with = SOV
+			SOV = { has_full_control_of_state = 217 }
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = NEN
+		    has_country_flag = NEN_farewell_of_moscow_decision
+		    NOT = { has_country_flag = nuke_stalingrad_nene_dec_FLAG }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+			set_country_flag = nuke_stalingrad_nene_dec_FLAG
+			news_event = { id = holo_news.83 }
+		}
+
+		launch_nuke = {
+			province = 3529
+			state = 217
+			controller = SOV
+			use_nuke = yes
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	nuke_minsk_nene_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war_with = SOV
+			SOV = { has_full_control_of_state = 206 }
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = NEN
+		    has_country_flag = NEN_farewell_of_moscow_decision
+		    NOT = { has_country_flag = nuke_minsk_nene_dec_FLAG }
+		}
+
+		complete_effect = {
+
+		hidden_effect = {
+			set_country_flag = nuke_minsk_nene_dec_FLAG
+			news_event = { id = holo_news.84 }
+		}
+
+		launch_nuke = {
+			province = 11370
+			state = 206
+			controller = SOV
+			use_nuke = yes
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	
+
+	
+
+}

@@ -1,0 +1,46 @@
+Generic_MRI_historical = {
+	name = "Hololive EN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = MRI
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = MRI
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		MRI_HOLOEN_improve_working_cond_nord_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

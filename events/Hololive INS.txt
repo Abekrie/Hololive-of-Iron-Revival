@@ -1,0 +1,293 @@
+add_namespace = ins
+
+#Risu declare war on Moona
+country_event = {
+	id = ins.1
+	title = ins.1.t
+	desc = ins.1.d
+	picture = GFX_report_event_moona_generic1
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+		mean_time_to_happen = { days = 2 }
+
+		trigger = {
+			AND = {
+				date > 1936.2.1
+				tag = RIS
+			}
+		}
+	
+	option = {
+		name = ins.1.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+    		target = MOO
+  			type = annex_everything
+		}
+		hidden_effect = {
+		news_event = { id = holo_news.42 }
+		}
+	}
+}
+
+#Moona declare war on Iofi
+country_event = {
+	id = ins.2
+	title = ins.2.t
+	desc = ins.2.d
+	picture = GFX_report_event_iofi_generic1
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+		mean_time_to_happen = { days = 2 }
+
+		trigger = {
+			AND = {
+				date > 1936.2.6
+				tag = MOO
+			}
+		}
+	
+	option = {
+		name = ins.2.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+    		target = IOF
+  			type = annex_everything
+		}
+
+	}
+}
+
+#Iofi declare war on Risu
+country_event = {
+	id = ins.3
+	title = ins.3.t
+	desc = ins.3.d
+	picture = GFX_report_event_risu_generic1
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+		mean_time_to_happen = { days = 2 }
+
+		trigger = {
+			AND = {
+				date > 1936.2.12
+				tag = IOF
+			}
+		}
+	
+	option = {
+		name = ins.3.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+    		target = RIS
+  			type = annex_everything
+		}
+
+	}
+}
+
+#New leader of the 2nd Gen
+country_event = {
+	id = ins.4
+	title = ins.4.t
+	desc = ins.4.d
+	picture = GFX_report_event_ins_generic2
+	
+	is_triggered_only = yes
+	
+	#Reine
+	option = {
+		name = ins.4.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				has_global_flag = Reine_is_formed
+			}
+		}
+		set_global_flag = Reine_is_formed
+		set_country_flag = is_RIN
+		set_country_flag = is_HOLOID2
+		set_cosmetic_tag = HOLOID_RIN
+			hidden_effect = {
+			news_event = {
+				id = holo_news.132
+			}
+				retire_ideology_leader = communism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = fascism
+				retire_ideology_leader = neutrality
+			}
+			create_country_leader = {
+				name = "Reine Pavolia"
+				picture = "gfx/leaders/MOO/reine_neu.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Reine Pavolia"
+				picture = "gfx/leaders/MOO/reine_neu.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Reine Pavolia"
+				picture = "gfx/leaders/MOO/reine_neu.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Reine Pavolia"
+				picture = "gfx/leaders/MOO/reine_neu.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+	}
+
+	#Ollie
+	option = {
+		name = ins.4.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				has_global_flag = Ollie_is_formed
+			}
+		}
+		set_global_flag = Ollie_is_formed
+		set_country_flag = is_OLI
+		set_country_flag = is_HOLOID2
+		set_cosmetic_tag = HOLOID_OLI
+		hidden_effect = {
+		news_event = {
+				id = holo_news.133
+			}
+				retire_ideology_leader = communism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = fascism
+				retire_ideology_leader = neutrality
+			}
+			create_country_leader = {
+				name = "Ollie Kureiji"
+				picture = "gfx/leaders/MOO/ollie_neu.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Ollie Kureiji"
+				picture = "gfx/leaders/MOO/ollie_neu.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Ollie Kureiji"
+				picture = "gfx/leaders/MOO/ollie_neu.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Ollie Kureiji"
+				picture = "gfx/leaders/MOO/ollie_neu.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+	}
+
+	#Anya
+	option = {
+		name = ins.4.c
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				has_global_flag = Anya_is_formed
+			}
+		}
+		set_global_flag = Anya_is_formed
+		set_country_flag = is_ANY
+		set_country_flag = is_HOLOID2
+		set_cosmetic_tag = HOLOID_ANY
+		hidden_effect = {
+		news_event = {
+				id = holo_news.134
+			}
+				retire_ideology_leader = communism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = fascism
+				retire_ideology_leader = neutrality
+			}
+
+			create_country_leader = {
+				name = "Anya Melfissa"
+				picture = "gfx/leaders/MOO/anya_neu.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Anya Melfissa"
+				picture = "gfx/leaders/MOO/anya_neu.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Anya Melfissa"
+				picture = "gfx/leaders/MOO/anya_neu.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+
+			create_country_leader = {
+				name = "Anya Melfissa"
+				picture = "gfx/leaders/MOO/anya_neu.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					trait_no_more_spamming2
+				}
+			}
+	}
+}

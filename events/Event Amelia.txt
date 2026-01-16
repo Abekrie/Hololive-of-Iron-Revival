@@ -1,0 +1,493 @@
+add_namespace = amelia
+
+#WTS - Amesame
+country_event = {
+	id = amelia.1
+	title = amelia.1.t
+	desc = amelia.1.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.1.a
+		ai_chance = { factor = 100 }
+		WTS = { create_faction = FACTION_AMESAME 
+		add_to_faction = GAW }
+		WTS = { country_event = { id = proposed.27 }}
+		hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = amelia.1.b
+		ai_chance = { factor = 0 }
+		WTS = { country_event = { id = proposed.28 }}
+	}
+}
+
+#WTS - Puppet Gura/Royal Wedding
+country_event = {
+	id = amelia.2
+	title = amelia.2.t
+	desc = amelia.2.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.2.a
+		ai_chance = { factor = 100 }
+		WTS = { puppet = GAW }
+		WTS = { country_event = { id = proposed.27 }}
+	}
+
+	#No
+	option = {
+		name = amelia.2.b
+		ai_chance = { factor = 0 }
+		WTS = { country_event = { id = proposed.28 }}
+	}
+}
+
+#WTS - Interrogation
+country_event = {
+	id = amelia.3
+	title = amelia.3.t
+	desc = amelia.3.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.3.a
+		ai_chance = { factor = 100 }
+		WTS = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+		}
+	}
+
+	#No
+	option = {
+		name = amelia.3.b
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+	}
+}
+
+#WTS - KFP Misconduct
+country_event = {
+	id = amelia.4
+	title = amelia.4.t
+	desc = amelia.4.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.4.a
+		ai_chance = { factor = 100 }
+		WTS = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 750
+		    	producer = ROOT
+	    	}
+		}
+	}
+
+	#No
+	option = {
+		name = amelia.4.b
+		ai_chance = { factor = 0 }
+		add_political_power = -50
+	}
+}
+
+#WTS - Intelligence sabotaged!
+country_event = {
+	id = amelia.5
+	title = amelia.5.t
+	desc = amelia.5.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.5.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#WTS - Small Ame boost communist popularity
+country_event = {
+	id = amelia.6
+	title = amelia.6.t
+	desc = amelia.6.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.6.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#WTS - Demands puppet us!
+country_event = {
+	id = amelia.7
+	title = amelia.7.t
+	desc = amelia.7.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.7.a
+		ai_chance = { factor = 100 }
+		WTS = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = {
+				tag = KIA
+			}
+			retire_ideology_leader = communism
+					create_country_leader = {
+						name = "Small Kiara"
+						picture = "gfx/leaders/WTS/small_kiara.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+							smallism_trait
+							trait_no_more_spamming2
+						}
+					}
+			WTS = { country_event = { id = proposed.39 }}
+		}
+
+		if = {
+			limit = {
+				tag = NIN
+			}
+			retire_ideology_leader = communism
+					create_country_leader = {
+						name = "Small Ina"
+						picture = "gfx/leaders/WTS/small_ina.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+							smallism_trait
+							trait_no_more_spamming2
+						}
+					}
+			WTS = { country_event = { id = proposed.61 }}
+		}
+
+		if = {
+			limit = {
+				tag = GAW
+				has_government = communism
+			}
+			retire_ideology_leader = communism
+					create_country_leader = {
+						name = "Small Gura"
+						picture = "gfx/leaders/WTS/small_gura.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+							smallism_trait
+							trait_no_more_spamming2
+						}
+					}
+			WTS = { country_event = { id = proposed.27 }}
+		}
+
+		if = {
+			limit = {
+				tag = GAW
+				NOT = {has_government = communism}
+			}
+			WTS = { country_event = { id = proposed.27 }}
+		}
+
+		if = {
+			limit = {
+				tag = MRI
+			}
+			retire_ideology_leader = communism
+					create_country_leader = {
+						name = "Small Calliope"
+						picture = "gfx/leaders/WTS/small_calliope.dds"
+						expire = "1965.1.1"
+						ideology = marxism
+						traits = {
+							smallism_trait
+							trait_no_more_spamming2
+						}
+					}
+			WTS = { country_event = { id = proposed.17 }}
+		}
+	}
+
+	#No
+	option = {
+		name = amelia.7.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				tag = KIA
+			}
+			WTS = { country_event = { id = proposed.40 }}
+		}
+
+		if = {
+			limit = {
+				tag = NIN
+			}
+			WTS = { country_event = { id = proposed.62 }}
+		}
+
+		if = {
+			limit = {
+				tag = GAW
+			}
+			WTS = { country_event = { id = proposed.28 }}
+		}
+
+		if = {
+			limit = {
+				tag = MRI
+			}
+			WTS = { country_event = { id = proposed.18 }}
+		}
+	}
+}
+
+#WTS - National Referendum
+country_event = {
+	id = amelia.8
+	title = amelia.8.t
+	desc = amelia.8.d
+	picture = GFX_report_event_amelia_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = amelia.8.a
+		ai_chance = { factor = 90 }
+		set_country_flag = Amelia_neutral_victory
+	}
+
+	#No
+	option = {
+		name = amelia.8.b
+		ai_chance = { factor = 5 }
+		set_country_flag = Amelia_royalist_victory
+	}
+
+	#Maybe
+	option = {
+		name = amelia.8.c
+		ai_chance = { factor = 5 }
+		set_country_flag = Amelia_communist_victory
+	}
+}
+
+#WTS - New Foundland purchase
+country_event = {
+	id = amelia.9
+	title = amelia.9.t
+    desc = amelia.9.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.9.a	#Yes
+     ai_chance = { factor = 100 }
+     	WTS = { 
+     		transfer_state = 331 
+     		country_event = { id = amelia.10 hours = 3}
+     		}
+     	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 10000
+		    producer = WTS
+	    }
+     }
+ 
+     option = {
+     name = amelia.9.b	#N0
+     ai_chance = { factor = 0 }
+     }
+}
+
+#WTS - New Foundland success!
+country_event = {
+	id = amelia.10
+	title = amelia.10.t
+    desc = amelia.10.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.10.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#WTS - Hong Kong purchase
+country_event = {
+	id = amelia.11
+	title = amelia.11.t
+    desc = amelia.11.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.11.a	#Yes
+     ai_chance = { factor = 100 }
+     WTS = { 
+     		transfer_state = 326 
+     		country_event = { id = amelia.12 hours = 3}
+     		}
+     	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 10000
+		    producer = WTS
+	    }
+     }
+ 
+     option = {
+     name = amelia.11.b	#N0
+     ai_chance = { factor = 0 }
+     }
+}
+
+#WTS - Hong Kong success!
+country_event = {
+	id = amelia.12
+	title = amelia.12.t
+    desc = amelia.12.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.12.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#WTS - India Treaty Port
+country_event = {
+	id = amelia.13
+	title = amelia.13.t
+    desc = amelia.13.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.13.a	#Yes
+     ai_chance = { factor = 50 }
+     	WTS = { 
+     		transfer_state = 320 
+     		country_event = { id = amelia.14 hours = 3}
+     	}
+     }
+ 
+     option = {
+     name = amelia.13.b	#N0
+     ai_chance = { factor = 50 }
+     	WTS = { 
+     		transfer_state = 321
+     		country_event = { id = amelia.15 hours = 3}
+     	}
+     }
+
+     option = {
+     name = amelia.13.c	#N0
+     ai_chance = { factor = 0 }
+     WTS = {
+     	country_event = { id = proposed.78 }
+     	create_wargoal = { type = annex_everything target = RUS }
+     }
+     }
+}
+
+#WTS - India port 320
+country_event = {
+	id = amelia.14
+	title = amelia.14.t
+    desc = amelia.14.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.14.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#WTS - India port 321
+country_event = {
+	id = amelia.15
+	title = amelia.15.t
+    desc = amelia.15.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.15.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#WTS - Question of the Federation
+country_event = {
+	id = amelia.16
+	title = amelia.16.t
+    desc = amelia.16.d
+    picture = GFX_report_event_amelia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = amelia.16.a	#Yes
+     ai_chance = { factor = 100 }
+     	WTS = { 
+     		annex_country = {
+    			target = ROOT
+    			transfer_troops = yes
+			}
+     	}
+     }
+ 
+     option = {
+     name = amelia.16.b	#N0
+     ai_chance = { factor = 0 }
+     	
+     }
+}

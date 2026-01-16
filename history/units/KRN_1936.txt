@@ -1,0 +1,96 @@
+﻿
+division_template = {
+	name = "Koronesuki"		
+
+	division_names_group = KRN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Doggo Gang"		
+
+	division_names_group = KRN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 15
+    }
+    location = 4088
+    division_template ="Koronesuki"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 16
+    }
+    location = 792
+    division_template ="Koronesuki"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 17
+    }
+    location = 10106
+    division_template ="Koronesuki"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 18
+    }
+    location = 2097
+    division_template ="Koronesuki"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+}
+
+air_wings = {
+	291 = {
+		fighter_equipment_0 =  {
+			owner = "KRN" 
+			amount = 300
+		}
+		CAS_equipment_1 =  {
+			owner = "KRN" 
+			amount = 300
+		}
+	}
+}

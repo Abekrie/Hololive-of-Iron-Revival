@@ -1,0 +1,1400 @@
+add_namespace = holo_cn
+
+#Rosalyn assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.1
+	title = holo_cn.1.t
+    desc = holo_cn.1.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.1.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Echo assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.2
+	title = holo_cn.2.t
+    desc = holo_cn.2.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.2.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Yogiri assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.3
+	title = holo_cn.3.t
+    desc = holo_cn.3.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.3.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Artia assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.4
+	title = holo_cn.4.t
+    desc = holo_cn.4.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.4.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Civia assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.5
+	title = holo_cn.5.t
+    desc = holo_cn.5.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.5.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Doris assure her loyalty to Hololive
+country_event = {
+	id = holo_cn.6
+	title = holo_cn.6.t
+    desc = holo_cn.6.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.6.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+ 
+}
+
+#Rosalyn requests garrison support
+country_event = {
+	id = holo_cn.7
+	title = holo_cn.7.t
+    desc = holo_cn.7.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.7.a	#Yes
+     ai_chance = { factor = 1 }
+     	RSA = {
+         	country_event = { id = proposed.107 }
+         }
+        RSA = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.7.b	#No
+     ai_chance = { factor = 1 }
+        RSA = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         RSA = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#Echo requests garrison support
+country_event = {
+	id = holo_cn.8
+	title = holo_cn.8.t
+    desc = holo_cn.8.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.8.a	#Yes
+     ai_chance = { factor = 1 }
+     	ECH = {
+         	country_event = { id = proposed.107 }
+         }
+         ECH = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.8.b	#No
+     ai_chance = { factor = 1 }
+        ECH = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         ECH = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#Yogiri requests garrison support
+country_event = {
+	id = holo_cn.9
+	title = holo_cn.9.t
+    desc = holo_cn.9.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.9.a	#Yes
+     ai_chance = { factor = 1 }
+     	YOG = {
+         	country_event = { id = proposed.107 }
+         }
+         YOG = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.9.b	#No
+     ai_chance = { factor = 1 }
+        YOG = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         YOG = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#Artia requests garrison support
+country_event = {
+	id = holo_cn.10
+	title = holo_cn.10.t
+    desc = holo_cn.10.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.10.a	#Yes
+     ai_chance = { factor = 1 }
+     	ART = {
+         	country_event = { id = proposed.107 }
+         }
+         ART = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.10.b	#No
+     ai_chance = { factor = 1 }
+        ART = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         ART = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#Civia requests garrison support
+country_event = {
+	id = holo_cn.11
+	title = holo_cn.11.t
+    desc = holo_cn.11.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.11.a	#Yes
+     ai_chance = { factor = 1 }
+     	CIV = {
+         	country_event = { id = proposed.107 }
+         }
+         CIV = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.11.b	#No
+     ai_chance = { factor = 1 }
+        CIV = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         CIV = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#Doris requests garrison support
+country_event = {
+	id = holo_cn.12
+	title = holo_cn.12.t
+    desc = holo_cn.12.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.12.a	#Yes
+     ai_chance = { factor = 1 }
+    	 DOR = {
+         	country_event = { id = proposed.107 }
+         }
+         DOR = {
+        	add_manpower = 10000
+        }
+        add_manpower = -10000
+     }
+ 
+     option = {
+     name = holo_cn.12.b	#No
+     ai_chance = { factor = 1 }
+        DOR = { set_country_flag = CN_no_more_request }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+         DOR = {
+         	country_event = { id = holo_cn.13 }
+         }
+     }
+}
+
+#HQ - Failed to meet our request
+country_event = {
+	id = holo_cn.13
+	title = holo_cn.13.t
+    desc = holo_cn.13.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.13.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#Rosalyn requests infantry equipment
+country_event = {
+	id = holo_cn.14
+	title = holo_cn.14.t
+    desc = holo_cn.14.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.14.a	#Yes
+     ai_chance = { factor = 1 }
+        RSA = { country_event = { id = proposed.107 } }
+        RSA = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.14.b	#No
+     ai_chance = { factor = 1 }
+        RSA = { set_country_flag = CN_no_more_request }
+        RSA = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Echo requests infantry equipment
+country_event = {
+	id = holo_cn.15
+	title = holo_cn.15.t
+    desc = holo_cn.15.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.15.a	#Yes
+     ai_chance = { factor = 1 }
+        ECH = { country_event = { id = proposed.107 } }
+        ECH = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.15.b	#No
+     ai_chance = { factor = 1 }
+        ECH = { set_country_flag = CN_no_more_request }
+        ECH = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Yogiri requests infantry equipment
+country_event = {
+	id = holo_cn.16
+	title = holo_cn.16.t
+    desc = holo_cn.16.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.16.a	#Yes
+     ai_chance = { factor = 1 }
+        YOG = { country_event = { id = proposed.107 } }
+        YOG = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.16.b	#No
+     ai_chance = { factor = 1 }
+        YOG = { set_country_flag = CN_no_more_request }
+        YOG = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Artia requests infantry equipment
+country_event = {
+	id = holo_cn.17
+	title = holo_cn.17.t
+    desc = holo_cn.17.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.17.a	#Yes
+     ai_chance = { factor = 1 }
+        ART = { country_event = { id = proposed.107 } }
+        ART = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.17.b	#No
+     ai_chance = { factor = 1 }
+        ART = { set_country_flag = CN_no_more_request }
+        ART = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Civia requests infantry equipment
+country_event = {
+	id = holo_cn.18
+	title = holo_cn.18.t
+    desc = holo_cn.18.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.18.a	#Yes
+     ai_chance = { factor = 1 }
+        CIV = { country_event = { id = proposed.107 } }
+        CIV = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.18.b	#No
+     ai_chance = { factor = 1 }
+        CIV = { set_country_flag = CN_no_more_request }
+        CIV = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Doris requests infantry equipment
+country_event = {
+	id = holo_cn.19
+	title = holo_cn.19.t
+    desc = holo_cn.19.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.19.a	#Yes
+     ai_chance = { factor = 1 }
+        DOR = { country_event = { id = proposed.107 } }
+        DOR = {
+        	add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2000
+		    producer = ACH
+	    	}
+         }
+
+         add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = -2000
+	    	}
+     }
+ 
+     option = {
+     name = holo_cn.19.b	#No
+     ai_chance = { factor = 1 }
+        DOR = { set_country_flag = CN_no_more_request }
+        DOR = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Rosalyn requests extra budget
+country_event = {
+	id = holo_cn.20
+	title = holo_cn.20.t
+    desc = holo_cn.20.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.20.a	#Yes
+     ai_chance = { factor = 1 }
+        RSA = { country_event = { id = proposed.107 } }
+        RSA = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.20.b	#No
+     ai_chance = { factor = 1 }
+        RSA = { set_country_flag = CN_no_more_request }
+        RSA = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Echo requests extra budget
+country_event = {
+	id = holo_cn.21
+	title = holo_cn.21.t
+    desc = holo_cn.21.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.21.a	#Yes
+     ai_chance = { factor = 1 }
+        ECH = { country_event = { id = proposed.107 } }
+        ECH = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.21.b	#No
+     ai_chance = { factor = 1 }
+        ECH = { set_country_flag = CN_no_more_request }
+        ECH = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Yogiri requests extra budget
+country_event = {
+	id = holo_cn.22
+	title = holo_cn.22.t
+    desc = holo_cn.22.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.22.a	#Yes
+     ai_chance = { factor = 1 }
+        YOG = { country_event = { id = proposed.107 } }
+        YOG = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.22.b	#No
+     ai_chance = { factor = 1 }
+        YOG = { set_country_flag = CN_no_more_request }
+        YOG = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Artia requests extra budget
+country_event = {
+	id = holo_cn.23
+	title = holo_cn.23.t
+    desc = holo_cn.23.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.23.a	#Yes
+     ai_chance = { factor = 1 }
+        ART = { country_event = { id = proposed.107 } }
+        ART = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.23.b	#No
+     ai_chance = { factor = 1 }
+        ART = { set_country_flag = CN_no_more_request }
+        ART = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Civia requests extra budget
+country_event = {
+	id = holo_cn.24
+	title = holo_cn.24.t
+    desc = holo_cn.24.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.24.a	#Yes
+     ai_chance = { factor = 1 }
+        CIV = { country_event = { id = proposed.107 } }
+        CIV = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.24.b	#No
+     ai_chance = { factor = 1 }
+        CIV = { set_country_flag = CN_no_more_request }
+        CIV = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Doris requests extra budget
+country_event = {
+	id = holo_cn.25
+	title = holo_cn.25.t
+    desc = holo_cn.25.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.25.a	#Yes
+     ai_chance = { factor = 1 }
+        DOR = { country_event = { id = proposed.107 } }
+        DOR = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = ACH
+	    }
+         }
+
+        add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = -1000
+	    }
+     }
+ 
+     option = {
+     name = holo_cn.25.b	#No
+     ai_chance = { factor = 1 }
+        DOR = { set_country_flag = CN_no_more_request }
+        DOR = { country_event = { id = holo_cn.13 } }
+         custom_effect_tooltip = CET_China_HQ_cannot_meet_request
+     }
+}
+
+#Rosalyn invite to faction
+country_event = {
+	id = holo_cn.26
+	title = holo_cn.26.t
+    desc = holo_cn.26.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.26.a	#Yes
+     ai_chance = { factor = 100 }
+          RSA = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.26.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Echo invite to faction
+country_event = {
+	id = holo_cn.27
+	title = holo_cn.27.t
+    desc = holo_cn.27.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.27.a	#Yes
+     ai_chance = { factor = 100 }
+          ECH = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.27.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Yogiri invite to faction
+country_event = {
+	id = holo_cn.28
+	title = holo_cn.28.t
+    desc = holo_cn.28.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.28.a	#Yes
+     ai_chance = { factor = 100 }
+          YOG = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.28.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Artia invite to faction
+country_event = {
+	id = holo_cn.29
+	title = holo_cn.29.t
+    desc = holo_cn.29.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.29.a	#Yes
+     ai_chance = { factor = 100 }
+          ART = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.29.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Civia invite to faction
+country_event = {
+	id = holo_cn.30
+	title = holo_cn.30.t
+    desc = holo_cn.30.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.30.a	#Yes
+     ai_chance = { factor = 100 }
+          CIV = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.30.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Doris invite to faction
+country_event = {
+	id = holo_cn.31
+	title = holo_cn.31.t
+    desc = holo_cn.31.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.31.a	#Yes
+     ai_chance = { factor = 100 }
+          DOR = { add_to_faction = ROOT }
+     }
+
+ 
+     option = {
+     name = holo_cn.31.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Rosalyn demand border state!
+country_event = {
+	id = holo_cn.32
+	title = holo_cn.32.t
+    desc = holo_cn.32.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.32.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = RSA_claims_this_state}
+               transfer_state_to = RSA
+               clr_state_flag = RSA_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.32.b	#No
+     ai_chance = { factor = 0 }
+         RSA = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Echo demand border state!
+country_event = {
+	id = holo_cn.33
+	title = holo_cn.33.t
+    desc = holo_cn.33.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.33.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = ECH_claims_this_state}
+               transfer_state_to = ECH
+               clr_state_flag = ECH_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.33.b	#No
+     ai_chance = { factor = 0 }
+         ECH = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Yogiri demand border state!
+country_event = {
+	id = holo_cn.34
+	title = holo_cn.34.t
+    desc = holo_cn.34.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.34.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = YOG_claims_this_state}
+               transfer_state_to = YOG
+               clr_state_flag = YOG_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.34.b	#No
+     ai_chance = { factor = 0 }
+         YOG = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Artia demand border state!
+country_event = {
+	id = holo_cn.35
+	title = holo_cn.35.t
+    desc = holo_cn.35.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.35.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = ART_claims_this_state}
+               transfer_state_to = ART
+               clr_state_flag = ART_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.35.b	#No
+     ai_chance = { factor = 0 }
+         ART = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Civia demand border state!
+country_event = {
+	id = holo_cn.36
+	title = holo_cn.36.t
+    desc = holo_cn.36.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.36.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = CIV_claims_this_state}
+               transfer_state_to = CIV
+               clr_state_flag = CIV_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.36.b	#No
+     ai_chance = { factor = 0 }
+         CIV = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Doris demand border state!
+country_event = {
+	id = holo_cn.37
+	title = holo_cn.37.t
+    desc = holo_cn.37.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.37.a	#Yes
+     ai_chance = { factor = 100 }
+          every_state = { limit = {has_state_flag = DOR_claims_this_state}
+               transfer_state_to = DOR
+               clr_state_flag = DOR_claims_this_state
+          }
+     }
+
+     option = {
+     name = holo_cn.37.b	#No
+     ai_chance = { factor = 0 }
+         DOR = { create_wargoal = { type = annex_everything target = ROOT }}
+     }
+}
+
+#Rosalyn asks to join faction
+country_event = {
+	id = holo_cn.38
+	title = holo_cn.38.t
+    desc = holo_cn.38.d
+    picture = GFX_report_event_rosalyn_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.38.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = RSA
+     }
+
+     option = {
+     name = holo_cn.38.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Echo asks to join faction
+country_event = {
+	id = holo_cn.39
+	title = holo_cn.39.t
+    desc = holo_cn.39.d
+    picture = GFX_report_event_echo_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.39.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = ECH
+     }
+
+     option = {
+     name = holo_cn.39.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Yogiri asks to join faction
+country_event = {
+	id = holo_cn.40
+	title = holo_cn.40.t
+    desc = holo_cn.40.d
+    picture = GFX_report_event_yogiri_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.40.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = YOG
+     }
+
+     option = {
+     name = holo_cn.40.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Artia asks to join faction
+country_event = {
+	id = holo_cn.41
+	title = holo_cn.41.t
+    desc = holo_cn.41.d
+    picture = GFX_report_event_artia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.41.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = ART
+     }
+
+     option = {
+     name = holo_cn.41.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Civia asks to join faction
+country_event = {
+	id = holo_cn.42
+	title = holo_cn.42.t
+    desc = holo_cn.42.d
+    picture = GFX_report_event_civia_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.42.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = CIV
+     }
+
+     option = {
+     name = holo_cn.42.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Doris asks to join faction
+country_event = {
+	id = holo_cn.43
+	title = holo_cn.43.t
+    desc = holo_cn.43.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.43.a	#Yes
+     ai_chance = { factor = 100 }
+          add_to_faction = DOR
+     }
+
+     option = {
+     name = holo_cn.43.b	#No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Japan - Anime Expo
+country_event = {
+   id = holo_cn.44
+   title = holo_cn.44.t
+    desc = holo_cn.44.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.44.a   #Yes
+     ai_chance = { factor = 100 }
+         add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = electronics
+            }
+          JAP = {add_equipment_to_stockpile = {
+                              type = hololive_yen_0
+                              amount = 1200
+                              producer = ROOT
+                      }}
+     }
+
+     option = {
+     name = holo_cn.44.b   #No
+     ai_chance = { factor = 0 }
+     }
+}
+
+#Japan - Demand Korea
+country_event = {
+   id = holo_cn.45
+   title = holo_cn.45.t
+    desc = holo_cn.45.d
+    picture = GFX_report_event_doris_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.45.a   #Yes
+     ai_chance = { factor = 100 }
+         JAP = {
+            transfer_state = 527
+            transfer_state = 525
+         }
+
+         if = {
+            limit = { tag = ECH }
+            JAP = { country_event = { id = proposed.21 }}
+         }
+     }
+
+     option = {
+     name = holo_cn.45.b   #No
+     ai_chance = { factor = 0 }
+         if = {
+            limit = { tag = ECH }
+            JAP = { country_event = { id = proposed.22 }}
+         }
+     }
+}
+
+#Hololive China - Question our Loyalty
+country_event = {
+   id = holo_cn.46
+   title = holo_cn.46.t
+    desc = holo_cn.46.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.46.a   #Yes
+     ai_chance = { factor = 10 }
+         ROOT = {
+            clr_country_flag = CN_can_request_HQ_support
+         }
+
+         custom_effect_tooltip = CET_event_holo_cn_46
+
+         if = {
+            limit = { tag = ECH }
+            ACH = { country_event = { id = proposed.21 }}
+         }
+         if = {
+            limit = { tag = RSA }
+            ACH = { country_event = { id = proposed.75 }}
+         }
+         if = {
+            limit = { tag = DOR }
+            ACH = { country_event = { id = proposed.19 }}
+         }
+         if = {
+            limit = { tag = CIV }
+            ACH = { country_event = { id = proposed.13 }}
+         }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.5 }}
+         }
+         if = {
+            limit = { tag = YOG }
+            ACH = { country_event = { id = proposed.95 }}
+         }
+     }
+
+     option = {
+     name = holo_cn.46.b   #No
+     ai_chance = { factor = 90 }
+         ACH = { end_puppet = ROOT }
+         ROOT = {
+            leave_faction = yes
+         }
+         ROOT = {
+            clr_country_flag = CN_can_request_HQ_support
+            add_timed_idea = {
+                 idea = exposed_by_the_hq_ns
+                 days = 90
+             }
+         }
+         ACH = {create_wargoal = { type = annex_everything target = ROOT }}
+         if = {
+            limit = { tag = ECH }
+            ACH = { country_event = { id = proposed.22 }}
+         }
+         if = {
+            limit = { tag = RSA }
+            ACH = { country_event = { id = proposed.76 }}
+         }
+         if = {
+            limit = { tag = DOR }
+            ACH = { country_event = { id = proposed.20 }}
+         }
+         if = {
+            limit = { tag = CIV }
+            ACH = { country_event = { id = proposed.14 }}
+         }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.6 }}
+         }
+         if = {
+            limit = { tag = YOG }
+            ACH = { country_event = { id = proposed.96 }}
+         }
+     }
+}
+
+#Hololive China - Demand Shanghai
+country_event = {
+   id = holo_cn.47
+   title = holo_cn.47.t
+    desc = holo_cn.47.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.47.a   #Yes
+     ai_chance = { factor = 100 }
+         ACH = {
+            transfer_state = 613
+         }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.5 }}
+         }
+     }
+
+     option = {
+     name = holo_cn.47.b   #No
+     ai_chance = { factor = 0 }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.6 }}
+         }
+     }
+}
+
+#Hololive China - Beijing Conference
+country_event = {
+   id = holo_cn.48
+   title = holo_cn.48.t
+    desc = holo_cn.48.d
+    picture = GFX_report_event_nodoka_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = holo_cn.48.a   #Yes
+     ai_chance = { factor = 100 }
+         ACH = {
+               annex_country = {
+                  target = ROOT
+                  transfer_troops = yes
+               }
+            }
+         if = {
+            limit = { tag = ECH }
+            ACH = { country_event = { id = proposed.21 }}
+         }
+         if = {
+            limit = { tag = RSA }
+            ACH = { country_event = { id = proposed.75 }}
+         }
+         if = {
+            limit = { tag = DOR }
+            ACH = { country_event = { id = proposed.19 }}
+         }
+         if = {
+            limit = { tag = CIV }
+            ACH = { country_event = { id = proposed.13 }}
+         }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.5 }}
+         }
+         if = {
+            limit = { tag = YOG }
+            ACH = { country_event = { id = proposed.95 }}
+         }
+     }
+
+     option = {
+     name = holo_cn.48.b   #No
+     ai_chance = { factor = 0 }
+         if = {
+            limit = { tag = ECH }
+            ACH = { country_event = { id = proposed.22 }}
+         }
+         if = {
+            limit = { tag = RSA }
+            ACH = { country_event = { id = proposed.76 }}
+         }
+         if = {
+            limit = { tag = DOR }
+            ACH = { country_event = { id = proposed.20 }}
+         }
+         if = {
+            limit = { tag = CIV }
+            ACH = { country_event = { id = proposed.14 }}
+         }
+         if = {
+            limit = { tag = ART }
+            ACH = { country_event = { id = proposed.6 }}
+         }
+         if = {
+            limit = { tag = YOG }
+            ACH = { country_event = { id = proposed.96 }}
+         }
+     }
+}

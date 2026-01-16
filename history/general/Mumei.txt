@@ -1,0 +1,53 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MUM
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MUM_friend_holo_xgeneral
+    name="Friend"
+      portraits={
+            army={
+                  large="gfx/leaders/MUM/friend.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader trickster}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { }
+      }
+  }
+
+  generate_character = {
+    token_base = MUM_owl_holo_xgeneral
+    name="Owl"
+      portraits={
+            army={
+                  large="gfx/leaders/MUM/owl.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={ambusher skilled_staffer}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

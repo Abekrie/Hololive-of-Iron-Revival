@@ -1,0 +1,233 @@
+add_namespace = moona
+
+#moona refuses Maldives
+country_event = {
+	id = moona.1
+	title = moona.1.t
+	desc = moona.1.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#moona accepted Maldives
+country_event = {
+	id = moona.2
+	title = moona.2.t
+	desc = moona.2.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.1.a
+		set_global_flag = maldives_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#moona refuses Ceylon
+country_event = {
+	id = moona.3
+	title = moona.3.t
+	desc = moona.3.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#moona accepted Ceylon
+country_event = {
+	id = moona.4
+	title = moona.4.t
+	desc = moona.4.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.4.a
+		set_global_flag = ceylon_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Moona yes ICC
+country_event = {
+	id = moona.5
+	title = moona.5.t
+	desc = moona.5.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.5.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Moona no ICC
+country_event = {
+	id = moona.6
+	title = moona.6.t
+	desc = moona.6.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+#MOO - Demands Palawan
+country_event = {
+	id = moona.24
+	title = moona.24.t
+	desc = moona.24.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.24.a
+		ai_chance = { factor = 100 }
+
+		MOO = {
+			country_event = { id = proposed.27 }
+			transfer_state = 626
+		}
+	}
+
+	option = {
+		name = moona.24.b
+		ai_chance = { factor = 0 }
+		
+		MOO = {
+			country_event = { id = proposed.28 }
+		}
+	}
+}
+
+#MOO - Seek to join faction
+country_event = {
+	id = moona.25
+	title = moona.25.t
+	desc = moona.25.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.25.a
+		ai_chance = { factor = 100 }
+		add_to_faction = MOO
+
+		if = {
+			limit = { tag = PEK }
+			MOO = { country_event = { id = proposed.67 }}
+		}
+	}
+
+	option = {
+		name = moona.25.b
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = PEK }
+			MOO = { country_event = { id = proposed.68 }}
+		}
+	}
+}
+
+#MOO - Unthinkable Option/(Surrender or Nuclear disaster)
+country_event = {
+	id = moona.26
+	title = moona.26.t
+	desc = moona.26.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.26.a
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = CET_moona_event_26
+		launch_nuke = {
+			province = 1182
+			state = 282
+			controller = JAP
+			use_nuke = yes
+		}
+	}
+
+	option = {
+		name = moona.26.b
+		ai_chance = { factor = 100 }
+		MOO = {white_peace = JAP
+				transfer_state = 282
+				transfer_state = 532}
+	}
+}
+
+#MOO - Demand puppet
+country_event = {
+	id = moona.27
+	title = moona.27.t
+	desc = moona.27.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = moona.27.a
+		ai_chance = { factor = 100 }
+		MOO = {
+			puppet = ROOT
+		}
+
+		if = {
+			limit = { tag = IOF }
+			MOO = { country_event = { id = proposed.35 }}
+		}
+	}
+
+	option = {
+		name = moona.27.b
+		ai_chance = { factor = 0 }
+		
+		if = {
+			limit = { tag = IOF }
+			MOO = { country_event = { id = proposed.36 }}
+		}
+	}
+}

@@ -1,0 +1,329 @@
+add_namespace = kronii
+
+#TT - Demand annex
+country_event = {
+	id = kronii.1
+	title = kronii.1.t
+	desc = kronii.1.d
+	picture = GFX_report_event_trash_taste_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.1.a
+		ai_chance = { factor = 100 }
+		KRO = {annex_country = {
+		    		target = ROOT
+		    		transfer_troops = yes
+				}}
+		if = {
+			limit = { tag = JAP }
+			KRO = { country_event = { id = proposed.109 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kronii.1.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = JAP }
+			KRO = { country_event = { id = proposed.110 }}
+		}
+		
+	}
+}
+
+#TT - Request Calliope's Support
+country_event = {
+	id = kronii.2
+	title = kronii.2.t
+	desc = kronii.2.d
+	picture = GFX_report_event_trash_taste_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.2.a
+		ai_chance = { factor = 75 }
+
+			add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = -2000
+                    producer = ROOT
+            }
+		
+		if = {
+			limit = { tag = MRI }
+			KRO = { country_event = { id = kronii.3 }}
+		}
+	}
+
+
+	#No
+	option = {
+		name = kronii.2.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MRI }
+			KRO = { country_event = { id = proposed.18 }}
+		}
+		
+	}
+}
+
+#TT - Request Calliope's Support YES
+country_event = {
+	id = kronii.3
+	title = kronii.3.t
+	desc = kronii.3.d
+	picture = GFX_report_event_calliope_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.3.a
+		ai_chance = { factor = 75 }
+
+		add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 5000
+                    producer = ROOT
+            }
+	}
+}
+
+#TT - We got Isekai'd
+country_event = {
+	id = kronii.4
+	title = kronii.4.t
+	desc = kronii.4.d
+	picture = GFX_report_event_trash_taste_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.4.a
+		ai_chance = { factor = 50 }
+
+		hidden_effect = {
+                retire_ideology_leader = neutrality
+                retire_ideology_leader = fascism
+            }
+            create_country_leader = {
+                name = "Joey"
+                picture = "gfx/leaders/KRO/joey_jojo.dds"
+                expire = "1965.1.1"
+                ideology = centrism
+                traits = {
+                    jojo_fan_kro_trait
+                }
+            }
+            hidden_effect = {
+                create_country_leader = {
+                name = "Joey"
+                picture = "gfx/leaders/KRO/joey_jojo.dds"
+                expire = "1965.1.1"
+                ideology = fascism_ideology
+                    traits = {
+                        jojo_fan_kro_trait
+                    }
+                }
+            }
+	}
+
+
+	#No
+	option = {
+		name = kronii.4.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+                retire_ideology_leader = neutrality
+                retire_ideology_leader = fascism
+            }
+            create_country_leader = {
+                name = "Connor"
+                picture = "gfx/leaders/KRO/connor_jojo.dds"
+                expire = "1965.1.1"
+                ideology = centrism
+                traits = {
+                    jojo_fan_kro_trait
+                }
+            }
+            hidden_effect = {
+                create_country_leader = {
+                name = "Connor"
+                picture = "gfx/leaders/KRO/connor_jojo.dds"
+                expire = "1965.1.1"
+                ideology = fascism_ideology
+                    traits = {
+                        jojo_fan_kro_trait
+                    }
+                }
+            }
+		
+	}
+}
+
+#TT - Ask to join faction
+country_event = {
+	id = kronii.5
+	title = kronii.5.t
+	desc = kronii.5.d
+	picture = GFX_report_event_trash_taste_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.5.a
+		ai_chance = { factor = 100 }
+		add_to_faction = KRO
+		if = {
+			limit = { tag = GER }
+			KRO = { country_event = { id = proposed.99 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kronii.5.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = GER }
+			KRO = { country_event = { id = proposed.100 }}
+		}
+		
+	}
+}
+
+#KRO - Invite to faction
+country_event = {
+	id = kronii.6
+	title = kronii.6.t
+	desc = kronii.6.d
+	picture = GFX_report_event_kronii_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.6.a
+		ai_chance = { factor = 100 }
+		KRO = {add_to_faction = ROOT}
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.111 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kronii.6.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.118 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.112 }}
+		}
+		
+	}
+}
+
+#KRO - Demand puppet
+country_event = {
+	id = kronii.7
+	title = kronii.7.t
+	desc = kronii.7.d
+	picture = GFX_report_event_kronii_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.7.a
+		ai_chance = { factor = 100 }
+		KRO = {puppet = ROOT}
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.111 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kronii.7.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.118 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.112 }}
+		}
+		
+	}
+}
+
+#KRO - Secret Deal
+country_event = {
+	id = kronii.8
+	title = kronii.8.t
+	desc = kronii.8.d
+	picture = GFX_report_event_kronii_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = kronii.8.a
+		ai_chance = { factor = 100 }
+		leave_faction = yes
+		KRO = {add_to_faction = ROOT}
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.111 }}
+		}
+	}
+
+	#No
+	option = {
+		name = kronii.8.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MUM }
+			KRO = { country_event = { id = proposed.118 }}
+		}
+
+		if = {
+			limit = { tag = FAU }
+			KRO = { country_event = { id = proposed.112 }}
+		}
+		
+	}
+}

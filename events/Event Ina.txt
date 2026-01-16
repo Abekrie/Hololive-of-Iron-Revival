@@ -1,0 +1,340 @@
+add_namespace = ina
+
+#NIN - Tako Bell
+country_event = {
+	id = ina.1
+	title = ina.1.t
+	desc = ina.1.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.1.a
+		ai_chance = { factor = 100 }
+		if = { limit = { KIA = { is_in_faction = no }}
+			NIN = {
+				create_faction = FACTION_FASTFOOD_UNITED_FRONT
+				add_to_faction = KIA
+			}
+		}
+
+		if = { limit = { KIA = { is_in_faction = yes
+			is_faction_leader = yes }}
+			KIA = {
+				add_to_faction = NIN
+			}
+		}
+
+		NIN = { country_event = { id = proposed.39 }}
+		#hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = ina.1.b
+		ai_chance = { factor = 0 }
+		NIN = { country_event = { id = proposed.40 }}
+	}
+}
+
+#NIN - Buy Congo
+country_event = {
+	id = ina.2
+	title = ina.2.t
+	desc = ina.2.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.2.a
+		ai_chance = { factor = 100 }
+
+		KIA = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 25000
+		    	producer = ROOT
+	    	}
+		}
+
+		if = { limit = { COG = { exists = no }}
+			NIN = {
+				transfer_state = 295
+				transfer_state = 538
+				transfer_state = 718
+			}
+		}
+
+		if = { limit = { COG = { exists = yes 
+		is_subject_of = KIA }}
+			KIA = {
+				end_puppet = COG
+			}
+			COG = {
+				drop_cosmetic_tag = yes
+			}
+			NIN = {
+				puppet = COG
+			}
+		}
+
+		NIN = { country_event = { id = proposed.39 }}
+		#hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = ina.2.b
+		ai_chance = { factor = 0 }
+		NIN = { country_event = { id = proposed.40 }}
+	}
+}
+
+#NIN - Demand Leningrad
+country_event = {
+	id = ina.3
+	title = ina.3.t
+	desc = ina.3.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.3.a
+		ai_chance = { factor = 100 }
+
+		NIN = { transfer_state = 195 }
+
+		NIN = { country_event = { id = ina.4 }}
+		#hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = ina.3.b
+		ai_chance = { factor = 0 }
+		#NIN = { country_event = { id = proposed.40 }}
+	}
+}
+
+#NIN - Demand Leningrad YES
+country_event = {
+	id = ina.4
+	title = ina.4.t
+	desc = ina.4.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.4.a
+		ai_chance = { factor = 100 }
+
+		#NIN = { country_event = { id = proposed.39 }}
+		#hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+}
+
+#NIN - Buy Kiel canal
+country_event = {
+	id = ina.5
+	title = ina.5.t
+	desc = ina.5.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.5.a
+		ai_chance = { factor = 100 }
+
+		58 = {
+			OWNER = {add_equipment_to_stockpile = {
+					    	type = hololive_yen_0
+					    	amount = 25000
+					    	producer = ROOT
+				    	}}
+		}
+
+		NIN = {
+				transfer_state = 58
+			}
+
+		if = { limit = { tag = FBK }
+		NIN = { country_event = { id = proposed.23 }}
+		}
+		#hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = ina.5.b
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { tag = FBK }
+		NIN = { country_event = { id = proposed.24 }}
+		}
+	}
+}
+
+#NIN - Ask to join faction
+country_event = {
+	id = ina.6
+	title = ina.6.t
+	desc = ina.6.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.6.a
+		ai_chance = { factor = 100 }
+
+		add_to_faction = NIN
+
+		if = {
+			limit = { tag = KIA }
+			NIN = { country_event = { id = proposed.39 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			NIN = { country_event = { id = proposed.99 }}
+		}
+	}
+
+	#No
+	option = {
+		name = ina.6.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = KIA }
+			NIN = { country_event = { id = proposed.40 }}
+		}
+
+		if = {
+			limit = { tag = GER }
+			NIN = { country_event = { id = proposed.100 }}
+		}
+	}
+}
+
+#NIN - Annex or War
+country_event = {
+	id = ina.7
+	title = ina.7.t
+	desc = ina.7.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.7.a
+		ai_chance = { factor = 100 }
+
+
+		NIN = {
+				annex_country = {
+		    		target = ROOT
+		    		transfer_troops = no
+				}
+			}
+
+		if = {
+			limit = { tag = TAN }
+			NIN = { country_event = { id = ina.8 }}
+		}
+
+		if = {
+			limit = { tag = MON }
+			NIN = { country_event = { id = ina.9 }}
+		}
+	}
+
+	#No
+	option = {
+		name = ina.7.b
+		ai_chance = { factor = 0 }
+		NIN = {
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+	}
+}
+
+#NIN - Tannu Tuva submits
+country_event = {
+	id = ina.8
+	title = ina.8.t
+	desc = ina.8.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NIN - Mongolia submits
+country_event = {
+	id = ina.9
+	title = ina.9.t
+	desc = ina.9.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NIN - Demand Estonia
+country_event = {
+	id = ina.10
+	title = ina.10.t
+	desc = ina.10.d
+	picture = GFX_report_event_ina_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = ina.10.a
+		ai_chance = { factor = 100 }
+
+		NIN = { transfer_state = 812
+		transfer_state = 813
+		transfer_state = 13
+		transfer_state = 191
+		transfer_state = 811 }
+
+		if = {
+			limit = { tag = MAT }
+			NIN = { country_event = { id = proposed.49 }}
+		}
+	}
+
+	#No
+	option = {
+		name = ina.10.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MAT }
+			NIN = { country_event = { id = proposed.50 }}
+		}
+	}
+}

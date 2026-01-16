@@ -1,0 +1,2411 @@
+focus_tree = {
+	id = ROB_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			
+			OR = {
+			tag = ROB
+						}
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 100 y = 1000 }
+
+    #Economy and Industry
+	focus = {
+		id = ROB_banana_republic_LatinAmerica_focus
+		text = banana_republic_LatinAmerica_focus
+		icon = GFX_goal_generic_consumer_goods
+		#prerequisite = { focus = idkeator }
+		#mutually_exclusive = { focus = idbili }
+		#relative_position_id = ideator
+		x = 3
+		y = 0
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_timed_idea = {
+                idea = foreign_debts_hololive_ns
+                days = 60
+            }
+		    add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 20000
+		    	producer = ROOT
+	    	}
+	    }
+	}
+
+	focus = {
+		id = ROB_support_agriculture_LatinAmerica_focus
+		text = support_agriculture_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ROB_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = ROB_support_rearmament_LatinAmerica_focus }
+		relative_position_id = ROB_banana_republic_LatinAmerica_focus
+		x = -2
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_support_rearmament_LatinAmerica_focus
+		text = support_rearmament_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROB_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = ROB_support_agriculture_LatinAmerica_focus }
+		relative_position_id = ROB_banana_republic_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_war_on_drug_LatinAmerica_focus
+		text = war_on_drug_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ROB_support_agriculture_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_support_agriculture_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = ROB_export_banana_LatinAmerica_focus
+		text = export_banana_LatinAmerica_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = ROB_war_on_drug_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_war_on_drug_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = ROB_seek_flare_support_LatinAmerica_focus
+		text = seek_flare_support_LatinAmerica_focus
+		icon = GFX_focus_flare_flag
+		prerequisite = { focus = ROB_export_banana_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_export_banana_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = FLA
+		    modifier = faction_unity_opinion
+		    }
+		    FLA = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+			
+	    }
+	}
+
+	focus = {
+		id = ROB_hire_aqua_construction_LatinAmerica_focus
+		text = hire_aqua_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ROB_support_agriculture_LatinAmerica_focus 
+		focus = ROB_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_support_agriculture_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			AQA = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_hire_pekora_construction_LatinAmerica_focus
+		text = hire_pekora_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ROB_support_agriculture_LatinAmerica_focus 
+		focus = ROB_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_support_rearmament_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			PEK = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_coco_arms_factory_LatinAmerica_focus
+		text = coco_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROB_hire_pekora_construction_LatinAmerica_focus
+		focus = ROB_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_hire_pekora_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_mio_arms_factory_LatinAmerica_focus
+		text = mio_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROB_hire_pekora_construction_LatinAmerica_focus
+		focus = ROB_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_hire_aqua_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_drug_to_usa_LatinAmerica_focus
+		text = drug_to_usa_LatinAmerica_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ROB_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_support_rearmament_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = asacoco_idea
+	    }
+	}
+
+	focus = {
+		id = ROB_underground_tunnel_LatinAmerica_focus
+		text = underground_tunnel_LatinAmerica_focus
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ROB_drug_to_usa_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_drug_to_usa_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_seek_coco_support_LatinAmerica_focus
+		text = seek_coco_support_LatinAmerica_focus
+		icon = GFX_focus_coco_flag
+		prerequisite = { focus = ROB_underground_tunnel_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_underground_tunnel_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = COC
+		    modifier = faction_unity_opinion
+		    }
+		    COC = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+	    }
+	}
+
+	focus = {
+		id = ROB_pacific_coast_dock_LatinAmerica_focus
+		text = pacific_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ROB_mio_arms_factory_LatinAmerica_focus
+		focus = ROB_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_mio_arms_factory_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = ROB_atlantic_coast_dock_LatinAmerica_focus
+		text = atlantic_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ROB_mio_arms_factory_LatinAmerica_focus
+		focus = ROB_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_mio_arms_factory_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = ROB_maya_carlender_LatinAmerica_focus
+		text = maya_carlender_LatinAmerica_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = ROB_pacific_coast_dock_LatinAmerica_focus
+		focus = ROB_atlantic_coast_dock_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_atlantic_coast_dock_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+	    }
+	}
+
+	#Army Research
+    focus = {
+		id = ROB_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = ROB_banana_republic_LatinAmerica_focus
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = ROB_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = ROB_gaming }
+		relative_position_id = ROB_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = ROB_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = ROB_animal_crossing }
+		relative_position_id = ROB_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = ROB_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = ROB_gaming }
+		relative_position_id = ROB_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = ROB_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = ROB_tetris }
+		relative_position_id = ROB_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = ROB_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = ROB_gaming }
+		relative_position_id = ROB_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ROB_dark_soul_resh }
+		relative_position_id = ROB_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = ROB_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = ROB_apex_legend  focus = ROB_ring_fit }
+		relative_position_id = ROB_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = ROB_pubg  focus = ROB_ring_fit }
+		relative_position_id = ROB_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = ROB_minecraft_resh  focus = ROB_mario_kart }
+		relative_position_id = ROB_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = ROB_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = ROB_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = ROB_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ROB_hololive_music }
+		relative_position_id = ROB_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = ROB_hololive_music }
+		relative_position_id = ROB_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = ROB_hololive_music }
+		relative_position_id = ROB_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = ROB_yumemiru_sora_he 
+		focus = ROB_shiny_smily_story}
+		relative_position_id = ROB_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = ROB_yumemiru_sora_he 
+		focus = ROB_kirame_rider}
+		relative_position_id = ROB_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = ROB_azur_lane_boss_music }
+		prerequisite = { focus = ROB_fukkireta }
+		relative_position_id = ROB_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = ROB_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = ROB_azur_lane_boss_music }
+		relative_position_id = ROB_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = ROB_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = ROB_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = ROB_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ROB_live_streaming_gen }
+		mutually_exclusive = { focus = ROB_bilibili }
+		relative_position_id = ROB_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ROB_youtube_gen }
+		relative_position_id = ROB_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ROB_live_streaming_gen }
+		mutually_exclusive = { focus = ROB_youtube_gen }
+		relative_position_id = ROB_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ROB_bilibili 
+		focus = ROB_youtube_gen}
+		relative_position_id = ROB_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = ROB_superchat 
+		focus = ROB_game_casting}
+		prerequisite = { focus = ROB_karaoke }
+		relative_position_id = ROB_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = ROB_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = ROB_superchat 
+		focus = ROB_game_casting}
+		prerequisite = { focus = ROB_3d_studio }
+		relative_position_id = ROB_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = ROB_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = ROB_bilibili }
+		relative_position_id = ROB_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+#Political Reform
+    focus = {
+		id = ROB_hololive_memba
+		text = hololive_memba
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = ROB_live_streaming_gen
+		x = 12
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_political_power = 120
+		    if = {
+		    limit = { has_idea = pre_degenerate_era_1 }
+		    remove_ideas = pre_degenerate_era_1
+		    }
+	    }
+	}
+
+	focus = {
+		id = ROB_follow_the_policy
+		text = follow_the_policy
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ROB_hololive_memba }
+		mutually_exclusive = {focus = ROB_the_resistance_gen}
+		relative_position_id = ROB_hololive_memba
+		x = -4
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.15
+	    }
+	}
+
+	focus = {
+		id = ROB_the_resistance_gen
+		text = the_resistance_gen
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = ROB_hololive_memba }
+		mutually_exclusive = {focus = ROB_follow_the_policy}
+		relative_position_id = ROB_hololive_memba
+		x = 4
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.15
+	    }
+	}
+
+	focus = { 
+		id = ROB_idol_like
+		text = idol_like
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = ROB_the_resistance_gen 
+		focus = ROB_follow_the_policy}
+		relative_position_id = ROB_the_resistance_gen
+		x = -4
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		  
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = volunteer_corps_focus
+		    set_rule = { can_send_volunteers = yes }
+	    }
+	}
+
+	focus = {
+		id = ROB_yagoos_dream
+		text = yagoos_dream
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ROB_follow_the_policy }
+		mutually_exclusive = {focus = ROB_abnormal_idol}
+		relative_position_id = ROB_follow_the_policy
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.15
+	    }
+	}
+
+	focus = {
+		id = ROB_abnormal_idol
+		text = abnormal_idol
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = ROB_follow_the_policy }
+		mutually_exclusive = {focus = ROB_yagoos_dream}
+		relative_position_id = ROB_follow_the_policy
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_popularity = { ideology = fascism popularity = 0.6 }
+            add_timed_idea = {
+                idea = nationalism
+                days = 140
+            }
+	    }
+	}
+
+	focus = {
+		id = ROB_violence_resistance
+		text = violence_resistance
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = ROB_the_resistance_gen }
+		mutually_exclusive = {focus = ROB_chilling_gen}
+		relative_position_id = ROB_the_resistance_gen
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_popularity = { ideology = communism popularity = 0.6 }
+            add_timed_idea = {
+            idea = internationalism
+            days = 140
+            }
+	    }
+	}
+
+	focus = {
+		id = ROB_chilling_gen
+		text = chilling_gen
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ROB_the_resistance_gen }
+		mutually_exclusive = {focus = ROB_violence_resistance}
+		relative_position_id = ROB_the_resistance_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_popularity = { ideology = democratic popularity = 0.6 }
+            add_timed_idea = {
+                idea = democratic_influence
+                days = 140
+            }
+	    }
+	}
+
+	focus = { 
+		id = ROB_cute
+		text = cute
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = ROB_idol_like }
+		relative_position_id = ROB_idol_like
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		  
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = cute_1
+	    }
+	}
+
+	focus = {
+		id = ROB_popular_meme
+		text = popular_meme
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = ROB_idol_like }
+		relative_position_id = ROB_idol_like
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		  
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = being_meme
+	    } 
+	}
+
+	focus = { 
+		id = ROB_dream_girl
+		text = dream_girl
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = ROB_yagoos_dream }
+		relative_position_id = ROB_yagoos_dream
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		  
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = avanced_english_hololive_ns
+	    }
+	}
+
+	focus = {
+		id = ROB_extra_stuff
+		text = extra_stuff
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = ROB_yagoos_dream }
+		relative_position_id = ROB_yagoos_dream
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 10000
+		    producer = TAN
+	    }
+		}
+	}
+
+	focus = { 
+		id = ROB_sing_a_song
+		text = sing_a_song
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = ROB_cute }
+		prerequisite = { focus = ROB_popular_meme }
+		relative_position_id = ROB_cute
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		   
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = encouragement_1
+	    }
+	}
+
+	focus = { 
+		id = ROB_self_defence_generic_focus
+		text = self_defence_generic_focus
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = ROB_sing_a_song }
+		relative_position_id = ROB_sing_a_song
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		   
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = deterrence
+	    }
+	}
+
+	focus = { 
+		id = ROB_hololive_nuclear_generic_focus
+		text = hololive_nuclear_generic_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = ROB_self_defence_generic_focus }
+		relative_position_id = ROB_self_defence_generic_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		   
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+	focus = { 
+		id = ROB_hololive_spy_generic_focus
+		text = hololive_spy_generic_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ROB_self_defence_generic_focus }
+		relative_position_id = ROB_self_defence_generic_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		   
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = extra_holo_spy_idea
+	    }
+	}
+
+	focus = {
+		id = ROB_not_idol_like
+		text = not_idol_like
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = ROB_abnormal_idol }
+		relative_position_id = ROB_abnormal_idol
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_war_support = 0.10
+		    add_manpower = 100000
+		   
+	    }
+	}
+
+	focus = {
+		id = ROB_the_way_of_aqua_gen
+		text = the_way_of_aqua_gen
+		icon = GFX_focus_aqua_flag
+		prerequisite = { focus = ROB_violence_resistance }
+		relative_position_id = ROB_violence_resistance
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = hololive_resistance_ns 
+		   
+	    }
+	}
+
+	focus = {
+		id = ROB_not_the_way_of_aqua_gen
+		text = not_the_way_of_aqua_gen
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = ROB_chilling_gen }
+		relative_position_id = ROB_chilling_gen
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = funny_gang  
+		   
+	    }
+	}
+
+	focus = {
+		id = ROB_against_yagoos_dream
+		text = against_yagoos_dream
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROB_not_idol_like }
+		relative_position_id = ROB_not_idol_like
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		   
+	    }
+	}
+
+	focus = {
+		id = ROB_monetization
+		text = monetization
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ROB_chilling_gen }
+		relative_position_id = ROB_chilling_gen
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		   
+	    }
+	}
+
+	focus = {
+		id = ROB_yagoo_doctrine_generic_focus
+		text = yagoo_doctrine_generic_focus
+		icon = GFX_focus_yagoo_flag
+		prerequisite = { focus = ROB_dream_girl }
+		prerequisite = { focus = ROB_extra_stuff }
+		relative_position_id = ROB_dream_girl
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = reroganised_gov_ns
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROB_COVER_budget_generic_focus
+		text = COVER_budget_generic_focus
+		icon = GFX_focus_generic_trade
+		prerequisite = { focus = ROB_yagoo_doctrine_generic_focus }
+		#prerequisite = { focus =  }
+		relative_position_id = ROB_yagoo_doctrine_generic_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = GER
+	    }
+		}
+	}
+
+	focus = {
+		id = ROB_noel_doctrine_generic_focus
+		text = noel_doctrine_generic_focus
+		icon = GFX_focus_noel_flag
+		prerequisite = { focus = ROB_not_idol_like }
+		#prerequisite = { focus =  }
+		relative_position_id = ROB_not_idol_like
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 25
+			add_ideas = meat_bowl
+		}
+	}
+
+	focus = {
+		id = ROB_war_bond_generic_focus
+		text = war_bond_generic_focus
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = ROB_noel_doctrine_generic_focus }
+		prerequisite = { focus = ROB_against_yagoos_dream }
+		#prerequisite = { focus =  }
+		relative_position_id = ROB_against_yagoos_dream
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = GER
+	    }
+		}
+	}
+
+	focus = {
+		id = ROB_construction_company_generic_focus
+		text = construction_company_generic_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ROB_the_way_of_aqua_gen }
+		#prerequisite = { focus = idkmn }
+		relative_position_id = ROB_the_way_of_aqua_gen
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = infrastructure_building_idea
+		}
+	}
+
+	focus = {
+		id = ROB_force_labour_generic_focus
+		text = force_labour_generic_focus
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = ROB_the_way_of_aqua_gen }
+		#prerequisite = { focus = idkmn }
+		relative_position_id = ROB_the_way_of_aqua_gen
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_manpower = 100000
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROB_comecon_generic_focus
+		text = comecon_generic_focus
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = ROB_force_labour_generic_focus }
+		prerequisite = { focus = ROB_construction_company_generic_focus }
+		relative_position_id = ROB_force_labour_generic_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = AQA
+	    }
+		}
+	}
+
+	focus = {
+		id = ROB_sora_doctrine_generic_focus
+		text = sora_doctrine_generic_focus
+		icon = GFX_focus_sora_flag
+		prerequisite = { focus = ROB_monetization }
+		prerequisite = { focus = ROB_not_the_way_of_aqua_gen }
+		relative_position_id = ROB_monetization
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ROB_foreign_aids_generic_focus
+		text = foreign_aids_generic_focus
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = ROB_sora_doctrine_generic_focus }
+		#prerequisite = { focus = idkmn }
+		relative_position_id = ROB_sora_doctrine_generic_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = YAG
+	    }
+		}
+	}
+
+
+	focus = {
+		id = ROB_collab_with_other_member
+		text = collab_with_other_member
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = ROB_self_defence_generic_focus}
+		relative_position_id = ROB_self_defence_generic_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		 set_rule = { can_create_factions = yes }
+		}
+	}
+
+	#Diplomatic focus
+	focus = {
+		id = roboco_rob_focus
+		icon = GFX_focus_roboco_flag
+		#prerequisite = { focus =  }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = ROB_idol_agency_like_akb
+		x = 2
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_political_power = 120
+	    }
+	}
+
+	focus = {
+		id = telegram_interception_rob_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = roboco_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = roboco_rob_focus
+		x = 5
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = watson_secret_service_spy_idea
+	    }
+	}
+
+	focus = {
+		id = cursed_of_falling_rob_focus
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = roboco_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = roboco_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.1
+	    }
+	}
+
+	focus = {
+		id = battlestation_rob_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = cursed_of_falling_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = cursed_of_falling_rob_focus
+		x = 3
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = war_on_watame_rob_focus
+		icon = GFX_focus_watame_flag
+		prerequisite = { focus = telegram_interception_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = telegram_interception_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		will_lead_to_war_with = WAT
+		available = { date > 1938.1.1 
+		is_ai = no}
+
+		bypass = { OR = {
+			WAT = { exists = no }
+			WAT = { is_subject_of = ROOT }
+			WAT = { is_in_faction_with = ROOT }
+		} }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_wargoal = { type = annex_everything target = WAT }
+	    }
+	}
+
+	focus = {
+		id = war_on_luna_rob_focus
+		icon = GFX_focus_luna_flag
+		prerequisite = { focus = battlestation_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = battlestation_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		will_lead_to_war_with = LUN
+		available = { date > 1938.1.1 
+		is_ai = no}
+
+		bypass = { OR = {
+			LUN = { exists = no }
+			LUN = { is_subject_of = ROOT }
+			LUN = { is_in_faction_with = ROOT }
+		} }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_wargoal = { type = annex_everything target = LUN }
+	    }
+	}
+
+	focus = {
+		id = collab_with_neighbor_rob_focus
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = cursed_of_falling_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = cursed_of_falling_rob_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 25
+			LUN = {army_experience = 5}
+			ROS = {army_experience = 5}
+	    }
+	}
+
+	focus = {
+		id = robot_army_rob_focus
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = collab_with_neighbor_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = collab_with_neighbor_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = f2_conscription_ns
+	    }
+	}
+
+	focus = {
+		id = refuge_german_generals_rob_focus
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = robot_army_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = robot_army_rob_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			GER = {
+				surrender_progress > 0.5
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			GER = {kill_ideology_leader = fascism}
+
+			hidden_effect = {
+				news_event = { id = holo_news.154 }
+			}
+	    }
+	}
+
+	focus = {
+		id = robots_in_workforce_rob_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = cursed_of_falling_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = cursed_of_falling_rob_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = penguin_division_rob_focus
+		icon = GFX_focus_ROB_guns
+		prerequisite = { focus = robots_in_workforce_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = robots_in_workforce_rob_focus
+		x = -2
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = interventionism_ns
+		    set_rule = { can_send_volunteers = yes }
+	    }
+	}
+
+	focus = {
+		id = food_aid_rob_focus
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = robots_in_workforce_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = robots_in_workforce_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 20000
+		    producer = ROOT
+	    }
+	    }
+	}
+
+	focus = {
+		id = it_center_rob_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = food_aid_rob_focus 
+		focus = robot_army_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = food_aid_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+	    }
+	}
+
+	focus = {
+		id = squeeze_small_ame_rob_focus
+		icon = GFX_focus_WTS_small_ame
+		prerequisite = { focus = penguin_division_rob_focus }
+		prerequisite = { focus = it_center_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = penguin_division_rob_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = WTS_small_ame_com
+	    }
+	}
+
+	focus = {
+		id = iron_queen_rob_focus
+		icon = GFX_focus_ROB_iron_queen
+		prerequisite = { focus = it_center_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = it_center_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+
+				news_event = { id = holo_news.153 }
+			}
+
+create_country_leader = {
+	name = "Iron Queen"
+	picture = "gfx/leaders/ROB/iron_queen.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		killer_instinct
+		elite
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Iron Queen"
+	picture = "gfx/leaders/ROB/iron_queen.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		killer_instinct
+		elite
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Iron Queen"
+	picture = "gfx/leaders/ROB/iron_queen.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		killer_instinct
+		elite
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Iron Queen"
+	picture = "gfx/leaders/ROB/iron_queen.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		killer_instinct
+		elite
+		trait_no_more_spamming
+	}
+}
+	    }
+	}
+
+	focus = {
+		id = icbm_tech_rob_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = iron_queen_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = iron_queen_rob_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 4
+				bonus = 3
+				uses = 4
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = project_atucha_rob_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = iron_queen_rob_focus 
+		focus = refuge_german_generals_rob_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = iron_queen_rob_focus
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				bonus = 2
+				uses = 1
+				category = nuclear
+			}
+	    }
+	}
+
+
+
+    
+}

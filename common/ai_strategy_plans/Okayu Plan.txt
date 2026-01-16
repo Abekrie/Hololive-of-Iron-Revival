@@ -1,0 +1,48 @@
+Generic_OKA_historical = {
+	name = "OKA historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = OKA
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = OKA
+			}
+			#is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		nekomata_okayu_oka_focus
+		international_stage_oka_focus
+		okakoro_oka_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

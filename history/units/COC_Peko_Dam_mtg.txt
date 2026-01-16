@@ -1,0 +1,45 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Peko Dam Fleet"		
+		naval_base = 7552
+		task_force = {				
+			name = "Peko Dam Force"			
+			location = 7552 
+ 
+ship = { name = "Peko Dam"
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+ 
+ship = { name = "Moona Dam"
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+ship = { name = "Coco Dam"
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+ship = { name = "Kanata Dam"
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+ship = { name = "Texas Dam"
+definition = battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+		}						
+	}
+
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

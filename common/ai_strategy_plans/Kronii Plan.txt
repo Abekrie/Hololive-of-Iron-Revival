@@ -1,0 +1,95 @@
+Generic_KRO_historical = {
+	name = "KRO historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = KRO
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = KRO
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ouro_kronii_kro_focus
+		found_kroniigrad_kro_focus
+		warden_of_time_kro_focus
+		stay_with_the_council_kro_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_KRO_non_historical = {
+	name = "KRO non-historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = KRO
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = KRO
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ouro_kronii_kro_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

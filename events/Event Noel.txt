@@ -1,0 +1,1433 @@
+add_namespace = noel
+
+#Noel Demands Borneo
+country_event = {
+	id = noel.1
+	title = noel.1.t
+	desc = noel.1.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.1.a	#Yes
+		ai_chance = { factor = 90 }
+		NOE = { 
+			transfer_state = 334
+			country_event = { id = noel.2 }
+		}
+	}
+	option = {
+		name = noel.1.b	#No 
+		ai_chance = { factor = 10 }
+		NOE = { country_event = { id = noel.3 } }
+	}
+}
+
+country_event = {
+	id = noel.2
+	title = noel.2.t
+	desc = noel.2.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.2.a
+		ai_chance = { factor = 100 }
+		add_state_core = 334
+	}
+}
+
+country_event = {
+	id = noel.3
+	title = noel.3.t
+	desc = noel.3.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Puppet Rushia
+country_event = {
+	id = noel.4
+	title = noel.4.t
+	desc = noel.4.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.4.a	#Yes
+		ai_chance = { factor = 40 }
+		NOE = { 
+			puppet = RUS
+			country_event = { id = noel.5 }
+		}
+		RUS = {
+		    country_event = { id = noel.7 }
+		}
+	}
+	option = {
+		name = noel.4.b	#No 
+		ai_chance = { factor = 60 }
+		NOE = { country_event = { id = noel.6 } }
+	}
+}
+
+country_event = {
+	id = noel.5
+	title = noel.5.t
+	desc = noel.5.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.5.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = noel.6
+	title = noel.6.t
+	desc = noel.6.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.6.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#Welcome Rushia
+country_event = {
+	id = noel.7
+	title = noel.7.t
+	desc = noel.7.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.7.a	#Yes
+		ai_chance = { factor = 100 }
+		RUS = {
+		random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+##############################################
+#Buy Greenland
+country_event = {
+	id = noel.8
+	title = noel.8.t
+	desc = noel.8.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.8.a	#Yes
+		ai_chance = { factor = 80 }
+		NOE = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.8.b	#No 
+		ai_chance = { factor = 20 }
+		NOE = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = noel.9
+	title = noel.9.t
+	desc = noel.9.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.9.a	#Yes
+		ai_chance = { factor = 80 }
+		NOE = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.9.b	#No 
+		ai_chance = { factor = 20 }
+		NOE = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = noel.10
+	title = noel.10.t
+	desc = noel.10.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.10.a	#Yes
+		ai_chance = { factor = 30 }
+		NOE = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = noel.10.b	#No 
+		ai_chance = { factor = 70 }
+		NOE = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = noel.11
+	title = noel.11.t
+	desc = noel.11.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.11.a	#Yes
+		ai_chance = { factor = 50 }
+		NOE = { 
+			country_event = { id = noel.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = noel.11.b	#No 
+		ai_chance = { factor = 50 }
+		NOE = { country_event = { id = noel.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = noel.12
+	title = noel.12.t
+	desc = noel.12.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.12.a	#Yes
+		ai_chance = { factor = 75 }
+		NOE = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.12.b	#No 
+		ai_chance = { factor = 25 }
+		NOE = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = noel.13
+	title = noel.13.t
+	desc = noel.13.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.13.a	#Yes
+		ai_chance = { factor = 50 }
+		NOE = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = noel.13.b	#No 
+		ai_chance = { factor = 50 }
+		NOE = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = noel.14
+	title = noel.14.t
+	desc = noel.14.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.14.a	#Yes
+		ai_chance = { factor = 50 }
+		NOE = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = noel.14.b	#No 
+		ai_chance = { factor = 50 }
+		NOE = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = noel.15
+	title = noel.15.t
+	desc = noel.15.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.15.a	#Yes
+		ai_chance = { factor = 80 }
+		NOE = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.15.b	#No 
+		ai_chance = { factor = 20 }
+		NOE = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = noel.16
+	title = noel.16.t
+	desc = noel.16.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.16.a	#Yes
+		ai_chance = { factor = 20 }
+		NOE = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = noel.16.b	#No 
+		ai_chance = { factor = 80 }
+		NOE = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = noel.17
+	title = noel.17.t
+	desc = noel.17.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.17.a	#Yes
+		ai_chance = { factor = 50 }
+		NOE = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = noel.17.b	#No 
+		ai_chance = { factor = 50 }
+		NOE = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+
+#Buy Sardinia
+country_event = {
+	id = noel.19
+	title = noel.19.t
+	desc = noel.19.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.19.a	#Yes
+		ai_chance = { factor = 40 }
+		NOE = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = noel.19.b	#No 
+		ai_chance = { factor = 60 }
+		NOE = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = noel.20
+	title = noel.20.t
+	desc = noel.20.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.20.a	#Yes
+		ai_chance = { factor = 90 }
+		NOE = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.20.b	#No 
+		ai_chance = { factor = 10 }
+		NOE = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = noel.21
+	title = noel.21.t
+	desc = noel.21.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.21.a	#Yes
+		ai_chance = { factor = 80 }
+		NOE = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.21.b	#No 
+		ai_chance = { factor = 20 }
+		NOE = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = noel.22
+	title = noel.22.t
+	desc = noel.22.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.22.a	#Yes
+		ai_chance = { factor = 80 }
+		NOE = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = noel.22.b	#No 
+		ai_chance = { factor = 20 }
+		NOE = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy Tunisia
+country_event = {
+	id = noel.23
+	title = noel.23.t
+	desc = noel.23.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.23.a	#Yes
+		ai_chance = { factor = 70 }
+		NOE = { 
+			country_event = { id = ayame.2 }
+			transfer_state = 458
+			transfer_state = 665
+		}
+		AYA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = noel.23.b	#No 
+		ai_chance = { factor = 30 }
+		NOE = { country_event = { id = ayame.1 } }
+	}
+}
+###############################################################
+#Noel propose ICC
+country_event = {
+	id = noel.24
+	title = noel.24.t
+	desc = noel.24.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.24.a	#Yes
+		ai_chance = { factor = 80 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+		limit = { original_tag = MAT}
+		NOE = {country_event = { id = matsuri.1 }}
+		}
+		if = {
+		limit = { original_tag = FLA}
+		NOE = {country_event = { id = flare.3 }}
+		}
+		
+	}
+	option = {
+		name = noel.24.b	#No 
+		ai_chance = { factor = 20 }
+		if = {
+		limit = { original_tag = MAT}
+		NOE = {country_event = { id = matsuri.2 }}
+		}
+		if = {
+		limit = { original_tag = FLA}
+		NOE = {country_event = { id = flare.4 }}
+		}
+		
+	}
+}
+
+#Noel propose DYC
+country_event = {
+	id = noel.25
+	title = noel.25.t
+	desc = noel.25.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.25.a	#Yes
+		ai_chance = { factor = 70 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		if = {
+		limit = { original_tag = FLA}
+		NOE = {country_event = { id = flare.5 }}
+		}
+		
+	}
+	option = {
+		name = noel.25.b	#No 
+		ai_chance = { factor = 30 }
+		
+		if = {
+		limit = { original_tag = FLA}
+		NOE = {country_event = { id = flare.6 }}
+		}
+		
+	}
+}
+
+#Noel MR 
+country_event = {
+	id = noel.26
+	title = noel.26.t
+	desc = noel.26.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.26.a	#Yes
+		ai_chance = { factor = 80 }
+		
+		if = {
+		limit = { original_tag = FLA }
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				uses = 1
+				category = artillery
+		}
+		NOE = {country_event = { id = flare.7 }}
+		}
+
+		if = {
+		limit = { original_tag = AQA }
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons
+			}
+		NOE = {country_event = { id = aqua.3 }}
+		}
+
+		if = {
+		limit = { original_tag = RUS }
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = infantry_weapons
+			}
+		NOE = {country_event = { id = rushia.1 }}
+		}
+		
+	}
+	option = {
+		name = noel.26.b	#No 
+		ai_chance = { factor = 20 }
+		
+		if = {
+		limit = { original_tag = FLA}
+		NOE = {country_event = { id = flare.8 }}
+		}
+
+		if = {
+		limit = { original_tag = AQA}
+		NOE = {country_event = { id = aqua.4 }}
+		}
+
+		if = {
+		limit = { original_tag = RUS}
+		NOE = {country_event = { id = rushia.2 }}
+		}
+		
+	}
+}
+#Noel-Flare Union
+country_event = {
+	id = noel.27
+	title = noel.27.t
+	desc = noel.27.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.27.a	#Yes
+		ai_chance = { factor = 100 }
+		NOE = { country_event = { id = noel.28 } }
+	}
+	option = {
+		name = noel.27.b	#No 
+		ai_chance = { factor = 0 }
+		NOE = { country_event = { id = noel.29 } }
+	}
+}
+
+#Flare accept union
+country_event = {
+	id = noel.28
+	title = noel.28.t
+	desc = noel.28.d
+	picture = GFX_report_event_noel_flare
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.28.a	#Yes
+		ai_chance = { factor = 100 }
+		NOE = { create_faction = noel_flare_personal_union }
+		NOE = { add_to_faction = FLA }
+		hidden_effect = {
+		news_event = { id = holo_news.2 }
+		}
+	}
+}
+#Flare deny union
+country_event = {
+	id = noel.29
+	title = noel.29.t
+	desc = noel.29.d
+	picture = GFX_report_event_flare_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.29.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Puppet You #No CB
+country_event = {
+	id = noel.30
+	title = noel.30.t
+	desc = noel.30.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.30.a	#Yes
+		ai_chance = { factor = 100 }
+		NOE = { puppet = ROOT }
+		
+		if = {
+		limit = { original_tag = FLA }
+		NOE = {country_event = { id = flare.9 }}
+		}
+	}
+
+	option = {
+		name = noel.30.b	#No
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { original_tag = FLA }
+		NOE = {country_event = { id = flare.10 }}
+		}
+	}
+}
+
+#Annex You #No CB
+country_event = {
+	id = noel.31
+	title = noel.31.t
+	desc = noel.31.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.31.a	#Yes
+		ai_chance = { factor = 100 }
+		NOE = { annex_country = {
+		target = ROOT
+		transfer_troops = yes
+		} }
+		
+		if = {
+		limit = { original_tag = FLA }
+		NOE = {country_event = { id = flare.11 }}
+		}
+	}
+
+	option = {
+		name = noel.31.b	#No
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { original_tag = FLA }
+		NOE = {country_event = { id = flare.12 }}
+		}
+	}
+}
+
+#Invite to faction Noel Hololive
+country_event = {
+	id = noel.32
+	title = noel.32.t
+	desc = noel.32.d
+	picture = GFX_report_event_noel_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.32.a	#Yes
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+			}
+		}
+		NOE = { add_to_faction = ROOT }
+		
+		if = {
+		limit = { original_tag = MAT }
+		NOE = {country_event = { id = matsuri.3 }}
+		}
+
+		if = {
+		limit = { original_tag = FBK }
+		NOE = {country_event = { id = fubuki.5 }}
+		}
+
+		if = {
+		limit = { original_tag = MAR }
+		NOE = {country_event = { id = marine.1 }}
+		}
+	}
+
+	option = {
+		name = noel.32.b	#No
+		ai_chance = { factor = 10 }
+
+		if = {
+		limit = { original_tag = MAT }
+		NOE = {country_event = { id = matsuri.4 }}
+		}
+
+		if = {
+		limit = { original_tag = FBK }
+		NOE = {country_event = { id = fubuki.6 }}
+		}
+
+		if = {
+		limit = { original_tag = MAR }
+		NOE = {country_event = { id = marine.7 }}
+		}
+	}
+}
+
+#Rushia Raj
+country_event = {
+	id = noel.33
+	title = noel.33.t
+	desc = noel.33.d
+	picture = GFX_report_event_rushia_raj
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.33.a	#Yes
+		ai_chance = { factor = 100 }
+
+		custom_effect_tooltip = rushia_become_indian
+		hidden_effect = {
+  NOE = {country_event = {id = noel.36}}
+  423 = { add_core_of = ROOT }
+  424 = { add_core_of = ROOT }
+  425 = { add_core_of = ROOT }
+  427 = { add_core_of = ROOT }
+  429 = { add_core_of = ROOT }
+  437 = { add_core_of = ROOT }
+  321 = { add_core_of = ROOT }
+  320 = { add_core_of = ROOT }
+
+  441 = { add_core_of = ROOT }
+  787 = { add_core_of = ROOT }
+  442 = { add_core_of = ROOT }
+  445 = { add_core_of = ROOT }
+  444 = { add_core_of = ROOT }
+  439 = { add_core_of = ROOT }
+  433 = { add_core_of = ROOT }
+  428 = { add_core_of = ROOT }
+  443 = { add_core_of = ROOT }
+  440 = { add_core_of = ROOT }
+
+  434 = { add_core_of = ROOT }
+  432 = { add_core_of = ROOT }
+  430 = { add_core_of = ROOT }
+  324 = { add_core_of = ROOT }
+  431 = { add_core_of = ROOT }
+  323 = { add_core_of = ROOT }
+  435 = { add_core_of = ROOT }
+  426 = { add_core_of = ROOT }
+  436 = { add_core_of = ROOT }
+  438 = { add_core_of = ROOT }
+		}
+	}
+}
+
+#Kanata Raj
+country_event = {
+	id = noel.34
+	title = noel.34.t
+	desc = noel.34.d
+	picture = GFX_report_event_kanata_raj
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.34.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		custom_effect_tooltip = kanata_becomes_indian
+		hidden_effect = {
+  NOE = {country_event = {id = noel.35}}
+  423 = { add_core_of = ROOT }
+  424 = { add_core_of = ROOT }
+  425 = { add_core_of = ROOT }
+  427 = { add_core_of = ROOT }
+  429 = { add_core_of = ROOT }
+  437 = { add_core_of = ROOT }
+  321 = { add_core_of = ROOT }
+  320 = { add_core_of = ROOT }
+
+  441 = { add_core_of = ROOT }
+  787 = { add_core_of = ROOT }
+  442 = { add_core_of = ROOT }
+  445 = { add_core_of = ROOT }
+  444 = { add_core_of = ROOT }
+  439 = { add_core_of = ROOT }
+  433 = { add_core_of = ROOT }
+  428 = { add_core_of = ROOT }
+  443 = { add_core_of = ROOT }
+  440 = { add_core_of = ROOT }
+
+  434 = { add_core_of = ROOT }
+  432 = { add_core_of = ROOT }
+  430 = { add_core_of = ROOT }
+  324 = { add_core_of = ROOT }
+  431 = { add_core_of = ROOT }
+  323 = { add_core_of = ROOT }
+  435 = { add_core_of = ROOT }
+  426 = { add_core_of = ROOT }
+  436 = { add_core_of = ROOT }
+  438 = { add_core_of = ROOT }
+		}
+	}
+}
+
+country_event = {
+	id = noel.35
+	title = noel.35.t
+	desc = noel.35.d
+	picture = GFX_report_event_kanata_raj
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.35.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = noel.36
+	title = noel.36.t
+	desc = noel.36.d
+	picture = GFX_report_event_rushia_raj
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.36.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#noel refuses n borneo
+country_event = {
+	id = noel.37
+	title = noel.37.t
+	desc = noel.37.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.37.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#noel accepted borneo
+country_event = {
+	id = noel.38
+	title = noel.38.t
+	desc = noel.38.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.38.a
+		set_global_flag = n_borneo_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NOE - Noel Flare Union
+country_event = {
+	id = noel.39
+	title = noel.39.t
+	desc = noel.39.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.39.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		NOE = {create_faction = FACTION_NOE_Noefure}
+		NOE = { add_to_faction = FLA }
+
+		hidden_effect = {
+			news_event = { id = holo_news.95 hours=6}
+		}
+
+		
+		if = {
+			limit = { original_tag = FLA }
+			NOE = {country_event = { id = proposed.25 }}
+		}
+	}
+
+	option = {
+		name = noel.39.b	#No
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { original_tag = FLA }
+			NOE = {country_event = { id = proposed.26 }}
+		}
+	}
+}
+
+#NOE - Fate of China (Tribute or War)
+country_event = {
+	id = noel.40
+	title = noel.40.t
+	desc = noel.40.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.40.a	#Yes
+		ai_chance = { 
+			factor = 100
+		}
+
+		NOE = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 2000
+		    producer = ROOT
+	    }
+		}
+		
+		if = {
+			limit = { original_tag = RSA }
+			NOE = {country_event = { id = proposed.75 }}
+		}
+
+		if = {
+			limit = { original_tag = DOR }
+			NOE = {country_event = { id = proposed.19 }}
+		}
+
+		if = {
+			limit = { original_tag = YOG }
+			NOE = {country_event = { id = proposed.95 }}
+		}
+
+		if = {
+			limit = { original_tag = ART }
+			NOE = {country_event = { id = proposed.5 }}
+		}
+
+		if = {
+			limit = { original_tag = ECH }
+			NOE = {country_event = { id = proposed.21 }}
+		}
+
+		if = {
+			limit = { original_tag = CIV }
+			NOE = {country_event = { id = proposed.13 }}
+		}
+	}
+
+	option = {
+		name = noel.40.b	#No
+		ai_chance = { 
+			factor = 0
+		}
+
+		NOE = {create_wargoal = { type = annex_everything target = ROOT }}
+
+		if = {
+			limit = { original_tag = RSA }
+			NOE = {country_event = { id = proposed.76 }}
+		}
+
+		if = {
+			limit = { original_tag = DOR }
+			NOE = {country_event = { id = proposed.20 }}
+		}
+
+		if = {
+			limit = { original_tag = YOG }
+			NOE = {country_event = { id = proposed.96 }}
+		}
+
+		if = {
+			limit = { original_tag = ART }
+			NOE = {country_event = { id = proposed.6 }}
+		}
+
+		if = {
+			limit = { original_tag = ECH }
+			NOE = {country_event = { id = proposed.22 }}
+		}
+
+		if = {
+			limit = { original_tag = CIV }
+			NOE = {country_event = { id = proposed.14 }}
+		}
+	}
+}
+
+
+#NOE - Puppet (Normal)
+country_event = {
+	id = noel.41
+	title = noel.41.t
+	desc = noel.41.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.41.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		NOE = { puppet = ROOT }
+
+		if = {
+			limit = { original_tag = FLA }
+			NOE = {country_event = { id = proposed.25 }}
+			FLA = {
+				set_cosmetic_tag = FLA_holy_dutchy
+			}
+		}
+	}
+
+	option = {
+		name = noel.41.b	#No
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { original_tag = FLA }
+			NOE = {country_event = { id = proposed.26 }}
+		}
+	}
+}
+
+#NOE - Maldives Purchase
+country_event = {
+	id = noel.42
+	title = noel.42.t
+	desc = noel.42.d
+	picture = GFX_report_event_noel_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = noel.42.a	#Yes
+		ai_chance = { factor = 100 }
+		
+		NOE = { transfer_state = 281 }
+
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+
+		if = {
+			limit = { original_tag = RUS }
+			NOE = {country_event = { id = proposed.77 }}
+		}
+	}
+
+	option = {
+		name = noel.42.b	#No
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { original_tag = RUS }
+			NOE = {country_event = { id = proposed.78 }}
+		}
+	}
+}
+
+#NOE - Made deal with Risu/Moona
+country_event = {
+	id = noel.43
+	title = noel.43.t
+    desc = noel.43.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.43.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 10000
+		    producer = NOE
+	    }
+	    add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 10000
+		    producer = NOE
+	    }
+	    add_offsite_building = { type = industrial_complex level = 5 }
+	    army_experience = 25
+
+	    hidden_effect = {
+	    		NOE = {country_event = {id = noel.44 days = 360}}
+	    		ROOT = {country_event = {id = noel.44 days = 360}}
+	    	}
+
+	    if = {
+	    	limit = { tag = RIS }
+	    	NOE = { country_event = { id = proposed.71 }}
+	    	give_resource_rights = { receiver = NOE state = 335 }
+	    }
+
+	    if = {
+	    	limit = { tag = MOO }
+	    	NOE = { country_event = { id = proposed.57 }}
+	    	give_resource_rights = { receiver = NOE state = 336 }
+	    }
+     }
+ 
+     option = {
+     name = noel.43.b	#No
+     ai_chance = { factor = 0 }
+     	NOE = {add_equipment_to_stockpile = {
+     			    type = hololive_yen_0
+     			    amount = 2000
+     			    producer = NOE
+     		    }}
+     	if = {
+	    	limit = { tag = RIS }
+	    	NOE = { country_event = { id = proposed.72 }}
+	    }
+
+	    if = {
+	    	limit = { tag = MOO }
+	    	NOE = { country_event = { id = proposed.58 }}
+	    }
+     }
+}
+
+#NOE - Resource rights expired
+country_event = {
+	id = noel.44
+	title = noel.44.t
+    desc = noel.44.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.44.a	#Yes
+     ai_chance = { factor = 100 }
+     	if = {
+	    	limit = { tag = RIS }
+	    	NOE = { remove_resource_rights = 335 }
+	    }
+
+	    if = {
+	    	limit = { tag = MOO }
+	    	NOE = { remove_resource_rights = 336 }
+	    }
+     }
+}
+
+#NOE - Bangkok Award
+country_event = {
+	id = noel.45
+	title = noel.45.t
+    desc = noel.45.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.45.a	#Yes
+     ai_chance = { factor = 100 }
+     }
+}
+
+#NOE - Demand puppet (Shirogane)
+country_event = {
+	id = noel.46
+	title = noel.46.t
+    desc = noel.46.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.46.a	#Yes
+     ai_chance = { factor = 100 }
+
+     	NOE = {puppet = ROOT}
+
+     	if = {
+	    	limit = { tag = RUS }
+	    	NOE = { country_event = { id = proposed.77 }}
+	    	set_cosmetic_tag = RUS_holy_dutchy
+	    }
+
+	    if = {
+	    	limit = { tag = SUB }
+	    	NOE = { country_event = { id = proposed.83 }}
+	    	set_cosmetic_tag = SUB_holy_dutchy
+	    }
+     }
+ 
+     option = {
+     name = noel.46.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+	    	limit = { tag = RUS }
+	    	NOE = { country_event = { id = proposed.78 }}
+	    }
+
+	    if = {
+	    	limit = { tag = SUB }
+	    	NOE = { country_event = { id = proposed.84 }}
+	    }
+     }
+}
+
+#NOE - Invite to faction
+country_event = {
+	id = noel.47
+	title = noel.47.t
+    desc = noel.47.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.47.a	#Yes
+     ai_chance = { factor = 100 }
+     	NOE = {
+     		add_to_faction = ROOT
+     	}
+     	if = {
+	    	limit = { tag = RUS }
+	    	NOE = { country_event = { id = proposed.77 }}
+	    }
+
+	    if = {
+	    	limit = { tag = FLA }
+	    	NOE = { country_event = { id = proposed.25 }}
+	    }
+
+	    if = {
+	    	limit = { tag = SUB }
+	    	NOE = { country_event = { id = proposed.83 }}
+	    }
+     }
+ 
+     option = {
+     name = noel.47.b	#No
+     ai_chance = { factor = 0 }
+     	if = {
+	    	limit = { tag = RUS }
+	    	NOE = { country_event = { id = proposed.78 }}
+	    }
+
+	    if = {
+	    	limit = { tag = FLA }
+	    	NOE = { country_event = { id = proposed.26 }}
+	    }
+
+	    if = {
+	    	limit = { tag = SUB }
+	    	NOE = { country_event = { id = proposed.84 }}
+	    }
+     }
+}
+
+#NOE - Request NAP
+country_event = {
+	id = noel.48
+	title = noel.48.t
+    desc = noel.48.d
+    picture = GFX_report_event_noel_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = noel.48.a	#Yes
+     ai_chance = { factor = 100 }
+     	diplomatic_relation = {
+     		country = NOE
+     		relation = non_aggression_pact
+     		active = yes
+     	}
+     }
+ 
+     option = {
+     name = noel.48.b	#No
+     ai_chance = { factor = 0 }
+     	
+     }
+}

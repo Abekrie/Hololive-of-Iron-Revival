@@ -1,0 +1,83 @@
+
+scripted_diplomatic_actions = {
+
+	send_super_chat = {
+        icon = 13
+
+        ##################################
+        ## CONDITIONS TO USE/SEE ACTION ##
+        ##################################
+        cost = 0
+        requires_acceptance = yes
+        show_acceptance_on_action_button = yes 
+
+        allowed = {
+            always = yes
+            #ROOT = { is_ai = no }
+        }
+        visible = {
+			always = yes
+			ROOT = { is_ai = no }
+        }
+        selectable = {
+			custom_trigger_tooltip = {
+				tooltip = send_super_chat_action_B
+				ROOT = {
+					has_equipment = {
+						hololive_yen_0 > 1999
+					}
+				}
+			}
+        }
+
+        ##################################
+        ## CONDITIONS TO USE/SEE ACTION ##
+        ##################################
+        #send_scripted_gui = land_proposal_action
+		#receive_description = [SEND_LAND_PROPOSAL_RECIEVER_LOC]
+
+		send_description = SEND_SUPER_CHAT_SENDER_LOC
+		receive_description = SEND_SUPER_CHAT_RECIEVER_LOC
+
+		accept_title = SEND_SUPER_CHAT_ACCEPTED_TITLE
+		accept_description = SEND_SUPER_CHAT_ACCEPTED_DESC
+
+		reject_title = SEND_SUPER_CHAT_REJECTED_TITLE
+		reject_description = SEND_SUPER_CHAT_REJECTED_DESC
+
+
+        #############
+        ## EFFECTS ##
+        #############
+        complete_effect = {
+			ROOT = { 
+				add_equipment_to_stockpile = {
+					type = hololive_yen_0
+					amount = -2000
+				} 
+			}
+
+			PREV = { 
+				add_equipment_to_stockpile = {
+					type = hololive_yen_0
+					amount = 2000
+				} 
+			}
+		}
+		
+		reject_effect = {		
+			
+		}
+
+
+        #################
+        ## AI BEHAVOIR ##
+        #################
+		ai_desire = {}
+		ai_acceptance = {
+			condition = { # name is used for loc
+				base = 20
+			}
+		}
+    }
+}

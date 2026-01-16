@@ -1,0 +1,388 @@
+add_namespace = kanata_religion
+
+#Hindu Event
+#High unemployment rate
+country_event = {
+	id = kanata_religion.1
+	title = kanata_religion.1.t
+	desc = kanata_religion.1.d
+	picture = GFX_report_event_kanata_hindu
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.1.15
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.1.a
+		ai_chance = { factor = 20 }
+		add_hindu_ops = yes
+		add_timed_idea = {
+            idea = kanatanism_social_security_program
+            days = 180
+        }
+	}
+
+	option = { #Bad
+		name = kanata_religion.1.b
+		ai_chance = { factor = 80 }
+		remove_hindu_ops = yes
+	}
+}
+
+#Class division in society
+country_event = {
+	id = kanata_religion.2
+	title = kanata_religion.2.t
+	desc = kanata_religion.2.d
+	picture = GFX_report_event_kanata_hindu
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.4.15
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.2.a
+		ai_chance = { factor = 50 }
+		add_hindu_ops = yes
+		add_political_power = -150
+	}
+
+	option = { #Bad
+		name = kanata_religion.2.b
+		ai_chance = { factor = 50 }
+		remove_hindu_ops = yes
+	}
+}
+
+#Islam Event
+#Dakha Floods
+country_event = {
+	id = kanata_religion.3
+	title = kanata_religion.3.t
+	desc = kanata_religion.3.d
+	picture = GFX_report_event_kanata_islam
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.3.15
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.3.a
+		ai_chance = { factor = 50 }
+		add_muslim_ops = yes
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = -3500
+            }
+	}
+
+	option = { #Bad
+		name = kanata_religion.3.b
+		ai_chance = { factor = 50 }
+		remove_muslim_ops = yes
+	}
+}
+
+#Bengal Femine
+country_event = {
+	id = kanata_religion.4
+	title = kanata_religion.4.t
+	desc = kanata_religion.4.d
+	picture = GFX_report_event_kanata_islam
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.6.15
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.4.a
+		ai_chance = { factor = 50 }
+		add_muslim_ops = yes
+		add_timed_idea = {
+            idea = kanatanism_buy_siamese_rice
+            days = 180
+        }
+	}
+
+	option = { #Bad
+		name = kanata_religion.4.b
+		ai_chance = { factor = 50 }
+		remove_muslim_ops = yes
+	}
+}
+
+#Rohingya refugee crisis
+country_event = {
+	id = kanata_religion.5
+	title = kanata_religion.5.t
+	desc = kanata_religion.5.d
+	picture = GFX_report_event_kanata_islam
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.9.17
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.5.a
+		ai_chance = { factor = 50 }
+		add_muslim_ops = yes
+		add_stability = -0.15
+	}
+
+	option = { #Bad
+		name = kanata_religion.5.b
+		ai_chance = { factor = 50 }
+		remove_muslim_ops = yes
+	}
+}
+
+#Buddhism Event
+#People of Himalaya
+country_event = {
+	id = kanata_religion.6
+	title = kanata_religion.6.t
+	desc = kanata_religion.6.d
+	picture = GFX_report_event_kanata_buddhism
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.2.15
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.6.a
+		ai_chance = { factor = 50 }
+		add_buddhist_ops = yes
+		add_timed_idea = {
+            idea = kanatanism_road_to_himalaya
+            days = 180
+        }
+	}
+
+	option = { #Bad
+		name = kanata_religion.6.b
+		ai_chance = { factor = 50 }
+		remove_buddhist_ops = yes
+	}
+}
+
+#Question of Bhutan monarch
+country_event = {
+	id = kanata_religion.7
+	title = kanata_religion.7.t
+	desc = kanata_religion.7.d
+	picture = GFX_report_event_kanata_buddhism
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.8.17
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.7.a
+		ai_chance = { factor = 50 }
+		add_buddhist_ops = yes
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = -3000
+                    producer = ROOT
+            }
+	}
+
+	option = { #Bad
+		name = kanata_religion.7.b
+		ai_chance = { factor = 50 }
+		remove_buddhist_ops = yes
+	}
+}
+
+#Kanatanism
+#Voice of an Angel
+country_event = {
+	id = kanata_religion.8
+	title = kanata_religion.8.t
+	desc = kanata_religion.8.d
+	picture = GFX_report_event_kanata_generic2
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1938.1.1
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.8.a
+		ai_chance = { factor = 100 }
+		add_to_kanatan_15 = yes
+	}
+}
+
+#Rebellion
+#Nepalis Rebellion
+country_event = {
+	id = kanata_religion.9
+	title = kanata_religion.9.t
+	desc = kanata_religion.9.d
+	picture = GFX_report_event_kanata_hindu
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.1.17
+    	KAN_hindu_rebel = yes
+    	KAN = {
+    		owns_state = 323
+    	}
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.9.a
+		ai_chance = { factor = 100 }
+		NEP = {
+			transfer_state = 323
+			set_rule = { can_join_factions = no }
+			declare_war_on = {
+    			target = ROOT
+    			type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = KAN_religion_nepal
+			}
+		}
+	}
+}
+
+#Bhutan Rebellion
+country_event = {
+	id = kanata_religion.10
+	title = kanata_religion.10.t
+	desc = kanata_religion.10.d
+	picture = GFX_report_event_kanata_buddhism
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.1.17
+    	KAN_buddhist_rebel = yes
+    	KAN = {
+    		owns_state = 324
+    	}
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.10.a
+		ai_chance = { factor = 100 }
+		BHU = {
+			transfer_state = 324
+			set_rule = { can_join_factions = no }
+			declare_war_on = {
+    			target = ROOT
+    			type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = KAN_religion_bhutan
+			}
+		}
+	}
+}
+
+#Bangladesh Rebellion
+country_event = {
+	id = kanata_religion.11
+	title = kanata_religion.11.t
+	desc = kanata_religion.11.d
+	picture = GFX_report_event_kanata_islam
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = KAN
+    	date > 1936.1.17
+    	KAN_muslim_rebel = yes
+    	KAN = {
+    		owns_state = 430
+    	}
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = { #Good
+		name = kanata_religion.11.a
+		ai_chance = { factor = 100 }
+		BAN = {
+			transfer_state = 430
+			set_rule = { can_join_factions = no }
+			declare_war_on = {
+    			target = ROOT
+    			type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = KAN_religion_bangladesh
+			}
+		}
+	}
+}

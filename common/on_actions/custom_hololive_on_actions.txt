@@ -1,0 +1,34 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { global.number_vote_counts = 0 }
+			set_variable = { global.number_council_member = 5 }
+			set_variable = { global.council_topic_id = 0 }
+		}
+	}
+
+
+	on_war = {
+	    effect = { 
+	    	if = { limit = { THIS = { tag = MIK } }
+	    		MIK = { set_country_flag = Miko_is_already_at_war }
+	    	}
+	    }
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = { 
+				limit = {
+					OR = {tag = SAN tag = NIN}
+					has_global_flag = sana_the_rumbling_is_coming_flag
+				}
+				clr_global_flag = sana_the_rumbling_is_coming_flag
+				every_country = {
+    				remove_ideas = rumbling_is_coming_ns
+    			}
+			}
+		}
+	}
+}

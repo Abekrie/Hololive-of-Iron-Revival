@@ -1,0 +1,3138 @@
+focus_tree = {
+	id = AQA_generic_hololive
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = AQA
+			} 
+		}
+	}
+
+	continuous_focus_position = { x = 2500 y = 1000 }
+
+    initial_show_position = {
+        x = 0
+        y = 0
+    }
+
+    #Political
+    focus = {
+        id = congress_of_idol_aqa_focus
+        icon = GFX_focus_AQA_congress
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = 
+        x = 6
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available_if_capitulated = yes
+
+        available = { 
+            date > 1936.6.1
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            country_event = { id = aqua.82 }
+        }
+    }
+
+    focus = {
+        id = supreme_leader_aqua_aqa_focus
+        icon = GFX_focus_AQA_supreme
+        prerequisite = { focus = congress_of_idol_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congress_of_idol_aqa_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_government = communism
+            has_war_support > 0.75
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                retire_ideology_leader = communism
+            }
+            create_country_leader = {
+                            name = "Supreme Leader Aqua"
+                            picture = "gfx/leaders/AQA/supreme.dds"
+                            expire = "1965.1.1"
+                            ideology = marxism
+                            traits = {
+                                onion
+                                aquaist_trait
+                                
+                            }
+                        }
+        }
+    }
+
+    focus = {
+        id = union_of_aquaist_republics_aqa_focus
+        icon = GFX_focus_AQA_aquaist
+        prerequisite = { focus = congress_of_idol_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congress_of_idol_aqa_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 439
+            has_full_control_of_state = 429
+            has_full_control_of_state = 430
+            has_full_control_of_state = 289
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_cosmetic_tag = AQA_aquaist
+            every_state = {
+                limit = { OR = {
+                    is_core_of = NOE
+                    is_core_of = KAN
+                    is_core_of = RUS
+                } }
+                add_core_of = ROOT
+            }
+            hidden_effect = {
+                news_event = { id = holo_news.203 days = 2}
+            }
+        }
+    }
+
+    #Diplomatic
+    focus = {
+        id = dawn_of_resistance_aqa_focus
+        icon = GFX_focus_AQA_com
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congress_of_idol_aqa_focus
+        x = 3
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available_if_capitulated = yes
+
+        available = { 
+            is_subject = no
+            is_in_faction = no 
+            date > 1936.6.1
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_faction = FACTION_Resistance_AQA
+            set_rule = { can_create_factions = yes }
+            hidden_effect = {
+                news_event = { id = holo_news.71 days = 1}
+            }
+        }
+    }
+
+    focus = {
+        id = call_for_resistance_crusade_aqa_focus
+        icon = GFX_focus_SOV_builder_of_the_red_army
+        prerequisite = { focus = dawn_of_resistance_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = dawn_of_resistance_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_resistance_crusade_idea1
+        }
+    }
+
+    focus = {
+        id = mission_to_marine_aqa_focus
+        icon = GFX_focus_marine_flag
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = 5
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            NOT = {
+                has_war_with = MAR
+            }
+            MAR = { exists = yes
+            is_subject = no }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MAR = {country_event = { id = aqua.78 }}
+        }
+    }
+
+    focus = {
+        id = invite_marine_aqa_focus
+        icon = GFX_focus_MAR_marine
+        prerequisite = { focus = mission_to_marine_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mission_to_marine_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                MAR = {is_in_faction = no
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_faction_leader = yes
+                is_subject = no
+            }
+            
+            bypass = {
+                MAR = {is_in_faction_with = ROOT}
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MAR = { country_event = { id = aqua.67 } }
+        }
+    }
+
+    focus = {
+        id = india_pacific_fleet_aqa_focus
+        icon = GFX_focus_MAR_navy
+        prerequisite = { focus = invite_marine_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_marine_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 428
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_join_marine_fleet_aqa_focus
+            hidden_effect = {if = {
+                            limit = {
+                                has_dlc = "Man the Guns"
+                            }
+                            load_oob = AQA_marine_naval_mtg
+                        }
+            
+                        if = {
+                            limit = {
+                                NOT = {has_dlc = "Man the Guns"}
+                            }
+                            load_oob = AQA_marine_naval_legacy
+                        }}
+        }
+    }
+
+    focus = {
+        id = mission_to_iofi_aqa_focus
+        icon = GFX_focus_iofifteen_flag
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = 3
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            NOT = {
+                has_war_with = IOF
+            }
+            IOF = { exists = yes
+            is_subject = no }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            IOF = {country_event = { id = aqua.77 }}
+        }
+    }
+
+    focus = {
+        id = invite_iofi_aqa_focus
+        icon = GFX_focus_IOF_iofi
+        prerequisite = { focus = mission_to_iofi_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mission_to_iofi_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                IOF = {is_in_faction = no
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_faction_leader = yes
+                is_subject = no
+            }
+            
+            bypass = {
+                IOF = {is_in_faction_with = ROOT}
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            IOF = {country_event = { id = aqua.67 }}
+        }
+    }
+
+    focus = {
+        id = rubber_for_the_resistance_aqa_focus
+        icon = GFX_focus_generic_rubber
+        prerequisite = { focus = invite_iofi_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_iofi_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            IOF = {random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 2
+                                instant_build = yes
+                            }
+                        }}
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                uses = 1
+                category = synth_resources
+            }
+        }
+    }
+
+    focus = {
+        id = fifth_internationale_aqa_focus
+        icon = GFX_focus_AQA_com_hand
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = 1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            every_country = {
+                            limit = {
+                                has_government = communism
+                            }
+                            country_event = { id = aqua.76 }
+                        }
+            hidden_effect = {
+                news_event = { id = holo_news.72 days = 1}
+            }
+            custom_effect_tooltip = CET_fifth_internationale_aqa_focus
+            show_ideas_tooltip = aqua_we_trade_with_aqua_idea1
+        }
+    }
+
+    focus = {
+        id = red_onion_in_the_sky_aqa_focus
+        icon = GFX_goal_generic_war_with_comintern
+        prerequisite = { focus = fifth_internationale_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fifth_internationale_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.1
+            every_country = {
+                            limit = {
+                                has_government = communism
+                            }
+                            add_war_support = 0.05
+                        }
+        }
+    }
+
+    focus = {
+        id = brains_of_the_resistance_aqa_focus
+        icon = GFX_focus_generic_socialist_science
+        prerequisite = { focus = red_onion_in_the_sky_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = red_onion_in_the_sky_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = subaru_somaliland_aqa_focus
+        icon = GFX_focus_SUB_duck_dealer
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = -5
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            SUB = {
+                NOT = { has_war_with = ROOT }
+                owns_state = 268
+            }
+        }
+
+        bypass = {
+            SUB = {
+                NOT = {owns_state = 268}
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            SUB = {country_event = { id = aqua.74 }}
+        }
+    }
+
+    focus = {
+        id = eritrea_or_war_aqa_focus
+        icon = GFX_focus_CN_attack_hololive
+        prerequisite = { focus = subaru_somaliland_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = subaru_somaliland_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            YAG = {
+                NOT = { has_war_with = ROOT }
+                owns_state = 550
+            }
+            date > 1939.1.1
+        }
+
+        bypass = {
+            YAG = {
+                NOT = {owns_state = 550}
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            YAG = {country_event = { id = aqua.73 }}
+        }
+    }
+
+    focus = {
+        id = lesson_from_neighbor_war_aqa_focus
+        icon = GFX_focus_SHI_powerful
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = -3
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 10
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = begin_the_construction_war_aqa_focus
+        icon = GFX_focus_KAN_guns
+        prerequisite = { focus = lesson_from_neighbor_war_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = lesson_from_neighbor_war_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 10
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = KAN
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                KAN = { exists = no }
+                KAN = { is_subject_of = ROOT }
+                KAN = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = KAN }
+        }
+    }
+
+    focus = {
+        id = crush_the_south_aqa_focus
+        icon = GFX_focus_RUS_guns
+        prerequisite = { focus = lesson_from_neighbor_war_aqa_focus}
+        mutually_exclusive = { focus = indore_pact_aqa_focus }
+        relative_position_id = lesson_from_neighbor_war_aqa_focus
+        x = -1
+        y = 2
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = RUS
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                RUS = { exists = no }
+                RUS = { is_subject_of = ROOT }
+                RUS = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = RUS }
+        }
+    }
+
+    focus = {
+        id = indore_pact_aqa_focus
+        icon = GFX_focus_RUS_wall_rushia
+        prerequisite = { focus = lesson_from_neighbor_war_aqa_focus}
+        mutually_exclusive = { focus = crush_the_south_aqa_focus }
+        relative_position_id = lesson_from_neighbor_war_aqa_focus
+        x = 1
+        y = 2
+        cost = 6
+
+        ai_will_do = {
+            factor = 80
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            RUS = {
+                NOT = { has_war_with = ROOT }
+                owns_state = 437
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            RUS = {country_event = { id = aqua.75 }}
+        }
+    }
+
+    focus = {
+        id = burma_or_war_aqa_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = call_for_resistance_crusade_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_for_resistance_crusade_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            date > 1938.1.1
+        }
+            
+        bypass = {
+            
+            OR = {
+                has_war_with = NOE
+                NOE = {
+                    NOT = {
+                        owns_state = 640
+                        owns_state = 288
+                        }
+                }
+                AQA = {
+                    owns_state = 640
+                    owns_state = 288
+                }
+            }
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            NOE = {country_event = { id = aqua.72 days = 2 }}
+        }
+    }
+
+    focus = {
+        id = crush_the_eastern_imperialist_aqa_focus
+        icon = GFX_focus_NOE_guns
+        prerequisite = { focus = burma_or_war_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = burma_or_war_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = NOE
+            available = { date > 1938.1.1 
+            is_neighbor_of = NOE}
+
+            bypass = { OR = {
+                NOE = { exists = no }
+                NOE = { is_subject_of = ROOT }
+                NOE = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = NOE }
+        }
+    }
+
+	
+    #Economy and Industry
+	focus = {
+        id = akukin_kensetsu_aqa_focus
+        icon = GFX_focus_AQA_akukin
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = dawn_of_resistance_aqa_focus
+        x = 10
+        y = 0
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_akukin_kensetsu_aqa_focus
+            set_country_flag = Aqua_can_akukin_construction
+        }
+    }
+
+    focus = {
+        id = concentrated_construction_aqa_focus
+        icon = GFX_focus_AQA_akukin_civ
+        prerequisite = { focus = akukin_kensetsu_aqa_focus}
+        mutually_exclusive = { focus = expand_and_extract_aqa_focus }
+        relative_position_id = akukin_kensetsu_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_concentrated_construction_idea1
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                uses = 1
+                category = industry
+            }
+        }
+    }
+
+    focus = {
+        id = onion_farm_aqa_focus
+        icon = GFX_goal_generic_construction2
+        prerequisite = { focus = concentrated_construction_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = concentrated_construction_aqa_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = aqua_concentrated_construction_idea1
+                add_idea = aqua_concentrated_construction_idea2
+            }
+        }
+    }
+
+    focus = {
+        id = no_onion_for_yagoo_aqa_focus
+        icon = GFX_focus_YAG_hololive_industry
+        prerequisite = { focus = onion_farm_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = onion_farm_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = aqua_concentrated_construction_idea2
+                add_idea = aqua_concentrated_construction_idea3
+            }
+        }
+    }
+
+    focus = {
+        id = expand_and_extract_aqa_focus
+        icon = GFX_focus_AQA_akukin_mil
+        prerequisite = { focus = akukin_kensetsu_aqa_focus}
+        mutually_exclusive = { focus = concentrated_construction_aqa_focus }
+        relative_position_id = akukin_kensetsu_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_expand_and_extract_idea1
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                uses = 1
+                category = industry
+            }
+        }
+    }
+
+    focus = {
+        id = military_oriented_aqa_focus
+        icon = GFX_goal_generic_production2
+        prerequisite = { focus = expand_and_extract_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_and_extract_aqa_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = aqua_expand_and_extract_idea1
+                add_idea = aqua_expand_and_extract_idea2
+            }
+        }
+    }
+
+    focus = {
+        id = mobilized_industry_aqa_focus
+        icon = GFX_focus_generic_combined_arms
+        prerequisite = { focus = military_oriented_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_oriented_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = aqua_expand_and_extract_idea2
+                add_idea = aqua_expand_and_extract_idea3
+            }
+        }
+    }
+
+    focus = {
+        id = anchor_industry_aqa_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = expand_and_extract_aqa_focus
+        focus = concentrated_construction_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_and_extract_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = west_india_motorways_aqa_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = anchor_industry_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = anchor_industry_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            if = {
+                limit = {
+                439 = { is_owned_and_controlled_by = ROOT }
+                }
+                439 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+            if = {
+                limit = {
+                433 = { is_owned_and_controlled_by = ROOT }
+                }
+                433 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+            if = {
+                limit = {
+                428 = { is_owned_and_controlled_by = ROOT }
+                }
+                428 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+            if = {
+                limit = {
+                443 = { is_owned_and_controlled_by = ROOT }
+                }
+                443 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+            if = {
+                limit = {
+                444 = { is_owned_and_controlled_by = ROOT }
+                }
+                444 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+            if = {
+                limit = {
+                440 = { is_owned_and_controlled_by = ROOT }
+                }
+                440 = {
+                    set_building_level = { type = infrastructure level = 5 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = maid_academy_aqa_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = west_india_motorways_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = west_india_motorways_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = tnt_storage_aqa_focus
+        icon = GFX_focus_AQA_tnt_civ
+        prerequisite = { focus = west_india_motorways_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = west_india_motorways_aqa_focus
+        x = -2
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = tnt_factory_aqa_focus
+        icon = GFX_focus_AQA_tnt_mil
+        prerequisite = { focus = west_india_motorways_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = west_india_motorways_aqa_focus
+        x = 2
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = seaweed_girl_aqa_focus
+        icon = GFX_focus_mex_privatisation
+        prerequisite = { focus = west_india_motorways_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = west_india_motorways_aqa_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = karachi_steel_complex_aqa_focus
+        icon = GFX_focus_generic_steel
+        prerequisite = { focus = west_india_motorways_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = west_india_motorways_aqa_focus
+        x = 1
+        y = 2
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            443 = {
+            add_resource = {
+                type = steel
+                amount = 24
+                }
+            }
+        }
+    }
+
+
+    
+#Army Research
+focus = {
+        id = mass_mobilization_aqa_focus
+        icon = GFX_focus_generic_little_entente
+        #prerequisite = { focus = madafuku}
+        mutually_exclusive = { focus = plan_for_partisan_aqa_focus }
+        relative_position_id = akukin_kensetsu_aqa_focus
+        x = 8
+        y = 0
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_mass_mobilization_idea1
+        }
+    }
+
+    focus = {
+        id = plan_for_partisan_aqa_focus
+        icon = GFX_goal_generic_position_armies
+        #prerequisite = { focus = }
+        mutually_exclusive = { focus = mass_mobilization_aqa_focus }
+        relative_position_id = mass_mobilization_aqa_focus
+        x = 2
+        y = 0
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_plan_for_partisan_idea1
+        }
+    }
+
+    focus = {
+        id = resistance_network_aqa_focus
+        icon = GFX_focus_prc_infiltration
+        prerequisite = { focus = plan_for_partisan_aqa_focus
+        focus = mass_mobilization_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = plan_for_partisan_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+            #add_ideas = extra_holo_spy_idea2
+        }
+    }
+
+    focus = {
+        id = the_resistance_high_command_aqa_focus
+        icon = GFX_focus_AQA_symbol
+        prerequisite = { focus = mass_mobilization_aqa_focus
+        focus = plan_for_partisan_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mass_mobilization_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_the_resistance_high_command_aqa_focus
+            set_country_flag = Aqua_can_train_resistance_army
+        }
+    }
+
+    focus = {
+        id = weaponize_onion_aqa_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = the_resistance_high_command_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_resistance_high_command_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+    }
+
+    focus = {
+        id = onion_battery_aqa_focus
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = weaponize_onion_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = weaponize_onion_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                uses = 2
+                category = artillery
+            }
+        }
+    }
+
+    focus = {
+        id = suisei_maid_aqa_focus
+        icon = GFX_focus_AQA_suisei_maid
+        prerequisite = { focus = the_resistance_high_command_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_resistance_high_command_aqa_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            SUI = {
+                exists = yes
+                NOT = { has_war_with = ROOT }
+            }
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            SUI = {country_event = { id = aqua.69 }}
+            custom_effect_tooltip = "IF THEY ACCEPT"
+            custom_effect_tooltip = can_recruit_suisei_maid
+        }
+    }
+
+    focus = {
+        id = the_iron_army_aqa_focus
+        icon = GFX_focus_AQA_symbol_with_aqua
+        prerequisite = { focus = the_resistance_high_command_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_resistance_high_command_aqa_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            if = {
+                limit = { has_idea = aqua_mass_mobilization_idea1 }
+                swap_ideas = {
+                    remove_idea = aqua_mass_mobilization_idea1
+                    add_idea = aqua_mass_mobilization_idea2
+                }
+            }
+
+            if = {
+                limit = { has_idea = aqua_plan_for_partisan_idea1 }
+                swap_ideas = {
+                    remove_idea = aqua_plan_for_partisan_idea1
+                    add_idea = aqua_plan_for_partisan_idea2
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = study_from_neighbor_war_aqa_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = the_iron_army_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_iron_army_aqa_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = trace_our_root_to_marine_maid_aqa_focus
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = the_iron_army_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_iron_army_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            if = {
+                limit = { has_idea = aqua_mass_mobilization_idea2 }
+                swap_ideas = {
+                    remove_idea = aqua_mass_mobilization_idea2
+                    add_idea = aqua_mass_mobilization_idea3
+                }
+            }
+
+            if = {
+                limit = { has_idea = aqua_plan_for_partisan_idea2 }
+                swap_ideas = {
+                    remove_idea = aqua_plan_for_partisan_idea2
+                    add_idea = aqua_plan_for_partisan_idea3
+                }
+            }
+            
+        }
+    }
+
+    focus = {
+        id = flying_onion_aqa_focus
+        icon = GFX_focus_eng_special_air_service
+        prerequisite = { focus = trace_our_root_to_marine_maid_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = trace_our_root_to_marine_maid_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_red
+                bonus = 1
+                uses = 1
+                category = para_tech
+            }
+        }
+    }
+
+    focus = {
+        id = motorized_effort_aqa_focus
+        icon = GFX_goal_generic_army_motorized
+        prerequisite = { focus = the_iron_army_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_iron_army_aqa_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_motorised_research
+                bonus = 1
+                uses = 2
+                category = motorized_equipment
+            }
+        }
+    }
+
+    focus = {
+        id = iron_corps_aqa_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = motorized_effort_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = motorized_effort_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_tank_research
+                bonus = 1
+                uses = 2
+                category = armor
+            }
+        }
+    }
+
+    #Air Research
+    focus = {
+        id = the_resistance_airforce_aqa_focus
+        icon = GFX_focus_AQA_airforce
+        prerequisite = { focus = mass_mobilization_aqa_focus
+        focus = plan_for_partisan_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = plan_for_partisan_aqa_focus
+        x = 3
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            air_experience = 50
+        }
+    }
+
+    focus = {
+        id = bomber_focus_aqa_focus
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = the_resistance_airforce_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_resistance_airforce_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_bomber_research
+                bonus = 1
+                uses = 1
+                category = tactical_bomber
+            }
+            add_tech_bonus = {
+                name = ENG_bomber_research
+                bonus = 1
+                uses = 1
+                category = cas_bomber
+            }
+        }
+    }
+
+    focus = {
+        id = fighter_focus_aqa_focus
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = the_resistance_airforce_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_resistance_airforce_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_fighter_research
+                bonus = 1
+                uses = 1
+                category = light_fighter
+            }
+            add_tech_bonus = {
+                name = ENG_fighter_research
+                bonus = 1
+                uses = 1
+                category = cat_heavy_fighter
+            }
+        }
+    }
+
+    focus = {
+        id = mission_to_kiara_aqa_focus
+        icon = GFX_focus_KIA_kiwawa
+        prerequisite = { focus = fighter_focus_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fighter_focus_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            KIA = {
+                exists = yes
+                NOT = { has_war_with = ROOT}
+            }
+        }
+
+        bypass = {
+            OR = {
+                KIA = { exists = no }
+                KIA = { has_war_with = ROOT }
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            KIA = {country_event = { id = aqua.70 }}
+            custom_effect_tooltip = "IF THEY ACCEPT"
+            custom_effect_tooltip = CET_kiwawa_kia_focus
+        }
+    }
+
+    focus = {
+        id = home_defence_improvement_aqa_focus
+        icon = GFX_goal_fortify_the_westwall
+        prerequisite = { focus = mission_to_kiara_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mission_to_kiara_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_air_observer_corps
+                bonus = 1
+                uses = 2
+                category = cat_anti_air
+            }
+        }
+    }
+
+    focus = {
+        id = radar_effort_aqa_focus
+        icon = GFX_goal_generic_radar
+        prerequisite = { focus = home_defence_improvement_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = home_defence_improvement_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ENG_radar
+                bonus = 1
+                uses = 2
+                category = radar_tech
+            }
+        }
+    }
+
+    focus = {
+        id = fuel_facility_aqa_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = fighter_focus_aqa_focus
+        focus = bomber_focus_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fighter_focus_aqa_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = synthetic_refinery
+                        level = 1
+                        instant_build = yes
+                    }
+            }
+        }
+    }
+
+    focus = {
+        id = quantity_matters_aqa_focus
+        icon = GFX_focus_generic_aircraft_production
+        prerequisite = { focus = fuel_facility_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fuel_facility_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_quantity_matters_idea1
+        }
+    }
+
+    focus = {
+        id = airforce_reformation_aqa_focus
+        icon = GFX_goal_generic_air_doctrine
+        prerequisite = { focus = bomber_focus_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = bomber_focus_aqa_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = air_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = expand_our_air_base_aqa_focus
+        icon = GFX_goal_expand_the_luftwaffe
+        prerequisite = { focus = airforce_reformation_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = airforce_reformation_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            439 = {
+                if = {
+                    limit = { is_owned_by = AQA }
+                    add_building_construction = {
+                        type = air_base
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+            428 = {
+                if = {
+                    limit = { is_owned_by = AQA }
+                    add_building_construction = {
+                        type = air_base
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = suicide_bomber_aqa_focus
+        icon = GFX_focus_AQA_com_air
+        prerequisite = { focus = expand_our_air_base_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_our_air_base_aqa_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_use_kamikaze_pilots = yes }
+        }
+    }
+
+#Navy Research
+    focus = {
+        id = establish_naval_command_aqa_focus
+        icon = GFX_focus_AQA_navy
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = plan_for_partisan_aqa_focus
+        x = 8
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 25
+            every_owned_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    is_core_of = ROOT
+                    naval_base > 0
+                }
+                add_building_construction = {
+                    type = naval_base
+                    level = 1
+                    province = {
+                        all_provinces = yes
+                        limit_to_naval_base = yes
+                    }
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = karachi_shipyards_aqa_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = establish_naval_command_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = establish_naval_command_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            443 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            add_doctrine_cost_reduction = {
+                name = HND_calcutta_dockyard
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = submarine_focus_aqa_focus
+        icon = GFX_goal_generic_navy_submarine
+        prerequisite = { focus = karachi_shipyards_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = karachi_shipyards_aqa_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 15
+            add_tech_bonus = {
+                name = HND_submarine_focus
+                bonus = 0.75
+                uses = 2
+                category = ss_tech
+            }
+            
+        }
+    }
+
+    focus = {
+        id = destroyer_focus_aqa_focus
+        icon = GFX_goal_generic_navy_anti_submarine
+        prerequisite = { focus = karachi_shipyards_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = karachi_shipyards_aqa_focus
+        x = 1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 15
+            add_tech_bonus = {
+                name = HND_destroyer_focus
+                bonus = 1
+                uses = 1
+                category = dd_tech
+            }
+        }
+    }
+
+    focus = {
+        id = west_wall_aqa_focus
+        icon = GFX_focus_AQA_fortify
+        prerequisite = { focus = destroyer_focus_aqa_focus}
+        prerequisite = { focus = submarine_focus_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = destroyer_focus_aqa_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            every_owned_state = {
+                limit = { is_in_home_area = yes }
+                add_building_construction = {
+                    type = coastal_bunker
+                    province = {
+                        all_provinces = yes
+                        limit_to_naval_base = yes
+                    }
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = establish_maid_marine_aqa_focus
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = destroyer_focus_aqa_focus}
+        prerequisite = { focus = submarine_focus_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = destroyer_focus_aqa_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = HND_red_marines
+                bonus = 1
+                uses = 1
+                category = marine_tech
+            }
+            add_tech_bonus = {
+                name = HND_red_marines
+                bonus = 1
+                uses = 1
+                category = tp_tech
+            }
+        }
+    }
+
+    focus = {
+        id = expand_karachi_shipyards_aqa_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = establish_maid_marine_aqa_focus
+        focus = west_wall_aqa_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = establish_maid_marine_aqa_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            443 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = anchor_of_aqua_aqa_focus
+        icon = GFX_goal_generic_build_navy
+        prerequisite = { focus = expand_karachi_shipyards_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_karachi_shipyards_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = aqua_anchor_of_aqua_idea1
+        }
+    }
+
+    #Akukin East Africa
+    focus = {
+        id = military_present_in_horn_of_africa_aqa_focus
+        icon = GFX_focus_AQA_military_horn_of_africa
+        #prerequisite = { focus = akukin_kensetsu_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = akukin_kensetsu_aqa_focus
+        x = -11
+        y = 6
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.15
+            add_manpower = -50000
+        }
+    }
+
+    focus = {
+        id = enter_the_suez_crisis_aqa_focus
+        text = enter_the_suez_crisis_oka_focus
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = military_present_in_horn_of_africa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_present_in_horn_of_africa_aqa_focus
+        x = -3
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_global_flag = korone_on_going_suez_crisis
+            NOT = {
+                is_in_faction_with = KRN
+                has_country_flag = can_no_longer_intervene_in_suez
+                has_global_flag = korone_suez_crisis_end
+            }
+        }
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            country_event = { id = korone.43 }
+            set_country_flag = intervened_in_suez_crisis
+        }
+    }
+
+    focus = {
+        id = upgrade_berbera_dockyard_aqa_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = military_present_in_horn_of_africa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_present_in_horn_of_africa_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            269 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+
+            }
+
+            269 = {
+               add_building_construction = {
+                    type = naval_base
+                    level = 1
+                    province = 10833
+                    instant_build = yes
+                } 
+            }
+        }
+    }
+
+    focus = {
+        id = aden_s_butcher_s_shop_aqa_focus
+        icon = GFX_focus_generic_industry_1
+        prerequisite = { focus = upgrade_berbera_dockyard_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = upgrade_berbera_dockyard_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            269 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = colonial_tax_office_aqa_focus
+        icon = GFX_focus_generic_self_management
+        prerequisite = { focus = upgrade_berbera_dockyard_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = upgrade_berbera_dockyard_aqa_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 16000
+                    producer = ROOT
+            }
+            add_stability = -0.05
+        }
+    }
+
+    focus = {
+        id = somaliland_camel_corps_aqa_focus
+        icon = GFX_focus_generic_camel_corps
+        prerequisite = { focus = aden_s_butcher_s_shop_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = aden_s_butcher_s_shop_aqa_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_technology = {
+                camelry = 1 
+            }
+        }
+    }
+
+    focus = {
+        id = fortify_somali_coast_aqa_focus
+        icon = GFX_focus_AQA_fortify
+        prerequisite = { focus = aden_s_butcher_s_shop_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = aden_s_butcher_s_shop_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            owns_state = 269
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_prince_of_chumpon_noe_focus
+            269 = {
+                add_building_construction = {
+                            type = coastal_bunker
+                            province = {
+                                all_provinces = yes
+                                limit_to_coastal = yes
+                            }
+                            level = 1
+                            instant_build = yes
+                        }
+            }
+        }
+    }
+
+    focus = {
+        id = establish_akukin_east_africa_aqa_focus
+        icon = GFX_focus_AQA_east_africa
+        prerequisite = { focus = military_present_in_horn_of_africa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_present_in_horn_of_africa_aqa_focus
+        x = 1
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+                set_cosmetic_tag = AQA_Akukin_EAfrica
+                custom_effect_tooltip = CET_establish_akukin_east_africa_focus
+                hidden_effect = {transfer_state = 837
+                                transfer_state = 836
+                                transfer_state = 835
+                                transfer_state = 271
+                                transfer_state = 838
+                
+                                transfer_state = 839
+                                transfer_state = 840
+                                transfer_state = 843
+                                transfer_state = 841
+                                transfer_state = 908
+                                transfer_state = 842}
+            }
+            puppet = ORO
+        }
+    }
+
+    focus = {
+        id = appoint_mea_as_governor_aqa_focus
+        icon = GFX_focus_AQA_mea
+        prerequisite = { focus = establish_akukin_east_africa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = establish_akukin_east_africa_aqa_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+                hidden_effect = {
+                    retire_ideology_leader = communism
+                }
+            }
+            ORO = {create_country_leader = {
+                                name = "Kagura Mea"
+                                picture = "gfx/leaders/AQA/kagura_mea.dds"
+                                expire = "1965.1.1"
+                                ideology = marxism
+                                traits = {
+                                    colonial_government_trait
+                                }
+                            }}
+        }
+    }
+
+    focus = {
+        id = strengthen_colonial_government_aqa_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = appoint_mea_as_governor_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = appoint_mea_as_governor_aqa_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            ORO = { is_subject_of = ROOT }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+                add_state_core = 840
+                add_state_core = 843
+                                add_state_core = 841
+                                add_state_core = 908
+                                add_state_core = 842
+                                add_state_core = 835
+            }
+        }
+    }
+
+    focus = {
+        id = train_to_addis_ababa_aqa_focus
+        icon = GFX_focus_generic_railroad
+        prerequisite = { focus = establish_akukin_east_africa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = establish_akukin_east_africa_aqa_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = AQA
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = ORO
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 10833
+                target_province = 5010
+            }
+
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = AQA
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = ORO
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 10833
+                target_province = 10775
+            }
+        }
+    }
+
+    focus = {
+        id = union_road_aqa_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = train_to_addis_ababa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = train_to_addis_ababa_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = union_line_aqa_focus
+        icon = GFX_focus_AQA_com_air
+        prerequisite = { focus = union_road_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = union_road_aqa_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            271 = {
+            add_building_construction = {
+                    type = air_base
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            835 = {
+            add_building_construction = {
+                    type = air_base
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            269 = {
+            add_building_construction = {
+                    type = air_base
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = encourage_cotton_industry_aqa_focus
+        icon = GFX_focus_AQA_cotton_industry
+        prerequisite = { focus = train_to_addis_ababa_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = train_to_addis_ababa_aqa_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            }
+        }
+    }
+
+    focus = {
+        id = encourage_cement_industry_aqa_focus
+        icon = GFX_focus_AQA_cement_industry
+        prerequisite = { focus = encourage_cotton_industry_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = encourage_cotton_industry_aqa_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            }
+        }
+    }
+
+    focus = {
+        id = fortress_ethiopia_aqa_focus
+        icon = GFX_focus_AQA_fortify
+        prerequisite = { focus = encourage_cement_industry_aqa_focus
+        focus = union_line_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = encourage_cement_industry_aqa_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            271 = {
+                add_building_construction = {
+                    type = bunker
+                    province = 5010
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 10734
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 8036
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 13239
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = encourage_mineral_industry_aqa_focus
+        icon = GFX_focus_AQA_mineral_industry
+        prerequisite = { focus = encourage_cement_industry_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = encourage_cement_industry_aqa_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            ORO = {
+            random_owned_controlled_state = {
+            add_resource = {
+                type = tungsten
+                amount = 8
+                }
+            }
+            random_owned_controlled_state = {
+            add_resource = {
+                type = steel
+                amount = 16
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            }
+        }
+    }
+
+    #Akukin Afghanistan
+    focus = {
+        id = peshawar_kabul_express_line_aqa_focus
+        icon = GFX_focus_generic_railroad
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_present_in_horn_of_africa_aqa_focus
+        x = 8
+        y = 0
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            AFG = { is_subject_of = ROOT }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            build_railway = {
+                level = 2
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = AQA
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = AFG
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 12763
+                target_province = 10737
+            }
+        }
+    }
+
+    focus = {
+        id = develop_afghan_ring_road_aqa_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = peshawar_kabul_express_line_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = peshawar_kabul_express_line_aqa_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            267 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            415 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = establish_ansf_aqa_focus
+        icon = GFX_focus_AQA_ANSF
+        prerequisite = { focus = peshawar_kabul_express_line_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = peshawar_kabul_express_line_aqa_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            AFG = {add_ideas = f2_conscription_ns}
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = afghanistan_reconstruction_effort_aqa_focus
+        icon = GFX_focus_AQA_afghanistan_factory
+        prerequisite = { focus = establish_ansf_aqa_focus
+        focus = develop_afghan_ring_road_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = establish_ansf_aqa_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            267 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            415 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = akukin_lithium_concessions_aqa_focus
+        icon = GFX_focus_AQA_akukin
+        prerequisite = { focus = afghanistan_reconstruction_effort_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = afghanistan_reconstruction_effort_aqa_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            267 = {
+            add_resource = {
+                type = tungsten
+                amount = 24
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = jowzjan_oil_expedition_aqa_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = afghanistan_reconstruction_effort_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = afghanistan_reconstruction_effort_aqa_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            415 = {
+            add_resource = {
+                type = oil
+                amount = 24
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = seize_shion_military_equipment_aqa_focus
+        icon = GFX_focus_SHI_guns
+        prerequisite = { focus = peshawar_kabul_express_line_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = peshawar_kabul_express_line_aqa_focus
+        x = 2
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 5000
+                    producer = SHI
+            }
+        }
+    }
+
+    focus = {
+        id = deal_with_shionist_state_aqa_focus
+        icon = GFX_focus_SHI_shionism
+        prerequisite = { focus = seize_shion_military_equipment_aqa_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = seize_shion_military_equipment_aqa_focus
+        x = 0
+        y = 2
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.1
+            remove_ideas = shionist_attacked_idea
+        }
+    }
+}

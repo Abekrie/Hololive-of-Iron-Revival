@@ -1,0 +1,304 @@
+add_namespace = sana
+
+#SAN - Threaten to intervene in Neighbor War
+country_event = {
+	id = sana.1
+	title = sana.1.t
+	desc = sana.1.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.1.a
+		ai_chance = { factor = 90 }
+		
+		SAN = {
+			transfer_state = 405
+		}
+
+		if = {
+			limit = { owns_state = 742 }
+			SAN = {
+				transfer_state = 742
+			}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			SAN = { country_event = { id = proposed.79 }}
+		}
+	}
+
+	option = {
+		name = sana.1.b
+		ai_chance = { factor = 10 }
+
+		SAN = { create_wargoal = { type = annex_everything target = SHI } }
+		
+		if = {
+			limit = { tag = SHI }
+			SAN = { country_event = { id = proposed.80 }}
+		}
+		
+	}
+}
+
+#SAN - Demand Kazakh states
+country_event = {
+	id = sana.2
+	title = sana.2.t
+	desc = sana.2.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.2.a
+		ai_chance = { factor = 100 }
+		
+		SAN = {
+			transfer_state = 406
+		}
+
+		if = {
+			limit = { owns_state = 407 }
+			SAN = {
+				transfer_state = 407
+			}
+		}
+
+		if = {
+			limit = { tag = MUM }
+			SAN = { country_event = { id = proposed.117 }}
+		}
+	}
+
+	option = {
+		name = sana.2.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MUM }
+			SAN = { country_event = { id = proposed.118 }}
+		}
+		
+	}
+}
+
+#SAN - Invite to faction
+country_event = {
+	id = sana.3
+	title = sana.3.t
+	desc = sana.3.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.3.a
+		ai_chance = { factor = 100 }
+		
+		SAN = {
+			add_to_faction = ROOT
+		}
+
+		if = {
+			limit = { tag = MUM }
+			SAN = { country_event = { id = proposed.117 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			SAN = { country_event = { id = proposed.61 }}
+		}
+
+		if = {
+			limit = { tag = SUI }
+			SAN = { country_event = { id = proposed.85 }}
+		}
+
+		if = {
+			limit = { tag = MOO }
+			SAN = { country_event = { id = proposed.57 }}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			SAN = { country_event = { id = proposed.79 }}
+		}
+	}
+
+	option = {
+		name = sana.3.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = MUM }
+			SAN = { country_event = { id = proposed.118 }}
+		}
+
+		if = {
+			limit = { tag = NIN }
+			SAN = { country_event = { id = proposed.62 }}
+		}
+
+		if = {
+			limit = { tag = SUI }
+			SAN = { country_event = { id = proposed.86 }}
+		}
+
+		if = {
+			limit = { tag = MOO }
+			SAN = { country_event = { id = proposed.58 }}
+		}
+
+		if = {
+			limit = { tag = SHI }
+			SAN = { country_event = { id = proposed.80 }}
+		}
+		
+	}
+}
+
+#SAN - Sana uses Orbital Strike against us!
+country_event = {
+	id = sana.4
+	title = sana.4.t
+	desc = sana.4.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.4.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SAN - Intervention in Space Race
+country_event = {
+	id = sana.5
+	title = sana.5.t
+	desc = sana.5.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.5.a
+		ai_chance = { factor = 50 }
+
+		add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.5
+                uses = 1
+                category = naval_bomber
+                category = cas_bomber
+                category = light_fighter
+            }
+
+		MOO = { country_event = { id = sana.6 }}
+	}
+
+	option = {
+		name = sana.5.b
+		ai_chance = { factor = 50 }
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		IOF = { country_event = { id = sana.6 }}
+	}
+}
+
+#SAN - Intervention in Space Race - RECIEVER
+country_event = {
+	id = sana.6
+	title = sana.6.t
+	desc = sana.6.d
+	picture = GFX_report_event_sana_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.6.a
+		ai_chance = { factor = 50 }
+
+		add_equipment_to_stockpile = {
+            type = infantry_equipment_0
+            amount = 5000
+            producer = SAN
+        }
+	}
+}
+
+#SAN - The Rumbling is coming
+country_event = {
+	id = sana.7
+	title = sana.7.t
+	desc = sana.7.d
+	picture = GFX_report_event_sana_rumbling1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.7.a
+		ai_chance = { factor = 50 }
+
+		add_war_support = 0.1
+		add_stability = -0.1
+	}
+}
+
+#MUM - Humanity Reservation Coalition
+country_event = {
+	id = sana.8
+	title = sana.8.t
+	desc = sana.8.d
+	picture = GFX_report_event_sana_rumbling1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sana.8.a
+		ai_chance = { factor = 50 }
+
+		set_country_flag = leader_of_human_reserve_coalition
+		custom_effect_tooltip = CET_leader_of_human_reserve_coalition
+	}
+}
+
+#MUM - Final Stage of the Rumbling
+country_event = {
+	id = sana.9
+	title = sana.9.t
+	desc = sana.9.d
+	picture = GFX_report_event_sana_rumbling1
+	
+	#is_triggered_only = yes
+
+	trigger = {
+    	tag = SAN
+    	has_global_flag = sana_the_rumbling_is_coming_flag
+    	all_country = {
+    		NOT = {has_idea = rumbling_is_coming_ns}
+    	}
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	option = {
+		name = sana.9.a
+		ai_chance = { factor = 50 }
+		clr_global_flag = sana_the_rumbling_is_coming_flag
+		set_country_flag = sana_can_nuke_any_state
+		custom_effect_tooltip = CET_final_stage_of_the_rumbling
+		hidden_effect = {news_event = { id = holo_news.255 }}
+	}
+}

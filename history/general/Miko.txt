@@ -1,0 +1,53 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MIK
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MIK_35p_holo_xgeneral
+    name="35P"
+      portraits={
+            army={
+                  large="gfx/leaders/MIK/35p.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = MIK_elite_mascot_holo_xgeneral
+    name="Elite Mascot"
+      portraits={
+            army={
+                  large="gfx/leaders/MIK/elite_mascot.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader skilled_staffer}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

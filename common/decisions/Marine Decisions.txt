@@ -1,0 +1,204 @@
+marine_pirateer_category = {
+
+	marine_raid_mel_coast_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			MEL = {
+				exists = yes
+				NOT = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		visible = {
+		    tag = MAR
+		    has_country_flag = Marine_can_raid_others_coast
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			MEL = {
+				add_stability = -0.01
+				country_event = {
+					id = marine.11
+				}
+			}
+			custom_effect_tooltip = CET_marine_pirateer_dec
+			country_event = {
+				id = marine.14
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_raid_aki_coast_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			ROS = {
+				exists = yes
+				NOT = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		visible = {
+		    tag = MAR
+		    has_country_flag = Marine_can_raid_others_coast
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			ROS = {
+				add_stability = -0.01
+				country_event = {
+					id = marine.11
+				}
+			}
+			custom_effect_tooltip = CET_marine_pirateer_dec
+			country_event = {
+				id = marine.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_raid_coco_coast_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			COC = {
+				exists = yes
+				NOT = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		visible = {
+		    tag = MAR
+		    has_country_flag = Marine_can_raid_others_coast
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			COC = {
+				add_stability = -0.01
+				country_event = {
+					id = marine.11
+				}
+			}
+			custom_effect_tooltip = CET_marine_pirateer_dec
+			country_event = {
+				id = marine.16
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	marine_raid_flare_coast_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			FLA = {
+				exists = yes
+				NOT = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		visible = {
+		    tag = MAR
+		    has_country_flag = Marine_can_raid_others_coast
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			FLA = {
+				add_stability = -0.01
+				country_event = {
+					id = marine.11
+				}
+			}
+			custom_effect_tooltip = CET_marine_pirateer_dec
+			country_event = {
+				id = marine.10
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	
+}

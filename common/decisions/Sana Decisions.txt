@@ -1,0 +1,199 @@
+sana_space_station_category = {
+
+	sana_invite_to_faction_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						is_capital = yes
+						OWNER = {
+							OR = {
+								tag = MOO
+								tag = SUI
+								tag = SHI
+								tag = IOF
+							}
+							NOT = { tag = SAN }
+						}
+					}
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = { tag = SAN }
+		    FROM.OWNER = {
+		    	NOT = { has_war_with = SAN }
+		    }
+		    has_country_flag = san_can_hoshistar
+		}
+
+		#days_remove = 75
+
+		complete_effect = {
+			FROM = {
+				OWNER = { country_event = { id = sana.3 }}
+			}
+		}
+
+		#remove_effect = {}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sana_orbital_strike_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						is_capital = yes
+						OWNER = {
+							NOT = { tag = SAN }
+							has_war_with = SAN
+							has_capitulated = no
+						}
+					}
+			}
+		}
+
+		cost = 150
+
+		visible = {
+		    OR = { tag = SAN }
+		    FROM.OWNER = {
+		    	has_war_with = SAN
+		    }
+		    has_country_flag = san_can_orbital_strike
+		}
+
+		days_remove = 75
+
+		complete_effect = {
+			FROM = {
+				OWNER = {
+					random_owned_controlled_state = {
+            			damage_building = {
+    						type = infrastructure
+    						damage = 1
+						}
+            		}
+            		random_owned_controlled_state = {
+            			damage_building = {
+    						type = arms_factory
+    						damage = 1
+						}
+            		}
+            		random_owned_controlled_state = {
+            			damage_building = {
+    						type = industrial_complex
+    						damage = 1
+						}
+            		}
+				}
+			}
+		}
+
+		#remove_effect = {}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	sana_rumbling_final_stage_dec = {
+
+		icon = generic_ignite_civil_war
+
+		days_re_enable = 365
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							NOT = {tag = ROOT}
+							has_war_with = ROOT
+						}
+						OWNER = {
+							NOT = {tag = ROOT}
+							has_war_with = ROOT
+						}
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 250
+
+		visible = {
+		    tag = SAN
+			has_country_flag = sana_can_nuke_any_state
+			is_ai = no
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 100
+
+		remove_effect = {
+			launch_nuke = {
+				state = FROM
+				controller = FROM.CONTROLLER
+				use_nuke = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 200
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+

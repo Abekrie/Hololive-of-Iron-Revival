@@ -1,0 +1,441 @@
+add_namespace = fauna
+
+#TeamTrees - 1
+country_event = {
+	id = fauna.1
+	title = fauna.1.t
+	desc = fauna.1.d
+	picture = GFX_report_event_fauna_teamtrees1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		hidden_effect = {
+			country_event = { id = fauna.2 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 2
+country_event = {
+	id = fauna.2
+	title = fauna.2.t
+	desc = fauna.2.d
+	picture = GFX_report_event_fauna_teamtrees2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.2.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_equipment_to_stockpile = {
+		    	type = fighter_equipment_0
+		    	amount = 100
+		    	producer = ROOT
+	    	}
+			add_political_power = -50
+		}
+		hidden_effect = {
+			country_event = { id = fauna.3 days = 180 }
+		}
+	}
+
+	option = {
+		name = fauna.2.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { id = fauna.3 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 3
+country_event = {
+	id = fauna.3
+	title = fauna.3.t
+	desc = fauna.3.d
+	picture = GFX_report_event_fauna_teamtrees3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = dockyard level = 2 }
+			navy_experience = -10
+		}
+		hidden_effect = {
+			country_event = { id = fauna.4 days = 180 }
+		}
+	}
+
+	option = {
+		name = fauna.3.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { id = fauna.4 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 4
+country_event = {
+	id = fauna.4
+	title = fauna.4.t
+	desc = fauna.4.d
+	picture = GFX_report_event_fauna_teamtrees1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.4.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_political_power = -50
+		}
+		hidden_effect = {
+			country_event = { id = fauna.5 days = 180 }
+		}
+	}
+
+	option = {
+		name = fauna.4.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { id = fauna.5 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 5
+country_event = {
+	id = fauna.5
+	title = fauna.5.t
+	desc = fauna.5.d
+	picture = GFX_report_event_fauna_teamtrees2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.5.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_efficiency_idea = yes
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 10000
+		    	producer = ROOT
+	    	}
+			add_stability = -0.10
+		}
+		hidden_effect = {
+			country_event = { id = fauna.6 days = 180 }
+		}
+	}
+
+	option = {
+		name = fauna.5.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { id = fauna.6 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 6
+country_event = {
+	id = fauna.6
+	title = fauna.6.t
+	desc = fauna.6.d
+	picture = GFX_report_event_fauna_teamtrees3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.6.a
+		ai_chance = { factor = 100 }
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		hidden_effect = {
+			country_event = { id = fauna.7 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 7
+country_event = {
+	id = fauna.7
+	title = fauna.7.t
+	desc = fauna.7.d
+	picture = GFX_report_event_fauna_teamtrees1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.7.a
+		ai_chance = { factor = 100 }
+		add_offsite_building = { type = industrial_complex level = 2 }
+		add_offsite_building = { type = arms_factory level = 2 }
+		add_political_power = -100
+		hidden_effect = {
+			country_event = { id = fauna.8 days = 180 }
+		}
+	}
+
+	option = {
+		name = fauna.7.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			country_event = { id = fauna.8 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 8
+country_event = {
+	id = fauna.8
+	title = fauna.8.t
+	desc = fauna.8.d
+	picture = GFX_report_event_fauna_teamtrees2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.8.a
+		ai_chance = { factor = 100 }
+		add_offsite_building = { type = arms_factory level = 2 }
+		hidden_effect = {
+			country_event = { id = fauna.9 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 9
+country_event = {
+	id = fauna.9
+	title = fauna.9.t
+	desc = fauna.9.d
+	picture = GFX_report_event_fauna_teamtrees3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.9.a
+		ai_chance = { factor = 100 }
+		add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 10000
+		    	producer = ROOT
+	    	}
+	    hidden_effect = {
+			country_event = { id = fauna.10 days = 180 }
+		}
+	}
+}
+
+#TeamTrees - 10
+country_event = {
+	id = fauna.10
+	title = fauna.10.t
+	desc = fauna.10.d
+	picture = GFX_report_event_fauna_teamtrees2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.10.a
+		ai_chance = { factor = 100 }
+		add_research_idea = yes
+	}
+}
+
+#FAU - Sustainability Expo
+country_event = {
+	id = fauna.11
+	title = fauna.11.t
+	desc = fauna.11.d
+	picture = GFX_report_event_fauna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.11.a
+		ai_chance = { factor = 100 }
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_political_power = -50
+		FAU = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = ROOT
+	    	}
+		}
+
+	}
+
+	option = {
+		name = fauna.11.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#FAU - Paper Bag deal
+country_event = {
+	id = fauna.12
+	title = fauna.12.t
+	desc = fauna.12.d
+	picture = GFX_report_event_fauna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.12.a
+		ai_chance = { factor = 100 }
+			add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.25
+                uses = 1
+                category = cat_synth_rubber
+                category = cat_synth_oil
+            }
+
+            FAU = {
+            	add_tech_bonus = {
+                	name = nav_bomber_bonus
+                	bonus = 0.5
+                	uses = 2
+                	category = cat_synth_rubber
+                	category = cat_synth_oil
+            	}
+            }
+            if = {
+			limit = { tag = MUM }
+			FAU = { country_event = { id = proposed.117 }}
+		}
+	}
+
+	option = {
+		name = fauna.12.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = MUM }
+			FAU = { country_event = { id = proposed.118 }}
+		}
+	}
+}
+
+#FAU - Deal with Forest Princess
+country_event = {
+	id = fauna.13
+	title = fauna.13.t
+	desc = fauna.13.d
+	picture = GFX_report_event_fauna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.13.a
+		ai_chance = { factor = 100 }
+			add_ideas = forest_keeper_ns
+			add_political_power = -100
+            FAU = {
+            	add_equipment_to_stockpile = {
+		    		type = hololive_yen_0
+		    		amount = 5000
+		    		producer = ROOT
+	    		}
+            }
+            if = {
+			limit = { tag = LUN }
+			FAU = { country_event = { id = proposed.45 }}
+		}
+	}
+
+	option = {
+		name = fauna.13.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = LUN }
+			FAU = { country_event = { id = proposed.46 }}
+		}
+	}
+}
+
+#FAU - Cerealia Festival
+country_event = {
+	id = fauna.14
+	title = fauna.14.t
+	desc = fauna.14.d
+	picture = GFX_report_event_fauna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.14.a
+		ai_chance = { factor = 100 }
+		add_offsite_building = { type = industrial_complex level = 1 }
+        hidden_effect = {
+        	country_event = { id = fauna.13 days = 350 }
+        }
+	}
+}
+
+#FAU - Ask to join faction
+country_event = {
+	id = fauna.15
+	title = fauna.15.t
+	desc = fauna.15.d
+	picture = GFX_report_event_fauna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fauna.15.a
+		ai_chance = { factor = 100 }
+
+			add_to_faction = FAU
+
+            if = {
+			limit = { tag = LUN }
+			FAU = { country_event = { id = proposed.45 }}
+			}
+
+			if = {
+			limit = { tag = KRO }
+			FAU = { country_event = { id = proposed.113 }}
+			}
+	}
+
+	option = {
+		name = fauna.15.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = LUN }
+			FAU = { country_event = { id = proposed.46 }}
+		}
+
+		if = {
+			limit = { tag = KRO }
+			FAU = { country_event = { id = proposed.114 }}
+			}
+	}
+}

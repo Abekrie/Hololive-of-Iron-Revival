@@ -1,0 +1,239 @@
+add_namespace = botan
+
+##############################
+#Soviet - Coup in Siberia
+country_event = {
+	id = botan.1
+	title = botan.1.t
+	desc = botan.1.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.1.a	#Yes
+		ai_chance = { factor = 100 }
+		BTN = {
+			transfer_state = 562
+			transfer_state = 637
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 565
+			transfer_state = 576
+			transfer_state = 516
+
+			transfer_state = 822
+			transfer_state = 644
+
+			transfer_state = 561
+			transfer_state = 560
+			transfer_state = 657
+			transfer_state = 409
+			transfer_state = 408
+		}
+		BTN = {
+			country_event = { id = proposed.101 }
+		}
+	}
+}
+
+#Tannu Tuva - Deal with Tannu Tuva
+country_event = {
+	id = botan.2
+	title = botan.2.t
+	desc = botan.2.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.2.a	#Yes
+		ai_chance = { factor = 100 }
+		BTN = {
+			transfer_state = 568
+			transfer_state = 567
+			transfer_state = 566
+			transfer_state = 564
+			transfer_state = 563
+			transfer_state = 565
+			transfer_state = 576
+			transfer_state = 516
+			transfer_state = 575
+			transfer_state = 574
+			transfer_state = 561
+			transfer_state = 562
+			transfer_state = 644
+			transfer_state = 822
+			transfer_state = 637
+			give_guarantee = TAN
+			give_military_access = TAN
+		}
+	}
+
+	option = {
+		name = botan.2.b	#No
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#Botan - Demand puppet
+country_event = {
+	id = botan.3
+	title = botan.3.t
+	desc = botan.3.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.3.a	#Yes
+		ai_chance = { factor = 100 }
+		BTN = {
+			puppet = ROOT
+		}
+		if = {
+			limit = { tag = LAM }
+			BTN = {
+					country_event = { id = proposed.43 }
+			}
+		}
+	}
+
+	option = {
+		name = botan.3.b	#No
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = LAM }
+			BTN = {
+					country_event = { id = proposed.44 }
+			}
+		}
+	}
+}
+
+#Botan - Ask to join faction
+country_event = {
+	id = botan.4
+	title = botan.4.t
+	desc = botan.4.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.4.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = BTN
+
+		if = {
+			limit = { tag = ALO }
+			BTN = {country_event = { id = proposed.1 }}
+		}
+
+		if = {
+			limit = { tag = LAM }
+			BTN = {country_event = { id = proposed.43 }}
+		}
+	}
+
+	option = {
+		name = botan.4.b	#No
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = ALO }
+			BTN = {country_event = { id = proposed.2 }}
+		}
+
+		if = {
+			limit = { tag = LAM }
+			BTN = {country_event = { id = proposed.44 }}
+		}
+	}
+}
+
+#Botan - Buy Port Arthur (Dalian)
+country_event = {
+	id = botan.5
+	title = botan.5.t
+	desc = botan.5.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.5.a	#Yes
+		ai_chance = { factor = 100 }
+
+		add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 18000
+                    producer = ROOT
+            }
+
+		BTN = {
+			transfer_state = 745
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BTN = {country_event = { id = proposed.107 }}
+		}
+	}
+
+	option = {
+		name = botan.5.b	#No
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = ACH }
+			BTN = {country_event = { id = proposed.108 }}
+		}
+	}
+}
+
+
+#Botan - Veto Polka
+country_event = {
+	id = botan.6
+	title = botan.6.t
+	desc = botan.6.d
+	picture = GFX_report_event_botan_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = botan.6.a	#Yes
+		ai_chance = { factor = 100 }
+
+		PLK = { leave_faction = yes }
+
+		if = {
+			limit = { tag = ALO }
+			BTN = {country_event = { id = proposed.1 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BTN = {country_event = { id = proposed.107 }}
+		}
+	}
+
+	option = {
+		name = botan.6.b	#No
+		ai_chance = { factor = 0 }
+
+		BTN = { leave_faction = yes }
+
+		if = {
+			limit = { tag = ALO }
+			BTN = {country_event = { id = proposed.2 }}
+		}
+
+		if = {
+			limit = { tag = ACH }
+			BTN = {country_event = { id = proposed.108 }}
+		}
+	}
+}

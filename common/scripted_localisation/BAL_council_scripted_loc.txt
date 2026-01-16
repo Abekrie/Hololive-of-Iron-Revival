@@ -1,0 +1,335 @@
+defined_text = {
+	name = GetHoloCouncilHost
+	text = {
+		trigger = {
+			FAU = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = FAU_GetHoloCouncilHost
+	}
+
+	text = {
+		trigger = {
+			SAN = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = SAN_GetHoloCouncilHost
+	}
+
+	text = {
+		trigger = {
+			BAL = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = BAL_GetHoloCouncilHost
+	}
+
+	text = {
+		trigger = {
+			MUM = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = MUM_GetHoloCouncilHost
+	}
+
+	text = {
+		trigger = {
+			KRO = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = KRO_GetHoloCouncilHost
+	}
+
+	text = {
+		trigger = {
+			is_hololive_council = yes
+			NOT = {
+				has_country_flag = is_current_council_host
+			}
+		}
+		localization_key = NONE_GetHoloCouncilHost
+	}
+}
+
+defined_text = {
+	name = GetHoloCouncilVote_FAU
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = FAU.FAU_council_status
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Pending
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = FAU.FAU_council_status
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Yes
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = FAU.FAU_council_status
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_No
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = FAU.FAU_council_status
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Absent
+	}
+}
+
+
+defined_text = {
+	name = GetHoloCouncilVote_BAL
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = BAL.BAL_council_status
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Pending
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = BAL.BAL_council_status
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Yes
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = BAL.BAL_council_status
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_No
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = BAL.BAL_council_status
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Absent
+	}
+}
+
+
+defined_text = {
+	name = GetHoloCouncilVote_KRO
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = KRO.KRO_council_status
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Pending
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = KRO.KRO_council_status
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Yes
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = KRO.KRO_council_status
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_No
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = KRO.KRO_council_status
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Absent
+	}
+}
+
+
+defined_text = {
+	name = GetHoloCouncilVote_MUM
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = MUM.MUM_council_status
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Pending
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = MUM.MUM_council_status
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Yes
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = MUM.MUM_council_status
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_No
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = MUM.MUM_council_status
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Absent
+	}
+}
+
+
+defined_text = {
+	name = GetHoloCouncilVote_SAN
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SAN.SAN_council_status
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Pending
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SAN.SAN_council_status
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Yes
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SAN.SAN_council_status
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_No
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SAN.SAN_council_status
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = GetHoloCouncilVote_Absent
+	}
+}
+
+defined_text = {
+	name = GetHoloCouncilVote_ALL
+
+	text = {
+		localization_key = GetHoloCouncilVote_ALL_text
+	}
+}
+
+defined_text = {
+	name = GetHoloTopicTitle
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = global.council_topic_id
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = GetHoloTopicTitle_0
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = global.council_topic_id
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = GetHoloTopicTitle_1
+	}
+}

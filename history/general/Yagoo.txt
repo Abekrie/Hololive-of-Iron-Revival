@@ -1,0 +1,32 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = YAG
+        original_tag = SOR
+        original_tag = ACH
+        original_tag = MAT
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = YAG_frontline_manager_advisor
+    name = "A Chan"
+    advisor = {
+      slot = high_command
+      traits = { frontline_manager_trait }
+      cost = 150
+
+      available = {
+        has_country_flag = YAG_can_frontline_manager_advisor
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_achan_small }
+    }
+  }
+}

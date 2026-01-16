@@ -1,0 +1,204 @@
+ideas = {
+    country = {
+	    kanatanism_unpopular = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kanatanism_red
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = 0.15
+			    conscription = -0.035
+			    army_core_defence_factor = -0.25
+			    local_resources_factor = -0.2
+			}
+		}
+
+		kanatanism_regular = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kanatanism_yellow
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = 0.1
+			    conscription = -0.025
+			    army_core_defence_factor = -0.15
+			    local_resources_factor = -0.1
+			}
+		}
+
+		kanatanism_popular = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = kanatanism_blue
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = -0.1
+			    army_core_defence_factor = 0.15
+			    local_resources_factor = 0.15
+			}
+		}
+
+		kanata_gurkha_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = raj_indian_gentlemen_officers
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    special_forces_cap = 0.1
+			    special_forces_no_supply_grace = 120
+			}
+		}
+
+		kanata_angelical_warrior_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = raj_indian_gentlemen_officers
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_infantry_attack_factor = 0.1
+			    army_infantry_defence_factor = 0.1
+			}
+		}
+
+		kanatanism_social_security_program = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = ast_all_in
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    civilian_factory_use = 2
+			}
+		}
+
+		kanatanism_buy_siamese_rice = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = ast_all_in
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    civilian_factory_use = 2
+			}
+		}
+
+		kanatanism_road_to_himalaya = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = ast_all_in
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    civilian_factory_use = 2
+			}
+		}
+
+		kanata_gorilla_grip_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = raj_indian_gentlemen_officers
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_breakthrough_against_minor_factor = 0.25
+			    army_strength_factor = 0.25
+			}
+		}
+
+		kanata_healing_angel_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = raj_indian_gentlemen_officers
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_org_regain = 0.5
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+Generic_FBK_historical = {
+	name = "FBK historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = FBK
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = FBK
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		shirakami_fubuki_fbk_focus
+		she_is_a_cat_fbk_focus
+		hololive_gamer_fbk_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

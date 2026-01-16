@@ -1,0 +1,26 @@
+leader_traits = {
+    astrogirl_trait = {
+		random = no
+		initiative_factor = 0.1
+		air_cas_present_factor = 0.1
+		air_power_projection_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	space_master_trait = {
+		random = no
+		nuclear_production_factor = 0.2
+		research_speed_factor = 0.05
+		fuel_gain_factor = 0.15
+		rocket_attack_factor = 0.1
+		experience_gain_air = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

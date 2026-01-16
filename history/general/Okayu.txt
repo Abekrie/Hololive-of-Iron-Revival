@@ -1,0 +1,31 @@
+
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = OKA
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = OKA_saul_goodman_advisor
+    name = "Saul Goodman"
+    advisor = {
+      slot = political_advisor
+      traits = { attoney_at_law_trait }
+      cost = 150
+
+      available = {
+        AND = {
+        has_country_flag = better_call_saul_dec_FLAG
+        }
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_saul_small }
+    }
+  }
+}

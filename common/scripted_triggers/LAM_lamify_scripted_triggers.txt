@@ -1,0 +1,10 @@
+LAM_level_4 = {
+	custom_trigger_tooltip = {
+		tooltip = LAM_level_4_tt
+		check_variable = {
+				var = lamy_lamify_level
+				value = 4
+				compare = greater_than_or_equals
+			}
+	}
+}

@@ -1,0 +1,600 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_idea_fubuki_dem"
+		texturefile = "gfx/interface/ideas/idea_fubuki_dem.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_shi_shionist_state"
+		texturefile = "gfx/interface/ideas/idea_shi_shionist_state.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_lam_lamification"
+		texturefile = "gfx/interface/ideas/idea_lam_lamification.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_lam_purge"
+		texturefile = "gfx/interface/ideas/idea_lam_purge.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_mum_symbol"
+		texturefile = "gfx/interface/ideas/idea_mum_symbol.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ina_powerful"
+		texturefile = "gfx/interface/ideas/idea_ina_powerful.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_sana_logo"
+		texturefile = "gfx/interface/ideas/idea_sana_logo.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_mum_generic"
+		texturefile = "gfx/interface/ideas/idea_mum_generic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_mum_owl"
+		texturefile = "gfx/interface/ideas/idea_mum_owl.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_mum_palette"
+		texturefile = "gfx/interface/ideas/idea_mum_palette.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_miko_generic"
+		texturefile = "gfx/interface/ideas/idea_miko_generic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_elon_small"
+		texturefile = "gfx/interface/ideas/idea_elon_small.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_crazy_dave_small"
+		texturefile = "gfx/interface/ideas/idea_crazy_dave_small.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_marine_pirate_bmaster"
+		texturefile = "gfx/interface/ideas/idea_marine_pirate_bmaster.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_marine_pirate_qmaster"
+		texturefile = "gfx/interface/ideas/idea_marine_pirate_qmaster.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_marine_pirate_tactic"
+		texturefile = "gfx/interface/ideas/idea_marine_pirate_tactic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kronii_generic"
+		texturefile = "gfx/interface/ideas/idea_kronii_generic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kro_first_magic"
+		texturefile = "gfx/interface/ideas/idea_kro_first_magic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kro_second_magic"
+		texturefile = "gfx/interface/ideas/idea_kro_second_magic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kro_third_magic"
+		texturefile = "gfx/interface/ideas/idea_kro_third_magic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_entertainment_economy"
+		texturefile = "gfx/interface/ideas/idea_entertainment_economy.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_cartel_economy"
+		texturefile = "gfx/interface/ideas/idea_cartel_economy.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kanatanism_red"
+		texturefile = "gfx/interface/ideas/idea_kanatanism_red.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kanatanism_yellow"
+		texturefile = "gfx/interface/ideas/idea_kanatanism_yellow.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kanatanism_blue"
+		texturefile = "gfx/interface/ideas/idea_kanatanism_blue.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_suisei_terror"
+		texturefile = "gfx/interface/ideas/idea_suisei_terror.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_choco_pop"
+		texturefile = "gfx/interface/ideas/idea_choco_pop.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_watame_generic"
+		texturefile = "gfx/interface/ideas/idea_watame_generic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_paraguay_generic"
+		texturefile = "gfx/interface/ideas/idea_paraguay_generic.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_matsuri_com"
+		texturefile = "gfx/interface/ideas/idea_matsuri_com.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_coco_fas"
+		texturefile = "gfx/interface/ideas/idea_coco_fas.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_haato_ind"
+		texturefile = "gfx/interface/ideas/idea_haato_ind.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_flare_warind"
+		texturefile = "gfx/interface/ideas/idea_flare_warind.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_rushia_army"
+		texturefile = "gfx/interface/ideas/idea_rushia_army.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_haachama_sunday"
+		texturefile = "gfx/interface/ideas/idea_haachama_sunday.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_marine_navy"
+		texturefile = "gfx/interface/ideas/idea_marine_navy.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_pekora_air"
+		texturefile = "gfx/interface/ideas/idea_pekora_air.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_noel_offence"
+		texturefile = "gfx/interface/ideas/idea_noel_offence.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_aqua_def"
+		texturefile = "gfx/interface/ideas/idea_aqua_def.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_aqua_akukin_industry"
+		texturefile = "gfx/interface/ideas/idea_aqua_akukin_industry.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_aqua_army"
+		texturefile = "gfx/interface/ideas/idea_aqua_army.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_aqua_navy"
+		texturefile = "gfx/interface/ideas/idea_aqua_navy.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_aqua_airforce"
+		texturefile = "gfx/interface/ideas/idea_aqua_airforce.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_miko_man"
+		texturefile = "gfx/interface/ideas/idea_miko_man.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_korone_ent"
+		texturefile = "gfx/interface/ideas/idea_korone_ent.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_mio_dec"
+		texturefile = "gfx/interface/ideas/idea_mio_dec.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_sui_army"
+		texturefile = "gfx/interface/ideas/idea_sui_army.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_sui_navy"
+		texturefile = "gfx/interface/ideas/idea_sui_navy.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_sui_space"
+		texturefile = "gfx/interface/ideas/idea_sui_space.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_sui_airforce"
+		texturefile = "gfx/interface/ideas/idea_sui_airforce.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_okayu_navalavi"
+		texturefile = "gfx/interface/ideas/idea_okayu_navalavi.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_shion_airref"
+		texturefile = "gfx/interface/ideas/idea_shion_airref.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_towa_ground"
+		texturefile = "gfx/interface/ideas/idea_towa_ground.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_luna_inf"
+		texturefile = "gfx/interface/ideas/idea_luna_inf.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_watame_bomb"
+		texturefile = "gfx/interface/ideas/idea_watame_bomb.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_kanata_regroup"
+		texturefile = "gfx/interface/ideas/idea_kanata_regroup.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_aki_commando"
+		texturefile = "gfx/interface/ideas/idea_aki_commando.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_order_of_shirogane"
+		texturefile = "gfx/interface/ideas/idea_order_of_shirogane.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_asmr"
+		texturefile = "gfx/interface/ideas/idea_asmr.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_engineer"
+		texturefile = "gfx/interface/ideas/idea_engineer.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_tetris"
+		texturefile = "gfx/interface/ideas/idea_tetris.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_comet"
+		texturefile = "gfx/interface/ideas/idea_comet.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_anchor_weight"
+		texturefile = "gfx/interface/ideas/idea_anchor_weight.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_asacoco"
+		texturefile = "gfx/interface/ideas/idea_asacoco.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_calliope_air"
+		texturefile = "gfx/interface/ideas/idea_calliope_air.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_amelia_army"
+		texturefile = "gfx/interface/ideas/idea_amelia_army.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_gura_navy"
+		texturefile = "gfx/interface/ideas/idea_gura_navy.dds"	
+	}
+
+	SpriteType = {
+ 		name = "GFX_idea_doris_shield_small"
+ 		texturefile = "gfx/interface/ideas/idea_doris_shield_small.dds"
+}
+
+SpriteType = {
+ name = "GFX_idea_marine_shield_small"
+ texturefile = "gfx/interface/ideas/idea_marine_shield_small.dds"
+}
+
+SpriteType = {
+ name = "GFX_idea_gura_shield_small"
+ texturefile = "gfx/interface/ideas/idea_gura_shield_small.dds"
+}
+
+SpriteType = {
+ name = "GFX_idea_aqua_shield_small"
+ texturefile = "gfx/interface/ideas/idea_aqua_shield_small.dds"
+}
+
+SpriteType = {
+ name = "GFX_idea_ina_shield_small"
+ texturefile = "gfx/interface/ideas/idea_ina_shield_small.dds"
+}
+
+ SpriteType = {
+   name = "GFX_idea_pekora_shield_small"
+   texturefile ="gfx/interface/ideas/idea_pekora_shield_small.dds"
+ }
+
+ SpriteType = {
+   name = "GFX_idea_iofi_shield_small"
+   texturefile ="gfx/interface/ideas/idea_iofi_shield_small.dds"
+ }
+
+    SpriteType = {
+        name = "GFX_idea_coco_shield_small"
+        texturefile ="gfx/interface/ideas/idea_coco_shield_small.dds"
+    }
+
+
+   SpriteType = {
+     name = "GFX_idea_noel_shield_small"
+     texturefile ="gfx/interface/ideas/idea_noel_shield_small.dds"
+   }
+
+   SpriteType = {
+     name = "GFX_idea_watame_shield_small"
+     texturefile ="gfx/interface/ideas/idea_watame_shield_small.dds"
+   }
+
+   SpriteType = {
+     name = "GFX_idea_roboco_shield_small"
+     texturefile ="gfx/interface/ideas/idea_roboco_shield_small.dds"
+   }
+
+    SpriteType = {
+       name = "GFX_idea_haato_shield_small"
+       texturefile ="gfx/interface/ideas/idea_haato_shield_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_flare_shield_small"
+       texturefile ="gfx/interface/ideas/idea_flare_shield_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_civia_shield_small"
+       texturefile ="gfx/interface/ideas/idea_civia_shield_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_ayame_shield_small"
+       texturefile ="gfx/interface/ideas/idea_ayame_shield_small.dds"
+    }
+
+    SpriteType = {
+		name = "GFX_idea_moona_advisor"
+		texturefile = "gfx/interface/ideas/idea_moona_advisor.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ui_advisor"
+		texturefile = "gfx/interface/ideas/idea_ui_advisor.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_irys_advisor"
+		texturefile = "gfx/interface/ideas/idea_irys_advisor.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_small_ame_advisor"
+		texturefile = "gfx/interface/ideas/idea_small_ame_advisor.dds"	
+	}
+
+	#
+
+	SpriteType = {
+       name = "GFX_idea_moona_small"
+       texturefile ="gfx/interface/ideas/idea_moona_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_noel_small"
+       texturefile ="gfx/interface/ideas/idea_noel_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_risu_small"
+       texturefile ="gfx/interface/ideas/idea_risu_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_iofi_small"
+       texturefile ="gfx/interface/ideas/idea_iofi_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_gura_small"
+       texturefile ="gfx/interface/ideas/idea_gura_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_haato_small"
+       texturefile ="gfx/interface/ideas/idea_haato_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_holo_logo_small"
+       texturefile ="gfx/interface/ideas/idea_holo_logo_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_pekora_small"
+       texturefile ="gfx/interface/ideas/idea_pekora_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_sora_small"
+       texturefile ="gfx/interface/ideas/idea_sora_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_coco_small"
+       texturefile ="gfx/interface/ideas/idea_coco_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_rushia_small"
+       texturefile ="gfx/interface/ideas/idea_rushia_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_watson_small"
+       texturefile ="gfx/interface/ideas/idea_watson_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_aqua_small"
+       texturefile ="gfx/interface/ideas/idea_aqua_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_botan_small"
+       texturefile ="gfx/interface/ideas/idea_botan_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_flare_small"
+       texturefile ="gfx/interface/ideas/idea_flare_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_ina_small"
+       texturefile ="gfx/interface/ideas/idea_ina_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_subaru_small"
+       texturefile ="gfx/interface/ideas/idea_subaru_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_kiara_small"
+       texturefile ="gfx/interface/ideas/idea_kiara_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_matsuri_small"
+       texturefile ="gfx/interface/ideas/idea_matsuri_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_shion_small"
+       texturefile ="gfx/interface/ideas/idea_shion_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_calliope_small"
+       texturefile ="gfx/interface/ideas/idea_calliope_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_marine_small"
+       texturefile ="gfx/interface/ideas/idea_marine_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_suisei_small"
+       texturefile ="gfx/interface/ideas/idea_suisei_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_reine_small"
+       texturefile ="gfx/interface/ideas/idea_reine_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_anya_small"
+       texturefile ="gfx/interface/ideas/idea_anya_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_ollie_small"
+       texturefile ="gfx/interface/ideas/idea_ollie_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_choco_small"
+       texturefile ="gfx/interface/ideas/idea_choco_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_suisei_generic"
+       texturefile ="gfx/interface/ideas/idea_suisei_generic.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_walt_small"
+       texturefile ="gfx/interface/ideas/idea_walt_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_saul_small"
+       texturefile ="gfx/interface/ideas/idea_saul_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_achan_small"
+       texturefile ="gfx/interface/ideas/idea_achan_small.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_kiara_kiwawa_small"
+       texturefile ="gfx/interface/ideas/idea_kiara_kiwawa_small.dds"
+    }
+    SpriteType = {
+       name = "GFX_idea_pekora_generic"
+       texturefile ="gfx/interface/ideas/idea_pekora_generic.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_hololive_army"
+       texturefile ="gfx/interface/ideas/idea_hololive_army.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_sora_generic"
+       texturefile ="gfx/interface/ideas/idea_sora_generic.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_fauna_generic"
+       texturefile ="gfx/interface/ideas/idea_fauna_generic.dds"
+    }
+
+    SpriteType = {
+       name = "GFX_idea_fauna_forest_keeper"
+       texturefile ="gfx/interface/ideas/idea_fauna_forest_keeper.dds"
+    }
+
+}

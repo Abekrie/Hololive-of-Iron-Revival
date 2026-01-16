@@ -1,0 +1,32 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = GAW
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = GAW_small_gura_holo_xgeneral
+    name="Small Gura"
+      portraits={
+            army={
+                  large="gfx/leaders/WTS/small_gura.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

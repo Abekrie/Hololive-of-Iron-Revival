@@ -1,0 +1,153 @@
+﻿division_template = {
+	name = "Haachama"		
+
+	division_names_group = HTO_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+		
+	}
+}
+
+
+division_template = {
+	name = "Haaton"		
+
+	division_names_group = HTO_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 1652
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 7798
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 7798
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 4
+    }
+    location = 7859
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 5
+    }
+    location = 12406
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 6
+    }
+    location = 4543
+    division_template ="Haachama"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 2197
+    division_template ="Haaton"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 1814
+    division_template ="Haaton"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 7564
+    division_template ="Haaton"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 7798
+    division_template ="Haaton"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+}
+
+air_wings = {
+	285 = {
+		fighter_equipment_0 =  {
+			owner = "HTO" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {
+			owner = "HTO" 
+			amount = 200
+		}
+	}
+}

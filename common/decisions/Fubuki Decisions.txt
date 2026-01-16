@@ -1,0 +1,210 @@
+fubuki_biszarre_adventure_decision_category = {
+
+	fubuki_grandpas_treasure_chest_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = FBK
+		    has_country_flag = Fubuki_can_grandpas_chest
+		}
+
+		days_remove = 30
+
+		remove_effect = {
+			custom_effect_tooltip = CET_fubuki_grandpas_treasure_chest_dec
+			every_enemy_country = {
+				country_event = { id = fubuki.60 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fubuki_whiteout_blizzard_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 250
+
+		visible = {
+		    tag = FBK
+		    has_country_flag = Fubuki_can_whiteout_blizzard
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = whiteout_blizzard_ns
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	fubuki_seven_page_ari_dec = {
+
+		icon = generic_operation
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		cost = 300
+
+		visible = {
+		    tag = FBK
+		    has_country_flag = Fubuki_can_seven_page_ari
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = seven_page_ari_ns
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+fubuki_nordic_industrial_development_category = {
+
+	hololive_nordic_industrial_development_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							tag = ROOT
+						}
+						is_core_of = ROOT
+						NOT = {
+								has_state_flag = NORD_already_developed
+						}
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 60
+
+		visible = {
+		    FROM.OWNER = {
+				OR = {
+					tag = MRI
+					tag = NIN
+					tag = FBK
+					tag = GAW
+					AND = {
+						OR = {
+							tag = AQA
+							tag = FLA
+							tag = NEN
+							tag = CHC
+							}
+						has_country_flag = Aqua_can_akukin_construction
+					}
+					AND = {
+						OR = {
+							tag = RSA
+							tag = ECH
+							tag = YOG
+							tag = ART
+							tag = CIV
+							tag = DOR
+							tag = ACH
+						}
+						has_country_flag = China_can_construction_civ
+					}
+				}
+			}
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		days_remove = 60
+
+		remove_effect = {
+			FROM = {
+			add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			FROM = {set_state_flag = NORD_already_developed}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

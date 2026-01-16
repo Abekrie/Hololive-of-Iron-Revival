@@ -1,0 +1,14 @@
+increase_lamify = {
+	custom_effect_tooltip = increase_lamify
+	add_to_variable = { lamy_lamify_level = 1 } 
+}
+
+decrease_lamify = {
+	custom_effect_tooltip = decrease_lamify
+	subtract_from_variable = { lamy_lamify_level = 1 } 
+}
+
+reset_lamify = {
+	custom_effect_tooltip = reset_lamify
+	subtract_from_variable = { lamy_lamify_level = 4 } 
+}

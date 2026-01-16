@@ -1,0 +1,60 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "USA Fleet"		
+		naval_base = 10265
+		task_force = {				
+			name = "USA Force"			
+			location = 10265 
+
+			ship = { name = "America 1" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "America 2" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "America 3" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "America 4" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "Enterprise" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "California" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "Arizona" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "Nevada" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = GAW } } }
+
+			ship = { name = "Washington" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = GAW } } }
+
+
+		}						
+	}
+}  
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

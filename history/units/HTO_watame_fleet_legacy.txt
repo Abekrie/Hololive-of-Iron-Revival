@@ -1,0 +1,62 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Tsunomaki Fleet"		
+		naval_base = 12406
+		task_force = {				
+			name = "Watame Force"			
+			location = 12406 
+ship = { name = "Bolivian 1 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 2 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 3 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 4 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 5 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 6 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 7 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } }
+ 
+ship = { name = "Bolivian 8 "
+definition = submarine
+equipment = { submarine_1 = { amount = 1 owner = WAT } } } 
+
+ship = { name = "Atlantic"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = WAT } } }
+        
+ship = { name = "Bolivia"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = WAT } } }
+			
+		}						
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

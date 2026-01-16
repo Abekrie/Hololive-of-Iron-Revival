@@ -1,0 +1,2595 @@
+focus_tree = {
+	id = FAU_fauna_generic_hololive
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = FAU
+			} 
+		}
+	}
+
+	continuous_focus_position = { x = 2800 y = 600 }
+
+	initial_show_position = {
+		x = 6
+		y = 0
+	}
+
+    #Political focus
+    focus = {
+        id = ceres_fauna_fau_focus
+        icon = GFX_focus_fauna_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 8
+        y = 0
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    #Green Republic
+    focus = {
+        id = green_republic_fau_focus
+        icon = GFX_focus_FAU_green_republic
+        prerequisite = { focus = ceres_fauna_fau_focus}
+        mutually_exclusive = { focus = divine_right_of_nature_fau_focus }
+        relative_position_id = ceres_fauna_fau_focus
+        x = 4
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_popularity = { ideology = democratic popularity = 0.6 }
+            set_politics = {
+                ruling_party = democratic
+            }
+            hidden_effect = {
+                retire_ideology_leader = democratic
+            }
+            create_country_leader = {
+                            name = "President Fauna"
+                            picture = "gfx/leaders/FAU/fauna_green_republic.dds"
+                            expire = "1965.1.1"
+                            ideology = liberalism
+                            traits = {
+                                president_of_the_people_trait
+                            }
+                        }
+        }
+    }
+
+    #Royalist
+    focus = {
+        id = divine_right_of_nature_fau_focus
+        icon = GFX_focus_FAU_royalist
+        prerequisite = { focus = ceres_fauna_fau_focus}
+        mutually_exclusive = { focus = green_republic_fau_focus }
+        relative_position_id = ceres_fauna_fau_focus
+        x = -4
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.1
+            hidden_effect = {
+                retire_ideology_leader = neutrality
+            }
+            create_country_leader = {
+                            name = "Princess Fauna"
+                            picture = "gfx/leaders/FAU/fauna_royal.dds"
+                            expire = "1965.1.1"
+                            ideology = centrism
+                            traits = {
+                                elite
+                            }
+                        }
+        }
+    }
+
+    focus = {
+        id = royal_forest_department_fau_focus
+        icon = GFX_focus_FAU_forest_department
+        prerequisite = { focus = divine_right_of_nature_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = divine_right_of_nature_fau_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = FAU
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = SOV
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 121
+                target_province = 9131
+            }
+
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = FAU
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = SOV
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 9131
+                target_province = 3338
+            }
+        }
+    }
+
+    focus = {
+        id = forest_officers_training_fau_focus
+        icon = GFX_focus_secret_rearmament
+        prerequisite = { focus = royal_forest_department_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royal_forest_department_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = encouragement_1
+        }
+    }
+
+    focus = {
+        id = forest_keeper_fau_focus
+        icon = GFX_focus_FAU_forest_keeper
+        prerequisite = { focus = royal_forest_department_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = royal_forest_department_fau_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = forest_keeper_ns
+        }
+    }
+
+    focus = {
+        id = yamalia_national_park_fau_focus
+        icon = GFX_focus_FAU_yamalia
+        prerequisite = { focus = forest_keeper_fau_focus
+        focus = forest_officers_training_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = forest_keeper_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            824 = {
+            add_extra_state_shared_building_slots = 4
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = growing_money_fau_focus
+        icon = GFX_focus_mex_privatisation
+        prerequisite = { focus = divine_right_of_nature_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = divine_right_of_nature_fau_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = call_of_mother_nature_fau_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = divine_right_of_nature_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = divine_right_of_nature_fau_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = hold_cerealia_festival_fau_focus
+        icon = GFX_focus_FAU_goddess_of_rome
+        prerequisite = { focus = call_of_mother_nature_fau_focus}
+        prerequisite = { focus = growing_money_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = call_of_mother_nature_fau_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            country_event = { id = fauna.14 }
+        }
+    }
+
+    focus = {
+        id = deal_with_the_princess_fau_focus
+        icon = GFX_focus_LUN_luna
+        prerequisite = { focus = hold_cerealia_festival_fau_focus}
+        prerequisite = { focus = forest_keeper_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hold_cerealia_festival_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LUN = {country_event = { id = fauna.13 }}
+        }
+    }
+
+    focus = {
+        id = join_bunkeronii_fau_focus
+        icon = GFX_focus_KRO_logo
+        prerequisite = { focus = deal_with_the_princess_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = deal_with_the_princess_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                KRO = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = KRO
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            KRO = { country_event = { id = fauna.15 }}
+        }
+    }
+
+    focus = {
+        id = goddess_of_rome_fau_focus
+        icon = GFX_focus_generic_pope
+        prerequisite = { focus = deal_with_the_princess_fau_focus}
+        prerequisite = { focus = yamalia_national_park_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = deal_with_the_princess_fau_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 2
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = goddess_of_commoner_trait
+        }
+    }
+
+    focus = {
+        id = council_budget_fau_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = green_republic_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = green_republic_fau_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = kirin_national_defence_force_fau_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = council_budget_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = council_budget_fau_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = half_a_billion_years_plan_fau_focus
+        icon = GFX_focus_FAU_symbol
+        prerequisite = { focus = kirin_national_defence_force_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kirin_national_defence_force_fau_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = national_building_1
+                days = 365
+            }
+        }
+    }
+
+    focus = {
+        id = i_am_the_tree_fau_focus
+        icon = GFX_focus_FAU_guns
+        prerequisite = { focus = half_a_billion_years_plan_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = half_a_billion_years_plan_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = buff_geurilla_warfare_ns
+        }
+    }
+
+    focus = {
+        id = golden_apple_fau_focus
+        icon = GFX_focus_FAU_golden_apple
+        prerequisite = { focus = half_a_billion_years_plan_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = half_a_billion_years_plan_fau_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = buff_recovery_ns
+        }
+    }
+
+
+    focus = {
+        id = sustainability_expo_fau_focus
+        icon = GFX_focus_FAU_sxpo
+        prerequisite = { focus = green_republic_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = green_republic_fau_focus
+        x = 2
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            every_country = {
+                limit = { is_in_faction_with = FAU }
+                    country_event = { id = fauna.11 }
+            }
+        }
+    }
+
+    focus = {
+        id = team_trees_fau_focus
+        icon = GFX_focus_FAU_team_trees
+        prerequisite = { focus = sustainability_expo_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sustainability_expo_fau_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            country_event = { id = fauna.1 }
+        }
+    }
+
+    focus = {
+        id = paper_bag_deal_fau_focus
+        icon = GFX_focus_MUM_mumei
+        prerequisite = { focus = team_trees_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = team_trees_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            MUM = {
+                NOT = { has_war_with = ROOT }
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+           MUM = { country_event = { id = fauna.12 }}
+        }
+    }
+
+    focus = {
+        id = collective_farming_fau_focus
+        icon = GFX_focus_generic_industry_3
+        prerequisite = { focus = team_trees_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = team_trees_fau_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_efficiency_idea = yes
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = nuclear_deterrence_fau_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = collective_farming_fau_focus
+        focus = paper_bag_deal_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = collective_farming_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = nuclear
+            }
+        }
+    }
+
+    focus = {
+        id = university_of_yaroslavl_fau_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = divine_right_of_nature_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = divine_right_of_nature_fau_focus
+        x = 3
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = fauna_research_center_fau_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = green_republic_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = green_republic_fau_focus
+        x = -3
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+            add_research_idea = yes
+        }
+    }
+
+    focus = {
+        id = deploy_siberian_ranger_fau_focus
+        icon = GFX_focus_FAU_army
+        prerequisite = { focus = fauna_research_center_fau_focus
+        focus = university_of_yaroslavl_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fauna_research_center_fau_focus
+        x = -1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_technology = {
+                siberian_ranger_infantry = 1  
+            }
+        }
+    }
+
+    focus = {
+        id = fortify_ina_border_fau_focus
+        icon = GFX_focus_FAU_fortify_ina
+        prerequisite = { focus = deploy_siberian_ranger_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = deploy_siberian_ranger_fau_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            351 = {
+                add_building_construction = {
+                            type = bunker
+                            province = 6017
+                            level = 1
+                            instant_build = yes
+                        }
+                add_building_construction = {
+                            type = bunker
+                            province = 166
+                            level = 1
+                            instant_build = yes
+                        }
+            }
+
+            879 = {
+                add_building_construction = {
+                            type = bunker
+                            province = 18
+                            level = 1
+                            instant_build = yes
+                        }
+                add_building_construction = {
+                            type = bunker
+                            province = 6109
+                            level = 1
+                            instant_build = yes
+                        }
+            }
+
+            214 = {
+                add_building_construction = {
+                            type = bunker
+                            province = 11038
+                            level = 1
+                            instant_build = yes
+                        }
+            }
+        }
+    }
+
+    focus = {
+        id = siberia_train_service_fau_focus
+        icon = GFX_focus_generic_railroad
+        prerequisite = { focus = deploy_siberian_ranger_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = deploy_siberian_ranger_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = infrastructure_building_idea
+        }
+    }
+
+    focus = {
+        id = war_on_ina_fau_focus
+        icon = GFX_focus_INA_ina
+        prerequisite = { focus = siberia_train_service_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = siberia_train_service_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+                has_war = no
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = NIN
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                NIN = { exists = no }
+                NIN = { is_subject_of = ROOT }
+                NIN = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = NIN }
+        }
+    }
+
+    focus = {
+        id = war_on_tannu_tuva_fau_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = siberia_train_service_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = siberia_train_service_fau_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+                has_war = no
+            }
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = TAN
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                TAN = { exists = no }
+                TAN = { is_subject_of = ROOT }
+                TAN = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = TAN }
+        }
+    }
+
+    focus = {
+        id = faunatic_ural_empire_fau_focus
+        icon = GFX_focus_FAU_faunatic_empire
+        prerequisite = { focus = war_on_ina_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_ina_fau_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available = {
+            has_full_control_of_state = 111
+            has_full_control_of_state = 216
+            has_full_control_of_state = 146
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_cosmetic_tag = FAU_ural
+            every_state = {
+                limit = { OR = {
+                    is_core_of = NIN
+                } }
+                add_core_of = ROOT
+            }
+
+            hidden_effect = {
+                news_event = { id = holo_news.257 hours = 3}
+            }
+
+            hidden_effect = {retire_ideology_leader = fascism
+                        retire_ideology_leader = communism
+                        retire_ideology_leader = democratic
+                        retire_ideology_leader = neutrality
+                        }
+
+            hidden_effect = {
+                    create_country_leader = {
+                        name = "Goddess Ceres"
+                        picture = "gfx/leaders/FAU/fauna_goddess.dds"
+                        expire = "1965.1.1"
+                        ideology = liberalism
+                        traits = {
+                            goddess_of_commoner_trait
+                            keeper_of_nature_trait
+                        }
+                    }
+            
+                    create_country_leader = {
+                        name = "Goddess Ceres"
+                        picture = "gfx/leaders/FAU/fauna_goddess.dds"
+                        expire = "1965.1.1"
+                        ideology = fascism_ideology
+                        traits = {
+                            goddess_of_commoner_trait
+                            keeper_of_nature_trait 
+                        }
+                    }
+                }
+
+            create_country_leader = {
+                name = "Goddess Ceres"
+                picture = "gfx/leaders/FAU/fauna_goddess.dds"
+                expire = "1965.1.1"
+                ideology = centrism
+                traits = {
+                    goddess_of_commoner_trait
+                    keeper_of_nature_trait
+                }
+            }
+
+            hidden_effect = {create_country_leader = {
+                            name = "Goddess Ceres"
+                            picture = "gfx/leaders/FAU/fauna_goddess.dds"
+                            expire = "1965.1.1"
+                            ideology = marxism
+                            traits = {
+                                goddess_of_commoner_trait
+                                keeper_of_nature_trait
+                            }
+                        }
+                    }
+        }
+    }
+
+	#Zen Garden branch
+    focus = {
+        id = zen_garden_fau_focus
+        icon = GFX_focus_FAU_symbol
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = ceres_fauna_fau_focus
+        x = 14
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.1
+        }
+    }
+
+    focus = {
+        id = crazy_dave_fau_focus
+        icon = GFX_focus_FAU_crazy_dave
+        prerequisite = { focus = zen_garden_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = zen_garden_fau_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            #custom_effect_tooltip = CET_crazy_dave_fau_focus
+
+            custom_effect_tooltip = available_high_command
+            show_ideas_tooltip = FAU_homeland_security
+            set_country_flag = FAU_can_crazy_dave_advisor
+        }
+    }
+
+    focus = {
+        id = magnet_fau_focus
+        icon = GFX_focus_FAU_plant_magnet
+        prerequisite = { focus = crazy_dave_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crazy_dave_fau_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_defender
+            custom_effect_tooltip = "Magnet"
+            set_country_flag = fauna_flag_defender_4
+        }
+    }
+
+    focus = {
+        id = sunflower_fau_focus
+        icon = GFX_focus_FAU_plant_sunflower
+        prerequisite = { focus = crazy_dave_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crazy_dave_fau_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_special
+            custom_effect_tooltip = "Sunflower"
+            set_country_flag = fauna_flag_special_5
+        }
+    }
+
+    focus = {
+        id = potato_mine_fau_focus
+        icon = GFX_focus_FAU_plant_patato_mine
+        prerequisite = { focus = sunflower_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sunflower_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_defender
+            custom_effect_tooltip = "Potato Mine"
+            set_country_flag = fauna_flag_defender_3
+        }
+    }
+
+    focus = {
+        id = cactus_fau_focus
+        icon = GFX_focus_FAU_plant_cactus
+        prerequisite = { focus = magnet_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = magnet_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_shooter
+            custom_effect_tooltip = "Cactus"
+            set_country_flag = fauna_flag_shooter_4
+        }
+    }
+
+    focus = {
+        id = cabbage_pult_fau_focus
+        icon = GFX_focus_FAU_plant_cabbage_pult
+        prerequisite = { focus = cactus_fau_focus
+        focus = potato_mine_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = cactus_fau_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_artillery
+            custom_effect_tooltip = "Cabbage pult"
+            set_country_flag = fauna_flag_artillery_1
+        }
+    }
+
+    focus = {
+        id = kernel_pult_fau_focus
+        icon = GFX_focus_FAU_plant_kernel_pult
+        prerequisite = { focus = cabbage_pult_fau_focus}
+        mutually_exclusive = { focus = melon_pult_fau_focus }
+        relative_position_id = cabbage_pult_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_artillery
+            custom_effect_tooltip = "Kernel pult"
+            set_country_flag = fauna_flag_artillery_2
+        }
+    }
+
+    focus = {
+        id = cob_cannon_fau_focus
+        icon = GFX_focus_FAU_plant_cob_cannon
+        prerequisite = { focus = kernel_pult_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kernel_pult_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_artillery
+            custom_effect_tooltip = "Cob cannon"
+            set_country_flag = fauna_flag_artillery_5
+            clr_country_flag = fauna_flag_artillery_2
+        }
+    }
+
+    focus = {
+        id = melon_pult_fau_focus
+        icon = GFX_focus_FAU_plant_melon_pult
+        prerequisite = { focus = cabbage_pult_fau_focus}
+        mutually_exclusive = { focus = kernel_pult_fau_focus  }
+        relative_position_id = cabbage_pult_fau_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_artillery
+            custom_effect_tooltip = "Melon pult"
+            set_country_flag = fauna_flag_artillery_3
+        }
+    }
+
+    focus = {
+        id = winter_melon_fau_focus
+        icon = GFX_focus_FAU_plant_winter_melon
+        prerequisite = { focus = melon_pult_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = melon_pult_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_artillery
+            custom_effect_tooltip = "Winter Melon"
+            set_country_flag = fauna_flag_artillery_4
+            clr_country_flag = fauna_flag_artillery_3
+        }
+    }
+
+    focus = {
+        id = wallnut_fau_focus
+        icon = GFX_focus_FAU_plant_wallnut
+        prerequisite = { focus = sunflower_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sunflower_fau_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_defender
+            custom_effect_tooltip = "Wallnut"
+            set_country_flag = fauna_flag_defender_1
+        }
+    }
+
+    focus = {
+        id = tallnut_fau_focus
+        icon = GFX_focus_FAU_plant_tallnut
+        prerequisite = { focus = wallnut_fau_focus}
+        prerequisite = { focus = cabbage_pult_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = wallnut_fau_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_defender
+            custom_effect_tooltip = "Tallnut"
+            clr_country_flag = fauna_flag_defender_1
+            set_country_flag = fauna_flag_defender_2
+        }
+    }
+
+    focus = {
+        id = cherry_bomb_fau_focus
+        icon = GFX_focus_FAU_plant_cherry_bomb
+        prerequisite = { focus = crazy_dave_fau_focus}
+        mutually_exclusive = { focus = hypno_shroom_fau_focus }
+        relative_position_id = crazy_dave_fau_focus
+        x = 3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_special
+            custom_effect_tooltip = "Cherry Bomb"
+            set_country_flag = fauna_flag_special_1
+        }
+    }
+
+    focus = {
+        id = jalapeno_fau_focus
+        icon = GFX_focus_FAU_plant_jalapeno
+        prerequisite = { focus = cherry_bomb_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = cherry_bomb_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_special
+            custom_effect_tooltip = "Jalapeno"
+            clr_country_flag = fauna_flag_special_1
+            set_country_flag = fauna_flag_special_2
+        }
+    }
+
+    focus = {
+        id = hypno_shroom_fau_focus
+        icon = GFX_focus_FAU_plant_hypno_shroom
+        prerequisite = { focus = zen_garden_fau_focus}
+        mutually_exclusive = { focus = cherry_bomb_fau_focus }
+        relative_position_id = zen_garden_fau_focus
+        x = 5
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_special
+            custom_effect_tooltip = "Hypno Shroom"
+            set_country_flag = fauna_flag_special_3
+        }
+    }
+
+    focus = {
+        id = doom_shroom_fau_focus
+        icon = GFX_focus_FAU_plant_doom_shroom
+        prerequisite = { focus = hypno_shroom_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hypno_shroom_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_special
+            custom_effect_tooltip = "Doom Shroom"
+            set_country_flag = fauna_flag_special_4
+        }
+    }
+
+    focus = {
+        id = pea_shooter_fau_focus
+        icon = GFX_focus_FAU_plant_pea_shooter
+        prerequisite = { focus = crazy_dave_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crazy_dave_fau_focus
+        x = -5
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_shooter
+            custom_effect_tooltip = "Pea Shooter"
+            set_country_flag = fauna_flag_shooter_1
+        }
+    }
+
+    focus = {
+        id = repeater_fau_focus
+        icon = GFX_focus_FAU_plant_repeater
+        prerequisite = { focus = pea_shooter_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pea_shooter_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_shooter
+            custom_effect_tooltip = "Repeater"
+            set_country_flag = fauna_flag_shooter_2
+            clr_country_flag = fauna_flag_shooter_1
+        }
+    }
+
+    focus = {
+        id = gatling_pea_fau_focus
+        icon = GFX_focus_FAU_plant_gatling_pea_shooter
+        prerequisite = { focus = repeater_fau_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = repeater_fau_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = FAU_CET_unlocked_shooter
+            custom_effect_tooltip = "Gatling Pea"
+            set_country_flag = fauna_flag_shooter_3
+            clr_country_flag = fauna_flag_shooter_2
+        }
+    }
+
+        #Economy and Industry
+    focus = {
+        id = FAU_idol_creator
+        text = idol_creator
+        icon = GFX_focus_engineer_2
+        relative_position_id = faunatic_ural_empire_fau_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+        ai_will_do = {
+            factor = 1
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = steel
+                    amount = 8
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 8
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 8
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_minecraft_server
+        text = minecraft_server
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = FAU_idol_creator }
+        relative_position_id = FAU_idol_creator
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = minecraft_resource
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_wooden_house
+        text = wooden_house
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = FAU_minecraft_server }
+        relative_position_id = FAU_minecraft_server
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+    }
+    }
+
+    focus = {
+        id = FAU_nether_portal
+        text = nether_portal
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = FAU_wooden_house }
+        relative_position_id = FAU_wooden_house
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+        }
+        }
+    }
+
+    focus = {
+        id = FAU_wooden_in_nether
+        text = wooden_in_nether
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = FAU_nether_portal }
+        relative_position_id = FAU_nether_portal
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_oversea_fanbase
+        text = oversea_fanbase
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = FAU_idol_creator }
+        relative_position_id = FAU_idol_creator
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+        available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        navy_experience = 25
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = dockyard
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = FAU_yuri_ship
+        text = yuri_ship
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = FAU_oversea_fanbase }
+        relative_position_id = FAU_oversea_fanbase
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = FAU_beach_eps
+        text = beach_eps
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = FAU_yuri_ship }
+        relative_position_id = FAU_yuri_ship
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = FAU_azur_lane_collab
+        text = azur_lane_collab
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = FAU_beach_eps }
+        relative_position_id = FAU_beach_eps
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+    }
+
+    focus = {
+        id = FAU_offensive_marketing
+        text = offensive_marketing
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = FAU_idol_creator }
+        relative_position_id = FAU_idol_creator
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_body_pillow
+        text = body_pillow
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = FAU_offensive_marketing }
+        relative_position_id = FAU_offensive_marketing
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_bath_water
+        text = bath_water
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = FAU_body_pillow }
+        relative_position_id = FAU_body_pillow
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_t_shirt
+        text = t_shirt
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = FAU_bath_water }
+        relative_position_id = FAU_bath_water
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_idol_research_generic
+        text = idol_research_generic
+        icon = GFX_focus_research
+        prerequisite = { focus = FAU_t_shirt 
+        focus = FAU_azur_lane_collab
+        focus = FAU_wooden_in_nether}
+        relative_position_id = FAU_azur_lane_collab
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_research_slot = 1
+        }
+    }
+#Army Research
+    focus = {
+        id = FAU_gaming
+        text = gaming
+        icon = GFX_goal_generic_axis_build_infantry
+        relative_position_id = FAU_idol_creator
+        x = 7
+        y = 0
+        cost = 8
+
+        available_if_capitulated = yes
+        
+        ai_will_do = {
+            factor = 2
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        army_experience = 15
+        }
+    }
+
+    focus = {
+        id = FAU_animal_crossing
+        text = animal_crossing
+        icon = GFX_goal_generic_army_motorized
+        prerequisite = { focus = FAU_gaming }
+        relative_position_id = FAU_gaming
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_tech_bonus = {
+                name = motorized_bonus
+                bonus = 3.0
+                technology = motorised_infantry
+            }   
+        }
+    }
+
+    focus = {
+        id = FAU_pubg
+        text = pubg
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = FAU_animal_crossing }
+        relative_position_id = FAU_animal_crossing
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_tech_bonus = {
+                name = armor_bonus
+                bonus = 1.0
+                uses = 1
+                category = armor
+            }   
+        }
+    }
+
+    focus = {
+        id = FAU_tetris
+        text = tetris
+        icon = GFX_goal_generic_army_artillery2
+        prerequisite = { focus = FAU_gaming }
+        relative_position_id = FAU_gaming
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_tech_bonus = {
+                name = CZE_inf_and_artillery_advancement_2 #@#
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 2
+                category = artillery
+            }   
+        }
+    }
+
+    focus = {
+        id = FAU_ring_fit
+        text = ring_fit
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = FAU_tetris }
+        relative_position_id = FAU_tetris
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_tech_bonus = {
+                name = armor_bonus
+                bonus = 1.0
+                uses = 1
+                category = armor
+            }   
+        }
+    }
+
+    focus = {
+        id = FAU_dark_soul_resh
+        text = dark_soul_resh
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = FAU_gaming }
+        relative_position_id = FAU_gaming
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_tech_bonus = {
+                name = CZE_inf_and_artillery_advancement
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_apex_legend
+        text = apex_legend
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = FAU_dark_soul_resh }
+        relative_position_id = FAU_dark_soul_resh
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = CZE_support_bonus #@#
+                bonus = 1.0
+                uses = 2
+                category = support_tech 
+            }
+        add_tech_bonus = {
+            name = CZE_support_bonus #@#
+            bonus = 1.0
+            uses = 1
+            technology = support_weapons2
+            technology = support_weapons3
+            }   
+        }
+    }
+
+    focus = {
+        id = FAU_minecraft_resh
+        text = minecraft_resh
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = FAU_apex_legend  focus = FAU_ring_fit }
+        relative_position_id = FAU_apex_legend
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_mario_kart
+        text = mario_kart
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = FAU_pubg  focus = FAU_ring_fit }
+        relative_position_id = FAU_pubg
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_gamer_girl
+        text = gamer_girl
+        icon = GFX_focus_generic_license_production
+        prerequisite = { focus = FAU_minecraft_resh  focus = FAU_mario_kart }
+        relative_position_id = FAU_mario_kart
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = NOE_army_AME
+            set_country_flag = AME_army_advisor_FLAG
+        }
+    }
+#Air Research
+    focus = {
+        id = FAU_hololive_music
+        text = hololive_music
+        icon = GFX_goal_generic_build_airforce
+        relative_position_id = FAU_gaming
+        x = 6
+        y = 0
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        air_experience = 25
+        }
+    }
+
+    focus = {
+        id = FAU_shiny_smily_story
+        text = shiny_smily_story
+        icon = GFX_goal_generic_CAS
+        prerequisite = { focus = FAU_hololive_music }
+        relative_position_id = FAU_hololive_music
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = CAS_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = cas_bomber
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_yumemiru_sora_he
+        text = yumemiru_sora_he
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = FAU_hololive_music }
+        relative_position_id = FAU_hololive_music
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = fighter_bonus
+                bonus = 1.0
+                uses = 2
+                technology = early_fighter
+                technology = fighter1
+                technology = fighter2
+                technology = fighter3
+                technology = heavy_fighter1
+                technology = heavy_fighter2
+                technology = heavy_fighter3
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_kirame_rider
+        text = kirame_rider
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = FAU_hololive_music }
+        relative_position_id = FAU_hololive_music
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = bomber_bonus
+                bonus = 1.0
+                uses = 2
+                technology = strategic_bomber1
+                technology = strategic_bomber2
+                technology = strategic_bomber3
+                category = tactical_bomber
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_fukkireta
+        text = fukkireta
+        icon = GFX_goal_generic_air_naval_bomber
+        prerequisite = { 
+        focus = FAU_yumemiru_sora_he 
+        focus = FAU_shiny_smily_story}
+        relative_position_id = FAU_yumemiru_sora_he
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = naval_bomber
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_azur_lane_boss_music
+        text = azur_lane_boss_music
+        icon = GFX_focus_rocketry
+        prerequisite = { 
+        focus = FAU_yumemiru_sora_he 
+        focus = FAU_kirame_rider}
+        relative_position_id = FAU_yumemiru_sora_he
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = jet_rocket_bonus
+                ahead_reduction = 2
+                uses = 2
+                category = rocketry
+                category = jet_technology
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_idol_agency_like_akb
+        text = idol_agency_like_akb
+        icon = GFX_focus_YUG_rogozarski
+        prerequisite = { focus = FAU_azur_lane_boss_music }
+        prerequisite = { focus = FAU_fukkireta }
+        relative_position_id = FAU_azur_lane_boss_music
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = NOE_air_CLI
+            set_country_flag = CLI_air_advisor_FLAG
+        }
+    }
+
+    focus = {
+        id = FAU_azur_lane_boss_music_2
+        text = azur_lane_boss_music_2
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = FAU_azur_lane_boss_music }
+        relative_position_id = FAU_azur_lane_boss_music
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nuclear_bonus
+                ahead_reduction = 2
+                category = nuclear
+            }
+        }
+    }
+
+
+#Navy Research
+    focus = {
+        id = FAU_live_streaming_gen
+        text = live_streaming_gen
+        icon = GFX_goal_generic_construct_naval_dockyard
+        relative_position_id = FAU_hololive_music
+        x = 6
+        y = 0
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 25
+        }
+    }
+
+    focus = {
+        id = FAU_youtube_gen
+        text = youtube_gen 
+        icon = GFX_goal_generic_build_navy
+        prerequisite = { focus = FAU_live_streaming_gen }
+        mutually_exclusive = { focus = FAU_bilibili }
+        relative_position_id = FAU_live_streaming_gen
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_superchat
+        text = superchat
+        icon = GFX_goal_generic_navy_submarine
+        prerequisite = { focus = FAU_youtube_gen }
+        relative_position_id = FAU_youtube_gen
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ss_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = ss_tech
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_bilibili
+        text = bilibili
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = FAU_live_streaming_gen }
+        mutually_exclusive = { focus = FAU_youtube_gen }
+        relative_position_id = FAU_live_streaming_gen
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_karaoke
+        text = karaoke
+        icon = GFX_goal_generic_wolf_pack
+        prerequisite = { focus = FAU_bilibili 
+        focus = FAU_youtube_gen}
+        relative_position_id = FAU_youtube_gen
+        x = 2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = dd_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = dd_tech
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_3d_studio
+        text = 3d_studio
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = FAU_superchat 
+        focus = FAU_game_casting}
+        prerequisite = { focus = FAU_karaoke }
+        relative_position_id = FAU_karaoke
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            navy_experience = 25
+            add_tech_bonus = {
+                name = capital_ships_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = bc_tech
+                category = bb_tech
+                category = cv_tech
+            }
+        }
+    }
+
+    focus = {
+        id = FAU_vtuber_gang
+        text = vtuber_gang
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = FAU_superchat 
+        focus = FAU_game_casting}
+        prerequisite = { focus = FAU_3d_studio }
+        relative_position_id = FAU_3d_studio
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = NOE_navy_GAW
+            set_country_flag = GAW_navy_advisor_FLAG
+        }
+    }
+
+    focus = {
+        id = FAU_game_casting
+        text = game_casting
+        icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = FAU_bilibili }
+        relative_position_id = FAU_bilibili
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = cr_bonus
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 1
+                category = cl_tech
+                category = ca_tech
+            }
+        }
+    }
+
+}

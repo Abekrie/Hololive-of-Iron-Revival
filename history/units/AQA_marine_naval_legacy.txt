@@ -1,0 +1,62 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+
+	fleet = {
+		name = "India-Pacific Fleet"		
+		naval_base = 9975
+		task_force = {				
+			name = "Marine Force"			
+			location = 9975 
+ship = { name = "ARS Houshou Marine"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = MAR } } }
+
+ship = { name = "ARS Neko"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = MAR } } }
+
+ship = { name = "ARS Quetta"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Peshawar"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Kotli"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Khuzdar"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Guatemala"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS San Salvador"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Tegucigalpa"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+ 
+ship = { name = "ARS Campeche"
+definition = destroyer
+equipment = { destroyer_1 = { amount = 1 owner = MAR } } }
+		}
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

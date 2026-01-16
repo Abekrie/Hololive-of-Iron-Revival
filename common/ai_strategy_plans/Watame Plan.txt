@@ -1,0 +1,108 @@
+Generic_WAT_historical = {
+	name = "WAT historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = WAT
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = WAT
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		tsunomaki_watame_wat_focus
+		rearmament_effort_wat_focus
+		influence_paraguay_wat_focus
+
+		political_reform_wat_focus
+		monarchist_takeover_wat_focus
+
+		sheep_lab_wat_focus
+		integrate_ecuadorian_wat_focus
+		project_isabela_wat_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+Generic_WAT_non_historical = {
+	name = "WAT historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = WAT
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = WAT
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		tsunomaki_watame_wat_focus
+		rearmament_effort_wat_focus
+		influence_paraguay_wat_focus
+
+		political_reform_wat_focus
+
+		sheep_lab_wat_focus
+		integrate_ecuadorian_wat_focus
+		project_isabela_wat_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

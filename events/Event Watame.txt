@@ -1,0 +1,782 @@
+add_namespace = watame
+
+#watame Demand annex MIK
+country_event = {
+	id = watame.1
+	title = watame.1.t
+	desc = watame.1.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.1.a
+		ai_chance = { factor = 25 }
+		WAT = { 
+		annex_country = {
+        target = MIK
+        transfer_troops = no
+            }
+        country_event = { id = watame.2 }       
+        }
+	}
+
+	#No
+	option = {
+		name = watame.1.b
+		ai_chance = { factor = 75 }
+		WAT = {country_event = { id = watame.3 }  }
+	}
+}
+
+#MIK yes annex
+country_event = {
+	id = watame.2
+	title = watame.2.t
+	desc = watame.2.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MIK no annex
+country_event = {
+	id = watame.3
+	title = watame.3.t
+	desc = watame.3.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+####################### Trading #######################
+###########################################
+#Buy Greenland
+country_event = {
+	id = watame.8
+	title = watame.8.t
+	desc = watame.8.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.8.a	#Yes
+		ai_chance = { factor = 80 }
+		WAT = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.8.b	#No 
+		ai_chance = { factor = 20 }
+		WAT = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = watame.9
+	title = watame.9.t
+	desc = watame.9.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.9.a	#Yes
+		ai_chance = { factor = 80 }
+		WAT = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.9.b	#No 
+		ai_chance = { factor = 20 }
+		WAT = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = watame.10
+	title = watame.10.t
+	desc = watame.10.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.10.a	#Yes
+		ai_chance = { factor = 30 }
+		WAT = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = watame.10.b	#No 
+		ai_chance = { factor = 70 }
+		WAT = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = watame.11
+	title = watame.11.t
+	desc = watame.11.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.11.a	#Yes
+		ai_chance = { factor = 50 }
+		WAT = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = watame.11.b	#No 
+		ai_chance = { factor = 50 }
+		WAT = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = watame.12
+	title = watame.12.t
+	desc = watame.12.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.12.a	#Yes
+		ai_chance = { factor = 75 }
+		WAT = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.12.b	#No 
+		ai_chance = { factor = 25 }
+		WAT = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = watame.13
+	title = watame.13.t
+	desc = watame.13.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.13.a	#Yes
+		ai_chance = { factor = 50 }
+		WAT = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = watame.13.b	#No 
+		ai_chance = { factor = 50 }
+		WAT = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = watame.14
+	title = watame.14.t
+	desc = watame.14.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.14.a	#Yes
+		ai_chance = { factor = 50 }
+		WAT = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = watame.14.b	#No 
+		ai_chance = { factor = 50 }
+		WAT = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = watame.15
+	title = watame.15.t
+	desc = watame.15.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.15.a	#Yes
+		ai_chance = { factor = 80 }
+		WAT = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.15.b	#No 
+		ai_chance = { factor = 20 }
+		WAT = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = watame.16
+	title = watame.16.t
+	desc = watame.16.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.16.a	#Yes
+		ai_chance = { factor = 20 }
+		WAT = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = watame.16.b	#No 
+		ai_chance = { factor = 80 }
+		WAT = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = watame.17
+	title = watame.17.t
+	desc = watame.17.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.17.a	#Yes
+		ai_chance = { factor = 50 }
+		WAT = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = watame.17.b	#No 
+		ai_chance = { factor = 50 }
+		WAT = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = watame.19
+	title = watame.19.t
+	desc = watame.19.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.19.a	#Yes
+		ai_chance = { factor = 40 }
+		WAT = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = watame.19.b	#No 
+		ai_chance = { factor = 60 }
+		WAT = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = watame.20
+	title = watame.20.t
+	desc = watame.20.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.20.a	#Yes
+		ai_chance = { factor = 90 }
+		WAT = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.20.b	#No 
+		ai_chance = { factor = 10 }
+		WAT = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = watame.21
+	title = watame.21.t
+	desc = watame.21.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.21.a	#Yes
+		ai_chance = { factor = 80 }
+		WAT = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.21.b	#No 
+		ai_chance = { factor = 20 }
+		WAT = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = watame.22
+	title = watame.22.t
+	desc = watame.22.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.22.a	#Yes
+		ai_chance = { factor = 80 }
+		WAT = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = watame.22.b	#No 
+		ai_chance = { factor = 20 }
+		WAT = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = watame.23
+	title = watame.23.t
+	desc = watame.23.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = watame.23.a	#Yes
+		ai_chance = { factor = 70 }
+		WAT = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = watame.23.b	#No 
+		ai_chance = { factor = 30 }
+		WAT = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Ask to join faction
+country_event = {
+	id = watame.24
+	title = watame.24.t
+	desc = watame.24.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.24.a
+		ai_chance = { factor = 100 }
+		add_to_faction = WAT
+		if = {
+			limit = { tag = COC }
+			WAT = { country_event = proposed.15 }
+		}
+		if = {
+			limit = { tag = HTO }
+			WAT = { country_event = proposed.33 }
+		}
+	}
+
+	#No
+	option = {
+		name = watame.24.b
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = COC }
+			WAT = { country_event = proposed.16 }
+		}
+		if = {
+			limit = { tag = HTO }
+			WAT = { country_event = proposed.34 }
+		}
+	}
+}
+
+#Paraguay Incident
+country_event = {
+	id = watame.25
+	title = watame.25.t
+	desc = watame.25.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.25.a
+		ai_chance = { factor = 100 }
+		WAT = { country_event = { id = watame.26 }}
+		
+	}
+
+	#No
+	option = {
+		name = watame.25.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#Paraguay Incident - YES
+country_event = {
+	id = watame.26
+	title = watame.26.t
+	desc = watame.26.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.26.a
+		ai_chance = { factor = 100 }
+		WAT = {annex_country = {
+		    		target = PAR
+		    		transfer_troops = yes
+				}}
+	}
+}
+
+#WAT - Demand Luna out of Paraguay
+country_event = {
+	id = watame.27
+	title = watame.27.t
+	desc = watame.27.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.27.a
+		ai_chance = { factor = 20 }
+		set_global_flag = FLAG_Future_of_Paraguay_end
+		set_country_flag = can_no_longer_influence_paraguay
+		custom_effect_tooltip = CET_can_no_longer_influence_paraguay
+		WAT = {country_event = { id = proposed.45 }}
+	}
+
+	option = {
+		name = watame.27.b
+		ai_chance = { factor = 80 }
+		custom_effect_tooltip = CET_start_kaiju_war
+		hidden_effect = {WAT = {country_event = { id = watame.28 days = 2}}}
+		hidden_effect = {LUN = {country_event = { id = watame.30 days = 3}}}
+		hidden_effect = {
+			news_event = { id = holo_news.230 days = 4 }
+		}
+		WAT = {country_event = { id = proposed.46 }}
+		set_global_flag = FLAG_kaiju_war_start
+		hidden_effect = {if = {
+					limit = { NOT = {has_war_with = WAT}}
+					declare_war_on = {
+						target = WAT
+						type = annex_everything
+					}
+				}}
+	}
+}
+
+#WAT - Kaiju War!
+country_event = {
+	id = watame.28
+	title = watame.28.t
+	desc = watame.28.d
+	picture = GFX_report_event_kaiju_war1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.28.a
+		ai_chance = { factor = 100 }
+		set_global_flag = FLAG_kaiju_war_start
+	}
+}
+
+#LUN - Demand Watame out of Paraguay
+country_event = {
+	id = watame.29
+	title = watame.29.t
+	desc = watame.29.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.29.a
+		ai_chance = { factor = 20 }
+
+		set_global_flag = FLAG_Future_of_Paraguay_end
+		set_country_flag = can_no_longer_influence_paraguay
+		custom_effect_tooltip = CET_can_no_longer_influence_paraguay
+		LUN = {country_event = { id = proposed.89 }}
+	}
+
+	option = {
+		name = watame.29.b
+		ai_chance = { factor = 80 }
+		custom_effect_tooltip = CET_start_kaiju_war
+		hidden_effect = {WAT = {country_event = { id = watame.28 days = 2}}}
+		hidden_effect = {LUN = {country_event = { id = watame.30 days = 3}}}
+		hidden_effect = {
+			news_event = { id = holo_news.230 days = 4 }
+		}
+		LUN = {country_event = { id = proposed.90 }}
+		set_global_flag = FLAG_kaiju_war_start
+		hidden_effect = {if = {
+					limit = { NOT = {has_war_with = LUN}}
+					declare_war_on = {
+						target = LUN
+						type = annex_everything
+					}
+				}}
+	}
+}
+
+#LUN - Kaiju War!
+country_event = {
+	id = watame.30
+	title = watame.30.t
+	desc = watame.30.d
+	picture = GFX_report_event_kaiju_war1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.30.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#WAT - Watame Victory at Kaiju War!
+country_event = {
+	id = watame.31
+	title = watame.31.t
+	desc = watame.31.d
+	picture = GFX_report_event_kaiju_war1
+
+	trigger = {
+		tag = WAT
+    	OR = {
+    		AND = {
+    			WAT = {
+    				OR = {
+    					has_full_control_of_state = 495
+    				    has_full_control_of_state = 280
+    				    }
+    			}
+    		}
+    		AND = {
+    			LUN = {
+    				surrender_progress > 0.50
+    			}
+    		}
+    	}
+    	has_global_flag = FLAG_kaiju_war_start
+    }
+
+    #mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	#is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.31.a
+		ai_chance = { factor = 100 }
+		clr_global_flag = FLAG_kaiju_war_start
+		transfer_state = 495
+		transfer_state = 280
+		white_peace = LUN
+		set_global_flag = FLAG_Future_of_Paraguay_end
+		LUN = {
+			set_country_flag = can_no_longer_influence_paraguay
+		}
+	}
+}
+
+#WAT - Luna Victory at Kaiju War!
+country_event = {
+	id = watame.32
+	title = watame.32.t
+	desc = watame.32.d
+	picture = GFX_report_event_kaiju_war1
+
+	trigger = {
+		tag = LUN
+    	OR = {
+    		AND = {
+    			LUN = {
+    				has_full_control_of_state = 302
+    				has_full_control_of_state = 487
+    			}
+    		}
+    		AND = {
+    			WAT = {
+    				surrender_progress > 0.50
+    			}
+    		}
+    	}
+    	has_global_flag = FLAG_kaiju_war_start
+    }
+
+    #mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+	
+	#is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.32.a
+		ai_chance = { factor = 100 }
+		clr_global_flag = FLAG_kaiju_war_start
+		transfer_state = 302
+		transfer_state = 487
+		white_peace = WAT
+		set_global_flag = FLAG_Future_of_Paraguay_end
+		WAT = {
+			set_country_flag = can_no_longer_influence_paraguay
+		}
+	}
+}
+
+#WAT - Demand puppet
+country_event = {
+	id = watame.33
+	title = watame.33.t
+	desc = watame.33.d
+	picture = GFX_report_event_watame_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.33.a
+		ai_chance = { factor = 100 }
+		WAT = {
+			puppet = ROOT
+		}
+		if = {
+			limit = { tag = PAR }
+			WAT = {country_event = {id = watame.34}}
+		}
+	}
+
+	#No
+	option = {
+		name = watame.33.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#PAR - Accept our demand//Future of Paraguay
+country_event = {
+	id = watame.34
+	title = watame.34.t
+	desc = watame.34.d
+	picture = GFX_report_event_kaiju_war1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = watame.34.a
+		ai_chance = { factor = 100 }
+		
+	}
+}

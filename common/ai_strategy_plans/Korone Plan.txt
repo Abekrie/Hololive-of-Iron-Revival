@@ -1,0 +1,52 @@
+Generic_KRN_historical = {
+	name = "KRN historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = KRN
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = KRN
+			}
+			is_historical_focus_on = yes
+			is_subject = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		inugami_korone_krn_focus
+		baghdad_university_krn_focus
+		international_stage_krn_focus
+		pet_care_program_krn_focus
+
+		korone_baker_krn_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

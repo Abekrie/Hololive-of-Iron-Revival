@@ -1,0 +1,913 @@
+spriteTypes = {	
+
+
+
+	spriteType = {
+	name = "GFX_report_event_noel_generic1"
+	texturefile = "gfx/event_pictures/report_event_noel_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_sana_generic1"
+	texturefile = "gfx/event_pictures/report_event_sana_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kronii_generic1"
+	texturefile = "gfx/event_pictures/report_event_kronii_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_sana_rumbling1"
+	texturefile = "gfx/event_pictures/report_event_sana_rumbling1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_trash_taste_generic1"
+	texturefile = "gfx/event_pictures/report_event_trash_taste_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kaiju_war1"
+	texturefile = "gfx/event_pictures/report_event_kaiju_war1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kaiju_war1"
+	texturefile = "gfx/event_pictures/news_event_kaiju_war1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kronii1"
+	texturefile = "gfx/event_pictures/news_event_kronii1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_news_event_sana_rumbling1"
+	texturefile = "gfx/event_pictures/news_event_sana_rumbling1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_news_event_trash_taste1"
+	texturefile = "gfx/event_pictures/news_event_trash_taste1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_noel_generic2"
+	texturefile = "gfx/event_pictures/report_event_noel_generic2.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_rushia_generic1"
+	texturefile = "gfx/event_pictures/report_event_rushia_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_aqua_generic1"
+	texturefile = "gfx/event_pictures/report_event_aqua_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_flare_generic1"
+	texturefile = "gfx/event_pictures/report_event_flare_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_fubuki_generic1"
+	texturefile = "gfx/event_pictures/report_event_fubuki_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_noel_support_flare"
+	texturefile = "gfx/event_pictures/report_event_noel_support_flare.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_suisei_generic1"
+	texturefile = "gfx/event_pictures/report_event_suisei_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_moona_generic1"
+	texturefile = "gfx/event_pictures/report_event_moona_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_aqua_generic2"
+	texturefile = "gfx/event_pictures/report_event_aqua_generic2.dds"	
+	}	
+
+	spriteType = {
+	name = "GFX_report_event_mio_generic1"
+	texturefile = "gfx/event_pictures/report_event_mio_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_shion_generic1"
+	texturefile = "gfx/event_pictures/report_event_shion_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_pekora_generic1"
+	texturefile = "gfx/event_pictures/report_event_pekora_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_towa_generic1"
+	texturefile = "gfx/event_pictures/report_event_towa_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_korone_generic1"
+	texturefile = "gfx/event_pictures/report_event_korone_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_subaru_generic1"
+	texturefile = "gfx/event_pictures/report_event_subaru_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ayame_generic1"
+	texturefile = "gfx/event_pictures/report_event_ayame_generic1.dds"	
+	}
+
+	spriteType = {
+	name = "GFX_report_event_matsuri_generic1"
+	texturefile = "gfx/event_pictures/report_event_matsuri_generic1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_flare_noel"
+		texturefile = "gfx/event_pictures/news_event_flare_noel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_hololive1"
+		texturefile = "gfx/event_pictures/news_event_hololive1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_noel_flare"
+	texturefile = "gfx/event_pictures/report_event_noel_flare.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_rushia_raj"
+	texturefile = "gfx/event_pictures/report_event_rushia_raj.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_raj"
+	texturefile = "gfx/event_pictures/report_event_kanata_raj.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_marine_generic1"
+	texturefile = "gfx/event_pictures/report_event_marine_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_choco_generic1"
+	texturefile = "gfx/event_pictures/report_event_choco_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_suisei_generic2"
+	texturefile = "gfx/event_pictures/report_event_suisei_generic2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_haato_generic1"
+	texturefile = "gfx/event_pictures/report_event_haato_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_generic1"
+	texturefile = "gfx/event_pictures/report_event_kanata_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_generic2"
+	texturefile = "gfx/event_pictures/report_event_kanata_generic2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_islam"
+	texturefile = "gfx/event_pictures/report_event_kanata_islam.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_hindu"
+	texturefile = "gfx/event_pictures/report_event_kanata_hindu.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kanata_buddhism"
+	texturefile = "gfx/event_pictures/report_event_kanata_buddhism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_noel1"
+		texturefile = "gfx/event_pictures/news_event_noel1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_france_generic1"
+	texturefile = "gfx/event_pictures/report_event_france_generic1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_suisei1"
+		texturefile = "gfx/event_pictures/news_event_suisei1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_miko_generic1"
+	texturefile = "gfx/event_pictures/report_event_miko_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ast_generic1"
+	texturefile = "gfx/event_pictures/report_event_ast_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_nzl_generic1"
+	texturefile = "gfx/event_pictures/report_event_nzl_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_phi_generic1"
+	texturefile = "gfx/event_pictures/report_event_phi_generic1.dds"
+	}
+
+
+	spriteType = {
+	name = "GFX_report_event_okayu_generic1"
+	texturefile = "gfx/event_pictures/report_event_okayu_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_mat_hsk_civwar"
+	texturefile = "gfx/event_pictures/news_event_mat_hsk_civwar.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_luna_generic1"
+	texturefile = "gfx/event_pictures/report_event_luna_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_hoshikawa_generic1"
+	texturefile = "gfx/event_pictures/report_event_hoshikawa_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_fubuki1"
+	texturefile = "gfx/event_pictures/news_event_fubuki1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_rus_form_raj"
+	texturefile = "gfx/event_pictures/news_event_rus_form_raj.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_matsuri1"
+	texturefile = "gfx/event_pictures/news_event_matsuri1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_risu_generic1"
+	texturefile = "gfx/event_pictures/report_event_risu_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_sora_generic1"
+	texturefile = "gfx/event_pictures/report_event_sora_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_pekora1"
+	texturefile = "gfx/event_pictures/news_event_pekora1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_watame_generic1"
+	texturefile = "gfx/event_pictures/report_event_watame_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_elite_miko"
+	texturefile = "gfx/event_pictures/news_event_elite_miko.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_miko1"
+	texturefile = "gfx/event_pictures/news_event_miko1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_coco_generic1"
+	texturefile = "gfx/event_pictures/report_event_coco_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_coco_walt"
+	texturefile = "gfx/event_pictures/report_event_coco_walt.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kanata1"
+	texturefile = "gfx/event_pictures/news_event_kanata1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_haato1"
+	texturefile = "gfx/event_pictures/news_event_haato1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_haato_black_sunday"
+	texturefile = "gfx/event_pictures/news_event_haato_black_sunday.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_eng_generic1"
+	texturefile = "gfx/event_pictures/report_event_eng_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_achan1"
+	texturefile = "gfx/event_pictures/news_event_achan1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_yagoo_generic1"
+	texturefile = "gfx/event_pictures/report_event_yagoo_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_aqa_shi_war"
+	texturefile = "gfx/event_pictures/news_event_aqa_shi_war.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_shion1"
+	texturefile = "gfx/event_pictures/news_event_shion1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_iofi_generic1"
+	texturefile = "gfx/event_pictures/report_event_iofi_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_risu1"
+	texturefile = "gfx/event_pictures/news_event_risu1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_sana1"
+	texturefile = "gfx/event_pictures/news_event_sana1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_chi_generic1"
+	texturefile = "gfx/event_pictures/report_event_chi_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_sov_generic1"
+	texturefile = "gfx/event_pictures/report_event_sov_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ger_generic1"
+	texturefile = "gfx/event_pictures/report_event_ger_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_yagoo1"
+	texturefile = "gfx/event_pictures/news_event_yagoo1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_aloe1"
+	texturefile = "gfx/event_pictures/news_event_aloe1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_lamy1"
+	texturefile = "gfx/event_pictures/news_event_lamy1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_aqua1"
+	texturefile = "gfx/event_pictures/news_event_aqua1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_achan_generic1"
+	texturefile = "gfx/event_pictures/report_event_achan_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_mel_generic1"
+	texturefile = "gfx/event_pictures/report_event_mel_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_polka_generic1"
+	texturefile = "gfx/event_pictures/report_event_polka_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_botan_generic1"
+	texturefile = "gfx/event_pictures/report_event_botan_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_nene_generic1"
+	texturefile = "gfx/event_pictures/report_event_nene_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_aki_generic1"
+	texturefile = "gfx/event_pictures/report_event_aki_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_budapest_up"
+	texturefile = "gfx/event_pictures/news_event_budapest_up.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_lamy_generic1"
+	texturefile = "gfx/event_pictures/report_event_lamy_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_aloe_generic1"
+	texturefile = "gfx/event_pictures/report_event_aloe_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_alo_back_home"
+	texturefile = "gfx/event_pictures/report_event_alo_back_home.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_aus_generic1"
+	texturefile = "gfx/event_pictures/report_event_aus_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_decision_reinvest"
+	texturefile = "gfx/event_pictures/report_event_decision_reinvest.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_SAM_generic1"
+	texturefile = "gfx/event_pictures/report_event_SAM_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_por_generic1"
+	texturefile = "gfx/event_pictures/report_event_por_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_luna1"
+	texturefile = "gfx/event_pictures/news_event_luna1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_watame1"
+	texturefile = "gfx/event_pictures/news_event_watame1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_coco_ded"
+	texturefile = "gfx/event_pictures/report_event_coco_ded.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_coco_ded"
+	texturefile = "gfx/event_pictures/news_event_coco_ded.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_COC_kazuma"
+	texturefile = "gfx/event_pictures/news_event_COC_kazuma.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_coco1"
+	texturefile = "gfx/event_pictures/news_event_coco1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_botan1"
+	texturefile = "gfx/event_pictures/news_event_botan1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_flare1"
+	texturefile = "gfx/event_pictures/news_event_flare1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_mio1"
+	texturefile = "gfx/event_pictures/news_event_mio1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_usada_cons_1"
+	texturefile = "gfx/event_pictures/report_event_usada_cons_1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_usada_cons_2"
+	texturefile = "gfx/event_pictures/report_event_usada_cons_2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_usada_cons_3"
+	texturefile = "gfx/event_pictures/report_event_usada_cons_3.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_hitomi1"
+	texturefile = "gfx/event_pictures/news_event_hitomi1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_subaru1"
+	texturefile = "gfx/event_pictures/news_event_subaru1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_subaru2"
+	texturefile = "gfx/event_pictures/news_event_subaru2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_hitomi_generic1"
+	texturefile = "gfx/event_pictures/report_event_hitomi_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_amelia1"
+	texturefile = "gfx/event_pictures/news_event_amelia1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_choco1"
+	texturefile = "gfx/event_pictures/news_event_choco1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_hololive_ins1"
+	texturefile = "gfx/event_pictures/news_event_hololive_ins1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_hololive_ins2"
+	texturefile = "gfx/event_pictures/news_event_hololive_ins2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kiara1"
+	texturefile = "gfx/event_pictures/news_event_kiara1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kiara_calli"
+	texturefile = "gfx/event_pictures/news_event_kiara_calli.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kiara_generic1"
+	texturefile = "gfx/event_pictures/report_event_kiara_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_calliope_generic1"
+	texturefile = "gfx/event_pictures/report_event_calliope_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_amelia_generic1"
+	texturefile = "gfx/event_pictures/report_event_amelia_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_ui1"
+	texturefile = "gfx/event_pictures/news_event_ui1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ita_generic1"
+	texturefile = "gfx/event_pictures/report_event_ita_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_sora1"
+	texturefile = "gfx/event_pictures/news_event_sora1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_towa1"
+	texturefile = "gfx/event_pictures/news_event_towa1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_watame_haato"
+	texturefile = "gfx/event_pictures/news_event_watame_haato.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_irys1"
+	texturefile = "gfx/event_pictures/news_event_irys1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_irys_generic1"
+	texturefile = "gfx/event_pictures/report_event_irys_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_gura_generic1"
+	texturefile = "gfx/event_pictures/report_event_gura_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_amesame1"
+	texturefile = "gfx/event_pictures/news_event_amesame1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_gura1"
+	texturefile = "gfx/event_pictures/news_event_gura1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_doris_generic1"
+	texturefile = "gfx/event_pictures/report_event_doris_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_calliope1"
+	texturefile = "gfx/event_pictures/news_event_calliope1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ina_generic1"
+	texturefile = "gfx/event_pictures/report_event_ina_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_ins_generic2"
+	texturefile = "gfx/event_pictures/report_event_ins_generic2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_ina1"
+	texturefile = "gfx/event_pictures/news_event_ina1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_pekomiko"
+	texturefile = "gfx/event_pictures/news_event_pekomiko.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_ayame1"
+	texturefile = "gfx/event_pictures/news_event_ayame1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_nene1"
+	texturefile = "gfx/event_pictures/news_event_nene1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_okakoro"
+	texturefile = "gfx/event_pictures/news_event_okakoro.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_okayu1"
+	texturefile = "gfx/event_pictures/news_event_okayu1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_korone1"
+	texturefile = "gfx/event_pictures/news_event_korone1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_civia_generic1"
+	texturefile = "gfx/event_pictures/report_event_civia_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_mumei_generic1"
+	texturefile = "gfx/event_pictures/report_event_mumei_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_baelz_generic1"
+	texturefile = "gfx/event_pictures/report_event_baelz_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_rosalyn_generic1"
+	texturefile = "gfx/event_pictures/report_event_rosalyn_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_yogiri_generic1"
+	texturefile = "gfx/event_pictures/report_event_yogiri_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_echo_generic1"
+	texturefile = "gfx/event_pictures/report_event_echo_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_artia_generic1"
+	texturefile = "gfx/event_pictures/report_event_artia_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_rushia1"
+	texturefile = "gfx/event_pictures/news_event_rushia1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_moona1"
+	texturefile = "gfx/event_pictures/news_event_moona1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_iofi1"
+	texturefile = "gfx/event_pictures/news_event_iofi1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_matsuri_mamatsuri"
+	texturefile = "gfx/event_pictures/news_event_matsuri_mamatsuri.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_hoshikawa1"
+	texturefile = "gfx/event_pictures/news_event_hoshikawa1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_matsuri_mamatsuri"
+	texturefile = "gfx/event_pictures/report_event_matsuri_mamatsuri.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_anemachi"
+	texturefile = "gfx/event_pictures/news_event_anemachi.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_suisei_anemachi"
+	texturefile = "gfx/event_pictures/report_event_suisei_anemachi.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_kurokami"
+	texturefile = "gfx/event_pictures/news_event_kurokami.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_kurokami_generic1"
+	texturefile = "gfx/event_pictures/report_event_kurokami_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_moona_moon_landing"
+	texturefile = "gfx/event_pictures/news_event_moona_moon_landing.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_iofi_moon_landing"
+	texturefile = "gfx/event_pictures/news_event_iofi_moon_landing.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_marine1"
+	texturefile = "gfx/event_pictures/news_event_marine1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_polka1"
+	texturefile = "gfx/event_pictures/news_event_polka1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_mel1"
+	texturefile = "gfx/event_pictures/news_event_mel1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_roboco1"
+	texturefile = "gfx/event_pictures/news_event_roboco1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_roboco_generic1"
+	texturefile = "gfx/event_pictures/report_event_roboco_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_nodoka_generic1"
+	texturefile = "gfx/event_pictures/report_event_nodoka_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_fauna_generic1"
+	texturefile = "gfx/event_pictures/report_event_fauna_generic1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_fauna_teamtrees1"
+	texturefile = "gfx/event_pictures/report_event_fauna_teamtrees1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_fauna_teamtrees2"
+	texturefile = "gfx/event_pictures/report_event_fauna_teamtrees2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_report_event_fauna_teamtrees3"
+	texturefile = "gfx/event_pictures/report_event_fauna_teamtrees3.dds"
+	}
+
+
+
+	spriteType = {
+	name = "GFX_news_event_aki1"
+	texturefile = "gfx/event_pictures/news_event_aki1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_manager1"
+	texturefile = "gfx/event_pictures/news_event_manager1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_COC_kaine"
+	texturefile = "gfx/event_pictures/news_event_COC_kaine.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_holo_cn1"
+	texturefile = "gfx/event_pictures/news_event_holo_cn1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_holo_cn2"
+	texturefile = "gfx/event_pictures/news_event_holo_cn2.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_nodoka1"
+	texturefile = "gfx/event_pictures/news_event_nodoka1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_baelz1"
+	texturefile = "gfx/event_pictures/news_event_baelz1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_nishizawa1"
+	texturefile = "gfx/event_pictures/news_event_nishizawa1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_mumei1"
+	texturefile = "gfx/event_pictures/news_event_mumei1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_fauna1"
+	texturefile = "gfx/event_pictures/news_event_fauna1.dds"
+	}
+
+	spriteType = {
+	name = "GFX_news_event_okayu_court"
+	texturefile = "gfx/event_pictures/news_event_okayu_court.dds"
+	}
+
+}

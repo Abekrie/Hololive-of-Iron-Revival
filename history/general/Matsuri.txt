@@ -1,0 +1,74 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = MAT
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = MAT_mamatsuri_holo_xgeneral
+    name="Mamatsuri"
+      portraits={
+            army={
+                  large="gfx/leaders/MAT/mamatsuri.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader fortress_buster}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 4
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = MAT_matsuhiko_holo_xgeneral
+    name="Matsuhiko"
+      portraits={
+            army={
+                  large="gfx/leaders/FBK/matsuhiko.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={urban_assault_specialist ambusher commando}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = MAT_ebifrion_holo_xgeneral
+    name="Ebifrion"
+      portraits={
+            army={
+                  large="gfx/leaders/MAT/ebifrion.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={naval_invader bearer_of_artillery}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

@@ -1,0 +1,74 @@
+add_namespace = kmr
+
+#Ask for white peace
+country_event = {
+	id = kmr.1
+	title = kmr.1.t
+	desc = kmr.1.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kmr.1.a
+		ai_chance = { factor = 100 }
+		white_peace = KMR
+		KMR = { country_event = { id = kmr.2 }}
+	}
+
+	option = {
+		name = kmr.1.b
+		ai_chance = { factor = 0 }
+		KMR = { country_event = { id = kmr.3 }}
+	}
+}
+
+#Ger yes white peace
+country_event = {
+	id = kmr.2
+	title = kmr.2.t
+	desc = kmr.2.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kmr.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Ger no white peace
+country_event = {
+	id = kmr.3
+	title = kmr.3.t
+	desc = kmr.3.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kmr.3.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Yaounde uprising
+country_event = {
+	id = kmr.4
+	title = kmr.4.t
+	desc = kmr.4.d
+	picture = GFX_report_event_ger_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = kmr.4.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {target = KMR
+		type = annex_everything}
+		hidden_effect = { load_oob = GER_yaounde_uprising }
+	}
+}
+
+

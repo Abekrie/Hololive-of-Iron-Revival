@@ -1,0 +1,269 @@
+add_namespace = gura
+
+#GAW - Amesame
+country_event = {
+	id = gura.1
+	title = gura.1.t
+	desc = gura.1.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { add_to_faction = GAW }
+		GAW = { country_event = { id = proposed.91 }}
+		hidden_effect = { news_event = { id = holo_news.60  days = 1}}
+	}
+
+	#No
+	option = {
+		name = gura.1.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.92 }}
+	}
+}
+
+#GAW - Demand puppet Amelia
+country_event = {
+	id = gura.2
+	title = gura.2.t
+	desc = gura.2.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.2.a
+		ai_chance = { factor = 100 }
+		GAW = { puppet = ROOT }
+		GAW = { country_event = { id = proposed.91 }}
+	}
+
+	#No
+	option = {
+		name = gura.2.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.92 }}
+	}
+}
+
+#GAW - Sell Macau Doris
+country_event = {
+	id = gura.3
+	title = gura.3.t
+	desc = gura.3.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { transfer_state = 729 }
+		GAW = { add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 20000
+		    	producer = ROOT
+	    	}}
+		GAW = { country_event = { id = proposed.19 }}
+	}
+
+	#No
+	option = {
+		name = gura.3.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.20 }}
+	}
+}
+
+#GAW - Buy Hongkong
+country_event = {
+	id = gura.4
+	title = gura.4.t
+	desc = gura.4.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.4.a
+		ai_chance = { factor = 100 }
+		GAW = { transfer_state = 326 }
+		ROOT = { add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 25000
+		    	producer = ROOT
+	    	}}
+		GAW = { country_event = { id = proposed.19 }}
+	}
+
+	#No
+	option = {
+		name = gura.4.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.20 }}
+	}
+}
+
+#GAW - Pacific Blocs
+country_event = {
+	id = gura.5
+	title = gura.5.t
+	desc = gura.5.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.5.a
+		ai_chance = { factor = 100 }
+		
+		GAW = { add_offsite_building = { type = industrial_complex level = 1 }}
+
+		add_offsite_building = { type = industrial_complex level = 1 }
+
+		if = { limit = { tag = IOF }
+			GAW = { country_event = { id = proposed.35 }}
+		}
+
+		if = { limit = { tag = HTO }
+			GAW = { country_event = { id = proposed.33 }}
+		}
+	}
+
+	#No
+	option = {
+		name = gura.5.b
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = IOF }
+			GAW = { country_event = { id = proposed.36 }}
+		}
+
+		if = { limit = { tag = HTO }
+			GAW = { country_event = { id = proposed.34 }}
+		}
+	}
+}
+
+#GAW - West Papua for Peace
+country_event = {
+	id = gura.6
+	title = gura.6.t
+	desc = gura.6.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.6.a
+		ai_chance = { factor = 100 }
+		diplomatic_relation = {
+    		country = GAW
+    		relation = non_aggression_pact
+    		active = yes
+		}
+		GAW = { transfer_state = 523 }
+		GAW = { country_event = { id = proposed.35 }}
+	}
+
+	#No
+	option = {
+		name = gura.6.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.36 }}
+	}
+}
+
+#GAW - New Zealand for Peace
+country_event = {
+	id = gura.7
+	title = gura.7.t
+	desc = gura.7.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.7.a
+		ai_chance = { factor = 100 }
+		diplomatic_relation = {
+    		country = GAW
+    		relation = non_aggression_pact
+    		active = yes
+		}
+		GAW = { transfer_state = 284
+		transfer_state = 723 }
+		GAW = { country_event = { id = proposed.33 }}
+	}
+
+	#No
+	option = {
+		name = gura.7.b
+		ai_chance = { factor = 0 }
+		GAW = { country_event = { id = proposed.34 }}
+	}
+}
+
+#GAW - Shark infested area!
+country_event = {
+	id = gura.8
+	title = gura.8.t
+	desc = gura.8.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.8.a
+		ai_chance = { factor = 100 }
+		every_state = {
+			limit = { has_state_flag = shark_infested_state_flag }
+			transfer_state_to = GAW
+			clr_state_flag = shark_infested_state_flag
+		}
+		add_war_support = 0.1
+	}
+
+	#No
+	option = {
+		name = gura.8.b
+		ai_chance = { factor = 0 }
+		add_political_power = -150
+		add_war_support = -0.1
+		every_state = {
+			limit = { has_state_flag = shark_infested_state_flag }
+			clr_state_flag = shark_infested_state_flag
+		}
+	}
+}
+
+#GAW - Vietcong Uprising!
+country_event = {
+	id = gura.9
+	title = gura.9.t
+	desc = gura.9.d
+	picture = GFX_report_event_gura_generic1
+	
+	is_triggered_only = yes
+	
+	#Yes
+	option = {
+		name = gura.9.a
+		ai_chance = { factor = 100 }
+		
+		declare_war_on = {
+    		target = VIN
+    		type = annex_everything
+		}
+	}
+}

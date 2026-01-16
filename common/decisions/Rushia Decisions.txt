@@ -1,0 +1,136 @@
+rushia_necromancer_power_category = {
+
+	rushia_death_stare_dec = {
+
+		icon = generic_army_support
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = RUS
+			has_country_flag = Rushia_can_use_death_stare
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = death_stare_idea
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	rushia_cursed_of_the_undead_dec = {
+
+		icon = generic_army_support
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = RUS
+			has_country_flag = Rushia_can_use_cursed_of_the_undead
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = cursed_of_the_undead_idea
+                days = 30
+            }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	rushia_soviet_rushia_dec = {
+
+		icon = generic_form_nation
+
+		days_re_enable = 15
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+					CONTROLLER = {
+						tag = RUS
+					}
+					is_core_of = SOV
+					NOT = {
+						is_core_of = RUS
+					}
+				}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 100
+
+		visible = {
+			tag = RUS
+			has_country_flag = Rushia_can_soviet_rushia
+		}
+
+		available = {
+			has_full_control_of_state = FROM
+		}
+
+		days_remove = 60
+
+		#complete_effect = {}
+
+		remove_effect = {
+			ROOT = { add_state_core = FROM }
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 20
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

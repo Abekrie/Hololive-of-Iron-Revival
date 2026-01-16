@@ -1,0 +1,430 @@
+ideas = {
+	naval_manufacturer = { 
+		
+		naval_company_aquatic_dockyard = {
+			
+			picture = aqua_shield_small
+			
+			allowed = {
+				OR =
+				{
+				original_tag = NOE
+				original_tag = FLA
+				#idkmate
+				original_tag = BAL
+				original_tag = MUM
+				original_tag = SAN
+				original_tag = FAU
+				original_tag = KRO
+				original_tag = ACH
+				original_tag = ART
+				original_tag = RSA
+				original_tag = YOG
+				original_tag = ECH
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = KMR
+				original_tag = HIT
+				original_tag = NIN
+				original_tag = MRI
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = PLK
+				original_tag = BTN
+				original_tag = ALO
+				original_tag = LAM
+				original_tag = NEN
+				original_tag = PCF
+				original_tag = IOM
+				original_tag = WAM
+				original_tag = KMR
+				original_tag = EAM
+				original_tag = PSA
+				original_tag = NFS
+				original_tag = HSK
+				original_tag = YAG
+				original_tag = IOF
+				original_tag = ROS
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = RIS
+				original_tag = MAR
+				original_tag = PEK
+				original_tag = ROB
+				original_tag = KRN
+				original_tag = SOR
+				original_tag = MIK
+				original_tag = RUS
+				original_tag = MOO
+				original_tag = MEL
+				original_tag = AYA
+				original_tag = KAN
+				original_tag = SHI
+				original_tag = HTO
+				original_tag = MAT
+				original_tag = CHC
+				original_tag = MIO
+				original_tag = TOW
+				original_tag = SUB
+				original_tag = OKA
+				original_tag = COC
+				original_tag = FBK
+				original_tag = AQA
+				original_tag = SUI
+				}
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		naval_company_pirate_dockyard = {
+			
+			picture = marine_shield_small
+			
+			allowed = {
+				OR =
+				{
+				original_tag = NOE
+				original_tag = FLA
+				#idkmate
+				original_tag = BAL
+				original_tag = MUM
+				original_tag = SAN
+				original_tag = FAU
+				original_tag = KRO
+				original_tag = ACH
+				original_tag = ART
+				original_tag = RSA
+				original_tag = YOG
+				original_tag = ECH
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = KMR
+				original_tag = HIT
+				original_tag = NIN
+				original_tag = MRI
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = PLK
+				original_tag = BTN
+				original_tag = ALO
+				original_tag = LAM
+				original_tag = NEN
+				original_tag = PCF
+				original_tag = IOM
+				original_tag = WAM
+				original_tag = KMR
+				original_tag = EAM
+				original_tag = PSA
+				original_tag = NFS
+				original_tag = HSK
+				original_tag = YAG
+				original_tag = IOF
+				original_tag = ROS
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = RIS
+				original_tag = MAR
+				original_tag = PEK
+				original_tag = ROB
+				original_tag = KRN
+				original_tag = SOR
+				original_tag = MIK
+				original_tag = RUS
+				original_tag = MOO
+				original_tag = MEL
+				original_tag = AYA
+				original_tag = KAN
+				original_tag = SHI
+				original_tag = HTO
+				original_tag = MAT
+				original_tag = CHC
+				original_tag = MIO
+				original_tag = TOW
+				original_tag = SUB
+				original_tag = OKA
+				original_tag = COC
+				original_tag = FBK
+				original_tag = AQA
+				original_tag = SUI
+				}
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		naval_company_atlantis_dockyard = {
+			
+			picture = gura_shield_small
+			
+			allowed = {
+				OR =
+				{
+				original_tag = NOE
+				original_tag = FLA
+				#idkmate
+				original_tag = BAL
+				original_tag = MUM
+				original_tag = SAN
+				original_tag = FAU
+				original_tag = KRO
+				original_tag = ACH
+				original_tag = ART
+				original_tag = RSA
+				original_tag = YOG
+				original_tag = ECH
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = KMR
+				original_tag = HIT
+				original_tag = NIN
+				original_tag = MRI
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = PLK
+				original_tag = BTN
+				original_tag = ALO
+				original_tag = LAM
+				original_tag = NEN
+				original_tag = PCF
+				original_tag = IOM
+				original_tag = WAM
+				original_tag = KMR
+				original_tag = EAM
+				original_tag = PSA
+				original_tag = NFS
+				original_tag = HSK
+				original_tag = YAG
+				original_tag = IOF
+				original_tag = ROS
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = RIS
+				original_tag = MAR
+				original_tag = PEK
+				original_tag = ROB
+				original_tag = KRN
+				original_tag = SOR
+				original_tag = MIK
+				original_tag = RUS
+				original_tag = MOO
+				original_tag = MEL
+				original_tag = AYA
+				original_tag = KAN
+				original_tag = SHI
+				original_tag = HTO
+				original_tag = MAT
+				original_tag = CHC
+				original_tag = MIO
+				original_tag = TOW
+				original_tag = SUB
+				original_tag = OKA
+				original_tag = COC
+				original_tag = FBK
+				original_tag = AQA
+				original_tag = SUI
+				}
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		naval_company_tako_dockyard = {
+			
+			picture = ina_shield_small
+			
+			allowed = {
+				OR =
+				{
+				original_tag = NOE
+				original_tag = FLA
+				#idkmate
+				original_tag = BAL
+				original_tag = MUM
+				original_tag = SAN
+				original_tag = FAU
+				original_tag = KRO
+				original_tag = ACH
+				original_tag = ART
+				original_tag = RSA
+				original_tag = YOG
+				original_tag = ECH
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = KMR
+				original_tag = HIT
+				original_tag = NIN
+				original_tag = MRI
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = PLK
+				original_tag = BTN
+				original_tag = ALO
+				original_tag = LAM
+				original_tag = NEN
+				original_tag = PCF
+				original_tag = IOM
+				original_tag = WAM
+				original_tag = KMR
+				original_tag = EAM
+				original_tag = PSA
+				original_tag = NFS
+				original_tag = HSK
+				original_tag = YAG
+				original_tag = IOF
+				original_tag = ROS
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = RIS
+				original_tag = MAR
+				original_tag = PEK
+				original_tag = ROB
+				original_tag = KRN
+				original_tag = SOR
+				original_tag = MIK
+				original_tag = RUS
+				original_tag = MOO
+				original_tag = MEL
+				original_tag = AYA
+				original_tag = KAN
+				original_tag = SHI
+				original_tag = HTO
+				original_tag = MAT
+				original_tag = CHC
+				original_tag = MIO
+				original_tag = TOW
+				original_tag = SUB
+				original_tag = OKA
+				original_tag = COC
+				original_tag = FBK
+				original_tag = AQA
+				original_tag = SUI
+				}
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		naval_company_doris_mermaid_dockyard = {
+			
+			picture = doris_shield_small
+			
+			allowed = {
+				OR =
+				{
+				original_tag = NOE
+				original_tag = FLA
+				#idkmate
+				original_tag = BAL
+				original_tag = MUM
+				original_tag = SAN
+				original_tag = FAU
+				original_tag = KRO
+				original_tag = ACH
+				original_tag = ART
+				original_tag = RSA
+				original_tag = YOG
+				original_tag = ECH
+				original_tag = DOR
+				original_tag = CIV
+				original_tag = KMR
+				original_tag = HIT
+				original_tag = NIN
+				original_tag = MRI
+				original_tag = KIA
+				original_tag = GAW
+				original_tag = WTS
+				original_tag = PLK
+				original_tag = BTN
+				original_tag = ALO
+				original_tag = LAM
+				original_tag = NEN
+				original_tag = PCF
+				original_tag = IOM
+				original_tag = WAM
+				original_tag = KMR
+				original_tag = EAM
+				original_tag = PSA
+				original_tag = NFS
+				original_tag = HSK
+				original_tag = YAG
+				original_tag = IOF
+				original_tag = ROS
+				original_tag = LUN
+				original_tag = WAT
+				original_tag = RIS
+				original_tag = MAR
+				original_tag = PEK
+				original_tag = ROB
+				original_tag = KRN
+				original_tag = SOR
+				original_tag = MIK
+				original_tag = RUS
+				original_tag = MOO
+				original_tag = MEL
+				original_tag = AYA
+				original_tag = KAN
+				original_tag = SHI
+				original_tag = HTO
+				original_tag = MAT
+				original_tag = CHC
+				original_tag = MIO
+				original_tag = TOW
+				original_tag = SUB
+				original_tag = OKA
+				original_tag = COC
+				original_tag = FBK
+				original_tag = AQA
+				original_tag = SUI
+				}
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+
+		}
+	}
+}

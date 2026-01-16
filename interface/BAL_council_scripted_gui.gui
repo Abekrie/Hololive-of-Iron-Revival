@@ -1,0 +1,132 @@
+@POSTER_LEFT_X = 10
+@POSTER_CENTER_X = 170
+@POSTER_RIGHT_X = 325
+
+@POSTERS_Y = 0
+@TEXT_LEFT_X = 15
+@TEXT_CENTER_X = 170
+@TEXT_RIGHT_X = 315
+@TEXTS_Y = 215
+
+@BACKGROUND_X = 0 #Should be 0 but the UI moves to the right once after activating GUI or taking a dec
+@BACKGROUND_Y = 0
+
+@TOPIC_Y = 15
+@TOPIC__DETAIL_Y = 125
+@TOPIC_TEXT_DETAIL_Y = 160
+@PROPOSER_Y = 50
+@PROPOSER_NAME_Y = 75
+@RIGHT_SIDE = 20
+@VOTE_SIDE_X = 275
+@VOTE_TAG_Y = 175
+@FINAL_RESULT_X = 250
+@FINAL_RESULT_Y = 350
+@REQUIREMENT_X = 15
+@REQUIREMENT_Y = 270
+
+guiTypes = {
+	containerWindowType = {
+		name = "bal_council_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 400 }
+
+		#BACKGROUND
+		iconType = {
+			name ="BAL_council_bg"
+			spriteType = "GFX_holo_council_bg"
+			position = { x=@BACKGROUND_X y=@BACKGROUND_Y }
+		}
+
+		#Topic
+		instantTextBoxType = {
+			name ="bal_council_current_topic"
+			position = { x = @RIGHT_SIDE y = @TOPIC_Y }
+			font = "hoi_30header"
+			text = "bal_council_current_topic_text"
+			format = left
+			maxHeight = 500
+			maxWidth = 500
+		}
+
+		#Host
+		instantTextBoxType = {
+			name ="bal_council_proposer"
+			position = { x = @RIGHT_SIDE y = @PROPOSER_Y }
+			font = "hoi_24header"
+			text = "bal_council_proposer_text"
+			format = left
+			
+		}
+
+		#Topic Detail
+		instantTextBoxType = {
+			name ="bal_council_current_topic_detail"
+			position = { x = @RIGHT_SIDE y = @TOPIC__DETAIL_Y }
+			font = "hoi_30header"
+			text = "bal_council_current_topic_detail_text"
+			format = center
+			maxHeight = 24
+		}
+
+		#Topic Detail Text
+		instantTextBoxType = {
+			name ="bal_council_detail_text"
+			position = { x = @RIGHT_SIDE y = @TOPIC_TEXT_DETAIL_Y }
+			font = "hoi_18mbs"
+			text = "bal_council_detail_text"
+			format = left
+			maxWidth = 200
+		}
+
+		#Vote Result
+		instantTextBoxType = {
+			name ="bal_council_vote_result_header"
+			position = { x = @VOTE_SIDE_X y = @TOPIC__DETAIL_Y }
+			font = "hoi_30header"
+			text = "bal_council_vote_result_header"
+			format = center
+			maxHeight = 24
+		}
+
+		#Vote Result Country Tag
+		instantTextBoxType = {
+			name ="bal_council_vote_result_tag"
+			position = { x = @VOTE_SIDE_X y = @VOTE_TAG_Y }
+			font = "hoi_30mbs"
+			text = "bal_council_vote_result_tag"
+			format = left
+			maxHeight = 24
+		}
+
+		#Vote Result Country Real
+		instantTextBoxType = {
+			name ="bal_council_vote_result_real"
+			position = { x = @VOTE_SIDE_X y = @VOTE_TAG_Y }
+			font = "hoi_30mbs"
+			text = "bal_council_vote_result_real"
+			format = center
+			maxHeight = 24
+		}
+
+		#Final Result
+		instantTextBoxType = {
+			name ="bal_council_final_result_header"
+			position = { x = @FINAL_RESULT_X y = @FINAL_RESULT_Y }
+			font = "hoi_24header"
+			text = "bal_council_final_result_header"
+			format = left
+			maxHeight = 24
+		}
+
+		#Detail Requirement
+		instantTextBoxType = {
+			name ="bal_council_topic_requirement"
+			position = { x = @REQUIREMENT_X y = @REQUIREMENT_Y }
+			font = "hoi_24header"
+			text = "bal_council_topic_requirement"
+			format = left
+			maxHeight = 24
+		}
+	}
+
+}

@@ -1,0 +1,29 @@
+add_namespace = aki
+
+#ROS - Ask to join faction
+country_event = {
+	id = aki.1
+	title = aki.1.t
+	desc = aki.1.d
+	picture = GFX_report_event_aki_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aki.1.a
+		ai_chance = { factor = 100 }
+		add_to_faction = ROS
+
+		ROS = {
+			country_event = { id = proposed.11 }
+		}
+	}
+
+	option = {
+		name = aki.1.b
+		ai_chance = { factor = 0 }
+		ROS = {
+			country_event = { id = proposed.12 }
+		}
+	}
+}

@@ -1,0 +1,1014 @@
+add_namespace = luna
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = luna.8
+	title = luna.8.t
+	desc = luna.8.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.8.a	#Yes
+		ai_chance = { factor = 80 }
+		LUN = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.8.b	#No 
+		ai_chance = { factor = 20 }
+		LUN = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = luna.9
+	title = luna.9.t
+	desc = luna.9.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.9.a	#Yes
+		ai_chance = { factor = 80 }
+		LUN = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.9.b	#No 
+		ai_chance = { factor = 20 }
+		LUN = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = luna.10
+	title = luna.10.t
+	desc = luna.10.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.10.a	#Yes
+		ai_chance = { factor = 30 }
+		LUN = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = luna.10.b	#No 
+		ai_chance = { factor = 70 }
+		LUN = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = luna.11
+	title = luna.11.t
+	desc = luna.11.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.11.a	#Yes
+		ai_chance = { factor = 50 }
+		LUN = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = luna.11.b	#No 
+		ai_chance = { factor = 50 }
+		LUN = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = luna.12
+	title = luna.12.t
+	desc = luna.12.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.12.a	#Yes
+		ai_chance = { factor = 75 }
+		LUN = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.12.b	#No 
+		ai_chance = { factor = 25 }
+		LUN = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = luna.13
+	title = luna.13.t
+	desc = luna.13.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.13.a	#Yes
+		ai_chance = { factor = 50 }
+		LUN = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = luna.13.b	#No 
+		ai_chance = { factor = 50 }
+		LUN = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = luna.14
+	title = luna.14.t
+	desc = luna.14.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.14.a	#Yes
+		ai_chance = { factor = 50 }
+		LUN = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = luna.14.b	#No 
+		ai_chance = { factor = 50 }
+		LUN = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = luna.15
+	title = luna.15.t
+	desc = luna.15.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.15.a	#Yes
+		ai_chance = { factor = 80 }
+		LUN = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.15.b	#No 
+		ai_chance = { factor = 20 }
+		LUN = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = luna.16
+	title = luna.16.t
+	desc = luna.16.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.16.a	#Yes
+		ai_chance = { factor = 20 }
+		LUN = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = luna.16.b	#No 
+		ai_chance = { factor = 80 }
+		LUN = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = luna.17
+	title = luna.17.t
+	desc = luna.17.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.17.a	#Yes
+		ai_chance = { factor = 50 }
+		LUN = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = luna.17.b	#No 
+		ai_chance = { factor = 50 }
+		LUN = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = luna.19
+	title = luna.19.t
+	desc = luna.19.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.19.a	#Yes
+		ai_chance = { factor = 40 }
+		LUN = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = luna.19.b	#No 
+		ai_chance = { factor = 60 }
+		LUN = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = luna.20
+	title = luna.20.t
+	desc = luna.20.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.20.a	#Yes
+		ai_chance = { factor = 90 }
+		LUN = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.20.b	#No 
+		ai_chance = { factor = 10 }
+		LUN = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = luna.21
+	title = luna.21.t
+	desc = luna.21.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.21.a	#Yes
+		ai_chance = { factor = 80 }
+		LUN = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.21.b	#No 
+		ai_chance = { factor = 20 }
+		LUN = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = luna.22
+	title = luna.22.t
+	desc = luna.22.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.22.a	#Yes
+		ai_chance = { factor = 80 }
+		LUN = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = luna.22.b	#No 
+		ai_chance = { factor = 20 }
+		LUN = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = luna.23
+	title = luna.23.t
+	desc = luna.23.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.23.a	#Yes
+		ai_chance = { factor = 70 }
+		LUN = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = luna.23.b	#No 
+		ai_chance = { factor = 30 }
+		LUN = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+#Puppet South Congo
+country_event = {
+	id = luna.24
+	title = luna.24.t
+	desc = luna.24.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.24.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+		puppet = PSA
+		}
+		LUN = { country_event = { id = luna.37 }}
+	}
+	option = {
+		name = luna.24.b	#No 
+		ai_chance = { factor = 0 }
+		LUN = { country_event = { id = luna.36 }}
+
+	}
+}
+
+#South Congo accepted
+country_event = {
+	id = luna.25
+	title = luna.25.t
+	desc = luna.25.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.25.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#South Congo refused
+country_event = {
+	id = luna.26
+	title = luna.26.t
+	desc = luna.26.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.26.a	#Yes
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#Annex Matsuri
+country_event = {
+	id = luna.27
+	title = luna.27.t
+	desc = luna.27.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.27.a	#Yes
+		ai_chance = { factor = 30 }
+		LUN = {
+		annex_country = {
+		target = ROOT
+		transfer_troops = yes }
+
+		country_event = { id = luna.28 }
+		}
+	}
+	option = {
+		name = luna.27.b	#No 
+		ai_chance = { factor = 70 }
+		LUN = { country_event = { id = luna.29 } }
+	}
+}
+
+#Matsuri yes annex
+country_event = {
+	id = luna.28
+	title = luna.28.t
+	desc = luna.28.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.28.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#Matsuri no annex
+country_event = {
+	id = luna.29
+	title = luna.29.t
+	desc = luna.29.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.29.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+
+#Annex ECU/PAR
+country_event = {
+	id = luna.30
+	title = luna.30.t
+	desc = luna.30.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.30.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+		annex_country = {
+		target = ROOT
+		transfer_troops = yes }
+
+		}
+		if = {
+		limit = { tag = ECU }
+		LUN = { country_event = { id = luna.31 } }
+		}
+
+		if = {
+		limit = { tag = PAR }
+		LUN = { country_event = { id = luna.33 } }
+		}
+
+	}
+
+	option = {
+		name = luna.30.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { tag = ECU }
+		LUN = { country_event = { id = luna.32 } }
+		}
+
+		if = {
+		limit = { tag = ECU }
+		LUN = { country_event = { id = luna.34 } }
+		}
+	}
+}
+
+#ECU yes annex
+country_event = {
+	id = luna.31
+	title = luna.31.t
+	desc = luna.31.d
+	picture = GFX_report_event_SAM_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.31.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#ECU no annex
+country_event = {
+	id = luna.32
+	title = luna.32.t
+	desc = luna.32.d
+	picture = GFX_report_event_SAM_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.32.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#PAR yes annex
+country_event = {
+	id = luna.33
+	title = luna.33.t
+	desc = luna.33.d
+	picture = GFX_report_event_SAM_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.33.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#PAR no annex
+country_event = {
+	id = luna.34
+	title = luna.34.t
+	desc = luna.34.d
+	picture = GFX_report_event_SAM_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.34.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#Annex PSA
+country_event = {
+	id = luna.35
+	title = luna.35.t
+	desc = luna.35.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.35.a	#Yes
+		ai_chance = { factor = 100 }
+
+		if = {
+		limit = { tag = POR }
+		PSA = { country_event = { id = luna.35 } }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+		limit = { tag = PSA }
+		LUN = {
+		annex_country = {
+			target = ROOT
+			transfer_troops = no 
+			}
+		country_event = { id = luna.37 }
+		}
+		}
+
+	}
+
+	option = {
+		name = luna.35.b	#No 
+		ai_chance = { factor = 0 }
+		LUN = { country_event = { id = luna.36 } }
+	}
+}
+
+#POR no PSA
+country_event = {
+	id = luna.36
+	title = luna.36.t
+	desc = luna.36.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.36.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#POR yes PSA
+country_event = {
+	id = luna.37
+	title = luna.37.t
+	desc = luna.37.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.37.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+
+#Annex POR
+country_event = {
+	id = luna.38
+	title = luna.38.t
+	desc = luna.38.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.38.a	#Yes
+		ai_chance = { factor = 100 }
+
+		LUN = {
+		    annex_country = {
+		        target = ROOT
+		        transfer_troops = yes 
+		        }
+		    country_event = { id = luna.39 }
+		}
+
+	}
+
+	option = {
+		name = luna.38.b	#No 
+		ai_chance = { factor = 0 }
+		LUN = { country_event = { id = luna.40 } }
+	}
+}
+
+#POR yes annex
+country_event = {
+	id = luna.39
+	title = luna.39.t
+	desc = luna.39.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.39.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#POR no annex
+country_event = {
+	id = luna.40
+	title = luna.40.t
+	desc = luna.40.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.40.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#Puppet POR
+country_event = {
+	id = luna.41
+	title = luna.41.t
+	desc = luna.41.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.41.a	#Yes
+		ai_chance = { factor = 100 }
+
+		LUN = {
+		    puppet = POR
+		    country_event = { id = luna.42 }
+		}
+
+	}
+
+	option = {
+		name = luna.41.b	#No 
+		ai_chance = { factor = 0 }
+		LUN = { country_event = { id = luna.43 } }
+	}
+}
+
+#POR yes puppet
+country_event = {
+	id = luna.42
+	title = luna.42.t
+	desc = luna.42.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.42.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#POR no puppet
+country_event = {
+	id = luna.43
+	title = luna.43.t
+	desc = luna.43.d
+	picture = GFX_report_event_por_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.43.a	#Yes
+		ai_chance = { factor = 70 }
+		
+	}
+}
+
+#LUN - Demand puppet
+country_event = {
+	id = luna.44
+	title = luna.44.t
+	desc = luna.44.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.44.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+		    puppet = ROOT
+		}
+		if = {
+			limit = { tag = PAR }
+			LUN = {country_event = {id = watame.34}}
+		}
+
+	}
+
+	option = {
+		name = luna.44.b	#No 
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#LUN - Liberia purchase
+country_event = {
+	id = luna.45
+	title = luna.45.t
+	desc = luna.45.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.45.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+		    transfer_state = 298
+		    country_event = { id = luna.46 }
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+		}
+
+	}
+
+	option = {
+		name = luna.45.b	#No 
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+#LUN - Liberia purchase - Complete
+country_event = {
+	id = luna.46
+	title = luna.46.t
+	desc = luna.46.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.46.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#LUN - Colonize Angola
+country_event = {
+	id = luna.47
+	title = luna.47.t
+	desc = luna.47.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.47.a	#Yes
+		ai_chance = { factor = 100 }
+		add_state_claim = 540
+	}
+}
+
+#LUN - Ask to join faction
+country_event = {
+	id = luna.48
+	title = luna.48.t
+	desc = luna.48.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.48.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = LUN
+		if = {
+			limit = { tag = NOE }
+			LUN = { country_event = { id = proposed.63 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			LUN = { country_event = { id = proposed.39 }}
+		}
+
+	}
+
+	option = {
+		name = luna.48.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = NOE }
+			LUN = { country_event = { id = proposed.64 }}
+		}
+
+		if = {
+			limit = { tag = KIA }
+			LUN = { country_event = { id = proposed.40 }}
+		}
+		
+	}
+}
+
+#LUN - Demand Brazillian states
+country_event = {
+	id = luna.49
+	title = luna.49.t
+	desc = luna.49.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.49.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+			transfer_state = 503
+			
+		}
+		if = {
+			limit ={ owns_state = 502}
+			LUN = {transfer_state = 502}
+		}
+		if = {
+			limit = { tag = ROB }
+			LUN = { country_event = { id = proposed.73 }}
+		}
+
+	}
+
+	option = {
+		name = luna.49.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ROB }
+			LUN = { country_event = { id = proposed.74 }}
+		}
+		
+	}
+}
+
+#LUN - Demand Uruguay
+country_event = {
+	id = luna.50
+	title = luna.50.t
+	desc = luna.50.d
+	picture = GFX_report_event_luna_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luna.50.a	#Yes
+		ai_chance = { factor = 100 }
+		LUN = {
+			transfer_state = 300
+			
+		}
+		if = {
+			limit = { tag = ROB }
+			LUN = { country_event = { id = proposed.73 }}
+		}
+
+	}
+
+	option = {
+		name = luna.50.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { tag = ROB }
+			LUN = { country_event = { id = proposed.74 }}
+		}
+		
+	}
+}

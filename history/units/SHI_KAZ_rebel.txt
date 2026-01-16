@@ -1,0 +1,105 @@
+﻿division_template = {
+    name = "Shiokko Volunteer"      
+
+    division_names_group = SHI_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+        infantry = { x = 3 y = 0 }
+        infantry = { x = 3 y = 1 }
+        infantry = { x = 3 y = 2 }
+    }
+}
+
+
+division_template = {
+    name = "Witch Army"      
+
+    division_names_group = SHI_CAV_01
+
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+        cavalry = { x = 2 y = 0 }
+        cavalry = { x = 2 y = 1 }
+        cavalry = { x = 2 y = 2 }
+    }
+}
+
+
+units = {
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 10253
+    division_template ="Witch Army"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 10253
+    division_template ="Witch Army"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 10253
+    division_template ="Witch Army"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 1
+    }
+    location = 10253
+    division_template ="Shiokko Volunteer"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 10253
+    division_template ="Shiokko Volunteer"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+division = {
+    division_name = {
+        is_name_ordered = yes
+        name_order = 3
+    }
+    location = 10253
+    division_template ="Shiokko Volunteer"
+    start_experience_factor = 0.1
+    start_equipment_factor = 1
+}
+
+}

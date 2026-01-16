@@ -1,0 +1,21 @@
+﻿l_english:
+ HTO_propaganda_poster_slot_available_tt:0 "Has an empty propaganda poster slot."
+ 
+ HTO_poster_left_text:0 "[HTO_GetDaysRemainingLeft]"
+ HTO_poster_center_text:0 "[HTO_GetDaysRemainingCenter]"
+ HTO_poster_right_text:0 "[HTO_GetDaysRemainingRight]"
+ HTO_poster_no_text:0 ""
+ HTO_poster_left_days_remaining_text:0 "§Y[?HTO_propaganda_left_days_remaining_flag:days_left|Y0]§! days remaining"
+ HTO_poster_center_days_remaining_text:0 "§Y[?HTO_propaganda_center_days_remaining_flag:days_left|Y0]§! days remaining"
+ HTO_poster_right_days_remaining_text:0 "§Y[?HTO_propaganda_right_days_remaining_flag:days_left|Y0]§! days remaining"
+
+ HTO_propaganda_campaigns:0 "Ministry of Truth"
+
+ HTO_propaganda_3:0 "Bob Semple"
+ HTO_propaganda_4:0 "Buy War Bond"
+ HTO_propaganda_5:0 "I'm not E-mused"
+ HTO_propaganda_6:0 "Go with Watame"
+ HTO_propaganda_7:0 "Alien Invasion"
+ HTO_propaganda_8:0 "We Blocked the Sun"
+ HTO_propaganda_9:0 "Noel is going to eat you"
+ HTO_propaganda_10:0 "Haachama is Watching you"

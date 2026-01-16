@@ -1,0 +1,351 @@
+KAN_religion_category = {
+	kanata_increase_check_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 25
+
+		visible = {
+		    tag = KAN
+		    is_debug = yes
+		    is_ai = no
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+			add_to_kanatan = yes
+			add_hindu_ops = yes
+			add_muslim_ops = yes
+			add_buddhist_ops = yes
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_decrease_check_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 25
+
+		visible = {
+		    tag = KAN
+		    is_debug = yes
+		    is_ai = no
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+			remove_from_kanatan = yes
+			remove_hindu_ops = yes
+			remove_muslim_ops = yes
+			remove_buddhist_ops = yes
+		}
+
+		remove_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_gorilla_grip_dec = {
+
+		icon = generic_ignite_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = KAN
+		    has_country_flag = kanata_can_gorilla_grip
+		}
+
+		#fire_only_once = yes
+
+		available = {
+			
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = kanata_gorilla_grip_idea
+                days = 30
+            }
+		}
+
+		remove_effect = {	
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_healing_angel_dec = {
+
+		icon = generic_ignite_civil_war
+
+		days_re_enable = 60
+
+		allowed = {
+			
+		}
+
+		cost = 200
+
+		visible = {
+		    tag = KAN
+		    has_country_flag = kanata_can_healing_angel
+		}
+
+		#fire_only_once = yes
+
+		available = {
+			
+		}
+
+		#days_remove = 30
+
+		complete_effect = {
+			add_timed_idea = {
+                idea = kanata_healing_angel_idea
+                days = 30
+            }
+		}
+
+		remove_effect = {	
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_national_presentation_dec = {
+
+		icon = generic_kanata
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 75
+
+		visible = {
+		    tag = KAN
+		    has_country_flag = kanata_can_national_presentation
+		}
+
+		#fire_only_once = yes
+
+		available = {
+			
+		}
+
+		days_remove = 160
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {	
+			random_list = {
+    		30 = {
+        		add_hindu_ops = yes
+    			}
+    		30 = {
+        		add_muslim_ops = yes
+    			}
+    		30 = {
+        		add_buddhist_ops = yes
+    			}
+    		10 = {
+        		add_to_kanatan = yes
+    			}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_integrate_hindu_population_dec = {
+
+		icon = generic_kanata
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = KAN
+		}
+
+		fire_only_once = yes
+
+		available = {
+			KAN_population_can_integrate_hindu = yes
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+			add_to_kanatan_15 = yes
+		}
+
+		#remove_effect = {	}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_integrate_muslim_population_dec = {
+
+		icon = generic_kanata
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = KAN
+		}
+
+		fire_only_once = yes
+
+		available = {
+			KAN_population_can_integrate_muslim = yes
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+			add_to_kanatan_15 = yes
+		}
+
+		#remove_effect = {	}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	kanata_integrate_buddhist_population_dec = {
+
+		icon = generic_kanata
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = KAN
+		}
+
+		fire_only_once = yes
+
+		available = {
+			KAN_population_can_integrate_buddhist = yes
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+			add_to_kanatan_15 = yes
+		}
+
+		#remove_effect = {	}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

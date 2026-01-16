@@ -1,0 +1,2526 @@
+focus_tree = {
+	id = WAT_latin_americas_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			
+			OR = {tag = WAT
+						}
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 2000 y = 1000 }
+
+    initial_show_position = {
+        x = 6
+        y = 0
+    }
+
+    #Diplomatic and Political
+    focus = {
+        id = tsunomaki_watame_wat_focus
+        icon = GFX_focus_watame_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 10
+        y = 0
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = rearmament_effort_wat_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = tsunomaki_watame_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tsunomaki_watame_wat_focus
+        x = 3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = prepare_for_kaiju_war_wat_focus
+        icon = GFX_goal_generic_construction
+        prerequisite = { focus = tsunomaki_watame_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tsunomaki_watame_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = supply_hub_building_idea
+        }
+    }
+
+    focus = {
+        id = political_reform_wat_focus
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = tsunomaki_watame_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tsunomaki_watame_wat_focus
+        x = -8
+        y = 1
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+
+    focus = {
+        id = monarchist_takeover_wat_focus
+        icon = GFX_focus_WAT_monarchist
+        prerequisite = { focus = political_reform_wat_focus}
+        mutually_exclusive = { focus = watame_shogunate_wat_focus }
+        relative_position_id = political_reform_wat_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    	retire_ideology_leader = communism
+		    	retire_ideology_leader = democratic
+		    	retire_ideology_leader = neutrality
+		    }
+        	create_country_leader = {
+    name = "Princess Watame"
+    picture = "gfx/leaders/WAT/watame_princess.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        popular_queen
+        fluffy_trait
+    }
+}
+hidden_effect = {
+create_country_leader = {
+    name = "Princess Watame"
+    picture = "gfx/leaders/WAT/watame_princess.dds"
+    expire = "1965.1.1"
+    ideology = fascism_ideology
+    traits = {
+        popular_queen
+        fluffy_trait
+    }
+}
+
+create_country_leader = {
+    name = "Princess Watame"
+    picture = "gfx/leaders/WAT/watame_princess.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        popular_queen
+        fluffy_trait
+    }
+}
+
+create_country_leader = {
+    name = "Princess Watame"
+    picture = "gfx/leaders/WAT/watame_princess.dds"
+    expire = "1965.1.1"
+    ideology = liberalism
+    traits = {
+        popular_queen
+        fluffy_trait
+    }
+}}
+
+			custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_fas_advisor
+            set_country_flag = Player_can_dem_advisor
+		    custom_effect_tooltip = "Kiryu Coco"
+		    custom_effect_tooltip = "Tokino Sora"
+        }
+    }
+
+    focus = {
+        id = watame_shogunate_wat_focus
+        icon = GFX_focus_WAT_shogun
+        prerequisite = { focus = political_reform_wat_focus}
+        mutually_exclusive = { focus = monarchist_takeover_wat_focus }
+        relative_position_id = political_reform_wat_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    }
+            add_popularity = { ideology = fascism popularity = 0.6 }
+            set_politics = {
+                ruling_party = fascism
+            }
+		    create_country_leader = {
+				name = "Watame Shogun"
+				picture = "gfx/leaders/WAT/watame_shogun.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					fluffy_trait
+				}
+			}
+			custom_effect_tooltip = CET_available_as_advisor
+            set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = watamelon_wat_focus
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = watame_shogunate_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = watame_shogunate_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 0.75
+                ahead_reduction = 1
+                uses = 2
+                category = support_tech
+            }
+        }
+    }
+
+    focus = {
+        id = the_way_of_the_samurai_wat_focus
+        icon = GFX_focus_generic_japanese_imperial_glory
+        prerequisite = { focus = watame_shogunate_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = watame_shogunate_wat_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_use_kamikaze_pilots = yes }
+        }
+    }
+
+    focus = {
+        id = sheep_wat_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = monarchist_takeover_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = monarchist_takeover_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.5
+                ahead_reduction = 1
+                uses = 1
+                category = armor
+            }
+        }
+    }
+
+    focus = {
+        id = prussia_of_latin_america_wat_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = monarchist_takeover_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = monarchist_takeover_wat_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = rap_sheep_wat_focus
+        icon = GFX_focus_WAT_watame
+        prerequisite = { focus = sheep_wat_focus
+        focus = watamelon_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sheep_wat_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = spitting_fire_trait
+        }
+    }
+
+    focus = {
+        id = steel_samurai_wat_focus
+        icon = GFX_focus_generic_steel
+        prerequisite = { focus = rap_sheep_wat_focus}
+        prerequisite = { focus = the_way_of_the_samurai_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rap_sheep_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_resource = {
+                type = steel
+                amount = 8
+                }
+            }
+            random_owned_controlled_state = {
+            add_resource = {
+                type = steel
+                amount = 8
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = mofu_mofu_imperialism_wat_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = rap_sheep_wat_focus}
+        prerequisite = { focus = prussia_of_latin_america_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rap_sheep_wat_focus
+        x = 1
+        y = 1
+        cost = 4
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = usa_world_police
+        }
+    }
+
+    focus = {
+        id = fix_the_internet_wat_focus
+        icon = GFX_goal_generic_radar
+        prerequisite = { focus = mofu_mofu_imperialism_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = mofu_mofu_imperialism_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.5
+                ahead_reduction = 1
+                uses = 1
+                category = electronics
+            }
+        }
+    }
+
+    focus = {
+        id = watamerica_wat_focus
+        icon = GFX_focus_WAT_watamerica
+        prerequisite = { focus = rap_sheep_wat_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rap_sheep_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	custom_trigger_tooltip = {
+        		tooltip = CTT_watamerica_wat_focus
+        		#South America
+        		has_full_control_of_state = 303
+        		has_full_control_of_state = 493
+       	        has_full_control_of_state = 306
+
+       	        #Marine
+        		has_full_control_of_state = 316
+        		has_full_control_of_state = 685
+       	        has_full_control_of_state = 314
+       	        has_full_control_of_state = 313
+       	        has_full_control_of_state = 304
+
+       	        #Mel
+        		has_full_control_of_state = 485
+        		has_full_control_of_state = 481
+       	        has_full_control_of_state = 484
+       	        has_full_control_of_state = 478
+       	        has_full_control_of_state = 483
+
+       	        #Flare
+        		has_full_control_of_state = 378
+        		has_full_control_of_state = 385
+       	        has_full_control_of_state = 386
+
+       	        #Botan
+        		has_full_control_of_state = 473
+        	}
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	every_state = {
+                limit = { OR = {
+                    is_on_continent = south_america
+                    is_on_continent = north_america
+                } }
+                add_core_of = ROOT
+            }
+            set_cosmetic_tag = WAT_america
+            hidden_effect = {
+            	news_event = { id = holo_news.231 }
+            }
+            hidden_effect = {
+		    	retire_ideology_leader = fascism
+		    	retire_ideology_leader = communism
+		    	retire_ideology_leader = democratic
+		    	retire_ideology_leader = neutrality
+		    }
+            create_country_leader = {
+    name = "Empress Watame"
+    picture = "gfx/leaders/WAT/watame_empress.dds"
+    expire = "1965.1.1"
+    ideology = centrism
+    traits = {
+        popular_queen
+        crowned_by_god_trait
+        fluffy_trait
+    }
+}
+hidden_effect = {
+create_country_leader = {
+    name = "Empress Watame"
+    picture = "gfx/leaders/WAT/watame_empress.dds"
+    expire = "1965.1.1"
+    ideology = fascism_ideology
+    traits = {
+        popular_queen
+        crowned_by_god_trait
+        fluffy_trait
+    }
+}
+
+create_country_leader = {
+    name = "Empress Watame"
+    picture = "gfx/leaders/WAT/watame_empress.dds"
+    expire = "1965.1.1"
+    ideology = marxism
+    traits = {
+        popular_queen
+        crowned_by_god_trait
+        fluffy_trait
+    }
+}
+
+create_country_leader = {
+    name = "Empress Watame"
+    picture = "gfx/leaders/WAT/watame_empress.dds"
+    expire = "1965.1.1"
+    ideology = liberalism
+    traits = {
+        popular_queen
+        crowned_by_god_trait
+        fluffy_trait
+    }
+}}
+        }
+    }
+
+    focus = {
+        id = german_rocket_science_wat_focus
+        icon = GFX_focus_rocketry
+        prerequisite = { focus = watamerica_wat_focus}
+        prerequisite = { focus = steel_samurai_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = watamerica_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = rocketry
+            }
+        }
+    }
+
+    focus = {
+        id = watame_mofu_device_wat_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = watamerica_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = watamerica_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = nuclear
+            }
+        }
+    }
+
+    focus = {
+        id = influence_paraguay_wat_focus
+        icon = GFX_focus_WAT_paraguay
+        prerequisite = { focus = rearmament_effort_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_wat_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = can_influence_paraguay_future
+            custom_effect_tooltip = CET_influence_paraguay_wat_focus
+        }
+    }
+
+    focus = {
+        id = integrate_ecuadorian_wat_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = rearmament_effort_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_wat_focus
+        x = -3
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 10
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_state_core = 305
+        }
+    }
+
+    focus = {
+        id = sheep_lab_wat_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = rearmament_effort_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_wat_focus
+        x = -5
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 10
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = international_stage_wat_focus
+        icon = GFX_focus_generic_trade
+        prerequisite = { focus = sheep_lab_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sheep_lab_wat_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = hololive_trade		
+		    custom_effect_tooltip = hololive_trade_allows
+        }
+    }
+
+    focus = {
+        id = janken_machine_wat_focus
+        icon = GFX_focus_WAT_industry
+        prerequisite = { focus = international_stage_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = international_stage_wat_focus
+        x = 3
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = national_conscription_wat_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = international_stage_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = international_stage_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = asacoco_wat_focus
+        icon = GFX_focus_COC_asacoco
+        prerequisite = { focus = janken_machine_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = janken_machine_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = asacoco_idea
+        }
+    }
+
+    focus = {
+        id = plug_in_type_wat_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = asacoco_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = asacoco_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = efficiency_i_ns
+        }
+    }
+
+    focus = {
+        id = selling_body_wat_focus
+        icon = GFX_focus_mex_privatisation
+        prerequisite = { focus = asacoco_wat_focus
+        focus = mofu_mofu_imperialism_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = asacoco_wat_focus
+        x = -2
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = instant_asacoco_wat_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = selling_body_wat_focus}
+        prerequisite = { focus = plug_in_type_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = selling_body_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_resource = {
+                type = oil
+                amount = 8
+                }
+            }
+            random_owned_controlled_state = {
+            add_resource = {
+                type = oil
+                amount = 8
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = impersonate_ui_wat_focus
+        icon = GFX_focus_SUB_ui
+        prerequisite = { focus = janken_machine_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = janken_machine_wat_focus
+        x = 1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	create_corps_commander = {
+	name = "Shigure Ui"
+	portrait_path = "gfx/leaders/SUB/ui.dds"
+	traits = { trait_reckless media_personality }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+        }
+    }
+
+    focus = {
+        id = ui_in_command_wat_focus
+        icon = GFX_focus_SUB_ui_coup
+        prerequisite = { focus = impersonate_ui_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = impersonate_ui_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	army_experience = 25
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = WAT_ui_high_com
+        }
+    }
+
+    focus = {
+        id = ui_beam__wat_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = ui_in_command_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = ui_in_command_wat_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = nuclear
+            }
+        }
+    }
+
+    focus = {
+        id = project_isabela_wat_focus
+        icon = GFX_goal_generic_more_territorial_claims
+        prerequisite = { focus = sheep_lab_wat_focus}
+        prerequisite = { focus = integrate_ecuadorian_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sheep_lab_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = goat_of_galapagos_idea
+            add_state_core = 649
+        }
+    }
+
+    focus = {
+        id = faction_of_our_own_wat_focus
+        icon = GFX_goal_molotov_ribbentrop_pact
+        prerequisite = { focus = integrate_ecuadorian_wat_focus}
+        prerequisite = { focus = influence_paraguay_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = integrate_ecuadorian_wat_focus
+        x = 1
+        y = 1
+        cost = 6
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = develop_paraguay_wat_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = influence_paraguay_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = influence_paraguay_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	PAR = {
+        		is_puppet_of = ROOT
+        	}
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            688 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            301 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = repopulate_paraguay_wat_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = develop_paraguay_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = develop_paraguay_wat_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            PAR = {add_ideas = f2_conscription_ns}
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = intervention_in_australia_wat_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = rearmament_effort_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rearmament_effort_wat_focus
+        x = 2
+        y = 1
+        cost = 2
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = stalking_wife_wat_focus
+        icon = GFX_focus_WAT_stalking_wife
+        prerequisite = { focus = intervention_in_australia_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = intervention_in_australia_wat_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                HTO = {
+                    is_subject = no
+                    is_faction_leader = yes
+                    NOT = { has_war_with = ROOT }
+                }
+                is_subject = no
+                is_in_faction = no
+            }
+            
+            bypass = {
+                OR = {
+                    is_in_faction_with = HTO
+                }
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            HTO = { country_event = { id = watame.24 }}
+        }
+    }
+
+    focus = {
+        id = haato_in_army_wat_focus
+        icon = GFX_focus_HTO_guns
+        prerequisite = { focus = stalking_wife_wat_focus
+        focus = influence_paraguay_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = stalking_wife_wat_focus
+        x = -1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = HTO_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Akai Haato"
+        }
+    }
+
+    focus = {
+        id = haato_in_navy_wat_focus
+        icon = GFX_focus_HTO_battleship
+        prerequisite = { focus = stalking_wife_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = stalking_wife_wat_focus
+        x = 1
+        y = 1
+        cost = 3
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = HTO_recruit_admiral_dec_flag
+            custom_effect_tooltip = CET_available_as_admiral
+            custom_effect_tooltip = "Akai Haato"
+        }
+    }
+
+    focus = {
+        id = haato_doctrine_wat_focus
+        icon = GFX_focus_HTO_powerful
+        prerequisite = { focus = haato_in_navy_wat_focus
+        focus = haato_in_army_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = haato_in_navy_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = haato_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = emu_in_sheep_army_wat_focus
+        icon = GFX_focus_HTO_emu_division
+        prerequisite = { focus = haato_doctrine_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = haato_doctrine_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_technology = {
+                emu_cavalry_tank = 1  
+            }
+
+            division_template = {
+                name = "Sheep Emu Battalion"
+                is_locked = no
+                division_names_group = NIN_INF_01
+                regiments = {
+                    emu_cavalry = { x = 0 y = 0 }
+                    emu_cavalry = { x = 0 y = 1 }
+                    emu_cavalry = { x = 0 y = 2 }
+
+                    emu_cavalry = { x = 1 y = 0 }
+                    emu_cavalry = { x = 1 y = 1 }
+                    emu_cavalry = { x = 1 y = 2 }
+
+                    emu_cavalry = { x = 2 y = 0 }
+                    emu_cavalry = { x = 2 y = 1 }
+                    emu_cavalry = { x = 2 y = 2 }
+                } 
+            }
+        }
+    }
+
+    focus = {
+        id = trans_pacific_fleet_wat_focus
+        icon = GFX_focus_generic_navy_battleship2
+        prerequisite = { focus = haato_doctrine_wat_focus}
+        prerequisite = { focus = haato_in_navy_wat_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = haato_doctrine_wat_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 303
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_trans_pacific_fleet_wat_focus
+			hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = WAT_pacific_fleet_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = WAT_pacific_fleet_legacy
+						}}
+        }
+    }
+
+    focus = {
+        id = sheep_house_wat_focus
+        icon = GFX_focus_WAT_industry
+        prerequisite = { focus = trans_pacific_fleet_wat_focus
+        focus = emu_in_sheep_army_wat_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = trans_pacific_fleet_wat_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_sheep_house_wat_focus
+            set_country_flag = WAT_can_sheep_house
+        }
+    }
+
+    #Economy and Industry
+	focus = {
+		id = WAT_banana_republic_LatinAmerica_focus
+		text = banana_republic_LatinAmerica_focus
+		icon = GFX_goal_generic_consumer_goods
+		#prerequisite = { focus = idkeator }
+		#mutually_exclusive = { focus = idbili }
+		relative_position_id = tsunomaki_watame_wat_focus
+		x = 12
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 5000
+		    	producer = ROOT
+	    	}
+	    }
+	}
+
+	focus = {
+		id = WAT_support_agriculture_LatinAmerica_focus
+		text = support_agriculture_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WAT_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = WAT_support_rearmament_LatinAmerica_focus }
+		relative_position_id = WAT_banana_republic_LatinAmerica_focus
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_support_rearmament_LatinAmerica_focus
+		text = support_rearmament_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WAT_banana_republic_LatinAmerica_focus }
+		mutually_exclusive = { focus = WAT_support_agriculture_LatinAmerica_focus }
+		relative_position_id = WAT_banana_republic_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_war_on_drug_LatinAmerica_focus
+		text = war_on_drug_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = WAT_support_agriculture_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_support_agriculture_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = WAT_export_banana_LatinAmerica_focus
+		text = export_banana_LatinAmerica_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = WAT_war_on_drug_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_war_on_drug_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+			
+	    }
+	}
+
+	focus = {
+		id = WAT_seek_flare_support_LatinAmerica_focus
+		text = seek_flare_support_LatinAmerica_focus
+		icon = GFX_focus_flare_flag
+		prerequisite = { focus = WAT_export_banana_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_export_banana_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = FLA
+		    modifier = faction_unity_opinion
+		    }
+		    FLA = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+			
+	    }
+	}
+
+	focus = {
+		id = WAT_hire_aqua_construction_LatinAmerica_focus
+		text = hire_aqua_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WAT_support_agriculture_LatinAmerica_focus 
+		focus = WAT_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_support_agriculture_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			AQA = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_hire_pekora_construction_LatinAmerica_focus
+		text = hire_pekora_construction_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = WAT_support_agriculture_LatinAmerica_focus 
+		focus = WAT_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_support_rearmament_LatinAmerica_focus
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			PEK = { add_political_power = 15 }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_coco_arms_factory_LatinAmerica_focus
+		text = coco_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WAT_hire_pekora_construction_LatinAmerica_focus
+		focus = WAT_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_hire_pekora_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_mio_arms_factory_LatinAmerica_focus
+		text = mio_arms_factory_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = WAT_hire_pekora_construction_LatinAmerica_focus
+		focus = WAT_hire_aqua_construction_LatinAmerica_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_hire_aqua_construction_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_drug_to_usa_LatinAmerica_focus
+		text = drug_to_usa_LatinAmerica_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = WAT_support_rearmament_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_support_rearmament_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = asacoco_idea
+	    }
+	}
+
+	focus = {
+		id = WAT_underground_tunnel_LatinAmerica_focus
+		text = underground_tunnel_LatinAmerica_focus
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = WAT_drug_to_usa_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_drug_to_usa_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_seek_coco_support_LatinAmerica_focus
+		text = seek_coco_support_LatinAmerica_focus
+		icon = GFX_focus_coco_flag
+		prerequisite = { focus = WAT_underground_tunnel_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_underground_tunnel_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_opinion_modifier = {
+		    target = COC
+		    modifier = faction_unity_opinion
+		    }
+		    COC = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+	    }
+	}
+
+	focus = {
+		id = WAT_pacific_coast_dock_LatinAmerica_focus
+		text = pacific_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WAT_mio_arms_factory_LatinAmerica_focus
+		focus = WAT_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_mio_arms_factory_LatinAmerica_focus
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WAT_atlantic_coast_dock_LatinAmerica_focus
+		text = atlantic_coast_dock_LatinAmerica_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = WAT_mio_arms_factory_LatinAmerica_focus
+		focus = WAT_coco_arms_factory_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_mio_arms_factory_LatinAmerica_focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = WAT_maya_carlender_LatinAmerica_focus
+		text = maya_carlender_LatinAmerica_focus
+		icon = GFX_focus_research
+		prerequisite = { focus = WAT_pacific_coast_dock_LatinAmerica_focus
+		focus = WAT_atlantic_coast_dock_LatinAmerica_focus}
+		#mutually_exclusive = { focus =  }
+		relative_position_id = WAT_atlantic_coast_dock_LatinAmerica_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+	    }
+	}
+
+	#Army Research
+    focus = {
+		id = WAT_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = WAT_banana_republic_LatinAmerica_focus
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = WAT_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = WAT_gaming }
+		relative_position_id = WAT_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = WAT_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = WAT_animal_crossing }
+		relative_position_id = WAT_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = WAT_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = WAT_gaming }
+		relative_position_id = WAT_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = WAT_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = WAT_tetris }
+		relative_position_id = WAT_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = WAT_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = WAT_gaming }
+		relative_position_id = WAT_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = WAT_dark_soul_resh }
+		relative_position_id = WAT_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = WAT_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = WAT_apex_legend  focus = WAT_ring_fit }
+		relative_position_id = WAT_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = WAT_pubg  focus = WAT_ring_fit }
+		relative_position_id = WAT_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = WAT_minecraft_resh  focus = WAT_mario_kart }
+		relative_position_id = WAT_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = WAT_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = WAT_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = WAT_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = WAT_hololive_music }
+		relative_position_id = WAT_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = WAT_hololive_music }
+		relative_position_id = WAT_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = WAT_hololive_music }
+		relative_position_id = WAT_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = WAT_yumemiru_sora_he 
+		focus = WAT_shiny_smily_story}
+		relative_position_id = WAT_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = WAT_yumemiru_sora_he 
+		focus = WAT_kirame_rider}
+		relative_position_id = WAT_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = WAT_azur_lane_boss_music }
+		prerequisite = { focus = WAT_fukkireta }
+		relative_position_id = WAT_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = WAT_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = WAT_azur_lane_boss_music }
+		relative_position_id = WAT_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = WAT_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = WAT_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = WAT_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = WAT_live_streaming_gen }
+		mutually_exclusive = { focus = WAT_bilibili }
+		relative_position_id = WAT_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		   add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = WAT_youtube_gen }
+		relative_position_id = WAT_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = WAT_live_streaming_gen }
+		mutually_exclusive = { focus = WAT_youtube_gen }
+		relative_position_id = WAT_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = WAT_bilibili 
+		focus = WAT_youtube_gen}
+		relative_position_id = WAT_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = WAT_superchat 
+		focus = WAT_game_casting}
+		prerequisite = { focus = WAT_karaoke }
+		relative_position_id = WAT_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = WAT_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = WAT_superchat 
+		focus = WAT_game_casting}
+		prerequisite = { focus = WAT_3d_studio }
+		relative_position_id = WAT_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = WAT_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = WAT_bilibili }
+		relative_position_id = WAT_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+
+    
+}

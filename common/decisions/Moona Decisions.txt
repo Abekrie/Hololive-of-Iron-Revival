@@ -1,0 +1,179 @@
+moona_spacerace_decision_category = {
+
+	moona_space_shuttle_sr_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			convoy > 49
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MOO
+		    tag = IOF}
+		    NOT = {has_country_flag = moona_space_shuttle_sr_dec_FLAG}
+		    has_country_flag = holoid_can_into_space_race
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			set_country_flag = moona_space_shuttle_sr_dec_FLAG
+			add_equipment_to_stockpile = {
+		    	type = convoy
+		    	amount = -50
+	    	}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	moona_logistic_sr_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			motorized_equipment > 499
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MOO
+		    tag = IOF}
+		    NOT = {has_country_flag = moona_logistic_sr_dec_FLAG}
+		    has_country_flag = holoid_can_into_space_race
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			set_country_flag = moona_logistic_sr_dec_FLAG
+			add_equipment_to_stockpile = {
+		    	type = motorized_equipment
+		    	amount = -500
+	    	}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	moona_train_the_astronaut_sr_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			infantry_equipment > 4999
+			}
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MOO
+		    tag = IOF}
+		    NOT = {has_country_flag = moona_train_the_astronaut_sr_dec_FLAG}
+		    has_country_flag = holoid_can_into_space_race
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			set_country_flag = moona_train_the_astronaut_sr_dec_FLAG
+			add_equipment_to_stockpile = {
+		    	type = infantry_equipment
+		    	amount = -5000
+	    	}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	moona_rocket_site_sr_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			has_equipment = {
+    			train_equipment > 9
+			}			
+		}
+
+		cost = 100
+
+		visible = {
+		    OR = {tag = MOO
+		    tag = IOF}
+		    NOT = {has_country_flag = moona_rocket_site_sr_dec_FLAG}
+		    has_country_flag = holoid_can_into_space_race
+		}
+
+		days_remove = 35
+
+		remove_effect = {
+			set_country_flag = moona_rocket_site_sr_dec_FLAG
+			add_equipment_to_stockpile = {
+		    	type = train_equipment
+		    	amount = -10
+	    	}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+

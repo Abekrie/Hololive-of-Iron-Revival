@@ -1,0 +1,92 @@
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = PEK
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = PEK_moona_advisor_advisor
+    name = "Moona Hoshinova"
+    advisor = {
+      slot = high_command
+      traits = { moona_usaken_trait }
+      cost = 50
+
+      available = {
+				OR = {has_completed_focus = hey_moona_pek_focus }
+			}
+    }
+    portraits = { 
+      army = { small = GFX_idea_moona_small }
+    }
+  }
+
+
+  generate_character = {
+    token_base = PEK_pekomama_holo_xgeneral
+    name="Pekomama"
+      portraits={
+            army={
+                  large="gfx/leaders/PEK/peko_mama.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader commando camouflage_expert}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = PEK_chungus_holo_xgeneral
+    name="Peko Chungus"
+      portraits={
+            army={
+                  large="gfx/leaders/PEK/peko_chungus.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard commando paratrooper}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = PEK_don_chan_holo_xgeneral
+    name="Don Chan"
+      portraits={
+            army={
+                  large="gfx/leaders/PEK/don_chan.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={ambusher skilled_staffer}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+}

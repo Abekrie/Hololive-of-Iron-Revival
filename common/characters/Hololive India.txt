@@ -1,0 +1,143 @@
+
+characters={
+RUS_rushia_uruha_general = {
+     name="Rushia"
+     portraits={
+           army={
+                 large="gfx/leaders/RUS/rushia_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={brilliant_strategist infantry_officer}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 4
+           planning_skill = 4
+           logistics_skill = 4
+     }
+
+}
+
+RUS_rushia_uruha_admiral = {
+     name="Uruha"
+     portraits={
+           army={
+                 large="gfx/leaders/RUS/rushia_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={gunnery_expert caustic_personality}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 4
+           maneuvering_skill = 4
+           coordination_skill = 4
+     }
+
+}
+}
+
+
+characters={
+AQA_aqua_minato_general = {
+     name="Aqua"
+     portraits={
+           army={
+                 large="gfx/leaders/AQA/aqua_dem.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer career_officer}
+           skill = 4
+           attack_skill = 4
+           defense_skill = 4
+           planning_skill = 1
+           logistics_skill = 4
+     }
+
+}
+
+AQA_aqua_minato_admiral = {
+     name="Minato"
+     portraits={
+           army={
+                 large="gfx/leaders/AQA/aqua_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={cuts_corners ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+KAN_kanata_amane_general = {
+     name="Kanata"
+     portraits={
+           army={
+                 large="gfx/leaders/KAN/kanata_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={skilled_staffer commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+KAN_kanata_amane_admiral = {
+     name="Amane"
+     portraits={
+           army={
+                 large="gfx/leaders/KAN/kanata_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

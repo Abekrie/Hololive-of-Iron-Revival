@@ -1,0 +1,1368 @@
+add_namespace = shion
+
+#shion refuses sao tome
+country_event = {
+	id = shion.1
+	title = shion.1.t
+	desc = shion.1.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+}
+
+#shion accepted sao tome
+country_event = {
+	id = shion.2
+	title = shion.2.t
+	desc = shion.2.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.2.a
+		set_global_flag = saotome_sold
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+#shion yes ICC
+country_event = {
+	id = shion.3
+	title = shion.3.t
+	desc = shion.3.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.3.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#shion no ICC
+country_event = {
+	id = shion.4
+	title = shion.4.t
+	desc = shion.4.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#shion accept DYC
+country_event = {
+	id = shion.5
+	title = shion.5.t
+	desc = shion.5.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.5.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		    limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#shion no DYC
+country_event = {
+	id = shion.6
+	title = shion.6.t
+	desc = shion.6.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+##############################
+###########################################
+#Buy Greenland
+country_event = {
+	id = shion.8
+	title = shion.8.t
+	desc = shion.8.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.8.a	#Yes
+		ai_chance = { factor = 80 }
+		SHI = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.8.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = shion.9
+	title = shion.9.t
+	desc = shion.9.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.9.a	#Yes
+		ai_chance = { factor = 80 }
+		SHI = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.9.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Borneo
+country_event = {
+	id = shion.10
+	title = shion.10.t
+	desc = shion.10.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.10.a	#Yes
+		ai_chance = { factor = 30 }
+		SHI = { 
+			country_event = { id = aqua.66 }
+			transfer_state = 334
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = shion.10.b	#No 
+		ai_chance = { factor = 70 }
+		SHI = { country_event = { id = aqua.65 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = shion.11
+	title = shion.11.t
+	desc = shion.11.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.11.a	#Yes
+		ai_chance = { factor = 50 }
+		SHI = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = shion.11.b	#No 
+		ai_chance = { factor = 50 }
+		SHI = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = shion.12
+	title = shion.12.t
+	desc = shion.12.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.12.a	#Yes
+		ai_chance = { factor = 75 }
+		SHI = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.12.b	#No 
+		ai_chance = { factor = 25 }
+		SHI = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = shion.13
+	title = shion.13.t
+	desc = shion.13.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.13.a	#Yes
+		ai_chance = { factor = 50 }
+		SHI = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = shion.13.b	#No 
+		ai_chance = { factor = 50 }
+		SHI = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Papua
+country_event = {
+	id = shion.14
+	title = shion.14.t
+	desc = shion.14.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.14.a	#Yes
+		ai_chance = { factor = 50 }
+		SHI = { 
+			country_event = { id = aqua.2 }
+			transfer_state = 523
+			transfer_state = 669
+		}
+		AQA = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = shion.14.b	#No 
+		ai_chance = { factor = 50 }
+		SHI = { country_event = { id = aqua.1 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = shion.15
+	title = shion.15.t
+	desc = shion.15.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.15.a	#Yes
+		ai_chance = { factor = 80 }
+		SHI = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.15.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = shion.16
+	title = shion.16.t
+	desc = shion.16.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.16.a	#Yes
+		ai_chance = { factor = 20 }
+		SHI = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = shion.16.b	#No 
+		ai_chance = { factor = 80 }
+		SHI = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = shion.17
+	title = shion.17.t
+	desc = shion.17.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.17.a	#Yes
+		ai_chance = { factor = 50 }
+		SHI = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = shion.17.b	#No 
+		ai_chance = { factor = 50 }
+		SHI = { country_event = { id = okayu.1 } }
+	}
+}
+
+#Buy Sardinia
+country_event = {
+	id = shion.19
+	title = shion.19.t
+	desc = shion.19.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.19.a	#Yes
+		ai_chance = { factor = 40 }
+		SHI = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = shion.19.b	#No 
+		ai_chance = { factor = 60 }
+		SHI = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = shion.20
+	title = shion.20.t
+	desc = shion.20.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.20.a	#Yes
+		ai_chance = { factor = 90 }
+		SHI = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.20.b	#No 
+		ai_chance = { factor = 10 }
+		SHI = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = shion.21
+	title = shion.21.t
+	desc = shion.21.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.21.a	#Yes
+		ai_chance = { factor = 80 }
+		SHI = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.21.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = shion.22
+	title = shion.22.t
+	desc = shion.22.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.22.a	#Yes
+		ai_chance = { factor = 80 }
+		SHI = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = shion.22.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = shion.23
+	title = shion.23.t
+	desc = shion.23.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.23.a	#Yes
+		ai_chance = { factor = 99 }
+		SHI = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = shion.23.b	#No 
+		ai_chance = { factor = 1 }
+		SHI = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+
+#Invite to Faction
+country_event = {
+	id = shion.24
+	title = shion.24.t
+	desc = shion.24.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.24.a	#Yes
+		ai_chance = { factor = 51 }
+		SHI = { add_to_faction = ROOT }
+		add_opinion_modifier = {
+		    target = SHI
+		    modifier = faction_unity_opinion
+		    }
+		SHI = {add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }}
+
+		if = {
+		limit = { original_tag = RUS }
+		SHI = { country_event = { id = shion.25 }}
+		}
+
+		if = {
+		limit = { original_tag = MAT }
+		SHI = { country_event = { id = shion.27 }}
+		}
+	}
+	option = {
+		name = shion.24.b	#No 
+		ai_chance = { factor = 49 }
+		if = {
+		limit = { original_tag = RUS }
+		SHI = { country_event = { id = shion.26 }}
+		}
+
+		if = {
+		limit = { original_tag = MAT }
+		SHI = { country_event = { id = shion.28 }}
+		}
+		
+	}
+}
+
+#Rushia yes Faction
+country_event = {
+	id = shion.25
+	title = shion.25.t
+	desc = shion.25.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.25.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#Rushia no Faction
+country_event = {
+	id = shion.26
+	title = shion.26.t
+	desc = shion.26.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.26.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#MAT yes Faction
+country_event = {
+	id = shion.27
+	title = shion.27.t
+	desc = shion.27.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.27.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#MAT no Faction
+country_event = {
+	id = shion.28
+	title = shion.28.t
+	desc = shion.28.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.28.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#NAP Aqua
+country_event = {
+	id = shion.29
+	title = shion.29.t
+	desc = shion.29.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.29.a	#Yes
+		ai_chance = { factor = 80 }
+diplomatic_relation = {
+    country = SHI
+    relation = non_aggression_pact
+    active = yes
+}   
+        SHI = { country_event = { id = shion.30 }}
+	}
+	option = {
+		name = shion.29.b	#No 
+		ai_chance = { factor = 20 }
+		SHI = { country_event = { id = shion.31 }}
+		
+	}
+}
+
+#Aqua yes NAP
+country_event = {
+	id = shion.30
+	title = shion.30.t
+	desc = shion.30.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.30.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#Aqua no NAP
+country_event = {
+	id = shion.31
+	title = shion.31.t
+	desc = shion.31.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.31.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#A-Chan
+country_event = {
+	id = shion.32
+	title = shion.32.t
+	desc = shion.32.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.32.a	#Yes
+		ai_chance = { factor = 100 }
+        SHI = { country_event = { id = shion.33 }}
+        ACH = { transfer_state = 415
+        transfer_state = 267 }
+        415 = { add_core_of = ACH }
+        267 = { add_core_of = ACH }
+
+	}
+	option = {
+		name = shion.32.b	#No 
+		ai_chance = { factor = 0 }
+		SHI = { country_event = { id = shion.34 }}
+		
+	}
+}
+
+#YAG yes ACH
+country_event = {
+	id = shion.33
+	title = shion.33.t
+	desc = shion.33.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.33.a	#Yes
+		ai_chance = { factor = 51 }
+		ROOT = { puppet = ACH }
+		hidden_effect = { news_event = { id = holo_news.14 }
+		ACH = { add_ideas = national_building_1 }}
+	}
+}
+
+#YAG no ACH
+country_event = {
+	id = shion.34
+	title = shion.34.t
+	desc = shion.34.d
+	picture = GFX_report_event_yagoo_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.34.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#Peace or War
+country_event = {
+	id = shion.35
+	title = shion.35.t
+	desc = shion.35.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.35.a	#Yes
+		ai_chance = { factor = 50 }
+        set_country_flag = AQA_SHI_war_PEACE
+        hidden_effect = { news_event = { id = holo_news.15 }}
+
+	}
+	option = {
+		name = shion.35.b	#No 
+		ai_chance = { factor = 50 }
+		set_country_flag = AQA_SHI_war_WAR
+		hidden_effect = { news_event = { id = holo_news.16 }}
+	}
+}
+
+#SHION RE
+
+#Shion War now or later
+country_event = {
+	id = shion.36
+	title = shion.36.t
+	desc = shion.36.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.36.a	#Yes
+		ai_chance = { factor = 100 }
+        AQA = { country_event = { id = shion.37 }}
+        hidden_effect = {
+                AQA = { country_event = { id = shion.38  days = 90}}
+                SHI = { country_event = { id = shion.38  days = 90}}}
+                news_event = { id = holo_news.17 }
+
+	}
+	option = {
+		name = shion.36.b	#No 
+		ai_chance = { factor = 0 }
+		AQA = { country_event = { id = shion.37 }}
+		hidden_effect = {
+				AQA = { country_event = { id = shion.38  days = 180}}
+				SHI = { country_event = { id = shion.38  days = 180}}}
+				news_event = { id = holo_news.17 }
+		
+	}
+}
+
+#Aqua notice
+country_event = {
+	id = shion.37
+	title = shion.37.t
+	desc = shion.37.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.37.a	#Yes
+		ai_chance = { factor = 51 }
+		
+	}
+}
+
+#War!!!
+country_event = {
+	id = shion.38
+	title = shion.38.t
+	desc = shion.38.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.38.a	#Yes
+		ai_chance = { factor = 51 }
+		if = { limit = { original_tag = SHI }
+		hidden_effect = {
+        	news_event = { id = holo_news.18 }
+        }
+		declare_war_on = {
+    target = AQA
+    type = annex_everything
+}}
+	}
+}
+
+#SHI - Assassination of Shion
+country_event = {
+	id = shion.39
+	title = shion.39.t
+	desc = shion.39.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.39.a	#Yes
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+				retire_ideology_leader = communism
+				retire_ideology_leader = democratic
+				retire_ideology_leader = fascism
+				retire_ideology_leader = neutrality}
+create_country_leader = {
+	name = "Coalition Government"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Coalition Government"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Coalition Government"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		trait_no_more_spamming
+	}
+}
+
+create_country_leader = {
+	name = "Coalition Government"
+	picture = "gfx/leaders/Mandate/lon_parliament.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		trait_no_more_spamming
+	}
+}
+	}
+}
+
+#SHI - Prepare for Neighbor War/For Aqua notice
+country_event = {
+	id = shion.40
+	title = shion.40.t
+	desc = shion.40.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.40.a	#Yes
+		ai_chance = { factor = 100 }
+		hidden_effect = { 
+		SHI = {
+			country_event = { id = shion.43 days = 90}
+		}
+		}
+	}
+}
+
+#SHI - Request Non-aggression Pact
+country_event = {
+	id = shion.41
+	title = shion.41.t
+	desc = shion.41.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.41.a	#Yes
+		ai_chance = { factor = 100 }
+		diplomatic_relation = {
+    		country = SHI
+    		relation = non_aggression_pact
+    		active = yes
+		}
+
+		if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.3 }}
+		}
+	}
+
+	option = {
+		name = shion.41.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.4 }}
+		}
+	}
+}
+
+#SHI - Ask to Join Faction
+country_event = {
+	id = shion.42
+	title = shion.42.t
+	desc = shion.42.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.42.a	#Yes
+		ai_chance = { factor = 100 }
+		add_to_faction = SHI
+
+		if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.3 }}
+		}
+
+		if = { limit = { tag = PEK }
+			SHI = { country_event = { id = proposed.67 }}
+		}
+
+		if = { limit = { tag = YAG }
+			SHI = { country_event = { id = proposed.93 }}
+		}
+	}
+
+	option = {
+		name = shion.42.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.4 }}
+		}
+
+		if = { limit = { tag = PEK }
+			SHI = { country_event = { id = proposed.68 }}
+		}
+
+		if = { limit = { tag = YAG }
+			SHI = { country_event = { id = proposed.94 }}
+		}
+	}
+}
+
+#SHI - War is now
+country_event = {
+	id = shion.43
+	title = shion.43.t
+	desc = shion.43.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.43.a	#Yes
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+    		target = AQA
+    		type = annex_everything
+		}
+	}
+}
+
+#SHI - Shion NW Objective
+country_event = {
+	id = shion.44
+	title = shion.44.t
+	desc = shion.44.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shion.44.a	#Yes
+		ai_chance = { factor = 100 }
+		set_country_flag = Neighbor_war_objective_start
+	}
+}
+
+#SHI - Victory Shion
+country_event = {
+	id = shion.45
+	title = shion.45.t
+	desc = shion.45.d
+	picture = GFX_report_event_shion_generic1
+	
+	#is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+    		tag = SHI
+    		has_country_flag = Neighbor_war_objective_start
+    		OR = {
+    			AND = {
+    				has_full_control_of_state = 415
+    				has_full_control_of_state = 267
+    			}
+    			AND = {
+    				has_war_with = AQA
+    				AQA = {surrender_progress > 0.20}
+    				SHI = {surrender_progress < 0.20}
+    			}
+    			AND = {
+    				has_war_with = AQA
+    				AQA = {surrender_progress > 0.50}
+    				SHI = {surrender_progress < 0.50}
+    			}
+    		}
+    		NOT = { has_global_flag = Neighbor_war_ended }
+    	}
+	
+	option = {
+		name = shion.45.a	#Yes
+		ai_chance = { factor = 100 }
+		set_global_flag = Neighbor_war_ended
+		set_country_flag = Shion_wins_neighbor_war
+		white_peace = AQA
+		hidden_effect = {
+				news_event = { id = holo_news.205 }
+			}
+	}
+}
+
+#SHI - Victory AQA
+country_event = {
+	id = shion.46
+	title = shion.46.t
+	desc = shion.46.d
+	picture = GFX_report_event_shion_generic1
+	
+	#is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+    		tag = AQA
+    		has_country_flag = Neighbor_war_objective_start
+    		OR = {
+    			AND = {
+    				has_full_control_of_state = 415
+    				has_full_control_of_state = 267
+    			}
+    			AND = {
+    				has_war_with = SHI
+    				SHI = {surrender_progress > 0.50}
+    				AQA = {surrender_progress < 0.50}
+    			}
+    		}
+    		NOT = { has_global_flag = Neighbor_war_ended }
+    	}
+	
+	option = {
+		name = shion.46.a	#Yes
+		ai_chance = { factor = 100 }
+		set_global_flag = Neighbor_war_ended
+		AFG = {
+			transfer_state = 415
+			transfer_state = 267
+		}
+		white_peace = SHI
+		puppet = AFG
+		AFG = {
+			set_cosmetic_tag = AFG_Akukin
+		}
+		hidden_effect = {
+				news_event = { id = holo_news.206 }
+	AFG = {retire_ideology_leader = communism
+		create_country_leader = {
+		    name = "Osama bin Landen"
+		    picture = "gfx/leaders/SHI/bin_laden.dds"
+		    expire = "1965.1.1"
+		    ideology = marxism
+		    traits = {
+			colonial_government_trait
+		    }		
+		}
+	}
+		}
+		country_event = {
+			id = shion.54
+			days = 5
+		}
+	}
+}
+
+#SHI - Shion-Soviet split (Demand Kyrgyzstan)
+country_event = {
+	id = shion.47
+	title = shion.47.t
+    desc = shion.47.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.47.a	#Yes
+     ai_chance = { factor = 100 }
+     	SHI = {transfer_state = 732}
+     	     	if = {
+     	     		limit = { tag = SOV }
+     	     		SHI = { country_event = { id = proposed.101 }}
+     	     	}
+     }
+ 
+     option = {
+     name = shion.47.b	#No
+     ai_chance = { factor = 0 }
+     	SHI = {
+     	    create_wargoal = { type = annex_everything target = ROOT }
+     	}
+     	if = {
+     	     		limit = { tag = SOV }
+     	     		SHI = { country_event = { id = proposed.102 }}
+     	     	}
+     }
+}
+
+#SHI - Kazakh Rebels
+country_event = {
+	id = shion.48
+	title = shion.48.t
+    desc = shion.48.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.48.a	#Yes
+     ai_chance = { factor = 100 }
+     	
+     	KAZ = { declare_war_on = {
+    		target = ROOT
+    		type = independence_wargoal
+		}
+	}
+     }
+}
+
+#SHI - Treaty of Tehran
+country_event = {
+	id = shion.49
+	title = shion.49.t
+    desc = shion.49.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.49.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_stability = -0.1
+     	white_peace = KAZ
+     	SHI = {
+     		puppet = KAZ
+     	}
+     	KAZ = {
+     		set_cosmetic_tag = KAZ_Akukin
+     		transfer_state = 585
+     		transfer_state = 404
+     		transfer_state = 402
+     		transfer_state = 723
+     		transfer_state = 586
+     	}
+     }
+}
+
+#SHI - Veto Ayame
+country_event = {
+	id = shion.50
+	title = shion.50.t
+    desc = shion.50.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.50.a	#Yes
+     ai_chance = { factor = 100 }
+     	remove_from_faction = AYA
+     	if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.3 }}
+		}
+     }
+
+     option = {
+     name = shion.50.b	#Yes
+     ai_chance = { factor = 100 }
+     	remove_from_faction = SHI
+     	if = { limit = { tag = AQA }
+			SHI = { country_event = { id = proposed.4 }}
+		}
+     }
+}
+
+#SHI - Demand puppet
+country_event = {
+	id = shion.51
+	title = shion.51.t
+    desc = shion.51.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.51.a	#Yes
+     ai_chance = { factor = 100 }
+     	SHI = {
+     		puppet = ROOT
+     	}
+     	if = { limit = { tag = MAR }
+			SHI = { country_event = { id = proposed.47 }}
+		}
+     }
+
+     option = {
+     name = shion.51.b	#Yes
+     ai_chance = { factor = 0 }
+     	if = { limit = { tag = MAR }
+			SHI = { country_event = { id = proposed.48 }}
+		}
+     }
+}
+
+#SHI - Black Magic EXPO
+country_event = {
+	id = shion.52
+	title = shion.52.t
+    desc = shion.52.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.52.a	#Yes
+     ai_chance = { factor = 80 }
+     	add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = support_tech
+            }
+        SHI = {add_equipment_to_stockpile = {
+                            type = hololive_yen_0
+                            amount = 1000
+                            producer = ROOT
+                    }}
+     }
+
+     option = {
+     name = shion.52.b	#Yes
+     ai_chance = { factor = 20 }
+     	add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = armor
+            }
+        SHI = {add_equipment_to_stockpile = {
+                            type = hololive_yen_0
+                            amount = 1500
+                            producer = ROOT
+                    }}
+     }
+
+     option = {
+     name = shion.52.c	#Yes
+     ai_chance = { factor = 0 }
+     	add_equipment_to_stockpile = {
+                            type = hololive_yen_0
+                            amount = 2000
+                            producer = SHI
+                    }
+     }
+}
+
+#SHI - Shionist terrorist attack
+country_event = {
+	id = shion.53
+	title = shion.53.t
+    desc = shion.53.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.53.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_timed_idea = {
+                idea = terrorist_attacked_idea
+                days = 60
+            }
+     }
+
+     option = {
+     name = shion.53.b	#Yes
+     ai_chance = { factor = 0 }
+     	add_timed_idea = {
+                idea = terrorist_attacked_idea
+                days = 30
+            }
+        add_political_power = -150
+     }
+}
+
+#AQA - Shionist State insurgency
+country_event = {
+    id = shion.54
+    title = shion.54.t
+    desc = shion.54.d
+    picture = GFX_report_event_shion_generic1
+
+     is_triggered_only = yes
+
+     option = {
+     name = shion.54.a	#Yes
+     ai_chance = { factor = 100 }
+     	add_ideas = shionist_attacked_idea
+     }
+
+}

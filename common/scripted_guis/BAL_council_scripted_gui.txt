@@ -1,0 +1,35 @@
+scripted_gui = {
+
+	bal_council_decision_ui = {
+		context_type = decision_category
+		window_name = "bal_council_decision_ui_window"
+
+		properties = {
+			bal_council_proposer_text = {
+				image  = "[GetHoloCouncilHost]"
+			}
+
+			bal_council_vote_result_real = {
+				image  = "[GetHoloCouncilVote_ALL]"
+			}
+
+			bal_council_final_result_header = {
+				
+			}
+
+			bal_council_detail_text = {
+				image  = "[GetHoloTopicDetail]"
+			}
+
+			bal_council_current_topic_text = {
+				image  = "[GetHoloTopicTitle]"
+			}
+
+			bal_council_topic_requirement = {
+				image  = "[GetHoloTopicRequire]"
+			}
+		}
+	}
+	
+}
+

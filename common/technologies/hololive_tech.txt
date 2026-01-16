@@ -1,0 +1,58 @@
+technologies = {
+	siberian_ranger_infantry = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			siberian_ranger
+		}
+	}
+
+	desert_rabbit_infantry = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			desert_rabbit
+		}
+	}
+
+	takodachi_infantry = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			takodachi
+		}
+	}
+
+	emu_cavalry_tank = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			emu_cavalry
+		}
+	}
+
+}

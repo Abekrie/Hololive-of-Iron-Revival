@@ -1,0 +1,38 @@
+on_actions = {
+
+	on_monthly_CHC = {
+		effect = {
+			if = {
+				limit = { has_country_flag = Choco_can_seduction_warfare }
+				add_to_variable = {
+					var = ROOT.succubus_points
+					value = ROOT.succubus_monthly
+				}
+			}
+		}
+	}
+
+	on_monthly_MEL = {
+		effect = {
+			if = {
+				limit = { has_country_flag = Choco_can_seduction_warfare }
+				add_to_variable = {
+					var = ROOT.succubus_points
+					value = ROOT.succubus_monthly
+				}
+			}
+		}
+	}
+
+	on_monthly_KRO = {
+		effect = {
+			if = {
+				limit = { has_country_flag = Choco_can_seduction_warfare }
+				add_to_variable = {
+					var = ROOT.succubus_points
+					value = ROOT.succubus_monthly
+				}
+			}
+		}
+	}
+}

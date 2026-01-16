@@ -1,0 +1,48 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Chakri Fleet"			
+		naval_base = 7408 
+		task_force = {				
+			name = "Chakri Force"			
+			location = 7408
+
+			ship = { name = "Chakri Naruebet" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "King Taksin" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "King Rama I" 
+			definition = battleship 
+			equipment = { battleship_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Koh Samui" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Koh Pangan" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Koh Tao" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE } } }
+
+			ship = { name = "Koh Nangyuan" 
+			definition = destroyer 
+			equipment = { destroyer_1 = { amount = 1 owner = NOE  } } }
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

@@ -1,0 +1,3455 @@
+focus_tree = {
+	id = PEK_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PEK
+			
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 2500 y = 1000 }
+
+	initial_show_position = {
+		x = 4
+		y = 2
+	}
+
+	#Diplomatic focus
+	focus = {
+        id = usada_pekora_pek_focus
+        icon = GFX_focus_pekora_flag
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = 
+        x = 4
+        y = 0
+        cost = 5
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = emergency_rearmament_pek_focus
+        icon = GFX_focus_generic_tank_production
+        prerequisite = { focus = usada_pekora_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usada_pekora_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = release_the_war_criminal_pek_focus
+        icon = GFX_focus_PEK_war_criminal2
+        prerequisite = { focus = emergency_rearmament_pek_focus}
+        mutually_exclusive = { focus = peko_royalist_assembly_pek_focus }
+        relative_position_id = emergency_rearmament_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        available = {
+            NOT = {
+                has_country_flag = pekora_accepted_the_sicily_trial
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	hidden_effect = {
+				#news_event = { id = holo_news.146 }
+			}
+		    retire_ideology_leader = fascism
+		    add_popularity = { ideology = fascism popularity = 0.6 }
+		    set_politics = {
+						ruling_party = fascism
+					}
+		    create_country_leader = {
+				name = "War Crime Peko"
+				picture = "gfx/leaders/PEK/war_criminal.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					
+					war_criminal_trait
+					
+				}
+			}
+
+			hidden_effect = {
+				news_event = { id = holo_news.188 }
+			}
+        }
+    }
+
+    focus = {
+        id = peko_royalist_assembly_pek_focus
+        icon = GFX_focus_PEK_princess
+        prerequisite = { focus = emergency_rearmament_pek_focus}
+        mutually_exclusive = { focus = release_the_war_criminal_pek_focus }
+        relative_position_id = emergency_rearmament_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_war_support = 0.1
+        	hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			hidden_effect = {create_country_leader = {
+							name = "Princess Pekora"
+							picture = "gfx/leaders/PEK/princess.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								crowned_by_god_trait
+								
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Princess Pekora"
+							picture = "gfx/leaders/PEK/princess.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								crowned_by_god_trait
+								
+								
+							}
+						}}
+
+			create_country_leader = {
+				name = "Princess Pekora"
+				picture = "gfx/leaders/PEK/princess.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					crowned_by_god_trait
+					
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Princess Pekora"
+							picture = "gfx/leaders/PEK/princess.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								crowned_by_god_trait
+								
+								
+							}
+						}}
+			hidden_effect = {
+				news_event = { id = holo_news.189 }
+			}
+        }
+    }
+
+    focus = {
+        id = usada_kensetsu_pek_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = usada_pekora_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usada_pekora_pek_focus
+        x = 11
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+        available = {
+        	is_subject = no
+        	is_in_faction = no
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	create_faction = FACTION_usada_kensetsu
+        	set_rule = { can_create_factions = yes }
+			hidden_effect = { news_event = { id = holo_news.51 }}
+        }
+    } 
+
+    focus = {
+        id = usada_hotel_pek_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = usada_kensetsu_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usada_kensetsu_pek_focus
+        x = 1
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_manpower = 100000
+        }
+    }
+
+    focus = {
+        id = hell_gate_pek_focus
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = usada_kensetsu_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usada_kensetsu_pek_focus
+        x = 3
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 5000
+		    producer = PEK
+	    }
+        }
+    }
+
+    focus = {
+        id = the_sorrow_pek_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = hell_gate_pek_focus
+        focus = usada_hotel_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hell_gate_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+        }
+    }
+
+    focus = {
+        id = technology_sharing_pek_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = the_sorrow_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_sorrow_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = slime_trap_pek_focus
+        icon = GFX_focus_PEK_navy
+        prerequisite = { focus = the_sorrow_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_sorrow_pek_focus
+        x = 1
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+        }
+    }
+
+    focus = {
+        id = trade_center_pek_focus
+        icon = GFX_focus_generic_trade
+        prerequisite = { focus = slime_trap_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = slime_trap_pek_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = hololive_trade		
+		    custom_effect_tooltip = hololive_trade_allows
+        }
+    }
+
+    focus = {
+        id = pekodam_pek_focus
+        icon = GFX_focus_PEK_navy
+        prerequisite = { focus = slime_trap_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = slime_trap_pek_focus
+        x = -2
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 2
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_peko_dam_pek_focus
+			hidden_effect = {if = {
+							limit = {
+								has_dlc = "Man the Guns"
+							}
+							load_oob = PEK_Peko_Dam_mtg
+						}
+			
+						if = {
+							limit = {
+								NOT = {has_dlc = "Man the Guns"}
+							}
+							load_oob = PEK_Peko_Dam_legacy
+						}}
+        }
+    }
+
+    focus = {
+        id = construction_budget_pek_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = pekodam_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pekodam_pek_focus
+        x = 3
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = usaken_dockyard_pek_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = pekodam_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pekodam_pek_focus
+        x = 5
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = usaken_arms_factory_pek_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = usaken_dockyard_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_dockyard_pek_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = oil_refinery_pek_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = usaken_arms_factory_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_arms_factory_pek_focus
+        x = 0
+        y = 2
+        cost = 10
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+			random_owned_controlled_state = {
+		        add_resource = {
+					type = oil
+					amount = 8
+				}
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+		    }
+        }
+    }
+
+    focus = {
+        id = usaken_industry_pek_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = construction_budget_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = construction_budget_pek_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = increase_work_hour_pek_focus
+        icon = GFX_goal_generic_construct_civilian
+        prerequisite = { focus = usaken_industry_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_industry_pek_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = bomber_command_focus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+        }
+    }
+
+    focus = {
+        id = tnt_cannon_pek_focus
+        icon = GFX_goal_generic_army_artillery2
+        prerequisite = { focus = usaken_industry_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_industry_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = artillery
+			}
+        }
+    }
+
+    focus = {
+        id = peko_bazooka_pek_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = usaken_industry_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_industry_pek_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+        }
+    }
+
+    focus = {
+        id = secret_weapons_pek_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = peko_bazooka_pek_focus
+        focus = tnt_cannon_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = peko_bazooka_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				bonus = 1
+				category = nuclear
+			}
+        }
+    }
+
+    focus = {
+        id = exploit_the_workforce_pek_focus
+        icon = GFX_focus_PEK_war_criminal
+        prerequisite = { focus = usaken_industry_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_industry_pek_focus
+        x = -5
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = war_criminal_in_the_state_ns
+        }
+    }
+
+    focus = {
+        id = minecraft_resource_pek_focus
+        icon = GFX_focus_engineer_2
+        prerequisite = { focus = exploit_the_workforce_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = exploit_the_workforce_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_efficiency_idea = yes
+        }
+    }
+
+    focus = {
+        id = gangsta_paradise_pek_focus
+        icon = GFX_focus_generic_royal_wedding
+        prerequisite = { focus = exploit_the_workforce_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = exploit_the_workforce_pek_focus
+        x = -4
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = tropical_paradise_1
+        }
+    }
+
+    focus = {
+        id = invite_coco_pek_focus
+        icon = GFX_focus_COC_coco
+        prerequisite = { focus = pekodam_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pekodam_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available = {
+        	COC = {
+        		is_in_faction = no
+        		is_subject = no
+        		NOT = { has_war_with = ROOT }
+        	}
+        	is_faction_leader = yes
+        	is_subject = no
+        }
+
+        bypass = {
+        	COC = { is_in_faction_with = ROOT }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	COC = {country_event = { id = pekora.27 }}
+        }
+    }
+
+    focus = {
+        id = recruit_coco_pek_focus
+        icon = GFX_focus_generic_military_mission
+        prerequisite = { focus = invite_coco_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_coco_pek_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = COC_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = invite_kanata_pek_focus
+        icon = GFX_focus_KAN_kanata
+        prerequisite = { focus = pekodam_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = pekodam_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	KAN = {
+        		is_in_faction = no
+        		is_subject = no
+        		NOT = { has_war_with = ROOT }
+        	}
+        	is_faction_leader = yes
+        	is_subject = no
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        bypass = {
+        	KAN = { is_in_faction_with = ROOT }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	KAN = {country_event = { id = pekora.27 }}
+        }
+    }
+
+    focus = {
+        id = recruit_kanata_pek_focus
+        icon = GFX_focus_generic_military_mission
+        prerequisite = { focus = invite_kanata_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_kanata_pek_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = KAN_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Amane Kanata"
+        }
+    }
+
+    focus = {
+        id = support_moona_pek_focus
+        icon = GFX_focus_MOO_guns
+        prerequisite = { focus = usada_kensetsu_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usada_kensetsu_pek_focus
+        x = -1
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MOO = {		
+            		add_equipment_to_stockpile = {
+                        type = infantry_equipment_0
+                        amount = 5000
+                        producer = ROOT
+                    }
+                  }
+        }
+    }
+
+    focus = {
+        id = invite_moona_pek_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = support_moona_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = support_moona_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	MOO = {
+        		is_in_faction = no
+        		is_subject = no
+        		NOT = { has_war_with = ROOT }
+        	}
+        	is_faction_leader = yes
+        	is_subject = no
+        }
+
+        bypass = {
+        	MOO = { is_in_faction_with = ROOT }
+        }
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MOO = {country_event = { id = pekora.27 }}
+        }
+    }
+
+    focus = {
+        id = turing_love_pek_focus
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = invite_moona_pek_focus}
+        mutually_exclusive = { focus = marry_moona_pek_focus }
+        relative_position_id = invite_moona_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+        }
+    }
+
+    focus = {
+        id = marry_moona_pek_focus
+        icon = GFX_focus_PEK_hey_moona
+        prerequisite = { focus = invite_moona_pek_focus}
+        mutually_exclusive = { focus = turing_love_pek_focus }
+        relative_position_id = invite_moona_pek_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = { 
+        	MOO = {
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+			is_subject = no
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MOO = {country_event = { id = pekora.38 }}
+        }
+    }
+
+    focus = {
+        id = moona_in_army_pek_focus
+        icon = GFX_focus_MOO_guns
+        prerequisite = { focus = marry_moona_pek_focus
+        focus = turing_love_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = marry_moona_pek_focus
+        x = 0
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = MOO_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Moona Hoshinova"
+        }
+    }
+
+    focus = {
+        id = moona_in_navy_pek_focus
+        icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = marry_moona_pek_focus
+        focus = turing_love_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = turing_love_pek_focus
+        x = 0
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = MOO_recruit_admiral_dec_flag
+            custom_effect_tooltip = CET_available_as_admiral
+            custom_effect_tooltip = "Moona Hoshinova"
+        }
+    }
+
+    focus = {
+        id = rubber_subsidies_pek_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = moona_in_navy_pek_focus
+        focus = moona_in_army_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = moona_in_navy_pek_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MOO = {	random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 2
+                                instant_build = yes
+                            }
+                        }
+                    random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 2
+                                instant_build = yes
+                            }
+                        }
+                    random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 2
+                                instant_build = yes
+                            }
+                        }
+
+                        }
+        }
+    }
+
+    focus = {
+        id = rabbit_volunteer_pek_focus
+        icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = emergency_rearmament_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = emergency_rearmament_pek_focus
+        x = 6
+        y = 1
+        cost = 2
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = lend-lease_act_pek_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = rabbit_volunteer_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = rabbit_volunteer_pek_focus
+        x = 0
+        y = 1
+        cost = 2
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = lend_lease_hololive_ns
+        }
+    }
+
+    focus = {
+        id = hey_moona_pek_focus
+        icon = GFX_focus_PEK_hey_moona
+        prerequisite = { focus = emergency_rearmament_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = emergency_rearmament_pek_focus
+        x = 5
+        y = 3
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = PEK_moona_high_com
+        }
+    }
+
+    focus = {
+        id = rabbit_militia_pek_focus
+        icon = GFX_focus_PEK_guns
+        prerequisite = { focus = hey_moona_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = hey_moona_pek_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_technology = {
+    			desert_rabbit_infantry = 1	
+			}
+            division_template = {
+                name = "Desert Rabbit"
+                is_locked = no
+                division_names_group = PEK_INF_01
+                regiments = {
+                    desert_rabbit = { x = 0 y = 0 }
+                    desert_rabbit = { x = 0 y = 1 }
+                    desert_rabbit = { x = 0 y = 2 }
+
+                    desert_rabbit = { x = 1 y = 0 }
+                    desert_rabbit = { x = 1 y = 1 }
+                    desert_rabbit = { x = 1 y = 2 }
+
+                    desert_rabbit = { x = 2 y = 0 }
+                    desert_rabbit = { x = 2 y = 1 }
+                    desert_rabbit = { x = 2 y = 2 }
+                } 
+            }
+        }
+    }
+
+    focus = {
+        id = war_on_italy_pek_focus
+        icon = GFX_focus_attack_germany
+        prerequisite = { focus = rabbit_militia_pek_focus}
+        mutually_exclusive = { focus = befriend_the_axis_pek_focus }
+        relative_position_id = rabbit_militia_pek_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 2
+                date > 1940.1.1
+            }
+        }
+
+            will_lead_to_war_with = GER
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                GER = { exists = no }
+                GER = { is_subject_of = ROOT }
+                GER = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = GER }
+        }
+    }
+
+    focus = {
+        id = befriend_the_axis_pek_focus
+        icon = GFX_focus_chi_mission_to_germany
+        prerequisite = { focus = rabbit_militia_pek_focus}
+        mutually_exclusive = { focus = war_on_italy_pek_focus }
+        relative_position_id = rabbit_militia_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	GER = {
+		    add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_unity_opinion
+		    }
+		    }
+        }
+    }
+
+    focus = {
+        id = rabbit_und_panzer_pek_focus
+        icon = GFX_focus_generic_army_tanks2
+        prerequisite = { focus = befriend_the_axis_pek_focus}
+        prerequisite = { focus = african_corps_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = befriend_the_axis_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 2.0
+                uses = 1
+                category = armor
+            }
+        }
+    }
+
+    focus = {
+        id = war_on_suisei_pek_focus
+        icon = GFX_focus_suisei_flag
+        prerequisite = { focus = war_on_italy_pek_focus
+        focus = befriend_the_axis_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_italy_pek_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = SUI
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                SUI = { exists = no }
+                SUI = { is_subject_of = ROOT }
+                SUI = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = SUI }
+        }
+    }
+
+    focus = {
+        id = war_on_switzerland_pek_focus
+        icon = GFX_focus_attack_switzerland
+        prerequisite = { focus = befriend_the_axis_pek_focus
+        focus = war_on_italy_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_italy_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 0
+        }
+
+            will_lead_to_war_with = SWI
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                SWI = { exists = no }
+                SWI = { is_subject_of = ROOT }
+                SWI = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = SWI }
+        }
+    }
+
+    focus = {
+        id = war_on_hq_pek_focus
+        icon = GFX_focus_yagoo_flag
+        prerequisite = { focus = war_on_switzerland_pek_focus
+        focus = war_on_suisei_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_switzerland_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = YAG
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                YAG = { exists = no }
+                YAG = { is_subject_of = ROOT }
+                YAG = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = YAG }
+        }
+    }
+
+    focus = {
+        id = contact_the_police_pek_focus
+        icon = GFX_focus_SUB_interpol
+        prerequisite = { focus = peko_royalist_assembly_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = peko_royalist_assembly_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = hololive_secret_police_idea
+        }
+    }
+
+    focus = {
+        id = sicily_trial_pek_focus
+        icon = GFX_focus_PEK_sicily_trial
+        prerequisite = { focus = contact_the_police_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = contact_the_police_pek_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = freedom_lady_idea
+        }
+    }
+
+    focus = {
+        id = crowned_by_pope_pek_focus
+        icon = GFX_focus_generic_monarchy_2
+        prerequisite = { focus = sicily_trial_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = sicily_trial_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = princess_of_rome_idea
+        }
+    }
+
+    focus = {
+        id = east_africa_company_pek_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = crowned_by_pope_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crowned_by_pope_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	TZN = {
+        		transfer_state = 546
+        		transfer_state = 769
+        		transfer_state = 768
+        		add_state_core = 769
+        		add_state_core = 768
+        		set_cosmetic_tag = PEK_EAF
+        	}
+        	PEK = {
+        		puppet = TZN
+        	}
+        }
+    }
+
+    focus = {
+        id = expand_our_colony_pek_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = east_africa_company_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = east_africa_company_pek_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 0
+        }
+
+            will_lead_to_war_with = EAM
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                EAM = { exists = no }
+                EAM = { is_subject_of = ROOT }
+                EAM = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = EAM }
+        }
+    }
+
+    focus = {
+        id = carrot_farm_pek_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = crowned_by_pope_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = crowned_by_pope_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = serve_the_princess_pek_focus
+        icon = GFX_focus_PEK_guns
+        prerequisite = { focus = carrot_farm_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = carrot_farm_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = f2_conscription_ns
+        }
+    }
+
+    focus = {
+        id = cute_rabbit_pek_focus
+        icon = GFX_focus_SOV_organize_wreckers
+        prerequisite = { focus = serve_the_princess_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = serve_the_princess_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = cute_1
+        }
+    }
+
+    focus = {
+        id = all_roads_lead_to_pekoland_pek_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = cute_rabbit_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = cute_rabbit_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = infrastructure_building_idea
+        }
+    }
+
+    focus = {
+        id = war_crime_pek_focus
+        icon = GFX_focus_PEK_war_criminal
+        prerequisite = { focus = release_the_war_criminal_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = release_the_war_criminal_pek_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_country_flag = PEK_can_war_criminal
+			custom_effect_tooltip = CET_war_criminal_pek_focus
+        }
+    }
+
+    focus = {
+        id = partially_disarmed_pek_focus
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = war_crime_pek_focus
+        focus = contact_the_police_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_crime_pek_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	swap_ideas = {
+    			remove_idea = full_disarmed_ns
+    			add_idea = partially_disarmed_ns
+			}
+        }
+    }
+
+    focus = {
+        id = fully_rearm_pek_focus
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = partially_disarmed_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = partially_disarmed_pek_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	remove_ideas = partially_disarmed_ns
+        }
+    }
+
+    focus = {
+        id = military_technology_pek_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = fully_rearm_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fully_rearm_pek_focus
+        x = 0
+        y = 1
+        cost = 10
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = enter_the_suez_crisis_pek_focus
+        text = enter_the_suez_crisis_oka_focus
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = military_technology_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = military_technology_pek_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_global_flag = korone_on_going_suez_crisis
+            NOT = {
+                is_in_faction_with = KRN
+                has_country_flag = can_no_longer_intervene_in_suez
+                has_global_flag = korone_suez_crisis_end
+            }
+        }
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            country_event = { id = korone.43 }
+            set_country_flag = intervened_in_suez_crisis
+        }
+    }
+
+    focus = {
+        id = african_corps_pek_focus
+        icon = GFX_focus_chi_army_reform
+        prerequisite = { focus = war_crime_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_crime_pek_focus
+        x = 0
+        y = 2
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = five_idols_army_ns
+        }
+    }
+
+    focus = {
+        id = tunisia_purchase_pek_focus
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = military_technology_pek_focus}
+        prerequisite = { focus = african_corps_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = african_corps_pek_focus
+        x = 0
+        y = 2
+        cost = 6
+
+        available_if_capitulated = yes
+
+        bypass = {
+            owns_state = 458
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            458 = {OWNER = {country_event = { id = pekora.39 }}}
+        }
+    }
+
+    focus = {
+        id = army_reform_pek_focus
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = tunisia_purchase_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tunisia_purchase_pek_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+        }
+    }
+
+    focus = {
+        id = human_traffiking_pek_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = army_reform_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = army_reform_pek_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = drug_dealing_pek_focus
+        icon = GFX_focus_COC_asacoco
+        prerequisite = { focus = human_traffiking_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = human_traffiking_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = asacoco_idea
+        }
+    }
+
+    focus = {
+        id = fortify_swiss_border_pek_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = tunisia_purchase_pek_focus
+        	focus = carrot_farm_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = tunisia_purchase_pek_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	159 = {
+				add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 607
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6661
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+        }
+    }
+
+    focus = {
+        id = fortify_suisei_border_pek_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = fortify_swiss_border_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fortify_swiss_border_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	158 = {
+				add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 6780
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 11891
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+        }
+    }
+
+    focus = {
+        id = fortify_italian_border_pek_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = fortify_swiss_border_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fortify_swiss_border_pek_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	159 = {
+				add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 3776
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = bunker
+            	    	    province = 11734
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+        }
+    }
+
+    focus = {
+        id = fortress_sicily_pek_focus
+        icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = fortify_italian_border_pek_focus
+        focus = fortify_suisei_border_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fortify_italian_border_pek_focus
+        x = -1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	114 = {
+				add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = 6891
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = 11773
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	add_building_construction = {
+            	    	    type = anti_air_building
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+			}
+        }
+    }
+
+    focus = {
+        id = greater_pekoland_pek_focus
+        icon = GFX_focus_PEK_greater_pekoland
+        prerequisite = { focus = army_reform_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = army_reform_pek_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 3
+        	has_full_control_of_state = 151
+        	has_full_control_of_state = 160
+        	has_full_control_of_state = 735
+        	has_full_control_of_state = 153
+        	has_full_control_of_state = 102
+        	has_full_control_of_state = 4
+        	has_full_control_of_state = 103
+        	has_full_control_of_state = 163
+        	has_full_control_of_state = 44
+        	has_full_control_of_state = 805
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_cosmetic_tag = PEK_greater
+
+        	add_state_core = 44
+        	add_state_core = 805
+        	add_state_core = 163
+        	add_state_core = 103
+        	add_state_core = 153
+        	add_state_core = 152
+        	add_state_core = 4
+        	add_state_core = 3
+        	add_state_core = 151
+        	add_state_core = 735
+            add_state_core = 160
+            add_state_core = 102
+        	hidden_effect = {
+				news_event = { id = holo_news.191 }
+			}
+        }
+    }
+
+    focus = {
+        id = holy_peko_empire_pek_focus
+        icon = GFX_focus_PEK_holy_peko_empire
+        prerequisite = { focus = serve_the_princess_pek_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = serve_the_princess_pek_focus
+        x = 0
+        y = 3
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 2
+        	has_full_control_of_state = 4
+        	has_full_control_of_state = 160
+        	has_full_control_of_state = 55
+        	has_full_control_of_state = 64
+        	has_full_control_of_state = 7
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	set_cosmetic_tag = PEK_holy_empire
+			every_state = {
+		   		limit = { OR = {
+		   			is_core_of = GER
+		   			is_core_of = KIA
+		   			is_core_of = AUS
+		   			is_core_of = ITA
+		   			is_core_of = HOL
+		   		} }
+		   		add_core_of = ROOT
+		   	}
+		   	hidden_effect = {
+				news_event = { id = holo_news.190 }
+			}
+        }
+    }
+
+	#Economy and Industry
+	focus = {
+		id = PEK_idol_creator
+		text = idol_creator
+		icon = GFX_focus_engineer_2
+		relative_position_id = usada_pekora_pek_focus
+		x = 20
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = PEK_minecraft_server
+		text = minecraft_server
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = PEK_idol_creator }
+		relative_position_id = PEK_idol_creator
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_wooden_house
+		text = wooden_house
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PEK_minecraft_server }
+		relative_position_id = PEK_minecraft_server
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	}
+
+	focus = {
+		id = PEK_nether_portal
+		text = nether_portal
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PEK_wooden_house }
+		relative_position_id = PEK_wooden_house
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+	    }
+	    }
+	}
+
+	focus = {
+		id = PEK_wooden_in_nether
+		text = wooden_in_nether
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PEK_nether_portal }
+		relative_position_id = PEK_nether_portal
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_oversea_fanbase
+		text = oversea_fanbase
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = PEK_idol_creator }
+		relative_position_id = PEK_idol_creator
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		navy_experience = 25
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = PEK_yuri_ship
+		text = yuri_ship
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = PEK_oversea_fanbase }
+		relative_position_id = PEK_oversea_fanbase
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = PEK_beach_eps
+		text = beach_eps
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = PEK_yuri_ship }
+		relative_position_id = PEK_yuri_ship
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = PEK_azur_lane_collab
+		text = azur_lane_collab
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = PEK_beach_eps }
+		relative_position_id = PEK_beach_eps
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = PEK_offensive_marketing
+		text = offensive_marketing
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = PEK_idol_creator }
+		relative_position_id = PEK_idol_creator
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_body_pillow
+		text = body_pillow
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PEK_offensive_marketing }
+		relative_position_id = PEK_offensive_marketing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_bath_water
+		text = bath_water
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PEK_body_pillow }
+		relative_position_id = PEK_body_pillow
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_t_shirt
+		text = t_shirt
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PEK_bath_water }
+		relative_position_id = PEK_bath_water
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_idol_research_generic
+		text = idol_research_generic
+		icon = GFX_focus_research
+		prerequisite = { focus = PEK_t_shirt 
+		focus = PEK_azur_lane_collab
+		focus = PEK_wooden_in_nether}
+		relative_position_id = PEK_azur_lane_collab
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_research_slot = 1
+	    }
+	}
+#Army Research
+    focus = {
+		id = PEK_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = PEK_idol_creator
+		x = 7
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = PEK_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = PEK_gaming }
+		relative_position_id = PEK_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = PEK_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PEK_animal_crossing }
+		relative_position_id = PEK_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = PEK_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = PEK_gaming }
+		relative_position_id = PEK_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = PEK_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PEK_tetris }
+		relative_position_id = PEK_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = PEK_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PEK_gaming }
+		relative_position_id = PEK_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = PEK_dark_soul_resh }
+		relative_position_id = PEK_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = PEK_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PEK_apex_legend  focus = PEK_ring_fit }
+		relative_position_id = PEK_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = PEK_pubg  focus = PEK_ring_fit }
+		relative_position_id = PEK_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = PEK_minecraft_resh  focus = PEK_mario_kart }
+		relative_position_id = PEK_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+#Air Research
+    focus = {
+		id = PEK_hololive_music
+		text = hololive_music
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = PEK_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		air_experience = 25
+	    }
+	}
+
+	focus = {
+		id = PEK_shiny_smily_story
+		text = shiny_smily_story
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = PEK_hololive_music }
+		relative_position_id = PEK_hololive_music
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_yumemiru_sora_he
+		text = yumemiru_sora_he
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PEK_hololive_music }
+		relative_position_id = PEK_hololive_music
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_kirame_rider
+		text = kirame_rider
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = PEK_hololive_music }
+		relative_position_id = PEK_hololive_music
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_fukkireta
+		text = fukkireta
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { 
+		focus = PEK_yumemiru_sora_he 
+		focus = PEK_shiny_smily_story}
+		relative_position_id = PEK_yumemiru_sora_he
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_azur_lane_boss_music
+		text = azur_lane_boss_music
+		icon = GFX_focus_rocketry
+		prerequisite = { 
+		focus = PEK_yumemiru_sora_he 
+		focus = PEK_kirame_rider}
+		relative_position_id = PEK_yumemiru_sora_he
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_idol_agency_like_akb
+		text = idol_agency_like_akb
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = PEK_azur_lane_boss_music }
+		prerequisite = { focus = PEK_fukkireta }
+		relative_position_id = PEK_azur_lane_boss_music
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = PEK_azur_lane_boss_music_2
+		text = azur_lane_boss_music_2
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = PEK_azur_lane_boss_music }
+		relative_position_id = PEK_azur_lane_boss_music
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+	    }
+	}
+
+
+#Navy Research
+    focus = {
+		id = PEK_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = PEK_hololive_music
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = PEK_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = PEK_live_streaming_gen }
+		mutually_exclusive = { focus = PEK_bilibili }
+		relative_position_id = PEK_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = PEK_youtube_gen }
+		relative_position_id = PEK_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = PEK_live_streaming_gen }
+		mutually_exclusive = { focus = PEK_youtube_gen }
+		relative_position_id = PEK_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = PEK_bilibili 
+		focus = PEK_youtube_gen}
+		relative_position_id = PEK_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PEK_superchat 
+		focus = PEK_game_casting}
+		prerequisite = { focus = PEK_karaoke }
+		relative_position_id = PEK_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = PEK_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = PEK_superchat 
+		focus = PEK_game_casting}
+		prerequisite = { focus = PEK_3d_studio }
+		relative_position_id = PEK_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = PEK_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = PEK_bilibili }
+		relative_position_id = PEK_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+
+    #North Africa focus
+    focus = {
+        id = usaken_north_africa_pek_focus
+        icon = GFX_focus_PEK_north_africa
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = PEK_vtuber_gang
+        x = -5
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        available = {
+            has_full_control_of_state = 451
+            has_full_control_of_state = 450
+            has_full_control_of_state = 449
+            has_full_control_of_state = 448
+            LBA = { exists = no }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = {
+                transfer_state = 449
+                transfer_state = 662
+                transfer_state = 448
+                transfer_state = 661
+
+                transfer_state = 273
+                transfer_state = 450
+                transfer_state = 663
+                transfer_state = 451
+                set_cosmetic_tag = PEK_NAF
+            }
+            PEK = {
+                puppet = LBA
+            }
+        }
+    }
+
+    focus = {
+        id = una_conpany_pek_focus
+        icon = GFX_focus_PEK_UNA_company
+        prerequisite = { focus = usaken_north_africa_pek_focus}
+        mutually_exclusive = { focus = national_oil_corporation_pek_focus }
+        relative_position_id = usaken_north_africa_pek_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = { add_efficiency_idea = yes }
+            LBA = {random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 1
+                                instant_build = yes
+                            }
+                        }
+                        random_owned_controlled_state = {
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                                type = industrial_complex
+                                level = 1
+                                instant_build = yes
+                            }
+                        }}
+        }
+    }
+
+    focus = {
+        id = national_oil_corporation_pek_focus
+        icon = GFX_focus_PEK_NOC_company
+        prerequisite = { focus = usaken_north_africa_pek_focus}
+        mutually_exclusive = { focus = una_conpany_pek_focus }
+        relative_position_id = usaken_north_africa_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = { add_research_idea = yes }
+            LBA = {random_owned_controlled_state = {
+                        add_resource = {
+                            type = oil
+                            amount = 8
+                            }
+                        }
+                        random_owned_controlled_state = {
+                        add_resource = {
+                            type = oil
+                            amount = 8
+                            }
+                        }}
+        }
+    }
+
+    focus = {
+        id = litoranea_balbo_pek_focus
+        icon = GFX_focus_generic_railroad
+        prerequisite = { focus = national_oil_corporation_pek_focus
+        focus = una_conpany_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = national_oil_corporation_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = PEK
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = LBA
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 1149
+                target_province = 11954
+            }
+
+            build_railway = {
+                level = 1
+                build_only_on_allied = no
+                controller_priority = {
+                    base = 1
+   
+                    modifier = {
+                        tag = PEK
+                        add = 2
+                    }
+
+                    modifier = {
+                        tag = LBA
+                        add = 2
+                    }
+                }
+                fallback = yes
+                #path = { 42 10 20 30 40 84 }
+                start_province = 11954
+                target_province = 1130
+            }
+        }
+    }
+
+    focus = {
+        id = expedition_for_oil_pek_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = litoranea_balbo_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = litoranea_balbo_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            273 = {
+            add_resource = {
+                type = oil
+                amount = 16
+                }
+            }
+
+        }
+    }
+
+    focus = {
+        id = outsource_to_libya_pek_focus
+        icon = GFX_focus_generic_develop_libya
+        prerequisite = { focus = litoranea_balbo_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = litoranea_balbo_pek_focus
+        x = 1
+        y = 1
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            662 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            448 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = send_in_the_prisoner_pek_focus
+        icon = GFX_focus_PEK_war_criminal
+        prerequisite = { focus = outsource_to_libya_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = outsource_to_libya_pek_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = {add_manpower = 100000}
+            LBA = {add_efficiency_idea = yes}
+        }
+    }
+
+    focus = {
+        id = new_libya_government_pek_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = usaken_north_africa_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = usaken_north_africa_pek_focus
+        x = 2
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = {add_political_power = 120
+            add_war_support = 0.1
+            add_stability = 0.05}
+        }
+    }
+
+    focus = {
+        id = establish_colonial_army_pek_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = new_libya_government_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = new_libya_government_pek_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            LBA = {add_ideas = f2_conscription_ns}
+            #add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = operation_cottontail_pek_focus
+        icon = GFX_focus_RUS_end_of_the_mandate
+        prerequisite = { focus = new_libya_government_pek_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = new_libya_government_pek_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = EAM
+            available = { date > 1938.1.1 }
+
+            bypass = { OR = {
+                EAM = { exists = no }
+                EAM = { is_subject_of = ROOT }
+                EAM = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = EAM }
+        }
+    }
+
+
+}

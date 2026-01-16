@@ -1,0 +1,39 @@
+﻿#submarine_1
+#destroyer_1
+#battleship_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	
+
+	fleet = {
+		name = "Pan-Pacific Fleet"		
+		naval_base = 12997
+		task_force = {				
+			name = "Pan-Pacific Force"			
+			location = 12997 
+
+ship = { name = "Tsunomaki"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = WAT } } }
+        
+ship = { name = "Akai Haato"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = WAT } } }
+
+ship = { name = "Lima-Sydney"
+definition = battleship
+equipment = { battleship_1 = { amount = 1 owner = WAT } } }
+        
+
+
+		}
+	}
+} 
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

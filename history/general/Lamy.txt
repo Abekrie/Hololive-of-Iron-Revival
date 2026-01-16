@@ -1,0 +1,74 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = LAM
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+  generate_character = {
+    token_base = LAM_lamy_tan_holo_xgeneral
+    name="Lamy-tan"
+      portraits={
+            army={
+                  large="gfx/leaders/LAM/lamy_tan.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster trickster winter_specialist}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = LAM_lamy_sama_holo_xgeneral
+    name="Lamy-sama"
+      portraits={
+            army={
+                  large="gfx/leaders/LAM/lamy_sama.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard cavalry_leader winter_specialist}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = LAM_nyanmy_holo_xgeneral
+    name="Nyanmy"
+      portraits={
+            army={
+                  large="gfx/leaders/LAM/nyanmy.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={infantry_leader winter_specialist}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

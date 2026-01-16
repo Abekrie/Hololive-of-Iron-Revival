@@ -1,0 +1,113 @@
+Generic_CHC_historical = {
+	name = "CHC historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = CHC
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = CHC
+			}
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		yuzuki_choco_chc_focus
+		question_of_ireland_chc_focus
+		idkmate_CHC_patially_disarmed_eng_focus
+		idkmate_CHC_no_disarmed_eng_focus
+		sweetest_regime_chc_focus
+		nationalize_chocolate_industry_chc_focus
+
+		relationship_concern_chc_focus
+		succubus_entente_chc_focus
+		seduction_warfare_chc_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+
+Generic_CHC_non_historical = {
+	name = "CHC non historical plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+				original_tag = CHC
+			}
+	}
+
+	enable = {
+		AND = {
+			OR = {
+				tag = CHC
+			}
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		yuzuki_choco_chc_focus
+		question_of_ireland_chc_focus
+		idkmate_CHC_patially_disarmed_eng_focus
+		idkmate_CHC_no_disarmed_eng_focus
+
+		secret_rearmament_chc_focus
+		chocolove_chc_focus
+		edinburgh_rally_chc_focus
+		
+		relationship_concern_chc_focus
+		succubus_entente_chc_focus
+		seduction_warfare_chc_focus
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+

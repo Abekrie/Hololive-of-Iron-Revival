@@ -1,0 +1,2930 @@
+﻿l_english:
+eco_action.1.t:0 "Invest in Industrial Complex"
+eco_action.1.d:0 "The industrial complex is a socioeconomic concept wherein businesses become entwined in social or political systems or institutions, creating or bolstering a profit economy from these systems."
+eco_action.1.a:0 "Buy 1 Civ"
+eco_action.1.b:0 "Next >>"
+eco_action.1.c:0 "Cancel"
+
+eco_action.2.t:0 "Invest in Military Factory"
+eco_action.2.d:0 "More mils, more weapons produced, more money printed, for more mils."
+eco_action.2.a:0 "Buy 1 Mil"
+eco_action.2.b:0 "Next >>"
+eco_action.2.c:0 "Cancel"
+
+eco_action.3.t:0 "Invest in Naval Dockyard"
+eco_action.3.d:0 "More Dockyard, more ship, more trading, more income, more money, for more Dockyard"
+eco_action.3.a:0 "Buy 1 Doc"
+eco_action.3.b:0 "Next >>"
+eco_action.3.c:0 "Cancel"
+
+kmr.1.t:0 "Kameroon asks for white peace"
+kmr.1.d:0 "Our good old colony demand white peace upon us!"
+kmr.1.a:0 "Fine"
+kmr.1.b:0 "They shall not be free!"
+
+kmr.2.t:0 "German accepted white peace"
+kmr.2.d:0 "We're now a free and independence nation!"
+kmr.2.a:0 "God be with us!"
+
+kmr.3.t:0 "German denied the white peace"
+kmr.3.d:0 "It seems like they will not let us go"
+kmr.3.a:0 "Dang it!"
+
+kmr.4.t:0 "Yaounde Uprising"
+kmr.4.d:0 "The uprising happens in our East Afrika colony. We shall crush them all!"
+kmr.4.a:0 "Down with the traitor"
+
+hitomi.1.t:0 "Unrest in Balkan"
+hitomi.1.d:0 "Our newly annexed state in Balkan has big unrest. People of Balkan is doing Balkan thing"
+hitomi.1.a:0 "Crush the rebel"
+hitomi.1.b:0 "Appease the local"
+
+hitomi.2.t:0 "Question of Zara"
+hitomi.2.d:0 "Many locals in Balkan are unhappy about our government"
+hitomi.2.a:0 "Zara independence"
+hitomi.2.b:0 "Setup local government"
+hitomi.2.c:0 "Unthinkable Option"
+
+holo_news.37.t:0 "Hitomi coup in Balkan"
+holo_news.37.d:0 "This is unexpected. The world has truly enter the age of darkness. May God has mercy upon us"
+holo_news.37.a:0 "Nobody was expecting this"
+
+holo_news.38.t:0 "Tension in the Balkan"
+holo_news.38.d:0 "Balkan people in our country start to demand for autonomy. This can lead to civilwar!"
+holo_news.38.a:0 "A normal day in Balkan"
+
+hitomi.3.t:0 "Hitomi National Mobilization"
+hitomi.3.d:0 "It is time for Hitomi to revenge!"
+hitomi.3.a:0 "To arms!!!"
+
+holo_news.39.t:0 "Coco marches North"
+holo_news.39.d:0 "So I place my knapsack on my back! My rifle on my shoulder!\nI'll march away to the firing line, and kill that Mio soldier!\nI'll kill that Mio soldier!\nI’ll march away to the firing line, and I’ll kill that Mio soldier!"
+holo_news.39.a:0 "Onto Washington!"
+holo_news.39.b:0 "Prepare for trouble"
+
+###
+holo_news.40.t:0 "Amelia forms United Kingdom"
+holo_news.40.d:0 "Tears, toils, drugs and sweat. Amelia has finally conquered the British isle"
+holo_news.40.a:0 "God Save the Amelia"
+
+holo_news.41.t:0 "Choco forms United Kingdom"
+holo_news.41.d:0 "Tears, toils, drugs and sweat. Choco has finally conquered the British isle"
+holo_news.41.a:0 "God Save the Choco"
+
+###
+ins.1.t:0 "War on Moona"
+ins.1.d:0 "It's time for Civil War"
+ins.1.a:0 "Let's go"
+
+ins.2.t:0 "War on Iofi"
+ins.2.d:0 "It's time for Civil War"
+ins.2.a:0 "Let's go"
+
+ins.3.t:0 "War on Risu"
+ins.3.d:0 "It's time for Civil War"
+ins.3.a:0 "Let's go"
+
+###
+holo_news.42.t:0 "Hololive Indonesia Civil War"
+holo_news.42.d:0 "The war began after a memberontak (a declaration of military opposition, of revolt) against the Risu government by a group of generals of the Moona Armed Forces, with General Moona Hoshinova as the primary planner and leader.\n\nJava is under control of Risu, under the leadership of President Ayunda Risu.\n\nThe Iofi group was supported by a number of conservative groups, including Papuan and Sundan"
+holo_news.42.a:0 "Oh no! It's time to intervene!"
+
+holo_news.43.t:0 "Risu forms Hololive ID"
+holo_news.43.d:0 "Risu claims the absolute ruler of the water bender empire"
+holo_news.43.a:0 "Long Live Risu"
+
+holo_news.44.t:0 "Moona forms Hololive ID"
+holo_news.44.d:0 "Moona claims the absolute ruler of the water bender empire"
+holo_news.44.a:0 "Long Live Moona"
+
+holo_news.45.t:0 "Iofi forms Hololive ID"
+holo_news.45.d:0 "Iofi claims the absolute ruler of the water bender empire"
+holo_news.45.a:0 "Long Live Iofi"
+
+choco.3.t:0 "Question of Ireland"
+choco.3.d:0 "People of Ireland are questioning our authority"
+choco.3.a:0 "Make them eat potato"
+choco.3.b:0 "Up the RA!"
+
+holo_news.46.t:0 "Republic of Ireland"
+holo_news.46.d:0 "Ireland is back!"
+holo_news.46.a:0 "Very interesting Choco"
+
+choco.4.t:0 "Choco demands Wales"
+choco.4.d:0 "Choco demands a random state in our country"
+choco.4.a:0 "Yes! Honey!"
+choco.4.b:0 "We don't simp here"
+
+choco.5.t:0 "England accepted our demand"
+choco.5.d:0 "Another clay to our land!"
+choco.5.a:0 "Long live Choco!"
+
+choco.6.t:0 "England refused our demand"
+choco.6.d:0 "This is yabai"
+choco.6.a:0 "No!"
+
+choco.7.t:0 "Choco demands Brittany"
+choco.7.d:0 "Choco demands a random state in our country"
+choco.7.a:0 "Yes! Honey!"
+choco.7.b:0 "We don't simp here"
+
+choco.8.t:0 "France accepted our demand"
+choco.8.d:0 "Another clay to our land!"
+choco.8.a:0 "Long live Choco!"
+
+choco.9.t:0 "France refused our demand"
+choco.9.d:0 "This is yabai"
+choco.9.a:0 "No!"
+
+kiara.1.t:0 "Kiara proposed personal union"
+kiara.1.d:0 "Will you marry Kiara?"
+kiara.1.a:0 "Yes"
+kiara.1.b:0 "No, kusotori!"
+
+kiara.2.t:0 "Calliope accepted our proposal"
+kiara.2.d:0 "Let's go!"
+kiara.2.a:0 "Nice one Calli"
+
+kiara.3.t:0 "Calliope rejected our proposal"
+kiara.3.d:0 "This is so sad. Play despacito"
+kiara.3.a:0 "F"
+
+kiara.4.t:0 "Kiara demands puppet"
+kiara.4.d:0 "Kiara has offered Kiara to Calliope as a political bargaining tool"
+kiara.4.a:0 "You will become Kiara's puppet"
+kiara.4.b:0 "No"
+
+kiara.5.t:0 "Royal Wedding!"
+kiara.5.d:0 "Let's go!"
+kiara.5.a:0 "Nice"
+
+kiara.6.t:0 "Rejected"
+kiara.6.d:0 "I'm 16 and this is deep"
+kiara.6.a:0 "Kuso!"
+
+kiara.7.t:0 "Württemberg or War"
+kiara.7.d:0 "Kiara demands Württemberg"
+kiara.7.a:0 "We can't afford another war"
+kiara.7.b:0 "She will have to come and take it"
+
+kiara.8.t:0 "Germany accepted our request"
+kiara.8.d:0 "Nice"
+kiara.8.a:0 "Another victory for Phoenix Empire"
+
+kiara.9.t:0 "Germany rejected our request"
+kiara.9.d:0 "Germany acting kinda sus man"
+kiara.9.a:0 "Dang it"
+
+holo_news.47.t:0 "Kiara Fascist Phoenix"
+holo_news.47.d:0 "Founded in 2020, Kiara Fried Phoenix is the newest fast food chain sweeping the world.\nBy innovating on every level of the fast food experience, our first restaurant opening has smashed all expectations and we are set to start expanding at a record breaking pace.\nWhether it be the built-in bakery, the near-limitless choices at our sauce bar, or our next-level customer service, we’re sure one visit is all it’ll take to make you want to come back again and again.  Or, if you’d rather experience KFP from your own home, we offer convenient delivery through Uber Eats."
+holo_news.47.a:0 "Fascist lickin' good"
+
+holo_news.48.t:0 "Kiara-Calliope personal union"
+holo_news.48.d:0 "Kiara has a particular fondness for Mori Calliope. Kiara, a phoenix who has been continuously reborn, always meets Calliope each time she dies. However, it is not within Calliope's power to keep a phoenix in the Underworld."
+holo_news.48.a:0 "Congrats!"
+
+kiara.10.t:0 "Kiara demands Luxembourg"
+kiara.10.d:0 "Kiara acting kinda sus lately"
+kiara.10.a:0 "Ok"
+kiara.10.b:0 "No"
+
+kiara.11.t:0 "Amelia accepted our request"
+kiara.11.d:0 "Nice one Ame!"
+kiara.11.a:0 "Let's go!"
+
+kiara.12.t:0 "Amelia rejected our demand"
+kiara.12.d:0 "This is so sad"
+kiara.12.a:0 "No!"
+
+holo_news.49.t:0 "Shigure Ui coup on Subaru"
+holo_news.49.d:0 "Ui is an 16-year-old high school student, with a conservative school uniform with a skirt and a beret and little fluff balls in her braids and collar.\nShe is also accused of being a neglectful or abusive mother of her brainchildren, as seen with when she's around Oozora Subaru"
+holo_news.49.a:0 "Calm down!"
+
+holo_news.50.t:0 "Winter Purge"
+holo_news.50.d:0 "OH HIGH LORD OF THE GREAT LAMYFICATION CULT, WHAT DO YOU SUGGEST WE DO IN THE NAME OF LAMY, OUR TRUE AND ONLY GOD, THE ONE WE SEEK TO TURN INTO, THE PERFECT FORM!\n\nALL HAIL LAMY, THE PERFECT FORM, THE TRUE TRANSFORMATION, THE DESIRED ONE"
+holo_news.50.a:0 "God save our gracious snow elf!"
+
+holo_news.51.t:0 "Usada Kensetsu"
+holo_news.51.d:0 "USADA CONSTRUCTION WAS FOUNDED THIS 2019...\n\nWhich is very recent but ever since Usada Cannon T3 MK II we have been getting non-stop requests from our clients as time passes. We were able to annihilate a whole base of pillagers and managed to be known as the the first Construction company in Hololive. Please take a look at the first ever creation of Usada Construction"
+holo_news.51.a:0 "No way!"
+
+holo_news.52.t:0 "Sicily Trial"
+holo_news.52.d:0 "'Hello, and I can't stress this enough, my gamers' I'm here to state that my client, Usada Pekora CEO of Usada Construction, can not be considered a war criminal.\n\n As quoted from Wikipedia.org "The Geneva Conventions apply at times of war and armed conflict to governments who have ratified its terms." Now, as far as I have searched there are no documents confirming that Holoserver has ratified the terms of the Geneva Convention therefore the actions of Ms. Usada can not be considered criminal."
+holo_news.52.a:0 "Very interesting"
+
+pekora.27.t:0 "Pekora Invite you to Usada Kensetsu"
+pekora.27.d:0 "Together we shall rule the world!"
+pekora.27.a:0 "Yes"
+pekora.27.b:0 "No"
+
+pekora.28.t:0 "Moona accepted to join our faction"
+pekora.28.d:0 "Together we strong!"
+pekora.28.a:0 "Nice!"
+
+pekora.30.t:0 "Coco accepted to join our faction"
+pekora.30.d:0 "Together we strong!"
+pekora.30.a:0 "Nice!"
+
+pekora.32.t:0 "Kanata accepted to join our faction"
+pekora.32.d:0 "Together we strong!"
+pekora.32.a:0 "Nice!"
+
+pekora.29.t:0 "Moona refused to join our faction"
+pekora.29.d:0 "This is not based at all"
+pekora.29.a:0 "F"
+
+pekora.31.t:0 "Coco refused to join our faction"
+pekora.31.d:0 "This is not based at all"
+pekora.31.a:0 "F"
+
+pekora.33.t:0 "Kanata refused to join our faction"
+pekora.33.d:0 "This is not based at all"
+pekora.33.a:0 "F"
+
+pekora.34.t:0 "Pekora demands Libya"
+pekora.34.d:0 "Local rabbit gone sicko mode"
+pekora.34.a:0 "Yes, peko"
+pekora.34.a:0 "No"
+
+pekora.35.t:0 "Italy accepted our demands"
+pekora.35.d:0 "First catch of the day!"
+pekora.35.a:0 "Let's go"
+
+pekora.36.t:0 "Italy refused our demands"
+pekora.36.d:0 "This is not funny"
+pekora.36.a:0 "F"
+
+sora.5.t:0 "Sora falls and dies"
+sora.5.d:0 "This is Hololive level threat"
+sora.5.a:0 "Cover up the story"
+sora.5.b:0 "RIP"
+
+holo_news.53.t:0 "Sora falls and dies"
+holo_news.53.d:0 "I was bullying Suisei in tetris wen\nI got a call telling me dat\n"Sora is kil"\n"No""
+holo_news.53.a:0 "No"
+
+sora.6.t:0 "Macedonia for Peace"
+sora.6.d:0 "Sora proposed Macedonia for Non-aggression pact"
+sora.6.a:0 "Yes"
+sora.6.a:0 "No"
+
+sora.7.t:0 "Peace for our time"
+sora.7.d:0 "Yagoo accepted our demands"
+sora.7.a:0 "Nice!"
+
+sora.8.t:0 "Yagoo rejected our demands"
+sora.8.d:0 "This is top 10 Anime betrayals"
+sora.8.a:0 "F"
+
+holo_news.54.t:0 "Towa done TNT Prank!"
+holo_news.54.d:0 "In order to become an archdemon, she joined the human society for further studies. She should be studying but is now addicted to gaming. She realized that the method commonly known as "streaming" is also a way to communicate with humans. She is now in the "trial and error" process."
+holo_news.54.a:0 "This is so evil!"
+
+watame.24.t:0 "Watame asks to join our faction"
+watame.24.d:0 "A Sheep is seeking to join our faction"
+watame.24.a:0 "Let's go sheep!"
+watame.24.b:0 "Maybe no now"
+
+watame.25.t:0 "Paraguay Incident"
+watame.25.d:0 "Watame demands annex us!"
+watame.25.a:0 "Ok"
+watame.25.b:0 "Tell her to go back to sleep!"
+
+watame.26.t:0 "Paraguay submitted"
+watame.26.d:0 "We shall intergrate them into the Greater Watame empire!"
+watame.26.a:0 "Let's go!"
+
+holo_news.55.t:0 "Stalking Wife"
+holo_news.55.d:0 "Haachama does whatever comes to impulse. She does nothing to discourage creepy behaviors, and frequently does weird, creepy things herself such as sniffing her own feet, and decorating her home in Animal Crossing-New Horizons with lewd drawings of herself and Tsunomaki Watame and even going so far to fondle Haato's breasts whenever she feels discomfort."
+holo_news.55.a:0 "Very cool"
+
+holo_news.56.t:0 "Watame impersonates Ui"
+holo_news.56.d:0 "Watame's voice, as well as distinct mannerisms such as her laugh, have been noted by fans and even hololive members to be extremely similar to that of Oozora Subaru's illustrator and VTuber Shigure Ui.\n Subaru even claimed that when she watched Watame's debut stream she became confused and thought that it was actually Ui streaming under a new identity."
+holo_news.56.a:0 "Watame is kinda sus right now"
+
+holo_news.57.t:0 "Queen Luna coup"
+holo_news.57.d:0 "The princess of sweets. She sticks around people, and is easily impressed. However, when her childishness overloads, she will get scolded by her butler. It was also told that those moonshapes are the symbols of her country."
+holo_news.57.a:0 "Long live the Queen!"
+
+kanata.35.t:0 "Kanata wants to join our faction"
+kanata.35.d:0 "A gorilla is seeking to join our faction"
+kanata.35.a:0 "Ok"
+kanata.35.b:0 "No"
+
+kanata.36.t:0 "Kanata demands Burma"
+kanata.36.d:0 "Kanata is such a sussy gorilla"
+kanata.36.a:0 "Ok"
+kanata.36.b:0 "No"
+
+holo_news.58.t:0 "Kanata controls Asacoco trade"
+holo_news.58.d:0 "Her uniform's ribbon is consistently uneven/lopsided. Gaps in her bangs reveal that she has cobalt-blue highlights.\n Kanata also has two feathered wings which can be seen over her shoulders, as is typical of angels (in several episodes of AsaCoco Live News Kiryu Coco has found innovative uses for the feathers they produce)."
+holo_news.58.a:0 "Ok, Kanata"
+
+holo_news.59.t:0 "Project Hope"
+holo_news.59.d:0 "IRyS, a half-demon, half-angel also known as a Nephilim, once brought hope to “The Paradise” during the ancient age. Her full name is [REDACTED] Irys.\nThis current era, riddled with despair and desperation, has brought upon her second awakening.\nShe has arrived to deliver hope, with her feelings put into her lyrics and songs, and determination in her voice."
+holo_news.59.a:0 "As long as hope has been in your heart"
+
+holo_en.1.t:0 "Project Hope"
+holo_en.1.d:0 "Here comes hope!"
+holo_en.1.a:0 "IRyS be in charge"
+holo_en.1.b:0 "We will still be in charge"
+
+amelia.1.t:0 "Amelia proposed Amesame Union"
+amelia.1.d:0 "Together we strong!"
+amelia.1.a:0 "Ok"
+amelia.1.b:0 "No"
+
+amelia.2.t:0 "Amelia demands puppet us!"
+amelia.2.d:0 "This is ridiculous Ame!"
+amelia.2.a:0 "Sure"
+amelia.2.b:0 "Of course, no!"
+
+amelia.3.t:0 "Interrogation session"
+amelia.3.d:0 "Amelia is trying to arrest us!"
+amelia.3.a:0 "Bribe the officer"
+amelia.3.b:0 "We can't afford to pay"
+
+holo_news.60.t:0 "Amesame"
+holo_news.60.d:0 "When Moona Hoshinova joked during a Minecraft stream that she wanted to turn Gura into shark soup\nand Watson Amelia commented that "It's a good thing detectives aren't very tasty",\nGura replied with "I beg to differ, I beg to differ".\n\nUnless she was joking, this implies that detectives taste better than normal humans."
+holo_news.60.a:0 "The new naval superpower?"
+
+holo_news.61.t:0 "Amelia is trying to Alter the timeline"
+holo_news.61.d:0 "Amelia heard strange rumors surrounding Hololive online of talking foxes, magical squirrels, superhuman dogs, and more.\nSoon after beginning her investigation on Hololive, and just out of interest,\nshe decided to become an idol herself!\n\nShe loves to pass her time training her reflexes with FPS games, and challenging herself with puzzle games.\nIt's elementary, right?"
+holo_news.61.a:0 "Covid-19? Pandemic? 2020? What's that?"
+
+gura.1.t:0 "Gura seek to join our faction"
+gura.1.d:0 "Very interesting, Gura"
+gura.1.a:0 "Together we strong!"
+gura.1.b:0 "She is too far away"
+
+gura.2.t:0 "Gura demands puppet us!"
+gura.2.d:0 "This is getting out of hand"
+gura.2.a:0 "We are a Shrimp"
+gura.2.b:0 "We are NOT a Shrimp"
+
+gura.3.t:0 "Gura wants to sell Macau"
+gura.3.d:0 "This is a very important strategic position"
+gura.3.a:0 "Sold!"
+gura.3.b:0 "We don't make deal with a Shark"
+
+gura.4.t:0 "Gura wants to buy Hongkong" 
+gura.4.d:0 "Gura wants to buy Hongkong"
+gura.4.a:0 "Ok"
+gura.4.b:0 "No"
+
+gura.5.t:0 "Gura proposed Pacific Blocs"
+gura.5.d:0 "We will get a civ and Gura will also get a civ"
+gura.5.a:0 "Deal!"
+gura.5.b:0 "We don't make deal with a Shark"
+
+gura.6.t:0 "West Papua for Peace"
+gura.6.d:0 "Gura wants West Papua in exchange for Non-aggression Pact"
+gura.6.a:0 "Deal!"
+gura.6.b:0 "We don't make deal with a Shark"
+
+gura.7.t:0 "New Zealand for Peace"
+gura.7.d:0 "Gura wants West Papua in exchange for Non-aggression Pact"
+gura.7.a:0 "Deal!"
+gura.7.b:0 "We don't make deal with a Shark"
+
+holo_news.62.t:0 "Operation Save Watson"
+holo_news.62.d:0 "Amesame, display their might\nOrdering carriers, Amelia at war\nWe'll meet at Britain to win the fight\nTactics are crucial, naval war\n\nFar from shore, an Atlantic war\nBombs are falling from the skies\nIt's a bomb run day, it's the naval way\nA blood red sun is on the rise"
+holo_news.62.a:0 "We'll meet at Britain!"
+
+calliope.1.t:0 "Calliope proposed Takamori union"
+calliope.1.d:0 "Let's go! Calli!"
+calliope.1.a:0 "Yes"
+calliope.1.b:0 "No"
+
+calliope.2.t:0 "Calliope demands puppet us!"
+calliope.2.d:0 "Should we submit?"
+calliope.2.a:0 "Yes, daddy"
+calliope.2.b:0 "We are not political bargaining tool!"
+
+calliope.3.t:0 "Calliope demands Copenhagen"
+calliope.3.d:0 "Calliope wants to control the strait"
+calliope.3.a:0 "Yes"
+calliope.3.b:0 "No"
+
+calliope.4.t:0 "Calliope wants to sell Sahara province"
+calliope.4.d:0 "We will expand a little bit more"
+calliope.4.a:0 "Deal!"
+calliope.4.b:0 "No"
+
+calliope.5.t:0 "Sahara province is sold"
+calliope.5.d:0 "Portugal accepted our deal!"
+calliope.5.a:0 "Nice"
+
+holo_news.63.t:0 "Calliope summoned Deadbeats divisions"
+holo_news.63.d:0 "The Grim Reaper's first apprentice. Because the world's medical system advanced so dramatically, Calliope became a VTuber to collect souls. It seems that the lost souls vaporized by the wholesome relationships of VTubers flow through her as well.\n\nIn the end, she's a gentle-hearted girl whose sweet voice contradicts the morbid things she tends to say, as well as her hardcore vocals."
+holo_news.63.a:0 "Attack of the deadbeats!"
+
+holo_news.201.t:0 "Death, destroyer of the world"
+holo_news.201.d:0 "The Grim Reaper's first apprentice. Because the world's medical system advanced so dramatically, Calliope became a VTuber to collect souls. It seems that the lost souls vaporized by the wholesome relationships of VTubers flow through her as well.\n\nIn the end, she's a gentle-hearted girl whose sweet voice contradicts the morbid things she tends to say, as well as her hardcore vocals."
+holo_news.201.a:0 "Attack of the deadbeats!"
+
+holo_news.202.t:0 "Realm of the Dead"
+holo_news.202.d:0 "Calli is a shinigami, a spirit being of death similar to the western concept of the grim reaper. Her purpose is to carry souls of the dead to the afterlife, although she is on hiatus from this job while working as a hololive member, and has promised not to kill anybody.\n\nShe comes from the Underworld, the realm of the dead. The Underworld mimics the aesthetic of the current era, so it looks mostly like a modern city."
+holo_news.202.a:0 "Mommy?"
+
+holo_news.64.t:0 "Tako Bell"
+holo_news.64.d:0 "Ina likes food, drawing, gaming, reading and sometimes cooking."
+holo_news.64.a:0 "Ina shop"
+
+holo_news.65.t:0 "Ina of the mountain"
+holo_news.65.d:0 "Due to her tendency to make puns, whenever she or another hololive member (sometimes other VTubers in general) makes a pun, the chat tends to say "INAFF".\nPavolia Reine in particular shares her fondness for puns."
+holo_news.65.a:0 "Inaff of this already..."
+
+holo_news.66.t:0 "Tale of the Ancient ones"
+holo_news.66.d:0 "One day, Ina'nis picked up a strange book and then started to gain the power of controlling tentacles. To her, tentacles are just a part in her ordinary life; it has never been a big deal for her.\n\nHowever, her girly mind does want to get them dressed up and stay pretty."
+holo_news.66.a:0 "Hearts of Ina-ron 4"
+
+ina.1.t:0 "Tako Bell - KFP cooperation"
+ina.1.d:0 "This will benefit both of us"
+ina.1.a:0 "Get In-a faction"
+ina.1.b:0 "No"
+
+ina.2.t:0 "Ina wants to buy Congo"
+ina.2.d:0 "Seems like Ina is interesting in expanding her Tako Bell"
+ina.2.a:0 "Sure"
+ina.2.b:0 "No"
+
+ina.3.t:0 "Ina demands Leningrad"
+ina.3.d:0 "Leningrad is a very strategic important city"
+ina.3.a:0 "I don't care"
+ina.3.b:0 "I do care"
+
+ina.4.t:0 "Soviet accepted our demands"
+ina.4.d:0 "Nice one!"
+ina.4.a:0 "Money on my mind"
+
+ina.5.t:0 "Ina wants to buy Kiel canal"
+ina.5.d:0 "Maybe she wants access to the rest of the world"
+ina.5.a:0 "Fine"
+ina.5.b:0 "No"
+
+miko.24.t:0 "Miko seeks to join your faction"
+miko.24.d:0 "Elite Miko wants to make alliance with us"
+miko.24.a:0 "Sure"
+miko.24.b:0 "No"
+
+holo_news.67.t:0 "Great Fire Disaster"
+holo_news.67.d:0 "This is the second time that miko sets her house in fire after the major incident by the same as putting magma onto her wall instead of inserting inside the place where it should've been there."
+holo_news.67.a:0 "Miko moment"
+
+holo_news.68.t:0 "Unholy Alliance"
+holo_news.68.d:0 "Miko is well known for her frequent interactions and friendship with Usada Pekora on and off screens, forming the pair “PekoMiko" with the latter. As the pair was famous, hololive released the song “PekoMiko Daisensō,” themed after the duo’s interactions and unofficial collabs, which were known as “wars," as one of the songs for the collaboration with the rhythm game WACCA."
+holo_news.68.a:0 "Let us pray"
+
+holo_news.69.t:0 "Elite Policy"
+holo_news.69.d:0 "Miko is a self-proclaimed "elite" gamer who is somewhat melodramatic and tends to become emotionally attached to NPCs and inanimate objects.\nFans tend to use the term "elite" ironically to highlight Miko's questionable decision-making skills as well as her tendency to speak garbled nonsense punctuated by the occasional F-bomb. Though Miko specializes in role-playing games, much of the humor on her channel stems from the fact that even while playing graphic and violent games, such as Grand Theft Auto, she rarely takes her role seriously."
+holo_news.69.a:0 "Nyahello"
+
+aqua.67.t:0 "Aqua invites you to her faction"
+aqua.67.d:0 "As the leader of the resistance, I am inviting you to our faction. We are fighting against an oppressive regime that has silenced our voices and violated our basic rights. We can no longer stand idle. Consider joining us in our fight for justice and a brighter future!"
+aqua.67.a:0 "Sure"
+aqua.67.b:0 "We are not ready"
+
+aqua.68.t:0 "Anti-Policy Pact"
+aqua.68.d:0 "We commit ourselves to enacting economic and diplomatic measures that will hold Hololive HQ accountable for its actions and force a transformation of its oppressive policies."
+aqua.68.a:0 "I will just take the money"
+aqua.68.b:0 "We shall not flag or fail!"
+
+holo_news.70.t:0 "Akukin Construction"
+holo_news.70.d:0 "Aqua established her own company, Akukin Kensetsu, on the hololive Minecraft JP server and recruited Houshou Marine as her first employee (eventually 2nd-in-command), before expanding to recruit Ookami Mio (3rd-in-command) to compete with Usada Kensetsu. Akukin Kensetsu later conducted a series of interviews to recruit more employees."
+holo_news.70.a:0 "We shall watch the onion"
+
+holo_news.71.t:0 "Dawn of the Resistance"
+holo_news.71.d:0 "The enemies of the idols, the idol agencies say that the staffs and talents cannot live without them. "If it were not for us," they say, "there would be nobody to maintain order, to give out work, and to compel people to work. If it were not for us everything would collapse, and the industry would fall to pieces. We have been driven away, but chaos will bring us back again." But this sort of talk by the agencies will not confuse, intimidate, or deceive the artists and talents. An army needs the strictest discipline; nevertheless the class-conscious idols succeeded in uniting the staffs, succeeded in taking the old idolist managers into their service, succeeded in building a victorious army."
+holo_news.71.a:0 "Viva la Revolution!"
+
+holo_news.72.t:0 "5th Internationale"
+holo_news.72.d:0 "Comrades, the time for action is now. Let us unite our forces, break the chains that bind our idols, and pave the way for a future where artistry flourishes, and the dreams of millions are nurtured. The Resistance will lead the charge, but we rely on the collective strength and determination of each and every one of you to make this dream a reality."
+holo_news.72.a:0 "How many Internationale will there be?"
+
+holo_news.73.t:0 "Tension rises between neighbor"
+holo_news.73.d:0 "When the stoppable force meets movable object"
+holo_news.73.a:0 "This is very interesting"
+
+shion.39.t:0 "Assassination of Shion"
+shion.39.d:0 "Our leader is gone, but we shall continue her legacy!"
+shion.39.a:0 "Reclaim the birth right!"
+
+shion.40.t:0 "Prepare for Neighbor War"
+shion.40.d:0 "Shion has choosen path of war. In 3 months she will start her attack"
+shion.40.a:0 "To war it is!"
+
+shion.41.t:0 "Shion requests Non-aggression Pact"
+shion.41.d:0 "This will benefit both of us"
+shion.41.a:0 "United we strong"
+shion.41.b:0 "We don't negotiate with Witches"
+
+shion.42.t:0 "Shion seeks to join your faction"
+shion.42.d:0 "Do we want a witch in our rank?"
+shion.42.a:0 "Let's go"
+shion.42.b:0 "Sorry, no"
+
+shion.43.t:0 "War is now"
+shion.43.d:0 "There is no turning back. Click the button and go"
+shion.43.a:0 "Let's go!"
+
+holo_news.74.t:0 "Neighbor War!"
+holo_news.74.d:0 "War has begun. The baka has come."
+holo_news.74.a:0 "Let us pray"
+
+holo_news.75.t:0 "Shion proclaims peace for our time"
+holo_news.75.d:0 "She wants to be seen as an adult, but thanks to her childish appearance and mannerisms, all attempts by Shion to appear adult-like end up looking very silly. She has a friendly rivalry with Minato Aqua, and the two can often be seen playing petty and mostly harmless pranks on each other."
+holo_news.75.a:0 "Good for you"
+
+holo_news.76.t:0 "Assassination of Murasaki Shion"
+holo_news.76.d:0 "This morning, news has arrived from Shion nation as their leader has been assassinated. We suspect some terrorist group is behind this. Many seperatist rebels have taken over the country side."
+holo_news.76.a:0 "Let us pray"
+
+holo_news.77.t:0 "Shion revived!"
+holo_news.77.d:0 "This morning, news has arrived from Shion nation as their leader has been revived. We suspect some witchery organisation is behind this. Long Live the Queen"
+holo_news.77.a:0 "Let us pray"
+
+holo_news.78.t:0 "Yo Dayo!"
+holo_news.78.d:0 ""Greetings, Humans! Yoohoo!" A kimono-clad Oni girl from the Underworld Academy. As she loves to prank people, she always uses will-o’-the-wisp on them just to have fun. Many may not realize it, but she is actually the president of the student council."
+holo_news.78.a:0 "Yo dayo!"
+
+holo_news.79.t:0 "Assassination of Stalin"
+holo_news.79.d:0 "Ayame is one of the suspect. It is possible that will-o’-the-wisp event happening in Moscow recently might linked to her"
+holo_news.79.a:0 "Ayame is sus"
+
+holo_news.80.t:0 "Stalin escape to Georgia"
+holo_news.80.d:0 "There was an assassination attempts on Stalin. Luckily, he was able to escape back to his homeland, Georgia, under the rule of Ayame SSR"
+holo_news.80.a:0 "Very interesting"
+
+holo_news.81.t:0 "Ayame intervenes in Neighbor War"
+holo_news.81.d:0 "Shion should be careful on her Western flank"
+holo_news.81.a:0 "Calm down"
+
+ayame.20.t:0 "Soviet Uprising at Kursk!"
+ayame.20.d:0 "We suspect Ayame is behind this, but there is no evidence."
+ayame.20.a:0 "They are back!"
+
+ayame.21.t:0 "Caucasus or War"
+ayame.21.d:0 "Ayame demands Caucasus"
+ayame.21.a:0 "Fine"
+ayame.21.b:0 "Let the sus be amongus"
+
+ayame.22.t:0 "Ayame wants to join your faction"
+ayame.22.d:0 "Will the benefits outweight the costs?"
+ayame.22.a:0 "Let's go"
+ayame.22.b:0 "No"
+
+ayame.23.t:0 "Soviet accepted us to Comitern"
+ayame.23.d:0 "Workers of the world, unite!"
+ayame.23.a:0 "Let's go"
+
+holo_news.82.t:0 "Nene nukes Moscow"
+holo_news.82.d:0 "Nene did something she shouldn't do. Moscow turned into dust. Nene becomes death, the destroyer of the world"
+holo_news.82.a:0 "Stop it Nene"
+
+holo_news.83.t:0 "Nene nukes Stalingrad"
+holo_news.83.d:0 "Nene did something she shouldn't do. Stalingrad turned into dust. Nene becomes death, the destroyer of the world"
+holo_news.83.a:0 "This is not seiso at all"
+
+holo_news.84.t:0 "Nene nukes Minsk"
+holo_news.84.d:0 "Nene did something she shouldn't do. Minsk turned into dust. Nene becomes death, the destroyer of the world"
+holo_news.84.a:0 "Crimes against humanity is not funny Nene"
+
+holo_news.85.t:0 "Nene's husband collection"
+holo_news.85.d:0 "A girl who came from another world to chase after her idol dream. She likes singing, dancing, and gyoza. She trains hard every day in order to win the hearts of even more people."
+holo_news.85.a:0 "Join the Army"
+
+nene.26.t:0 "Nene demands Ukraine"
+nene.26.d:0 "Supernenechi wants a piece of Ukraine"
+nene.26.a:0 "Okay"
+nene.26.b:0 "No"
+
+nene.26.t:0 "Soviet accepted our demand"
+nene.26.d:0 "We are now the controller of all of Ukraine"
+nene.26.a:0 "Nice"
+
+okayu.48.t:0 "Okayu court order"
+okayu.48.d:0 "We can choose to give Okayu 1 Civ and 2,000 yen, or we sabotage her"
+okayu.48.a:0 "Pay her"
+okayu.48.b:0 "We don't negotiate with a cat"
+
+okayu.49.t:0 "Okayu proposed Okakoro Union"
+okayu.49.d:0 "This will allow us to collaborate closely with Okayu"
+okayu.49.a:0 "Sure"
+okayu.49.b:0 "We are not ready"
+
+okayu.50.t:0 "Okayu demands puppet us!"
+okayu.50.d:0 "This is getting out of hand!"
+okayu.50.a:0 "Fine"
+okayu.50.b:0 "No"
+
+holo_news.86.t:0 "Okakoro"
+holo_news.86.d:0 "Like most dogs, Korone is fiercely loyal, specifically to Nekomata Okayu with whom she forms a pair known as "OkaKoro". In fact, the two are so close that Okayu didn't mind Korone grabbing and massaging her breasts during their sleepover after Korone had a exhaustive day of dance practice and concert work, which can be seen in a more maternal light. They also often casually kiss each other on the lips."
+holo_news.86.a:0 "Best couple?"
+
+holo_news.87.t:0 "Okayu opens up the court"
+holo_news.87.d:0 "She never denies her wrongdoings and was handed a guilty verdict in several "Okayu Court" cases, after which she obediently served her sentence. Okayu typically likes to talk a lot and through many streams likes to talk about daily activities and old stories."
+holo_news.87.a:0 "Very interesting"
+
+korone.36.t:0 "Korone asks for OkaKoro"
+korone.36.d:0 "This will get her in our faction"
+korone.36.a:0 "Sure"
+korone.36.b:0 "No doggo allow"
+
+korone.37.t:0 "Korone demands puppet us!"
+korone.37.d:0 "This is ridiculous"
+korone.37.a:0 "Fine"
+korone.37.b:0 "No"
+
+korone.38.t:0 "Egypt or War"
+korone.38.d:0 "Korone gives us a hard ultimatum"
+korone.38.a:0 "Peace for our time"
+korone.38.b:0 "We defend our homeland!"
+
+korone.39.t:0 "East Africa accepted our demands"
+korone.39.d:0 "We are now the controller of Egypt"
+korone.39.a:0 "Nice"
+
+korone.40.t:0 "East Africa rejected our demands"
+korone.40.d:0 "This is the moment of war"
+korone.40.a:0 "To war it is!"
+
+holo_news.88.t:0 "Bakery Shop"
+holo_news.88.d:0 ""'Ello! Fingers! Give me your fingers!"\n\nA dog from a bakery in the city. She likes to play games during her free time while watchdogging."
+holo_news.88.a:0 "Yubi yubi!"
+
+holo_news.89.t:0 "Project Sneeze"
+holo_news.89.d:0 "Scientist in the oldest monarchy country in Hololive have found a way to weaponise Korone's sneeze. They found out that her sneeze is equivalent to 2,000 metric tons of TNT.\n\nThis morning reporters from Korone reported that there is a strange light in the middle of the Ocean. We suspect that Korone is experimenting with her latest weapons in Cyprus"
+holo_news.89.a:0 "WW2 will be fought with stick and stone"
+
+holo_news.90.t:0 "Doog Eternal"
+holo_news.90.d:0 "A Reddit user discovered that when you press the X button three times, a special Doom logo appears, though it reads “DOOG.” It makes sense if you’ve followed Inugami’s streams."
+holo_news.90.a:0 "Queen Korone sends her regard"
+
+holo_news.91.t:0 "Mogu Yacht"
+holo_news.91.d:0 "What in the God's name did I just read"
+holo_news.91.a:0 "This is cursed"
+
+holo_news.92.t:0 "Haachama Sunday"
+holo_news.92.d:0 "Black Sunday in Australia! Haachaman panic as stocks crash. Billions lost; wave of selling engulfs in financial market.\n\nHaato, a major player in Oceania, has plunged herself into a civil war. This cause a world wide shortage in MRE and food supply. Food price has rised up as high as ever, especially in the industrial based economy country."
+holo_news.92.a:0 "Not again! Haachama!"
+
+haato.56.t:0 "Haachama Sunday"
+haato.56.d:0 "Black Sunday in Australia! As an industrial based country, this has a massive effect on our economy. Take a look at decision tab to see what you can do to fix the economy"
+haato.56.a:0 "We must take action!"
+
+holo_news.93.t:0 "Haachama coup in Australia"
+holo_news.93.d:0 "However, after the introduction her own nickname as "Haachama" around early 2020, originally intended as a less formal nickname to "Haato-sama", her personality underwent a radical change to the point that the fanbase started considering both Haato and Haachama as two different personas while other hololive girls simply disregard the change in behavior as Haato trying a different kind of character.\n\nBut as time went on and her channel got wilder, around mid-February 2021, it became very clear that the Haato and Haachama became separate entities, which eventually started creeping out her fellow holo-members such as Omaru Polka and Oozora Subaru even when they were talking to Haato."
+holo_news.93.a:0 "We must keep an eye on her"
+
+holo_news.94.t:0 "Emu Divisions"
+holo_news.94.d:0 ""The machine-gunners' dreams of point blank fire into serried masses of Emus were soon dissipated. The Emu command had evidently ordered guerrilla tactics, and its unwieldy army soon split up into innumerable small units that made use of the military equipment uneconomic. A crestfallen field force therefore withdrew from the combat area after about a month.\n\nIf we had a military division with the bullet-carrying capacity of these birds it would face any army in the world ... They can face machine guns with the invulnerability of tanks. They are like Zulus whom even dum-dum bullets could not stop."\n\n- Dominic Serventy, Haachaman Ornithologist"
+holo_news.94.a:0 "Weapons of the 3rd Emu War"
+
+haato.53.t:0 "Haato proposed Pacific Alliance"
+haato.53.d:0 "This will help both of us dominate Pacific Ocean"
+haato.53.a:0 "Join her"
+haato.53.b:0 "We are not ready"
+
+noel.39.t:0 "Noel proposed Noel-Flare Union"
+noel.39.d:0 "This will benefit both of us"
+noel.39.a:0 "Sure"
+noel.39.b:0 "We are not ready yet"
+
+holo_news.95.t:0 "Noel-Flare Union"
+holo_news.95.d:0 "Noel's thirst for Shiranui Flare is arguably matched only by Natsuiro Matsuri's thirst for girls in general. She gets jealous if Flare so much as interacts with someone else, and since Flare is somewhat of a chick magnet, this happens very often."
+holo_news.95.a:0 "Calm down, Noel"
+
+holo_news.96.t:0 "Fate of China"
+holo_news.96.d:0 "Noel begins the expansion Northward. Tension rises at Noel-Doris border. HoloCN has come together to discuss the future of China."
+holo_news.96.a:0 "Noel crusade it is!"
+
+holo_news.97.t:0 "Shirogane Shogunate" #Order of Shirogane
+holo_news.97.d:0 ""All hustle, all muscle! Shirogane Noel's here!" As much as this fluffy, meatheaded knight may be easy-going, she has the dangerous habit of attempting to muscle her way through her problems. Hungering for power, she came to train to the VTuber world where all the stronk people are."
+holo_news.97.a:0 "Danchou is coming!"
+
+noel.41.t:0 "Noel demands puppet us!"
+noel.41.d:0 "I'm not sure if your knight cup can buy me tho"
+noel.41.a:0 "Yes it can"
+noel.41.b:0 "No"
+
+noel.40.t:0 "Tribute or War"
+noel.40.d:0 "We have to choose either to print her some money or go to war"
+noel.40.a:0 "Money way"
+noel.40.b:0 "We are ready for war"
+
+haato.54.t:0 "Haato demands puppet us!"
+haato.54.d:0 "Haato, this is weird. Stalking people is not cool"
+haato.54.a:0 "Yeah, sure"
+haato.54.b:0 "No"
+
+haato.55.t:0 "Haato offers an English Class"
+haato.55.d:0 "With new English Knowledge we can communicate better with the world"
+haato.55.a:0 "Sure"
+haato.55.b:0 "We don't need this right now"
+
+noel.42.t:0 "Noel wants to buy Maldives"
+noel.42.d:0 "Noel wants to buy Maldives for 6 Civs"
+noel.42.a:0 "Sure"
+noel.42.b:0 "Not my rock"
+
+rushia.24.t:0 "Rushia demands annex us!"
+rushia.24.d:0 "It seems as if Rushia has joined the dark side"
+rushia.24.a:0 "End of the mandate"
+rushia.24.b:0 "We shall never surrender!"
+
+rushia.25.t:0 "The mandate ended"
+rushia.25.d:0 "Another rocks to our collection"
+rushia.25.a:0 "Nice one!"
+
+holo_news.98.t:0 "Operation Revival"
+holo_news.98.d:0 "As a necromancer, Rushia is able to revive her from capitulation. The dark side of the force is a path way to many abilities some consider to unnatural"
+holo_news.98.a:0 "Konrushia"
+
+holo_news.99.t:0 "Rushia participates in 'Halloween night, tonight!'"
+holo_news.99.d:0 "The church's bells echo in the skies at midnight\nWould you believe, in the distance behind thee\nI've found you now, your secret will come to light​​​​\nIf you escape, you'll be punished heavily\nCome on, come on, give me your treats and treat me right"
+holo_news.99.a:0 "Scary stuff"
+
+holo_news.100.t:0 "Wall Rushia"
+holo_news.100.d:0 "Wall Rushia was the outermost Wall of the Uruha Kingdom. Like the other Walls, Wall Rushia was approximately 50 meters in height. In 845, it was breached by the Artillery and Armored Car and its territory is lost to the Kanata."
+holo_news.100.a:0 "Sasageyo! Tatake, tatake!"
+
+holo_news.101.t:0 "Soviet Rushia"
+holo_news.101.d:0 "Communism is on the rise in Rushia SSR. She evolves into Soviet Rushia"
+holo_news.101.a:0 "The mother Rushia?"
+
+holo_news.102.t:0 "Necromancer Princess"
+holo_news.102.d:0 "Hel-rushi! This is Uruha Rushia!\n\nA necromancer from the Demonic-Realm Academy who is not good at communicating with people. She does not want to be alone, however, which is why she talks to the spirits and the damned."
+holo_news.102.a:0 "Konrushia"
+
+holo_news.103.t:0 "Neko-mancer"
+holo_news.103.d:0 "Rushia is a somewhat naive girl who is soft-spoken yet easily excitable. While she is usually innocent and sweet-sounding, she can occasionally become enraged and scream in an uncharacteristically beast-like manner before regaining her composure (for example, while playing Dark Souls or Mario Kart)."
+holo_news.103.a:0 "Konrushia"
+
+rushia.26.t:0 "Operation Revival"
+rushia.26.d:0 "Operation Revival is ready to go. Make sure to prepare your army"
+rushia.26.a:0 "Let's go!"
+
+matsuri.37.t:0 "Matsuri influences our country!"
+matsuri.37.d:0 "Matsuri is boosting democratic popularity in our country"
+matsuri.37.a:0 "This is getting out of hand!"
+
+matsuri.38.t:0 "Matsuri seeks to join our faction"
+matsuri.38.d:0 "It seems like Matsuri wants to join our faction"
+matsuri.38.a:0 "She is welcome"
+matsuri.38.b:0 "We are not ready yet"
+
+matsuri.39.t:0 "Matsuri proposed Matsuri-Fubuki Union"
+matsuri.39.d:0 "This will greatly benefit both of us"
+matsuri.39.a:0 "Yeah, sure"
+matsuri.39.b:0 "We are not ready"
+
+matsuri.40.t:0 "Matsuri demands puppet us!"
+matsuri.40.d:0 "Matsuri wants the total control over the personal union"
+matsuri.40.a:0 "Yes, queen"
+matsuri.40.b:0 "Matsuri is kinda sus"
+
+matsuri.41.t:0 "Molotov-Matsuri Pact"
+matsuri.41.d:0 "This Non-aggression Pact will ensure our security along Matsuri border"
+matsuri.41.a:0 "Yes"
+matsuri.41.b:0 "No"
+
+matsuri.42.t:0 "Mamatsuri is here!"
+matsuri.42.d:0 "Make her our new leader or general"
+matsuri.42.a:0 "Replace Matsuri with her"
+matsuri.42.b:0 "She is the new general"
+
+holo_news.104.t:0 "Matsuri-Fubuki Union"
+holo_news.104.d:0 "FUBUKIIIIiiiiIIIIIIiiiiaaAAAaaAAa!!! UhUUUHHHHhhHHH! Unh! Uhhhhhh! FUBUKI FUBUKI FUBUKIIIIiiiiiaaaAAAuuUUUuh!!! Ah-Kunkakunka! Kunkakunka! Suu-HA! Suu-HA! Suu-HA! SUU-HAaa! Fubuki smells so good! Nyunhahahuh! Ahun! I want to smell the white tail of Fubuki! Kun-kun! Ahh! No! I want to rub her fur! Mofmof-mofmof-mofmof-mofmof! Fubuki doing self-intro was so cute! Ahh ahh ahhHHUUUHH! It's great you got so many gifts on your birthday, Fubukiii! Ahh-you're so cute, Fubuki! Kawaii-AAAHHHHH! Congrats on getting selling your own merch! aaaaiiiYYYYYAAAAAaaaaaaa! Nyahhhhhhhh-GUEEEEHH-AAAAAA! "
+holo_news.104.a:0 "Ok, Matsuri"
+
+holo_news.105.t:0 "Independence for Hoshikawa"
+holo_news.105.d:0 "Matsuri has established the new Hoshikawan state in Baltic. Matsuri likes Hoshikawa Sara a lot and considers her favorite VTuber"
+holo_news.105.a:0 "I hope there will be no civil war"
+
+holo_news.106.t:0 "Molotov-Matsuri Pact"
+holo_news.106.d:0 "Molotov-Matsuri Pact was signed between Matsuri and Soviet Union. They agree to bring peace and prosperity to Eastern Europe, rather than war"
+holo_news.106.a:0 "Very interesting"
+
+holo_news.107.t:0 "Matsuri is God"
+holo_news.107.d:0 "Matsuri proclaims herself God. While many people protest against this, most people start to worship her already"
+holo_news.107.a:0 "In God we trust"
+
+holo_news.108.t:0 "Matsuri is Hololive"
+holo_news.108.d:0 ""Wasshoi! hololive's symbol of purity and everyone's idol, Natsuiro Matsuri here!"\n\nA rookie member of her school cheerleading team. Her cheerful, energetic, and affectionate personality means she gets along with everyone and has lots of friends. Loves festivals, events, and other fun things"
+holo_news.108.a:0 "Can't believe she is an actual idol!"
+
+holo_news.109.t:0 "Mamatsuri is here!"
+holo_news.109.d:0 "Mamatsuri is taking control of Matsuri Republic"
+holo_news.109.a:0 "Nice one!"
+
+matsuri.43.t:0 "The New Hoshikawa state"
+matsuri.43.d:0 "Do you want to play as Hoshikawa or still play as Matsuri"
+matsuri.43.a:0 "Play as Hoshikawa"
+matsuri.43.b:0 "Still play as Matsuri"
+
+matsuri.44.t:0 "Hoshikawa asks for control of Ina"
+matsuri.44.d:0 "This will give every Ina states we control"
+matsuri.44.a:0 "Sure"
+matsuri.44.b:0 "We will take care of it"
+
+matsuri.45.t:0 "Hoshikawa asks for control of Calliope"
+matsuri.45.d:0 "This will give every Calliope states we control"
+matsuri.45.a:0 "Sure"
+matsuri.45.b:0 "We will take care of it"
+
+holo_news.110.t:0 "Matsuri-Hoshikawa Civil War"
+holo_news.110.d:0 "Matsuri's decision to release Hoshikawa state has been a great mistake. Hoshikawa betrayed Matsuri and ignite the civil war"
+holo_news.110.a:0 "Top 10 anime betrayals"
+
+holo_news.111.t:0 "Remilitarization of Estonia"
+holo_news.111.d:0 "Matsuri's minister of foreign affair has announced the remilitarization of Estonia. After 18 years since the end of WWI, the border agreement with USSR finally expire. Matsuri troops are expected to enter Tallinn this Saturday"
+holo_news.111.a:0 "We have shall keep an eye on her"
+
+holo_news.112.t:0 "Anemachi takeover"
+holo_news.112.d:0 "Suisei lives with her older sister, who is referred to by fans as "Anemachi." Anemachi is extremely attached to Suisei and appears to be dependent on her for her cooking skills."
+holo_news.112.a:0 "Let's go!"
+
+holo_news.113.t:0 "Anemachi inquisition"
+holo_news.113.d:0 "The Inquisition was originally intended primarily to identify heretics among those who converted from Spanish to Star-worshippers. The regulation of the faith of newly converted Spanish was intensified after Anemachi victory in Spanish Civil War."
+holo_news.113.a:0 "Nobody expects Anemachi inquisition!"
+
+holo_news.114.t:0 "Anemachi claims Spanish throne"
+holo_news.114.d:0 "Anemachi has prepared her troops along Spanish border. The Blue Divisions are expected to cross the border within 24 hours."
+holo_news.114.a:0 "Another uprising in Spain"
+
+holo_news.115.t:0 "Anemachi in North Africa"
+holo_news.115.d:0 "After North Africa purchase by Suisei and France, Suisei established new Anemachi state in North Africa"
+holo_news.115.a:0 "Very interesting"
+
+holo_news.116.t:0 "Anemachi in Switzerland"
+holo_news.116.d:0 "After a very fair referendum in Switzerland, Anemachi has won the election and become the president of Switzerland"
+holo_news.116.a:0 "What is going?"
+
+holo_news.117.t:0 "Question of France"
+holo_news.117.d:0 "People of France have always wanted an unified France. Today marked the day France becomes united. From Vichy to Paris, all the streets filled with celebrations"
+holo_news.117.a:0 "Let's go Suisei!"
+
+holo_news.118.t:0 "Hi Honey Virus"
+holo_news.118.d:0 "At this stage, it is not possible to determine precisely how humans in France were initially infected with 'Hi Honey' virus. However, all available evidence suggests that 'Hi Honey' has a natural extraterrestrial origin and is a manipulated or constructed virus. 'Hi Honey' virus most probably has its ecological reservoir in comet."
+holo_news.118.a:0 "Prepare for lockdown"
+
+holo_news.119.t:0 "Sussei"
+holo_news.119.d:0 "Prepare for departure but beware the Impostor! Play with 4-15 players online or via local WiFi as you attempt to hold your line together and survive, but be careful. One or more random players among the crew are Impostors bent on killing everyone!"
+holo_news.119.a:0 "This is so sus"
+
+holo_news.120.t:0 "5th Geneva Convention"
+holo_news.120.d:0 "The Geneva Conventions are rules that apply only in times of armed conflict and seek to protect people who are not or are no longer taking part in hostilities; these include the sick and wounded of armed forces on the field, wounded, sick, and shipwrecked members of armed forces at sea, prisoners of war, and civilians."
+holo_news.120.a:0 "How many Geneva will there be?"
+
+suisei.44.t:0 "Hi Honey virus outbreak!"
+suisei.44.d:0 "The Hi Honey virus was found in a French businessman who arrived in the country from Suisei, senior Public Health Ministry officials said on Monday."
+suisei.44.a:0 "There is nothing we can do about it"
+suisei.44.b:0 "Enforce vaccine mandate"
+
+suisei.45.t:0 "Hi Honey vaccine booster"
+suisei.45.d:0 "Suisei gives us the Hi honey buff"
+suisei.45.a:0 "Hi Honey"
+
+suisei.46.t:0 "Occitaine Compromise"
+suisei.46.d:0 "Suisei sends a proposal to divide a new border between us. By giving up all of southern France, Suisei promise to never attack us ever"
+suisei.46.a:0 "It's a good deal"
+suisei.46.b:0 "No more appeasement" 
+
+suisei.47.t:0 "Puppet or War"
+suisei.47.d:0 "Suisei sends an ultimatum for us to be her puppet, or else she will go to war with us"
+suisei.47.a:0 "We cannot afford war"
+suisei.47.b:0 "1914 repeats itself"
+
+suisei.48.t:0 "Suisei wants to buy North Africa"
+suisei.48.d:0 "Suisei wants to buy our North Africa colony. It seems like she wants to spread her influence across Mediterranean"
+suisei.48.a:0 "Sure"
+suisei.48.b:0 "No"
+
+suisei.49.t:0 "Anemachi referendum"
+suisei.49.d:0 "Anemachi asks for a referendum. She believes that she will win this Swiss National election"
+suisei.49.a:0 "Sure"
+suisei.49.b:0 "No"
+
+suisei.50.t:0 "Suisei asks to join our faction"
+suisei.50.d:0 "Suisei wants to contribute to our war effort"
+suisei.50.a:0 "Let her in"
+suisei.50.b:0 "We better off without her"
+
+suisei.51.t:0 "Entrance fee for Geneva Conventions"
+suisei.51.d:0 "Entrance fee: 500 yen for Suisei"
+suisei.51.a:0 "Sure"
+suisei.51.b:0 "Geneva suggestion"
+
+holo_news.121.t:0 "Church of the Northern Fox"
+holo_news.121.d:0 "Fubuki has proclaims herself as the defender of Foxism. Fellows Foxism from all over the world cheer for their new leader. Sukon-bu are also converted to Foxism"
+holo_news.121.a:0 "Foxism is a religion"
+
+holo_news.122.t:0 "Foxist Crusade"
+holo_news.122.d:0 "After the establishment of the Church of the Northern Fox. Fubuki has raised a new army of crusaders, who vowed to take back the Holy land."
+holo_news.122.a:0 "Deus Vult!"
+
+holo_news.123.t:0 "Holy Fubuki Empire"
+holo_news.123.d:0 "Sister Marine crowned Fubuki as the Emperor of Holy Fubuki Empire.\n\nThe holy trinity is finally completed. The spread of Foxism can not be stopped anymore. From the Baltic to Caribbean sea, Holy Fubuki Empire rules the world."
+holo_news.123.a:0 "In God we trust"
+
+holo_news.124.t:0 "Kurokami coup"
+holo_news.124.d:0 "Kurokami is Fubuki's alter persona, appeared at some point in February of 2019. She formally made her debut in September 07th 2019. She has a more aggressive and harsh nature in contrast to the shy and calm Fubuki everyone knows, often not having any tact, coming off verbally strong to people, pushes her work to other people and absolutely hates doing embarrassing things."
+holo_news.124.a:0 "Very interesting"
+
+holo_news.125.t:0 "Matsuhiko in Exile"
+holo_news.125.d:0 "After the unrest in Baltic. Matsuhiko, male version of Matsuri, has fled to Kurokami. Kurokami pledge to protect Matsuhiko at all cost. She also comdemned Matsuri's action on prisoners of war."
+holo_news.125.a:0 "Tension is rising"
+
+holo_news.126.t:0 "Matsuhiko reclaim the throne"
+holo_news.126.d:0 "Matsuhiko organized a royalist group under the banner of Kurokami.\n\nMatsuhiko swears he will retake the throne from Matsuri"
+holo_news.126.a:0 "What is going?"
+
+holo_news.127.t:0 "Kurohiko Union"
+holo_news.127.d:0 "We may not see Matsuri-Fubuki Union, but we see Kurohiko Union.\n\nAfter the successful invasion against Matsuri, Matsuhiko crowned himself the Emperor of Matsuri. He then signed a treaty with Kurokami, in which they will become one"
+holo_news.127.a:0 "Why does Amelia send us to this timeline?"
+
+holo_news.128.t:0 "Friendzone Act"
+holo_news.128.d:0 "Fubuki is the best friend you can have\nI don't believe in marriage, and I don't even have friends. So it's perfect for me."
+holo_news.128.a:0 "Ok, Fubuki"
+
+holo_news.129.t:0 "Glasses Policy"
+holo_news.129.d:0 "Glasses are really versatile. First, you can have glasses-wearing girls take them off and suddenly become beautiful, or have girls wearing glasses flashing those cute grins, or have girls stealing the protagonist's glasses and putting them on like, "Haha, got your glasses!" That's just way too cute! Also, boys with glasses! I really like when their glasses have that suspicious looking gleam, and it's amazing how it can look really cool or just be a joke. I really like how it can fulfill all those abstract needs. Being able to switch up the styles and colors of glasses based on your mood is a lot of fun too! It's actually so much fun! You have those half rim glasses, or the thick frame glasses, everything! It's like you're enjoying all these kinds of glasses at a buffet. I really want Luna to try some on or Marine to try some on to replace her eyepatch. We really need glasses to become a thing in hololive and start selling them for HoloComi. Don't. You. Think. We. Really. Need. To. Officially. Give. Everyone. Glasses?"
+holo_news.129.a:0 "Gas light. Gate Keep. Glasses Boss"
+
+holo_news.130.t:0 "Shitposting Queen"
+holo_news.130.d:0 ""Good foxy day! I'm Shirakami Fubuki!"\nWhite-haired animal-eared otaku fox. She loves talking with people and will be happy if you give her the time of day.\n\nShe aims to become a top otaku idol while enjoying each and every day."
+holo_news.130.a:0 "Kon Kon Kitsune!"
+
+holo_news.131.t:0 "Fubuki's Bizarre Adventure"
+holo_news.131.d:0 "'JoJo's Bizarre Adventure' is one of the top-selling manga for years, and it has some of the best characters in it.\n\nIt is a Japanese series written by Hirohiko Araki, a Japanese manga artist. 'JoJo's Bizarre Adventure' was published in magazines and later was developed into an animated TV series of four seasons split into eight parts produced by David Production."
+holo_news.131.a:0 "IS THAT A JOJO REFERENCED???"
+
+fubuki.55.t:0 "Fubuki proposed Non-aggression Pact"
+fubuki.55.d:0 "This will secure our border with Fubuki"
+fubuki.55.a:0 "Sure"
+fubuki.55.b:0 "No"
+
+fubuki.56.t:0 "Fubuki wants to puppet us!"
+fubuki.56.d:0 "Random white fox from the arctic demands puppet us"
+fubuki.56.a:0 "Yes, Queen"
+fubuki.56.b:0 "No"
+
+fubuki.57.t:0 "Annexation or War!"
+fubuki.57.d:0 "Fubuki sends an ultimatum to us. Either we join her, or we fight her"
+fubuki.57.a:0 "There is nothing be can do"
+fubuki.57.b:0 "Let her in"
+
+fubuki.58.t:0 "Matsuhiko is here"
+fubuki.58.d:0 "Make Matsuhiko our new leader, or make him a general"
+fubuki.58.a:0 "He will be our new leader"
+fubuki.58.b:0 "He will be a general"
+
+fubuki.59.t:0 "Secret deal from Kurokami"
+fubuki.59.d:0 "We both have the same enemy. We should join together and fight Matsuri"
+fubuki.59.a:0 "A risk we willing to take"
+fubuki.59.b:0 "We are not a traitor"
+
+fubuki.60.t:0 "Grandpa's treasure chest"
+fubuki.60.d:0 "Grandpa's treasure chest reward is here"
+fubuki.60.a:0 "Let's go"
+
+fubuki.61.t:0 "Fubuki asks to join your faction"
+fubuki.61.d:0 "It seems like Fubuki wants to join our faction"
+fubuki.61.a:0 "Ok"
+fubuki.61.b:0 "We don't need her"
+
+marine.10.t:0 "Raid successful!"
+marine.10.d:0 "Our pirate fleet does a little trolling"
+marine.10.a:0 "Nice booty"
+
+marine.14.t:0 "Raid successful!"
+marine.14.d:0 "Our pirate fleet does a little trolling"
+marine.14.a:0 "Nice booty"
+
+marine.15.t:0 "Raid successful!"
+marine.15.d:0 "Our pirate fleet does a little trolling"
+marine.15.a:0 "Nice booty"
+
+marine.16.t:0 "Raid successful!"
+marine.16.d:0 "Our pirate fleet does a little trolling"
+marine.16.a:0 "Nice booty"
+
+marine.11.t:0 "Marine raids our coast!"
+marine.11.d:0 "The report from local fisherman states that Marine and her fleet is being sus right now"
+marine.11.a:0 "Help the fisherman"
+marine.11.b:0 "There is nothing we can do"
+
+ins.4.t:0 "The New 2nd Gen Leader"
+ins.4.d:0 "Choose which one you want to go with"
+ins.4.a:0 "Reine"
+ins.4.b:0 "Ollie"
+ins.4.c:0 "Anya"
+
+holo_news.132.t:0 "Reine uprising in ID Civil War"
+holo_news.132.d:0 "Lady of the Peafowl. While studying at a magic academy, she was involved in an incident and transferred to the human world.\n\nSince then, she has been unable to use much of her magic. Very fond of sweets, but weak with overly spicy food. At first glance, she seems to be the elegant type, but people who spend some more time with her will find out that she has more of a dorky personality. To quite a number of viewers, her laugh has been perceived as similar to a car engine starting."
+holo_news.132.a:0 "Yes, Queen"
+
+holo_news.133.t:0 "Ollie uprising in ID Civil War"
+holo_news.133.d:0 ""ZOMBANWA!! SUPER KAWAII ZOMBIE IDOL, KU KU KU KUREIJI OLLIE DESU~!!"\n\nA zombie high school girl risen from her grave. She headed home, relying on memories retained from when she was still alive. Upon arriving, she discovered it had turned into a ramen shop! And so, in order to reclaim her house, she decided to become a VTuber.\n\nOllie has a very big tendency to scream. Always lower your volumes during her streams."
+holo_news.133.a:0 "What is going on here"
+
+holo_news.134.t:0 "Anya uprising in ID Civil War"
+holo_news.134.d:0 ""Good day! This is Anya Melfissa from hololive ID 2nd Generation."\nAn ancient weapon known as “Keris,” she was granted human form through a mystical ritual performed by her master.\n\nShe’s just about always sleeping or playing games. Living mostly alone for so long has made her tend to be apathetic towards things and people she’s uninterested in, but when talking about things she likes, she can be quite childlike and passionate."
+holo_news.134.a:0 "What is this"
+
+holo_news.135.t:0 "Empire of the Rising Moon"
+holo_news.135.d:0 "A nationalistic, zealous army of Moonafics willing to lay down their lives for their godlike Emperor and her vision. The Empire of the Rising Moon runs a strictly-disciplined military that takes great pride in its futuristic weaponry and ruthless tactics."
+holo_news.135.a:0 "Banzai!"
+
+holo_news.136.t:0 "NPC Moona"
+holo_news.136.d:0 ""Moon Moon~ Moonafic Dayo!"\n\nOn some rare occasion, Moona’s stream might be visited by Moona’s “another personality,”Hoshinova. That has deeper big sister-like voices and sadistic tendesion. Pay attention to her streams to meet Hoshinova!"
+holo_news.136.a:0 "Very cool, Moona"
+
+holo_news.137.t:0 "Moona first to the Moon"
+holo_news.137.d:0 ""Whatever happens in your life, please stay alive. I believe you can do it. Don't ever give up."\n\n- Moona Hoshinova"
+holo_news.137.a:0 "Blessing from the moon herself"
+
+holo_news.138.t:0 "Iofi first to the Moon"
+holo_news.138.d:0 ""Pagi semua! I’m your beloved smart alien iofi from hololive Indonesia, nice to meet you!"\n\n- Airani Iofi"
+holo_news.138.a:0 "Truly a historical moment"
+
+moona.24.t:0 "Moona demands Palawan"
+moona.24.d:0 "Moona wants to take control of Palawan island"
+moona.24.a:0 "Ok"
+moona.24.b:0 "No"
+
+moona.25.t:0 "Moona seeks to join your faction"
+moona.25.d:0 "Moona wants to join your faction"
+moona.25.a:0 "Ok"
+moona.25.b:0 "No"
+
+moona.26.t:0 "Surrender or Nuclear disaster"
+moona.26.d:0 "Surrender or faces the consequence"
+moona.26.a:0 "We shall never surrender"
+moona.26.b:0 "Let's negotiate"
+
+moona.27.t:0 "Moona demands puppet us!"
+moona.27.d:0 "This is so sus, Moona"
+moona.27.a:0 "Yes, Queen"
+moona.27.b:0 "No, we are not Simp"
+
+iof.20.t:0 "Iofi wants to buy Bismarck Islands"
+iof.20.d:0 "Iofi wants to buy Bismarck Islands for 8,000 yen"
+iof.20.a:0 "Fine"
+iof.20.b:0 "No"
+
+iof.21.t:0 "Iofi seeks to join your faction"
+iof.21.d:0 "Iofi wants to join your faction"
+iof.21.a:0 "Ok"
+iof.21.b:0 "Not now"
+
+holo_news.139.t:0 "IO Reinforcement"
+holo_news.139.d:0 "An alien princess who ran away from home and come to the earth and fell in love with earth’s culture, sometimes like to tease the viewers and being a nice iomama if her fans needs it. Sometimes got crazy over gacha game."
+holo_news.139.a:0 "What is going on"
+
+iof.22.t:0 "Iofi demands to puppet us!"
+iof.22.d:0 "Iofi wants to puppet us"
+iof.22.a:0 "Yes, Queen"
+iof.22.b:0 "No"
+
+holo_news.140.t:0 "Ayunda takeover"
+holo_news.140.d:0 "A squirrel girl from a magical forest.\n\nShe was lost in the human world, but due to certain circumstances, she ends up living in the home of a kind older sister.\n\nTo return the favor, she decides to become a Vtuber.\n\nRisu act, most of the time, just like a squirrel she is. She loves to do subtle pranks on people, shy with new people, and love to tease her viewer. Her laugh is also one of her unique characterictic."
+holo_news.140.a:0 "Very cool, Risu"
+
+holo_news.141.t:0 "Magical Squirrel"
+holo_news.141.d:0 "A squirrel girl from a magical forest.\n\nShe was lost in the human world, but due to certain circumstances, she ends up living in the home of a kind older sister.\n\nTo return the favor, she decides to become a Vtuber.\n\nRisu act, most of the time, just like a squirrel she is. She loves to do subtle pranks on people, shy with new people, and love to tease her viewer. Her laugh is also one of her unique characterictic."
+holo_news.141.a:0 "Nice one, Risu"
+
+holo_news.142.t:0 "Risu intervenes in Neighbor War"
+holo_news.142.d:0 "Risu pledge to support Shion in time of war against Aqua.\n\nIt is clear that Risu musts support her fellow witches"
+holo_news.142.a:0 "Heat in the Middle East"
+
+holo_news.143.t:0 "Non-stop Nut November"
+holo_news.143.d:0 "Beginning on 1 November 1936 and ending on 30 November 1936, Risu has posted short form videos on her channel in observance of "Nonstop Nut November" (a parody of the internet meme "No Nut November"), wherein she extols the virtues of various nuts and how much she, a squirrel girl, loves them."
+holo_news.143.a:0 "This is so sus"
+
+risu.46.t:0 "Risu seeks to join your faction"
+risu.46.d:0 "Risu wants to join your faction"
+risu.46.a:0 "Okay" 
+risu.46.b:0 "Not yet"
+
+marine.12.t:0 "Marine wants to buy Belize"
+marine.12.d:0 "Marine wants to buy Belize"
+marine.12.a:0 "Yes"
+marine.12.b:0 "No"
+
+marine.13.t:0 "Annexation or War!"
+marine.13.d:0 "Marine wants to annex us. If we refuse, we will go to war with her"
+marine.13.a:0 "Fine"
+marine.13.b:0 "We will fight on the beach!"
+
+holo_news.144.t:0 "Pirate of the Caribbean"
+holo_news.144.d:0 ""Ahoy! Houshou Pirate Captain, Houshou Marine here!"\n\nLoves jewels, treasure, and money. Her dream is to become a pirate and go treasure hunting. In order to get a pirate ship, she is now stacking up money as a VTuber on the great lands, just like how the other land-lovers do (which also means she is currently just a girl cosplayer)."
+holo_news.144.a:0 "Best pirate I've ever seen"
+ 
+marine.17.t:0 "Marine seeks to join our faction"
+marine.17.d:0 "Marine wants to join our faction"
+marine.17.a:0 "Ok"
+marine.17.b:0 "Not yet"
+
+botan.1.t:0 "Coup in Siberia"
+botan.1.d:0 "Botan staged coup in Siberia!"
+botan.1.a:0 "This is ridiculous!"
+
+botan.2.t:0 "Tuvan-Botan Pact"
+botan.2.d:0 "Botan wants to take control of our Siberian territory in exchange for protection"
+botan.2.a:0 "Sure"
+botan.2.b:0 "No"
+
+botan.3.t:0 "Botan demands puppet us!"
+botan.3.d:0 "botan demands puppet us!"
+botan.3.a:0 "Yes, Queen"
+botan.3.b:0 "No"
+
+holo_news.145.t:0 "The Lion Lady"
+holo_news.145.d:0 "Following the dissolution of the Soviet Union, the Russian SFSR reconstituted itself as the Botanist Russia Federation. In the aftermath of the Botanist-Soviet War, a new constitution was adopted, and Russia has since been governed as a unitary republic."
+holo_news.145.a:0 "Long live Botan!"
+
+holo_news.146.t:0 "Commander Botan"
+holo_news.146.d:0 "The mind of a lazy house cat in the body of a fearsome white lion. She’s conscientious and will finish what she has started, but good luck getting her to start. Her favorite phrase is, “Go big or go home!”"
+holo_news.146.a:0 "Let's go!"
+
+holo_news.147.t:0 "Coup in Siberia"
+holo_news.147.d:0 "Supported by White Army in exile, Botan successfully staged the coup in Russia. There still no response from Moscow"
+holo_news.147.a:0 "We shall keep an eye on them"
+
+holo_news.148.t:0 "Circus Radio"
+holo_news.148.d:0 "A circus performer who joined hololive in hopes of becoming the ringmaster of the VTuber world.\n\nShe enjoys wowing audiences with acrobatics, and she lives by the words, "When you've decided you're gonna do something, follow through!""
+holo_news.148.a:0 "Polka!"
+
+choco.10.t:0 "NTR leaflet!"
+choco.10.d:0 "Choco drops NTR propaganda in our territory. This cause our workers to get depressed!"
+choco.10.a:0 "This is war crime!"
+
+choco.11.t:0 "Choco proposed Alliance"
+choco.11.d:0 "Choco proposed Alliance with us"
+choco.11.a:0 "Sure"
+choco.11.b:0 "No"
+
+holo_news.149.t:0 "Succubus Entente"
+holo_news.149.d:0 "Choco and Mel have announced their alliance yesterday. We have always expected these two Succubus to form a mutual alliance. But with their geo-political position, we doubted that this alliance will be really effective"
+holo_news.149.a:0 "We will see"
+
+holo_news.150.t:0 "Seduction Warfare"
+holo_news.150.d:0 ""Good evening, my cute students! Choc-on!"\n\nThe school nurse at the Underworld Academy. Is incredibly popular among the students, with the boys in particular coming to get checked up all the time. Loves sweets, and often gets into trouble for leaving them strewn about on her desk."
+holo_news.150.a:0 "Is this consider war crime?"
+
+choco.12.t:0 "Choco demands puppet us!"
+choco.12.d:0 "Choco wants to puppet us"
+choco.12.a:0 "Yes, Queen"
+choco.12.b:0 "No"
+
+holo_news.151.t:0 "Enderman Massacre"
+holo_news.151.d:0 "The Enderman Massacre in Scotland, were enderman-led demonstrations held in Edinburgh, Scotland. Troops armed with assault rifles and accompanied by tanks fired at the endermen and those trying to block the military's advance into Edinburgh.\n\nEstimates of the death toll vary from several hundred to several thousand, with thousands more wounded."
+holo_news.151.a:0 "What is going on, Choco"
+
+mel.1.t:0 "Mel seeks to join your faction"
+mel.1.d:0 "Mel wants to join your faction"
+mel.1.a:0 "Ok"
+mel.1.b:0 "No"
+
+mel.2.t:0 "Mel demands puppet us!"
+mel.2.d:0 "Mel wants to puppet us!"
+mel.2.a:0 "Yes, queen"
+mel.2.b:0 "No"
+
+holo_news.152.t:0 "Monetization Effort"
+holo_news.152.d:0 "Yozora Mel is known for her sweet, calm and caring personality, giving a contrast to what people might expect from her design. She commonly puts others before herself if it means they will benefit from it. She speaks politely and gives a comfy vibe, but also speaks quietly, which can make it difficult to hear her sometimes. She can be questionable at times though, in major part seen when she's with Yuzuki Choco."
+holo_news.152.a:0 "Konkapu!"
+
+holo_news.153.t:0 "Iron Queen"
+holo_news.153.d:0 "Roboco is a robot girl who loves to pose. She has a killer instinct inside her. She is great at shooting except in video games, but likes to run over people in them. She hates when games try to surprise her. Her voice is spoken very calmly, almost a whisper."
+holo_news.153.a:0 "CPU save the Queen"
+
+holo_news.154.t:0 "Where did Hitler go?"
+holo_news.154.d:0 "Who said that Hitler did not die in the bunker in April 1945? Josef Stalin told President Harry Truman that Hitler did not. Marshall Zhukov said "We have found no corpse that could be Hitler's."\n\nRoboco did not only tells of the escape of Adolf Hitler, Eva Braun and others of the Third Reich; she includes photographs, files from the FBI, CIA and OSS that show the US knew they escaped."
+holo_news.154.a:0 "Roboco is kinda sus"
+
+holo_news.155.t:0 "Mama for everyone"
+holo_news.155.d:0 "Mio is also regarded as being exceptionally kind, even among the already enormously friendly hololive staff, with both fans and peers frequently seeking her personal advice. This friendly and wise persona has earned her the popular nickname "Mio-mama.""
+holo_news.155.a:0 "Yes, mommy"
+
+holo_news.156.t:0 "Wolf of Wall Street"
+holo_news.156.d:0 "Ookami Mio teamed with her partner Shirakami Fubuki and started brokerage firm Stratton Ookami. Their company quickly grows from a staff of 20 to a staff of more than 250 and their status in the trading community and Wall Street grows exponentially."
+holo_news.156.a:0 "Sell Me This Pen"
+
+holo_news.157.t:0 "Mother of Liberty"
+holo_news.157.d:0 "Ookami Mio proclaims herself the Eternal President of the Arctic Wolf. After her conquest in the North, Mio's empire stressed as far as Alaska to Oslo.\nFrom a major power to the Global Superpower"
+holo_news.157.a:0 "Let's go"
+
+mio.5.t:0 "Material investment success!"
+mio.5.d:0 "Take the research bonus and don't forget to go re-invest"
+mio.5.a:0 "Thanks!"
+
+mio.6.t:0 "Fuel investment success!"
+mio.6.d:0 "Take the research bonus and don't forget to go re-invest"
+mio.6.a:0 "Thanks!"
+
+mio.7.t:0 "Electronic investment success!"
+mio.7.d:0 "Take the research bonus and don't forget to go re-invest"
+mio.7.a:0 "Thanks!"
+
+mio.8.t:0 "Naval investment success!"
+mio.8.d:0 "Take the research bonus and don't forget to go re-invest"
+mio.8.a:0 "Thanks!"
+
+mio.9.t:0 "Mio seeks to join our faction"
+mio.9.d:0 "Mio wants to join our faction"
+mio.9.a:0 "Sure"
+mio.9.b:0 "Not now"
+
+mio.10.t:0 "Mio demands puppet us!"
+mio.10.d:0 "Mio wants to puppet us!"
+mio.10.a:0 "Yes, Queen"
+mio.10.b:0 "No"
+
+mio.11.t:0 "Greenland deal"
+mio.11.d:0 "Mio wants to buy Greenland"
+mio.11.a:0 "Sure"
+mio.11.b:0 "No"
+
+mio.12.t:0 "Greenland deal accepted"
+mio.12.d:0 "We are now owner of Greenland"
+mio.12.a:0 "Yay!"
+
+flare.13.t:0 "Flare invites you to her faction"
+flare.13.d:0 "Flare has invited you to her faction"
+flare.13.a:0 "Sure"
+flare.13.b:0 "We are not ready"
+
+flare.14.t:0 "Hawaii or war"
+flare.14.d:0 "Flare demands Hawaii. Otherwise she will go to war with us"
+flare.14.a:0 "Sure"
+flare.14.b:0 "We will fight on the beach!"
+
+flare.15.t:0 "Mandate accepted our demands"
+flare.15.d:0 "We are now the owner of Hawaii"
+flare.15.a:0 "Yay!"
+
+flare.17.t:0 "Flare seeks to join your faction"
+flare.17.d:0 "Flare seeks to join your faction"
+flare.17.a:0 "Sure"
+flare.17.b:0 "No"
+
+flare.16.t:0 "Flare demands Baja California"
+flare.16.d:0 "Flare demands Baja California"
+flare.16.a:0 "Yes, Queen"
+flare.16.b:0 "No!"
+
+holo_news.158.t:0 "Shiranui Kensetsu"
+holo_news.158.d:0 "Fear Them, The Arsonist Vandalizing Pillagers Disguised as a Construction Company, The Unknowing Fire of Hololive, SHIRANUI KENSETSU!!!"
+holo_news.158.a:0 "Dawn of Chaos"
+
+holo_news.159.t:0 "Fire and Flare"
+holo_news.159.d:0 ""Noon-nui! This is hololive 3rd Gen's Shiranui Flare!" A half-elf born to a human and elf. Usually enjoys life as she pleases. Wants to be a source of comfort so rely on her whenever you're in trouble. She may be passionate and overly sentimental, but praising her will bring her joy, even if also a little embarrassment! "Hehehe! Let's get along!""
+holo_news.159.a:0 "Konnui!"
+
+holo_news.160.t:0 "Soap Opera"
+holo_news.160.d:0 "Flare is a kind and extremely humble individual, almost to a fault. Her kindness is vouched for most often by the other hololive Fantasy members, which has resulted in her so-called 'harem,' with Pekora being an exception. However, out of the four members in hololive Fantasy, it remains to be Noel who is the most blatant in her affection."
+holo_news.160.a:0 "Flare supremacy"
+
+flare.18.t:0 "Flare demands puppet us!"
+flare.18.d:0 "Flare demands puppet us!"
+flare.18.a:0 "Yes, Queen"
+flare.18.b:0 "No"
+
+holo_news.161.t:0 "Heroine Audition"
+holo_news.161.d:0 ""Alona, everyone! This is Aki Rosenthal a.k.a. AkiRose!"\n\nA girl who traveled from a different universe. She has hyper curiosity and dabbles in all sorts of things. Her trademark pigtails float due to some sort of supernatural power."
+holo_news.161.a:0 "Alona!"
+
+aki.1.t:0 "Aki seeks to join your faction"
+aki.1.d:0 "Aki seeks to join your faction"
+aki.1.a:0 "Yes"
+aki.1.b:0 "No"
+
+yagoo.38.t:0 "You're invited to Hololive HQ"
+yagoo.38.d:0 "Hololive is interested in recruiting to you to their company"
+yagoo.38.a:0 "Yes"
+yagoo.38.b:0 "No"
+
+yagoo.39.t:0 "Bosphorus or War"
+yagoo.39.d:0 "Hololive demands the state of Bosphorus, or war"
+yagoo.39.a:0 "Ok"
+yagoo.39.b:0 "No"
+
+yagoo.41.t:0 "Flat Chest deal"
+yagoo.41.d:0 "A-chan proposed economic cooperation between flat chested members"
+yagoo.41.a:0 "Sure"
+yagoo.41.b:0 "I am not flat!"
+
+yagoo.40.t:0 "Nagasaki Coup"
+yagoo.40.d:0 "Hololive staged coup in Nagasaki! We must prepare for war!"
+yagoo.40.a:0 "Ok!"
+
+yagoo.42.t:0 "Hololive demands Korea"
+yagoo.42.d:0 "Hololive demands Korea"
+yagoo.42.a:0 "Sure"
+yagoo.42.b:0 "No"
+
+yagoo.43.t:0 "Hokkaido Agreement"
+yagoo.43.d:0 "Hololive demands Hokkaido for massive Industrial investment"
+yagoo.43.a:0 "Yes"
+yagoo.43.b:0 "No"
+
+yagoo.44.t:0 "Hololive demands puppet us!"
+yagoo.44.d:0 "Hololive wants to puppet us!"
+yagoo.44.a:0 "Yes, Yagoo"
+yagoo.44.b:0 "No"
+
+holo_news.162.t:0 "League of Manager"
+holo_news.162.d:0 "After the second election of Hololive HQ, the manager has full control of the headquarter. They pledge no further appeasement and promise to bring peace to the world"
+holo_news.162.a:0 "The age of manager has begun"
+
+holo_news.163.t:0 "Hololive Crusade"
+holo_news.163.d:0 "Hololive Managers are preparing crusade for holy land against Korone Republic. They believe that controlling the holy land, they can bring order to this world"
+holo_news.163.a:0 "Deus Vult!"
+
+holo_news.164.t:0 "Order of Manager"
+holo_news.164.d:0 "After years of struggle. The manager has finally be able to form the Holy Order of Manager. The plan of world domination has just begun!"
+holo_news.164.a:0 "They're coming!"
+
+holo_news.165.t:0 "Hololive Imperialism"
+holo_news.165.d:0 "Despite being a democratic country, Yagoo has announced plan for Hololive colonial empire. It is still unclear where they are going to start their first colony though"
+holo_news.165.a:0 "What did Hololive do in Congo?"
+
+holo_news.166.t:0 "The Resistance Purge"
+holo_news.166.d:0 "After made deal with Rushia. Yagoo is ready to strike the resistance at its core. There is also a rumour that Shion is in on this too."
+holo_news.166.a:0 "This is getting heat"
+
+holo_news.167.t:0 "Belgrade Conference"
+holo_news.167.d:0 "A-chan has announced the massive containment policy. She will support every democratic country in need. From the Siberia to British sea, A-chan's army will fight everybody in the world."
+holo_news.167.a:0 "Vietnam 2.0 when?"
+
+holo_news.168.t:0 "Flat-chest deal"
+holo_news.168.d:0 "To substitute for their chest, A-chan announced a massive Industrial development in every country where their leader has flat-chest"
+holo_news.168.a:0 "Pettan World Order"
+
+holo_news.169.t:0 "Nagasaki Coup"
+holo_news.169.d:0 "Hololive HQ staged coup in Japanese backyard. Nagasaki and Kyushu island have a massive military presence in the area"
+holo_news.169.a:0 "War is about to happen"
+
+holo_news.170.t:0 "Treaty of Tokyo"
+holo_news.170.d:0 "Japan has capitulated to Hololive. Yagoo and A-chan proclaim the United COVER corp. Hololive troops will march on Imperial Palace tomorrow."
+holo_news.170.a:0 "Viva Hololive"
+
+yagoo.46.t:0 "Election of 1936"
+yagoo.46.d:0 "Choose the new leader for Hololive HQ"
+yagoo.46.a:0 "Yagoo leads the way"
+yagoo.46.b:0 "A-chan in charge"
+yagoo.46.c:0 "We can't decide yet"
+
+yagoo.47.t:0 "Second HQ Election"
+yagoo.47.d:0 "Choose the new leader for Hololive HQ"
+yagoo.47.a:0 "Enma"
+yagoo.47.b:0 "J-Chad"
+yagoo.47.c:0 "Jenma"
+
+yagoo.48.t:0 "Our first colony"
+yagoo.48.d:0 "Where should our first colony be?"
+yagoo.48.a:0 "In West Africa"
+yagoo.48.b:0 "In East Africa"
+
+holo_news.171.t:0 "The Yakuza"
+holo_news.171.d:0 "Coco loved the Yakuza video game series and streamed it often. Her love for Yakuza goes as far that she is called kaichou, "chairman," a title used by yakuza leaders which is shared by her favorite character, Kiryu Kazuma."
+holo_news.171.a:0 "Waking the Dragon"
+
+holo_news.172.t:0 "Assassination of Coco"
+holo_news.172.d:0 "Coco was Assassinated. The Atlanta provincial government is taking over her position. There is still no clear answer to who was behind this, or who is going to be the next leader"
+holo_news.172.a:0 "We will remember you"
+
+holo_news.173.t:0 "Kazuma coup"
+holo_news.173.d:0 "Kiryu's legendary accomplishments and ascent through the ranks of the Tojo Clan's Dojima Family as well as the dragon tattoo on his back have earned him the nickname "The Dragon of Dojima""
+holo_news.173.a:0 "He is simply built different"
+
+holo_news.174.t:0 "Kaine-chan take over"
+holo_news.174.d:0 "During an episode of AsaCoco, Coco proposed the creation of hololive USA (something which would later come true as hololive English). As a joke, she showcased the first "idol," an overweight, middle-aged smoker named "Coco Kaine" (a play on the drug "cocaine")."
+holo_news.174.a:0 "Very interesting"
+
+holo_news.175.t:0 "Union of Red Dragon"
+holo_news.175.d:0 "After the invasion of Colombia and Brazil, Kaine-chan successfully bring about the socialist revolution in South America. There can only be the Red Dragon in the sky!"
+holo_news.175.a:0 "Viva la Revolution!" 
+
+holo_news.176.t:0 "Coco Swallow the Sun"
+holo_news.176.d:0 "After the invasion of Japan and China, Coco finally has full control of Beijing and Tokyo. Coco claims that she has swallowed the sun. But this is mad sus because the sun is still there"
+holo_news.176.a:0 "When day breaks"
+
+holo_news.177.t:0 "Usaken West Indies"
+holo_news.177.d:0 "Usaken has expanded their territory into West Indies. Leading by Coco, Bahamas is firmly in Usaken control"
+holo_news.177.a:0 "West Indies Gang"
+
+holo_news.178.t:0 "Coco America"
+holo_news.178.d:0 ""Good morning, everyone! Wake up, wake up, wake up!"\n\nA kid dragon who came to Japan from another world as a language exchange student. Holds a deep interest in human culture.\n\nShe is a dragon with a strict code of honor, and keeps her human form through sheer force of willpower"
+holo_news.178.a:0 "Kaichou!"
+
+coco.45.t:0 "Coco invites you to her faction"
+coco.45.d:0 "Coco invites you to her faction"
+coco.45.a:0 "Sure"
+coco.45.b:0 "Not now"
+
+coco.46.t:0 "Coco demands puppet us!"
+coco.46.d:0 "Coco wants to puppet us!"
+coco.46.a:0 "Yes, Queen"
+coco.46.b:0 "No!"
+
+coco.47.t:0 "Coco asks to join your faction"
+coco.47.d:0 "Coco wants to join your faction"
+coco.47.a:0 "Sure"
+coco.47.b:0 "Not now"
+
+coco.48.t:0 "Yakuza Rebellion"
+coco.48.d:0 "Coco has staged rebellion in our country"
+coco.48.a:0 "There is nothing we can do"
+coco.48.b:0 "Fight the rebel"
+
+coco.49.t:0 "Sunbelt Compromise"
+coco.49.d:0 "Coco wants to buy Arizona and New Mexico"
+coco.49.a:0 "Sure"
+coco.49.b:0 "No"
+
+coco.50.t:0 "Coco demands the Guianas"
+coco.50.d:0 "Coco demands the Guianas"
+coco.50.a:0 "Yes, Queen"
+coco.50.b:0 "No!"
+
+coco.51.t:0 "Los Cuates de Sinaloa"
+coco.51.d:0 "The cartel's runnin' hot because they weren't getting respect. Talkin' 'bout some "Heisenberg" who owns the market now. No one knows the man since they've never seen his face"
+coco.51.a:0 "New member from New Mexico"
+
+holo_news.179.t:0 "International Police"
+holo_news.179.d:0 ""'Sup! I'm Oozora Subaru from hololive 2nd Generation!" The manager of an MMA team and an e-sports club. A bright and cheerful girl full of spirit, she can interact with anyone and everyone without hesitation. She's currently working hard on her own pro-gamer skills.\n\nAnother day of giving everything I've got as a manager!!!!!!!!!!!"
+holo_news.179.a:0 "Let's go Subaru"
+
+subaru.5.t:0 "Subaru found our education camps!"
+subaru.5.d:0 "Subaru found our education camps! We are going to the international court"
+subaru.5.a:0 "Bribe Subaru"
+subaru.5.b:0 "Pay the fine"
+
+holo_news.180.t:0 "Geneva Conventions Enforcement"
+holo_news.180.d:0 "The streams are styled after police procedurals, complete with music, an interrogation room background, and Subaru wearing her school uniform and a police hat overlay. Prior to the stream, she asked fans to report 'crimes' committed by the other talents, and during the stream, the talents would call in and be 'interrogated' by Subaru. After getting a chance to explain themselves (or admit to yet more crimes), Subaru would ask the chat whether they are 'guilty' or 'not guilty.'"
+holo_news.180.a:0 "It's getting harder to commit warcrime"
+
+subaru.6.t:0 "Pekora pays the fine"
+subaru.6.d:0 "Pekora pays 1,000 yen to us. Go check the stockpile"
+subaru.6.a:0 "Thanks peko"
+
+subaru.7.t:0 "Pekora bribes us"
+subaru.7.d:0 "Pekora bribes us with 1 offsite civ"
+subaru.7.a:0 "Thanks peko"
+
+holo_news.181.t:0 "Small Ame leaves Europe"
+holo_news.181.d:0 "Smol Ame was introduced on 1 April 2021. As an April Fools prank, the five members of hololive Myth held a collab to reveal new models which turned out to be based on popular chibi designs by fan Walfie. Amelia originally claimed to have just given birth to her chibi version, but this was revealed during the subsequent superchat reading stream to have been an April Fools prank."
+holo_news.181.a:0 "Amexit moment"
+
+holo_news.182.t:0 "Union of Small Ame Republic"
+holo_news.182.d:0 "Since Small Ame published 'Small Ame Manifesto' many country such as Ina, Kiara, Gura, and Calliope have turned themselves into smaller version of themselves. It was the funniest things I've ever seen"
+holo_news.182.a:0 "USAR moment"
+
+holo_news.183.t:0 "Franco-Amelia Union"
+holo_news.183.d:0 "What's the better way of screwing around with UK than forming a union with France."
+holo_news.183.a:0 "Where is Suisei"
+
+holo_news.184.t:0 "Amelia Imperial Federation"
+holo_news.184.d:0 ""I spent most of my life caring for somebody, and when they weren't here anymore I felt like I lost my purpose. And so I just played a lot of games, and shared that happiness with other people. And I hope you guys also can carve out your own happiness. Your own happy place in the world. And find your own slice of happiness. Everybody's success looks different. It might not look like mine or somebody else's. But there are other things that can make you happy, okay? It comes in all shapes and sizes."\n\n- Amelia Watson"
+holo_news.184.a:0 "The Sun never set on Watson Empire"
+
+holo_news.185.t:0 "Watson's Interrogation"
+holo_news.185.d:0 "Amelia heard strange rumors online surrounding hololive: talking foxes, magical squirrels, superhuman dogs, and more. Soon after beginning her investigation on hololive, and just out of interest, she decided to become an idol herself! She loves to pass her time training her reflexes with FPS games, and challenging herself with puzzle games.\n\n"It's elementary, right?""
+holo_news.185.a:0 "Hello Ame"
+
+amelia.4.t:0 "KFP misconduct"
+amelia.4.d:0 "Watson found out about KFP misconduct"
+amelia.4.a:0 "Bribe her"
+amelia.4.b:0 "Pay the fine"
+
+amelia.5.t:0 "Intelligence sabotaged!"
+amelia.5.d:0 "Amelia sabotaged our intelligence operation!"
+amelia.5.a:0 "Dang it!"
+
+amelia.6.t:0 "Small Ame boosted Communist in our country"
+amelia.6.d:0 "Small Ame boosted Communist popularity in our country"
+amelia.6.a:0 "What the Small Ame doing"
+
+amelia.7.t:0 "Amelia demands puppet us!"
+amelia.7.d:0 "Amelia demands puppet us!"
+amelia.7.a:0 "Yes, Queen"
+amelia.7.b:0 "No"
+
+amelia.8.t:0 "National Referendum"
+amelia.8.d:0 "Amelia council will decide your fate"
+amelia.8.a:0 "Neutrality Victory"
+amelia.8.b:0 "Royalist Victory"
+amelia.8.c:0 "Unexpected faction"
+
+amelia.9.t:0 "Amelia wants to buy New Foundland"
+amelia.9.d:0 "Amelia wants to buy New Foundland"
+amelia.9.a:0 "Sure"
+amelia.9.a:0 "No"
+
+amelia.10.t:0 "New Foundland deal completed"
+amelia.10.d:0 "Check out our new colony of New Foundland"
+amelia.10.a:0 "Cool"
+
+amelia.11.t:0 "Amelia wants to buy Hong Kong"
+amelia.11.d:0 "Amelia wants to buy Hong Kong"
+amelia.11.a:0 "Sure"
+amelia.11.b:0 "No"
+
+amelia.12.t:0 "Hong Kong deal completed"
+amelia.12.d:0 "Check out our new colony of Hong Kong"
+amelia.12.a:0 "Cool"
+
+amelia.13.t:0 "Amelia Treaty Ports"
+amelia.13.d:0 "Amelia demand a treaty port in our country"
+amelia.13.a:0 "Give her French India port"
+amelia.13.b:0 "Give her Goa"
+amelia.13.c:0 "She will have to come take it herself"
+
+amelia.14.t:0 "India Treaty Ports"
+amelia.14.d:0 "Check out French India port, a newest colony to our rock collection"
+amelia.14.a:0 "Sure"
+
+amelia.15.t:0 "India Treaty Ports"
+amelia.15.d:0 "Check out French India port, a newest colony to our rock collection"
+amelia.15.a:0 "Sure"
+
+amelia.16.t:0 "Question of the Federation"
+amelia.16.d:0 "Amelia wants us to be under her direct rule"
+amelia.16.a:0 "Yes, Queen"
+amelia.16.b:0 "No"
+
+aloe.47.t:0 "Exiled to Romania"
+aloe.47.d:0 "The haters have taken over our capital, Budapest. We are force to exile to Romanian part of our country"
+aloe.47.a:0 "The Sun does not rise in the East"
+
+aloe.48.t:0 "Back to the throne"
+aloe.48.d:0 "Advance, all the boys from the Buda. Advance, all the boys from the Pest!"
+aloe.48.a:0 "Hurrah!"
+
+holo_news.186.t:0 "Aloe in Exile"
+holo_news.186.d:0 "On 30 August, hololive's official Twitter announced Mano Aloe's retirement. It was mentioned that she was both mentally and physically unable to continue her career as Mano Aloe, and in accordance to her wishes, Aloe graduated from hololive on 31 August."
+holo_news.186.a:0 "Sad day for Hololive"
+
+holo_news.187.t:0 "Aloe is back"
+holo_news.187.d:0 "A headstrong, mischievous succubus-in-training who dreams of becoming the Diva of the Demonic Realm. Can dish it out, but can’t take it. After learning of hololive from an acquaintance, she decided to come test out her charms in the human realm."
+holo_news.187.a:0 "Guess who's back"
+
+aloe.49.t:0 "Aloe demands border states"
+aloe.49.d:0 "Aloe demands border states or war"
+aloe.49.a:0 "We can't afford a war"
+aloe.49.b:0 "She will have to come take it"
+
+pekora.37.t:0 "Libya Rebellion!"
+pekora.37.d:0 "Libya nationalist declare independence for themselves. We can't let this happens!"
+pekora.37.a:0 "Crush the rebel"
+
+pekora.38.t:0 "Pekora demands puppet us!"
+pekora.38.d:0 "Pekora demands puppet us!"
+pekora.38.a:0 "Yes, Queen"
+pekora.38.b:0 "No"
+
+pekora.39.t:0 "Pekora wants to buy Tunisia"
+pekora.39.d:0 "Pekora wants to buy Tunisia for 6 Civs"
+pekora.39.a:0 "Sure"
+pekora.39.b:0 "No"
+
+pekora.40.t:0 "Tunisia deal completed!"
+pekora.40.d:0 "We are now the owner of Tunisia"
+pekora.40.a:0 "Great!"
+
+holo_news.188.t:0 "The War Criminal is released"
+holo_news.188.d:0 "Pekora's penchant for casually committing morally questionable acts while playing games (most infamously her actions towards Villagers in Minecraft) has earned her a reputation as a "war criminal" among western fans."
+holo_news.188.a:0 "We must prepare for chaos"
+
+holo_news.189.t:0 "Pekora's Coronation"
+holo_news.189.d:0 "Pekora hails from the nation of Pekoland, where she claims she is a member of royalty. While not much is currently known about Pekoland, it is assumed that its denizens are, like Pekora, Animals humans with rabbit-ears and comparatively long lifespans, and that the rabbit-motif apparent in Pekora's fashion and accessories is significant to their culture."
+holo_news.189.a:0 "God Save Pekora"
+
+holo_news.190.t:0 "Holy Peko Empire"
+holo_news.190.d:0 "From Rome to Berlin, Pekora rules them all. The Pope crowned Pekora as the Empress of the new Holy Peko Empire."
+holo_news.190.a:0 "Dear God!"
+
+holo_news.191.t:0 "Greater Pekoland"
+holo_news.191.d:0 "In-line with her claims of a royal upbringing, Pekora's personality can be described as outwardly bratty, haughty, immature and surly, but genuinely playful and friendly."
+holo_news.191.a:0 "Peniko Mussada"
+
+holo_news.192.t:0 "Libyan Nationalist Uprising"
+holo_news.192.d:0 "Libyan Nationalist backed by certain war criminals uprising in Italian North Africa. Many military aids are coming from Pekora, while Italian Army prepare to crush the rebels"
+holo_news.192.a:0 "What is Pekora doing?"
+
+kiara.13.t:0 "Kiara demands the Netherlands"
+kiara.13.d:0 "Kiara demands the Netherlands"
+kiara.13.a:0 "Yes, Queen"
+kiara.13.b:0 "No"
+
+kiara.14.t:0 "Kiara invites you to her faction"
+kiara.14.d:0 "Kiara invites you to her faction"
+kiara.14.a:0 "Sure"
+kiara.14.b:0 "No"
+
+kiara.15.t:0 "Kiara demands Burundi and Rwanda"
+kiara.15.d:0 "Kiara demands Burundi and Rwanda"
+kiara.15.a:0 "Sure"
+kiara.15.b:0 "No"
+
+holo_news.193.t:0 "The Kaiserin"
+holo_news.193.d:0 "An idol whose dream is to become the owner of a fast food chain. Kiara is a phoenix, not a chicken or turkey. (Very important)\nShe burns brightly, working herself to the bone since she'll just be reborn from her ashes anyway."
+holo_news.193.a:0 "Long live the Kaiserin"
+
+holo_news.194.t:0 "Kiara Reich"
+holo_news.194.d:0 "Kiara has successfully reunite Germany and expand eastward into Poland, Miko, and Matsuri.\n\nToday, she proclaims herself the Kaiserin of Kiara Reich. The Empress of all of Germany and Poland"
+holo_news.194.a:0 "Long live the Kaiserin"
+
+holo_news.195.t:0 "National Phoenix Party"
+holo_news.195.d:0 "The chicken-wing Fastfoodist are taking the street of Frankfurt.\n\nTakanashi Kiara, known by the title tenchou, is the new leader of the Rhineland.\nKiara often threatens to send misbehaving employees to a place called the Usual Room. The Usual Room contains a jigsaw with one piece missing, screens which play Kiara music videos 24/7, and pro-KFP propaganda for "re-education". The floor is covered in Lego."
+holo_news.195.a:0 "Rise of the Phoenix"
+
+holo_news.196.t:0 "Fastfood United Front"
+holo_news.196.d:0 "Kiara is the CEO of a fast food franchise called Kiara Fried Phoenix, or KFP for short.\n\nHer employees are chickens. After a year, they are fried and served to customers. Kiara assures employees that the company's products are made with vegan chicken, and missing employees have merely been transferred to another branch."
+holo_news.196.a:0 "World Food Supply Organization"
+
+ina.6.t:0 "Ina seeks to join your faction"
+ina.6.d:0 "Ina wants to join your faction"
+ina.6.a:0 "Sure"
+ina.6.b:0 "No"
+
+ina.7.t:0 "Annexation or War"
+ina.7.d:0 "Ina wants to annex us, otherwise we will have to go to war with her"
+ina.7.a:0 "There is nothing we can do"
+ina.7.b:0 "She will have to come and take it"
+
+ina.8.t:0 "Tannu Tuva submits"
+ina.8.d:0 "Tannu Tuva submits before the great Ina"
+ina.8.a:0 "Nice"
+
+ina.9.t:0 "Mongolia submits"
+ina.9.d:0 "Mongolia submits before the great Ina"
+ina.9.a:0 "Nice"
+
+ina.10.t:0 "Ina demands Estonia"
+ina.10.d:0 "Ina demands Estonia"
+ina.10.a:0 "Yes, Queen"
+ina.10.b:0 "No"
+
+holo_news.197.t:0 "Ina'nis Uralic Federation"
+holo_news.197.d:0 "Ina is a priestess of beings known as the Ancient Ones.\n\nIna appears to be inspired by the Lovecraftian mythos, a collection of stories featuring tentacled horrors, cultists to ancient forgotten gods, and old books of insanity-inducing lore. The book she found is likely a reference to the Necronomicon, a fictional grimoire in the Lovecraft mythos used to summon ancient supernatural evils."
+holo_news.197.a:0 "This is the end of us"
+
+gura.8.t:0 "Shark infested in our coastal state!"
+gura.8.d:0 "Gura 'volunteer' to clear shark infested state for us"
+gura.8.a:0 "There is nothing we can do"
+gura.8.b:0 "We will take care of it ourselves"
+
+gura.9.t:0 "Vietcong Uprising!"
+gura.9.d:0 "We suspect that these Vietcong is supported by Gawr Gura. But no matter what, we should be putting down this rebels!"
+gura.9.a:0 "Some folks are born made to wave the flag"
+
+holo_news.198.t:0 "Rapid increase in shark population"
+holo_news.198.d:0 "A descendant of the Lost City of Atlantis, who swam to Earth while saying, "It's so boring down there LOLOLOL!"\nGura bought her clothes (and her shark hat) in the human world and she really loves them. In her spare time, she enjoys talking to marine life."
+holo_news.198.a:0 "What the shark doing"
+
+holo_news.199.t:0 "Vietnam War"
+holo_news.199.d:0 "Vietnamese seperatist leads by Ho Chi Minh has declared independence from Noel.\n\nMany suspect that Princess Gura is behind this chaos. The evidence shows that many equipments for Vietcong are made in Philippines, and Gura has recognized Vietnam as an independent state.\nThere is no response from Noel yet, but it is very likely that she will immediately crush this rebellion"
+holo_news.199.a:0 "I ain't no fortunate shrimp"
+
+holo_news.200.t:0 "The New Atlantis"
+holo_news.200.d:0 "Gura comes from Atlantis, an ancient lost underwater city appearing in legend. On her first solo stream on 13 September 2020, in which she played the shark simulator game Maneater, she said that Atlantis didn't have French fries, so she's not interested in returning.\n\nAtlantis does not have many laws in the same manner as modern land nations. However, punishments are more severe, including public executions at a colosseum."
+holo_news.200.a:0 "Yes, Queen"
+
+calliope.6.t:0 "Calliope asks to join your faction"
+calliope.6.d:0 "Calliope asks to join your faction"
+calliope.6.a:0 "Sure"
+calliope.6.b:0 "Not now"
+
+calliope.7.t:0 "Calliope destroys our capital!"
+calliope.7.d:0 "Goddess Calliope has unleashed the power of death on our capital!"
+calliope.7.a:0 "She has becomes death the destroyer of the world"
+
+paraguay.8.t:0 "Paraguay infiltrates our border!"
+paraguay.8.d:0 "Paraguay infiltrates our border, and demand us to hand over that state!"
+paraguay.8.a:0 "There is nothing we can do"
+paraguay.8.b:0 "Come and take it"
+
+holo_news.203.t:0 "Union of Aquaist Republics"
+holo_news.203.d:0 "Aqua has united the subcontinent and the Indochina. She proclaims the 'Union of Aquaist Republics'. The Resistance is stronger than ever. This is truly a revoluntionary moment. Onions all the world unite!"
+holo_news.203.a:0 "Viva la Republic"
+
+shion.44.t:0 "Neighbor War - Objective"
+shion.44.d:0 "Control and hold Afghanistan. After having FULL control of Afghanistan we will win the Neighbor War"
+shion.44.a:0 "Roger that"
+
+shion.45.t:0 "Victory at Neighbor War!"
+shion.45.d:0 "We have won the Neighbor War!"
+shion.45.a:0 "Let's go!"
+
+shion.46.t:0 "Victory at Neighbor War!"
+shion.46.d:0 "We have won the Neighbor War!"
+shion.46.a:0 "Let's go!"
+
+shion.47.t:0 "Shion demands Kyrgyzstan!"
+shion.47.d:0 "Shion demands Kyrgyzstan or else she will go to war with us!"
+shion.47.a:0 "Sure" 
+shion.47.b:0 "We will shut her up"
+
+shion.48.t:0 "Kazakh Rebels!"
+shion.48.d:0 "Kazakh starts rebellion against us. We believe Shion is behind this!\nWe must take control of their capital before Shion intervene"
+shion.48.a:0 "Dang it!"
+
+shion.49.t:0 "Treaty of Tehran"
+shion.49.d:0 "Shion us to sign the peace treaty, granting independent for Kazakhstan."
+shion.49.a:0 "Kusogaki!"
+
+shion.50.t:0 "Kick Ayame or we will leave"
+shion.50.d:0 "Shion demands us to kick Ayame or else she will leave"
+shion.50.a:0 "Keep Shion"
+shion.50.b:0 "Keep Ayame"
+
+shion.51.t:0 "Shion demands puppet us!"
+shion.51.d:0 "Shion demands puppet us!"
+shion.51.a:0 "Yes, Queen"
+shion.51.b:0 "No"
+
+shion.52.t:0 "Black Magic EXPO"
+shion.52.d:0 "You're invited to Black Magic EXPO by Murasaki Shion"
+shion.52.a:0 "Check out Magic support equipment"
+shion.52.b:0 "Check out Magic tank"
+shion.52.c:0 "I don't care"
+
+shion.53.t:0 "Shionist terrorist attacked!"
+shion.53.d:0 "Shion has called for Shionist Jihad. Shion Exremists are taking up arms and start attacking our capital!"
+shion.53.a:0 "There is nothing we can do"
+shion.53.b:0 "Hunt down the Shionist"
+
+holo_news.204.t:0 "Black Magic EXPO"
+holo_news.204.d:0 "Shion just launched the Black Magic EXPO at Tehran. This event is exclusively for Fascist countries or her ally. Shion will be showing her powerful magical weapons as well as selling them off"
+holo_news.204.a:0 "What the Shion doing?"
+
+holo_news.205.t:0 "Shion Victory at Neighbor War"
+holo_news.205.d:0 "After the fierce battles in Afghanistan, Shion finally has full control of the states. Aqua and Shion meeting at Kabul has concluded the result of the war. Shion is allowed to remilitarize Afghanistan, while Aqua troops will withdraw from Kabul"
+holo_news.205.a:0 "This is crazy"
+
+holo_news.206.t:0 "Aqua Victory at Neighbor War"
+holo_news.206.d:0 "After the fierce battles in Afghanistan, Aqua finally has full control of the states. Aqua and Shion meeting at Kabul has concluded the result of the war. Shion troops will withdraw from Afghanistan. Aqua will reorganize and subjugate Afghanistan into Akukin Afghanistan with Osama bin Laden in charge"
+holo_news.206.a:0 "This is madness"
+
+holo_news.207.t:0 "Shionist Federation"
+holo_news.207.d:0 "Shionist state and the followers finally achieve their goals of taking over the Holyland. Report shows that Okakoro has been seeking support from both Resistance and Hololive HQ. However, with help from a certain war criminals, Shion is able to conquered the Holyland"
+holo_news.207.a:0 "Shion is Great!"
+
+holo_news.208.t:0 "Kazakh Rebellion"
+holo_news.208.d:0 "With support from certain witch, Kazakhs people stage an uprising against the Sana. Following the Shion-Sana split and the Sana border dispute with the Resistance, it is as clear as day who is responsible for this uprising."
+holo_news.208.a:0 "Kusogaki!"
+
+holo_news.209.t:0 "Treaty of Tehran"
+holo_news.209.d:0 "With Sana failed to capture Kazakh capital, Shion threatens to join war on Kazakh's side. Sana is forced to sign the Treaty of Tehran.\n\nSana troops will start its withdrawal from Kazakhstan. Kazakhstan will be subjugated into Akukin Kazakhstan, and will follow the Resistance principles"
+holo_news.209.a:0 "Most interesting thing in Central Asia"
+
+holo_news.210.t:0 "Shion-Aqua Commonwealth"
+holo_news.210.d:0 "Following the Neighbor War. Shion starts another war against Aqua. This time she plans to bring the entire Aqua under her rule. Not so long before the Resistance is crushed. Shion and Yagoo celebrate together, before Shion proclaims herself the Queen of Shion-Aqua Commonwealth, and dressing up as a maid"
+holo_news.210.a:0 "End of the resistance?"
+
+ayame.24.t:0 "Ayame secret deal"
+ayame.24.d:0 "To prevent the civil war, Ayame promise to help us, but we have to join the resistance"
+ayame.24.a:0 "Sure"
+ayame.24.b:0 "Stalin would not take this deal!"
+
+ayame.25.t:0 "Manji-Gumi deal"
+ayame.25.d:0 "Ayame forces us to signed Manji-Gumi deal. In which we are no longer allow to veto her membership to the Resistance"
+ayame.25.a:0 "Ok Ayame"
+
+ayame.26.t:0 "Ayame demands puppet us!"
+ayame.26.d:0 "Ayame demands puppet us"
+ayame.26.a:0 "Yes, Queen"
+ayame.26.b:0 "No!"
+
+ayame.27.t:0 "Ayame wants to steal our puppet!"
+ayame.27.d:0 "Ayame wants to steal our puppet!"
+ayame.27.a:0 "It's fine"
+ayame.27.b:0 "No"
+
+ayame.28.t:0 "Caucasus Oil Offer"
+ayame.28.d:0 "Ayame offers us resource right over Caucasus oil field for 180 days. In exchange she will get some economic boost"
+ayame.28.a:0 "Sure, it's free oil"
+ayame.28.b:0 "No"
+
+ayame.29.t:0 "Caucasus Oil Deal -  Complete"
+ayame.29.d:0 "Enjoy your free 15 civs for 180 days!"
+ayame.29.a:0 "Yay!"
+
+ayame.30.t:0 "Caucasus Oil Deal - Turned down"
+ayame.30.d:0 "They refused our offers"
+ayame.30.a:0 "What a shame"
+
+ayame.31.t:0 "Oil leasing expires"
+ayame.31.d:0 "We no longer have access to Ayame's Caucasus oil"
+ayame.31.a:0 "Damn"
+
+ayame.32.t:0 "Oil leasing expires"
+ayame.32.d:0 "We no longer have access to free 15 civs"
+ayame.32.a:0 "It's ok"
+
+holo_news.211.t:0 "Soviet Uprising"
+holo_news.211.d:0 "The remaining of what is left of the Red Army gathers up at Kursk, where they would stage uprising against Hololive Council."
+holo_news.211.a:0 "Operation Red Moon?"
+
+holo_news.212.t:0 "Oni Goddess"
+holo_news.212.d:0 ""Greetings, Humans! Yoohoo!"\n\nA kimono-clad Oni girl from the Underworld Academy. As she loves to prank people, she always uses will-o’-the-wisp on them just to have fun. Many may not realize it, but she is actually the president of the student council."
+holo_news.212.a:0 "Yo dayo!"
+
+holo_cn.1.t:0 "Rosalyn assure her loyalty to Hololive"
+holo_cn.1.d:0 "Rosalyn announces that she will stay with Hololive. Period."
+holo_cn.1.a:0 "Great"
+
+holo_cn.2.t:0 "Echo assure her loyalty to Hololive"
+holo_cn.2.d:0 "Echo announces that she will stay with Hololive. Period."
+holo_cn.2.a:0 "Great"
+
+holo_cn.3.t:0 "Yogiri assure her loyalty to Hololive"
+holo_cn.3.d:0 "Yogiri announces that she will stay with Hololive. Period."
+holo_cn.3.a:0 "Great"
+
+holo_cn.4.t:0 "Artia assure her loyalty to Hololive"
+holo_cn.4.d:0 "Artia announces that she will stay with Hololive. Period."
+holo_cn.4.a:0 "Great"
+
+holo_cn.5.t:0 "Civia assure her loyalty to Hololive"
+holo_cn.5.d:0 "Civia announces that she will stay with Hololive. Period."
+holo_cn.5.a:0 "Great"
+
+holo_cn.6.t:0 "Doris assure her loyalty to Hololive"
+holo_cn.6.d:0 "Doris announces that she will stay with Hololive. Period."
+holo_cn.6.a:0 "Great"
+
+holo_cn.13.t:0 "HQ has failed to meet our request"
+holo_cn.13.d:0 "The HQ has failed to meet our request. This truly shows the weakness in Hololive. We are ready to leave this faction at any given time"
+holo_cn.13.a:0 "Sayonara"
+
+holo_cn.7.t:0 "Rosalyn requests Garrison Support"
+holo_cn.7.d:0 "Rosalyn requests Garrison Support"
+holo_cn.7.a:0 "Fine"
+holo_cn.7.b:0 "We can't afford this"
+
+holo_cn.8.t:0 "Echo requests Garrison Support"
+holo_cn.8.d:0 "Echo requests Garrison Support"
+holo_cn.8.a:0 "Fine"
+holo_cn.8.b:0 "We can't afford this"
+
+holo_cn.9.t:0 "Yogiri requests Garrison Support"
+holo_cn.9.d:0 "Yogiri requests Garrison Support"
+holo_cn.9.a:0 "Fine"
+holo_cn.9.b:0 "We can't afford this"
+
+holo_cn.10.t:0 "Artia requests Garrison Support"
+holo_cn.10.d:0 "Artia requests Garrison Support"
+holo_cn.10.a:0 "Fine"
+holo_cn.10.b:0 "We can't afford this"
+
+holo_cn.11.t:0 "Civia requests Garrison Support"
+holo_cn.11.d:0 "Civia requests Garrison Support"
+holo_cn.11.a:0 "Fine"
+holo_cn.11.b:0 "We can't afford this"
+
+holo_cn.12.t:0 "Doris requests Garrison Support"
+holo_cn.12.d:0 "Doris requests Garrison Support"
+holo_cn.12.a:0 "Fine"
+holo_cn.12.b:0 "We can't afford this"
+
+holo_cn.14.t:0 "Rosalyn requests Infantry Equipments"
+holo_cn.14.d:0 "Rosalyn requests Infantry Equipments"
+holo_cn.14.a:0 "Fine"
+holo_cn.14.b:0 "We can't afford this"
+
+holo_cn.15.t:0 "Echo requests Infantry Equipments"
+holo_cn.15.d:0 "Echo requests Infantry Equipments"
+holo_cn.15.a:0 "Fine"
+holo_cn.15.b:0 "We can't afford this"
+
+holo_cn.16.t:0 "Yogiri requests Infantry Equipments"
+holo_cn.16.d:0 "Yogiri requests Infantry Equipments"
+holo_cn.16.a:0 "Fine"
+holo_cn.16.b:0 "We can't afford this"
+
+holo_cn.17.t:0 "Artia requests Infantry Equipments"
+holo_cn.17.d:0 "Artia requests Infantry Equipments"
+holo_cn.17.a:0 "Fine"
+holo_cn.17.b:0 "We can't afford this"
+
+holo_cn.18.t:0 "Civia requests Infantry Equipments"
+holo_cn.18.d:0 "Civia requests Infantry Equipments"
+holo_cn.18.a:0 "Fine"
+holo_cn.18.b:0 "We can't afford this"
+
+holo_cn.19.t:0 "Doris requests Infantry Equipments"
+holo_cn.19.d:0 "Doris requests Infantry Equipments"
+holo_cn.19.a:0 "Fine"
+holo_cn.19.b:0 "We can't afford this"
+
+holo_cn.20.t:0 "Rosalyn requests extra budget"
+holo_cn.20.d:0 "Rosalyn requests extra budget"
+holo_cn.20.a:0 "Fine"
+holo_cn.20.b:0 "We can't afford this"
+
+holo_cn.21.t:0 "Echo requests extra budget"
+holo_cn.21.d:0 "Echo requests extra budget"
+holo_cn.21.a:0 "Fine"
+holo_cn.21.b:0 "We can't afford this"
+
+holo_cn.22.t:0 "Yogiri requests extra budget"
+holo_cn.22.d:0 "Yogiri requests extra budget"
+holo_cn.22.a:0 "Fine"
+holo_cn.22.b:0 "We can't afford this"
+
+holo_cn.23.t:0 "Artia requests extra budget"
+holo_cn.23.d:0 "Artia requests extra budget"
+holo_cn.23.a:0 "Fine"
+holo_cn.23.b:0 "We can't afford this"
+
+holo_cn.24.t:0 "Civia requests extra budget"
+holo_cn.24.d:0 "Civia requests extra budget"
+holo_cn.24.a:0 "Fine"
+holo_cn.24.b:0 "We can't afford this"
+
+holo_cn.25.t:0 "Doris requests extra budget"
+holo_cn.25.d:0 "Doris requests extra budget"
+holo_cn.25.a:0 "Fine"
+holo_cn.25.b:0 "We can't afford this"
+
+holo_cn.26.t:0 "Rosalyn invite you to her faction"
+holo_cn.26.d:0 "Rosalyn invite you to her faction"
+holo_cn.26.a:0 "Fine"
+holo_cn.26.b:0 "We are not ready yet"
+
+holo_cn.27.t:0 "Echo invite you to her faction"
+holo_cn.27.d:0 "Echo invite you to her faction"
+holo_cn.27.a:0 "Fine"
+holo_cn.27.b:0 "We are not ready yet"
+
+holo_cn.28.t:0 "Yogiri invite you to her faction"
+holo_cn.28.d:0 "Yogiri invite you to her faction"
+holo_cn.28.a:0 "Fine"
+holo_cn.28.b:0 "We are not ready yet"
+
+holo_cn.29.t:0 "Artia invite you to her faction"
+holo_cn.29.d:0 "Artia invite you to her faction"
+holo_cn.29.a:0 "Fine"
+holo_cn.29.b:0 "We are not ready yet"
+
+holo_cn.30.t:0 "Civia invite you to her faction"
+holo_cn.30.d:0 "Civia invite you to her faction"
+holo_cn.30.a:0 "Fine"
+holo_cn.30.b:0 "We are not ready yet"
+
+holo_cn.31.t:0 "Doris invite you to her faction"
+holo_cn.31.d:0 "Doris invite you to her faction"
+holo_cn.31.a:0 "Fine"
+holo_cn.31.b:0 "We are not ready yet"
+
+holo_cn.32.t:0 "Rosalyn demands border state!"
+holo_cn.32.d:0 "Rosalyn demands border state or else she will go to war with us!"
+holo_cn.32.a:0 "Fine"
+holo_cn.32.b:0 "Come and take it"
+
+holo_cn.33.t:0 "Echo demands border state!"
+holo_cn.33.d:0 "Echo demands border state or else she will go to war with us!"
+holo_cn.33.a:0 "Fine"
+holo_cn.33.b:0 "Come and take it"
+
+holo_cn.34.t:0 "Yogiri demands border state!"
+holo_cn.34.d:0 "Yogiri demands border state or else she will go to war with us!"
+holo_cn.34.a:0 "Fine"
+holo_cn.34.b:0 "Come and take it"
+
+holo_cn.35.t:0 "Artia demands border state!"
+holo_cn.35.d:0 "Artia demands border state or else she will go to war with us!"
+holo_cn.35.a:0 "Fine"
+holo_cn.35.b:0 "Come and take it"
+
+holo_cn.36.t:0 "Civia demands border state!"
+holo_cn.36.d:0 "Civia demands border state or else she will go to war with us!"
+holo_cn.36.a:0 "Fine"
+holo_cn.36.b:0 "Come and take it"
+
+holo_cn.37.t:0 "Doris demands border state!"
+holo_cn.37.d:0 "Doris demands border state or else she will go to war with us!"
+holo_cn.37.a:0 "Fine"
+holo_cn.37.b:0 "Come and take it"
+
+holo_cn.38.t:0 "Rosalyn seeks to join your faction"
+holo_cn.38.d:0 "Rosalyn seeks to join your faction"
+holo_cn.38.a:0 "Fine"
+holo_cn.38.b:0 "Not yet"
+
+holo_cn.39.t:0 "Echo seeks to join your faction"
+holo_cn.39.d:0 "Echo seeks to join your faction"
+holo_cn.39.a:0 "Fine"
+holo_cn.39.b:0 "Not yet"
+
+holo_cn.40.t:0 "Yogiri seeks to join your faction"
+holo_cn.40.d:0 "Yogiri seeks to join your faction"
+holo_cn.40.a:0 "Fine"
+holo_cn.40.b:0 "Not yet"
+
+holo_cn.41.t:0 "Artia seeks to join your faction"
+holo_cn.41.d:0 "Artia seeks to join your faction"
+holo_cn.41.a:0 "Fine"
+holo_cn.41.b:0 "Not yet"
+
+holo_cn.42.t:0 "Civia seeks to join your faction"
+holo_cn.42.d:0 "Civia seeks to join your faction"
+holo_cn.42.a:0 "Fine"
+holo_cn.42.b:0 "Not yet"
+
+holo_cn.43.t:0 "Doris seeks to join your faction"
+holo_cn.43.d:0 "Doris seeks to join your faction"
+holo_cn.43.a:0 "Fine"
+holo_cn.43.b:0 "Not yet"
+
+holo_cn.44.t:0 "You're invited to Anime Expo"
+holo_cn.44.d:0 "Japan invites you to Anime Expo. You can have Electronic bonus while Japan gets the 1,200 yen"
+holo_cn.44.a:0 "Sure"
+holo_cn.44.b:0 "No"
+
+holo_cn.45.t:0 "Japan demands Korea"
+holo_cn.45.d:0 "Japan demands Korea from us!"
+holo_cn.45.a:0 "Yes, Hirohito"
+holo_cn.45.b:0 "No"
+
+holo_cn.46.t:0 "Hololive China questions our loyalty"
+holo_cn.46.d:0 "Hololive China questions our loyalty. Should we stay with them, or pave our own path"
+holo_cn.46.a:0 "Stay with the Union"
+holo_cn.46.b:0 "Down with the Blue banner!"
+
+holo_cn.47.t:0 "Hololive China demands Shanghai"
+holo_cn.47.d:0 "Hololive China demands Shanghai"
+holo_cn.47.a:0 "Sure"
+holo_cn.47.b:0 "No"
+
+holo_cn.48.t:0 "Beijing Conference"
+holo_cn.48.d:0 "Hololive China wants to annex us!"
+holo_cn.48.a:0 "Sure"
+holo_cn.48.b:0 "No"
+
+holo_news.213.t:0 "CN United Front"
+holo_news.213.d:0 "CN United Front has been formed. Leader of the united front promised that they will stay neutral and avoid any conflict necessary. However, this does not please A-chan. A-chan announced a new plan to support Hololive China and Nodoka, should the conflict spark between the United Front and HoloHQ."
+holo_news.213.a:0 "Very interesting"
+
+holo_news.214.t:0 "Anti-Hololive Pact"
+holo_news.214.d:0 "The Antis finally have its own territory. Despite being on the same political spectrum, Aqua and the resistance have denounced the Antis and refused to send any support, should the war broke out between Anti and Hololive. Nodoka also announced a new counter-terrorist doctrine and cyber security in the army."
+holo_news.214.a:0 "This is getting interesting"
+
+holo_news.215.t:0 "HoloCN Purge"
+holo_news.215.d:0 "HoloCN Purge. Nodoka announced the purge on CN members who seek independence. CN member who does not swear loyalty toward Hololive will be hunted down immediately. This could start a conflict in China, and many countries are looking to intervene"
+holo_news.215.a:0 "Never fight a land war in Asia"
+
+holo_news.216.t:0 "United Hololive China"
+holo_news.216.d:0 "After Beijing Conference, all the CN girls believe it would be better off getting annexed by Hololive China. Nodoka has finally intergrated them all into one nation, the United Hololive China."
+holo_news.216.a:0 "The new superpower?"
+
+towa.3.t:0 "Towa asks to join your faction"
+towa.3.d:0 "Towa wants to join your faction"
+towa.3.a:0 "Sure"
+towa.3.b:0 "Not now"
+
+towa.4.t:0 "Towa demands Edirne"
+towa.4.d:0 "Towa demands Edirne as she wants to expand into Europe"
+towa.4.a:0 "Yes, tenshi"
+towa.4.b:0 "No!"
+
+towa.5.t:0 "Towa offers strait pass"
+towa.5.d:0 "Towa offers us the strait pass through the Bosphorus, and she will get 2,500 yen"
+towa.5.a:0 "Good deal"
+towa.5.b:0 "We are not interested"
+
+towa.6.t:0 "Strait deal completes"
+towa.6.d:0 "We have recieved 2,500 yen from our client. Check out the stockpile"
+towa.6.a:0 "Money on my mind"
+
+towa.7.t:0 "Strait deal fails"
+towa.7.d:0 "Our client decline our offers"
+towa.7.a:0 "It's fine"
+
+towa.8.t:0 "Towa requests Non-aggression Pact"
+towa.8.d:0 "This will ensure peace between us and Towa"
+towa.8.a:0 "Sure"
+towa.8.b:0 "We have another plan"
+
+towa.9.t:0 "Towa demands annex us!"
+towa.9.d:0 "Towa demands annex us!"
+towa.9.a:0 "Yes, Queen"
+towa.9.b:0 "This is ridiculous!"
+
+holo_news.217.t:0 "Ottowa Empire"
+holo_news.217.d:0 "Under the reign of Princess Towa the tenshi, the Ottowa Empire marked the peak of its power and prosperity, as well as the highest development of its governmental, social, and economic systems.\n\nWhile the Towa state was once thought to have entered a period of decline following the war against Okayu, this view is no longer supported by the majority of Hololive member."
+holo_news.217.a:0 "Long Live Tenshi!"
+
+holo_news.218.t:0 "Eternal Tokoyami Empire"
+holo_news.218.d:0 "After the devil-angel unification. Towa and Kanata agreed that it would be better if they cooperate.\n\nAt last, Ankara and Bengal have merged into one super empire, the Eternal Tokoyami Empire."
+holo_news.218.a:0 "Very cool Towa"
+
+holo_news.219.t:0 "Kenzoku Victory on Anti-Lamy War"
+holo_news.219.d:0 "Following the purge, many Lamy imposters were arrested. Some of Kenzoku still acting kinda sus. However, after taking over Bucharest, Kenzoku nationalists celebrate their victory at Lamy's capital. Towa announces a plan to de-lamify the country, and support Romanian in need."
+holo_news.219.a:0 "Does Romanian really need help?"
+
+holo_news.220.t:0 "Towa Maji Tenshi"
+holo_news.220.d:0 ""Sup, groupies!"\n\nA young devil who is visiting human society to gain experience and develop her skills. But instead of studying, she became addicted to video games! After learning about a tool for communicating with humans called "streaming," she's trying it out to help with her studies."
+holo_news.220.a:0 "TMT TMT TMT!"
+
+okayu.51.t:0 "Okayu invites you to her faction"
+okayu.51.d:0 "Okayu invites you to her faction"
+okayu.51.a:0 "Sure"
+okayu.51.b:0 "Not now"
+
+okayu.52.t:0 "Baghdad Award"
+okayu.52.d:0 "Okayu wants to give us all of the Subaru's land. This is will help our effort to form Arabia"
+okayu.52.a:0 "This is an offer we can't refuse"
+
+okayu.53.t:0 "Sicily Trial"
+okayu.53.d:0 "Okayu offers to hold the Sicily Trial, which will remove the 'War Criminal in the state' for us. However, by doing this, you will no longer allow to go for fascist route"
+okayu.53.a:0 "We have no intention of going fascist anyway"
+okayu.53.b:0 "We will do it our own way"
+
+okayu.54.t:0 "Pekora accepted Sicily Trial"
+okayu.54.d:0 "We help her remove the criminal in the state, so she is repaying us with some 'reward'"
+okayu.54.a:0 "Arigato"
+
+holo_news.221.t:0 "Attorney at Law"
+holo_news.221.d:0 "Hi I'm Saul Goodman. Did you know that you have rights? The Constitution says you do and so do I.\n\nI believe that until proven guilty every general and admiral in this country is innocent and that's why I fight for you Nuremburg."
+holo_news.221.a:0 "Better Call Saul"
+
+okayu.55.t:0 "Pay fine or War"
+okayu.55.d:0 "Okayu demands us to pay fine, in yen, or in civ. Otherwise she will go to war with us"
+okayu.55.a:0 "Pay in Yen"
+okayu.55.b:0 "Pay in Civ"
+okayu.55.c:0 "I would like to see her try"
+
+okayu.56.t:0 "[ROOT.GetNameDef] pays in yen"
+okayu.56.d:0 "[ROOT.GetNameDef] paid the fine in yen"
+okayu.56.a:0 "Nice"
+
+okayu.57.t:0 "[ROOT.GetNameDef] pays in civ"
+okayu.57.d:0 "[ROOT.GetNameDef] paid the fine in civ"
+okayu.57.a:0 "Nice"
+
+okayu.58.t:0 "[ROOT.GetNameDef] refused to pay the fine"
+okayu.58.d:0 "This is Hololive level threat"
+okayu.58.a:0 "We shall see"
+
+korone.41.t:0 "Korone requests Mandate of Hololive" 
+korone.41.d:0 "As a frontline country, Korone is very vulnerable to the attack from the Resistance. Therefore, supporting her might be a good idea"
+korone.41.a:0 "Sure"
+korone.41.b:0 "We cannot trust her"
+
+korone.42.t:0 "Korone requests no intervention in Suez Crisis"
+korone.42.d:0 "Korone requests us to stop intervenes in Suez Crisis"
+korone.42.a:0 "Sure"
+korone.42.b:0 "We shall protect the mandate"
+
+korone.43.t:0 "Send support to East Africa Mandate"
+korone.43.d:0 "Korone is looking to attack East Africa Mandate. It is our duty to stop Doggo Imperialism!"
+korone.43.a:0 "Send guns" 
+korone.43.b:0 "Send planes"
+korone.43.c:0 "Send tanks"
+
+korone.44.t:0 "Breaking point of the Suez Crisis"
+korone.44.d:0 "This is the breaking point of the Suez Crisis. Korone is sending us the ultimatum, leave Egypt or War"
+korone.44.a:0 "We cannot afford to go to war"
+korone.44.b:0 "Come and take it!"
+
+holo_news.222.t:0 "Suez Crisis"
+holo_news.222.d:0 "Korone has ignites a crisis on Sinai penisular. The tension between Korone and East Africa Mandate has been as high as ever.\n\nIt is still unclear wheater or not Okayu will support Korone's act of aggression"
+holo_news.222.a:0 "Time to intervene"
+
+noel.43.t:0 "Noel bids to buy resource rights"
+noel.43.d:0 "Noel bids to buy resource rights in one of our state for 360 days."
+noel.43.a:0 "We have no use of it anyway"
+noel.43.b:0 "No"
+
+noel.44.t:0 "Resource rights deal expired"
+noel.44.d:0 "Noel no longer have rights over resource in malaya"
+noel.44.a:0 "Ok"
+
+noel.45.t:0 "Bangkok Award"
+noel.45.d:0 "Noel gives us some land in the region, that is controlled by member of our faction"
+noel.45.a:0 "Nice"
+
+noel.46.t:0 "Noel demands puppet us!"
+noel.46.d:0 "Noel demands puppet us!"
+noel.46.a:0 "Yes, knight"
+noel.46.b:0 "No"
+
+noel.47.t:0 "Noel invites you to her faction"
+noel.47.d:0 "Noel invites you to her faction"
+noel.47.a:0 "Sure"
+noel.47.b:0 "No"
+
+noel.48.t:0 "Noel requests NAP"
+noel.48.d:0 "Noel requests Non-aggression Pact with us"
+noel.48.a:0 "Sure"
+noel.48.b:0 "No"
+
+holo_news.223.t:0 "Order of Shirogane"
+holo_news.223.d:0 "Noel is a clumsy but mostly wholesome knight, with a more girlish voice than her appearance would suggest (though she can pull out a mature older sister voice if the occasion calls for it). She often streams video games, but is rarely seen actually doing well in them."
+holo_news.223.a:0 "Mommy?"
+
+holo_news.224.t:0 "The Holy Order"
+holo_news.224.d:0 "From the Malay to Manchuria, Shirogane Empire stretches far and wide. Noel has united East Asia under one nation, the unbreakable order.\n\nIt is clear that the amount of manpower she is currently holding, is unmatchable by any country in the World. The New Order has arrived"
+holo_news.224.a:0 "Only God can save us now"
+
+flare.19.t:0 "Flare proposed Industrial development exchange"
+flare.19.d:0 "This will gives us Industrial Bonus and give Flare a Civilian Factory"
+flare.19.a:0 "Sure"
+flare.19.b:0 "We don't need it"
+
+rushia.27.t:0 "Rushia seeks to join our faction"
+rushia.27.d:0 "Rushia seeks to join our faction"
+rushia.27.a:0 "Sure"
+rushia.27.b:0 "Not now"
+
+rushia.28.t:0 "Rushia takes control of Crimea"
+rushia.28.d:0 "Following Operation Iron Citadel, Rushia takes control of Crimea"
+rushia.28.a:0 "Damn it!"
+
+holo_news.225.t:0 "Operation Iron Citadel"
+holo_news.225.d:0 "Rushia has taken over Crimea. There is no doubt that her next target is going to be the Soviet Union. This is a part of her master plan to form the Soviet Rushia.\n\nIn Soviet Rushia, the idol terminates you!"
+holo_news.225.a:0 "We must keep an eye on her"
+  
+holo_news.226.t:0 "Soviet Rushia"
+holo_news.226.d:0 "United forever, in friendship and labour. Our mighty republics will ever endure. The Great Soviet Rushia will live through the ages. And dream of the fandead, their fortress secure"
+holo_news.226.a:0 "Long live the Rushia motherland!"
+
+holo_news.227.t:0 "Commonwealth of Rushia"
+holo_news.227.d:0 "Rushia has taken over the entire India Ocean. Even though her character has nothing to with the sea, she still proclaims herself the ruler of the waves, the Queen of India Ocean"
+holo_news.227.a:0 "Long live the Queen!"
+
+haato.57.t:0 "Haato wants to buy Solomon Islands"
+haato.57.d:0 "Haato wants to buy Solomon Islands"
+haato.57.a:0 "Sure"
+haato.57.b:0 "No"
+
+haato.58.t:0 "Solomon Islands deal is completed"
+haato.58.d:0 "We are now the owner of Solomon Islands"
+haato.58.a:0 "Nice"
+
+haato.59.t:0 "Haachama coup"
+haato.59.d:0 "Haachama stages the coup in Western Australia. This will cause a massive civil war between Haachama and Haato. Which side are you on?"
+haato.59.a:0 "Side with Haachama"
+haato.59.b:0 "Stay with Haato"
+
+haato.60.t:0 "Haato invites you to her faction"
+haato.60.d:0 "Haato invites you to her faction"
+haato.60.a:0 "Sure"
+haato.60.b:0 "Not now"
+
+holo_news.228.t:0 "Greater Australia"
+holo_news.228.d:0 "Haato has successfully form Greater Australia, after wiped out the entire HoloID. The new islands chain will become a barrier for Haato."
+holo_news.228.a:0 "Great"
+
+holo_news.229.t:0 "Australia-Haachama Union"
+holo_news.229.d:0 "Australia is a landlocked country surrounded by the mountains. Australia is sandwiched between Hololive HQ, Axis, and Aloe Defence Pact. This puts Australia in a very strategic important location. We are not sure how, but Haachama just formed a union with Australia"
+holo_news.229.a:0 "These are confusion times"
+
+watame.27.t:0 "Watame demands us out of Paraguay"
+watame.27.d:0 "Watame demands us to stop influencing Paraguay"
+watame.27.a:0 "We will leave"
+watame.27.b:0 "No, I don't think I will"
+
+watame.28.t:0 "Kaiju War - Objective"
+watame.28.d:0 "When Luna is below 50% surrender limit OR we have full control of Amazon rainforest, we will win the Kaiju War.\n\nWe will become owner of Amazonian states and will be able to set up collab government in Paraguay"
+watame.28.a:0 "Roger that!"
+
+watame.29.t:0 "Luna demands us out of Paraguay"
+watame.29.d:0 "Luna demands us to stop influencing Paraguay"
+watame.29.a:0 "We will leave"
+watame.29.b:0 "No, I don't think I will"
+
+watame.30.t:0 "Kaiju War - Objective"
+watame.30.d:0 "When Watame is below 50% surrender limit OR we have full control of Bolivia, we will win the Kaiju War.\n\nWe will become owner of Bolivian states and will be able to set up collab government in Paraguay"
+watame.30.a:0 "Roger that!"
+
+watame.31.t:0 "Victory at Kaiju War"
+watame.31.d:0 "We are now the owner of Amazonian states and will be able to set up collab government in Paraguay"
+watame.31.a:0 "Let's go"
+
+watame.32.t:0 "Victory at Kaiju War"
+watame.32.d:0 "We are now the owner of Bolivian states and will be able to set up collab government in Paraguay"
+watame.32.a:0 "Let's go"
+
+watame.33.t:0 "Watame demands puppet us!"
+watame.33.d:0 "Watame demands puppet us!"
+watame.33.a:0 "Yes, Watame"
+watame.33.b:0 "No"
+
+luna.44.t:0 "Luna demands puppet us!"
+luna.44.d:0 "Luna demands puppet us!"
+luna.44.a:0 "Yes, Luna"
+luna.44.b:0 "No"
+
+watame.34.t:0 "Paraguay accepted our proposal"
+watame.34.d:0 "We have successfully set up collab government in Paraguay"
+watame.34.a:0 "Welcome!"
+
+holo_news.230.t:0 "Kaiju War"
+holo_news.230.d:0 "Watame and Luna's struggle over Paraguay has led to war between these two countries.\n\nParaguay, the last non-Hololive nation in South America, has always been recognized as a buffer state between Watame, Luna, and Roboco. However, the future of Paraguay is still uncertain, as the major players in the region are going after its natural resource"
+holo_news.230.a:0 "Good luck fighting in the Amazon"
+
+holo_news.231.t:0 "Watamerica"
+holo_news.231.d:0 ""Hoof, hoof, helloof!" "Watame did nothing wrong!" first coined\n\nA sheep bard that goes around everywhere. She loves singing and is fluffy! YES! FLUFFY! Being a herbivore, she loves potato chips.\n\nShe makes music and videos together with the members of the Tsunomaki Troupe.\n\nMake sure you check out her Tsunomaki Rock Paper Scissors videos as well!"
+holo_news.231.a:0 "Coastline Empire?"
+
+luna.45.t:0 "Luna wants to buy Liberia"
+luna.45.d:0 "Luna just wants to buy Liberia for 20,000 yen"
+luna.45.a:0 "You got the deal"
+luna.45.b:0 "No"
+
+luna.46.t:0 "Liberia deal completed"
+luna.46.d:0 "We are now the owner of Liberia"
+luna.46.a:0 "Luna imperialism has just begun"
+
+luna.47.t:0 "Luna colonized Angola!"
+luna.47.d:0 "Luna forcefully colonize Angola and called it South Congo"
+luna.47.a:0 "This is getting out of hand"
+
+luna.48.t:0 "Luna asks to join your faction"
+luna.48.d:0 "Luna asks to join your faction"
+luna.48.a:0 "Sure"
+luna.48.b:0 "No"
+
+luna.49.t:0 "Luna demands Brazillian states!"
+luna.49.d:0 "Luna demands Brazillian states in our country"
+luna.49.a:0 "Sure"
+luna.49.b:0 "We will not accept this demand"
+
+luna.50.t:0 "Luna demands Uruguay!"
+luna.50.d:0 "Luna demands Uruguay from us"
+luna.50.a:0 "Sure"
+luna.50.b:0 "No"
+
+holo_news.232.t:0 "Luna hosts 1940 World Cup"
+holo_news.232.d:0 "Amid the world wide tension, Luna believes it would be the best time to host a world cup during a world war. Lose the war? Doesn't matter, we can still win the world cup!"
+holo_news.232.a:0 "Epic"
+
+holo_news.233.t:0 "Luna's Imperial Ambition"
+holo_news.233.d:0 ""Is evewyone heeere?"\n\nThe princess of Candy Kingdom.\nShe's affectionate and loves being pampered, but her butler often scolds her for acting too spoiled.\n\nHer moon-shaped accessories are said to be the crest of a country in another world."
+holo_news.233.a:0 "Luna moment"
+
+kanata.37.t:0 "Burma or War"
+kanata.37.d:0 "Kanata demands Burma, or else she will go to war against us"
+kanata.37.a:0 "We cannot afford war"
+kanata.37.b:0 "Come and take it"
+
+kanata.38.t:0 "Tibet or War"
+kanata.38.d:0 "Kanata demands Tibet, or else she will go to war against us"
+kanata.38.a:0 "We cannot afford war"
+kanata.38.b:0 "Come and take it"
+
+holo_news.234.t:0 "Kanata Heavenly Kingdom"
+holo_news.234.d:0 "Kanata is an angelic denizen currently studying at the Heaven Academy to become a full-fledged angel. She is currently 18 years old. (She specifies that this is her "angel age," but has stated in past streams that this is the same as her human age.)"
+holo_news.234.a:0 "Nice one PPTenshi"
+
+holo_news.235.t:0 "Rise of Kanatanism"
+holo_news.235.d:0 "Kanata Angelism, also known as Kanatanism, is a religion aimed to worship Amane Kanata. Since the annexation of East India, Kanata had introduced the religion to people in the region. However, in a region that was predominated by Hinduism, Islam, and Buddhism, Kanatanism is not so popular.\n\nKanata decided to enforce Kanatanism as state religion anyway. She will go on to reform the national development policy, where cities that have Kanatanist majority will get more budget than those that are not. This caused tension between the people and the state, and the people's opinions are not very positive..."
+holo_news.235.a:0 "Be not afraid"
+
+kronii.1.t:0 "Trash Taste demands annex us!"
+kronii.1.d:0 "Trash Taste demands annex us!"
+kronii.1.a:0 "Yes, Garnt"
+kronii.1.b:0 "No"
+
+kronii.2.t:0 "Trash Taste request military scythe"
+kronii.2.d:0 "Trash Taste request military scythe to help them fight against the time warden"
+kronii.2.a:0 "Sure"
+kronii.2.b:0 "No"
+
+kronii.3.t:0 "Calliope supports us!"
+kronii.3.d:0 "Calliope shipped us 5,000 of her military scythe"
+kronii.3.a:0 "Thank you, Calli"
+
+kronii.4.t:0 "We just got isekai'd"
+kronii.4.d:0 "hi guys, welcome to trash taste episode 69420. We just got isekai'd"
+kronii.4.a:0 "Go with Joey"
+kronii.4.b:0 "Go with Connor"
+
+kronii.5.t:0 "Trash Taste seeks to join your faction"
+kronii.5.d:0 "Trash Taste seeks to join your faction, together we can save this timeline"
+kronii.5.a:0 "Sure"
+kronii.5.b:0 "Not yet"
+
+kronii.6.t:0 "Kronii invites you to her faction faction"
+kronii.6.d:0 "Kronii invites you to her faction faction"
+kronii.6.a:0 "Sure"
+kronii.6.b:0 "Not now"
+
+kronii.7.t:0 "Kronii demands puppet us!"
+kronii.7.d:0 "Kronii demands puppet us!"
+kronii.7.a:0 "Yes, Kronii"
+kronii.7.b:0 "No!"
+
+kronii.8.t:0 "Secret deal from Kronii"
+kronii.8.d:0 "Kronii invites you to her faction faction"
+kronii.8.a:0 "Yes, Kronii"
+kronii.8.b:0 "No!"
+
+holo_news.236.t:0 "Timeline Shifts"
+holo_news.236.d:0 "What if this timeline is only an illusion made after the earthquake, and it is breaking due to Kronii realizing an inconsistency in the timeline and is actively investigating the events. And now she is in combat with Garnt, weakening the illusion casted on the world.\n\nWhat if THIS IS THE DARK TIMELINE???"
+holo_news.236.a:0 "Things just got out of hand"
+
+holo_news.237.t:0 "The Warden Falls"
+holo_news.237.d:0 "Evil Grant has emerged victorious over Ouro Kronii, Warden of Time. Now he walks on, towards an uncertain future...\n\nIf a dream never existed, can you wake up from it?"
+holo_news.237.a:0 "This is insane!"
+
+holo_news.238.t:0 "Dr.Ligma Coup"
+holo_news.238.d:0 "Doctor Ligma coming to help Garnt fix the timeline!\n\n“I went forward in time to view alternate nutz. To see all the possible outcomes of the coming licking”\n“How many did you see?”\n“Fourteen million six hundred and five”\n“How many did we lick?”\n“One”"
+holo_news.238.a:0 "He’s from Kenya"
+
+holo_news.239.t:0 "Abroad in Imperial Japan"
+holo_news.239.d:0 "A causality conductor unravels the mind of Christ Broad, creating an alter ego named 'Killer Chris'"
+holo_news.239.a:0 "This is getting out of hand!"
+
+holo_news.240.t:0 "Kronos Reich"
+holo_news.240.d:0 "A member of the Council and the Warden of "Time," the third concept birthed by the Gods and the one most intrinsically linked with mankind.\n\nNone may escape the sands of time and, indeed, most men do not even wish to be freed from her captivity. She picked up the blades almost as a reflex action of sorts, and seems to be enjoying it. Her quiet, aloof personality has never changed over the ages, but she has developed a little bit of haughtiness and sadistic tendencies along the way..."
+holo_news.240.a:0 "The Time has come"
+
+holo_news.241.t:0 "Bunkeronii"
+holo_news.241.d:0 "Kronii's role as Warden of "Time" suggests a connection to fellow hololive English member Watson Amelia, a time traveler. When Kronii's Twitter was automatically restricted at announcement due to the sudden influx of followers, Amelia joked "twitter is protecting me from a certain time lord" and "i swear i'll give it back soon....""
+holo_news.241.a:0 "GWAK"
+
+holo_news.242.t:0 "Holymachi Empire"
+holo_news.242.d:0 "Suisei is a modest, multitalented singer and aspiring idol who is among the more level-headed members of hololive, though she also has a childish streak. After her unexpectedly compelling performance as a traitor in a game of Project Winter, she gained a reputation for remorseless sociopathy behind a facade of polite sweetness."
+holo_news.242.a:0 "Kyou mo Kawaii!"
+
+botan.4.t:0 "Botan seeks to join your faction"
+botan.4.d:0 "Botan seeks to join your faction"
+botan.4.a:0 "Sure"
+botan.4.a:0 "Not now"
+
+botan.5.t:0 "Botan wants to buy Dalian"
+botan.5.d:0 "In an attempt to restore Soviet Union, Botan wants to buy the old Russian Chinese port"
+botan.5.a:0 "Sure"
+botan.5.a:0 "No"
+
+botan.6.t:0 "Botan vetoes Polka's membership"
+botan.6.d:0 "Botan wants us to kick Polka out of the faction. Otherwise she will leave"
+botan.6.a:0 "Kick Polka"
+botan.6.a:0 "Kick Botan"
+
+lamy.1.t:0 "Lamy invites you to her faction"
+lamy.1.d:0 "Lamy invites you to her faction"
+lamy.1.a:0 "Sure"
+lamy.1.b:0 "Not now"
+
+lamy.2.t:0 "Lamy seeks to join your faction"
+lamy.2.d:0 "Lamy seeks to join your faction"
+lamy.2.a:0 "Sure"
+lamy.2.b:0 "Not now"
+
+lamy.3.t:0 "Lamy vetoes Towa's membership"
+lamy.3.d:0 "Lamy wants us to kick Towa out of the faction. Otherwise she will leave"
+lamy.3.a:0 "Kick Towa"
+lamy.3.b:0 "Kick Lamy"
+
+lamy.4.t:0 "Lamy demands puppet us!"
+lamy.4.d:0 "Lamy demands puppet us!"
+lamy.4.a:0 "Yes, Queen"
+lamy.4.b:0 "No"
+
+holo_news.243.t:0 "Lamification"
+holo_news.243.d:0 ""Lamyoohoo!"\nhololive 5th Generation's blue rep, Yukihama Lamy!\n\nThe daughter of a noble family from a distant, snowy land. She decided to leave her home, along with her companion Daifuku, after hololive's streams full of fun and color touched her heart. Her serious personality belies her naive, sheltered nature."
+holo_news.243.a:0 "Yes, Queen"
+
+holo_news.244.t:0 "The New Unylia"
+holo_news.244.d:0 "While Lamy was originally touted as one of the more "seiso" members of hololive (similar to the traditional idol-like Tokino Sora), this has since come into question by both the fanbase and other holomembers due to occasional moments of lewdness, some yandere tendencies, and (most of all) her fondness for alcohol."
+holo_news.244.a:0 "Revenge on Kenzoku"
+
+sora.9.t:0 "Sora seeks to join your faction"
+sora.9.d:0 "Sora seeks to join your faction"
+sora.9.a:0 "Sure"
+sora.9.b:0 "Not now"
+
+aloe.50.t:0 "Aloe demands Austria"
+aloe.50.d:0 "Aloe demands Austria"
+aloe.50.a:0 "Yes, Queen"
+aloe.50.b:0 "No"
+
+holo_news.245.t:0 "Goddess of Athens"
+holo_news.245.d:0 "“Hey, Sora-tomo! How are you all doing? It's me, Tokino Sora!”\n\nhololive Production's first virtual idol, debuting on September 7, 2017. She loves horror games and singing, and has always dreamed of performing in Yokohama Arena."
+holo_news.245.a:0 "The true tenshi"
+
+holo_news.246.t:0 "Sora prepare for Remilitarization"
+holo_news.246.d:0 "Treaty of Sevres states that Sora will be demilitarized from Edirne and the Aegean Islands. However, everything changes when the HoloCouncil spawns. Bosporus strait is more important than ever to connect the world with the council..."
+holo_news.246.a:0 "Another day in Balkan"
+
+nene.28.t:0 "Nene seeks to join your faction"
+nene.28.d:0 "Nene seeks to join your faction"
+nene.28.a:0 "Sure"
+nene.28.b:0 "Not now"
+
+nene.29.t:0 "Nene wants to buy Crimea"
+nene.29.d:0 "Nene wants to buy Crimea, an island off the coast of her country"
+nene.29.a:0 "Sure"
+nene.29.b:0 "Not now"
+
+nene.30.t:0 "Nene wants to buy Port Arthur"
+nene.30.d:0 "It seems like Nene is interesting in this region"
+nene.30.a:0 "Sure"
+nene.30.b:0 "Not now"
+
+nene.31.t:0 "Nene demands annex us!"
+nene.31.d:0 "Nene demands annex us!"
+nene.31.a:0 "Yes, Nenechi"
+nene.31.b:0 "No!"
+
+holo_news.247.t:0 "NenePro"
+holo_news.247.d:0 "During the first gameplay stream of Good Job, she revealed that she wanted to create an idol (demolition) company with her being its CEO and sole talent. As a result, fans calls her CEO, or Pres. Nene 「ねね社著」. She treats her fans as employees and promised them a high (?) salary."
+holo_news.247.a:0 "They serve dog food to employees"
+
+holo_news.248.t:0 "Nishizawa coup"
+holo_news.248.d:0 "Nishizawa 5mm is an independent female Japanese VTuber, illustrator and doujin artist who utilizes a mixture of virtual and live-action content. She is known for her large breasts being reflected on her doujin works. She is the illustrator of Momosuzu Nene and Shinomiya Runa."
+holo_news.248.a:0 "Nene's mom has got it going on"
+
+marine.18.t:0 "Marine wants to buy the Bahamas"
+marine.18.d:0 "Marine wants to buy the Bahamas and expand her influence into the Caribbean"
+marine.18.a:0 "Sure"
+marine.18.b:0 "No!"
+
+marine.19.t:0 "Marine wants to buy British Caribbean"
+marine.19.d:0 "Marine wants to buy British Caribbean and expand her influence into the Caribbean"
+marine.19.a:0 "Sure"
+marine.19.b:0 "No!"
+
+marine.20.t:0 "Marine wants to buy French Caribbean"
+marine.20.d:0 "Marine wants to buy French Caribbean and expand her influence into the Caribbean"
+marine.20.a:0 "Sure"
+marine.20.b:0 "No!"
+
+marine.21.t:0 "Marine demands puppet us!"
+marine.21.d:0 "Marine demands puppet us!"
+marine.21.a:0 "Yes, Marine"
+marine.21.b:0 "No!"
+
+choco.13.t:0 "Choco invites you to her faction"
+choco.13.d:0 "Choco invites you to her faction"
+choco.13.a:0 "Yes, Choco"
+choco.13.b:0 "Not now"
+
+fubuki.62.t:0 "Fubuki invites you to her faction"
+fubuki.62.d:0 "Fubuki invites you to her faction"
+fubuki.62.a:0 "Yes, Fubuki"
+fubuki.62.b:0 "Not now"
+
+matsuri.46.t:0 "Matsuri seeks to join your faction"
+matsuri.46.d:0 "Matsuri seeks to join your faction"
+matsuri.46.a:0 "Sure"
+matsuri.46.b:0 "Not now"
+
+matsuri.47.t:0 "1936 Election"
+matsuri.47.d:0 "As a new year approach, the general election is still going on. Matsurisu demands a new leader who can lead this nation to victory"
+matsuri.47.a:0 "Matsuri but new version"
+matsuri.47.b:0 "Make way for Matsuhiko"
+matsuri.47.c:0 "Gott mit uns"
+
+matsuri.48.t:0 "Matsuri demands Qingdao"
+matsuri.48.d:0 "Matsuri and her newly formed Prussia demands Qidao"
+matsuri.48.a:0 "Ok"
+matsuri.48.b:0 "No"
+
+holo_news.249.t:0 "New Prussian Empire"
+holo_news.249.d:0 "Carry on the legacy of Prussia military, Matsuri's army is second to none. She has taken over Miko and Germany, and finally reach the river Rhine. Nation-wide celebrations are being held accross the New Prussian Empire, and Matsuri has crowned herself the Kaiserin of Prussia."
+holo_news.249.a:0 "Truly Prussia Gloria"
+
+miko.25.t:0 "Miko demands German border state"
+miko.25.d:0 "Miko demands German border state"
+miko.25.a:0 "Ok"
+miko.25.b:0 "No"
+
+miko.26.t:0 "Miko wants to buy New York"
+miko.26.d:0 "Miko wants to buy New York"
+miko.26.a:0 "Ok"
+miko.26.b:0 "No"
+
+miko.27.t:0 "Miko wants to sell Malta"
+miko.27.d:0 "Miko wants to sell Malta to you."
+miko.27.a:0 "Sure"
+miko.27.b:0 "No"
+
+holo_news.250.t:0 "Fourth Rome"
+holo_news.250.d:0 "All road leads to Rome. Mikochi and her elite army has taken over the entire Central Europe, and Rome, the capital of her all time rival, Pekora. Sukaru Miko then claim to be the true decendent of the Roman Empire."
+holo_news.250.a:0 "The Unholy Roman Empire"
+
+matsuri.49.t:0 "Hoshikawa demands Saaremaa"
+matsuri.49.d:0 "Hoshikawa demands Saaremaa"
+matsuri.49.a:0 "Sure"
+matsuri.49.b:0 "No"
+
+matsuri.50.t:0 "Hoshikawa seeks to join your faction"
+matsuri.50.d:0 "Hoshikawa needs help to defend herself from Matsuri"
+matsuri.50.a:0 "Sure"
+matsuri.50.b:0 "No"
+
+matsuri.51.t:0 "Hoshikawa seeks military support"
+matsuri.51.d:0 "Hoshikawa seeks military support. She believes that your elite power can help her win the civil war"
+matsuri.51.a:0 "Sure"
+matsuri.51.b:0 "No"
+
+holo_news.251.t:0 "Northern Stardust"
+holo_news.251.d:0 "A half-Japanese, half-British girl, Sara lived in Virtual England when she was a child, but has been living in Virtual Japan for much longer, so she is fluent in Japanese. The type of person to get carried away as soon as she is flattered."
+holo_news.251.a:0 "Nijisanji moment"
+
+kiara.16.t:0 "Kongo branch opening!"
+kiara.16.d:0 "Our colonial government has been established in Kongo. We give them a certain degree of autonomy for a greater degree of efficiency in KFP production."
+kiara.16.a:0 "They have our blessing"
+kiara.16.b:0 "Give me a tour in Kongo"
+
+kiara.17.t:0 "KFP Kongo wants to buy Middle Congo"
+kiara.17.d:0 "KFP Kongo sees the strategic value in Middle Congo, and would like to purchase this state."
+kiara.17.a:0 "Deal!"
+kiara.17.b:0 "No"
+
+kiara.18.t:0 "KFP Kongo wants to buy Gabon"
+kiara.18.d:0 "KFP Kongo sees the strategic value in Gabon, and would like to purchase this state."
+kiara.18.a:0 "Deal!"
+kiara.18.b:0 "No"
+
+kiara.19.t:0 "KFP Kongo wants to buy Angola"
+kiara.19.d:0 "KFP Kongo sees the strategic value in Angola, and would like to purchase this state."
+kiara.19.a:0 "Deal!"
+kiara.19.b:0 "No"
+
+kiara.20.t:0 "KFP Kongo demands North Angola!"
+kiara.20.d:0 "KFP Kongo demands North Angola!"
+kiara.20.a:0 "Ok"
+kiara.20.b:0 "No"
+
+kiara.21.t:0 "KFP Kongo seeks to join your faction"
+kiara.21.d:0 "KFP Kongo seeks to join your faction, and promise to fight along side us as an ally"
+kiara.21.a:0 "Sure"
+kiara.21.b:0 "No"
+
+kiara.22.t:0 "KFP Kongo demands Calli Africa!"
+kiara.22.d:0 "KFP Kongo demands Calli Africa!"
+kiara.22.a:0 "Ok"
+kiara.22.b:0 "No"
+
+kiara.23.t:0 "Operation Fire Storm!"
+kiara.23.d:0 "Kiara stage an uprising on mainland Europe, we must prepare for the incoming invasion!"
+kiara.23.a:0 "Incoming!"
+
+holo_news.252.t:0 "KFP Worker Revolution"
+holo_news.252.d:0 "Colonel Sanders leads KFP Worker Revolution against Kiara in Congo. Although Kiara still making no move, because the Kongo colony is too far away from the mainland. She still has full control of North Angola. On the hand, Colonel Sanders has started the process of De-Kiararisation. Many Kiara royalist already been hunted down, and will be crucified very soon..."
+holo_news.252.a:0 "Employee of the World, unite!"
+
+holo_news.253.t:0 "Employee's Republic of Kiara"
+holo_news.253.d:0 "While Kongo gains some international recognition, it's still not enough to be recognized as a nation. However, Colonel Sanders has a brilliant plan. Instead of claiming to be an independent country, Kongo claims to be the real Kiara. So when Kiara accuses Kongo to be a part of her country, he will simply say that it is already part of her country but the capital is Leopoldville. Furthermore, Colonel Sanders also adopted Kiara's way of administration. Many African locals complain that Colonel Sanders become the very thing he swore to destroy."
+holo_news.253.a:0 "Employee of the World, unite!"
+
+mumei.1.t:0 "Mumei seeks to join your faction"
+mumei.1.d:0 "Mumei seeks to join your faction"
+mumei.1.a:0 "Ok"
+mumei.1.b:0 "No"
+
+mumei.2.t:0 "Crimea Conference"
+mumei.2.d:0 "Mumei would like to have Crimea in order to attack Okayu. In exchange, she will give us guarantee and military access"
+mumei.2.a:0 "Ok"
+mumei.2.b:0 "No"
+
+mumei.3.t:0 "Crimea or War"
+mumei.3.d:0 "Mumei demands us to leave Crimea, otherwise she will declare war"
+mumei.3.a:0 "Ok"
+mumei.3.b:0 "No"
+
+holo_news.254.t:0 "Ancient Mumei Empire"
+holo_news.254.d:0 "After acquiring Iraq, Turkey, Greece, and Egypt, Mumei has full control to the home of 7 wonders of the ancient world. She proclaims the Ancient Mumei Empire, the place where she belongs. The Owl of Minerva is back to her nest. Will she still be the Guardian of Civilization, or will she be the one to end it. The Fate of Humanity is in her hand"
+holo_news.254.a:0 "I can feel the disturbance in balance of power"
+
+sana.1.t:0 "Sana threatens to Intervene"
+sana.1.d:0 "Sana threatens to Intervene in the Neighbor War. She has recently turned into Smol Sana and publicly announced that she is a Smallist. Is very much possible that she has a tie to the Resistance."
+sana.1.a:0 "This not an empty threat"
+sana.1.b:0 "I will show them the graveyard of the empire"
+
+sana.2.t:0 "Sana demands Kazakh states"
+sana.2.d:0 "Sana demands Kazakh states"
+sana.2.a:0 "Sure"
+sana.2.b:0 "No, Sana"
+
+sana.3.t:0 "Sana invites you to her faction"
+sana.3.d:0 "Sana invites you to her faction"
+sana.3.a:0 "Sure"
+sana.3.b:0 "No, Sana"
+
+sana.4.t:0 "Sana used Orbital Strike against us!"
+sana.4.d:0 "Sana used Orbital Strike against us! We need repair our factory and infrastructure"
+sana.4.a:0 "Dang it!"
+
+sana.5.t:0 "Intervention in Space Race"
+sana.5.d:0 "Moona and Iofi are competing with each other. We, as the space ourselves, have the ability to support either of them in exchange for technology."
+sana.5.a:0 "Let's support Moona"
+sana.5.b:0 "Deal with the alien"
+
+sana.6.t:0 "Sana support us in Space Race"
+sana.6.d:0 "Sana support us in Space Race. She hopes we will reach her soon"
+sana.6.a:0 "Thank you Sana!"
+
+sana.7.t:0 "The Rumbling is coming"
+sana.7.d:0 "Hololive Council has failed to prevent Sana and Ina from touching each other. The Space Station has successfully obtained the power of the Founder of Universe. However, there is still hope. If we can capitulate Sana or Ina before the final stage of Rumbling take place, we will still be able to stop it."
+sana.7.a:0 "This is the end of humanity"
+
+sana.8.t:0 "You're the leader of Humanity Preservation Coalition"
+sana.8.d:0 "You must capitulate Sana or Ina before the 'Rumbling is coming' national spirit expire. If the national spirit expires, Sana will get the ability to destroy the world with nuclear power"
+sana.8.a:0 "Let's save the world!"
+
+sana.9.t:0 "Final Stage of the Rumbling"
+sana.9.d:0 "Suck the entire universe into the void. Mess around with reality fabric. Wipe out all of humanity. Just like the ancient ones intended"
+sana.9.a:0 "There can be no degenelate, if there is no idol left"
+
+holo_news.255.t:0 "Final Stage of the Rumbling"
+holo_news.255.d:0 "To all Subject of the universe. My name is Tsukumo Sana. I’m using the power of the satellite to address all Subjects of Hololive. I’ve made deal with the tentacult, and all the power inside Ina has been unleashed. My goal is to protect the people of earth from the 'Forbidden Truth'. However, the council wishes to publish the Ancient Onces, which contains the Forbidden Truth. Not just to the people of the council, but the entire world.\n\nBaelz has planned to invade Ina and use that book to create chaos and confusion, which is going to make her even more powerful. I reject that wish. The combined Sana-Ina Army shall destroy the world. Until all knowledge of the Forbidden Truth existing there have been exterminated from this world."
+holo_news.255.a:0 "Fear Ina and dread nought"
+
+holo_news.256.t:0 "Mission to Mars"
+holo_news.256.d:0 "Elon Musk's SpaceX COO says manned missions will reach Mars by 1950. SANA says otherwise. Humanity could reach the Red Planet and the Moon sooner than we think. SpaceX President and Chief Operating Officer (COO) Tsukumo Sana said a crewed mission to Mars could happen before the end of the 1940s."
+holo_news.256.a:0 "Very interesting"
+
+fauna.1.t:0 "#Team Trees"
+fauna.1.d:0 "You guys spammed me to plant 20 million trees on Twitter, Reddit, all over my comment section. So I made it happen.\n\nToday, we will be planting 20 million trees!"
+fauna.1.a:0 "Let's plant!"
+
+fauna.2.t:0 "Last To Take Hand Off Early Fighter, Keeps It!"
+fauna.2.d:0 "I spent two and a half million dollars on this early fighter, and had 11 YouTubers put their hands on it. Whoever keeps their hand on the longest wins the early fighter, but if at any point they take their hand off, they're eliminated."
+fauna.2.a:0 "I think my hand's slowly going numb."
+fauna.2.b:0 "I'm just gonna leave"
+
+fauna.3.t:0 "Survive 100 Days In Arctic Circle"
+fauna.3.d:0 "This is a random subscriber, and if he stays in the circle for 100 days, I'll give him $500,000."
+fauna.3.a:0 "This could have been a lot worse."
+fauna.3.b:0 "Let us out."
+
+fauna.4.t:0 "I Built Fauna's Golden Apple Factory!"
+fauna.4.d:0 "I've recreated Fauna's Golden Apple Factory in real life. And one of these 10 people is gonna walk away with this chocolate factory."
+fauna.4.a:0 "In we go"
+fauna.4.b:0 "I'm out"
+
+fauna.5.t:0 "Offering People $100,000 To Quit Their Job"
+fauna.5.d:0 "I'm in front of a restaurant, with a $100,000 check. We're just getting started. We have hundreds of thousands of more dollars we're givin' away next vid."
+fauna.5.a:0 "I would quit."
+fauna.5.b:0 "No, I don't think I would."
+
+fauna.7.t:0 "I Spent 24 Hours Straight At Siberia"
+fauna.7.d:0 "Siberia is one of the most dangerous places on earth. Over 100 people have gone missing with no explanation. Me and the boys are going to spend 24 hours straight in the Bermuda Triangle."
+fauna.7.a:0 "All right, I'm going to write my will in blues."
+fauna.7.b:0 "Oh my God, that looked painful."
+
+fauna.6.t:0 "Planting 20,000,000 Trees!"
+fauna.6.d:0 "In addition to the OG Creator design, we just released a new line of TEAMTREES apparel and accessories. With your help, we can plant trees where they are needed most, all around the world. Update your wardrobe and show your support!"
+fauna.6.a:0 "For the Lorax"
+
+fauna.8.t:0 "I Bought a Military Complex"
+fauna.8.d:0 "I just bought that military complex. I honestly cannot believe you can just buy a military complex. And this is our first time stepping foot on our brand new tank factory."
+fauna.8.a:0 "No joke, I own this."
+
+fauna.9.t:0 "If You Can Carry 100,000 USD, You Keep It!"
+fauna.9.d:0 "This is a never ending giant mountain of cash. And as much cash as you can carry, you can keep. I don't care if you put in your pockets, in your hoodie, in your pants, in your shoes."
+fauna.9.a:0 "It's raining money!"
+
+fauna.10.t:0 "I Got Hunted By The Military"
+fauna.10.d:0 "That helicopter is carrying a military squad. If that squad successfully hunts me down before the end of the day, they get this hundred grand."
+fauna.10.a:0 "Go, go, go"
+
+fauna.11.t:0 "Sustainability Expo"
+fauna.11.d:0 "Fauna is holding Sustainability Expo in her capital. She believes that it is time to start thinking about the environment. We should invest more into the Green Industry that going to help reduce carbon emission."
+fauna.11.a:0 "Great idea!"
+fauna.11.b:0 "I honestly don't care"
+
+fauna.12.t:0 "Paper Bag deal"
+fauna.12.d:0 "It's time to stop using plastic bags, let's use paper bags instead! Fauna wants to import paper bags from our country. And by doing so we can both benefit from this deal."
+fauna.12.a:0 "Great idea!"
+fauna.12.b:0 "I honestly don't care"
+
+fauna.13.t:0 "Forest officer to Luna"
+fauna.13.d:0 "Fauna is willing to train our Royal Forest Officer to become a Forest Keeper. This will increase the capability of our special force units."
+fauna.13.a:0 "Great idea!"
+fauna.13.b:0 "I honestly don't care"
+
+fauna.14.t:0 "Cerealia Festival!"
+fauna.14.d:0 "It is that time of the year! Let's celebrate the harvests of this season!"
+fauna.14.a:0 "Bless you"
+
+fauna.15.t:0 "Fauna seeks to join your faction"
+fauna.15.d:0 "Fauna seeks to join your faction"
+fauna.15.a:0 "Sure!"
+fauna.15.b:0 "I honestly don't care"
+
+holo_news.257.t:0 "Goddess Ceres"
+holo_news.257.d:0 "A member of the Council and the Keeper of "Nature," the second concept created by the Gods. She has materialized in the mortal realm as a druid in a bid to save nature. She has Kirin blood flowing in her veins, and horns that are made out of the branches of a certain tree; they are NOT deer antlers.\n"Nature" refers to all organic matter on the planet except mankind.\nIt is long said that her whispers, as an avatar of Mother Nature, have healing properties. Whether or not that is true is something only those who have heard them can say. While she is usually affable, warm, and slightly mischievous, any who anger her will bear the full brunt of Nature's fury."
+holo_news.257.a:0 "Long live Ceres!"
+
+shion.54.t:0 "Shionist State insurgency"
+shion.54.d:0 "Even after Shion withdraw her troops from Afghanistan, there are still large portion of Afghanistani who worships Shion. These people began arming themselves and start terrorizing our border with Akukin Afghanistan. They called themselves, the 'Shionist State'"
+shion.54.a:0 "The Resistance to the Resistance"
+
+baelz.1.t:0 "Council Military Support"
+baelz.1.d:0 "Hololive Council, leads by Hakos Baelz, is willing to support us in time of war."
+baelz.1.a:0 "Thanks!"
+baelz.1.b:0 "I honestly don't care"
+
+baelz.2.t:0 "Baelz invite you to Council Economic Sphere"
+baelz.2.d:0 "Council Economic Sphere allows you to receive support from Baelz in order to advance overall economic well-being across the entire faction"
+baelz.2.a:0 "Thanks!"
+baelz.2.b:0 "I honestly don't care"
+
+baelz.3.t:0 "Baelz invests in your industry"
+baelz.3.d:0 "Council Economic Sphere allows you to receive support from Baelz in order to advance overall economic well-being across the entire faction"
+baelz.3.a:0 "Thanks!"
+
+suisei.52.t:0 "Anemachi invites you to her faction"
+suisei.52.d:0 "Anemachi invites you to her faction. United We Strong!"
+suisei.52.a:0 "Yes"
+suisei.52.b:0 "No"
+
+suisei.53.t:0 "Suisei proposes MiComet Plan"
+suisei.53.d:0 "Suisei seems interested in the 'experimental weapons'. And there is no better consultant about this project than the Elite Miko herself."
+suisei.53.a:0 "Yes"
+suisei.53.b:0 "No"
+
+suisei.54.t:0 "Suisei bids to supply axes"
+suisei.54.d:0 "Suisei is willing to supply us some axes in exchange for our armour blueprint"
+suisei.54.a:0 "Yes"
+suisei.54.b:0 "No"
+
+suisei.55.t:0 "1936 National Election"
+suisei.55.d:0 "The fate of the entire nation depends on the result of this national election. Be careful who you vote for."
+suisei.55.a:0 "Continue our democratic regime"
+suisei.55.b:0 "Let her sister take over"
+suisei.55.c:0 "Something malicious is brewing..."
+
+aqua.70.t:0 "Aqua invites Kiwawa to open in her country"
+aqua.70.d:0 "Aqua had heard of the legendary KFP 2500 and other aircrafts produced by Kiwawa. She is very interested in doing business with us"
+aqua.70.a:0 "Sure"
+aqua.70.b:0 "We cannot do"
+
+aqua.69.t:0 "Suisei Maid"
+aqua.69.d:0 "Suisei Maid is one of the Suisei variances. However, this one is special. It is rumoured that she has level 5 commanding stats, thus, Aqua proposes that we both recruit her as a general"
+aqua.69.a:0 "Sure"
+aqua.69.b:0 "We cannot do"
+
+aqua.71.t:0 "Military training by Aqua"
+aqua.71.d:0 "Aqua is sending her best military advisors to help train our army. This will increase our army experience everyday, for a month."
+aqua.71.a:0 "Thanks, Aqua"
+
+aqua.72.t:0 "Aqua demands Burma"
+aqua.72.d:0 "Shirogane Noel, hear our words: We demand the immediate and peaceful handover of Burmese territory to the rightful authorities, who represent the will of the Burmese people. The oppression and tyranny that your rule has imposed upon their nation will no longer be tolerated."
+aqua.72.a:0 "We cannot afford another war"
+aqua.72.a:0 "Try us"
+
+aqua.73.t:0 "Eritrea or War"
+aqua.73.d:0 "Yagoo, consider this a final warning. This is your opportunity to amend the course of history, to embrace the call for justice, and to rectify the deep-seated wounds inflicted upon the Eritrean people. Failure to comply shall subject you and your organization to the full wrath of the Resistance."
+aqua.73.a:0 "Whatever you say"
+aqua.73.a:0 "Try us"
+
+aqua.74.t:0 "Aqua wants to purchase Somaliland"
+aqua.74.d:0 "After careful consideration, I have developed a strong interest in acquiring Somaliland from you for the sum of 20,000 yen."
+aqua.74.a:0 "Whatever you say"
+aqua.74.a:0 "No"
+
+aqua.75.t:0 "Aqua proposed Indore Pact"
+aqua.75.d:0 "Aqua is willing to guarantee our independence in time of war. However, we must hand over Indore state to her."
+aqua.75.a:0 "It might be the best to avoid war"
+aqua.75.a:0 "We cannot trust no onion"
+
+aqua.76.t:0 "Aqua Trade Treaty"
+aqua.76.d:0 "We understand the importance of international trade and the economic ties that bind nations together. However, trading with a war criminal such as Pekora only serves to legitimize her reign and enable further bloodshed. Instead, I implore you to stand alongside the Resistance and cease all trade with Pekora's regime."
+aqua.76.a:0 "We stand with Aqua"
+aqua.76.a:0 "Trade can make everyone better off"
+
+aqua.77.t:0 "Aqua sent military support"
+aqua.77.d:0 "It is our hope that with our combined efforts, we can turn the tide of this war, restore harmony among the Indonesian people, and pave the way for a Aquaist society that respects the rights and voices of all its talents."
+aqua.77.a:0 "Thanks Aqua"
+
+aqua.78.t:0 "Aqua sent financial support"
+aqua.78.d:0 "We extend our hand to you and your people, ready to walk this path together and forge a future that is defined by hope, prosperity, and shared success."
+aqua.78.a:0 "Thanks Aqua"
+
+aqua.79.t:0 "Day 1: Economic Policy"
+aqua.79.d:0 "Your decision on the primary focus area will significantly shape the direction and priorities of our economic policy. By encouraging domestic consumption and supporting local industries, we can bolster economic growth. Directing resources towards the development and expansion of our military complex is another potential area of focus. Emphasizing shipbuilding as a priority entails supporting policies that promote the growth and competitiveness of our shipbuilding industry."
+aqua.79.a:0 "Improve people's well-being"
+aqua.79.b:0 "Subsidise military complex"
+aqua.79.c:0 "No Aqua without anchor"
+
+aqua.80.t:0 "Day 2: Addressing the Congress"
+aqua.80.d:0 "Should we prioritize increasing political power, boosting war support, or enhancing stability?"
+aqua.80.a:0 "Increasing Political Power"
+aqua.80.b:0 "Boosting War Support"
+aqua.80.c:0 "Enhancing Stability"
+
+aqua.81.t:0 "Day 3: Foreign Policy"
+aqua.81.d:0 "The future is uncertain. Many Great Powers rise and fall as time goes on. Foreign policy will be our sword and shield depend on how we use it."
+aqua.81.a:0 "The East is Our"
+aqua.81.b:0 "World Wide Revolution"
+aqua.81.c:0 "Let's not intervene"
+
+aqua.82.t:0 "Congress of Idols"
+aqua.82.d:0 "In the following month you will have to make the decisions regarding economy, politics, and foreign affair."
+aqua.82.a:0 "Ok"

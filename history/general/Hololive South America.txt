@@ -1,0 +1,265 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        NOT = {
+            has_country_flag = AMONGUS
+        }
+        }
+    #is_dynamic_country = no
+  }
+
+generate_character={
+    token_base = MAR_generic_holo_xgeneral
+     name="Marine"
+     portraits={
+           army={
+                 large="gfx/leaders/MAR/marine_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={cavalry_officer trait_engineer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = MAR_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+    token_base = MAR_generic_holo_xadmiral
+
+     name="Houshou"
+     portraits={
+           army={
+                 large="gfx/leaders/MAR/marine_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={spotter gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = MAR_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+    token_base = ROB_generic_holo_xgeneral
+     name="Roboco"
+     portraits={
+           army={
+                 large="gfx/leaders/ROB/roboco_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={politically_connected commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = ROB_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+    token_base = ROB_generic_holo_xadmiral
+
+     name="Admiral Roboco"
+     portraits={
+           army={
+                 large="gfx/leaders/ROB/roboco_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={fleet_protector spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = ROB_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+    token_base = ROS_generic_holo_xgeneral
+     name="Aki"
+     portraits={
+           army={
+                 large="gfx/leaders/ROS/aki_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trickster skilled_staffer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = ROS_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+    token_base = ROS_generic_holo_xadmiral
+
+     name="Rosenthal"
+     portraits={
+           army={
+                 large="gfx/leaders/ROS/aki_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={ironside gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = ROS_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+    token_base = WAT_generic_holo_xgeneral
+     name="Watame"
+     portraits={
+           army={
+                 large="gfx/leaders/WAT/watame_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_reckless career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = WAT_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+    token_base = WAT_generic_holo_xadmiral
+
+     name="Tsunomaki"
+     portraits={
+           army={
+                 large="gfx/leaders/WAT/watame_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={navy_career_officer spotter}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = WAT_recruit_admiral_dec_flag }
+     }
+
+}
+
+
+
+generate_character={
+    token_base = LUN_generic_holo_xgeneral
+     name="Luna"
+     portraits={
+           army={
+                 large="gfx/leaders/LUN/luna_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer brilliant_strategist}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+           visible = { has_country_flag = LUN_recruit_general_dec_flag }
+     }
+
+}
+
+generate_character = {
+    token_base = LUN_generic_holo_xadmiral
+
+     name="Himemori"
+     portraits={
+           army={
+                 large="gfx/leaders/LUN/luna_com.dds"
+            #     small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={aviation_enthusiast torpedo_expert}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+           visible = { has_country_flag = LUN_recruit_admiral_dec_flag }
+     }
+
+}
+
+}

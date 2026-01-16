@@ -1,0 +1,970 @@
+leader_traits = {
+    knight_cup = {
+		random = no
+		political_power_factor = 0.1
+		local_resources_factor = 0.2
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	helicopter_trait = {
+		random = no
+		extra_paratrooper_supply_grace = 15
+		air_agility_factor = 0.05
+		air_escort_efficiency = 0.05
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	rabbit_trait = {
+		random = no
+		supply_node_range = 0.1
+		out_of_supply_factor = -0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+
+	the_owl_trait = {
+		random = no
+		intel_network_gain_factor = 0.25
+		recon_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	noel_deluxe = {
+		random = no
+		political_power_factor = 0.15
+		local_resources_factor = 0.1
+		surrender_limit = 0.15
+		max_command_power = 20
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kintsuba = {
+		random = no
+		army_core_attack_factor = 0.15
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	meme_queen = {
+		random = no
+		political_power_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	onion = {
+		random = no
+		army_core_attack_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	incompetent_crybaby = {
+		random = no
+		political_power_factor = -0.05
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	asacoco = {
+		random = no
+		training_time_factor = 0.1
+		non_core_manpower = 0.25 
+		
+		army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	okayu_court = {
+		random = no
+		political_power_factor = 0.15
+		send_volunteer_divisions_required = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	subaru_duck = {
+		random = no
+		political_advisor_cost_factor = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bibi = {
+		random = no
+		decryption_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mama_mio = {
+		random = no
+		MONTHLY_POPULATION = 0.5
+			ai_get_ally_desire_factor = -10
+		army_core_defence_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	choco_sensei = {
+		random = no
+		resistance_target = -0.30
+		army_core_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sensei_trait = {
+		random = no
+		training_time_factor = -0.1
+		max_command_power = 10
+		army_leader_start_planning_level = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	maid_trait = {
+		random = no
+		industrial_capacity_factory = 0.1
+		repair_speed_industrial_complex_factor = 0.15
+		supply_node_range = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nurse_trait = {
+		random = no
+		army_org_regain = 0.1
+		weekly_manpower = 1000
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lolicon = {
+		random = no
+		research_speed_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	disaster_english_class = {
+		random = no
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pantsu_in_my_mind = {
+		random = no
+		local_resources_factor = 1.0
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pptenshi = {
+		random = no
+		political_power_gain = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pop_fig = {
+		sprite = 13
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		political_power_gain = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chotto_machete = {
+		random = no
+		army_core_attack_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	speech_of_justice = {
+		random = no
+		political_power_gain = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	watame_2 = {
+		random = no
+		political_power_factor = -0.05
+		send_volunteer_size = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cutting_board = {
+		random = no
+		industrial_capacity_factory = 0.05
+		attrition = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nekomancer_trait = {
+		random = no
+		industrial_capacity_factory = 0.15
+		attrition = -0.1
+		army_speed_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	necromancer_princess_trait = {
+		random = no
+		industrial_capacity_factory = 0.15
+		attrition = -0.1
+		political_power_gain = 0.20
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	killer_instinct = {
+		random = no
+		production_speed_arms_factory_factor = 0.20
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yubi_yubi = {
+		random = no
+		line_change_production_efficiency_factor = 0.50
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	elite = {
+		random = no
+		production_speed_arms_factory_factor = 0.10
+		training_time_army_factor = -0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yagoos_hope_101 = {
+		random = no
+		army_leader_start_level = 2
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	f40_yo = {
+		random = no
+		political_power_factor = -0.05
+		training_time_army_factor = -0.1
+		production_speed_dockyard_factor = 0.3
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	risu_trait = {
+		random = no
+		attrition = -0.1
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	internet_disconnected_trait = {
+		random = no
+		political_power_factor = -0.05
+		training_time_army_factor = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zero_yo = {
+		random = no
+		MONTHLY_POPULATION = 1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yt_monetization = {
+		random = no
+		political_power_factor = -0.05
+		attrition = -0.2
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	multi_lang_skill = {
+		random = no
+		political_advisor_cost_factor = -0.25
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	best_girl_yagoo = {
+		random = no
+		political_power_factor = 0.1
+		research_speed_factor = 0.2
+		production_speed_buildings_factor = 0.2
+		
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	conscripted_to_new_world = {
+		random = no
+		conscription = 0.01
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	very_cool_trait = {
+		random = no
+		winter_attrition_factor = -0.25
+		acclimatization_cold_climate_gain_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	orange_girl_trait = {
+		random = no
+		no_supply_grace = 48
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nene_name_trait = {
+		random = no
+		no_supply_grace = 72
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lion_queen_trait = {
+		random = no
+		production_speed_buildings_factor = 0.2
+		war_support_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	letter_A_trait = {
+		random = no
+		naval_hit_chance = 0.05
+		production_speed_dockyard_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	soft_tentecle_trait = {
+		random = no
+		production_speed_naval_base_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kfc_trait = {
+		random = no
+		consumer_goods_factor = -0.1
+		production_speed_infrastructure_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	spitting_fire_trait = {
+		random = no
+		acclimatization_hot_climate_gain_factor = 0.1
+		heat_attrition_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	peaceful_person_trait = {
+		random = no
+		ai_get_ally_desire_factor = -100
+		ai_join_ally_desire_factor = -100
+		ai_call_ally_desire_factor = -100
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	perfect_pitch_tenshi_trait = {
+		random = no
+		command_abilities_cost_factor = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	incompetent_gov_trait = {
+		random = no
+		political_power_factor = -0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dragon_of_dojima_trait = {
+		random = no
+		ai_get_ally_desire_factor = -100
+		heat_attrition_factor = -0.25
+		political_power_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	united_unicorn_trait = {
+		random = no
+		cavalry_attack_factor = 0.35
+		cavalry_defence_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	a_post_trait = {
+		random = no
+		equipment_conversion_speed = 0.15
+		line_change_production_efficiency_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mage_in_high_castle = {
+		random = no
+		production_speed_coastal_bunker_factor = 0.50
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	underwater_queen_trait = {
+		random = no
+		production_speed_dockyard_factor = 0.30
+		convoy_raiding_efficiency_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	loli_trait = {
+		random = no
+		political_power_factor = 0.10
+		political_advisor_cost_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	luna_queen_trait = {
+		random = no
+		war_support_factor = 0.10
+		justify_war_goal_time = -0.5
+		conscription = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	angel_and_demon_trait = {
+		random = no
+		war_support_factor = 0.10
+		stability_factor = -0.10
+		global_building_slots = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	volkswagon_korone_trait = {
+		random = no
+		line_change_production_efficiency_factor = 0.50
+		political_power_factor = 0.10
+		army_armor_attack_factor = 0.10
+		motorized_attack_factor = 0.10
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sassy_kouhai_trait = {
+		random = no
+		political_power_factor = 0.10
+		political_advisor_cost_factor = -0.5
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pantsu_revealed_trait = {
+		random = no
+		stability_factor = -0.05
+		research_speed_factor = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	matsuri_god_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	stay_hungry_trait = {
+		random = no
+		attrition = -0.1
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_synthetic_refinery_factor = 0.15
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kyou_mo_kawaii = {
+		random = no
+		command_power_gain = 0.05
+		max_command_power = 50
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	depressed_salaryman_trait = {
+		random = no
+		political_power_factor = -0.05
+		production_speed_industrial_complex_factor = 0.15
+		line_change_production_efficiency_factor = 0.15
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	crowned_by_god_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		war_support_factor = 0.10
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	goddess_of_commoner_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		war_support_factor = 0.10
+		production_speed_industrial_complex_factor = 0.15
+		line_change_production_efficiency_factor = 0.15
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	keeper_of_nature_trait = {
+		random = no
+		conscription_factor = 0.1
+		stability_factor = 0.1
+		base_fuel_gain_factor = 0.2
+		local_resources_factor = 0.25
+		production_oil_factor = 0.2
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	onee_san_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		war_support_factor = 0.10
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	war_princess_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		industrial_capacity_factory = 0.1
+		supply_node_range = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_lion_lady_trait = {
+		random = no
+		nuclear_production_factor = 0.5
+		war_support_factor = 0.10
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	veteran_commander_trait = {
+		random = no
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_arms_factory_factor = 0.25
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mother_of_liberty_trait = {
+		random = no
+		production_speed_nuclear_reactor_factor = 0.5
+		nuclear_production_factor = 0.5
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hips_dont_lie_trait = {
+		random = no
+		production_speed_industrial_complex_factor = 0.25
+		political_power_factor = 0.15
+		max_command_power = 40
+		command_power_gain = 0.12
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_manager_trait = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		max_command_power = 20
+		command_power_gain = 0.06
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	president_of_the_people_trait = {
+		random = no
+		production_speed_industrial_complex_factor = 0.15
+		max_command_power = 20
+		command_power_gain = 0.06
+		research_speed_factor = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	meth_cook_trait = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		research_speed_factor = 0.1
+		operative_slot = 1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	colonial_government_trait = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		max_command_power = 20
+		cic_to_overlord_factor = 0.2
+		mic_to_overlord_factor = 0.2
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	smallism_trait = {
+		random = no
+		war_support_factor = 0.05
+		political_power_factor = 0.10
+		army_armor_attack_factor = 0.10
+		motorized_attack_factor = 0.10
+		production_speed_industrial_complex_factor = 0.25
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	aquaist_trait = {
+		random = no
+		war_support_factor = 0.10
+		political_power_factor = 0.10
+		encryption_factor = 0.1
+		army_infantry_attack_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	war_criminal_trait = {
+		random = no
+		war_support_factor = -0.05
+		non_core_manpower = 0.25
+		required_garrison_factor = -0.5
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	inanist_trait = {
+		random = no
+		nuclear_production_factor = 0.75
+		max_command_power = 30
+		political_power_factor = -0.1
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	father_of_death_trait = {
+		random = no
+		army_attack_factor = 0.15
+		required_garrison_factor = -0.5
+		political_power_factor = -0.1
+		no_supply_grace = 96
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kusogaki_trait = {
+		random = no
+		political_power_factor = -0.1
+		max_command_power = 20
+		annex_cost_factor = -0.15
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shining_idol_trait = {
+		random = no
+		decryption_factor = 0.1
+		intel_network_gain_factor = 0.15
+		spotting_chance = 0.15
+				
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	rat_trait = {
+		random = no
+		decryption_factor = 0.5
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fluffy_trait = {
+		random = no
+		local_resources_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	psycopath = {
+		random = no
+		army_core_attack_factor = 0.15
+		training_time_army_factor = 0.1
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tsundere = {
+		random = no
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	drug_dealer_trait = {
+		random = no
+		production_oil_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

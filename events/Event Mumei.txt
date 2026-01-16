@@ -1,0 +1,121 @@
+add_namespace = mumei
+
+#MUM - Ask to join faction
+country_event = {
+	id = mumei.1
+	title = mumei.1.t
+	desc = mumei.1.d
+	picture = GFX_report_event_mumei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mumei.1.a
+		ai_chance = { factor = 100 }
+		
+		add_to_faction = MUM
+
+		if = {
+			limit = { tag = KRO }
+			MUM = { country_event = { id = proposed.113 }}
+		}
+	}
+
+	option = {
+		name = mumei.1.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = KRO }
+			MUM = { country_event = { id = proposed.114 }}
+		}
+		
+	}
+}
+
+#MUM - Crimea Conference
+country_event = {
+	id = mumei.2
+	title = mumei.2.t
+	desc = mumei.2.d
+	picture = GFX_report_event_mumei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mumei.2.a
+		ai_chance = { factor = 100 }
+		
+		MUM = {
+			transfer_state = 826
+			transfer_state = 231
+			give_guarantee = AYA
+			give_military_access = AYA
+		}
+
+		if = {
+			limit = { tag = AYA }
+			MUM = { country_event = { id = proposed.7 }}
+		}
+	}
+
+	option = {
+		name = mumei.2.b
+		ai_chance = { factor = 0 }
+
+		if = {
+			limit = { tag = AYA }
+			MUM = { country_event = { id = proposed.8 }}
+		}
+		
+	}
+}
+
+#MUM - Crimea or War
+country_event = {
+	id = mumei.3
+	title = mumei.3.t
+	desc = mumei.3.d
+	picture = GFX_report_event_mumei_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mumei.3.a
+		ai_chance = { factor = 0 }
+		
+		MUM = {
+			transfer_state = 137
+		}
+
+		if = {
+			limit = { tag = AYA }
+			MUM = { country_event = { id = proposed.7 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MUM = { country_event = { id = proposed.93 }}
+		}
+	}
+
+	option = {
+		name = mumei.3.b
+		ai_chance = { factor = 100 }
+
+		MUM = {
+			create_wargoal = { type = annex_everything target = ROOT }
+		}
+
+		if = {
+			limit = { tag = AYA }
+			MUM = { country_event = { id = proposed.8 }}
+		}
+
+		if = {
+			limit = { tag = YAG }
+			MUM = { country_event = { id = proposed.94 }}
+		}
+		
+	}
+}

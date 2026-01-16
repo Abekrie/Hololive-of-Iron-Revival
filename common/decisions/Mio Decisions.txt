@@ -1,0 +1,209 @@
+mio_wolf_of_wall_street_decision_category = {
+
+	mio_invest_in_material_factory_dec = {
+
+		icon = ger_military_buildup
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+		    is_ai = no
+		    has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = MIO
+		    has_country_flag = Mio_can_wall_street
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = -2000
+	    	}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_mio_invest_in_material_factory_dec
+			hidden_effect = {country_event = { id = mio.5 }
+						add_equipment_to_stockpile = {
+					    	type = hololive_yen_0
+					    	amount = 3000
+					    	producer = ROOT
+				    	}}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	mio_invest_in_fuel_industry_dec = {
+
+		icon = oil
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+		    is_ai = no
+		    has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = MIO
+		    has_country_flag = Mio_can_wall_street
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = -2000
+	    	}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_mio_invest_in_fuel_industry_dec
+			hidden_effect = {country_event = { id = mio.6 }
+						add_equipment_to_stockpile = {
+					    	type = hololive_yen_0
+					    	amount = 3000
+					    	producer = ROOT
+				    	}}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	mio_invest_in_electronic_industry_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			is_ai = no
+			has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = MIO
+		    has_country_flag = Mio_can_wall_street
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = -2000
+	    	}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_mio_invest_in_electronic_industry_dec
+			hidden_effect = {country_event = { id = mio.7 }
+						add_equipment_to_stockpile = {
+					    	type = hololive_yen_0
+					    	amount = 3000
+					    	producer = ROOT
+				    	}}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	mio_invest_in_naval_industry_dec = {
+
+		icon = generic_naval
+
+		#days_re_enable = 35
+
+		allowed = {
+		}
+
+		available = {
+		    is_ai = no
+		    has_equipment = {
+			hololive_yen_0 > 1999
+			}
+		}
+
+		cost = 150
+
+		visible = {
+		    tag = MIO
+		    has_country_flag = Mio_can_wall_street
+		}
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = -2000
+	    	}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_mio_invest_in_naval_industry_dec
+			hidden_effect = {country_event = { id = mio.8 }
+						add_equipment_to_stockpile = {
+					    	type = hololive_yen_0
+					    	amount = 3000
+					    	producer = ROOT
+				    	}}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

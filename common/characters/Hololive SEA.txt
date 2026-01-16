@@ -1,0 +1,356 @@
+characters={
+	NOE_shirogane_noel_general ={
+		name="Noel"
+		portraits={
+			army={
+				large="gfx/leaders/NOE/dem.dds"
+				small="gfx/interface/ideas/idea_noel_offence.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { organizer skilled_staffer  politically_connected }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	NOE_shirogane_noel_admiral ={
+		name="Shirogane"
+		portraits={
+			army={
+				large="gfx/leaders/NOE/dem2.dds"
+				#small="gfx/interface/ideas/idea_noel_offence.dds"
+			}
+			navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+		}
+
+		navy_leader = {
+		legacy_id=0
+			traits = { battleship_adherent superior_tactician spotter }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+	NOE_shirogane_noel_fascism ={
+		name="Supreme Leader Noel"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOE/danchou.dds"
+			}
+		}
+
+		country_leader={
+			ideology = fascism_ideology
+			traits = {
+				knight_cup
+				
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	NOE_shirogane_noel_communism ={
+		name="Chiarman Noel"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOE/dem.dds"
+			}
+		}
+
+		country_leader={
+			ideology = marxism
+			traits = {
+				knight_cup
+				
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	NOE_shirogane_noel_neutrality ={
+		name="Shirogane Noel"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOE/noel.dds"
+			}
+		}
+
+		country_leader={
+			ideology = centrism
+			traits = {
+				knight_cup
+				
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	NOE_shirogane_noel_democratic ={
+		name="President Noel"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOE/dem2.dds"
+			}
+		}
+
+		country_leader={
+			ideology = liberalism
+			traits = {
+				knight_cup
+				
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
+
+characters={
+MOO_moona_hoshinova_general = {
+     name="Moona"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/moona_dem.dds"
+                 small="gfx/interface/ideas/idea_moona_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { inflexible_strategist brilliant_strategist }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+     }
+
+}
+
+MOO_moona_hoshinova_admiral = {
+     name="Hoshinova"
+     portraits={
+           army={
+                 large="gfx/leaders/MOO/moona_com.dds"
+                 #small="gfx/interface/ideas/idea_moona_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { safety_first career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+     }
+}
+}
+
+characters={
+GAW_gura_gawr_general = {
+     name="Gura"
+     portraits={
+           army={
+                 large="gfx/leaders/GAW/gawr_dem.dds"
+                 small="gfx/interface/ideas/idea_gura_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { trait_cautious organizer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+     }
+
+}
+
+GAW_gura_gawr_admiral = {
+     name="Gawr"
+     portraits={
+           army={
+                 large="gfx/leaders/GAW/gawr_com.dds"
+                 #small="gfx/interface/ideas/idea_gura_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { ironside career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+
+     }
+
+}
+}
+
+characters={
+RIS_risu_ayunda_general = {
+     name="Risu"
+     portraits={
+           army={
+                 large="gfx/leaders/RIS/risu_dem.dds"
+                 small="gfx/interface/ideas/idea_risu_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { trait_cautious organizer }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+     }
+
+}
+
+RIS_risu_ayunda_admiral = {
+     name="Ayunda"
+     portraits={
+           army={
+                 large="gfx/leaders/RIS/risu_com.dds"
+                 #small="gfx/interface/ideas/idea_risu_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { ironside career_officer  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+
+     }
+
+}
+}
+
+characters={
+HTO_akai_haato_general = {
+     name="Akai"
+     portraits={
+           army={
+                 large="gfx/leaders/HTO/haato_dem.dds"
+                 small="gfx/interface/ideas/idea_haato_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { inflexible_strategist trait_cautious }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+     }
+
+}
+
+HTO_akai_haato_admiral = {
+     name="Haato"
+     portraits={
+           army={
+                 large="gfx/leaders/HTO/haato_com.dds"
+                 #small="gfx/interface/ideas/idea_haato_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { fly_swatter battleship_adherent  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+
+     }
+
+}
+}
+
+characters={
+IOF_iofifteen_airani_general = {
+     name="Iofifteen"
+     portraits={
+           army={
+                 large="gfx/leaders/IOF/iof_dem.dds"
+                 #small="gfx/interface/ideas/idea_iofi_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits = { politically_connected trait_reckless }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+     }
+
+}
+
+IOF_iofifteen_airani_admiral = {
+     name="Airani"
+     portraits={
+           army={
+                 large="gfx/leaders/IOF/iof_com.dds"
+                 #small="gfx/interface/ideas/idea_iofi_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits = { war_hero bold ironside }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+
+     }
+
+}
+}

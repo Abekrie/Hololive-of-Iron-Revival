@@ -1,0 +1,321 @@
+####### NO STEP BACK! #######
+@DAYS_DETERMINED = 180 #Used for propaganda campaign SOV_heroes_forward -> Value should be the same as SOV_default_propaganda_campaign_duration
+
+
+########## HTO
+
+HTO_propaganda_campaigns = {
+
+	HTO_propaganda_3 = { # ID = 3
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = { }
+		available = {
+			HTO_propaganda_poster_slot_available = yes
+		}
+		visible = {
+			
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_3_cost
+
+		modifier = {
+			army_fuel_consumption_factor = -0.1
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
+			industrial_capacity_factory = 0.1
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 3 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { HTO_propaganda_campaign_to_remove = 3 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_3_cost = 2 }	
+		}
+	}
+	HTO_propaganda_4 = { # ID = 4
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = {
+			HTO_propaganda_poster_slot_available = yes
+		}
+		visible = {
+			
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_4_cost
+		#fire_only_once = yes
+		modifier = {
+			consumer_goods_factor = -0.1
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 4 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+			add_equipment_to_stockpile = {
+                type = hololive_yen_0
+                amount = 2500
+                producer = ROOT
+            }
+		}
+		remove_effect = {
+			set_variable = { HTO_propaganda_campaign_to_remove = 4 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_4_cost = 2 }
+		}
+	}
+	HTO_propaganda_5 = { # ID = 5
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = {
+			HTO_propaganda_poster_slot_available = yes
+		}
+		visible = {
+			has_country_flag = haato_prop_im_not_emused
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_5_cost
+		#fire_only_once = yes
+		modifier = {
+			weekly_manpower = 1500
+			training_time_factor = -0.25
+			command_abilities_cost_factor = -0.15
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 5 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			
+			set_variable = { HTO_propaganda_campaign_to_remove = 5 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_5_cost = 2 }
+		}
+	}
+	HTO_propaganda_6 = { # ID = 6
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = { HTO_propaganda_poster_slot_available = yes 
+		is_in_faction_with = WAT }
+		visible = {
+			has_country_flag = haato_prop_go_with_watame
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_6_cost
+		modifier = {
+			heat_attrition_factor = -0.20
+			terrain_penalty_reduction = 0.15
+			army_speed_factor = 0.25
+			org_loss_when_moving = -0.2
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 6 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			WAT = {
+				army_experience = 25
+			}
+			set_variable = { HTO_propaganda_campaign_to_remove = 6 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_6_cost = 2 }
+		}
+	}
+	HTO_propaganda_7 = { # ID = 7
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = { HTO_propaganda_poster_slot_available = yes 
+		has_war_with = IOF }
+		visible = {
+			has_country_flag = haato_prop_war_prop
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_7_cost
+
+		targeted_modifier = {
+			tag = IOF
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+
+		modifier = {
+			heat_attrition_factor = -0.25
+			army_speed_factor = 0.5
+			supply_consumption_factor = -0.5
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 7 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { HTO_propaganda_campaign_to_remove = 7 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_7_cost = 2 }
+		}
+	}
+	HTO_propaganda_8 = { # ID = 8
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = {
+			HTO_propaganda_poster_slot_available = yes
+			has_war_with = JAP
+		}
+		visible = {
+			has_country_flag = haato_prop_war_prop
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_8_cost
+		#fire_only_once = yes
+
+		targeted_modifier = {
+			tag = JAP
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+
+		modifier = {
+			industrial_capacity_dockyard = 0.25
+			production_speed_dockyard_factor = 0.10
+			fuel_gain = 100
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 8 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_trigger = {
+        }
+		remove_effect = {
+			random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 1
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+            }
+			set_variable = { HTO_propaganda_campaign_to_remove = 8 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_8_cost = 2 }
+		}
+	}
+	HTO_propaganda_9 = { # ID = 9
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = { HTO_propaganda_poster_slot_available = yes 
+		has_war_with = NOE }
+		visible = {
+			has_country_flag = haato_prop_war_prop
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_9_cost
+		#fire_only_once = yes
+
+		targeted_modifier = {
+			tag = NOE
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.1
+			army_morale_factor = 0.25
+			army_org_regain = 0.15
+			max_dig_in = 5
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 9 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { HTO_propaganda_campaign_to_remove = 9 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_9_cost = 2 }
+		}
+	}
+	HTO_propaganda_10 = { # ID = 10
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = {  }
+		available = {
+			HTO_propaganda_poster_slot_available = yes
+		}
+		visible = {
+			has_country_flag = haato_prop_haachama_is_watching
+		}
+		days_remove = 180
+		days_re_enable = 10
+		cost = HTO_propaganda_10_cost
+		modifier = {
+			agency_upgrade_time = -0.5
+			intel_network_gain_factor = 0.15
+			root_out_resistance_effectiveness_factor = 0.75
+			enemy_operative_detection_chance_factor	= 0.5
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_variable = { HTO_new_propaganda_campaign = 10 }
+			HTO_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { HTO_propaganda_campaign_to_remove = 10 }
+			HTO_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { HTO_propaganda_10_cost = 2 }
+		}
+	}
+
+}
+
+
+########## AXIS / GER german
+
+
+########## ALLIES / USA
+
+
+########## ALLIES / ENG
+
+
+########## Latvia / LAT
+
+
+########## Greece / GRE
+
+
+########## chinesee

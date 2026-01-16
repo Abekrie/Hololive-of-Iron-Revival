@@ -1,0 +1,65 @@
+ideas = {
+    country = {
+	    mass_infantry_yag_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = hololive_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    conscription = 0.015 
+			}
+		}
+
+		army_of_talent_yag_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = hololive_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    special_forces_cap = 0.05
+			    special_forces_attack_factor = 0.1
+			    special_forces_defence_factor = 0.1
+			}
+		}
+
+		diplomatic_neutrality_yag_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = ast_classify_aliens
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    
+			}
+
+			rule = { can_guarantee_other_ideologies = no }
+		}
+
+	}
+}

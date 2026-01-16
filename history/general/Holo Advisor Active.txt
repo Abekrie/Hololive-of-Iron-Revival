@@ -1,0 +1,543 @@
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = COG
+        is_hololive_council = yes
+        original_tag = KRO
+        original_tag = ACH
+        original_tag = ART
+        original_tag = RSA
+        original_tag = YOG 
+        original_tag = ECH
+        original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = YAG original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA 
+        }
+    #is_dynamic_country = no
+    NOT = {
+      has_allowed_idea_with_traits = { idea = democratic_reformer characters = yes }
+    }
+  }
+  generate_character = {
+    token_base = SOR_generic_democratic_reformer_holo
+
+    name = "Tokino Sora"
+    advisor = {
+      slot = political_advisor
+      traits = { democratic_reformer }
+      available = {
+        if = {
+          limit = { has_dlc = "Man the Guns" }  
+          NOT = { has_autonomy_state = autonomy_supervised_state }
+        }
+        if = {
+          limit = {
+            OR = {
+              tag = COC
+              tag = PEK 
+              tag = SUI
+              tag = WTS
+              tag = KIA
+              tag = GAW tag = NEN
+              tag = AQA tag = CHC
+              tag = SHI tag = MAT
+              tag = AYA tag = TOW
+              tag = KRN tag = NOE
+              tag = RUS tag = HTO
+              tag = WAT tag = LUN tag = KRO
+            }
+          }
+          has_country_flag = Player_can_dem_advisor
+        }
+      }
+      ai_will_do = {
+        factor = -10
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_sora_small }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = COG
+        is_hololive_council = yes
+        original_tag = KRO 
+        original_tag = ACH
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI
+        }
+      NOT = {
+      has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
+    }
+  }
+  generate_character = {
+    token_base = AQA_generic_communist_revolutionary_holo
+
+    name = "Minato Aqua"
+    advisor = {
+      slot = political_advisor
+      traits = { communist_revolutionary }
+      available = {
+        if = {
+          limit = { has_dlc = "Man the Guns" }  
+          NOT = { has_autonomy_state = autonomy_supervised_state }
+        }
+        if = {
+          limit = {
+            OR = {
+              tag = COC
+              tag = PEK tag = MUM
+              tag = WTS
+              tag = SUI
+              tag = KIA tag = MAT
+              tag = GAW tag = MIK
+              tag = SHI tag = SOR
+              tag = AYA tag = NEN
+              tag = RSA tag = CIV tag = ART
+              tag = YOG tag = DOR tag = ECH
+              tag = ACH tag = TOW tag = CHC
+              tag = KRN tag = NOE tag = SUI
+              tag = RUS tag = HTO tag = WAT
+              tag = LUN tag = KAN tag = KRO tag = LAM
+            }
+          }
+          has_country_flag = Player_can_com_advisor
+        }
+      }
+      ai_will_do = {
+        factor = -10
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_aqua_small }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = COG
+        is_hololive_council = yes
+        original_tag = KRO
+        original_tag = ACH 
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = IOF original_tag = ROS 
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI
+        }
+    #is_dynamic_country = no
+    NOT = {
+      has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
+    }
+  }
+  generate_character = {
+    token_base = generic_fascist_demagogue_holo
+
+    name = "Kiryu Coco"
+    advisor = {
+      slot = political_advisor
+      traits = { fascist_demagogue }
+      available = {
+        if = {
+          limit = { has_dlc = "Man the Guns" }  
+          NOT = { has_autonomy_state = autonomy_supervised_state }
+        }
+        if = {
+          limit = {
+            OR = {
+              tag = COC
+              tag = WTS
+              tag = SUI
+              tag = KIA
+              tag = GAW tag = SOR
+              tag = AQA tag = NEN
+              tag = SHI tag = CHC
+              tag = AYA tag = MAT
+              tag = RSA tag = CIV tag = ART
+              tag = YOG tag = DOR tag = ECH
+              tag = ACH tag = TOW
+              tag = RUS tag = HTO 
+            }
+          }
+          has_country_flag = Player_can_fas_advisor
+        }
+      }
+      ai_will_do = {
+        factor = -10
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_coco_small }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = COG
+        is_hololive_council = yes
+        original_tag = KRO
+        original_tag = ACH 
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = YAG original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI
+        }
+    #is_dynamic_country = no
+    NOT = {
+      has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
+    }
+  }
+  generate_character = {
+    token_base = generic_head_of_intelligence_holo
+
+    name = "Amelia Watson"
+    advisor = {
+      slot = political_advisor
+      traits = { head_of_intelligence }
+      available = {
+        
+      }
+      ai_will_do = {
+        factor = -10
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_watson_small }
+    }
+  }
+
+  generate_character = {
+    token_base = generic_pop_figure_holo
+
+    name = "Yuzuki Choco"
+    advisor = {
+      slot = political_advisor
+      traits = { pop_fig }
+      available = {
+        
+      }
+      ai_will_do = {
+        factor = -10
+      }
+    }
+    portraits = { 
+      army = { small = GFX_idea_choco_small }
+    }
+  }
+}
+
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = NOE
+        original_tag = FLA
+        #idkmate
+        original_tag = COG
+        is_hololive_council = yes
+        original_tag = KRO
+        original_tag = ACH
+        original_tag = ART original_tag = RSA original_tag = YOG
+        original_tag = ECH original_tag = DOR original_tag = CIV
+        original_tag = KMR original_tag = HIT original_tag = NIN original_tag = MRI original_tag = KIA original_tag = GAW original_tag = WTS original_tag = PLK original_tag = BTN original_tag = ALO original_tag = LAM original_tag = NEN original_tag = PCF original_tag = IOM original_tag = WAM
+        original_tag = KMR original_tag = EAM original_tag = PSA
+        original_tag = NFS original_tag = HSK original_tag = YAG original_tag = IOF original_tag = ROS
+        original_tag = LUN original_tag = WAT
+        original_tag = RIS original_tag = MAR
+        original_tag = PEK original_tag = ROB original_tag = KRN
+        original_tag = SOR original_tag = MIK original_tag = RUS
+        original_tag = MOO original_tag = MEL original_tag = AYA
+        original_tag = KAN original_tag = SHI original_tag = HTO
+        original_tag = MAT original_tag = CHC
+        original_tag = MIO original_tag = TOW original_tag = SUB
+        original_tag = OKA original_tag = COC original_tag = FBK
+        original_tag = AQA original_tag = SUI
+        }
+    #is_dynamic_country = no
+  }
+
+  generate_character = {
+    token_base = generic_captain_of_industry_holo
+    name = "Usada Pekora"
+    advisor = {
+      slot = political_advisor
+      traits = { captain_of_industry }
+    }
+    portraits = { 
+      army = { small = GFX_idea_pekora_small }
+    }
+  }
+
+  generate_character = {
+    token_base = generic_fortification_engineer_holo
+    name = "Uruha Rushia"
+    advisor = {
+      slot = political_advisor
+      traits = { fortification_engineer }
+    }
+    portraits = { 
+      army = { small = GFX_idea_rushia_small }
+    }
+  }
+
+  generate_character = {
+    token_base = generic_war_industrialist_holo
+    name = "Shishiro Botan"
+    advisor = {
+      slot = political_advisor
+      traits = { war_industrialist }
+    }
+    portraits = { 
+      army = { small = GFX_idea_botan_small }
+    }
+  }
+
+
+  # generic army chiefs
+  generate_character = {
+    token_base = generic_army_chief_off_holo
+    name = "Shirogane Noel"
+    advisor = {
+      slot = army_chief
+      traits = { army_chief_offensive_1 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_noel_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_army_chief_def_holo
+    name = "Shiranui Flare"
+    advisor = {
+      slot = army_chief
+      traits = { army_chief_defensive_1 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_flare_small }
+    }
+  }
+
+
+  # generic navy chiefs
+  generate_character = {
+    token_base = generic_navy_chief_decisive_bat_holo 
+    name = "Gawr Gura"
+    advisor = {
+      slot = navy_chief
+      traits = { navy_chief_decisive_battle_2 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_gura_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_navy_anti_submarine_holo
+    name = "Ninomae Ina"
+    advisor = {
+      slot = navy_chief
+      traits = { navy_anti_submarine_2 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_ina_small }
+    }
+  }
+
+  # generic air chiefs
+  generate_character = {
+    token_base = generic_air_close_air_sup_holo
+    name = "Takanashi Kiara"
+    advisor = {
+      slot = air_chief
+      traits = { air_close_air_support_2 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_kiara_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_air_chief_all_weather_holo
+    name = "Oozora Subaru"
+    advisor = {
+      slot = air_chief
+      traits = { air_chief_all_weather_2 }
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_subaru_small }
+    }
+  }
+
+
+
+  # generic high command
+  generate_character = {
+    token_base = generic_army_art_holo
+    name = "Natsuiro Matsuri"
+    advisor = {
+      slot = high_command
+      traits = { army_artillery_1 }
+      ledger = army
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_matsuri_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_army_log_holo
+    name = "Akai Haato"
+    advisor = {
+      slot = high_command
+      traits = { army_logistics_2 }
+      ledger = army
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_haato_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_navy_fleet_log_holo
+    name = "Airani Iofi" 
+    advisor = {
+      slot = high_command
+      traits = { navy_fleet_logistics_1 }
+      ledger = navy
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_iofi_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_air_air_combat_trainer_holo 
+    name = "Murasaki Shion"
+    advisor = {
+      slot = high_command
+      traits = { air_air_combat_training_2 }
+      ledger = air
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_shion_small }
+    }
+  }
+
+
+  # generic theorists
+  generate_character = {
+    token_base = generic_military_theorist_holo
+    name = "Mori Calliope"
+    advisor = {
+      slot = theorist
+      traits = { military_theorist }
+      ledger = army
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_calliope_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_naval_theorist_holo
+    name = "Houshou Marine"
+    advisor = {
+      slot = theorist
+      traits = { naval_theorist }
+      ledger = navy
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_marine_small }
+    }
+  }
+  generate_character = {
+    token_base = generic_air_warfare_theorist_holo 
+    name = "Hoshimachi Suisei"
+    advisor = {
+      slot = theorist
+      traits = { air_warfare_theorist }
+      ledger = air
+      cost = 50
+    }
+    portraits = { 
+      army = { small = GFX_idea_suisei_small }
+    }
+  }
+}
+

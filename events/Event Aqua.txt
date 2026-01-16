@@ -1,0 +1,2194 @@
+add_namespace = aqua
+
+#aqua refuses papua
+country_event = {
+	id = aqua.1
+	title = aqua.1.t
+	desc = aqua.1.d
+	picture = GFX_report_event_aqua_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#aqua accepted papua
+country_event = {
+	id = aqua.2
+	title = aqua.2.t
+	desc = aqua.2.d
+	picture = GFX_report_event_aqua_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.2.a
+		set_global_flag = papua_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#AQA yes MR Support
+country_event = {
+	id = aqua.3
+	title = aqua.3.t
+	desc = aqua.3.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.3.a
+		ai_chance = { factor = 100 }
+
+		if = {
+		limit = { original_tag = NOE }
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons
+			}	
+	    }
+		
+	}
+}
+
+#AQA no MR
+country_event = {
+	id = aqua.4
+	title = aqua.4.t
+	desc = aqua.4.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.4.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#AQA yes ICC
+country_event = {
+	id = aqua.5
+	title = aqua.5.t
+	desc = aqua.5.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.5.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+#AQA no ICC
+country_event = {
+	id = aqua.6
+	title = aqua.6.t
+	desc = aqua.6.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.6.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+##############################################
+#Buy Greenland
+country_event = {
+	id = aqua.8
+	title = aqua.8.t
+	desc = aqua.8.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.8.a	#Yes
+		ai_chance = { factor = 80 }
+		AQA = { 
+			country_event = { id = fubuki.2 }
+			transfer_state = 101
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.8.b	#No 
+		ai_chance = { factor = 20 }
+		AQA = { country_event = { id = fubuki.1 } }
+	}
+}
+
+#Buy Iceland
+country_event = {
+	id = aqua.9
+	title = aqua.9.t
+	desc = aqua.9.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.9.a	#Yes
+		ai_chance = { factor = 80 }
+		AQA = { 
+			country_event = { id = fubuki.4 }
+			transfer_state = 100
+		}
+		FBK = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.9.b	#No 
+		ai_chance = { factor = 20 }
+		AQA = { country_event = { id = fubuki.3 } }
+	}
+}
+
+#Buy Djibouti
+country_event = {
+	id = aqua.10
+	title = aqua.10.t
+	desc = aqua.10.d
+	picture = GFX_report_event_aqua_support_flare
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.10.a	#Yes
+		ai_chance = { factor = 75 }
+		AQA = { 
+			country_event = { id = flare.2 }
+			transfer_state = 268
+		}
+		FLA = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.10.b	#No 
+		ai_chance = { factor = 25 }
+		AQA = { country_event = { id = flare.1 } }
+	}
+}
+
+#Buy Corsica
+country_event = {
+	id = aqua.11
+	title = aqua.11.t
+	desc = aqua.11.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.11.a	#Yes
+		ai_chance = { factor = 50 }
+		AQA = { 
+			country_event = { id = suisei.2 }
+			transfer_state = 1
+		}
+		SUI = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = aqua.11.b	#No 
+		ai_chance = { factor = 50 }
+		AQA = { country_event = { id = suisei.1 } }
+	}
+}
+
+#Buy Maldives
+country_event = {
+	id = aqua.12
+	title = aqua.12.t
+	desc = aqua.12.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.12.a	#Yes
+		ai_chance = { factor = 75 }
+		AQA = { 
+			country_event = { id = moona.2 }
+			transfer_state = 281
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.12.b	#No 
+		ai_chance = { factor = 25 }
+		AQA = { country_event = { id = moona.1 } }
+	}
+}
+
+#Buy Ceylon
+country_event = {
+	id = aqua.13
+	title = aqua.13.t
+	desc = aqua.13.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.13.a	#Yes
+		ai_chance = { factor = 50 }
+		AQA = { 
+			country_event = { id = moona.4 }
+			transfer_state = 422
+		}
+		MOO = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aqua.13.b	#No 
+		ai_chance = { factor = 50 }
+		AQA = { country_event = { id = moona.3 } }
+	}
+}
+
+#Buy Crete
+country_event = {
+	id = aqua.15
+	title = aqua.15.t
+	desc = aqua.15.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.15.a	#Yes
+		ai_chance = { factor = 80 }
+		AQA = { 
+			country_event = { id = sora.2 }
+			transfer_state = 182
+
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.15.b	#No 
+		ai_chance = { factor = 20 }
+		AQA = { country_event = { id = sora.1 } }
+	}
+}
+
+#Buy Taiwan
+country_event = {
+	id = aqua.16
+	title = aqua.16.t
+	desc = aqua.16.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.16.a	#Yes
+		ai_chance = { factor = 20 }
+		AQA = { 
+			country_event = { id = risu.4 }
+			transfer_state = 524
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 6 }}
+	}
+	option = {
+		name = aqua.16.b	#No 
+		ai_chance = { factor = 80 }
+		AQA = { country_event = { id = risu.3 } }
+	}
+}
+
+#Buy New Zealand
+country_event = {
+	id = aqua.17
+	title = aqua.17.t
+	desc = aqua.17.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.17.a	#Yes
+		ai_chance = { factor = 50 }
+		AQA = { 
+			country_event = { id = okayu.2 }
+			transfer_state = 723
+			transfer_state = 284
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aqua.17.b	#No 
+		ai_chance = { factor = 50 }
+		AQA = { country_event = { id = okayu.1 } }
+	}
+}
+
+
+#Buy Sardinia
+country_event = {
+	id = aqua.19
+	title = aqua.19.t
+	desc = aqua.19.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.19.a	#Yes
+		ai_chance = { factor = 40 }
+		AQA = { 
+			country_event = { id = pekora.2 }
+			transfer_state = 114
+		}
+		PEK = { add_offsite_building = { type = industrial_complex level = 4 }}
+	}
+	option = {
+		name = aqua.19.b	#No 
+		ai_chance = { factor = 60 }
+		AQA = { country_event = { id = pekora.1 } }
+	}
+}
+
+#Buy Cyprus
+country_event = {
+	id = aqua.20
+	title = aqua.20.t
+	desc = aqua.20.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.20.a	#Yes
+		ai_chance = { factor = 90 }
+		AQA = { 
+			country_event = { id = korone.2 }
+			transfer_state = 183
+		}
+		KRN = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.20.b	#No 
+		ai_chance = { factor = 10 }
+		AQA = { country_event = { id = korone.1 } }
+	}
+}
+
+#Buy Kuwait
+country_event = {
+	id = aqua.21
+	title = aqua.21.t
+	desc = aqua.21.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.21.a	#Yes
+		ai_chance = { factor = 80 }
+		AQA = { 
+			country_event = { id = subaru.2 }
+			transfer_state = 656
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.21.b	#No 
+		ai_chance = { factor = 20 }
+		AQA = { country_event = { id = subaru.1 } }
+	}
+}
+
+#Buy Qatar
+country_event = {
+	id = aqua.22
+	title = aqua.22.t
+	desc = aqua.22.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.22.a	#Yes
+		ai_chance = { factor = 80 }
+		AQA = { 
+			country_event = { id = subaru.4 }
+			transfer_state = 765
+		}
+		SUB = { add_offsite_building = { type = industrial_complex level = 3 }}
+	}
+	option = {
+		name = aqua.22.b	#No 
+		ai_chance = { factor = 20 }
+		AQA = { country_event = { id = subaru.3 } }
+	}
+}
+
+#Buy North Borneo
+country_event = {
+	id = aqua.23
+	title = aqua.23.t
+	desc = aqua.23.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.23.a	#Yes
+		ai_chance = { factor = 70 }
+		AQA = { 
+			country_event = { id = noel.38 }
+			transfer_state = 333
+		}
+		ROOT = { add_offsite_building = { type = industrial_complex level = 5 }}
+	}
+	option = {
+		name = aqua.23.b	#No 
+		ai_chance = { factor = 30 }
+		AQA = { country_event = { id = noel.37 } }
+	}
+}
+###############################################################
+#Demand Danzig
+country_event = {
+	id = aqua.24
+	title = aqua.24.t
+	desc = aqua.24.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.24.a	#Yes
+		ai_chance = { factor = 35 }
+		AQA = { country_event = { id = aqua.25 } 
+		transfer_state = 85}
+	}
+	option = {
+		name = aqua.24.b	#No 
+		ai_chance = { factor = 65 }
+		AQA = { country_event = { id = aqua.26 } }
+	}
+}
+
+#MIK accepts Danzig
+country_event = {
+	id = aqua.25
+	title = aqua.25.t
+	desc = aqua.25.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.25.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MIK deny Danzig
+country_event = {
+	id = aqua.26
+	title = aqua.26.t
+	desc = aqua.26.d
+	picture = GFX_report_event_miko_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.26.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Somalia
+country_event = {
+	id = aqua.27
+	title = aqua.27.t
+	desc = aqua.27.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.27.a	#Yes
+		ai_chance = { factor = 70 }
+		AQA = { country_event = { id = aqua.28 } 
+		transfer_state = 386 }
+	}
+	option = {
+		name = aqua.27.b	#No 
+		ai_chance = { factor = 30 }
+		AQA = { country_event = { id = aqua.26 } }
+	}
+}
+
+#FLA accepts Somalia
+country_event = {
+	id = aqua.28
+	title = aqua.28.t
+	desc = aqua.28.d
+	picture = GFX_report_event_flare_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.28.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#FLA deny Somalia
+country_event = {
+	id = aqua.29
+	title = aqua.29.t
+	desc = aqua.29.d
+	picture = GFX_report_event_flare_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.29.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Gujarat
+country_event = {
+	id = aqua.30
+	title = aqua.30.t
+	desc = aqua.30.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.30.a	#Yes
+		ai_chance = { factor = 70 }
+		AQA = { country_event = { id = aqua.31 } 
+		transfer_state = 428 }
+	}
+	option = {
+		name = aqua.30.b	#No 
+		ai_chance = { factor = 30 }
+		AQA = { country_event = { id = aqua.32 } }
+	}
+}
+
+#RUS accepted Gujarat
+country_event = {
+	id = aqua.31
+	title = aqua.31.t
+	desc = aqua.31.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.31.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#RUS deny Gujarat
+country_event = {
+	id = aqua.32
+	title = aqua.32.t
+	desc = aqua.32.d
+	picture = GFX_report_event_rushia_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.32.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Invite to resistance
+country_event = {
+	id = aqua.33
+	title = aqua.33.t
+	desc = aqua.33.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.33.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { add_to_faction = ROOT }
+		if = {
+		limit = { original_tag = MAT }
+			AQA = { country_event = { id = aqua.34 }}
+	    }
+
+	    if = {
+		limit = { original_tag = SHI }
+			AQA = { country_event = { id = aqua.36 }}
+	    }
+
+	    if = {
+		limit = { original_tag = MIO }
+			AQA = { country_event = { id = aqua.38 }}
+	    }
+
+	    if = {
+		limit = { original_tag = SUB }
+			AQA = { country_event = { id = aqua.40 }}
+	    }
+	}
+	option = {
+		name = aqua.33.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { original_tag = MAT }
+			AQA = { country_event = { id = aqua.35 }}
+	    }
+
+	    if = {
+		limit = { original_tag = SHI }
+			AQA = { country_event = { id = aqua.37 }}
+	    }
+
+	    if = {
+		limit = { original_tag = MIO }
+			AQA = { country_event = { id = aqua.39 }}
+	    }
+
+	    if = {
+		limit = { original_tag = SUB }
+			AQA = { country_event = { id = aqua.41 }}
+	    }
+	}
+}
+
+#MAT accepted Invitation
+country_event = {
+	id = aqua.34
+	title = aqua.34.t
+	desc = aqua.34.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.34.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MAT deny Invitation
+country_event = {
+	id = aqua.35
+	title = aqua.35.t
+	desc = aqua.35.d
+	picture = GFX_report_event_matsuri_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.35.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHI accepted Invitation
+country_event = {
+	id = aqua.36
+	title = aqua.36.t
+	desc = aqua.36.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.36.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHI Deby Invitation
+country_event = {
+	id = aqua.37
+	title = aqua.37.t
+	desc = aqua.37.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.37.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MIO accepted Invitation
+country_event = {
+	id = aqua.38
+	title = aqua.38.t
+	desc = aqua.38.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.38.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MIO deny Invitation
+country_event = {
+	id = aqua.39
+	title = aqua.39.t
+	desc = aqua.39.d
+	picture = GFX_report_event_mio_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.39.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SUB accepted Invitation
+country_event = {
+	id = aqua.40
+	title = aqua.40.t
+	desc = aqua.40.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.40.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SUB deny Invitation
+country_event = {
+	id = aqua.41
+	title = aqua.41.t
+	desc = aqua.41.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.41.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demand Equatorial
+country_event = {
+	id = aqua.42
+	title = aqua.42.t
+	desc = aqua.42.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.42.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { country_event = { id = aqua.43 } 
+		transfer_state = 297 }
+	}
+	option = {
+		name = aqua.42.b	#No 
+		ai_chance = { factor = 0 }
+		AQA = { country_event = { id = aqua.44 } }
+	}
+}
+
+#SHI accepted Equatorial Guinea
+country_event = {
+	id = aqua.43
+	title = aqua.43.t
+	desc = aqua.43.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.43.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHI refuses Equatorial Guinea
+country_event = {
+	id = aqua.44
+	title = aqua.44.t
+	desc = aqua.44.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.44.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aqua-Shion Alliance
+country_event = {
+	id = aqua.45
+	title = aqua.45.t
+	desc = aqua.45.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.45.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { country_event = { id = aqua.46 } 
+		create_faction = aqua_shion_alliance_faction }
+		AQA = { add_to_faction = SHI }
+	}
+	option = {
+		name = aqua.45.b	#No 
+		ai_chance = { factor = 0 }
+		AQA = { country_event = { id = aqua.47 } }
+	}
+}
+
+#SHI accepted ally
+country_event = {
+	id = aqua.46
+	title = aqua.46.t
+	desc = aqua.46.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.46.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#SHI no ally
+country_event = {
+	id = aqua.47
+	title = aqua.47.t
+	desc = aqua.47.d
+	picture = GFX_report_event_shion_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.47.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Demands Puppet no CB
+country_event = {
+	id = aqua.48
+	title = aqua.48.t
+	desc = aqua.48.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.48.a	#Yes
+		ai_chance = { factor = 40 }
+		AQA = { puppet = ROOT }
+		if = {
+		limit = { original_tag = MAR }
+			AQA = { country_event = { id = aqua.49 }}
+	    }
+	}
+	option = {
+		name = aqua.48.b	#No 
+		ai_chance = { factor = 60 }
+		if = {
+		limit = { original_tag = MAR }
+		AQA = { country_event = { id = aqua.50 } }
+		}
+	}
+}
+
+#MAR accept puppet
+country_event = {
+	id = aqua.49
+	title = aqua.49.t
+	desc = aqua.49.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.49.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#MAR deny puppet
+country_event = {
+	id = aqua.50
+	title = aqua.50.t
+	desc = aqua.50.d
+	picture = GFX_report_event_marine_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.50.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aqua propose ICC
+country_event = {
+	id = aqua.51
+	title = aqua.51.t
+	desc = aqua.51.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.51.a	#Yes
+		ai_chance = { factor = 80 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+		limit = { original_tag = MAT }
+		AQA = {country_event = { id = matsuri.1 }}
+		}
+
+		if = {
+		limit = { original_tag = SHI }
+		AQA = {country_event = { id = shion.3 }}
+		}
+
+		if = {
+		limit = { original_tag = SUI }
+		AQA = {country_event = { id = suisei.42 }}
+		}
+		
+		
+	}
+	option = {
+		name = aqua.51.b	#No 
+		ai_chance = { factor = 20 }
+
+		if = {
+		limit = { original_tag = MAT }
+		AQA = {country_event = { id = matsuri.2 }}
+		}
+
+		if = {
+		limit = { original_tag = SHI }
+		AQA = {country_event = { id = shion.4 }}
+		}
+
+		if = {
+		limit = { original_tag = SUI }
+		AQA = {country_event = { id = suisei.43 }}
+		}
+		
+	}
+}
+
+#Aqua propose DYC
+country_event = {
+	id = aqua.52
+	title = aqua.52.t
+	desc = aqua.52.d
+	picture = GFX_report_event_suisei_generic2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.52.a	#Yes
+		ai_chance = { factor = 80 }
+		ROOT = {
+		    random_owned_controlled_state = {
+		    limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+		        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		if = {
+		limit = { original_tag = MAR }
+		AQA = {country_event = { id = marine.3 }}
+		}
+
+		if = {
+		limit = { original_tag = SHI }
+		AQA = {country_event = { id = shion.5 }}
+		}
+		
+		
+	}
+	option = {
+		name = aqua.52.b	#No 
+		ai_chance = { factor = 20 }
+
+		if = {
+		limit = { original_tag = MAR }
+		AQA = {country_event = { id = marine.4 }}
+		}
+
+		if = {
+		limit = { original_tag = SHI }
+		AQA = {country_event = { id = shion.6 }}
+		}
+
+		
+	}
+}
+
+#Aqua Demand Ceylon
+country_event = {
+	id = aqua.53
+	title = aqua.53.t
+	desc = aqua.53.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.53.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { transfer_state = 422 }
+		AQA = { country_event = { id = aqua.54 }}
+	}
+	option = {
+		name = aqua.53.b	#No 
+		ai_chance = { factor = 0 }
+		AQA = { country_event = { id = aqua.55 }}
+		
+	}
+}
+
+#Moo yes Ceylon
+country_event = {
+	id = aqua.54
+	title = aqua.54.t
+	desc = aqua.54.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.54.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Moo no Ceylon
+country_event = {
+	id = aqua.55
+	title = aqua.55.t
+	desc = aqua.55.d
+	picture = GFX_report_event_moona_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.55.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Aqua Demand Annex CB- AST NZL PHI
+country_event = {
+	id = aqua.56
+	title = aqua.56.t
+	desc = aqua.56.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.56.a	#Yes
+		ai_chance = { factor = 100 }
+		if = {
+		limit = { original_tag = AST }
+		AQA = {country_event = { id = aqua.57 }}
+		AQA = { annex_country = {
+		target = ROOT
+		transfer_troops = yes } }
+		}
+
+		if = {
+		limit = { original_tag = NZL }
+		AQA = {country_event = { id = aqua.59 }}
+		AQA = { annex_country = {
+		target = ROOT
+		transfer_troops = yes } }
+		}
+
+		if = {
+		limit = { original_tag = PHI }
+		AQA = {country_event = { id = aqua.61 }}
+		AQA = { annex_country = {
+		target = ROOT
+		transfer_troops = yes } }
+		}
+	}
+	option = {
+		name = aqua.56.b	#No 
+		ai_chance = { factor = 0 }
+		if = {
+		limit = { original_tag = AST }
+		AQA = {country_event = { id = aqua.57 }}
+		}
+
+		if = {
+		limit = { original_tag = NZL }
+		AQA = {country_event = { id = aqua.60 }}
+		}
+
+		if = {
+		limit = { original_tag = PHI }
+		AQA = {country_event = { id = aqua.62 }}
+		}
+	}
+}
+
+#AST yes Annex
+country_event = {
+	id = aqua.57
+	title = aqua.57.t
+	desc = aqua.57.d
+	picture = GFX_report_event_ast_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.57.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#AST no Annex
+country_event = {
+	id = aqua.58
+	title = aqua.58.t
+	desc = aqua.58.d
+	picture = GFX_report_event_ast_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.58.a	#Yes
+		ai_chance = { factor = 100 }
+		create_wargoal = { type = annex_everything target = AST }
+	}
+}
+
+#NZL yes Annex
+country_event = {
+	id = aqua.59
+	title = aqua.59.t
+	desc = aqua.59.d
+	picture = GFX_report_event_nzl_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.59.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#NZL no Annex
+country_event = {
+	id = aqua.60
+	title = aqua.60.t
+	desc = aqua.60.d
+	picture = GFX_report_event_nzl_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.60.a	#Yes
+		ai_chance = { factor = 100 }
+		create_wargoal = { type = annex_everything target = NZL }
+	}
+}
+
+#PHI yes Annex
+country_event = {
+	id = aqua.61
+	title = aqua.61.t
+	desc = aqua.61.d
+	picture = GFX_report_event_phi_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.61.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#PHI no Annex
+country_event = {
+	id = aqua.62
+	title = aqua.62.t
+	desc = aqua.62.d
+	picture = GFX_report_event_phi_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.62.a	#Yes
+		ai_chance = { factor = 100 }
+		create_wargoal = { type = annex_everything target = PHI }
+	}
+}
+
+#Aqua yes faction
+country_event = {
+	id = aqua.63
+	title = aqua.63.t
+	desc = aqua.63.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.63.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = { add_to_faction = ROOT }
+	}
+}
+
+
+#Aqua no faction
+country_event = {
+	id = aqua.64
+	title = aqua.64.t
+	desc = aqua.64.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.64.a	#Yes
+		ai_chance = { factor = 100 }
+	}
+}
+
+#aqua refuses borneo
+country_event = {
+	id = aqua.65
+	title = aqua.65.t
+	desc = aqua.65.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.65.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#aqua accepted borneo
+country_event = {
+	id = aqua.66
+	title = aqua.66.t
+	desc = aqua.66.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.66.a
+		set_global_flag = borneo_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Invite to Faction
+country_event = {
+	id = aqua.67
+	title = aqua.67.t
+	desc = aqua.67.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.67.a	#Yes
+		ai_chance = { factor = 100 }
+		AQA = {
+			add_to_faction = ROOT 
+		}
+
+		if = { limit = { tag = IOF }
+			AQA = { country_event = { id = proposed.35 }}
+		}
+
+		if = { limit = { tag = MAR }
+			AQA = { country_event = { id = proposed.47 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.67.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = IOF }
+			AQA = { country_event = { id = proposed.36 }}
+		}
+
+		if = { limit = { tag = MAR }
+			AQA = { country_event = { id = proposed.48 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#Anti Policy Pact
+country_event = {
+	id = aqua.68
+	title = aqua.68.t
+	desc = aqua.68.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.68.a	#Yes
+		ai_chance = { factor = 75 }
+		AQA = {
+			add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 1000
+		    producer = AQA
+	    }
+		}
+
+		add_equipment_to_stockpile = {
+		    type = hololive_yen_0
+		    amount = 2000
+		    producer = AQA
+	    }
+	}
+	option = {
+		name = aqua.68.b	#No 
+		ai_chance = { factor = 25 }
+		AQA = { add_political_power = -10
+		add_stability = -0.01 }
+	}
+}
+
+#AQA - Kiwawa Airline (Mission to Kiara)
+country_event = {
+	id = aqua.70
+	title = aqua.70.t
+	desc = aqua.70.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.70.a	#Yes
+		ai_chance = { factor = 100 }
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 10000
+                    producer = AQA
+            }
+		AQA = {
+			set_country_flag = aqua_can_kiwawa_airline 
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = MAR }
+			AQA = { country_event = { id = proposed.47 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.70.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = MAR }
+			AQA = { country_event = { id = proposed.48 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - Sui-maid (Mission to Suisei)
+country_event = {
+	id = aqua.69
+	title = aqua.69.t
+	desc = aqua.69.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.69.a	#Yes
+		ai_chance = { factor = 100 }
+
+		SUI = {
+			set_country_flag = can_recruit_suisei_maid
+			custom_effect_tooltip = can_recruit_suisei_maid
+		}
+			
+		AQA = {
+			set_country_flag = can_recruit_suisei_maid 
+			custom_effect_tooltip = can_recruit_suisei_maid
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.85 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.69.b	#No 
+		ai_chance = { factor = 0 }
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.86 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - Military training by Aqua
+country_event = {
+	id = aqua.71
+	title = aqua.71.t
+	desc = aqua.71.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.71.a	#Yes
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#AQA - Burma or War
+country_event = {
+	id = aqua.72
+	title = aqua.72.t
+	desc = aqua.72.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.72.a	#Yes
+		ai_chance = { factor = 90 }
+
+		AQA = {
+			transfer_state = 640
+			transfer_state = 288
+		}
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.63 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.85 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.72.b	#No 
+		ai_chance = { factor = 10 }
+
+		AQA = {
+			declare_war_on = {
+    			target = ROOT
+    			type = annex_everything
+			}
+		}
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.64 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.86 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - Eritrea or War
+country_event = {
+	id = aqua.73
+	title = aqua.73.t
+	desc = aqua.73.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.73.a	#Yes
+		ai_chance = { factor = 75 }
+
+		AQA = {
+			transfer_state = 550
+		}
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.63 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.93 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.85 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.73.b	#No 
+		ai_chance = { factor = 25 }
+
+		AQA = {
+			declare_war_on = {
+    			target = ROOT
+    			type = annex_everything
+			}
+		}
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.64 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.94 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.86 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - Somaliland Purchase
+country_event = {
+	id = aqua.74
+	title = aqua.74.t
+	desc = aqua.74.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.74.a	#Yes
+		ai_chance = { factor = 100 }
+
+		AQA = {
+			transfer_state = 268
+		}
+
+		ROOT = {
+			add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = AQA
+            }
+		}
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.63 }}
+		}
+
+		if = { limit = { tag = SUB }
+			AQA = { country_event = { id = proposed.83 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.93 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.85 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.74.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.64 }}
+		}
+
+		if = { limit = { tag = SUB }
+			AQA = { country_event = { id = proposed.84 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.94 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.86 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - Indore Pact
+country_event = {
+	id = aqua.75
+	title = aqua.75.t
+	desc = aqua.75.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.75.a	#Yes
+		ai_chance = { factor = 100 }
+
+		AQA = {
+			transfer_state = 437
+			give_guarantee = ROOT
+		}
+
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.63 }}
+		}
+
+		if = { limit = { tag = RUS }
+			AQA = { country_event = { id = proposed.77 }}
+		}
+
+		if = { limit = { tag = SUB }
+			AQA = { country_event = { id = proposed.83 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.93 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.39 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.85 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.55 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.79 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.49 }}
+		}
+
+	}
+	option = {
+		name = aqua.75.b	#No 
+		ai_chance = { factor = 0 }
+
+		if = { limit = { tag = NOE }
+			AQA = { country_event = { id = proposed.64 }}
+		}
+
+		if = { limit = { tag = RUS }
+			AQA = { country_event = { id = proposed.78 }}
+		}
+
+		if = { limit = { tag = SUB }
+			AQA = { country_event = { id = proposed.84 }}
+		}
+
+		if = { limit = { tag = YAG }
+			AQA = { country_event = { id = proposed.94 }}
+		}
+
+		if = { limit = { tag = KIA }
+			AQA = { country_event = { id = proposed.40 }}
+		}
+
+		if = { limit = { tag = SUI }
+			AQA = { country_event = { id = proposed.86 }}
+		}
+
+		if = { limit = { tag = MIO }
+			AQA = { country_event = { id = proposed.56 }}
+		}
+
+		if = { limit = { tag = SHI }
+			AQA = { country_event = { id = proposed.80 }}
+		}
+
+		if = { limit = { tag = MAT }
+			AQA = { country_event = { id = proposed.50 }}
+		}
+	}
+}
+
+#AQA - 5th Internationale (New)
+country_event = {
+	id = aqua.76
+	title = aqua.76.t
+	desc = aqua.76.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.76.a	#Yes
+		ai_chance = { factor = 90 }
+		add_ideas = aqua_we_trade_with_aqua_idea1
+		AQA = {
+		    add_opinion_modifier = {
+		    target = ROOT
+		    modifier = small_increase
+		    }
+		}
+	}
+	option = {
+		name = aqua.76.b	#No 
+		ai_chance = { factor = 10 }
+		AQA = {
+		    add_opinion_modifier = {
+		    target = ROOT
+		    modifier = small_decrease
+		    }
+		}
+	}
+}
+
+#AQA - Mission to Iofi
+country_event = {
+	id = aqua.77
+	title = aqua.77.t
+	desc = aqua.77.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.77.a	#Yes
+		ai_chance = { factor = 90 }
+		add_offsite_building = { type = dockyard level = 2 }
+			add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 2000
+                    producer = AQA
+            }
+		
+		add_opinion_modifier = {
+		    target = AQA
+			modifier = small_increase
+		}
+
+		if = { limit = { tag = IOF }
+			FROM = { country_event = { id = proposed.35 }}
+		}
+
+		if = { limit = { tag = MAR }
+			FROM = { country_event = { id = proposed.47 }}
+		}
+	}
+}
+
+#AQA - Mission to Marine
+country_event = {
+	id = aqua.78
+	title = aqua.78.t
+	desc = aqua.78.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.78.a	#Yes
+		ai_chance = { factor = 90 }
+		add_offsite_building = { type = industrial_complex level = 2 }
+		
+		add_opinion_modifier = {
+		    target = AQA
+			modifier = small_increase
+		}
+
+		if = { limit = { tag = IOF }
+			FROM = { country_event = { id = proposed.35 }}
+		}
+
+		if = { limit = { tag = MAR }
+			FROM = { country_event = { id = proposed.47 }}
+		}
+	}
+}
+
+#AQA - Day 1 Economic Policy
+country_event = {
+	id = aqua.79
+	title = aqua.79.t
+	desc = aqua.79.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.79.a	#Yes
+		ai_chance = { factor = 25 }
+
+		add_offsite_building = { type = industrial_complex level = 2 }
+		hidden_effect = {
+			country_event = { id = aqua.80 days = 7 }
+		}
+	}
+
+	option = {
+		name = aqua.79.b	#Yes
+		ai_chance = { factor = 25 }
+		
+		add_offsite_building = { type = arms_factory level = 2 }
+		hidden_effect = {
+			country_event = { id = aqua.80 days = 7 }
+		}
+	}
+
+
+	option = {
+		name = aqua.79.c	#Yes
+		ai_chance = { factor = 25 }
+		
+		add_offsite_building = { type = dockyard level = 2 }
+		hidden_effect = {
+			country_event = { id = aqua.80 days = 7 }
+		}
+	}
+}
+
+#AQA - Day 2 Political Reform
+country_event = {
+	id = aqua.80
+	title = aqua.80.t
+	desc = aqua.80.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.80.a	#Yes
+		ai_chance = { factor = 25 }
+		
+		add_political_power = 100
+		hidden_effect = {
+			country_event = { id = aqua.81 days = 7 }
+		}
+	}
+
+	option = {
+		name = aqua.80.b	#Yes
+		ai_chance = { factor = 25 }
+		
+		add_war_support = 0.1
+		hidden_effect = {
+			country_event = { id = aqua.81 days = 7 }
+		}
+	}
+
+
+	option = {
+		name = aqua.80.c	#Yes
+		ai_chance = { factor = 25 }
+		
+		add_stability = 0.15
+		hidden_effect = {
+			country_event = { id = aqua.81 days = 7 }
+		}
+	}
+}
+
+#AQA - Day 3 Foreign Policy
+country_event = {
+	id = aqua.81
+	title = aqua.81.t
+	desc = aqua.81.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.81.a	#Yes
+		ai_chance = { factor = 25 }
+		give_guarantee = IOF
+		give_guarantee = TAN
+	}
+
+	option = {
+		name = aqua.81.b	#Yes
+		ai_chance = { factor = 25 }
+		give_guarantee = MAT
+		give_guarantee = MIO
+	}
+
+	option = {
+		name = aqua.81.c	#Yes
+		ai_chance = { factor = 25 }
+		add_war_support = 0.1
+	}
+}
+
+#AQA - Congress of Idol
+country_event = {
+	id = aqua.82
+	title = aqua.82.t
+	desc = aqua.82.d
+	picture = GFX_report_event_aqua_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aqua.82.a	#Yes
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			country_event = { id = aqua.79 days = 7 }
+		}
+	}
+}

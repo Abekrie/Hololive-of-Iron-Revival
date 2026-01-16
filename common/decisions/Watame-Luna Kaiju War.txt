@@ -1,0 +1,522 @@
+paraguay_future_of_paraguay_category = {
+
+	par_cave_to_watame_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+		    tag = PAR
+		    NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_variable = { var = WAT.WAT_influence_paraguay value = 5 }
+			WAT = {
+			custom_effect_tooltip = CET_paraguay_inflnce_5
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_cave_to_luna_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+		    tag = PAR
+		    NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_to_variable = { var = LUN.LUN_influence_paraguay value = 5 }
+			LUN = {
+			custom_effect_tooltip = CET_paraguay_inflnce_5
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_strengthen_diplomatic_tie_paraguay_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 15
+
+		visible = {
+			OR = {
+				tag = WAT
+				tag = LUN
+			}
+			has_country_flag = can_influence_paraguay_future
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+		}
+
+		available = {
+			#is_ai = no
+			NOT = {has_country_flag = ongoing_influence_on_paraguay}
+		}
+
+		#days_remove = 35
+		days_remove = 35
+
+		complete_effect = {
+			set_country_flag = ongoing_influence_on_paraguay
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_influence_on_paraguay
+			custom_effect_tooltip = CET_paraguay_inflnce_5
+			if = {
+				limit = {
+					tag = LUN
+				}
+				add_to_variable = { var = LUN.LUN_influence_paraguay value = 5 }
+			}
+
+			if = {
+				limit = {
+					tag = WAT
+				}
+				add_to_variable = { var = WAT.WAT_influence_paraguay value = 5 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_send_volunteer_to_paraguay_dec = {
+
+		icon = generic_army_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+			OR = {
+				tag = WAT
+				tag = LUN
+			}
+			has_country_flag = can_influence_paraguay_future
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+		}
+
+		available = {
+			#is_ai = no
+			NOT = {has_country_flag = ongoing_influence_on_paraguay}
+		}
+
+		#days_remove = 35
+		days_remove = 35
+
+		complete_effect = {
+			add_manpower = -5000
+			PAR = {
+				add_manpower = 5000
+			}
+			set_country_flag = ongoing_influence_on_paraguay
+		}
+
+		remove_effect = {
+			clr_country_flag = ongoing_influence_on_paraguay
+			custom_effect_tooltip = CET_paraguay_inflnce_10
+			if = {
+				limit = {
+					tag = LUN
+				}
+				add_to_variable = { var = LUN.LUN_influence_paraguay value = 10 }
+			}
+
+			if = {
+				limit = {
+					tag = WAT
+				}
+				add_to_variable = { var = WAT.WAT_influence_paraguay value = 10 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_send_economic_aid_paraguay_dec = {
+
+		icon = ger_mefo_bills
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+			OR = {
+				tag = WAT
+				tag = LUN
+			}
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+			has_country_flag = can_influence_paraguay_future
+		}
+
+		available = {
+			#is_ai = no
+			has_equipment = {
+    			hololive_yen_0 > 999
+			}
+			NOT = {has_country_flag = ongoing_influence_on_paraguay}
+		}
+
+		#days_remove = 35
+		days_remove = 35
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+                type = hololive_yen_0
+                amount = -1000
+            }
+			PAR = {
+				add_equipment_to_stockpile = {
+                	type = hololive_yen_0
+                	amount = 1000
+            	}
+			}
+			set_country_flag = ongoing_influence_on_paraguay
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_paraguay_inflnce_10
+			clr_country_flag = ongoing_influence_on_paraguay
+			if = {
+				limit = {
+					tag = LUN
+				}
+				add_to_variable = { var = LUN.LUN_influence_paraguay value = 10 }
+			}
+
+			if = {
+				limit = {
+					tag = WAT
+				}
+				add_to_variable = { var = WAT.WAT_influence_paraguay value = 10 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_invest_in_the_industrial_complex_paraguay_dec = {
+
+		icon = generic_construction
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 35
+
+		visible = {
+			OR = {
+				tag = WAT
+				tag = LUN
+			}
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+			has_country_flag = can_influence_paraguay_future
+		}
+
+		available = {
+			#is_ai = no
+			industrial_complex > 3
+			NOT = {has_country_flag = ongoing_influence_on_paraguay}
+		}
+
+		days_remove = 45
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			PAR = {add_offsite_building = { type = industrial_complex level = 1 }}
+			set_country_flag = ongoing_influence_on_paraguay
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CET_paraguay_inflnce_15
+			clr_country_flag = ongoing_influence_on_paraguay
+			if = {
+				limit = {
+					tag = LUN
+				}
+				add_to_variable = { var = LUN.LUN_influence_paraguay value = 15 }
+			}
+
+			if = {
+				limit = {
+					tag = WAT
+				}
+				add_to_variable = { var = WAT.WAT_influence_paraguay value = 15 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_demand_luna_out_of_paraguay_dec = {
+
+		icon = generic_civil_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 35
+
+		visible = {
+			OR = {
+				tag = WAT
+			}
+			has_country_flag = can_influence_paraguay_future
+			NOT = {has_war_with = LUN}
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+			#check_variable = { var = WAT.WAT_influence_paraguay value = 5 compare = greater_than_or_equals }
+		}
+
+		available = {
+			#is_ai = no
+			set_temp_variable = { varluna = LUN.LUN_influence_paraguay }
+			add_to_temp_variable = { varluna = 25 }
+			
+			custom_trigger_tooltip = {tooltip = CTT_par_demand_luna_out_of_paraguay_dec
+			check_variable = { var = WAT.WAT_influence_paraguay value = varluna compare = greater_than_or_equals }}
+		}
+
+		#days_remove = 45
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			LUN = {	country_event = { id = watame.27 }}
+			add_timed_idea = {
+                idea = winning_the_kaiju_war_idea
+                days = 210
+            }
+            set_global_flag = Kaiju_war_someone_already_demanded
+		}
+
+		#remove_effect = {}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_demand_watame_out_of_paraguay_dec = {
+
+		icon = generic_civil_support
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		#cost = 35
+
+		visible = {
+			OR = {
+				tag = LUN
+			}
+			has_country_flag = can_influence_paraguay_future
+			NOT = {has_war_with = WAT}
+			NOT = {has_global_flag = Kaiju_war_someone_already_demanded}
+			#check_variable = { var = LUN.LUN_influence_paraguay value = 5 compare = greater_than_or_equals }
+		}
+
+		available = {
+			#is_ai = no
+			set_temp_variable = { varwatame = WAT.WAT_influence_paraguay }
+			add_to_temp_variable = { varwatame = 25 }
+			
+			custom_trigger_tooltip = { tooltip = CTT_par_demand_watame_out_of_paraguay_dec 
+			check_variable = { var = LUN.LUN_influence_paraguay value = varwatame compare = greater_than_or_equals }
+			}
+		}
+
+		#days_remove = 45
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			WAT = {	country_event = { id = watame.29 }}
+			add_timed_idea = {
+                idea = winning_the_kaiju_war_idea
+                days = 210
+            }
+            set_global_flag = Kaiju_war_someone_already_demanded
+		}
+
+		#remove_effect = {}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	par_set_collaborate_government_paraguay_dec = {
+
+		icon = generic_operation
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+			OR = {
+				tag = LUN
+				tag = WAT
+			}
+			has_country_flag = can_influence_paraguay_future
+			NOT = { has_country_flag = can_no_longer_influence_paraguay }
+		}
+
+		available = {
+			#is_ai = no
+			has_global_flag = FLAG_Future_of_Paraguay_end
+		}
+
+		#days_remove = 45
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			if = {
+				limit = { tag = LUN }
+				PAR = {country_event = { id = luna.44 }}
+			}
+
+			if = {
+				limit = { tag = WAT }
+				PAR = {country_event = { id = watame.33 }}
+			}
+			set_country_flag = can_no_longer_influence_paraguay
+			PAR = { remove_ideas = forest_of_paraguay_idea }
+		}
+
+		#remove_effect = {}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

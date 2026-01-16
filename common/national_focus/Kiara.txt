@@ -1,0 +1,2952 @@
+focus_tree = {
+	id = KIA_gen_en_hololive_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+			tag = KIA
+			}
+		}
+	}
+
+	default = no
+    
+    continuous_focus_position = { x = 3200 y = 1200 }
+
+    initial_show_position = {
+		x = 0
+		y = 0
+	}
+
+    #Political focus
+    focus = {
+        id = takanashi_kiara_kia_focus
+        icon = GFX_focus_kiara_flag
+        #prerequisite = { focus = madafuku}
+        #mutually_exclusive = { focus =  }
+        #relative_position_id = madafuku
+        x = 8
+        y = 0
+        cost = 5
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = fast_food_united_front_kia_focus
+        icon = GFX_focus_KIA_fastfood
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = takanashi_kiara_kia_focus
+        x = 12
+        y = 0
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 200
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                news_event = { id = holo_news.196 }
+            }
+        	create_faction = FACTION_FASTFOOD_UNITED_FRONT
+        	set_rule = { can_create_factions = yes }
+        }
+    }
+
+    focus = {
+        id = open_the_kfp_kia_focus
+        icon = GFX_focus_KIA_kfp
+        prerequisite = { focus = fast_food_united_front_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fast_food_united_front_kia_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            custom_effect_tooltip = CET_open_the_kfp_kia_focus
+            set_country_flag = Kiara_can_build_kfp
+        }
+    }
+
+    focus = {
+        id = host_government_in_exile_kia_focus
+        icon = GFX_focus_KIA_phoenix_empire
+        prerequisite = { focus = fast_food_united_front_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fast_food_united_front_kia_focus
+        x = 2
+        y = 1
+        cost = 3
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available = {
+            surrender_progress > 0.25
+            COG = {
+                is_subject_of = ROOT
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            COG = { change_tag_from = KIA }
+            set_global_flag = KIA_hosts_gov_in_exile
+        }
+    }
+
+    focus = {
+        id = army_research_kia_focus
+        icon = GFX_focus_research
+        prerequisite = { focus = open_the_kfp_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = open_the_kfp_kia_focus
+        x = 2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = strong_german_industry_kia_focus
+        icon = GFX_focus_generic_industry_3
+        prerequisite = { focus = open_the_kfp_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = open_the_kfp_kia_focus
+        x = 4
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 1.5
+                #ahead_reduction = 1
+                uses = 2
+                category = industry
+            }
+        }
+    }
+
+    focus = {
+        id = reach_out_to_usaken_kia_focus
+        icon = GFX_focus_PEK_usaken
+        prerequisite = { focus = strong_german_industry_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = strong_german_industry_kia_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = efficiency_i_ns
+            PEK = { army_experience = 5 }
+        }
+    }
+
+    focus = {
+        id = industrial_effort_kia_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = reach_out_to_usaken_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = reach_out_to_usaken_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = armament_effort_kia_focus
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = reach_out_to_usaken_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = reach_out_to_usaken_kia_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = worker_reform_kia_focus
+        icon = GFX_focus_generic_the_giant_wakes
+        prerequisite = { focus = armament_effort_kia_focus
+        focus = industrial_effort_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = armament_effort_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            remove_ideas = terrible_working_condition_holo_ns
+        }
+    }
+
+    focus = {
+        id = war_on_france_kia_focus
+        icon = GFX_focus_attack_france
+        prerequisite = { focus = worker_reform_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = worker_reform_kia_focus
+        x = 0
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = FRA
+            available = { date > 1938.1.1 }
+
+            ai_will_do = {
+                factor = 0
+            }
+
+            bypass = { OR = {
+                FRA = { exists = no }
+                FRA = { is_subject_of = ROOT }
+                FRA = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = FRA }
+        }
+    }
+
+    focus = {
+        id = phoenix_spirit_kia_focus
+        icon = GFX_focus_KIA_phoenix_empire
+        prerequisite = { focus = worker_reform_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = worker_reform_kia_focus
+        x = -2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = spiritual_warrior_idea
+        }
+    }
+
+    focus = {
+        id = build_the_bismarck_kia_focus
+        icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = phoenix_spirit_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = phoenix_spirit_kia_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                    limit = {
+                        is_coastal = yes
+                        free_building_slots = {
+                            building = dockyard
+                            size > 2
+                            include_locked = yes
+                        }
+                    }
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = holotalk_kia_focus
+        icon = GFX_focus_MAT_hololive
+        prerequisite = { focus = open_the_kfp_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = open_the_kfp_kia_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_ideas = avanced_english_hololive_ns
+        }
+    }
+
+    focus = {
+        id = concentrate_development_kia_focus
+        icon = GFX_goal_generic_construction
+        prerequisite = { focus = holotalk_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = holotalk_kia_focus
+        x = -1
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+        }
+    }
+
+    focus = {
+        id = autobahn_kia_focus
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = concentrate_development_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = concentrate_development_kia_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = expand_hannover_line_kia_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = holotalk_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = holotalk_kia_focus
+        x = 1
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            56 = {
+                add_building_construction = {
+                    type = bunker
+                    province = 241
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 309
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 3234
+                    level = 2
+                    instant_build = yes
+                }
+            }
+
+            57 = {
+                add_building_construction = {
+                    type = bunker
+                    province = 405
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 3355
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = expand_hessen_line_kia_focus
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = expand_hannover_line_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = expand_hannover_line_kia_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            55 = {
+                add_building_construction = {
+                    type = bunker
+                    province = 564
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 9524
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 11445
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 3397
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 6488
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 589
+                    level = 2
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    province = 3574
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = congo_branch_kia_focus
+        icon = GFX_focus_KIA_kfp_congo
+        prerequisite = { focus = holotalk_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = holotalk_kia_focus
+        x = -3
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	COG = {
+                set_cosmetic_tag = KFP_COG
+        		transfer_state = 295
+        		transfer_state = 538
+        		transfer_state = 718
+                custom_effect_tooltip = "---"
+                add_ideas = tropical_paradise_1
+                inherit_technology = KIA
+        	}
+            custom_effect_tooltip = "---"
+        	KIA = { puppet = COG }
+            country_event = { id = kiara.16 }
+            set_global_flag = Kiara_releases_KFP_Kongo
+        }
+    }
+
+    focus = {
+        id = congo_heavy_industry_kia_focus
+        icon = GFX_focus_generic_africa_factory
+        prerequisite = { focus = congo_branch_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congo_branch_kia_focus
+        x = -1
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            COG = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            }
+        }
+    }
+
+    focus = {
+        id = oversea_employee_recruitment_kia_focus
+        icon = GFX_focus_por_luso_tropicalism
+        prerequisite = { focus = congo_branch_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congo_branch_kia_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            COG = {
+                add_ideas = f2_conscription_ns
+            }
+        }
+    }
+
+    focus = {
+        id = invest_in_rubber_plantation_kia_focus
+        icon = GFX_focus_generic_rubber
+        prerequisite = { focus = congo_branch_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = congo_branch_kia_focus
+        x = 0
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	
+        		295 = {
+		    		add_resource = {
+						type = rubber
+						amount = 8
+					}
+				}
+				538 = {
+		    		add_resource = {
+						type = rubber
+						amount = 8
+					}
+				}
+				718 = {
+		    		add_resource = {
+						type = rubber
+						amount = 8
+					}
+				}
+        	
+        }
+    }
+
+    focus = {
+        id = question_of_rwanda_and_burundi_kia_focus
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = oversea_employee_recruitment_kia_focus}
+        prerequisite = { focus = invest_in_rubber_plantation_kia_focus}
+        prerequisite = { focus = congo_heavy_industry_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invest_in_rubber_plantation_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+            available = {
+                is_ai = no
+            }
+            
+            bypass = {
+                owns_state = 768
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_state_claim = 768
+            add_state_claim = 769
+            768 = {
+                OWNER = {
+                    country_event = { id = kiara.15 }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = war_on_germany_kia_focus
+        icon = GFX_focus_attack_germany
+        prerequisite = { focus = autobahn_kia_focus 
+        focus = expand_hessen_line_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = autobahn_kia_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+            will_lead_to_war_with = GER
+            available = { date > 1938.1.1 }
+
+            ai_will_do = {
+                factor = 0
+            }
+
+            bypass = { OR = {
+                GER = { exists = no }
+                GER = { is_subject_of = ROOT }
+                GER = { is_in_faction_with = ROOT }
+            } }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = GER }
+        }
+    }
+
+    focus = {
+        id = power_of_german_engineering_kia_focus
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = war_on_germany_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = war_on_germany_kia_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+        }
+    }
+
+    focus = {
+        id = invite_calliope_kia_focus
+        icon = GFX_focus_MRI_calliope
+        prerequisite = { focus = fast_food_united_front_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fast_food_united_front_kia_focus
+        x = -2
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+
+            available = {
+                MRI = {is_in_faction = no
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_faction_leader = yes
+                is_subject = no
+            }
+            
+            bypass = {
+                MRI = {is_in_faction_with = ROOT}
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MRI = { country_event = { id = kiara.14 } }
+            hidden_effect = {
+                MRI = { set_major = yes }
+            }
+        }
+    }
+
+    focus = {
+        id = recruit_calliope_kia_focus
+        icon = GFX_focus_MRI_deadbeats
+        prerequisite = { focus = invite_calliope_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_calliope_kia_focus
+        x = 0
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = MRI_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Mori Calliope"
+        }
+    }
+
+    focus = {
+        id = invite_ina_kia_focus
+        icon = GFX_focus_INA_ina
+        prerequisite = { focus = fast_food_united_front_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fast_food_united_front_kia_focus
+        x = -4
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+            factor = 1
+        }
+            available = {
+                NIN = {is_in_faction = no
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_faction_leader = yes
+                is_subject = no
+            }
+            
+            bypass = {
+                NIN = {is_in_faction_with = ROOT}
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            NIN = { country_event = { id = kiara.14 } }
+        }
+    }
+
+    focus = {
+        id = recruit_ina_kia_focus
+        icon = GFX_focus_INA_powerful
+        prerequisite = { focus = invite_ina_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = invite_ina_kia_focus
+        x = 0
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = NIN_recruit_general_dec_flag
+            custom_effect_tooltip = CET_available_as_general
+            custom_effect_tooltip = "Ninomae Ina"
+        }
+    }
+
+    focus = {
+        id = national_reform_kia_focus
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = takanashi_kiara_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = takanashi_kiara_kia_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	remove_ideas = bad_habit_ns
+        }
+    }
+
+    focus = {
+        id = the_kaiserin_kia_focus
+        icon = GFX_focus_KIA_queen
+        prerequisite = { focus = national_reform_kia_focus}
+        mutually_exclusive = { focus = national_phoenix_party_kia_focus }
+        relative_position_id = national_reform_kia_focus
+        x = 4
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                news_event = { id = holo_news.193 }
+            }
+        	hidden_effect = {
+				retire_ideology_leader = democratic
+				retire_ideology_leader = neutrality
+				retire_ideology_leader = fascism
+				retire_ideology_leader = communism
+			}
+			hidden_effect = {create_country_leader = {
+							name = "Kaiserin Kiara"
+							picture = "gfx/leaders/KIA/kaiserin.dds"
+							expire = "1965.1.1"
+							ideology = liberalism
+							traits = {
+								kfc_trait
+								kaiserin_of_the_people
+								
+							}
+						}
+			
+						create_country_leader = {
+							name = "Kaiserin Kiara"
+							picture = "gfx/leaders/KIA/kaiserin.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								kfc_trait
+								kaiserin_of_the_people
+								
+							}
+						}}
+
+			create_country_leader = {
+				name = "Kaiserin Kiara"
+				picture = "gfx/leaders/KIA/kaiserin.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					kfc_trait
+					kaiserin_of_the_people
+					
+				}
+			}
+
+			hidden_effect = {create_country_leader = {
+							name = "Kaiserin Kiara"
+							picture = "gfx/leaders/KIA/kaiserin.dds"
+							expire = "1965.1.1"
+							ideology = marxism
+							traits = {
+								kfc_trait
+								kaiserin_of_the_people
+								
+							}
+						}}
+        	custom_effect_tooltip = CET_available_as_advisor
+		    set_country_flag = Player_can_dem_advisor
+		    set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Tokino Sora"
+		    custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = national_phoenix_party_kia_focus
+        icon = GFX_focus_KIA_phoenix_empire
+        prerequisite = { focus = national_reform_kia_focus}
+        mutually_exclusive = { focus = the_kaiserin_kia_focus }
+        relative_position_id = national_reform_kia_focus
+        x = -4
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                news_event = { id = holo_news.195 }
+            }
+        	set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.6
+			}
+			custom_effect_tooltip = CET_available_as_advisor
+		    set_country_flag = Player_can_fas_advisor
+		    custom_effect_tooltip = "Kiryu Coco"
+        }
+    }
+
+    focus = {
+        id = the_usual_room_kia_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = national_phoenix_party_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = national_phoenix_party_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = chicken_traffiking_kia_focus
+        icon = GFX_focus_SUB_shuba
+        prerequisite = { focus = national_phoenix_party_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = national_phoenix_party_kia_focus
+        x = 1
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = extra_holo_spy_idea
+        }
+    }
+
+    focus = {
+		id = KIA_project_hope_holoen_focus
+		text = project_hope_holoen_focus
+		icon = GFX_focus_IRYS_project_hope
+		prerequisite = { focus = chicken_traffiking_kia_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = chicken_traffiking_kia_focus
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		available = { has_full_control_of_state = 327 
+		has_full_control_of_state = 126
+		has_full_control_of_state = 55
+		has_full_control_of_state = 141
+		has_full_control_of_state = 111}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			country_event = { id = holo_en.1 days = 7 }
+			custom_effect_tooltip = CET_project_hope_holoen_focus
+		    hidden_effect = {
+		    	news_event = { id = holo_news.59 }
+		    add_state_core = 55
+		    add_state_core = 56
+		    add_state_core = 57
+		    add_state_core = 51
+		    add_state_core = 42
+		    add_state_core = 28
+		    add_state_core = 796
+		    add_state_core = 295
+		    add_state_core = 538
+		    add_state_core = 718
+		    add_state_core = 111
+		    add_state_core = 149
+		    add_state_core = 148
+		    add_state_core = 150
+		    add_state_core = 146
+		    add_state_core = 722
+		    add_state_core = 147
+		    add_state_core = 213
+		    add_state_core = 215
+		    add_state_core = 216
+		    add_state_core = 141
+		    add_state_core = 140
+		    add_state_core = 139
+		    add_state_core = 138
+		    add_state_core = 38
+		    add_state_core = 666
+		    add_state_core = 124
+		    add_state_core = 145
+		    add_state_core = 783
+		    add_state_core = 699
+		    add_state_core = 623
+		    add_state_core = 327
+		    add_state_core = 624
+		    add_state_core = 626
+		    add_state_core = 628
+		    add_state_core = 625
+		    add_state_core = 627
+		    add_state_core = 729
+		    add_state_core = 647
+		    add_state_core = 737
+		    add_state_core = 129
+		    add_state_core = 125
+		    add_state_core = 126
+		    add_state_core = 127
+		    add_state_core = 8
+		    add_state_core = 6
+		    add_state_core = 7
+		    add_state_core = 36
+		    add_state_core = 34
+		    add_state_core = 35}
+	    }
+	}
+
+	focus = {
+		id = KIA_caesura_of_despair_holoen_focus
+		text = caesura_of_despair_holoen_focus
+		icon = GFX_focus_IRYS_despair
+		prerequisite = { focus = KIA_project_hope_holoen_focus }
+		#mutually_exclusive = { focus = idkmatsdfg }
+		relative_position_id = KIA_project_hope_holoen_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = caesura_of_despair_idea
+	    }
+	}
+
+	focus = {
+		id = KIA_here_comes_hope_holoen_focus
+		text = here_comes_hope_holoen_focus
+		icon = GFX_focus_IRYS_army
+		prerequisite = { focus = KIA_caesura_of_despair_holoen_focus }
+		#mutually_exclusive = { focus =  }
+		relative_position_id = KIA_caesura_of_despair_holoen_focus
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			set_country_flag = IRYS_HERE_COMES_HOPE_FLAG
+		    custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = IRYS_irys_high_com
+	    }
+	}
+
+	focus = {
+		id = KIA_irys_in_command_holoen_focus
+		text = irys_in_command_holoen_focus
+		icon = GFX_focus_IRYS_guns
+		prerequisite = { focus = KIA_project_hope_holoen_focus }
+		#mutually_exclusive = { focus = idkmatsdfg }
+		relative_position_id = KIA_project_hope_holoen_focus
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    create_corps_commander = {
+				name = "IRyS"
+				portrait_path = "gfx/leaders/WTS/irys.dds"
+				traits = { politically_connected trait_reckless }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
+			}
+	    }
+	}
+
+    focus = {
+        id = we_are_not_cult_kia_focus
+        icon = GFX_focus_spa_eliminate_the_carlists
+        prerequisite = { focus = the_usual_room_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_usual_room_kia_focus
+        x = 1
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_war_support = 0.1
+        }
+    }
+
+    focus = {
+        id = anschluss_kia_focus
+        icon = GFX_goal_anschluss
+        prerequisite = { focus = we_are_not_cult_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = we_are_not_cult_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            GER = {country_event = { id = kiara.7 }}
+        }
+    }
+
+    focus = {
+        id = viva_la_kiara_kia_focus
+        icon = GFX_focus_KIA_kiara
+        prerequisite = { focus = we_are_not_cult_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = we_are_not_cult_kia_focus
+        x = 1
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_country_leader_trait = revolutionary_general
+        }
+    }
+
+    focus = {
+        id = glory_to_kfp_kia_focus
+        icon = GFX_focus_KIA_phoenix_empire
+        prerequisite = { focus = we_are_not_cult_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = we_are_not_cult_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = fire_and_flare_idea
+        }
+    }
+
+    focus = {
+        id = kfp_coupon_kia_focus
+        icon = GFX_focus_KIA_kfp
+        prerequisite = { focus = the_usual_room_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_usual_room_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = saarland_coal_mines_kia_focus
+        icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = kfp_coupon_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kfp_coupon_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	random_owned_controlled_state = {
+		        add_resource = {
+					type = oil
+					amount = 8
+				}
+		    }
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = oil
+					amount = 8
+				}
+		    }
+        }
+    }
+
+    focus = {
+        id = lend-lease_act_kia_focus
+        icon = GFX_goal_generic_improve_relations
+        prerequisite = { focus = the_kaiserin_kia_focus 
+        focus = national_phoenix_party_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_kaiserin_kia_focus
+        x = -3
+        y = 1
+        cost = 2
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = lend_lease_hololive_ns
+        }
+    }
+
+    focus = {
+        id = general_conscription_kia_focus
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = the_kaiserin_kia_focus
+        focus = national_phoenix_party_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_kaiserin_kia_focus
+        x = -5
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = being_meme
+        }
+    }
+
+    focus = {
+        id = secret_recipe_kia_focus
+        icon = GFX_focus_research2
+        prerequisite = { focus = general_conscription_kia_focus
+        focus = lend-lease_act_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = general_conscription_kia_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = funny_gang
+        }
+    }
+
+    focus = {
+        id = volunteer_army_kia_focus
+        icon = GFX_goal_generic_axis_build_infantry
+        prerequisite = { focus = the_kaiserin_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_kaiserin_kia_focus
+        x = 2
+        y = 1
+        cost = 2
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = volunteer_corps_focus
+            add_ideas = independent_volunteer_corps_ns
+            set_rule = { can_send_volunteers = yes }
+        }
+    }
+
+    focus = {
+        id = popular_queen_kia_focus
+        icon = GFX_focus_generic_home_defense
+        prerequisite = { focus = the_kaiserin_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = the_kaiserin_kia_focus
+        x = 0
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_country_leader_trait = popular_queen
+        }
+    }
+
+    focus = {
+        id = arm_the_chickens_kia_focus
+        icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = popular_queen_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = popular_queen_kia_focus
+        x = 2
+        y = 1
+        cost = 5
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_equipment_to_stockpile = {
+		    	type = infantry_equipment_0
+		    	amount = 7500
+		    	producer = GER
+	    	}
+        }
+    }
+
+    focus = {
+        id = fate_of_the_netherlands_kia_focus
+        icon = GFX_focus_hol_oranje_boven
+        prerequisite = { focus = popular_queen_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = popular_queen_kia_focus
+        x = -2
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+            is_ai = no
+        }
+        ai_will_do = {
+			factor = -100
+		}
+
+		bypass = {
+			owns_state = 7
+			owns_state = 35
+			owns_state = 36
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            7 = {
+            	OWNER = {country_event = { id = kiara.13 }}
+            }
+        }
+    }
+
+    focus = {
+        id = kfp_netherlands_kia_focus
+        icon = GFX_focus_KIA_kfp
+        prerequisite = { focus = fate_of_the_netherlands_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fate_of_the_netherlands_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+
+        }
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            7 = {
+            	add_extra_state_shared_building_slots = 1
+		    	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+            }
+            35 = {
+            	add_extra_state_shared_building_slots = 1
+		    	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+            }
+            36 = {
+            	add_extra_state_shared_building_slots = 1
+		    	add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+            }
+        }
+    }
+
+    focus = {
+        id = divine_exquisite_kia_focus
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = popular_queen_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = popular_queen_kia_focus
+        x = 0
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = cute_1
+        }
+    }
+
+    focus = {
+        id = kiara_reich_kia_focus
+        icon = GFX_focus_KIA_kiara_reich
+        prerequisite = { focus = divine_exquisite_kia_focus
+        focus = fate_of_the_netherlands_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = divine_exquisite_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	has_full_control_of_state = 64
+        	has_full_control_of_state = 10
+        	has_full_control_of_state = 763
+        	has_full_control_of_state = 5
+        	has_full_control_of_state = 63
+        }
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            hidden_effect = {
+                news_event = { id = holo_news.194 }
+            }
+        	set_cosmetic_tag = KIA_reich
+        	every_state = {
+		   		limit = { OR = {
+		   			is_core_of = POL
+		   			is_core_of = GER
+                    is_core_of = AUS
+		   		} }
+		   		add_core_of = ROOT
+		   	}
+        }
+    }
+
+    focus = {
+        id = budget_reform_kia_focus
+        icon = GFX_focus_generic_treaty
+        prerequisite = { focus = popular_queen_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = popular_queen_kia_focus
+        x = 1
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                    type = hololive_yen_0
+                    amount = 20000
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = hire_amelia_kia_focus
+        icon = GFX_focus_WTS_amelia
+        prerequisite = { focus = budget_reform_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = budget_reform_kia_focus
+        x = -3
+        y = 1
+        cost = 4
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = watson_secret_service_spy_idea
+        }
+    }
+
+    focus = {
+        id = royal_wedding_kia_focus
+        icon = GFX_focus_KIA_kusotori
+        prerequisite = { focus = budget_reform_kia_focus}
+        mutually_exclusive = { focus = four_year_plan_kia_focus }
+        relative_position_id = budget_reform_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+            available = {
+                MRI = {
+                    is_subject = no
+                    NOT = {has_war_with = ROOT}
+                }
+                is_subject = no
+                is_ai = no
+            }
+            
+            bypass = {
+                MRI = {is_subject_of = ROOT}
+            }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            MRI = { country_event = { id = kiara.4 } }
+            hidden_effect = {
+                news_event = { id = holo_news.48 }
+            }
+        }
+    }
+
+    focus = {
+        id = four_year_plan_kia_focus
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = budget_reform_kia_focus}
+        mutually_exclusive = { focus = royal_wedding_kia_focus }
+        relative_position_id = budget_reform_kia_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+        ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_timed_idea = {
+                idea = national_building_1
+                days = 365
+            }
+            random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+	#Economy and Industry
+	focus = {
+		id = KIA_HOLOEN_Generic_idol_creator
+		text = idol_creator
+		icon = GFX_focus_engineer_2
+		relative_position_id = four_year_plan_kia_focus
+		x = -10
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_minecraft_server
+		text = minecraft_server
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = KIA_HOLOEN_Generic_idol_creator }
+		relative_position_id = KIA_HOLOEN_Generic_idol_creator
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_ideas = minecraft_resource
+		    random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_wooden_house
+		text = wooden_house
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_minecraft_server }
+		relative_position_id = KIA_HOLOEN_Generic_minecraft_server
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_nether_portal
+		text = nether_portal
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_wooden_house }
+		relative_position_id = KIA_HOLOEN_Generic_wooden_house
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+	    }
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_wooden_in_nether
+		text = wooden_in_nether
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_nether_portal }
+		relative_position_id = KIA_HOLOEN_Generic_nether_portal
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_oversea_fanbase
+		text = oversea_fanbase
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = KIA_HOLOEN_Generic_idol_creator }
+		relative_position_id = KIA_HOLOEN_Generic_idol_creator
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		navy_experience = 25
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_yuri_ship
+		text = yuri_ship
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = KIA_HOLOEN_Generic_oversea_fanbase }
+		relative_position_id = KIA_HOLOEN_Generic_oversea_fanbase
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_beach_eps
+		text = beach_eps
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = KIA_HOLOEN_Generic_yuri_ship }
+		relative_position_id = KIA_HOLOEN_Generic_yuri_ship
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_azur_lane_collab
+		text = azur_lane_collab
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = KIA_HOLOEN_Generic_beach_eps }
+		relative_position_id = KIA_HOLOEN_Generic_beach_eps
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_offensive_marketing
+		text = offensive_marketing
+		icon = GFX_focus_engineer_2
+		prerequisite = { focus = KIA_HOLOEN_Generic_idol_creator }
+		relative_position_id = KIA_HOLOEN_Generic_idol_creator
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_body_pillow
+		text = body_pillow
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_offensive_marketing }
+		relative_position_id = KIA_HOLOEN_Generic_offensive_marketing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_bath_water
+		text = bath_water
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_body_pillow }
+		relative_position_id = KIA_HOLOEN_Generic_body_pillow
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_t_shirt
+		text = t_shirt
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KIA_HOLOEN_Generic_bath_water }
+		relative_position_id = KIA_HOLOEN_Generic_bath_water
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		    add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_idol_research_generic
+		text = idol_research_generic
+		icon = GFX_focus_research
+		prerequisite = { focus = KIA_HOLOEN_Generic_t_shirt 
+		focus = KIA_HOLOEN_Generic_azur_lane_collab
+		focus = KIA_HOLOEN_Generic_wooden_in_nether}
+		relative_position_id = KIA_HOLOEN_Generic_azur_lane_collab
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_research_slot = 1
+	    }
+	}
+
+#Air Research
+	focus = {
+        id = fire_airforce_kia_focus
+        icon = GFX_goal_generic_build_airforce
+        #prerequisite = { focus = }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = KIA_HOLOEN_Generic_idol_creator
+        x = 8
+        y = 0
+        cost = 4
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	air_experience = 25
+        }
+    }
+
+    focus = {
+        id = air_research_kia_focus
+        icon = GFX_goal_generic_air_doctrine
+        prerequisite = { focus = fire_airforce_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fire_airforce_kia_focus
+        x = -2
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+        }	
+    }
+
+    focus = {
+        id = fighter_focus_kia_focus
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = air_research_kia_focus}
+        mutually_exclusive = { focus = bomber_focus_kia_focus }
+        relative_position_id = air_research_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+        }
+    }
+
+    focus = {
+        id = bomber_focus_kia_focus
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = air_research_kia_focus}
+        mutually_exclusive = { focus = fighter_focus_kia_focus }
+        relative_position_id = air_research_kia_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+        }
+    }
+
+    focus = {
+        id = naval_bomber_focus_kia_focus
+        icon = GFX_goal_generic_air_naval_bomber
+        prerequisite = { focus = bomber_focus_kia_focus
+        focus = fighter_focus_kia_focus }
+        #mutually_exclusive = { focus =  }
+        relative_position_id = bomber_focus_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+        }
+    }
+
+    focus = {
+        id = cas_focus_kia_focus
+        icon = GFX_goal_generic_CAS
+        prerequisite = { focus = fighter_focus_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fighter_focus_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+        }
+    }
+
+    focus = {
+        id = wonderweapons_kia_focus
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = bomber_focus_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = bomber_focus_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				bonus = 2
+				category = nuclear
+			}
+        }
+    }
+
+    focus = {
+        id = air_doctrines_kia_focus
+        icon = GFX_goal_generic_air_doctrine
+        prerequisite = { focus = fire_airforce_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = fire_airforce_kia_focus
+        x = 2
+        y = 1
+        cost = 6
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	add_doctrine_cost_reduction = {
+                name = CAN_independent_command
+                cost_reduction = 0.5
+                uses = 1
+                category = air_doctrine
+            }
+        }
+    }
+
+    focus = {
+        id = kiara_doctrine_kia_focus
+        icon = GFX_focus_KIA_air
+        prerequisite = { focus = air_doctrines_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = air_doctrines_kia_focus
+        x = -1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = kiara_doctrine_ns
+        }
+    }
+
+    focus = {
+        id = kiwawa_kia_focus
+        icon = GFX_focus_KIA_kiwawa
+        prerequisite = { focus = air_doctrines_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = air_doctrines_kia_focus
+        x = 1
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = CET_kiwawa_kia_focus
+        }
+    }
+
+    focus = {
+        id = kfp_2500_kia_focus
+        icon = GFX_focus_KIA_air
+        prerequisite = { focus = kiwawa_kia_focus}
+        prerequisite = { focus = kiara_doctrine_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kiwawa_kia_focus
+        x = 0
+        y = 2
+        cost = 8
+
+        available_if_capitulated = yes
+
+        available = {
+        	date > 1939.1.1
+        }
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	#set_technology = {
+    		#	CAS_kiara = 1	
+			#}
+            add_equipment_to_stockpile = {
+                    type = fighter_equipment_0
+                    amount = 300
+                    producer = ROOT
+            }
+        }
+    }
+
+    focus = {
+        id = gravity_scientist_kia_focus
+        icon = GFX_focus_YUG_rogozarski
+        prerequisite = { focus = kfp_2500_kia_focus}
+        prerequisite = { focus = wonderweapons_kia_focus
+        focus = cas_focus_kia_focus}
+        #mutually_exclusive = { focus =  }
+        relative_position_id = kfp_2500_kia_focus
+        x = -3
+        y = 1
+        cost = 8
+
+        available_if_capitulated = yes
+
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+        	custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_air_CLI
+			set_country_flag = CLI_air_advisor_FLAG
+        }
+    }
+
+#Army Research
+    focus = {
+		id = KIA_HOLOEN_Generic_gaming
+		text = gaming
+		icon = GFX_goal_generic_axis_build_infantry
+		relative_position_id = fire_airforce_kia_focus
+		x = 8
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		army_experience = 15
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_animal_crossing
+		text = animal_crossing
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = KIA_HOLOEN_Generic_gaming }
+		relative_position_id = KIA_HOLOEN_Generic_gaming
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_pubg
+		text = pubg
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = KIA_HOLOEN_Generic_animal_crossing }
+		relative_position_id = KIA_HOLOEN_Generic_animal_crossing
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_tetris
+		text = tetris
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = KIA_HOLOEN_Generic_gaming }
+		relative_position_id = KIA_HOLOEN_Generic_gaming
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_ring_fit
+		text = ring_fit
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = KIA_HOLOEN_Generic_tetris }
+		relative_position_id = KIA_HOLOEN_Generic_tetris
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_dark_soul_resh
+		text = dark_soul_resh
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = KIA_HOLOEN_Generic_gaming }
+		relative_position_id = KIA_HOLOEN_Generic_gaming
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_apex_legend
+		text = apex_legend
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = KIA_HOLOEN_Generic_dark_soul_resh }
+		relative_position_id = KIA_HOLOEN_Generic_dark_soul_resh
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+		add_tech_bonus = {
+			name = CZE_support_bonus #@#
+			bonus = 1.0
+			uses = 1
+			technology = support_weapons2
+			technology = support_weapons3
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_minecraft_resh
+		text = minecraft_resh
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KIA_HOLOEN_Generic_apex_legend  focus = KIA_HOLOEN_Generic_ring_fit }
+		relative_position_id = KIA_HOLOEN_Generic_apex_legend
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}	
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_mario_kart
+		text = mario_kart
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KIA_HOLOEN_Generic_pubg  focus = KIA_HOLOEN_Generic_ring_fit }
+		relative_position_id = KIA_HOLOEN_Generic_pubg
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_gamer_girl
+		text = gamer_girl
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = KIA_HOLOEN_Generic_minecraft_resh  focus = KIA_HOLOEN_Generic_mario_kart }
+		relative_position_id = KIA_HOLOEN_Generic_mario_kart
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_army_AME
+			set_country_flag = AME_army_advisor_FLAG
+	    }
+	}
+    
+
+#Navy Research
+    focus = {
+		id = KIA_HOLOEN_Generic_live_streaming_gen
+		text = live_streaming_gen
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = KIA_HOLOEN_Generic_gaming
+		x = 6
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_youtube_gen
+		text = youtube_gen 
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = KIA_HOLOEN_Generic_live_streaming_gen }
+		mutually_exclusive = { focus = KIA_HOLOEN_Generic_bilibili }
+		relative_position_id = KIA_HOLOEN_Generic_live_streaming_gen
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_superchat
+		text = superchat
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = KIA_HOLOEN_Generic_youtube_gen }
+		relative_position_id = KIA_HOLOEN_Generic_youtube_gen
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_bilibili
+		text = bilibili
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KIA_HOLOEN_Generic_live_streaming_gen }
+		mutually_exclusive = { focus = KIA_HOLOEN_Generic_youtube_gen }
+		relative_position_id = KIA_HOLOEN_Generic_live_streaming_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_doctrine_cost_reduction = {
+				name = CAN_independent_command
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_karaoke
+		text = karaoke
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = KIA_HOLOEN_Generic_bilibili 
+		focus = KIA_HOLOEN_Generic_youtube_gen}
+		relative_position_id = KIA_HOLOEN_Generic_youtube_gen
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_3d_studio
+		text = 3d_studio
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = KIA_HOLOEN_Generic_superchat 
+		focus = KIA_HOLOEN_Generic_game_casting}
+		prerequisite = { focus = KIA_HOLOEN_Generic_karaoke }
+		relative_position_id = KIA_HOLOEN_Generic_karaoke
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_vtuber_gang
+		text = vtuber_gang
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = KIA_HOLOEN_Generic_superchat 
+		focus = KIA_HOLOEN_Generic_game_casting}
+		prerequisite = { focus = KIA_HOLOEN_Generic_3d_studio }
+		relative_position_id = KIA_HOLOEN_Generic_3d_studio
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOE_navy_GAW
+			set_country_flag = GAW_navy_advisor_FLAG
+	    }
+	}
+
+	focus = {
+		id = KIA_HOLOEN_Generic_game_casting
+		text = game_casting
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = KIA_HOLOEN_Generic_bilibili }
+		relative_position_id = KIA_HOLOEN_Generic_bilibili
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+	    }
+	}
+
+
+
+
+
+	
+
+    
+}

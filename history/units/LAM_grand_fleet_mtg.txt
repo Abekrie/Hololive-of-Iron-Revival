@@ -1,0 +1,44 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Yukihana Fleet"		
+		naval_base = 657
+
+		task_force = {				
+			name = "Lamy Force"			
+			location = 657	
+
+			ship = { name = "Subterrlamyan" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Irish" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "ExArchos Wamy" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "NaClamy" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }	
+
+			ship = { name = "Kenzou-traitor" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+		}			
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

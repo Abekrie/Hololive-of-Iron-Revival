@@ -1,0 +1,41 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Baltic Fleet"		
+		naval_base = 362
+		task_force = {				
+			name = "Baltic Force"			
+			location = 362 
+
+			ship = { name = "Sakura" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Elite" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Shrine Maiden" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			
+		}
+	}
+
+	
+
+
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

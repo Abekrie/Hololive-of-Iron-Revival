@@ -1,0 +1,421 @@
+flare_soap_opera_category = {
+
+	flare_influence_noel_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			NOE = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_puppet_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		#cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    NOT = {
+		    	has_country_flag = Flare_already_chose_influence
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = flare_influence_noel_dec_FLAG
+			set_country_flag = Flare_already_chose_influence
+			NOE = {
+				set_country_flag = flare_influence_target_FLAG
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_influence_rushia_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			RUS = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_puppet_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		#cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    NOT = {
+		    	has_country_flag = Flare_already_chose_influence
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = flare_influence_rushia_dec_FLAG
+			set_country_flag = Flare_already_chose_influence
+			RUS = {
+				set_country_flag = flare_influence_target_FLAG
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_influence_marine_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			MAR = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_puppet_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		#cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    NOT = {
+		    	has_country_flag = Flare_already_chose_influence
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = flare_influence_marine_dec_FLAG
+			set_country_flag = Flare_already_chose_influence
+			MAR = {
+				set_country_flag = flare_influence_target_FLAG
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_influence_pekora_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 35
+
+		allowed = {
+			
+		}
+
+		available = {
+			PEK = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_puppet_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		#cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    NOT = {
+		    	has_country_flag = Flare_already_chose_influence
+		    }
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = flare_influence_pekora_dec_FLAG
+			set_country_flag = Flare_already_chose_influence
+			PEK = {
+				set_country_flag = flare_influence_target_FLAG
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_choose_new_influencee_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 180
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    has_country_flag = Flare_already_chose_influence
+		}
+
+		#days_remove = 25
+
+		complete_effect = {
+			custom_effect_tooltip = CET_flare_choose_new_influencee_dec
+			clr_country_flag = Flare_already_chose_influence
+			every_country = {
+				limit = {
+					has_country_flag = flare_influence_target_FLAG
+				}
+					clr_country_flag = flare_influence_target_FLAG
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_enforce_nap_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 190
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 225
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    has_country_flag = Flare_already_chose_influence
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = flare_influence_target_FLAG
+				}
+					diplomatic_relation = {
+    					country = FLA
+    					relation = non_aggression_pact
+    					active = yes
+					}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_enforce_military_access_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 190
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    has_country_flag = Flare_already_chose_influence
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = flare_influence_target_FLAG
+				}
+					give_military_access = FLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_enforce_intelligence_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 190
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    has_country_flag = Flare_already_chose_influence
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = flare_influence_target_FLAG
+				}
+					FLA = {add_intel = {
+					    					target = PREV
+					    					civilian_intel = 15
+					    					army_intel = 15
+					    					navy_intel = 15
+					    					airforce_intel = 15
+										}}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	flare_enforce_guarantee_dec = {
+
+		icon = generic_political_discourse
+
+		days_re_enable = 190
+
+		allowed = {
+			
+		}
+
+		available = {
+			
+		}
+
+		cost = 300
+
+		visible = {
+		    OR = { tag = FLA }
+		    has_country_flag = Flare_can_influence_gen_3
+		    has_country_flag = Flare_already_chose_influence
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = flare_influence_target_FLAG
+				}
+					give_guarantee = FLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

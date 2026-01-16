@@ -1,0 +1,68 @@
+paraguay_infiltrate_enemy_border_category = {
+
+	paraguay_infiltrate_border_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						CONTROLLER = {
+							NOT = {tag = ROOT}
+						}
+						OWNER = {
+							NOT = {tag = ROOT}
+						}
+					}
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 175
+
+		visible = {
+		    tag = PAR
+			has_country_flag = Paraguay_can_infiltrate_enemy_border
+			is_ai = no
+			every_neighbor_state = {
+				limit = { NOT = { is_core_of = ROOT }}
+			}
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 100
+
+		complete_effect = {
+			set_country_flag = paraguay_ongoing_infiltration
+		}
+
+		remove_effect = {
+			clr_country_flag = paraguay_ongoing_infiltration
+			FROM = { set_state_flag = paraguay_infiltrated_state_flag }
+			FROM.OWNER = {
+				country_event = {
+					id = paraguay.8
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

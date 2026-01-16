@@ -1,0 +1,93 @@
+okayu_okayu_court_category = {
+	okayu_sicily_trial_dec = {
+
+		icon = generic_pekora
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 50
+
+		visible = {
+		    tag = OKA
+			has_country_flag = okayu_can_do_court_order
+			PEK = {
+				has_idea = war_criminal_in_the_state_ns
+			}
+			NOT = {
+				has_global_flag = okayu_held_sicily_trial
+			}
+		}
+
+		available = {
+			PEK = {
+				NOT = { has_government = fascism }
+			}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_global_flag = okayu_held_sicily_trial
+			PEK = {
+
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	better_call_saul_dec = {
+
+		icon = generic_decision
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 100
+
+		visible = {
+		    tag = OKA
+			has_country_flag = okayu_can_do_court_order
+			NOT = {
+				has_country_flag = better_call_saul_dec_FLAG
+			}
+		}
+
+		available = {
+			
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			set_country_flag = better_call_saul_dec_FLAG
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = OKA_saul_goodman_advisor
+
+			hidden_effect = {
+				news_event = { id = holo_news.221 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

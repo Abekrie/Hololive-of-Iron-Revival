@@ -1,0 +1,31 @@
+ideas = {
+
+
+	high_command = {
+		
+		WAT_ui_high_com = {
+			ledger = army
+
+			picture = ui_advisor
+
+			available = {
+				has_completed_focus = ui_in_command_wat_focus
+			}
+			
+			allowed = {
+				OR =
+				{
+				original_tag = WAT
+				}
+			}
+			
+			traits = { ui_watame_trait }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	
+}

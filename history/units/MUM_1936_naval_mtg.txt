@@ -1,0 +1,90 @@
+﻿#ship_hull_submarine_1
+#ship_hull_light_1
+#ship_hull_heavy_1
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Mumei Fleet"		
+		naval_base = 719
+		task_force = {				
+			name = "Mumei Force"			
+			location = 719 
+ship = { name = "Mumei 1 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 2 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 3 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 4 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 5 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 6 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 7 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }
+ 
+ship = { name = "Mumei 8 "
+definition = Submarine
+equipment = { ship_hull_submarine_1 = { amount = 1 owner =
+GER version_name = "Type II Class"
+} } }	
+
+ship = { name = "Stalingrad 1 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Stalingrad 2 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+ship = { name = "Stalingrad 3 "
+definition = Battleship
+equipment = { ship_hull_heavy_1 = { amount = 1 owner =
+ENG version_name = "Queen Elizabeth Class"
+} } }
+ 
+			
+		}	
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

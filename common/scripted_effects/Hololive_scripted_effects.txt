@@ -1,0 +1,96 @@
+add_efficiency_idea = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = holo_efficiency_idea_in_effect
+			}}
+		set_country_flag = holo_efficiency_idea_in_effect
+		add_ideas = efficiency_i_ns
+	}
+	
+	else_if = {
+		limit = {
+				has_idea = efficiency_i_ns
+			}
+		swap_ideas = {
+    		remove_idea = efficiency_i_ns
+    		add_idea = efficiency_ii_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = efficiency_ii_ns
+			}
+		swap_ideas = {
+    		remove_idea = efficiency_ii_ns
+    		add_idea = efficiency_iii_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = efficiency_iii_ns
+			}
+		swap_ideas = {
+    		remove_idea = efficiency_iii_ns
+    		add_idea = efficiency_iv_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = efficiency_iv_ns
+			}
+		swap_ideas = {
+    		remove_idea = efficiency_iv_ns
+    		add_idea = efficiency_v_ns
+		}
+	}
+}
+
+
+add_research_idea = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = holo_research_idea_in_effect
+			}}
+		set_country_flag = holo_research_idea_in_effect
+		add_ideas = research_level_i_ns
+	}
+	
+	else_if = {
+		limit = {
+				has_idea = research_level_i_ns
+			}
+		swap_ideas = {
+    		remove_idea = research_level_i_ns
+    		add_idea = research_level_ii_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = research_level_ii_ns
+			}
+		swap_ideas = {
+    		remove_idea = research_level_ii_ns
+    		add_idea = research_level_iii_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = research_level_iii_ns
+			}
+		swap_ideas = {
+    		remove_idea = research_level_iii_ns
+    		add_idea = research_level_iv_ns
+		}
+	}
+	else_if = {
+		limit = {
+				has_idea = research_level_iv_ns
+			}
+		swap_ideas = {
+    		remove_idea = research_level_iv_ns
+    		add_idea = research_level_v_ns
+		}
+	}
+}

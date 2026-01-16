@@ -1,0 +1,1019 @@
+noe_hololive_trade_category = {
+
+	noe_buy_greenland_fbk = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			FBK = { has_full_control_of_state = 101 }
+		}
+
+		cost = 300
+
+		visible = {
+			has_country_flag = hololive_trade 
+			FBK = { has_full_control_of_state = 101 }
+			NOT = {
+			has_global_flag = greenland_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		FBK = { country_event = aqua.8 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		FBK = { country_event = noel.8 }
+		    }
+		if = { 
+		limit = { original_tag = SUI }
+		FBK = { country_event = suisei.8 }
+		    }
+
+		if = { 
+		limit = { original_tag = MAT }
+		FBK = { country_event = matsuri.8 }
+		    }
+
+		if = { 
+		limit = { original_tag = PEK }
+		FBK = { country_event = pekora.8 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		FBK = { country_event = rushia.8 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		FBK = { country_event = watame.8 }
+		    }
+
+		if = { 
+		limit = { original_tag = MIK }
+		FBK = { country_event = miko.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		FBK = { country_event = kanata.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		FBK = { country_event = korone.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		FBK = { country_event = haato.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		FBK = { country_event = okayu.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		FBK = { country_event = shion.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		FBK = { country_event = risu.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		FBK = { country_event = yagoo.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		FBK = { country_event = aloe.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		FBK = { country_event = luna.8 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		FBK = { country_event = coco.8 }
+		    }
+
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	noe_buy_iceland_fbk = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			FBK = { has_full_control_of_state = 100 }
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			FBK = { has_full_control_of_state = 100 }
+			NOT = {
+			has_global_flag = iceland_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		FBK = { country_event = aqua.9 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		FBK = { country_event = noel.9 }
+		    }
+		if = { 
+		limit = { original_tag = SUI }
+		FBK = { country_event = suisei.9 }
+		    }
+
+		if = { 
+		limit = { original_tag = MAT }
+		FBK = { country_event = matsuri.9 }
+		    }
+
+		if = { 
+		limit = { original_tag = PEK }
+		FBK = { country_event = pekora.9 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		FBK = { country_event = rushia.9 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		FBK = { country_event = watame.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		FBK = { country_event = miko.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		FBK = { country_event = kanata.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		FBK = { country_event = korone.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		FBK = { country_event = haato.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		FBK = { country_event = okayu.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		FBK = { country_event = shion.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		FBK = { country_event = risu.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		FBK = { country_event = yagoo.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		FBK = { country_event = aloe.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		FBK = { country_event = luna.9 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		FBK = { country_event = coco.9 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	noe_buy_corsica_suisei = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			SUI = { has_full_control_of_state = 1 }
+		}
+
+		cost = 300
+
+		visible = {
+			SUI = { has_full_control_of_state = 1 }
+			has_country_flag = hololive_trade 
+			NOT = {
+			has_global_flag = corsica_sold
+			tag = SUI
+			tag = NOE
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		SUI = { country_event = aqua.11 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		SUI = { country_event = noel.11 }
+		    }
+		if = { 
+		limit = { original_tag = FBK }
+		SUI = { country_event = fubuki.11 }
+		    }
+		if = { 
+		limit = { original_tag = MAT }
+		SUI = { country_event = matsuri.11 }
+		    }
+
+		if = { 
+		limit = { original_tag = PEK }
+		SUI = { country_event = pekora.11 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		SUI = { country_event = rushia.11 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		SUI = { country_event = watame.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		SUI = { country_event = miko.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		SUI = { country_event = kanata.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		SUI = { country_event = korone.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		SUI = { country_event = haato.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		SUI = { country_event = okayu.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		SUI = { country_event = shion.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		SUI = { country_event = risu.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		SUI = { country_event = yagoo.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		SUI = { country_event = aloe.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		SUI = { country_event = luna.11 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		SUI = { country_event = coco.11 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_crete_sora = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			SOR = { has_full_control_of_state = 182 }
+
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			SOR = { has_full_control_of_state = 182 }
+			NOT = {
+			has_global_flag = crete_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		SOR = { country_event = aqua.15 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		SOR = { country_event = noel.15 }
+		    }
+		if = { 
+		limit = { original_tag = SUI }
+		SOR = { country_event = suisei.15 }
+		    }
+		if = { 
+		limit = { original_tag = FBK }
+		SOR = { country_event = fubuki.15 }
+		    }
+		if = { 
+		limit = { original_tag = MAT }
+		SOR = { country_event = matsuri.15 }
+		    }
+
+		if = { 
+		limit = { original_tag = PEK }
+		SOR = { country_event = pekora.15 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		SOR = { country_event = rushia.15 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		SOR = { country_event = watame.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		SOR = { country_event = miko.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		SOR = { country_event = kanata.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		SOR = { country_event = korone.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		SOR = { country_event = haato.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		SOR = { country_event = okayu.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		SOR = { country_event = shion.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		SOR = { country_event = risu.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		SOR = { country_event = yagoo.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		SOR = { country_event = aloe.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		SOR = { country_event = luna.15 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		SOR = { country_event = coco.15 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_sardinia_pekora = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			PEK = { has_full_control_of_state = 114 }
+
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			NOT = {
+			has_global_flag = sardinia_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		PEK = { country_event = aqua.19 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		PEK = { country_event = noel.19 }
+		    }
+		if = { 
+		limit = { original_tag = SUI }
+		PEK = { country_event = suisei.19 }
+		    }
+		if = { 
+		limit = { original_tag = FBK }
+		PEK = { country_event = fubuki.19 }
+		    }
+		if = { 
+		limit = { original_tag = MAT }
+		PEK = { country_event = matsuri.19 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		PEK = { country_event = rushia.19 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		PEK = { country_event = watame.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		PEK = { country_event = miko.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		PEK = { country_event = kanata.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		PEK = { country_event = korone.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		PEK = { country_event = haato.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		PEK = { country_event = okayu.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		PEK = { country_event = shion.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		PEK = { country_event = risu.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		PEK = { country_event = yagoo.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		PEK = { country_event = aloe.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		PEK = { country_event = luna.19 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		PEK = { country_event = coco.19 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_cyprus_korone = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			KRN = { has_full_control_of_state = 183 }
+
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			NOT = {
+			has_global_flag = cyprus_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		KRN = { country_event = aqua.20 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		KRN = { country_event = noel.20 }
+		    }
+		if = { 
+		limit = { original_tag = SUI }
+		KRN = { country_event = suisei.20 }
+		    }
+		if = { 
+		limit = { original_tag = FBK }
+		KRN = { country_event = fubuki.20 }
+		    }
+		if = { 
+		limit = { original_tag = MAT }
+		KRN = { country_event = matsuri.20 }
+		    }
+		if = { 
+		limit = { original_tag = PEK }
+		KRN = { country_event = pekora.20 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		KRN = { country_event = rushia.20 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		KRN = { country_event = watame.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		KRN = { country_event = miko.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		KRN = { country_event = kanata.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		KRN = { country_event = haato.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		KRN = { country_event = okayu.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		KRN = { country_event = shion.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		KRN = { country_event = risu.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		KRN = { country_event = yagoo.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		KRN = { country_event = aloe.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		KRN = { country_event = luna.20 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		KRN = { country_event = coco.20 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_kuwait_subaru = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			SUB = { has_full_control_of_state = 656 }
+
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			NOT = {
+			has_global_flag = kuwait_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		SUB = { country_event = aqua.21 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		SUB = { country_event = noel.21 }
+		    }
+
+		if = { 
+		limit = { original_tag = SUI }
+		SUB = { country_event = suisei.21 }
+		    }
+
+		if = { 
+		limit = { original_tag = FBK }
+		SUB = { country_event = fubuki.21 }
+		    }
+		if = { 
+		limit = { original_tag = MAT }
+		SUB = { country_event = matsuri.21 }
+		    }
+
+		if = { 
+		limit = { original_tag = PEK }
+		SUB = { country_event = pekora.21 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		SUB = { country_event = rushia.21 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		SUB = { country_event = watame.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		SUB = { country_event = miko.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		SUB = { country_event = kanata.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		SUB = { country_event = korone.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		SUB = { country_event = haato.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		SUB = { country_event = okayu.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		SUB = { country_event = shion.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		SUB = { country_event = risu.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		SUB = { country_event = yagoo.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		SUB = { country_event = aloe.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		SUB = { country_event = luna.21 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		SUB = { country_event = coco.21 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	buy_qatar_subaru = {
+
+		days_re_enable = 100
+		icon = generic_form_nation
+
+
+		allowed = {
+			
+		}
+
+		available = {
+		is_ai = no
+			
+			SUB = { has_full_control_of_state = 765 }
+
+		}
+
+		cost = 300
+
+		visible = {
+			
+			has_country_flag = hololive_trade 
+			NOT = {
+			has_global_flag = qatar_sold
+			}
+		}
+
+		complete_effect = {
+		if = { 
+		limit = { original_tag = AQA }
+		SUB = { country_event = aqua.22 }
+		    }
+		if = { 
+		limit = { original_tag = NOE }
+		SUB = { country_event = noel.22 }
+		    }
+
+		if = { 
+		limit = { original_tag = SUI }
+		SUB = { country_event = suisei.22 }
+		    }
+
+		if = { 
+		limit = { original_tag = FBK }
+		SUB = { country_event = fubuki.22 }
+		    }
+
+		if = { 
+		limit = { original_tag = MAT }
+		SUB = { country_event = matsuri.22 }
+		    }
+		if = { 
+		limit = { original_tag = PEK }
+		SUB = { country_event = pekora.22 }
+		    }
+
+		if = { 
+		limit = { original_tag = RUS }
+		SUB = { country_event = rushia.22 }
+		    }
+
+		if = { 
+		limit = { original_tag = WAT }
+		SUB = { country_event = watame.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = MIK }
+		SUB = { country_event = miko.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KAN }
+		SUB = { country_event = kanata.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = KRN }
+		SUB = { country_event = korone.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = HTO }
+		SUB = { country_event = haato.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = OKA }
+		SUB = { country_event = okayu.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = SHI }
+		SUB = { country_event = shion.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = RIS }
+		SUB = { country_event = risu.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = YAG }
+		SUB = { country_event = yagoo.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = ALO }
+		SUB = { country_event = aloe.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = LUN }
+		SUB = { country_event = luna.22 }
+		    }
+
+		    if = { 
+		limit = { original_tag = COC }
+		SUB = { country_event = coco.22 }
+		    }
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

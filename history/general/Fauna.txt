@@ -1,0 +1,95 @@
+every_possible_country = {
+  limit = {
+    OR =
+        {
+        original_tag = FAU
+        }
+    #is_dynamic_country = no
+  }
+
+  # generic army chiefs
+
+  # generic army chiefs
+  generate_character = {
+    token_base = FAU_crazy_dave_advisor_advisor
+    name = "Crazy Dave"
+    advisor = {
+      slot = high_command
+      traits = { ministry_of_homeland_security_trait }
+      cost = 50
+
+      available = {
+                        OR = {has_completed_focus = crazy_dave_fau_focus }
+                  }
+    }
+    portraits = { 
+      army = { small = GFX_idea_crazy_dave_small }
+    }
+  }
+
+
+  generate_character = {
+    token_base = FAU_nemu_holo_xgeneral
+    name="Nemu"
+      portraits={
+            army={
+                  large="gfx/leaders/FAU/nemu.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={old_guard commando war_hero}
+            skill = 5
+            attack_skill = 4
+            defense_skill = 5
+            planning_skill = 4
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+
+  generate_character = {
+    token_base = FAU_beeg_smol_holo_xgeneral
+    name="Beeg Smol Fauna"
+      portraits={
+            army={
+                  large="gfx/leaders/FAU/fauna_beeg_smol.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={fortress_buster ambusher}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 2
+            #visible = { has_country_flag =  }
+      }
+  }
+
+  generate_character = {
+    token_base = FAU_wide_fauna_holo_xgeneral
+    name="Wide Fauna"
+      portraits={
+            army={
+                  large="gfx/leaders/FAU/wide_fauna.dds"
+                  small="gfx/interface/ideas/idea_holo_logo_small.dds"
+            }
+      }
+
+      corps_commander = {
+            traits={cavalry_officer trait_cautious}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 3
+            #visible = { has_country_flag =  }
+      }
+  }
+
+}

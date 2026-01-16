@@ -1,0 +1,116 @@
+korone_suez_crisis_category = {
+	korone_ignite_the_suez_crisis_dec = {
+
+		icon = generic_ignite_civil_war
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		cost = 25
+
+		visible = {
+		    tag = KRN
+			has_country_flag = korone_can_suez_crisis
+			NOT = {
+				has_global_flag = korone_suez_crisis_end
+			}
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 365
+
+		complete_effect = {
+			set_global_flag = korone_on_going_suez_crisis
+			hidden_effect = {
+				news_event = { id = holo_news.222 }
+			}
+		}
+
+		remove_effect = {
+			clr_global_flag = korone_on_going_suez_crisis
+			set_global_flag = korone_suez_crisis_end
+			EAM = {
+				country_event = { id = korone.44 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	korone_prevent_intervention_in_suez_crisis_dec = {
+
+		icon = generic_political_discourse
+
+		#days_re_enable = 10
+
+		allowed = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				AND = {
+						OWNER = {
+							OR = {
+								tag = OKA
+								tag = YAG
+								tag = PEK
+								tag = AQA
+							}
+						}
+						is_capital = yes
+					}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		cost = 125
+
+		visible = {
+		    tag = KRN
+			has_global_flag = korone_on_going_suez_crisis
+			FROM.OWNER = {
+				OR = {
+					NOT = { has_country_flag = intervened_in_suez_crisis }
+					NOT = { has_country_flag = can_no_longer_intervene_in_suez }
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_war_with = FROM.OWNER
+			}
+		}
+
+		#days_remove = 35
+
+		complete_effect = {
+			FROM.OWNER = {
+				country_event = { id = korone.42 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

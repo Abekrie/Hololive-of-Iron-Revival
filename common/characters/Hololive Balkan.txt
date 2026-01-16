@@ -1,0 +1,234 @@
+
+characters={
+LAM_lamy_yukihana_general = {
+     name="Lamy"
+     portraits={
+           army={
+                 large="gfx/leaders/LAM/lam_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     field_marshal={
+            traits={ organizer logistics_wizard }
+            skill=5
+            attack_skill=4
+            defense_skill=3
+            planning_skill=4
+            logistics_skill=5
+            legacy_id=0
+      }
+
+}
+
+LAM_lamy_yukihana_admiral = {
+     name="Yukihana"
+     portraits={
+           army={
+                 large="gfx/leaders/LAM/lam_com.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={war_hero fleet_protector}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+NEN_nene_momosuzu_general = {
+     name="Nene"
+     portraits={
+           army={
+                 large="gfx/leaders/NEN/nen_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={infantry_officer cavalry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+NEN_nene_momosuzu_admiral = {
+     name="Momosuzu"
+     portraits={
+           army={
+                 large="gfx/leaders/NEN/nen_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality career_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+SOR_sora_tokino_general = {
+     name="Sora"
+     portraits={
+           army={
+                 large="gfx/leaders/SOR/sora_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={harsh_leader cavalry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+SOR_sora_tokino_admiral = {
+     name="Tokino"
+     portraits={
+           army={
+                 large="gfx/leaders/SOR/sora_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={career_officer gentlemanly}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+YAG_yagoo_yagoo_general = {
+     name="Yagoo"
+     portraits={
+           army={
+                 large="gfx/leaders/YAG/just_yagoo.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious commando}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+YAG_yagoo_yagoo_admiral = {
+     name="Yagoo"
+     portraits={
+           army={
+                 large="gfx/leaders/YAG/just_yagoo.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={caustic_personality old_guard_navy}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}
+
+
+characters={
+ALO_aloe_mano_general = {
+     name="Aloe"
+     portraits={
+           army={
+                 large="gfx/leaders/ALO/alo_dem.dds"
+                 small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     corps_commander = {
+           traits={trait_cautious cavalry_officer}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           planning_skill = 2
+           logistics_skill = 2
+     }
+
+}
+
+ALO_aloe_mano_admiral = {
+     name="Mano"
+     portraits={
+           army={
+                 large="gfx/leaders/ALO/alo_com.dds"
+                 #small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+           navy = {
+           small="gfx/interface/ideas/idea_holo_logo_small.dds"
+           }
+     }
+
+     navy_leader = {
+     legacy_id=0
+           traits={bold ironside}
+           skill = 4
+           attack_skill = 2
+           defense_skill = 2
+           maneuvering_skill = 2
+           coordination_skill = 2
+     }
+
+}
+}

@@ -1,0 +1,85 @@
+﻿l_english:
+KAN_religion_category:0 "Religions in the state"
+KAN_religion_category_desc:0 "Kanata Angelism, also known as Kanatanism, is a religion aimed to worship Amane Kanata. Since the annexation of East India, Kanata had introduced the religion to people in the region. However, in a region that was predominated by Hinduism, Islam, and Buddhism, Kanatanism is not so popular.\n\nKanata decided to enforce Kanatanism as state religion anyway. She will go on to reform the national development policy, where cities that have Kanatanist majority will get more budget than those that are not. This caused tension between the people and the state, and the people's opinions are not very positive...\n\nPeople's opinion on the state:\n§8Buddhism: [?Root.KAN_religion_buddhism|=+0]\n§8Hinduism: [?Root.KAN_religion_hinduism|=+0]\n§8Islam: [?Root.KAN_religion_islam|=+0]\n\n§WReligions in the state\n§9Local religions: §Y[?Root.KAN_local_percent|0]%\n§3Kanatanist Heimin: §Y[?Root.KAN_kanatan_percent|0]%"
+kanata_integrate_hindu_population_dec:0 "Integrate Hindu Population"
+kanata_integrate_muslim_population_dec:0 "Integrate Muslim Population"
+kanata_integrate_buddhist_population_dec:0 "Integrate Buddhist Population"
+kanata_national_presentation_dec:0 "National Presentation"
+kanata_gorilla_grip_dec:0 "Gorilla Grip"
+kanata_healing_angel_dec:0 "Healing Angel"
+
+CTT_KAN_population_can_integrate_hindu:0 "§8Hindu §Wpeople have §Y40 §Wor more §GPositive Opinions §Won the state"
+CTT_KAN_population_can_integrate_muslim:0 "§8Muslim §Wpeople have §Y40 §Wor more §GPositive Opinions §Won the state"
+CTT_KAN_population_can_integrate_buddhist:0 "§8Buddhist §Wpeople have §Y40 §Wor more §GPositive Opinions §Won the state"
+
+add_to_kanatanist:0 "§Y+5%§! of §3Kanatanism§! followers"
+remove_from_kanatanist:0 "§R-5%§! of §3Kanatanism§! followers"
+add_to_kanatan_15:0 "§Y+15%§! §3Kanatanist§!"
+
+add_hindu_ops:0 "Add §G5§! §YPositive Opinions§! for §CHindu§! population"
+add_muslim_ops:0 "Add §G5§! §YPositive Opinions§! for §CMuslim§! population"
+add_buddhist_ops:0 "Add §G5§! §YPositive Opinions§! for §CBuddhist§! population"
+
+remove_hindu_ops:0 "Remove §R5§! §YPositive Opinions§! for §CHindu§! population"
+remove_muslim_ops:0 "Remove §R5§! §YPositive Opinions§! for §CMuslim§! population"
+remove_buddhist_ops:0 "Remove §R5§! §YPositive Opinions§! for §CBuddhist§! population"
+
+KAN_atleast_20:0 "Atleast §Y20%§! of the population are §3Kanatanist§!"
+KAN_atleast_40:0 "Atleast §Y40%§! of the population are §3Kanatanist§!"
+KAN_atleast_50:0 "Atleast §Y50%§! of the population are §3Kanatanist§!"
+KAN_atleast_75:0 "Atleast §Y75%§! of the population are §3Kanatanist§!"
+
+
+
+
+#EVENT POPUP
+kanata_religion.1.t:0 "High unemployment rate"
+kanata_religion.1.d:0 "With high population, comes high responsiblity. However, we don't have enough industry to support all these Indian from the country side"
+kanata_religion.1.a:0 "Social security program it is"
+kanata_religion.1.b:0 "Let them eat roti"
+
+kanata_religion.2.t:0 "Class division in society"
+kanata_religion.2.d:0 "India is infamous for its caste system. The wealth distribution is uneven, a few rich man got big cash from the previous war."
+kanata_religion.2.a:0 "I have a dream..."
+kanata_religion.2.b:0 "Sounds like communist propaganda to me"
+
+kanata_religion.3.t:0 "Dakha Floods"
+kanata_religion.3.d:0 "Floods and landslides damaged roads and vital infrastructure leaving thousands of people stranded and without electricity. More than 66,000 homes were destroyed."
+kanata_religion.3.a:0 "We must send emergency aid"
+kanata_religion.3.b:0 "There is nothing we can do"
+
+kanata_religion.4.t:0 "Bengal femine"
+kanata_religion.4.d:0 "Following the flood of 1936, many corps were destroyed causing wide-spread femine in Bengal."
+kanata_religion.4.a:0 "Buy Siamese rice"
+kanata_religion.4.b:0 "There is nothing we can do"
+
+kanata_religion.5.t:0 "Rohingya refugee crisis"
+kanata_religion.5.d:0 "Many muslim people from Myanmar have fled Noel's oppression into our country."
+kanata_religion.5.a:0 "Give them refuge"
+kanata_religion.5.b:0 "We can't even feed our own people"
+
+kanata_religion.6.t:0 "People of Himalaya"
+kanata_religion.6.d:0 "It's not easy to get to the northern mountain range. People of Himalaya demands better access to the infrastructure"
+kanata_religion.6.a:0 "Road to Himalaya!"
+kanata_religion.6.b:0 "We cannot afford that"
+
+kanata_religion.7.t:0 "Question of Bhutan monarch"
+kanata_religion.7.d:0 "King of Bhutan is still under house-arrest. People of Bhutan demands us to address him properly"
+kanata_religion.7.a:0 "Let's address him"
+kanata_religion.7.b:0 "Kanata is the only true god"
+
+kanata_religion.8.t:0 "Voice of an Angel"
+kanata_religion.8.d:0 "You shall cross the barren desert, but you shall not die of thirst. You shall wander far in safety, though you do not know the way. You shall speak your words in foreign lands, and all will understand.\n\nYou shall see the face of God and live\nBe not afraid"
+kanata_religion.8.a:0 "Kon-Kanata"
+
+kanata_religion.9.t:0 "Nepal uprising!"
+kanata_religion.9.d:0 "People of Nepal felt that their religious freedom has been oppressed. And their opinion on the state is very negative"
+kanata_religion.9.a:0 "Oh no!"
+
+kanata_religion.10.t:0 "Bhutan uprising!"
+kanata_religion.10.d:0 "People of Bhutan felt that their religious freedom has been oppressed. And their opinion on the state is very negative"
+kanata_religion.10.a:0 "No!" 
+
+kanata_religion.11.t:0 "Bengal uprising!"
+kanata_religion.11.d:0 "People of Bengal felt that their religious freedom has been oppressed. And their opinion on the state is very negative"
+kanata_religion.11.a:0 "Oh no!"

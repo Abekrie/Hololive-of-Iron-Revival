@@ -1,0 +1,49 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Shirogane Fleet"			
+		naval_base = 9671 
+		task_force = {				
+			name = "Indochinese Force"			
+			location = 9671 
+
+			ship = { name = "Saigon" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Hanoi" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Vientiane" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class" } } }
+
+			ship = { name = "Phanom Phenge" 
+			definition = destroyer 
+			equipment = { ship_hull_light_1 = { amount = 1 owner = ENG version_name = "V/W Class"  } } }
+		}
+
+		task_force = {				
+			name = "Siamese Force"			
+			location = 9671 
+
+			ship = { name = "Bangkok" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+
+			ship = { name = "Chiang Mai" 
+			definition = battleship 
+			equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+

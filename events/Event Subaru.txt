@@ -1,0 +1,137 @@
+add_namespace = subaru
+
+#subaru refuses sardinia
+country_event = {
+	id = subaru.1
+	title = subaru.1.t
+	desc = subaru.1.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.1.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#subaru accepted sardinia
+country_event = {
+	id = subaru.2
+	title = subaru.2.t
+	desc = subaru.2.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.2.a
+		set_global_flag = kuwait_sold
+		ai_chance = { factor = 100 }
+	}
+}
+
+#subaru refuses sardinia
+country_event = {
+	id = subaru.3
+	title = subaru.3.t
+	desc = subaru.3.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.3.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+
+#subaru accepted Qatar
+country_event = {
+	id = subaru.4
+	title = subaru.4.t
+	desc = subaru.4.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.4.a
+		set_global_flag = qatar_sold
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+#SUB - Found Pekora Education Camp
+country_event = {
+	id = subaru.5
+	title = subaru.5.t
+	desc = subaru.5.d
+	picture = GFX_report_event_subaru_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.5.a
+		ai_chance = { factor = 50 }
+		SUB = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			country_event = { id = subaru.7 }
+		}
+	}
+
+	option = {
+		name = subaru.5.b
+		ai_chance = { factor = 50 }
+		add_political_power = -50
+		SUB = {
+			add_equipment_to_stockpile = {
+		    	type = hololive_yen_0
+		    	amount = 2000
+		    	producer = PEK
+	    	}
+	    	country_event = { id = subaru.6 }
+		}
+	}
+}
+
+#SUB - Pekora pays the fine
+country_event = {
+	id = subaru.6
+	title = subaru.6.t
+	desc = subaru.6.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.6.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+#SUB - Pekora bribes the us
+country_event = {
+	id = subaru.7
+	title = subaru.7.t
+	desc = subaru.7.d
+	picture = GFX_report_event_pekora_generic1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = subaru.7.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
