@@ -1890,8 +1890,7 @@ set_country_flag = GAW_navy_advisor_FLAG
 				name = cr_bonus
 				bonus = 1.0
 				ahead_reduction = 2
-				uses = 1
-				category = cl_tech
+				uses = 2
 				category = ca_tech
 			}
 	    }

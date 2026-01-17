@@ -2751,7 +2751,7 @@ create_country_leader = {
 				name = TUR_the_legacy_of_osmanli_donanmasi
 				bonus = 1.50
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 			add_tech_bonus = {
 				name = TUR_the_legacy_of_osmanli_donanmasi
@@ -2801,16 +2801,10 @@ create_country_leader = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		    add_tech_bonus = {
-				name = TUR_the_legacy_of_osmanli_donanmasi
-				bonus = 1.50
-				uses = 1
-				category = cl_tech
-			}
 			add_tech_bonus = {
 				#name = TUR_the_legacy_of_osmanli_donanmasi
 				bonus = 1.50
-				uses = 1
+				uses = 2
 				category = ca_tech
 			}
 		}
