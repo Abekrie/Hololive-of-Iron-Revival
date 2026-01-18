@@ -462,7 +462,7 @@ YAG_MAR_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "marine" }
+	division_types = { "marine_commando" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { YAG_INF_01 }

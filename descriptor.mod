@@ -1,5 +1,4 @@
 version="1"
-replace_path="events"
 replace_path="history/countries/MEL - Mari El.txt"
 replace_path="history/countries/NEN - Nenetsia.txt"
 tags={
