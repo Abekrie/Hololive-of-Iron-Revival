@@ -631,7 +631,7 @@ technologies = {
 
 		on_research_complete_limit = {
 			NOT = {
-				has_template_containing_unit = marine
+				has_template_containing_unit = marine_commando
 			}
 		}
 		on_research_complete = {

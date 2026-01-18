@@ -1,3 +1,5 @@
+To Do: history > states > xxxx
+	Finish up the state files 
 
 Event:
 GFX:

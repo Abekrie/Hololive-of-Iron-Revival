@@ -1917,19 +1917,9 @@ set_country_flag = IRYS_recruit_general_dec_flag
 
         search_filters = { FOCUS_FILTER_RESEARCH }
         completion_reward = {
-            #set_technology = {
-    		#	CAS_kiara = 1	
-			#}
-			#add_equipment_to_stockpile = {
-		    #	type = CAS_kiara_equipment_3
-		    #	amount = 200
-		    #	producer = ROOT
-	    	#}
-	    	add_equipment_to_stockpile = {
-                    type = fighter_equipment_0
-                    amount = 500
-                    producer = ROOT
-            }
+            set_technology = {
+    			kiara_airframe_tech = 1	
+			}
         }
     }
 

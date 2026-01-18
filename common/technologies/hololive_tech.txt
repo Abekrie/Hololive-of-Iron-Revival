@@ -55,4 +55,55 @@ technologies = {
 		}
 	}
 
+	kiara_airframe_tech = { 
+
+		allow = { always = no }
+
+		enable_equipments = {
+			kiara_airframe_0
+		}
+		
+		research_cost = 1
+		start_year = 1936
+		
+		categories = {
+			light_air
+			light_fighter
+			cas_bomber
+			naval_air
+			naval_bomber
+			air_equipment
+			jet_technology
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_light_aircraft_and_modules
+		}
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 1.2
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 1.5
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 1.8
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1944.1.1"
+			}
+		}
+	}
+
 }

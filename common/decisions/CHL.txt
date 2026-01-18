@@ -9000,7 +9000,7 @@ CHL_mapuche_nationalism_decisions = {
 				set_cosmetic_tag = native_american_usa
 
 				hidden_effect = {
-					USA_native_american_council = {
+					INU = {
 						add_country_leader_role = {
 							promote_leader = yes
 							country_leader = {
